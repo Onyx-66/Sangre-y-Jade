@@ -1,0 +1,122 @@
+{
+  "url": "http://127.0.0.1:4173/",
+  "generatedAt": "2026-09-29T16:39:28.450Z",
+  "checks": [
+    {
+      "label": "First launch automatically opens six-panel prologue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Subtitles reveal progressively",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Prologue completion persists across reload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Title screen renders",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Three heroes are selectable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Three maps are selectable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Quick and full rites are selectable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Hero uses individually loaded animation frames",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Shaman mana bar is visible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Four active-skill buttons render",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Keyboard movement changes world position",
+      "passed": true,
+      "detail": "0 -> 111.08333333333331"
+    },
+    {
+      "label": "Enemy director is spawning enemies",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Level-up guarantees a new skill while a slot is empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Chosen skill enters the first slot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Keyboard skill casting starts cooldown",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Dash starts invulnerability/cooldown state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "HUD adapts to mobile landscape viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Run summary records performance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Mini-boss grants one rule-changing relic plus a skill choice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Final-boss defeat reaches the victory summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Progression shrine exposes four permanent upgrade tracks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Supporter catalog renders four non-pay-to-win offerings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "label": "Runtime console stays clean",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "errors": []
+}

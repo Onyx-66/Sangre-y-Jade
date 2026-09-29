@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "label": "Saintess damage, regen and haste scale with rank",
+      "passed": true
+    },
+    {
+      "label": "Tank Bodyguard reduces actual incoming damage",
+      "passed": true
+    },
+    {
+      "label": "Tank shield destroys hostile projectiles",
+      "passed": true
+    },
+    {
+      "label": "Tank proximity bomb triggers, damages and removes itself",
+      "passed": true
+    },
+    {
+      "label": "Assassin attacks the higher-damage threat, not the nearest enemy",
+      "passed": true
+    },
+    {
+      "label": "Assassin poison ticks and the damage mark persists",
+      "passed": true
+    },
+    {
+      "label": "Multi-level XP gain resolves support recruitment and all queued drafts",
+      "passed": true
+    },
+    {
+      "label": "en 320: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "en 320: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "en 568: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "en 568: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "en 390: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "en 390: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "fr 320: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "fr 320: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "fr 568: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "fr 568: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "fr 390: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "fr 390: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "ar 320: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "ar 320: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "ar 568: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "ar 568: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "ar 390: support recruitment fits",
+      "passed": true
+    },
+    {
+      "label": "ar 390: four-slot replacement fits",
+      "passed": true
+    },
+    {
+      "label": "Combat and modal regression checks have no runtime errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

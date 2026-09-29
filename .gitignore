@@ -1,0 +1,11 @@
+node_modules/
+.tools/
+dist/
+android/.gradle/
+android/build/
+android/app/build/
+android/app/src/main/assets/game/
+release/
+android/local.properties
+*.keystore
+*.jks

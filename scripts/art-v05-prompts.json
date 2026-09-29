@@ -1,0 +1,23 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "id": "saintess",
+      "prompt": "Use case: stylized-concept. Asset type: animation sprite sheet for Sangre y Jade, a premium pixel-art overhead survivor game. A distinct female Maya-inspired fantasy SAINTESS support healer, white and jade woven robes, hair in two compact braids with white flower ornaments, small jade censer staff, warm brown skin, gentle expression, no giant feather headdress, no jaguar costume. Buffing/healing role. One character only, repeated in EXACTLY FOUR equally spaced square cells in ONE horizontal row: neutral idle, walking stride, skill casting/attacking, recovering stance. Same identity, outfit and scale in every cell. Slightly elevated top-down 3/4 game camera, chibi three-head-tall body, facing right/down-right. Whole body and equipment inside each cell with generous transparent margin. Crisp deliberate pixel clusters, dark outline, readable at 96 pixels high, amber highlights and jade details, detailed but clean. Transparent background with real alpha, no floor, no cast shadow, no text, no cell borders, no labels, no scenery, no watermark. Four 256x256 cells making a 1024x256 strip if possible; preserve equal square cells and centered matching baselines.",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-1b35c35b-b932-4026-b8b7-1a7c7e87ec63.png",
+      "destination": "art-source/v0.5/saintess.png"
+    },
+    {
+      "id": "tank",
+      "prompt": "Use case: stylized-concept. Asset type: animation sprite sheet for Sangre y Jade, a premium pixel-art overhead survivor game. A distinct broad stocky Maya-inspired fantasy TANK guardian, heavy teal-and-copper lamellar armor, compact rounded helmet, huge rectangular jade stone shield and a clay bomb satchel, warm brown skin. Defensive role, visibly larger and wider than a rogue, no jaguar costume. One character only, repeated in EXACTLY FOUR equally spaced square cells in ONE horizontal row: neutral idle, walking stride, skill casting/attacking, recovering stance. Same identity, outfit and scale in every cell. Slightly elevated top-down 3/4 game camera, chibi three-head-tall body, facing right/down-right. Whole body and equipment inside each cell with generous transparent margin. Crisp deliberate pixel clusters, dark outline, readable at 96 pixels high, amber highlights and jade details, detailed but clean. Transparent background with real alpha, no floor, no cast shadow, no text, no cell borders, no labels, no scenery, no watermark. Four 256x256 cells making a 1024x256 strip if possible; preserve equal square cells and centered matching baselines.",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-2e22d891-7371-47cc-8fc9-b538c070f340.png",
+      "destination": "art-source/v0.5/tank.png"
+    },
+    {
+      "id": "assassin",
+      "prompt": "Use case: stylized-concept. Asset type: animation sprite sheet for Sangre y Jade, a premium pixel-art overhead survivor game. A distinct lean Maya-inspired fantasy ASSASSIN scout, charcoal hood and violet woven cloak, twin small obsidian knives, light jade belt, warm brown skin, face partially visible. Threat-hunting role, no feather headdress, no jaguar costume. One character only, repeated in EXACTLY FOUR equally spaced square cells in ONE horizontal row: neutral idle, walking stride, skill casting/attacking, recovering stance. Same identity, outfit and scale in every cell. Slightly elevated top-down 3/4 game camera, chibi three-head-tall body, facing right/down-right. Whole body and equipment inside each cell with generous transparent margin. Crisp deliberate pixel clusters, dark outline, readable at 96 pixels high, amber highlights and jade details, detailed but clean. Transparent background with real alpha, no floor, no cast shadow, no text, no cell borders, no labels, no scenery, no watermark. Four 256x256 cells making a 1024x256 strip if possible; preserve equal square cells and centered matching baselines.",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-a587c860-91ac-42ff-8e30-ece0181649d4.png",
+      "destination": "art-source/v0.5/assassin.png"
+    }
+  ]
+}

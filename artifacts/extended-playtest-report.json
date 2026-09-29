@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "label": "Cinematic finishes automatically in 27 seconds",
+      "passed": true
+    },
+    {
+      "label": "balam: all 20 abilities execute on overgrown",
+      "passed": true
+    },
+    {
+      "label": "balam: pause freezes delayed combat effects",
+      "passed": true
+    },
+    {
+      "label": "ixchel: all 20 abilities execute on bloodmoon",
+      "passed": true
+    },
+    {
+      "label": "ixchel: pause freezes delayed combat effects",
+      "passed": true
+    },
+    {
+      "label": "kukul: all 20 abilities execute on cenote",
+      "passed": true
+    },
+    {
+      "label": "kukul: pause freezes delayed combat effects",
+      "passed": true
+    },
+    {
+      "label": "All hero/map/ability combinations stay free of runtime errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

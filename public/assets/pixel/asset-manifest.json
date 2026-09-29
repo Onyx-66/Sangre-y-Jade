@@ -1,0 +1,1256 @@
+[
+  {
+    "name": "hero-balam-0",
+    "file": "frames/hero-balam-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-1",
+    "file": "frames/hero-balam-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-2",
+    "file": "frames/hero-balam-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-3",
+    "file": "frames/hero-balam-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-up-0",
+    "file": "frames/hero-balam-up-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-up-1",
+    "file": "frames/hero-balam-up-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-up-2",
+    "file": "frames/hero-balam-up-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-up-3",
+    "file": "frames/hero-balam-up-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-down-0",
+    "file": "frames/hero-balam-down-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-down-1",
+    "file": "frames/hero-balam-down-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-down-2",
+    "file": "frames/hero-balam-down-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-balam-down-3",
+    "file": "frames/hero-balam-down-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-0",
+    "file": "frames/hero-ixchel-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-1",
+    "file": "frames/hero-ixchel-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-2",
+    "file": "frames/hero-ixchel-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-3",
+    "file": "frames/hero-ixchel-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-up-0",
+    "file": "frames/hero-ixchel-up-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-up-1",
+    "file": "frames/hero-ixchel-up-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-up-2",
+    "file": "frames/hero-ixchel-up-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-up-3",
+    "file": "frames/hero-ixchel-up-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-down-0",
+    "file": "frames/hero-ixchel-down-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-down-1",
+    "file": "frames/hero-ixchel-down-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-down-2",
+    "file": "frames/hero-ixchel-down-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-ixchel-down-3",
+    "file": "frames/hero-ixchel-down-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-0",
+    "file": "frames/hero-kukul-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-1",
+    "file": "frames/hero-kukul-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-2",
+    "file": "frames/hero-kukul-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-3",
+    "file": "frames/hero-kukul-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-up-0",
+    "file": "frames/hero-kukul-up-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-up-1",
+    "file": "frames/hero-kukul-up-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-up-2",
+    "file": "frames/hero-kukul-up-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-up-3",
+    "file": "frames/hero-kukul-up-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-down-0",
+    "file": "frames/hero-kukul-down-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-down-1",
+    "file": "frames/hero-kukul-down-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-down-2",
+    "file": "frames/hero-kukul-down-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "hero-kukul-down-3",
+    "file": "frames/hero-kukul-down-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-shade-0",
+    "file": "frames/enemy-shade-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-shade-1",
+    "file": "frames/enemy-shade-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-shade-2",
+    "file": "frames/enemy-shade-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-shade-3",
+    "file": "frames/enemy-shade-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-bat-0",
+    "file": "frames/enemy-bat-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-bat-1",
+    "file": "frames/enemy-bat-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-bat-2",
+    "file": "frames/enemy-bat-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-bat-3",
+    "file": "frames/enemy-bat-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-jaguar-0",
+    "file": "frames/enemy-jaguar-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-jaguar-1",
+    "file": "frames/enemy-jaguar-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-jaguar-2",
+    "file": "frames/enemy-jaguar-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-jaguar-3",
+    "file": "frames/enemy-jaguar-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-serpent-0",
+    "file": "frames/enemy-serpent-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-serpent-1",
+    "file": "frames/enemy-serpent-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-serpent-2",
+    "file": "frames/enemy-serpent-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-serpent-3",
+    "file": "frames/enemy-serpent-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-priest-0",
+    "file": "frames/enemy-priest-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-priest-1",
+    "file": "frames/enemy-priest-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-priest-2",
+    "file": "frames/enemy-priest-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "enemy-priest-3",
+    "file": "frames/enemy-priest-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-camazotz-0",
+    "file": "frames/boss-camazotz-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-camazotz-1",
+    "file": "frames/boss-camazotz-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-camazotz-2",
+    "file": "frames/boss-camazotz-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-camazotz-3",
+    "file": "frames/boss-camazotz-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-zipacna-0",
+    "file": "frames/boss-zipacna-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-zipacna-1",
+    "file": "frames/boss-zipacna-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-zipacna-2",
+    "file": "frames/boss-zipacna-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-zipacna-3",
+    "file": "frames/boss-zipacna-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-vucub-0",
+    "file": "frames/boss-vucub-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-vucub-1",
+    "file": "frames/boss-vucub-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-vucub-2",
+    "file": "frames/boss-vucub-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-vucub-3",
+    "file": "frames/boss-vucub-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-ahpuch-0",
+    "file": "frames/boss-ahpuch-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-ahpuch-1",
+    "file": "frames/boss-ahpuch-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-ahpuch-2",
+    "file": "frames/boss-ahpuch-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "boss-ahpuch-3",
+    "file": "frames/boss-ahpuch-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-0-0",
+    "file": "frames/fx-0-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-0-1",
+    "file": "frames/fx-0-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-0-2",
+    "file": "frames/fx-0-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-0-3",
+    "file": "frames/fx-0-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-1-0",
+    "file": "frames/fx-1-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-1-1",
+    "file": "frames/fx-1-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-1-2",
+    "file": "frames/fx-1-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-1-3",
+    "file": "frames/fx-1-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-2-0",
+    "file": "frames/fx-2-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-2-1",
+    "file": "frames/fx-2-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-2-2",
+    "file": "frames/fx-2-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-2-3",
+    "file": "frames/fx-2-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-3-0",
+    "file": "frames/fx-3-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-3-1",
+    "file": "frames/fx-3-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-3-2",
+    "file": "frames/fx-3-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-3-3",
+    "file": "frames/fx-3-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-4-0",
+    "file": "frames/fx-4-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-4-1",
+    "file": "frames/fx-4-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-4-2",
+    "file": "frames/fx-4-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-4-3",
+    "file": "frames/fx-4-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-5-0",
+    "file": "frames/fx-5-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-5-1",
+    "file": "frames/fx-5-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-5-2",
+    "file": "frames/fx-5-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "fx-5-3",
+    "file": "frames/fx-5-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-0",
+    "file": "icon-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-1",
+    "file": "icon-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-2",
+    "file": "icon-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-3",
+    "file": "icon-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-4",
+    "file": "icon-4.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-5",
+    "file": "icon-5.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-6",
+    "file": "icon-6.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-7",
+    "file": "icon-7.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-8",
+    "file": "icon-8.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-9",
+    "file": "icon-9.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-10",
+    "file": "icon-10.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-11",
+    "file": "icon-11.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-12",
+    "file": "icon-12.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-13",
+    "file": "icon-13.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-14",
+    "file": "icon-14.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-15",
+    "file": "icon-15.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-16",
+    "file": "icon-16.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-17",
+    "file": "icon-17.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-18",
+    "file": "icon-18.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-19",
+    "file": "icon-19.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-20",
+    "file": "icon-20.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-21",
+    "file": "icon-21.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-22",
+    "file": "icon-22.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-23",
+    "file": "icon-23.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-24",
+    "file": "icon-24.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-25",
+    "file": "icon-25.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-26",
+    "file": "icon-26.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-27",
+    "file": "icon-27.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-28",
+    "file": "icon-28.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-29",
+    "file": "icon-29.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-30",
+    "file": "icon-30.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-31",
+    "file": "icon-31.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-32",
+    "file": "icon-32.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-33",
+    "file": "icon-33.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-34",
+    "file": "icon-34.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-35",
+    "file": "icon-35.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-36",
+    "file": "icon-36.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-37",
+    "file": "icon-37.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-38",
+    "file": "icon-38.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-39",
+    "file": "icon-39.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-40",
+    "file": "icon-40.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-41",
+    "file": "icon-41.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-42",
+    "file": "icon-42.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-43",
+    "file": "icon-43.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-44",
+    "file": "icon-44.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-45",
+    "file": "icon-45.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-46",
+    "file": "icon-46.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-47",
+    "file": "icon-47.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-48",
+    "file": "icon-48.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-49",
+    "file": "icon-49.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-50",
+    "file": "icon-50.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-51",
+    "file": "icon-51.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-52",
+    "file": "icon-52.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-53",
+    "file": "icon-53.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-54",
+    "file": "icon-54.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-55",
+    "file": "icon-55.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-56",
+    "file": "icon-56.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-57",
+    "file": "icon-57.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-58",
+    "file": "icon-58.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-59",
+    "file": "icon-59.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-60",
+    "file": "icon-60.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-61",
+    "file": "icon-61.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-62",
+    "file": "icon-62.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-63",
+    "file": "icon-63.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-64",
+    "file": "icon-64.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "icon-65",
+    "file": "icon-65.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "basket",
+    "file": "basket.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "bracers",
+    "file": "bracers.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "cacao",
+    "file": "cacao.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "crystal",
+    "file": "crystal.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "foliage",
+    "file": "foliage.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "ground",
+    "file": "ground.png",
+    "width": 640,
+    "height": 640
+  },
+  {
+    "name": "headdress",
+    "file": "headdress.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "palm",
+    "file": "palm.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "pendant",
+    "file": "pendant.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "potion",
+    "file": "potion.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "roots",
+    "file": "roots.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "ruin",
+    "file": "ruin.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "stela",
+    "file": "stela.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "story-0",
+    "file": "story-0.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "story-1",
+    "file": "story-1.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "story-2",
+    "file": "story-2.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "story-3",
+    "file": "story-3.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "story-4",
+    "file": "story-4.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "story-5",
+    "file": "story-5.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "title",
+    "file": "title.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "name": "top-crystal",
+    "file": "top-crystal.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-foliage",
+    "file": "top-foliage.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-palm",
+    "file": "top-palm.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-rocks",
+    "file": "top-rocks.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-roots",
+    "file": "top-roots.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-ruin",
+    "file": "top-ruin.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-stela",
+    "file": "top-stela.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-temple",
+    "file": "top-temple.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "top-tree",
+    "file": "top-tree.png",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "urn",
+    "file": "urn.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "weapon-balam",
+    "file": "weapon-balam.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "weapon-ixchel",
+    "file": "weapon-ixchel.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "weapon-kukul",
+    "file": "weapon-kukul.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-saintess-0",
+    "file": "frames/support-saintess-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-saintess-1",
+    "file": "frames/support-saintess-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-saintess-2",
+    "file": "frames/support-saintess-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-saintess-3",
+    "file": "frames/support-saintess-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-tank-0",
+    "file": "frames/support-tank-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-tank-1",
+    "file": "frames/support-tank-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-tank-2",
+    "file": "frames/support-tank-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-tank-3",
+    "file": "frames/support-tank-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-assassin-0",
+    "file": "frames/support-assassin-0.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-assassin-1",
+    "file": "frames/support-assassin-1.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-assassin-2",
+    "file": "frames/support-assassin-2.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-assassin-3",
+    "file": "frames/support-assassin-3.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-bomb",
+    "file": "support-bomb.png",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "support-snare",
+    "file": "support-snare.png",
+    "width": 128,
+    "height": 128
+  }
+]

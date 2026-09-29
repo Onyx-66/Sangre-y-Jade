@@ -1,0 +1,501 @@
+{
+  "checks": [
+    {
+      "label": "en 1280×720: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1280×720: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1280×720: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1280×720: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1280: Western digits",
+      "passed": true
+    },
+    {
+      "label": "en 1024×600: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1024×600: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1024×600: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1024×600: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 1024: Western digits",
+      "passed": true
+    },
+    {
+      "label": "en 844×390: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 844×390: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 844×390: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 844×390: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 844: Western digits",
+      "passed": true
+    },
+    {
+      "label": "en 667×375: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 667×375: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 667×375: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 667×375: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 667: Western digits",
+      "passed": true
+    },
+    {
+      "label": "en 568×320: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 568×320: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 568×320: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 568×320: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 568: Western digits",
+      "passed": true
+    },
+    {
+      "label": "en 390×844: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 390×844: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 390×844: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 390×844: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 390: Western digits",
+      "passed": true
+    },
+    {
+      "label": "en 320×568: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 320×568: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 320×568: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 320×568: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "en 320: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 1280×720: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1280×720: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1280×720: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1280×720: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1280: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 1024×600: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1024×600: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1024×600: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1024×600: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 1024: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 844×390: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 844×390: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 844×390: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 844×390: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 844: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 667×375: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 667×375: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 667×375: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 667×375: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 667: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 568×320: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 568×320: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 568×320: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 568×320: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 568: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 390×844: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 390×844: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 390×844: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 390×844: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 390: Western digits",
+      "passed": true
+    },
+    {
+      "label": "fr 320×568: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 320×568: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 320×568: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 320×568: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "fr 320: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 1280×720: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1280×720: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1280×720: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1280×720: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1280: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 1024×600: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1024×600: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1024×600: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1024×600: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 1024: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 844×390: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 844×390: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 844×390: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 844×390: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 844: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 667×375: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 667×375: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 667×375: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 667×375: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 667: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 568×320: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 568×320: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 568×320: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 568×320: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 568: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 390×844: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 390×844: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 390×844: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 390×844: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 390: Western digits",
+      "passed": true
+    },
+    {
+      "label": "ar 320×568: setup 1 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 320×568: setup 2 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 320×568: setup 3 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 320×568: setup 4 fits without scrolling or step numbers",
+      "passed": true
+    },
+    {
+      "label": "ar 320: Western digits",
+      "passed": true
+    },
+    {
+      "label": "Four hero active slots",
+      "passed": true
+    },
+    {
+      "label": "Full loadout draft: two upgrades and one replacement",
+      "passed": true
+    },
+    {
+      "label": "Replacement asks which equipped skill to remove",
+      "passed": true
+    },
+    {
+      "label": "Cancel replacement returns to the same draft",
+      "passed": true
+    },
+    {
+      "label": "Replacement changes one slot and resumes gameplay",
+      "passed": true
+    },
+    {
+      "label": "Level 5 offers the three distinct supports",
+      "passed": true
+    },
+    {
+      "label": "Exactly one support and three equipped skills",
+      "passed": true
+    },
+    {
+      "label": "Cannot summon a second support",
+      "passed": true
+    },
+    {
+      "label": "All equipped support skills rank up with the hero",
+      "passed": true
+    },
+    {
+      "label": "Support replacement keeps three slots and current rank",
+      "passed": true
+    },
+    {
+      "label": "saintess: all 10 support skills execute without invalid state",
+      "passed": true
+    },
+    {
+      "label": "Saintess heals and grants shields",
+      "passed": true
+    },
+    {
+      "label": "tank: all 10 support skills execute without invalid state",
+      "passed": true
+    },
+    {
+      "label": "Tank creates persistent proximity traps",
+      "passed": true
+    },
+    {
+      "label": "assassin: all 10 support skills execute without invalid state",
+      "passed": true
+    },
+    {
+      "label": "Assassin deals damage to threats",
+      "passed": true
+    },
+    {
+      "label": "XP, cacao, potions and unopened containers collect without attacks",
+      "passed": true
+    },
+    {
+      "label": "Pause and score counters use distinct SVG icons",
+      "passed": true
+    },
+    {
+      "label": "No JavaScript or missing-asset errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

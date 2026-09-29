@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "label": "APK first-launch prologue",
+      "passed": true
+    },
+    {
+      "label": "APK high-resolution prologue panels",
+      "passed": true
+    },
+    {
+      "label": "APK bundled male narration plays offline",
+      "passed": true
+    },
+    {
+      "label": "APK progressive subtitles",
+      "passed": true
+    },
+    {
+      "label": "APK Arabic pixel font and mirrored title",
+      "passed": true
+    },
+    {
+      "label": "APK separate setup step 1",
+      "passed": true
+    },
+    {
+      "label": "APK separate setup step 2",
+      "passed": true
+    },
+    {
+      "label": "APK separate setup step 3",
+      "passed": true
+    },
+    {
+      "label": "APK offline game assets loaded",
+      "passed": true
+    },
+    {
+      "label": "APK individual animation frames",
+      "passed": true
+    },
+    {
+      "label": "APK compact bottom XP dock",
+      "passed": true
+    },
+    {
+      "label": "Android touch joystick moves hero",
+      "passed": true
+    },
+    {
+      "label": "Android dash control",
+      "passed": true
+    },
+    {
+      "label": "Android pause freezes simulation",
+      "passed": true
+    },
+    {
+      "label": "Bundled Android soundtrack is decodable",
+      "passed": true
+    },
+    {
+      "label": "Android WebView has no JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "device": "17"
+}

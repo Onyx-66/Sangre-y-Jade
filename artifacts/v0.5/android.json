@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "label": "APK setup has no step numbers or scroll",
+      "passed": true
+    },
+    {
+      "label": "APK Arabic uses Western numeral glyphs and text",
+      "passed": true
+    },
+    {
+      "label": "APK has four active hero buttons",
+      "passed": true
+    },
+    {
+      "label": "APK recruits distinct Tank with three support skills",
+      "passed": true
+    },
+    {
+      "label": "APK pause/cacao/kills SVGs load",
+      "passed": true
+    },
+    {
+      "label": "APK replacement and automatic support skill ranks work",
+      "passed": true
+    },
+    {
+      "label": "APK pickup collects without attack",
+      "passed": true
+    },
+    {
+      "label": "APK uses dedicated bomb/snare sprites, not inventory icons",
+      "passed": true
+    },
+    {
+      "label": "APK has no JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

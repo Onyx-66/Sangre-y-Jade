@@ -1,0 +1,44 @@
+[
+  {
+    "file": "en-0.wav",
+    "text": "Maya cities rose above the jungle, their temples reaching toward the sun.",
+    "seconds": 4.16,
+    "voice": "am_michael",
+    "speed": 1.181
+  },
+  {
+    "file": "en-1.wav",
+    "text": "Astronomers charted the heavens. Cacao and woven cloth crossed bustling markets.",
+    "seconds": 4.395,
+    "voice": "am_michael",
+    "speed": 1.318
+  },
+  {
+    "file": "en-2.wav",
+    "text": "In our legend, a sacred cenote concealed a road to Shibalba.",
+    "seconds": 4.139,
+    "voice": "am_michael",
+    "speed": 1.03
+  },
+  {
+    "file": "en-3.wav",
+    "text": "When the seal shattered, the underworld poured into the sleeping city.",
+    "seconds": 3.84,
+    "voice": "am_michael",
+    "speed": 1.03
+  },
+  {
+    "file": "en-4.wav",
+    "text": "Balam. Ixchel. Kukul. Three heroes answered the call.",
+    "seconds": 3.605,
+    "voice": "am_michael",
+    "speed": 1.03
+  },
+  {
+    "file": "en-5.wav",
+    "text": "Hold the temple. Gather jade. Face the underworld, and bring back the dawn.",
+    "seconds": 4.373,
+    "voice": "am_michael",
+    "speed": 1.197
+  }
+]

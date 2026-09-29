@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.sangreyjade.game'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.sangreyjade.game'
+        minSdk 26
+        targetSdk 36
+        versionCode 5
+        versionName '0.5.0'
+    }
+    buildTypes { debug { debuggable true } }
+}

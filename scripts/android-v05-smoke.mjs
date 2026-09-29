@@ -1,0 +1,32 @@
+import {chromium} from 'playwright-core';
+import {execFileSync} from 'node:child_process';
+import {writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+const adb='C:/Users/kossa/AppData/Local/Android/Sdk/platform-tools/adb.exe';
+const call=(...args)=>execFileSync(adb,['-s','emulator-5554',...args],{encoding:'utf8'}).trim();
+call('forward','tcp:9223',`localabstract:webview_devtools_remote_${call('shell','pidof','com.sangreyjade.game')}`);
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9223'),page=browser.contexts()[0].pages()[0],checks=[],errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+const check=(v,label)=>{checks.push({label,passed:!!v});if(!v)throw Error(label);};
+try{
+ await page.evaluate(()=>{const a=window.__SANGRE_Y_JADE__;a.cancelPrologue?.();a.showTitle();});
+ await page.selectOption('[data-language]','ar');await page.locator('[data-action=play]').click();await page.evaluate(()=>document.fonts.ready);
+ check(await page.evaluate(()=>!document.querySelector('.setup-progress')&&document.querySelector('.wizard-panel').scrollHeight<=document.querySelector('.wizard-panel').clientHeight+2),'APK setup has no step numbers or scroll');
+ check(await page.evaluate(()=>getComputedStyle(document.querySelector('.wizard-panel h2')).fontFamily.includes('LatinDigits')&&!/[٠-٩۰-۹]/.test(document.querySelector('.screen').textContent)),'APK Arabic uses Western numeral glyphs and text');
+ for(let i=0;i<3;i++)await page.locator('[data-next]').click();await page.locator('[data-start]').click();await page.locator('.hud').waitFor();
+ check(await page.locator('.skill-btn').count()===4,'APK has four active hero buttons');
+ await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');s.invulnerable=1000;s.spawnTimer=1000;s.stats.level=5;s.pendingLevelUps=1;s.showLevelChoice();});await page.locator('.choice-card').first().click();
+ await page.locator('[data-choice=tank]').click();for(let i=0;i<3;i++)await page.locator('.choice-card').first().click();
+ check(await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');return s.companion.id==='tank'&&s.companion.skills.length===3&&s.companion.sprite.texture.key.startsWith('support-tank')&&!s.pausedForChoice;}),'APK recruits distinct Tank with three support skills');
+ check(await page.locator('.pause-btn svg').count()===1&&await page.locator('.hud-counter svg').count()===2,'APK pause/cacao/kills SVGs load');
+ await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');s.skillSlots=s.heroData.skills.slice(0,4).map(k=>({...k,level:1,remaining:0}));s.stats.level=6;s.pendingLevelUps=1;s.showLevelChoice();});
+ await page.locator('.choice-card').nth(2).click();await page.locator('.choice-card').first().click();
+ await page.locator('[data-choice-cancel]').click();
+ check(await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');return s.skillSlots[0].id!==s.heroData.skills[0].id&&s.companion.skills.every(k=>k.level===2)&&!s.pausedForChoice;}),'APK replacement and automatic support skill ranks work');
+ check(await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');const before=s.stats.cacao;s.spawnPickup('cacao',s.player.x,s.player.y,10);s.updatePickups();return s.stats.cacao>before;}),'APK pickup collects without attack');
+ await page.locator('[data-support]').click();await page.locator('[data-choice-cancel]').click();
+ check(await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');s.support.placeTrap('bomb',1);s.support.placeTrap('snare',1);const traps=s.support.traps.slice(-2);traps[1].sprite.x+=65;return traps[0].sprite.texture.key==='support-bomb'&&traps[1].sprite.texture.key==='support-snare';}),'APK uses dedicated bomb/snare sprites, not inventory icons');
+ await page.waitForTimeout(2600);
+ call('shell','screencap','-p','/sdcard/syj-v05.png');call('pull','/sdcard/syj-v05.png',resolve('artifacts/v0.5/android-support.png'));
+ check(errors.length===0,'APK has no JavaScript errors');
+}finally{writeFileSync('artifacts/v0.5/android.json',JSON.stringify({checks,errors},null,2));await browser.close();console.log(JSON.stringify({checks,errors},null,2));}

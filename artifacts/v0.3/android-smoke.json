@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "name": "APK French menus",
+      "passed": true
+    },
+    {
+      "name": "APK Arabic RTL",
+      "passed": true
+    },
+    {
+      "name": "APK manual attacks wait for input",
+      "passed": true
+    },
+    {
+      "name": "APK touch Attack fires",
+      "passed": true
+    },
+    {
+      "name": "APK up directional sprite",
+      "passed": true
+    },
+    {
+      "name": "APK down directional sprite",
+      "passed": true
+    },
+    {
+      "name": "APK level-5 teammate and Arabic HUD",
+      "passed": true
+    },
+    {
+      "name": "APK pause translation",
+      "passed": true
+    },
+    {
+      "name": "APK v0.3 no JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

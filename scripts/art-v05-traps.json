@@ -1,0 +1,17 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "id": "bomb",
+      "prompt": "Use case: stylized-concept. Asset type: standalone transparent overhead game prop sprite, NOT a UI icon. One small squat dark terracotta clay bomb pot with jade binding bands, short curled burning reed fuse and two tiny amber sparks. Maya-inspired fantasy survivor game. Camera looks steeply down at about 60 degrees, see the circular top and a little front wall. Crisp richly detailed pixel art, dark pixel outline, readable at 40 pixels on a jungle floor, amber and teal accents. Centered full object, generous transparent margins, no ground plane, no floor shadow, no background, no frame, no border, no badge, no letters, no watermark. Genuine transparent alpha.",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-98098e5e-9c3b-4273-8940-ea59b44b5cbd.png",
+      "destination": "art-source/v0.5/bomb.png"
+    },
+    {
+      "id": "snare",
+      "prompt": "Use case: stylized-concept. Asset type: standalone transparent overhead game ground-trap sprite, NOT a UI icon. One small rustic circular root-and-rope snare lying flat, intertwined emerald roots and a few short sharpened wooden stakes, open center, a simple jade knot. Maya-inspired fantasy survivor game. Camera looks steeply down at about 60 degrees, overhead ground object not upright. Crisp richly detailed pixel art, dark pixel outlines, readable at 40 pixels on a jungle floor. Centered full object, generous transparent margins, no floor or background, no cast shadow, no frame, no border, no badge, no letters, no watermark. Genuine transparent alpha.",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-0fb955fe-1963-44af-9f19-04d3108c9e23.png",
+      "destination": "art-source/v0.5/snare.png"
+    }
+  ]
+}

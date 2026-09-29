@@ -1,0 +1,37 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import sharp from 'sharp';
+import { SUPPORTS,supportRank,dangerousEnemy } from '../src/data/supports.js';
+import { draftSkills,HERO_SKILL_CAPACITY } from '../src/systems/SkillDraft.js';
+import { heroList,MODIFIERS } from '../src/data/heroes.js';
+import {setLanguage,t,westernDigits,hasTranslation} from '../src/i18n/index.js';
+test('three distinct support classes each have ten unique translated skills',()=>{
+ assert.deepEqual(Object.keys(SUPPORTS),['saintess','tank','assassin']);
+ const ids=[];for(const s of Object.values(SUPPORTS)){assert.equal(s.skills.length,10);for(const k of s.skills){ids.push(k.id);for(const lang of ['fr','ar']){assert.ok(hasTranslation(k.name,lang));assert.ok(hasTranslation(k.description,lang));}}}assert.equal(new Set(ids).size,30);
+});
+test('full hero loadout guarantees two upgrades plus a replacement',()=>{
+ for(const hero of heroList()){
+  const owned=hero.skills.slice(0,4).map(s=>({...s,level:1}));
+  const choices=draftSkills(hero.skills,owned,HERO_SKILL_CAPACITY,a=>[...a],MODIFIERS);
+  assert.deepEqual(choices.map(s=>s.choiceType),['skill-upgrade','skill-upgrade','replace-skill']);
+  assert.ok(!owned.some(o=>o.id===choices[2].id));
+  owned.forEach(s=>s.level=6);const capped=draftSkills(hero.skills,owned,4,a=>[...a],MODIFIERS);
+  assert.equal(capped.length,3);assert.equal(capped[2].choiceType,'replace-skill');assert.ok(capped.every(s=>s.choiceType!=='skill-upgrade'));
+ }
+});
+test('support rank rises with every hero level after level five',()=>{assert.equal(supportRank(5),1);assert.equal(supportRank(6),2);assert.equal(supportRank(20),16);});
+test('Assassin prefers threat over nearest low-damage enemy',()=>{
+ const enemy=(x,damage,boss=false)=>({x,y:0,active:true,getData:k=>({damage,isBoss:boss})[k]});
+ const weak=enemy(10,2),danger=enemy(300,35),distant=enemy(1000,200);assert.equal(dangerousEnemy([weak,danger,distant],{x:0,y:0}),danger);
+});
+test('all locales use Western digits including Arabic dictionary literals',()=>{
+ assert.equal(westernDigits('١٢٣ ۴۵۶ ٣٫٥٪'),'123 456 3.5%');setLanguage('ar');
+ for(const key of ['Ally unlocks at level 5','Survival · 20 min','+12% damage','60 FPS','VERSION 0.5'])assert.doesNotMatch(t(key),/[٠-٩۰-۹]/);
+ assert.match(t('Ally unlocks at level 5'),/5/);setLanguage('en');
+});
+test('support artwork uses separate alpha frames rather than hero skins',async()=>{
+ for(const id of Object.keys(SUPPORTS))for(let i=0;i<4;i++){const m=await sharp(`public/assets/pixel/frames/support-${id}-${i}.png`).metadata();assert.equal(m.width,128);assert.equal(m.height,128);assert.ok(m.hasAlpha);}
+});
+test('Tank bombs and snares have dedicated transparent ground sprites',async()=>{
+ for(const id of ['bomb','snare']){const m=await sharp(`public/assets/pixel/support-${id}.png`).metadata();assert.equal(m.width,128);assert.equal(m.height,128);assert.ok(m.hasAlpha);}
+});

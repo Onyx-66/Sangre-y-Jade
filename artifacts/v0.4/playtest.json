@@ -1,0 +1,193 @@
+{
+  "checks": [
+    {
+      "name": "Six independently rendered high-resolution prologue images",
+      "passed": true
+    },
+    {
+      "name": "Male narration plays above ducked background music",
+      "passed": true
+    },
+    {
+      "name": "Skipping stops narration",
+      "passed": true
+    },
+    {
+      "name": "en: real settings and language icons",
+      "passed": true
+    },
+    {
+      "name": "en: wizard step 1",
+      "passed": true
+    },
+    {
+      "name": "en: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "en: wizard step 2",
+      "passed": true
+    },
+    {
+      "name": "en: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "en: wizard step 3",
+      "passed": true
+    },
+    {
+      "name": "en: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "en: wizard step 4",
+      "passed": true
+    },
+    {
+      "name": "en: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "en: Back returns one step",
+      "passed": true
+    },
+    {
+      "name": "fr: real settings and language icons",
+      "passed": true
+    },
+    {
+      "name": "fr: wizard step 1",
+      "passed": true
+    },
+    {
+      "name": "fr: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "fr: wizard step 2",
+      "passed": true
+    },
+    {
+      "name": "fr: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "fr: wizard step 3",
+      "passed": true
+    },
+    {
+      "name": "fr: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "fr: wizard step 4",
+      "passed": true
+    },
+    {
+      "name": "fr: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "fr: Back returns one step",
+      "passed": true
+    },
+    {
+      "name": "ar: real settings and language icons",
+      "passed": true
+    },
+    {
+      "name": "Arabic menu artwork is mirrored",
+      "passed": true
+    },
+    {
+      "name": "Arabic uses the bundled pixel font",
+      "passed": true
+    },
+    {
+      "name": "ar: wizard step 1",
+      "passed": true
+    },
+    {
+      "name": "ar: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "ar: wizard step 2",
+      "passed": true
+    },
+    {
+      "name": "ar: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "ar: wizard step 3",
+      "passed": true
+    },
+    {
+      "name": "ar: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "ar: wizard step 4",
+      "passed": true
+    },
+    {
+      "name": "ar: one selection section at a time",
+      "passed": true
+    },
+    {
+      "name": "ar: Back returns one step",
+      "passed": true
+    },
+    {
+      "name": "Mage HUD shows health, stamina and magic",
+      "passed": true
+    },
+    {
+      "name": "Pickups have animated bubble visuals",
+      "passed": true
+    },
+    {
+      "name": "Stamina bar responds to dash cooldown",
+      "passed": true
+    },
+    {
+      "name": "1440: compact XP bar near bottom",
+      "passed": true
+    },
+    {
+      "name": "1440: XP bar avoids controls",
+      "passed": true
+    },
+    {
+      "name": "844: compact XP bar near bottom",
+      "passed": true
+    },
+    {
+      "name": "844: XP bar avoids controls",
+      "passed": true
+    },
+    {
+      "name": "390: compact XP bar near bottom",
+      "passed": true
+    },
+    {
+      "name": "390: XP bar avoids controls",
+      "passed": true
+    },
+    {
+      "name": "Trees have varied sizes in the same world",
+      "passed": true
+    },
+    {
+      "name": "Skill icons load as standalone 1:1 files",
+      "passed": true
+    },
+    {
+      "name": "No runtime JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

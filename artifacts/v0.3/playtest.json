@@ -1,0 +1,201 @@
+{
+  "checks": [
+    {
+      "name": "fr: language selector applies",
+      "passed": true
+    },
+    {
+      "name": "fr: correct text direction",
+      "passed": true
+    },
+    {
+      "name": "fr: showTitle has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "fr: showSettings has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "fr: showRunSetup has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "fr: showShrine has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "fr: showStore has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "fr: showCodex has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "fr: progressive intro translated",
+      "passed": true
+    },
+    {
+      "name": "ar: language selector applies",
+      "passed": true
+    },
+    {
+      "name": "ar: correct text direction",
+      "passed": true
+    },
+    {
+      "name": "ar: showTitle has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "ar: showSettings has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "ar: showRunSetup has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "ar: showShrine has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "ar: showStore has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "ar: showCodex has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "ar: progressive intro translated",
+      "passed": true
+    },
+    {
+      "name": "en: language selector applies",
+      "passed": true
+    },
+    {
+      "name": "en: correct text direction",
+      "passed": true
+    },
+    {
+      "name": "en: showTitle has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "en: showSettings has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "en: showRunSetup has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "en: showShrine has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "en: showStore has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "en: showCodex has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Manual mode does not attack while idle",
+      "passed": true
+    },
+    {
+      "name": "F triggers manual attacks",
+      "passed": true
+    },
+    {
+      "name": "KeyW: correct facing",
+      "passed": true
+    },
+    {
+      "name": "up: actual directional sprite",
+      "passed": true
+    },
+    {
+      "name": "KeyS: correct facing",
+      "passed": true
+    },
+    {
+      "name": "down: actual directional sprite",
+      "passed": true
+    },
+    {
+      "name": "KeyA: correct facing",
+      "passed": true
+    },
+    {
+      "name": "KeyA: left/right appearance preserved",
+      "passed": true
+    },
+    {
+      "name": "KeyD: correct facing",
+      "passed": true
+    },
+    {
+      "name": "KeyD: left/right appearance preserved",
+      "passed": true
+    },
+    {
+      "name": "Melee spawns stay offscreen and exclude flying enemies",
+      "passed": true
+    },
+    {
+      "name": "Level 5 summons teammate",
+      "passed": true
+    },
+    {
+      "name": "HUD names the teammate",
+      "passed": true
+    },
+    {
+      "name": "Teammate fires at enemies",
+      "passed": true
+    },
+    {
+      "name": "Automatic mode attacks without input",
+      "passed": true
+    },
+    {
+      "name": "Language survives reload",
+      "passed": true
+    },
+    {
+      "name": "Arabic mobile setup fits width",
+      "passed": true
+    },
+    {
+      "name": "Arabic HUD updates in Arabic",
+      "passed": true
+    },
+    {
+      "name": "Mobile manual attack control fits",
+      "passed": true
+    },
+    {
+      "name": "Arabic mobile setup fits width",
+      "passed": true
+    },
+    {
+      "name": "Arabic HUD updates in Arabic",
+      "passed": true
+    },
+    {
+      "name": "Mobile manual attack control fits",
+      "passed": true
+    },
+    {
+      "name": "No runtime JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

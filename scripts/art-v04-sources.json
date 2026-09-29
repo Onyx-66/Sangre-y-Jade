@@ -1,0 +1,41 @@
+{
+  "mode": "built-in image_gen",
+  "panels": [
+    {
+      "id": "city",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-c4c0e01d-06b5-4c0c-815a-de14f9baad8f.png",
+      "destination": "art-source/v0.4/city.png",
+      "prompt": "Use case: illustration-story. Asset type: ONE standalone high-resolution 16:9 cinematic panel for the pixel-art game Sangre y Jade, not an atlas or collage. A wide thriving Classic-period Maya lowland city at sunrise, stepped limestone temples above emerald jungle, a lively market with cacao baskets and woven textiles, tiny everyday Maya townspeople, golden mist and terraces. Establishing shot, expansive architecture, fine crisp pixels. Style: richly detailed premium 2D pixel-art illustration with deliberate small pixel clusters, clean silhouettes, coherent scale, layered atmospheric depth, precise gold/jade/ochre accents. Render at 1920x1080 or higher widescreen native resolution. Whole image is artwork edge to edge; no borders, no text, no subtitle, no letters, no logo, no watermark. Maya-inspired fantasy, no Egyptian pyramids, ankhs, Aztec sun stones, modern objects, photorealism or 3D. Preserve readable visual hierarchy, sharp objects and faces, not smeared or blurry."
+    },
+    {
+      "id": "stars",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-2a01375c-675a-48a5-8fe1-12318c44efb7.png",
+      "destination": "art-source/v0.4/stars.png",
+      "prompt": "Use case: illustration-story. Asset type: ONE standalone high-resolution 16:9 cinematic panel for the pixel-art game Sangre y Jade, not an atlas or collage. On a Maya temple terrace under a luminous starry indigo sky, Maya astronomers in woven garments observe constellations, carved stone calendar and painted codex on a low table, warm torchlight, great jungle city stretching below. Wide cinematic composition. Style: richly detailed premium 2D pixel-art illustration with deliberate small pixel clusters, clean silhouettes, coherent scale, layered atmospheric depth, precise gold/jade/ochre accents. Render at 1920x1080 or higher widescreen native resolution. Whole image is artwork edge to edge; no borders, no text, no subtitle, no letters, no logo, no watermark. Maya-inspired fantasy, no Egyptian pyramids, ankhs, Aztec sun stones, modern objects, photorealism or 3D. Preserve readable visual hierarchy, sharp objects and faces, not smeared or blurry."
+    },
+    {
+      "id": "cenote",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-54986ccf-1ab2-4d10-9454-b0db7f1bc1a9.png",
+      "destination": "art-source/v0.4/cenote.png",
+      "prompt": "Use case: illustration-story. Asset type: ONE standalone high-resolution 16:9 cinematic panel for the pixel-art game Sangre y Jade, not an atlas or collage. Inside a sacred Maya cenote, huge tree roots descend through a circular opening, shafts of turquoise daylight touch still jade water, ancient mossy stone doorway on the far shore glows faintly. Mysterious, tranquil before danger. Wide view. Style: richly detailed premium 2D pixel-art illustration with deliberate small pixel clusters, clean silhouettes, coherent scale, layered atmospheric depth, precise gold/jade/ochre accents. Render at 1920x1080 or higher widescreen native resolution. Whole image is artwork edge to edge; no borders, no text, no subtitle, no letters, no logo, no watermark. Maya-inspired fantasy, no Egyptian pyramids, ankhs, Aztec sun stones, modern objects, photorealism or 3D. Preserve readable visual hierarchy, sharp objects and faces, not smeared or blurry."
+    },
+    {
+      "id": "breach",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-deedf549-d03b-48bb-a9f4-6fc248a2a85c.png",
+      "destination": "art-source/v0.4/breach.png",
+      "prompt": "Use case: illustration-story. Asset type: ONE standalone high-resolution 16:9 cinematic panel for the pixel-art game Sangre y Jade, not an atlas or collage. A Maya jungle temple city at night beneath a huge blood-red moon. A jade stone seal cracks and an enormous violet-green portal opens between carved limestone doorposts. Shadowy bats and skeletal spirits emerge while distant civilians retreat safely, no gore. Cinematic dramatic wide shot. Style: richly detailed premium 2D pixel-art illustration with deliberate small pixel clusters, clean silhouettes, coherent scale, layered atmospheric depth, precise gold/jade/ochre accents. Render at 1920x1080 or higher widescreen native resolution. Whole image is artwork edge to edge; no borders, no text, no subtitle, no letters, no logo, no watermark. Maya-inspired fantasy, no Egyptian pyramids, ankhs, Aztec sun stones, modern objects, photorealism or 3D. Preserve readable visual hierarchy, sharp objects and faces, not smeared or blurry."
+    },
+    {
+      "id": "heroes",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-e02aa99e-e2bf-4f8d-a13c-abf1bc9a0c28.png",
+      "destination": "art-source/v0.4/heroes.png",
+      "prompt": "Use case: illustration-story. Asset type: ONE standalone high-resolution 16:9 cinematic panel for the pixel-art game Sangre y Jade, not an atlas or collage. Three original Maya fantasy heroes stand together on a temple terrace: Balam a young jaguar-hooded warrior with gold spotted mantle turquoise sash and obsidian club; Ixchel a black-haired woman mage with jade crown cream woven dress teal sash and jade scepter; Kukul a black-haired male hunter with turquoise and red quetzal feather cape and wooden atlatl. Full bodies clearly visible, heroic compact proportions, jungle and jade light behind them. Wide composition. Style: richly detailed premium 2D pixel-art illustration with deliberate small pixel clusters, clean silhouettes, coherent scale, layered atmospheric depth, precise gold/jade/ochre accents. Render at 1920x1080 or higher widescreen native resolution. Whole image is artwork edge to edge; no borders, no text, no subtitle, no letters, no logo, no watermark. Maya-inspired fantasy, no Egyptian pyramids, ankhs, Aztec sun stones, modern objects, photorealism or 3D. Preserve readable visual hierarchy, sharp objects and faces, not smeared or blurry."
+    },
+    {
+      "id": "battle",
+      "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-cc2dd1f4-3874-4ad4-9a4f-b3ad574af619.png",
+      "destination": "art-source/v0.4/battle.png",
+      "prompt": "Use case: illustration-story. Asset type: ONE standalone high-resolution 16:9 cinematic panel for the pixel-art game Sangre y Jade, not an atlas or collage. Three original Maya fantasy heroes seen from behind guarding a limestone temple stair at dawn against approaching shadow spirits: jaguar-hooded Balam with gold spotted cloak turquoise sash obsidian club, black-haired jade-crowned Ixchel with cream dress teal sash green scepter, black-haired feather-cloaked Kukul with turquoise-red quetzal cape and atlatl. Their complete bodies stand on a broad terrace in foreground, jade crystals shimmer beside them, dark spirits mass in a jungle clearing beyond, warm horizon promises dawn. Wide cinematic finale, no gore. Style richly detailed premium 2D pixel art with deliberate small pixel clusters, clean silhouettes and coherent scale, layered atmospheric depth, precise gold jade ochre accents. Render widescreen at 1920x1080 or higher. Whole image artwork edge to edge; no borders, text, subtitles, letters, logos, watermark, Egyptian or Aztec motifs, modern objects, photorealism or 3D. Sharp details, no smearing."
+    }
+  ]
+}
