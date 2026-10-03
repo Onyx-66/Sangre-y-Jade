@@ -578,7 +578,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   onEnemyProjectileHit(projectile) {
-    if (!projectile.active || this.stats.intangibleUntil > this.elapsed) return;
+    if (this.ended || !projectile.active || this.stats.intangibleUntil > this.elapsed) return;
     if (this.stats.reflectUntil > this.elapsed && inMirrorArc(this,projectile)) {
       const velocity = projectile.body.velocity;
       const reflected = this.fireProjectile(projectile.x, projectile.y, Math.atan2(-velocity.y, -velocity.x),
@@ -594,7 +594,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   onProjectileHit(projectile, enemy) {
-    if (!projectile.active || !enemy.active || projectile.getData('pendingSplit')) return;
+    if (this.ended || !projectile.active || !enemy.active || projectile.getData('pendingSplit')) return;
     const hit = projectile.getData('hit');
     if (hit?.has(enemy.getData('serial'))) return;
     hit?.add(enemy.getData('serial'));
@@ -681,7 +681,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   damageEnemy(enemy, rawDamage, critBonus = 0, knockback = 0, origin = this.player, options = {}) {
-    if (!enemy?.active || rawDamage <= 0) return;
+    if (this.ended || !enemy?.active || rawDamage <= 0) return;
     const byAlly = options.byAlly ?? Boolean(origin?.getData?.('byAlly'));
     const heroOwned=!byAlly||options.heroSkill;
     const modifiers=heroOwned?this.passives.modifiers({enemy,dot:options.dot,byAlly}):{};
@@ -849,6 +849,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   grantBossReward(bossId) {
+    if(this.ended)return;
     if(this.pausedForChoice){this.pendingBossRewards.push(bossId);return;}
     const availableGear = GEAR.filter((item) => !this.gear.some((owned) => owned.id === item.id));
     if (availableGear.length) {
@@ -859,6 +860,9 @@ export class GameScene extends Phaser.Scene {
     }
     this.pauseForSelection();
     const cards = this.getSkillChoices(true);
+    // Maxed loadouts can have no legal skill card when the rare swap is absent.
+    // Keep the gear reward; never strand the player in an empty modal.
+    if(!cards.length){this.audio.music(this.mapData.music);this.finishSelection();return;}
     const show=()=>this.hud.showChoice('Boss Defeated',cards,card=>this.applyChoice(card,()=>{this.audio.music(this.mapData.music);this.finishSelection();},show),'Boss reward: choose a skill upgrade.');
     show();
   }
@@ -929,6 +933,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   showLevelChoice() {
+    if(this.ended)return;
     const earnedLevel=this.stats.level-this.pendingLevelUps+1;
     this.pendingLevelUps -= 1;
     this.loadoutLevel=earnedLevel;
@@ -952,6 +957,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   showSkillMilestone(earnedLevel,onDone) {
+    if(this.ended)return;
     const kind=earnedLevel===10?'passive':earnedLevel===20?'active':null;
     if(!kind||this.completedSkillMilestones.has(earnedLevel)){onDone();return;}
     this.completedSkillMilestones.add(earnedLevel);
@@ -997,11 +1003,13 @@ export class GameScene extends Phaser.Scene {
   }
 
   applyChoice(card,onDone=()=>{},onCancel=()=>this.finishSelection()) {
+    if(this.ended)return;
     const kind=card.kind||'active';
     const slots=kind==='passive'?this.passiveSlots:this.skillSlots;
     const pool=kind==='passive'?(this.heroData.passives||[]):this.heroData.skills;
     if(card.choiceType==='swap'){
       this.hud.showChoice('Choose a skill to replace',slots.filter(skill=>(skill.kind||kind)===kind),(_,index)=>{
+        if(this.ended)return;
         const replaceable=slots.map((skill,slotIndex)=>({skill,slotIndex})).filter(({skill})=>(skill.kind||kind)===kind);
         const target=replaceable[index]?.skill;
         const slotIndex=replaceable[index]?.slotIndex;

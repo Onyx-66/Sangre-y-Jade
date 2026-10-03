@@ -91,7 +91,7 @@ export class SupportSystem {
  chooseSkill(done){
   const s=this.scene,a=s.companion;if(!a||a.skills.length>=ALLY_RULES.slots){done?.();return;}
   const cards=this.choices();if(!cards.length){done?.();return;}
-  s.hud.showChoice('Companion Pick',cards,card=>{this.equip(card);done?.();},'Choose one companion skill.');
+  s.hud.showChoice('Companion Pick',cards,card=>{if(s.ended)return;this.equip(card);done?.();},'Choose one companion skill.');
  }
  update(dt){
   const s=this.scene,a=s.companion;if(!a)return;
@@ -160,7 +160,7 @@ export class SupportSystem {
  chooseClass(done){
   const s=this.scene;
   const cards=Object.values(SUPPORTS).map(ally=>({...ally,kind:'ally',signature:ally.signature,passives:ally.passives}));
-  s.hud.showChoice('Choose Your Companion',cards,card=>{this.summon(card.id,s.loadoutLevel||ALLY_RULES.join_level);done?.();},'Choose one companion to join your run.');
+  s.hud.showChoice('Choose Your Companion',cards,card=>{if(s.ended)return;this.summon(card.id,s.loadoutLevel||ALLY_RULES.join_level);done?.();},'Choose one companion to join your run.');
  }
  choices(){const a=this.scene.companion;if(!a)return[];return ALLY_CATALOG[a.id].filter(skill=>!a.skills.some(owned=>owned.id===skill.id)).sort(()=>Math.random()-.5).slice(0,3).map(skill=>({...skill,kind:'ally',skillKind:skill.kind,meta:skill.kind==='passive'?'Passive companion skill':'New companion skill'}));}
 }

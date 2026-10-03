@@ -42,7 +42,7 @@ test('Guardian Link redirects its exact level-one share without allowing the Tan
   assert.equal(support.preventFatal(50),40);
   assert.equal(scene.companion.hp,90);
   scene.companion.hp=5;
-  assert.equal(support.preventFatal(50),46);
+  assert.equal(support.preventFatal(50),40);
   assert.equal(scene.companion.hp,1);
 });
 

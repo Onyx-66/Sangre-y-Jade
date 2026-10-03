@@ -8,7 +8,7 @@ export const jadeWard = {
     castFx(scene, skill);
     const cap = scene.stats.maxHp * skill.params.shieldCapPct / 100;
     addShield(scene, support, skill.params.shield, cap);
-    support.effects[skill.id] = scene.elapsed + skill.params.interval;
+    // This shield is instant; AllyBrain owns the rank-scaled recast timer.
     return true;
   },
 };

@@ -9,9 +9,9 @@ export const guardianLink = {
     const ally = scene.companion;
     if (!equipped(scene, 'tank', definition.id) || Math.hypot(scene.player.x - ally.sprite.x, scene.player.y - ally.sprite.y) > definition.params.radius) return damage;
     const amount = damage * valueAt(level, definition.values) / 100;
-    const absorbed = Math.min(amount, Math.max(0, (ally.hp ?? 100) - 1));
-    ally.hp = Math.max(1, (ally.hp ?? 100) - absorbed);
-    if (absorbed > 0) scene.skillAudio?.play(definition.id, 'proc');
-    return damage - absorbed;
+    // The Tank cannot die: its HP floor must not reduce the promised share.
+    ally.hp = Math.max(1, (ally.hp ?? 100) - amount);
+    if (amount > 0) scene.skillAudio?.play(definition.id, 'proc');
+    return damage - amount;
   },
 };

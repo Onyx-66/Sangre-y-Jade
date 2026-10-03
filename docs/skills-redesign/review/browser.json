@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-03",
+  "browser": "154.0.8037.97",
+  "physicalPhone": false,
+  "checks": [
+    {
+      "hero": "balam",
+      "check": "manual skill input",
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "auto skill input",
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "resize en 568x320",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "resize en 320x568",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "resize fr 568x320",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "resize fr 320x568",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "resize ar 568x320",
+      "direction": "rtl",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "resize ar 320x568",
+      "direction": "rtl",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "pause freezes simulation and skill state",
+      "passed": true
+    },
+    {
+      "hero": "balam",
+      "check": "FX cap and run shutdown",
+      "peak": 24,
+      "before": {
+        "fx": 24,
+        "voices": 1,
+        "context": "running"
+      },
+      "cleaned": true,
+      "effects": 0,
+      "voices": 0,
+      "loops": 0,
+      "clients": 0,
+      "context": "closed",
+      "updateListeners": 0,
+      "huds": 0,
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "manual skill input",
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "auto skill input",
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "resize en 568x320",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "resize en 320x568",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "resize fr 568x320",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "resize fr 320x568",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "resize ar 568x320",
+      "direction": "rtl",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "resize ar 320x568",
+      "direction": "rtl",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "pause freezes simulation and skill state",
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "check": "FX cap and run shutdown",
+      "peak": 24,
+      "before": {
+        "fx": 24,
+        "voices": 1,
+        "context": "running"
+      },
+      "cleaned": true,
+      "effects": 0,
+      "voices": 0,
+      "loops": 0,
+      "clients": 0,
+      "context": "closed",
+      "updateListeners": 0,
+      "huds": 0,
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "manual skill input",
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "auto skill input",
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "resize en 568x320",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "resize en 320x568",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "resize fr 568x320",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "resize fr 320x568",
+      "direction": "ltr",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "resize ar 568x320",
+      "direction": "rtl",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "resize ar 320x568",
+      "direction": "rtl",
+      "overflow": false,
+      "outside": [],
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "pause freezes simulation and skill state",
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "check": "FX cap and run shutdown",
+      "peak": 24,
+      "before": {
+        "fx": 24,
+        "voices": 1,
+        "context": "running"
+      },
+      "cleaned": true,
+      "effects": 0,
+      "voices": 0,
+      "loops": 0,
+      "clients": 0,
+      "context": "closed",
+      "updateListeners": 0,
+      "huds": 0,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "knownGaps": [
+    {
+      "hero": "balam",
+      "check": "mid-run locale switch leaves mounted static labels stale",
+      "actual": "Pause",
+      "expected": "إيقاف مؤقت"
+    },
+    {
+      "hero": "ixchel",
+      "check": "mid-run locale switch leaves mounted static labels stale",
+      "actual": "Pause",
+      "expected": "إيقاف مؤقت"
+    },
+    {
+      "hero": "kukul",
+      "check": "mid-run locale switch leaves mounted static labels stale",
+      "actual": "Pause",
+      "expected": "إيقاف مؤقت"
+    }
+  ],
+  "passed": false
+}
