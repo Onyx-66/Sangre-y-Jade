@@ -43,6 +43,7 @@ export class FxDirector {
     if(!object)return object;
     this.evictFor(units);
     this.live.push({object,units});this.liveUnits+=units;
+    object.once?.('destroy',()=>this.scene.tweens.killTweensOf?.(object));
     return object;
   }
   placeholder(id,still) {
@@ -72,6 +73,19 @@ export class FxDirector {
     const scene=this.scene, director=this;
     const stills=Object.fromEntries(recipe.stills.map(name=>[name,this.texture(id,name)]));
     const blendModes={ADD:'ADD',SCREEN:'SCREEN',NORMAL:'NORMAL'};
+    // Keep a still attached to its real projectile/actor without changing collision geometry.
+    stills.follow=(sprite,target,{offsetX=0,offsetY=0,isAlive,replace=false,update}={})=>{
+      if(!sprite||!target)return sprite;
+      const alive=isAlive||(()=>target.active!==false),visible=target.visible;
+      const sync=()=>{
+        if(!sprite.active)return detach();
+        if(!alive()){sprite.destroy();return;}
+        sprite.setPosition(target.x+offsetX,target.y+offsetY);update?.(sprite,target);
+      };
+      const detach=()=>{scene.events?.off?.('update',sync);if(replace&&alive())target.setVisible?.(visible!==false);};
+      if(replace)target.setVisible?.(false);
+      sprite.once?.('destroy',detach);scene.events?.on?.('update',sync);sync();return sprite;
+    };
     stills.image=(name,x,y,options={})=>{
       const size=options.size??128,width=options.width??size,height=options.height??size,angle=options.angle??0,
         rotation=options.rotation??angle,depth=options.depth??23,alpha=options.alpha??.9,
@@ -100,7 +114,8 @@ export class FxDirector {
     if(!recipe)return this.playPlaceholder(id,stage,ctx);
     if(!draw)return null;
     const stills=this.makeStills(id,recipe);
-    return draw(this.scene,{x:0,y:0,angle:0,scale:1,duration:.4,...ctx},stills);
+    // Registered recipes own their JSON duration unless a handler explicitly overrides it.
+    return draw(this.scene,{x:0,y:0,angle:0,scale:1,...ctx},stills);
   }
   destroy() { this.live.forEach(effect=>effect.object?.destroy());this.live=[];this.liveUnits=0; }
 }

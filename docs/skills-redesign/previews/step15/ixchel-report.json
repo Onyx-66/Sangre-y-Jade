@@ -1,0 +1,353 @@
+{
+  "audits": [
+    {
+      "id": "copal-star",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 3
+    },
+    {
+      "id": "jade-halo",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "ancestor-flame",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "moonwell",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "censer-wave",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "verdant-mercy",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "aura"
+      ],
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "copal-veil",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "impact"
+      ],
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "glyph-comet",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "cacao-bloom",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "raincaller",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "spirit-familiar",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "serpent-coil",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "jade-needles",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "dreamwalk",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "four-directions",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "ixchels-mantle",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "ancestral-echo",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "mana-spring",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "lunar-boon",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "aura",
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "rooted-meditation",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "aura",
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "jade-resilience",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "aura",
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "spirit-harvest",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc",
+        "impact"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "crescent-blessing",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    },
+    {
+      "id": "mana-overflow",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "aura",
+        "proc"
+      ],
+      "maxLiveUnits": 11
+    }
+  ],
+  "currentCasts": [
+    {
+      "id": "copal-star",
+      "cooldown": 3.8
+    },
+    {
+      "id": "jade-halo",
+      "cooldown": 8.5
+    },
+    {
+      "id": "ancestor-flame",
+      "cooldown": 6.8
+    },
+    {
+      "id": "moonwell",
+      "cooldown": 10
+    },
+    {
+      "id": "censer-wave",
+      "cooldown": 5.2
+    },
+    {
+      "id": "verdant-mercy",
+      "cooldown": 14
+    },
+    {
+      "id": "smoking-mirror",
+      "cooldown": 12
+    },
+    {
+      "id": "glyph-comet",
+      "cooldown": 7.5
+    },
+    {
+      "id": "cacao-bloom",
+      "cooldown": 9
+    },
+    {
+      "id": "raincaller",
+      "cooldown": 11
+    },
+    {
+      "id": "spirit-familiar",
+      "cooldown": 10
+    },
+    {
+      "id": "serpent-coil",
+      "cooldown": 8.6
+    },
+    {
+      "id": "jade-needles",
+      "cooldown": 6
+    },
+    {
+      "id": "ceiba-breath",
+      "cooldown": 7.2
+    },
+    {
+      "id": "dreamwalk",
+      "cooldown": 6.4
+    },
+    {
+      "id": "four-directions",
+      "cooldown": 8
+    },
+    {
+      "id": "blue-fire",
+      "cooldown": 6.7
+    },
+    {
+      "id": "ancestor-chorus",
+      "cooldown": 9.8
+    },
+    {
+      "id": "moon-tears",
+      "cooldown": 8.8
+    },
+    {
+      "id": "ixchels-mantle",
+      "cooldown": 15
+    }
+  ],
+  "loadedStills": 40,
+  "missingTextures": [],
+  "maxLiveUnits": 24,
+  "missingSeen": [],
+  "integrationLimit": "Step 9 is absent: 20 current compatibility casts are checked separately; Copal Veil and eight new passive mechanics are tested as FX recipes, not invented gameplay.",
+  "errors": [],
+  "consoleErrors": [],
+  "missingStills": [],
+  "elapsedMs": 7735
+}

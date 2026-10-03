@@ -30,7 +30,7 @@ test('Balam run preload schedules only registered stills for the selected hero a
     textures: { exists: key => loaded.has(key) },
     load: { image: (key, url) => { calls.push({ key, url }); loaded.add(key); } },
   };
-  const count = FxDirector.preload(scene, ['jaguar-roar', 'bloodlust', 'jade-bounty', 'copal-star']);
+  const count = FxDirector.preload(scene, ['jaguar-roar', 'bloodlust', 'jade-bounty', 'unregistered-skill']);
   assert.equal(count, 4);
   assert.equal(calls.length, 4);
   assert.ok(calls.every(call => call.url.startsWith('/assets/pixel/fx/')));

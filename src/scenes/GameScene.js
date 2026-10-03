@@ -15,6 +15,8 @@ import { skillContext, skillCooldown, manaCost, updateSkillEffects, applyStatus 
 import { HERO_EFFECT_DEFAULTS, enemyStatusDefaults, updateEnemy, canEnemyAttack, enemyDamageMult, enemyShotAngle } from '../skills/StatusEffects.js';
 import { FxDirector } from '../fx/FxDirector.js';
 import '../fx/recipes/balam.js';
+import { IXCHEL_FX_IDS } from '../fx/recipes/ixchel.js';
+import { decorateIxchelProjectile } from '../fx/ixchelStages.js';
 import { SkillAudio } from '../systems/SkillAudio.js';
 import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';
 import { configureProjectile } from '../skills/kukul/projectiles.js';
@@ -40,7 +42,9 @@ export class GameScene extends Phaser.Scene {
   preload() {
     preloadTextures(this);
     const hero=this.options.hero;
-    FxDirector.preload(this,[...(hero.skills||[]),...(hero.passives||[]),{id:'survivors-will'},{id:'jade-bounty'}].map(skill=>skill.id));
+    const ids=[...(hero.skills||[]),...(hero.passives||[]),{id:'survivors-will'},{id:'jade-bounty'}].map(skill=>skill.id);
+    if(hero.id==='ixchel')ids.push(...IXCHEL_FX_IDS);
+    FxDirector.preload(this,ids);
   }
 
   create() {
@@ -428,6 +432,7 @@ export class GameScene extends Phaser.Scene {
         if (target) {
           const projectile = this.fireProjectile(summon.sprite.x, summon.sprite.y, Phaser.Math.Angle.Between(summon.sprite.x, summon.sprite.y, target.x, target.y), summon.damage, summon.speed || 520, summon.pierce || 1, 1.1, summon.tint ?? 0x69e7c0);
           projectile?.setData({ source: summon.sprite, byAlly: true, status: summon.status || null });
+          if(summon.fxId)decorateIxchelProjectile(this,projectile,summon.fxId);
         }
         summon.shot = summon.interval || .65;
       }
@@ -554,7 +559,7 @@ export class GameScene extends Phaser.Scene {
     if(!isDart) projectile.play('bolt-1');
     projectile.body.setCircle(18,46,46);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
-    projectile.setData({ damage, pierce, life, critBonus, hit: new Set(), source: this.player, byAlly: false, status: null, onHit: null, homingTarget:null, homingSerial:null, homingTurn:0, homingSpeed:0, basicAttack:false, skillId:null, wave:null, pendingSplit:false, splitOwner:null });
+    projectile.setData({ damage, pierce, life, critBonus, hit: new Set(), source: this.player, byAlly: false, status: null, onHit: null, homingTarget:null, homingSerial:null, homingTurn:0, homingSpeed:0, basicAttack:false, skillId:null, wave:null, pendingSplit:false, splitOwner:null, ixchelFx:null, fxGeneration:null });
     return projectile;
   }
 
@@ -624,29 +629,33 @@ export class GameScene extends Phaser.Scene {
     });
   }
 
-  chainAttack(target, range, damage, count) {
-    performChainAttack(this, target, range, damage, count);
+  chainAttack(target, range, damage, count, options = {}) {
+    performChainAttack(this, target, range, damage, count, options);
   }
 
-  placeTrap(x, y, range, damage, durationScale = 1) {
+  placeTrap(x, y, range, damage, durationScale = 1, {fxId} = {}) {
     const trap = this.add.image(x, y, 'trap').setDepth(7).setAlpha(.82).setScale(.7);
+    if(fxId)this.fx?.play(fxId,'ground',{x,y,radius:range,duration:1.24*durationScale,target:trap,replace:true});
     this.tweens.add({ targets: trap, scale: range / 64, alpha: .35, duration: 620 * durationScale, yoyo: true, onComplete: () => {
       this.damageArea({ x, y }, range, damage, 230);
       this.damagePropsInArea(x, y, range);
       this.ringEffect(x, y, range / 64, 0xefc27a);
+      if(fxId)this.fx?.play(fxId,'impact',{x,y,radius:range});
       trap.destroy();
     }});
   }
 
-  rainAttack(x, y, range, damage, count) {
+  rainAttack(x, y, range, damage, count, fxId = null) {
     for (let i = 0; i < count; i += 1) {
       const angle = Math.random() * TAU;
       const radius = Math.sqrt(Math.random()) * range;
       const px = x + Math.cos(angle) * radius;
       const py = y + Math.sin(angle) * radius;
       const marker = this.add.circle(px, py, 11, 0x67dfb2, .3).setDepth(6);
+      if(fxId)this.fx?.play(fxId,'ground',{x:px,y:py,duration:(180+i*35)/1000,width:64});
       this.tweens.add({ targets: marker, scale: 1.8, alpha: .75, duration: 180 + i * 35, onComplete: () => {
         this.playEffect(2,px,py,100);
+        if(fxId)this.fx?.play(fxId,'impact',{x:px,y:py,radius:46});
         this.enemies.children.each((enemy) => {
           if (enemy?.active && Phaser.Math.Distance.Between(px, py, enemy.x, enemy.y) < 46) this.damageEnemy(enemy, damage, 0, 70, { x: px, y: py });
         });
@@ -664,6 +673,7 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(4,sprite.x,sprite.y,100);
     const summoned = { ...options, sprite, damage, life: options.duration ?? 12, shot: .15 };
     this.summons.push(summoned);
+    if(options.fxId)this.fx?.play(options.fxId,'aura',{x:sprite.x,y:sprite.y,target:sprite,duration:summoned.life,replace:true});
     return summoned;
   }
 

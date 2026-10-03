@@ -1,0 +1,50 @@
+{
+  "expectedCount": 8,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step15/contact-sheet-3.png",
+  "items": [
+    {
+      "file": "fx/ancestral-echo/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/mana-spring/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/lunar-boon/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/rooted-meditation/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/jade-resilience/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/spirit-harvest/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/crescent-blessing/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/mana-overflow/proc.png",
+      "width": 128,
+      "height": 128
+    }
+  ]
+}

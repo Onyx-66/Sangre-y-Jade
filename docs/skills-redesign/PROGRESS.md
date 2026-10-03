@@ -18,7 +18,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - [x] 12 — Ally skill definitions, handlers, passive hooks and dead-skill audit
 - [x] 13 — Skill icons and ID-based lookup
 - [ ] 14 — Name not supplied
-- [ ] 15 — Name not supplied
+- [x] 15 — Ixchel effect stills and animation recipes
 - [ ] 16 — Name not supplied
 - [ ] 17 — Name not supplied
 - [ ] 18 — Name not supplied
@@ -112,3 +112,11 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Tests:** `npm run test` — **245/245 passed**. `npm run build` — succeeded (244 modules); existing >500 kB bundle warning remains. `node scripts/balam-playtest.mjs` — **96 active casts, 10 passive/trait hooks, 42 stills preloaded, zero missing-still warnings, 24/24 live effect units, zero browser errors**. Focused recipe tests check uniqueness and exact still dimensions/alpha. `git diff --check` passed.
 - **Open issues:** recipes/stills for Ixchel, Kukul and allies remain later-step work; they use the procedural fallback for now. Existing large-chunk build warning remains. No audio, music, voice recordings or frame-by-frame effect sheets were created or changed.
 - **Commit/version:** commit `[v0.5.0-skills-step14] Add Balam FX stills and recipes`, annotated tag `v0.5.0-skills-step14`; application version remains 0.5.0. No push or later-step work included.
+
+## Step 15 — Ixchel effect stills and recipes — 2026-10-03
+
+- **Changed:** generated, sliced and visually reviewed 40 distinct transparent stills (32 active at 256×256, eight passive at 128×128) and 24 unique registered recipes. Preserved source sheets and all full prompts; regenerated Copal Star once for exactly five points. Generated FX-only spatial/timing metadata from the JSON. Added actor/projectile following, cleanup and actual-hit stage callbacks to current compatibility casts, with no combat rebalance. Added a deterministic 10-second-per-recipe Chromium audit and six unit tests covering uniqueness, JSON geometry, lifetime/eviction, preload/cache and exact PNG dimensions/alpha. No audio, music, voice, branding, protected files, old assets or dependency changes.
+- **Tests:** `npm run check` — **251/251 tests passed**, production build succeeded (247 modules, 10.21 seconds; existing >500 kB bundle warning). Initial mock-scene failure was fixed with optional FX callbacks before rerunning. `node scripts/ixchel-fx-playtest.mjs` — **24 recipes × 10 seconds**, all stages exercised, **20 existing compatibility casts**, **40 stills loaded**, zero browser/console errors or missing-still warnings, **24/24 peak effect units**. Signature comparison covers all **50** Balam/shared/Ixchel recipes with no duplicates. Final report and screenshot are in `previews/step15/`; all three final contact sheets were reviewed. `git diff --check` passed.
+- **Open issues:** Step 9 is absent in this checkout. Copal Veil and the eight redesigned Ixchel passive event hooks cannot be connected until that gameplay conversion exists; their art and recipes are ready and independently audited here. Other retained Ixchel skills still use old mechanics, so compatibility effects honor their actual radius/timing. Built-in model/variant routing is not exposed. Existing bundle-size warning remains. No additional step was implemented.
+- **Regression check:** `node scripts/balam-playtest.mjs` passed **96 active casts and ten passive/trait hooks**, 42 stills loaded, zero missing-still warnings/browser errors and 24/24 live effect units. New report/screenshot copies are retained under `previews/step15/balam-regression-*`; prior Step 14 snapshots are unchanged.
+- **Commit/version:** one commit `[v0.5.0-skills-step15] Add Ixchel FX stills and recipes`, annotated tag `v0.5.0-skills-step15`, on `feature/skills-overhaul`; application version remains 0.5.0. No push.

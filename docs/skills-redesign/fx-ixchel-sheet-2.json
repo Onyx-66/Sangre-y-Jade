@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step15/contact-sheet-2.png",
+  "items": [
+    {
+      "file": "fx/cacao-bloom/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/cacao-bloom/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/raincaller/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/raincaller/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/spirit-familiar/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/spirit-familiar/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/serpent-coil/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/serpent-coil/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/jade-needles/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/jade-needles/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/dreamwalk/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/dreamwalk/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/four-directions/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/four-directions/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/ixchels-mantle/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/ixchels-mantle/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

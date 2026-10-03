@@ -17,7 +17,7 @@ export function applySlow(enemy, elapsed) {
   return true;
 }
 
-export function chainAttack(scene, target, range, damage, count) {
+export function chainAttack(scene, target, range, damage, count, { onLink } = {}) {
   if (!target) return;
   const hit = new Set();
   let previous = target;
@@ -32,6 +32,7 @@ export function chainAttack(scene, target, range, damage, count) {
     const line = scene.add.line(0, 0, previous.x, previous.y, enemy.x, enemy.y, 0xa6ffe1, .78)
       .setOrigin(0).setDepth(17).setLineWidth(3, 1);
     scene.tweens.add({ targets: line, alpha: 0, duration: 180 + index * 25, onComplete: () => line.destroy() });
+    onLink?.({x:previous.x,y:previous.y},enemy,index);
     scene.damageEnemy(enemy, damage * Math.pow(.88, index), 0, 90);
     previous = enemy;
   }

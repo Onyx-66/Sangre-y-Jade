@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step15/contact-sheet-1.png",
+  "items": [
+    {
+      "file": "fx/copal-star/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/copal-star/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/jade-halo/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/jade-halo/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/ancestor-flame/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/ancestor-flame/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/moonwell/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/moonwell/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/censer-wave/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/censer-wave/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/verdant-mercy/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/verdant-mercy/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/copal-veil/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/copal-veil/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/glyph-comet/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/glyph-comet/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

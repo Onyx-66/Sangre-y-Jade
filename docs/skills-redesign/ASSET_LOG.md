@@ -125,3 +125,48 @@ Shared prompt for all 42 cells: gpt-image-2.5 Flare, transparent 4×4 2048×2048
 - `fx/wounded-fury/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 8: compact red-orange flame outline aura, #d9413a / #ff8a1f.
 - `fx/survivors-will/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 9: pale speed streaks behind a heart-shaped spark.
 - `fx/jade-bounty/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 10: bright green sparkle burst with emerald particles, #4fd6a0 / #d8fff0.
+
+## Step 15 — Ixchel FX stills — 2026-10-03
+
+40 unique transparent stills, reviewed individually on final contact sheets. Requested gpt-image-2.5 Flare through the built-in image generator; its API does not expose model/variant routing confirmation. Full prompts are saved in `FX_PROMPTS_IXCHEL.json`, with source sheets, a five-point-star correction, working sheets and previews in `previews/step15/`. All sprites are generated raster art; processing only trims, repacks and resizes, without drawing replacement artwork. References: `style_reference_fx.png` and `style_reference.png`. No sound, music, voice, branding or animation frame sheet was changed.
+
+- `fx/copal-star/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 1: five-point jade-white star #9ef0c8, luminous pentagonal core. Regenerated once to enforce exactly five points.
+- `fx/copal-star/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 2: grey-green copal smoke puff #5c6b66.
+- `fx/jade-halo/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 3: polished jade bead orb #4fd6a0.
+- `fx/jade-halo/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 4: thin green trail ring and white-green contact pop #e8fff6.
+- `fx/ancestor-flame/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 5: jagged blue-green linked flame arc #3de0b0/#1a6f8f.
+- `fx/ancestor-flame/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 6: bright-cored spirit flame node and embers.
+- `fx/moonwell/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 7: round pale-blue moon-reflection water pool #8ec5ff.
+- `fx/moonwell/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 8: silver ripples and rising sparkles #e8f2ff.
+- `fx/censer-wave/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 9: rolling grey-green incense smoke cone #b8c9bd.
+- `fx/censer-wave/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 10: swirling smoky ring afterimage #6f8f7f.
+- `fx/verdant-mercy/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 11: green sprout ring with pink flowers #7be0a0/#ff9ccf.
+- `fx/verdant-mercy/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 12: soft green light column and floating leaves.
+- `fx/copal-veil/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 13: translucent grey-violet smoke dome #8f86b8.
+- `fx/copal-veil/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 14: blue mana sparkles #6ad0ff.
+- `fx/glyph-comet/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 15: jade green comet with long horizontal tail #3de0b0.
+- `fx/glyph-comet/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 16: golden starburst and abstract Maya glyph decal #f5e6a0.
+- `fx/cacao-bloom/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 1: brown cacao-pod flower with pink petals #7a4a2b/#ff9ccf.
+- `fx/cacao-bloom/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 2: drifting brown spore cloud and loose pink petals.
+- `fx/raincaller/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 3: dark blue cloud and rain streaks #3f6fb5.
+- `fx/raincaller/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 4: yellow-white lightning bolt with puddle splash #fff3a0.
+- `fx/spirit-familiar/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 5: iridescent green-blue hummingbird #4fe0c8 with pink lights.
+- `fx/spirit-familiar/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 6: shimmering dive streak and dust #ff6fb0.
+- `fx/serpent-coil/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 7: translucent green six-segment serpent spiral #4fd68f.
+- `fx/serpent-coil/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 8: pale green hiss puff #c8ffd8.
+- `fx/jade-needles/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 9: thin bright jade needle #7bf0c0.
+- `fx/jade-needles/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 10: green glass shard burst #d8fff0.
+- `fx/dreamwalk/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 11: blue-violet doubled star-mist silhouette without character #9a8cff.
+- `fx/dreamwalk/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 12: violet circular return ripple #d8d0ff.
+- `fx/four-directions/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 13: east-red, north-white, west-outlined-dark, south-yellow ground cross.
+- `fx/four-directions/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 14: bright horizontal white-gold bolt for directional tinting.
+- `fx/ixchels-mantle/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 15: empty silver-blue cloak of light #8ec5ff.
+- `fx/ixchels-mantle/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 16: floating white-blue stars and mana glow #f5f0ff.
+- `fx/ancestral-echo/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 1: pale-blue ghost-flame arc between targets.
+- `fx/mana-spring/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 2: bright blue droplet cluster with rising trail.
+- `fx/lunar-boon/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 3: small silver crescent and blue moon flash.
+- `fx/rooted-meditation/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 4: tiny brown roots with green leaves in an open foot ring.
+- `fx/jade-resilience/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 5: stacked green crystal facets in a shielding crown.
+- `fx/spirit-harvest/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 6: upright pale-green wisp with tiny curling trail.
+- `fx/crescent-blessing/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 7: blue diamond sparkle with a small target-to-hero tail.
+- `fx/mana-overflow/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 8: two blue energy ellipses, mana ring and faint hero aura.
