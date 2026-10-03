@@ -1,0 +1,26 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step13/contact-3.png",
+  "items": [
+    { "file": "skills/vanish.png", "width": 128, "height": 128 },
+    { "file": "skills/relentless-pursuit.png", "width": 128, "height": 128 },
+    { "file": "skills/bounty-contract.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-might.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-haste.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-reach.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-critical.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-armor.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-renewal.png", "width": 128, "height": 128 },
+    { "file": "skills/stat-wisdom.png", "width": 128, "height": 128 },
+    { "file": "skills/ui-hud-dash.png", "width": 128, "height": 128 },
+    { "file": "skills/ui-hud-attack.png", "width": 128, "height": 128 },
+    { "file": "skills/ui-shrine-damage.png", "width": 128, "height": 128 },
+    { "file": "skills/ui-shrine-vitality.png", "width": 128, "height": 128 },
+    { "file": "skills/ui-shrine-speed.png", "width": 128, "height": 128 },
+    { "file": "skills/ui-shrine-fortune.png", "width": 128, "height": 128 }
+  ]
+}

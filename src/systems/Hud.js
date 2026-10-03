@@ -39,9 +39,9 @@ export class Hud {
       <div class="skill-dock">
       <div class="passive-row"><div class="innate-traits">${SLOT_RULES.innate.map(id=>`<span class="innate-slot" data-innate="${id}" tabindex="0"></span>`).join('')}</div><div class="passive-slots">${Array.from({length:2},(_,i)=>`<div class="passive-slot" data-passive="${i}" tabindex="0"><span class="passive-content"></span></div>`).join('')}</div></div>
       <div class="skills">
-        <button class="attack-btn" data-attack aria-label="Attack" ${this.settings.attackMode==='manual'?'':'hidden'}><span class="key">F</span>${iconMarkup({art:1})}</button>
+        <button class="attack-btn" data-attack aria-label="Attack" ${this.settings.attackMode==='manual'?'':'hidden'}><span class="key">F</span>${iconMarkup({id:'ui-hud-attack'})}</button>
         ${Array.from({length:SLOT_RULES.active.keys.length},(_,i) => `<button class="skill-btn active-slot empty" data-skill="${i}" aria-label="Empty skill slot ${i + 1}"><span class="key" dir="ltr">${SLOT_RULES.active.keys[i]}</span><span class="skill-icon">＋</span><span class="cooldown"></span><span class="slot-level"></span></button>`).join('')}
-        <button class="dash-btn" data-dash aria-label="Dash"><span class="key">SPACE</span><span class="skill-icon">${iconMarkup({art:45})}</span><span class="cooldown"></span></button>
+        <button class="dash-btn" data-dash aria-label="Dash"><span class="key">SPACE</span><span class="skill-icon">${iconMarkup({id:'ui-hud-dash'})}</span><span class="cooldown"></span></button>
       </div></div><div class="skill-tooltip" role="tooltip" hidden></div>`;
     this.root.replaceChildren(this.el);
     this.hpFill = this.el.querySelector('.hp span');

@@ -1,0 +1,293 @@
+{
+  "checks": [
+    {
+      "label": "real level-up card equips an active and its HUD button casts",
+      "passed": true
+    },
+    {
+      "label": "real early run reserves both future locked slots",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: locked slot cannot cast",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-locked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "en-568x320-unlocked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: locked slot cannot cast",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-locked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "en-320x568-unlocked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: locked slot cannot cast",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-locked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "ar-568x320-unlocked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: locked slot cannot cast",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-locked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: all HUD elements inside screen []",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: combat controls do not overlap []",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: six usable actions and visible QERT labels",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: locale direction",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: active/passive lock state",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: passive kill counter",
+      "passed": true
+    },
+    {
+      "label": "ar-320x568-unlocked: passive tap shows tooltip without casting",
+      "passed": true
+    },
+    {
+      "label": "innate trait tooltip does not cast",
+      "passed": true
+    },
+    {
+      "label": "active button preserves its cast callback",
+      "passed": true
+    },
+    {
+      "label": "stack pips and ready timer render",
+      "passed": true
+    },
+    {
+      "label": "three automatic ally slots render without cast buttons",
+      "passed": true
+    },
+    {
+      "label": "ally passive uses its jade frame and the rank badge is shown",
+      "passed": true
+    },
+    {
+      "label": "tapping the ally panel opens its read-only loadout",
+      "passed": true
+    },
+    {
+      "label": "unlock keeps slot position and shows burst/banner",
+      "passed": true
+    },
+    {
+      "label": "unlock banner clears after 1.5 seconds",
+      "passed": true
+    },
+    {
+      "label": "draft cards carry text ribbons for every kind",
+      "passed": true
+    },
+    {
+      "label": "no runtime or missing-asset errors: ",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -16,7 +16,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - [ ] 10 — Kukul actives, passives and final hero cleanup
 - [x] 11 — Companion acquisition, rank and AI
 - [x] 12 — Ally skill definitions, handlers, passive hooks and dead-skill audit
-- [ ] 13 — Name not supplied
+- [x] 13 — Skill icons and ID-based lookup
 - [ ] 14 — Name not supplied
 - [ ] 15 — Name not supplied
 - [ ] 16 — Name not supplied
@@ -98,3 +98,10 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Tests:** `npm run check` — **242/242 tests passed**, production build succeeded (128 modules; existing >500 kB bundle warning). `node scripts/ally-skills-playtest.mjs` — three 600-second simulated role runs; all 18 active skills cast and all six passive hooks were observed. `node docs/skills-redesign/validate_skills.mjs docs/skills-redesign/skills_redesign.json --assets public/assets/pixel --allow-new` — **108 entries checked**, uniqueness/ownership passed; expected not-yet-generated skill-icon warnings remain. `git diff --check` passed.
 - **Open issues:** allies do not yet have a general incoming-damage/HP combat pipeline; War Cry publishes its JSON Tank damage multiplier for that pipeline but does not invent ally collision/survivability rules here. Passive skills are validated by trigger/active-state observations rather than being counted as casts. Skill art/audio still use the later-step assets or existing placeholders; FR/AR descriptions intentionally remain English until step 19. Existing bundle-size warning remains.
 - **Commit/version:** one commit labelled `[v0.5.0-skills-step12]`, annotated tag `v0.5.0-skills-step12`, on `feature/skills-overhaul`; application version remains 0.5.0. No push or later-step work included.
+
+## Step 13 — 2026-10-03 — Skill icons and ID-based lookup — Complete
+
+- **Changed:** migrated the 66 legacy sources to ID-named files, generated/sliced the requested 48 new skill/stat/HUD/shrine images into 128×128 PNGs, and regenerated Silencing Dart once to add its missing mute mark. Reviewed all three sheets, the 48 outputs and the 114-icon contact sheet. Added `scripts/check-icon-similarity.mjs`; its 48px central-crop pHash comparison flags no pairs. Switched skills/stat cards, HUD Dash/Attack and shrine upgrades to ID-based paths; removed numeric maps and the last runtime `icon-N.png` reference; updated the asset inventory and tests. After no-`--allow-new` validation reported OK, deleted all 66 old numbered icon files.
+- **Tests:** `npm run check` — **242/242 tests passed**, production build succeeded (243 modules; pre-existing >500 kB chunk warning). `npm run test:hud` — **72/72 checks passed**, eight layout screenshots saved under `previews/step13/hud/`, with no runtime or missing-asset errors. `validate_skills.mjs` — **108 entries checked; OK**, plus six expected orphan warnings for optional HUD/shrine icons not counted by that validator. Similarity audit — **114 icons, no pairs flagged**. `git diff --check` passed.
+- **Open issues:** built-in image generation returned 1254×1254 source sheets; the originals are preserved and normalized to 2048×2048 before slicing. The validator does not yet recognize `optional_ui_icons`; those six files are otherwise inventoried and used. A few pre-existing Ixchel legacy IDs not present in the JSON still display the missing-art marker; Ixchel conversion remains outside this icon-only step.
+- **Commit/version:** one commit labelled `[v0.5.0-skills-step13]`, annotated tag `v0.5.0-skills-step13`; application version remains 0.5.0. No push or later-step work included.

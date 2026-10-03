@@ -1,0 +1,26 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step13/contact-1.png",
+  "items": [
+    { "file": "skills/bloodlust.png", "width": 128, "height": 128 },
+    { "file": "skills/feast-of-the-fallen.png", "width": 128, "height": 128 },
+    { "file": "skills/obsidian-thorns.png", "width": 128, "height": 128 },
+    { "file": "skills/jaguars-pride.png", "width": 128, "height": 128 },
+    { "file": "skills/jade-resilience.png", "width": 128, "height": 128 },
+    { "file": "skills/spirit-harvest.png", "width": 128, "height": 128 },
+    { "file": "skills/crescent-blessing.png", "width": 128, "height": 128 },
+    { "file": "skills/mana-overflow.png", "width": 128, "height": 128 },
+    { "file": "skills/hunters-focus.png", "width": 128, "height": 128 },
+    { "file": "skills/trophy-hunter.png", "width": 128, "height": 128 },
+    { "file": "skills/steady-aim.png", "width": 128, "height": 128 },
+    { "file": "skills/survivors-will.png", "width": 128, "height": 128 },
+    { "file": "skills/healing-circle.png", "width": 128, "height": 128 },
+    { "file": "skills/jade-ward.png", "width": 128, "height": 128 },
+    { "file": "skills/cleansing-light.png", "width": 128, "height": 128 },
+    { "file": "skills/sanctuary-dome.png", "width": 128, "height": 128 }
+  ]
+}

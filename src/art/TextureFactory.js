@@ -9,7 +9,7 @@ export function preloadTextures(scene) {
   for(const name of ['stela','ruin','palm','foliage','roots','crystal','urn','basket','weapon-balam','weapon-ixchel','weapon-kukul','bracers','pendant','headdress','cacao','potion']) scene.load.image(name,`${root}${name}.png`);
   scene.load.image('xp-gem',`${root}crystal.png`);
   scene.load.image('summon',`${root}weapon-ixchel.png`);
-  scene.load.image('trap',`${root}icon-8.png`);
+  scene.load.image('trap',`${root}skills/stone-maw.png`);
   scene.load.image('player-dart',`${root}weapon-kukul.png`);
   scene.load.image('ground',`${root}ground.png`);
 }

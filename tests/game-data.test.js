@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
 import { HEROES, MODIFIERS } from '../src/data/heroes.js';
@@ -70,8 +70,11 @@ test('all heroes, enemies, bosses and effects have separate transparent frames',
   const names=['hero-balam','hero-ixchel','hero-kukul','enemy-shade','enemy-bat','enemy-jaguar','enemy-serpent','enemy-priest','boss-camazotz','boss-zipacna','boss-vucub','boss-ahpuch',...Array.from({length:6},(_,i)=>`fx-${i}`)];
   for(const name of names)for(let n=0;n<4;n++){const meta=await sharp(resolve(`public/assets/pixel/frames/${name}-${n}.png`)).metadata();assert.equal(meta.width,128,name);assert.equal(meta.height,128,name);assert.ok(meta.hasAlpha,name);}
 });
-test('66 skill and upgrade icons and an OFL-licensed font are bundled',()=>{
-  for(let i=0;i<66;i++)assert.ok(existsSync(resolve(`public/assets/pixel/icon-${i}.png`)));
+test('114 ID-named skill, stat and HUD icons and an OFL-licensed font are bundled',()=>{
+  const icons=readdirSync(resolve('public/assets/pixel/skills')).filter(file=>file.endsWith('.png'));
+  assert.equal(icons.length,114);
+  for(const file of icons)assert.ok(existsSync(resolve(`public/assets/pixel/skills/${file}`)));
+  assert.equal(existsSync(resolve('public/assets/pixel/icon-0.png')),false);
   assert.match(readFileSync('public/assets/fonts/OFL.txt','utf8'),/SIL OPEN FONT LICENSE/);
 });
 

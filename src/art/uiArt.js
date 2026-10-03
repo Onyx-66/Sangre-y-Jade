@@ -1,10 +1,16 @@
-import { HEROES } from '../data/heroes.js';
-const maps={ixchel:[22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,29]};
-for(const [id,hero] of Object.entries(HEROES)) if(id==='ixchel')hero.skills.forEach((skill,i)=>{skill.art=maps[id][i];});
-// Dedicated skill icons arrive in step 13. Prefer them only when actually present.
 let skillIcons={};
 try{skillIcons=import.meta.glob('/public/assets/pixel/skills/*.png');}catch{/* Node fixtures have no Vite glob transform. */}
-const modifiers={might:2,vigor:62,haste:45,reach:24,swiftness:65,critical:16,armor:4,renewal:17,wisdom:63,fortune:64};
 export const artUrl=file=>`${import.meta.env.BASE_URL}assets/pixel/${file}`;
-export function iconMarkup(item){const file=item.iconFile&&skillIcons[`/public/assets/pixel/${item.iconFile}`]?item.iconFile:`icon-${item.art??modifiers[item.id]??63}.png`;return `<img class="pixel-icon" src="${artUrl(item.supportPortrait?`frames/support-${item.supportPortrait}-0.png`:file)}" alt="">`;}
+export function iconFileFor(item={}){
+  if(item.supportPortrait)return `frames/support-${item.supportPortrait}-0.png`;
+  const id=String(item.id||'').trim();
+  if(!id)return null;
+  const filename=item.kind==='stat'?`stat-${id}.png`:`${id}.png`;
+  const file=`skills/${filename}`;
+  return skillIcons[`/public/assets/pixel/${file}`]?file:null;
+}
+export function iconMarkup(item){
+  const file=iconFileFor(item);
+  return file?`<img class="pixel-icon" src="${artUrl(file)}" alt="" aria-hidden="true">`:'<span class="pixel-icon missing" aria-hidden="true">✦</span>';
+}
 export function portraitMarkup(id){return `<img class="hero-portrait" src="${artUrl(`frames/hero-${id}-0.png`)}" alt="" aria-hidden="true">`;}

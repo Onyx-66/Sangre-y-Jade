@@ -184,10 +184,10 @@ class SangreYJadeApp {
   showShrine() {
     this.currentPage='showShrine';
     const upgrades = [
-      { id: 'damage', icon: '◆', name: 'Obsidian Edge', effect: '+3.5% starting damage per rank' },
-      { id: 'vitality', icon: '♥', name: 'Cacao & Herbs', effect: '+7 starting HP per rank' },
-      { id: 'speed', icon: '➤', name: 'Quetzal Step', effect: '+1.8% movement speed per rank' },
-      { id: 'fortune', icon: '●', name: 'Merchant’s Favor', effect: '+4% cacao fortune per rank' },
+      { id: 'damage', name: 'Obsidian Edge', effect: '+3.5% starting damage per rank' },
+      { id: 'vitality', name: 'Cacao & Herbs', effect: '+7 starting HP per rank' },
+      { id: 'speed', name: 'Quetzal Step', effect: '+1.8% movement speed per rank' },
+      { id: 'fortune', name: 'Merchant’s Favor', effect: '+4% cacao fortune per rank' },
     ];
     const render = () => {
       const screen = this.setScreen(`
@@ -197,7 +197,7 @@ class SangreYJadeApp {
           <div class="shrine-grid">${upgrades.map((upgrade) => {
             const level = this.save.data.upgrades[upgrade.id];
             const cost = this.save.upgradeCost(upgrade.id);
-            return `<article class="upgrade">${iconMarkup({art:{damage:1,vitality:62,speed:65,fortune:64}[upgrade.id]})}<div><b>${upgrade.name}</b><div>${upgrade.effect}</div><div class="level-pips">${'◆'.repeat(level)}${'◇'.repeat(8-level)}</div></div><button class="btn small" data-buy="${upgrade.id}" ${level >= 8 || this.save.data.cacao < cost ? 'disabled' : ''}>${level >= 8 ? 'Max' : `● ${cost}`}</button></article>`;
+            return `<article class="upgrade">${iconMarkup({id:`ui-shrine-${upgrade.id}`})}<div><b>${upgrade.name}</b><div>${upgrade.effect}</div><div class="level-pips">${'◆'.repeat(level)}${'◇'.repeat(8-level)}</div></div><button class="btn small" data-buy="${upgrade.id}" ${level >= 8 || this.save.data.cacao < cost ? 'disabled' : ''}>${level >= 8 ? 'Max' : `● ${cost}`}</button></article>`;
           }).join('')}</div>
           <div class="panel-actions"><button class="btn ghost" data-back>Return</button></div>
         </section>`);

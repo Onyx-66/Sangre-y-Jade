@@ -1,0 +1,11 @@
+{
+  "expectedCount": 1,
+  "columns": 1,
+  "rows": 1,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step13/contact-silencing-dart.png",
+  "items": [
+    { "file": "skills/silencing-dart.png", "width": 128, "height": 128 }
+  ]
+}

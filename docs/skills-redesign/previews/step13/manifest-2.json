@@ -1,0 +1,26 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step13/contact-2.png",
+  "items": [
+    { "file": "skills/radiant-beacon.png", "width": 128, "height": 128 },
+    { "file": "skills/lifebond.png", "width": 128, "height": 128 },
+    { "file": "skills/saving-grace.png", "width": 128, "height": 128 },
+    { "file": "skills/sacred-fervor.png", "width": 128, "height": 128 },
+    { "file": "skills/bulwark-wall.png", "width": 128, "height": 128 },
+    { "file": "skills/war-cry.png", "width": 128, "height": 128 },
+    { "file": "skills/shield-bash.png", "width": 128, "height": 128 },
+    { "file": "skills/ground-slam.png", "width": 128, "height": 128 },
+    { "file": "skills/clay-bomb.png", "width": 128, "height": 128 },
+    { "file": "skills/shield-throw.png", "width": 128, "height": 128 },
+    { "file": "skills/bodyguard.png", "width": 128, "height": 128 },
+    { "file": "skills/guardian-link.png", "width": 128, "height": 128 },
+    { "file": "skills/execute.png", "width": 128, "height": 128 },
+    { "file": "skills/venom-blade.png", "width": 128, "height": 128 },
+    { "file": "skills/silencing-dart.png", "width": 128, "height": 128 },
+    { "file": "skills/smoke-bomb.png", "width": 128, "height": 128 }
+  ]
+}
