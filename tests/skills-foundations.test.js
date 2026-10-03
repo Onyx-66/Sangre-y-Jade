@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { HEROES, LEGACY_BALAM_SKILLS } from '../src/data/heroes.js';
+import { HEROES } from '../src/data/heroes.js';
 import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../src/skills/index.js';
 import { EventBus, PassiveSystem } from '../src/skills/PassiveSystem.js';
 import { applyStatus, skillContext, damageArea, cone, lineStrike, spawnProjectile, orbitBlades, zone, summon, updateSkillEffects } from '../src/skills/common.js';
@@ -204,28 +204,26 @@ test('event bus subscribes, unsubscribes and clears; passive replacement and lev
   system.destroy(); assert.equal(system.bus.listeners.size, 0);
 });
 
-test('legacy fallback casts every old skill at each level, including delayed effects, without errors', () => {
-  const handlers={...ACTIVE_HANDLERS};
-  for(const id of Object.keys(handlers))delete ACTIVE_HANDLERS[id];
-  try{
-  for (const hero of Object.values(HEROES)) for (const original of hero.id==='balam'?LEGACY_BALAM_SKILLS:hero.skills) for (let level = 1; level <= 6; level += 1) {
+test('every current hero skill has an ID handler and casts at all six levels without errors', () => {
+  for (const hero of Object.values(HEROES)) for (const original of hero.skills) for (let level = 1; level <= 6; level += 1) {
     const scene = makeScene(hero);
     addEnemy(scene, {}, 70);
     const skill = { ...original, level, remaining: 0 };
     scene.skillSlots = [skill];
     let casts = 0;
     scene.passives.bus.on('skillCast', () => { casts += 1; });
-    assert.doesNotThrow(() => { scene.castSkill(0); scene.flush(); scene.updateSummons(.2); scene.flush(); }, `${hero.id}/${skill.id}/Lv${level}`);
+    assert.equal(typeof ACTIVE_HANDLERS[skill.id],'function');
+    assert.doesNotThrow(() => { scene.castSkill(0); updateSkillEffects(scene,.2); scene.flush(); scene.updateSummons(.2); scene.flush(); }, `${hero.id}/${skill.id}/Lv${level}`);
     assert.equal(casts, 1);
     assert.equal(skill.remaining, skill.cooldown * (level >= 5 ? .9 : 1));
     assert.ok(Number.isFinite(scene.stats.mana));
     assert.ok(Number.isFinite(scene.stats.damageDone));
   }
-  }finally{Object.assign(ACTIVE_HANDLERS,handlers);}
 });
 
-test('registered handlers and fallback share level scaling, mana, cooldown and skillCast handling', () => {
+test('ID handlers share level scaling, mana, cooldown and skillCast handling', () => {
   const scene = makeScene(), original = HEROES.ixchel.skills[0];
+  const previous=ACTIVE_HANDLERS[original.id];
   let registered;
   ACTIVE_HANDLERS[original.id] = (_scene, skill, context) => { registered = { skill, context }; };
   try {
@@ -241,12 +239,12 @@ test('registered handlers and fallback share level scaling, mana, cooldown and s
     assert.equal(skill.remaining, original.cooldown * .9);
     scene.castSkill(0);
     assert.equal(scene.stats.mana, 110 - original.mana * .5);
-  } finally { delete ACTIVE_HANDLERS[original.id]; }
+  } finally { ACTIVE_HANDLERS[original.id]=previous; }
   scene.stats.mana = 110; scene.skillSlots[0].remaining = 0; scene.castSkill(0);
   assert.equal(scene.projectiles.countActive(), 2);
   assert.equal(scene.projectiles.getChildren()[0].getData('damage'), registered.context.damage);
   assert.equal(scene.stats.mana, 110 - original.mana * .5);
-  const durationSkill = { ...LEGACY_BALAM_SKILLS.find((skill) => skill.type === 'summon'), level: 6 };
+  const durationSkill = { ...HEROES.ixchel.skills.find((skill) => skill.type === 'summon'), level: 6 };
   assert.ok(Math.abs(skillContext(scene, durationSkill).durationScale - 1.32) < 1e-10);
   const blocked = makeScene(); blocked.stats.mana = 0; blocked.skillSlots = [{ ...original, level: 1, remaining: 0 }];
   blocked.castSkill(0); assert.equal(blocked.projectiles.countActive(), 0); assert.equal(blocked.skillSlots[0].remaining, 0);

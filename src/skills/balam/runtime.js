@@ -20,7 +20,7 @@ export function proc(scene, passive, point=scene.player, sound=true) {
 }
 export function skillModifiers(scene) {
  const result={speedMult:1,attackSpeedMult:1};
- for(const entry of scene.skillBuffs?.values()||[])for(const [key,value]of Object.entries(entry))result[key]=(result[key]??1)*value;
+ for(const entry of scene.skillBuffs?.values()||[])for(const [key,value]of Object.entries(entry))result[key]=key.endsWith('Mult')?(result[key]??1)*value:(result[key]??0)+value;
  return result;
 }
 export function buff(scene,id,values,duration) {

@@ -1,3 +1,4 @@
+import { configureProjectile } from './kukul/projectiles.js';
 const TAU = Math.PI * 2;
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
@@ -62,9 +63,10 @@ export function lineStrike(scene, { origin = scene.player, angle = 0, range, wid
   return targets;
 }
 
-export function spawnProjectile(scene, { origin = scene.player, angle = 0, damage, speed = 620, pierce = 1, life = 1.2, tint = 0x69eec1, critBonus = 0, scale = 1, visual = 'default', byAlly = Boolean(origin?.getData?.('byAlly')), status = null, onHit = null }) {
+export function spawnProjectile(scene, { origin = scene.player, angle = 0, damage, speed = 620, pierce = 1, life = 1.2, tint = 0x69eec1, critBonus = 0, scale = 1, visual = 'default', byAlly = Boolean(origin?.getData?.('byAlly')), status = null, onHit = null, skillId = null, basicAttack = false }) {
   const projectile = scene.fireProjectile(origin.x, origin.y, angle, damage, speed, pierce, life, tint, critBonus, scale, visual);
   projectile?.setData({ source: origin, byAlly, status, onHit });
+  configureProjectile(scene,projectile,{skillId,basicAttack,byAlly});
   return projectile;
 }
 
@@ -109,7 +111,10 @@ export function zone(scene, { origin = scene.player, radius, duration, damage, i
 export const summon = (scene, options) => scene.createSummon(options.damage, options);
 
 export function updateSkillEffects(scene, dt) {
-  scene.skillEffects = (scene.skillEffects || []).filter((effect) => {
+  if (scene.pausedForChoice || scene.ended) return;
+  const effects=scene.skillEffects||[];
+  scene.skillEffects=[];
+  const survivors=effects.filter((effect) => {
     if (!effect.active) return false;
     if (scene.pausedForChoice || scene.ended) return true;
     effect.update(Math.min(dt, effect.remaining));
@@ -117,6 +122,8 @@ export function updateSkillEffects(scene, dt) {
     if (effect.remaining <= 1e-9) effect.destroy();
     return effect.active;
   });
+  // Effects may create trails or split shots; do not discard newly scheduled work.
+  scene.skillEffects=[...survivors,...scene.skillEffects];
 }
 
 export function applyStatus(scene, target, status, seconds, params = {}) {

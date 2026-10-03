@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { HEROES, LEGACY_BALAM_SKILLS } from '../src/data/heroes.js';
+import { HEROES } from '../src/data/heroes.js';
 import { BALAM_DEFINITIONS, SHARED_DEFINITIONS } from '../src/skills/generated/balam.js';
 import { ACTIVE_HANDLERS, PASSIVE_HANDLERS } from '../src/skills/index.js';
 import { skillContext, updateSkillEffects } from '../src/skills/common.js';
@@ -23,7 +23,7 @@ function advance(s,seconds){let left=seconds;while(left>1e-9){const dt=Math.min(
 function equip(s,id,level=1){return s.passives.equip(def(id),level);}
 
 test('Balam definitions, names, copy and paths come from JSON; only his 16 actives/8 passives are draftable',()=>{
- assert.equal(HEROES.balam.skills.length,16);assert.equal(HEROES.balam.passives.length,8);assert.equal(LEGACY_BALAM_SKILLS.length,20);
+ assert.equal(HEROES.balam.skills.length,16);assert.equal(HEROES.balam.passives.length,8);
  for(const source of [...db.heroes.balam,...db.shared]){
   const skill=def(source.id);assert.equal(skill.name,source.name);assert.equal(skill.description,source.desc);assert.equal(skill.iconFile,source.icon_file);
   assert.deepEqual(skillMessages.findLast(row=>row[0]===source.name),[source.name,source.fr,source.ar]);

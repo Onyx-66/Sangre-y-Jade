@@ -1,4 +1,5 @@
 import { BALAM_DEFINITIONS } from '../skills/generated/balam.js';
+import { KUKUL_DEFINITIONS } from '../skills/generated/kukul.js';
 const skill = (id, name, icon, type, cooldown, damage, range, description, tags, extra = {}) => ({
   id, name, icon, type, cooldown, damage, range, description, tags, ...extra,
 });
@@ -15,28 +16,8 @@ export const HEROES = {
     weapon: 'Obsidian Macuahuitl',
     base: { hp: 150, mana: 0, speed: 225, damage: 1.05, armor: 4, crit: 0.07 },
     automatic: { name: 'Jaguar Cleave', type: 'melee', cooldown: 0.72, damage: 24, range: 92, color: 0xefb45f },
-    skills: [
-      skill('jaguar-roar', "Jaguar's Roar", '◉', 'nova', 7.5, 42, 175, 'A stunning roar tears through nearby spirits.', ['area', 'control']),
-      skill('obsidian-arc', 'Obsidian Arc', '◒', 'cone', 4.8, 58, 155, 'A brutal fan-shaped sweep of black glass.', ['melee', 'cleave']),
-      skill('prowlers-leap', "Prowler's Leap", '➤', 'dash', 6.0, 62, 230, 'Pounce through the nearest pack and become briefly untouchable.', ['mobility', 'melee']),
-      skill('spotted-guard', 'Spotted Guard', '⬢', 'shield', 12, 0, 0, 'Jaguar spirits absorb damage for a short time.', ['defense']),
-      skill('claw-cyclone', 'Claw Cyclone', '✣', 'orbit', 8.5, 28, 115, 'Three spirit claws orbit Balam and carve a path.', ['area', 'melee'], { projectiles: 3 }),
-      skill('ceiba-breaker', 'Ceiba Breaker', '┃', 'line', 6.2, 76, 330, 'Split the earth in a straight line like a falling ceiba.', ['line', 'power']),
-      skill('bloodless-hunt', 'Bloodless Hunt', '◆', 'projectile', 3.5, 44, 520, 'Hurl a spectral fang at the healthiest nearby foe.', ['ranged', 'execute'], { pierce: 2 }),
-      skill('stone-maw', 'Stone Maw', '▱', 'trap', 9.0, 82, 120, 'Plant a carved jaw that snaps shut on a crowd.', ['trap', 'control']),
-      skill('war-drum', 'War Drum', '●', 'burst', 8.0, 32, 250, 'A drumbeat sends four shockwaves in every direction.', ['area', 'rhythm'], { projectiles: 8 }),
-      skill('sun-claw', 'Sun-Claw', '☀', 'nova', 9.5, 74, 220, 'A golden clawburst scorches every spirit close by.', ['area', 'radiant']),
-      skill('night-pounce', 'Night Pounce', '↯', 'dash', 4.2, 38, 190, 'A quick shadow dash that refreshes after a critical hit.', ['mobility', 'shadow']),
-      skill('obsidian-rain', 'Obsidian Rain', '▾', 'rain', 10, 34, 260, 'Blades fall around the most crowded enemy cluster.', ['area', 'ranged'], { projectiles: 7 }),
-      skill('jaguar-echo', 'Jaguar Echo', '♞', 'summon', 11, 26, 420, 'Summon a hunting echo that stalks nearby foes.', ['summon', 'spirit']),
-      skill('temple-quake', 'Temple Quake', '✹', 'nova', 8.8, 66, 205, 'Strike the ground and knock the dead away.', ['area', 'control'], { knockback: 300 }),
-      skill('fang-path', 'Fang Path', '⋰', 'line', 5.4, 54, 390, 'Send a row of jade fangs racing across the ground.', ['line', 'jade'], { pierce: 8 }),
-      skill('hunters-mark', "Hunter's Mark", '⌖', 'chain', 6.5, 48, 360, 'A spirit mark leaps between weakened prey.', ['chain', 'critical'], { chains: 4 }),
-      skill('nine-lives', 'Nine Lives', '♥', 'heal', 16, 0, 0, 'Recover health and gain a brief speed surge.', ['healing', 'mobility'], { heal: 26 }),
-      skill('black-mirror', 'Black Mirror', '◈', 'chain', 9.2, 65, 340, 'Obsidian reflections ricochet between attackers.', ['chain', 'obsidian'], { chains: 5 }),
-      skill('pyramid-rush', 'Pyramid Rush', '▲', 'dash', 8.0, 92, 300, 'Charge like a falling temple stair, scattering everything ahead.', ['mobility', 'power']),
-      skill('heart-of-balam', 'Heart of Balam', '✦', 'shield', 14, 0, 0, 'Gain a strong ward; its collapse releases a damaging roar.', ['defense', 'area'], { shield: 55 }),
-    ],
+    skills: BALAM_DEFINITIONS.filter(skill=>skill.kind==='active'),
+    passives: BALAM_DEFINITIONS.filter(skill=>skill.kind==='passive'),
   },
   ixchel: {
     id: 'ixchel',
@@ -83,35 +64,10 @@ export const HEROES = {
     weapon: 'Quetzal Atlatl',
     base: { hp: 118, mana: 0, speed: 250, damage: 0.98, armor: 2, crit: 0.13 },
     automatic: { name: 'Piercing Atlatl', type: 'projectile', cooldown: 0.68, damage: 20, range: 620, color: 0x5ed9df, pierce: 4 },
-    skills: [
-      skill('atlatl-volley', 'Atlatl Volley', '➶', 'burst', 5.4, 30, 560, 'Loose a tight fan of piercing darts.', ['ranged', 'burst'], { projectiles: 5, pierce: 2 }),
-      skill('featherstorm', 'Featherstorm', '⌁', 'rain', 9.5, 31, 310, 'Obsidian-edged feathers fall over the largest pack.', ['area', 'ranged'], { projectiles: 11 }),
-      skill('serpent-path', 'Serpent Path', '∿', 'line', 6.5, 64, 560, 'A winding jade serpent tears through a long enemy line.', ['line', 'pierce'], { pierce: 12 }),
-      skill('windstep', 'Windstep', '➤', 'dash', 4.8, 32, 250, 'Ride a sudden gust through danger.', ['mobility', 'wind']),
-      skill('quetzal-orbit', 'Quetzal Orbit', '◌', 'orbit', 8.0, 24, 140, 'Bright feathers circle the hunter and deflect the dead.', ['area', 'defense'], { projectiles: 5 }),
-      skill('hunter-snare', "Hunter's Snare", '⌗', 'trap', 7.8, 62, 125, 'A woven snare halts a cluster before snapping shut.', ['trap', 'control']),
-      skill('sky-spear', 'Sky Spear', '⇣', 'projectile', 5.0, 83, 680, 'A massive dart seeks the strongest target.', ['ranged', 'power'], { pierce: 6 }),
-      skill('tailwind', 'Tailwind', '≋', 'dash', 7.2, 18, 290, 'Dash and leave a cutting wind trail.', ['mobility', 'wind']),
-      skill('sun-dart', 'Sun Dart', '☀', 'chain', 6.6, 43, 430, 'A golden dart ricochets between marked spirits.', ['chain', 'critical'], { chains: 5 }),
-      skill('eagle-eye', 'Eagle Eye', '⌖', 'projectile', 4.5, 68, 760, 'A precise shot with greatly increased critical chance.', ['ranged', 'critical'], { critBonus: 0.35, pierce: 3 }),
-      skill('storm-nest', 'Storm Nest', '♜', 'summon', 10.5, 25, 500, 'Build a spirit perch that launches wind darts.', ['summon', 'ranged']),
-      skill('piercing-reed', 'Piercing Reed', '━', 'line', 5.5, 49, 650, 'A thin reed dart passes cleanly through a formation.', ['line', 'pierce'], { pierce: 15 }),
-      skill('plume-guard', 'Plume Guard', '⬢', 'shield', 11, 0, 0, 'A fan of quetzal feathers catches incoming harm.', ['defense'], { shield: 43 }),
-      skill('cacao-bomb', 'Cacao Bomb', '●', 'nova', 8.4, 73, 200, 'A clay cacao charge bursts into fragrant shrapnel.', ['area', 'explosive']),
-      skill('forked-flight', 'Forked Flight', 'Y', 'burst', 5.8, 38, 500, 'Darts split mid-flight to hunt separate enemies.', ['ranged', 'burst'], { projectiles: 7, pierce: 2 }),
-      skill('gale-ring', 'Gale Ring', '◎', 'nova', 7.2, 46, 250, 'A widening wind ring knocks back everything it touches.', ['area', 'control'], { knockback: 330 }),
-      skill('camouflage', 'Jungle Camouflage', '▧', 'heal', 14.5, 0, 0, 'Fade into leaves, recover health, and evade briefly.', ['healing', 'defense'], { heal: 24, shield: 24 }),
-      skill('skyfall', 'Skyfall', '↡', 'rain', 12, 48, 360, 'A devastating atlatl barrage darkens the air.', ['area', 'power'], { projectiles: 12 }),
-      skill('serpent-fang', 'Serpent Fang', '◇', 'chain', 7.6, 55, 460, 'A poisoned spirit dart snaps between distant targets.', ['chain', 'pierce'], { chains: 6 }),
-      skill('kukulkans-breath', "Kukulkan's Breath", '〰', 'cone', 10.5, 89, 300, 'A great feathered gust scours the path ahead.', ['cone', 'power'], { knockback: 360 }),
-    ],
+    skills: KUKUL_DEFINITIONS.filter(skill=>skill.kind==='active'),
+    passives: KUKUL_DEFINITIONS.filter(skill=>skill.kind==='passive'),
   },
 };
-
-// Preserve the v0.5.0 catalogue for migration and legacy-fallback regression tests.
-export const LEGACY_BALAM_SKILLS = HEROES.balam.skills;
-HEROES.balam.skills = BALAM_DEFINITIONS.filter(skill => skill.kind === 'active');
-HEROES.balam.passives = BALAM_DEFINITIONS.filter(skill => skill.kind === 'passive');
 
 export const MODIFIERS = [
   { id: 'might', name: 'Obsidian Edge', icon: '◆', description: '+12% damage', stat: 'damage', amount: 0.12 },

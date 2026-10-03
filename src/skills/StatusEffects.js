@@ -14,7 +14,7 @@ export const enemyStatusDefaults = () => ({
   wanderHeading: 0, wanderNextTurn: 0, pullTo: null, blindUntil: 0,
   tauntUntil: 0, tauntTarget: null, markUntil: 0, markBonus: 0, markHeal: 0, markSource: null,
   silenceUntil: 0, disarmUntil: 0,
-  poisonUntil: 0, poisonDps: 0, poisonSource: null, poisonByAlly: false,
+  poisonUntil: 0, poisonDps: 0, poisonSource: null, poisonByAlly: false, basicPoisonStacks: [],
   bleedUntil: 0, bleedDps: 0, bleedSource: null, bleedByAlly: false,
   burnUntil: 0, burnDps: 0, burnSource: null, burnByAlly: false, burnTinted: false,
 });
@@ -30,6 +30,13 @@ export const enemyShotAngle = (scene, enemy, angle, targetsHero = true, random =
   targetsHero && active(enemy, 'blindUntil', scene.elapsed) ? random() * Math.PI * 2 : angle;
 
 export function updateDamageOverTime(scene, enemy, dt) {
+  const stacks=enemy.getData('basicPoisonStacks')||[];
+  for(const stack of stacks){
+    if(!enemy.active||scene.ended)break;
+    const seconds=Math.min(dt,Math.max(0,stack.until-(scene.elapsed-dt)));
+    if(seconds>0)scene.damageEnemy(enemy,stack.dps*seconds,0,0,stack.source,{dot:true,byAlly:false,visuals:false});
+  }
+  enemy.setData('basicPoisonStacks',stacks.filter(stack=>stack.until>scene.elapsed));
   for (const status of ['poison', 'bleed', 'burn']) {
     if (!enemy.active || scene.ended) break;
     const seconds = Math.min(dt, Math.max(0, (enemy.getData(`${status}Until`) || 0) - (scene.elapsed - dt)));

@@ -1,0 +1,10 @@
+import { definition, value } from '../data.js';
+import { proc } from '../runtime.js';
+const data=definition('fleet-hunter');
+function update({scene,state},level){const remaining=Math.max(0,(state.until||0)-scene.elapsed);state.modifiers={basicDamageMult:remaining>1e-9?1+value(data,level)/100:1};state.hudState={type:'timer',remaining,duration:data.params.duration,ready:remaining>1e-9};}
+export const fleetHunter={...data,on:{
+ dash(ctx,level){ctx.state.until=ctx.scene.elapsed+data.params.duration;update(ctx,level);},
+ skillCast(ctx,level){if(['windstep','quetzal-flip'].includes(ctx.skill.id)){ctx.state.until=ctx.scene.elapsed+data.params.duration;update(ctx,level);}},
+ basicAttack(ctx,level){if(ctx.state.until>ctx.scene.elapsed)proc(ctx.scene,data);ctx.state.until=0;update(ctx,level);},
+ tick:update,
+}};

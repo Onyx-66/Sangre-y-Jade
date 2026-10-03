@@ -57,10 +57,15 @@ export class PassiveSystem {
     this.bus.emit(event, { ...payload, scene: this.scene, stats: this.scene.stats, player: this.scene.player });
   }
 
-  modifiers() {
+  avoidDamage(payload = {}) {
+    for(const entry of this.equipped.values()) if(entry.passive.avoidDamage?.({scene:this.scene,stats:this.scene.stats,player:this.scene.player,state:entry.state,...payload},entry.level))return true;
+    return false;
+  }
+
+  modifiers(context = {}) {
     const result = { speedMult: 1, pickupRangeMult: 1 };
     for (const { passive, level, state } of this.equipped.values()) {
-      for (const contribution of [passive.stat?.(level,{scene:this.scene,stats:this.scene.stats,player:this.scene.player,state}), state.modifiers]) {
+      for (const contribution of [passive.stat?.(level,{scene:this.scene,stats:this.scene.stats,player:this.scene.player,state,...context}), state.modifiers]) {
         for (const [key, value] of Object.entries(contribution || {})) {
           result[key] = key.endsWith('Mult') ? (result[key] ?? 1) * value : (result[key] ?? 0) + value;
         }

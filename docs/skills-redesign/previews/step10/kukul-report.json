@@ -1,0 +1,736 @@
+{
+  "casts": [
+    {
+      "id": "atlatl-volley",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "atlatl-volley",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "atlatl-volley",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "atlatl-volley",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "atlatl-volley",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 4.86,
+      "finite": true
+    },
+    {
+      "id": "atlatl-volley",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 4.86,
+      "finite": true
+    },
+    {
+      "id": "featherstorm",
+      "level": 1,
+      "damageDone": 27.439999999999998,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "featherstorm",
+      "level": 2,
+      "damageDone": 34.3,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "featherstorm",
+      "level": 3,
+      "damageDone": 41.16,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "featherstorm",
+      "level": 4,
+      "damageDone": 48.019999999999996,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "featherstorm",
+      "level": 5,
+      "damageDone": 54.879999999999995,
+      "cooldown": 8.55,
+      "finite": true
+    },
+    {
+      "id": "featherstorm",
+      "level": 6,
+      "damageDone": 61.739999999999995,
+      "cooldown": 8.55,
+      "finite": true
+    },
+    {
+      "id": "serpent-path",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "serpent-path",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "serpent-path",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "serpent-path",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "serpent-path",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 5.8500000000000005,
+      "finite": true
+    },
+    {
+      "id": "serpent-path",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 5.8500000000000005,
+      "finite": true
+    },
+    {
+      "id": "windstep",
+      "level": 1,
+      "damageDone": 72.52000000000001,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "windstep",
+      "level": 2,
+      "damageDone": 90.64999999999999,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "windstep",
+      "level": 3,
+      "damageDone": 120.54000000000002,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "windstep",
+      "level": 4,
+      "damageDone": 140.63,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "windstep",
+      "level": 5,
+      "damageDone": 160.72000000000003,
+      "cooldown": 4.95,
+      "finite": true
+    },
+    {
+      "id": "windstep",
+      "level": 6,
+      "damageDone": 198.45,
+      "cooldown": 4.95,
+      "finite": true
+    },
+    {
+      "id": "quetzal-flip",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "quetzal-flip",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "quetzal-flip",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "quetzal-flip",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "quetzal-flip",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 4.95,
+      "finite": true
+    },
+    {
+      "id": "quetzal-flip",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 4.95,
+      "finite": true
+    },
+    {
+      "id": "hunter-snare",
+      "level": 1,
+      "damageDone": 60.76,
+      "cooldown": 7.8,
+      "finite": true
+    },
+    {
+      "id": "hunter-snare",
+      "level": 2,
+      "damageDone": 75.95,
+      "cooldown": 7.8,
+      "finite": true
+    },
+    {
+      "id": "hunter-snare",
+      "level": 3,
+      "damageDone": 91.14,
+      "cooldown": 7.8,
+      "finite": true
+    },
+    {
+      "id": "hunter-snare",
+      "level": 4,
+      "damageDone": 106.33,
+      "cooldown": 7.8,
+      "finite": true
+    },
+    {
+      "id": "hunter-snare",
+      "level": 5,
+      "damageDone": 121.52,
+      "cooldown": 7.02,
+      "finite": true
+    },
+    {
+      "id": "hunter-snare",
+      "level": 6,
+      "damageDone": 136.71,
+      "cooldown": 7.02,
+      "finite": true
+    },
+    {
+      "id": "eagle-eye",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "eagle-eye",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "eagle-eye",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "eagle-eye",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 5.5,
+      "finite": true
+    },
+    {
+      "id": "eagle-eye",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 4.95,
+      "finite": true
+    },
+    {
+      "id": "eagle-eye",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 4.95,
+      "finite": true
+    },
+    {
+      "id": "sun-dart",
+      "level": 1,
+      "damageDone": 42.14,
+      "cooldown": 6.6,
+      "finite": true
+    },
+    {
+      "id": "sun-dart",
+      "level": 2,
+      "damageDone": 52.675,
+      "cooldown": 6.6,
+      "finite": true
+    },
+    {
+      "id": "sun-dart",
+      "level": 3,
+      "damageDone": 63.21,
+      "cooldown": 6.6,
+      "finite": true
+    },
+    {
+      "id": "sun-dart",
+      "level": 4,
+      "damageDone": 73.745,
+      "cooldown": 6.6,
+      "finite": true
+    },
+    {
+      "id": "sun-dart",
+      "level": 5,
+      "damageDone": 84.28,
+      "cooldown": 5.9399999999999995,
+      "finite": true
+    },
+    {
+      "id": "sun-dart",
+      "level": 6,
+      "damageDone": 94.815,
+      "cooldown": 5.9399999999999995,
+      "finite": true
+    },
+    {
+      "id": "storm-nest",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "storm-nest",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "storm-nest",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "storm-nest",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "storm-nest",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 9.450000000000001,
+      "finite": true
+    },
+    {
+      "id": "storm-nest",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 9.450000000000001,
+      "finite": true
+    },
+    {
+      "id": "plume-guard",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "plume-guard",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "plume-guard",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "plume-guard",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "plume-guard",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 9.9,
+      "finite": true
+    },
+    {
+      "id": "plume-guard",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 9.9,
+      "finite": true
+    },
+    {
+      "id": "cacao-bomb",
+      "level": 1,
+      "damageDone": 71.53999999999999,
+      "cooldown": 8.4,
+      "finite": true
+    },
+    {
+      "id": "cacao-bomb",
+      "level": 2,
+      "damageDone": 89.42499999999998,
+      "cooldown": 8.4,
+      "finite": true
+    },
+    {
+      "id": "cacao-bomb",
+      "level": 3,
+      "damageDone": 107.30999999999999,
+      "cooldown": 8.4,
+      "finite": true
+    },
+    {
+      "id": "cacao-bomb",
+      "level": 4,
+      "damageDone": 125.195,
+      "cooldown": 8.4,
+      "finite": true
+    },
+    {
+      "id": "cacao-bomb",
+      "level": 5,
+      "damageDone": 143.07999999999998,
+      "cooldown": 7.5600000000000005,
+      "finite": true
+    },
+    {
+      "id": "cacao-bomb",
+      "level": 6,
+      "damageDone": 160.96499999999997,
+      "cooldown": 7.5600000000000005,
+      "finite": true
+    },
+    {
+      "id": "forked-flight",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 5.8,
+      "finite": true
+    },
+    {
+      "id": "forked-flight",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 5.8,
+      "finite": true
+    },
+    {
+      "id": "forked-flight",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 5.8,
+      "finite": true
+    },
+    {
+      "id": "forked-flight",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 5.8,
+      "finite": true
+    },
+    {
+      "id": "forked-flight",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 5.22,
+      "finite": true
+    },
+    {
+      "id": "forked-flight",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 5.22,
+      "finite": true
+    },
+    {
+      "id": "gale-ring",
+      "level": 1,
+      "damageDone": 45.08,
+      "cooldown": 7.2,
+      "finite": true
+    },
+    {
+      "id": "gale-ring",
+      "level": 2,
+      "damageDone": 56.349999999999994,
+      "cooldown": 7.2,
+      "finite": true
+    },
+    {
+      "id": "gale-ring",
+      "level": 3,
+      "damageDone": 67.62,
+      "cooldown": 7.2,
+      "finite": true
+    },
+    {
+      "id": "gale-ring",
+      "level": 4,
+      "damageDone": 78.89,
+      "cooldown": 7.2,
+      "finite": true
+    },
+    {
+      "id": "gale-ring",
+      "level": 5,
+      "damageDone": 90.16,
+      "cooldown": 6.48,
+      "finite": true
+    },
+    {
+      "id": "gale-ring",
+      "level": 6,
+      "damageDone": 101.42999999999999,
+      "cooldown": 6.48,
+      "finite": true
+    },
+    {
+      "id": "hunters-trance",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 13,
+      "finite": true
+    },
+    {
+      "id": "hunters-trance",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 13,
+      "finite": true
+    },
+    {
+      "id": "hunters-trance",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 13,
+      "finite": true
+    },
+    {
+      "id": "hunters-trance",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 13,
+      "finite": true
+    },
+    {
+      "id": "hunters-trance",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 11.700000000000001,
+      "finite": true
+    },
+    {
+      "id": "hunters-trance",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 11.700000000000001,
+      "finite": true
+    },
+    {
+      "id": "skyfall",
+      "level": 1,
+      "damageDone": 78.4,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "skyfall",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "skyfall",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "skyfall",
+      "level": 4,
+      "damageDone": 68.60000000000001,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "skyfall",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 10.8,
+      "finite": true
+    },
+    {
+      "id": "skyfall",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 10.8,
+      "finite": true
+    },
+    {
+      "id": "kukulkans-breath",
+      "level": 1,
+      "damageDone": 156.80000000000004,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "kukulkans-breath",
+      "level": 2,
+      "damageDone": 195.99999999999997,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "kukulkans-breath",
+      "level": 3,
+      "damageDone": 258.72,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "kukulkans-breath",
+      "level": 4,
+      "damageDone": 301.84,
+      "cooldown": 10.5,
+      "finite": true
+    },
+    {
+      "id": "kukulkans-breath",
+      "level": 5,
+      "damageDone": 344.9600000000001,
+      "cooldown": 9.450000000000001,
+      "finite": true
+    },
+    {
+      "id": "kukulkans-breath",
+      "level": 6,
+      "damageDone": 458.6399999999999,
+      "cooldown": 9.450000000000001,
+      "finite": true
+    }
+  ],
+  "passives": [
+    {
+      "id": "sharpened-flint",
+      "level": 5,
+      "hasState": false
+    },
+    {
+      "id": "venomous-darts",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "full-quiver",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "hunters-focus",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "fleet-hunter",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "jungle-instinct",
+      "level": 5,
+      "hasState": false
+    },
+    {
+      "id": "trophy-hunter",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "steady-aim",
+      "level": 5,
+      "hasState": true
+    }
+  ],
+  "live": {
+    "burst": 5,
+    "poisonStacks": 3,
+    "basicDamage": 78.40000000002328,
+    "cancelledCooldown": 0,
+    "cancelledShots": 0,
+    "wave": {
+      "x": 140,
+      "y": 60,
+      "bodyX": 139.8125,
+      "bodyY": 59.8125
+    }
+  },
+  "liveFx": 24,
+  "fxPlaceholders": 19,
+  "audioFallbacks": 19,
+  "errors": [],
+  "elapsedMs": 8063
+}
