@@ -20,8 +20,8 @@ test('all four spawn edges remain beyond the visible camera',()=>{
 test('vertical facing and idle facing are consistent',()=>{
  assert.equal(facingFor(0,-180),'up');assert.equal(facingFor(0,180),'down');assert.equal(facingFor(-180,0),'side');assert.equal(facingFor(180,0),'side');assert.equal(facingFor(0,0,'up'),'up');
 });
-test('French and Arabic cover roster, skills, upgrades and map selectors',()=>{
- const keys=[];for(const h of Object.values(HEROES)){keys.push(h.name,h.epithet,h.description,h.role,h.weapon);for(const s of h.skills)keys.push(s.name,s.description);}
+test('French and Arabic cover roster, skill names, upgrades and map selectors',()=>{
+ const keys=[];for(const h of Object.values(HEROES)){keys.push(h.name,h.epithet,h.description,h.role,h.weapon);for(const s of h.skills)keys.push(s.name);}
  for(const x of MODIFIERS)keys.push(x.name,x.description);for(const m of MAPS)keys.push(m.name,m.subtitle);for(const m of RUN_MODES)keys.push(m.name,m.description);
  for(const locale of ['fr','ar'])for(const key of keys)assert.ok(hasTranslation(key,locale),`${locale}: ${key}`);
  setLanguage('ar');assert.equal(t('LEVEL 5'),'المستوى 5');setLanguage('en');

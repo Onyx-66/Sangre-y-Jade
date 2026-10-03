@@ -2,6 +2,7 @@ import { iconMarkup } from '../art/uiArt.js';
 import { t, translateDOM } from '../i18n/index.js';
 import { interfaceIcon } from '../art/interfaceIcons.js';
 import { SUPPORTS } from '../data/supports.js';
+import { skillDescription } from '../data/heroes.js';
 import { HERO_SKILL_CAPACITY } from './SkillDraft.js';
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
@@ -151,7 +152,7 @@ export class Hud {
       button.classList.toggle('empty', !skill);
       button.querySelector('.skill-icon').innerHTML = skill ? iconMarkup(skill) : '＋';
       button.setAttribute('aria-label', t(skill ? `${skill.name}, level ${skill.level}` : `Empty skill slot ${index + 1}`));
-      button.title = t(skill ? `${skill.name} · Lv ${skill.level}\n${skill.description}` : 'Choose a skill when you level up');
+      button.title = t(skill ? `${skill.name} · Lv ${skill.level}\n${skillDescription(skill)}` : 'Choose a skill when you level up');
       button.style.borderColor = skill ? '#efc27a' : '';
     });
   }
@@ -204,7 +205,7 @@ export class Hud {
       const button = document.createElement('button');
       button.className = 'choice-card';
       button.dataset.choice=card.id || String(index);
-      button.innerHTML = `<span class="card-icon">${iconMarkup(card)}</span><h3>${card.name}</h3><p>${card.description}</p>${card.meta ? `<div class="card-tags"><span class="tag">${card.meta}</span></div>` : ''}`;
+      button.innerHTML = `<span class="card-icon">${iconMarkup(card)}</span><h3>${card.name}</h3><p>${skillDescription(card)}</p>${card.meta ? `<div class="card-tags"><span class="tag">${card.meta}</span></div>` : ''}`;
       button.addEventListener('click', () => {
         overlay.remove();
         onChoose(card, index);

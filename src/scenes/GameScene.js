@@ -7,6 +7,7 @@ import { Hud } from '../systems/Hud.js';
 import { ALLY_LEVEL, enemyPool, canSpawnEnemy, bossForHero, spawnOutsideView, facingFor } from '../systems/CombatRules.js';
 import { HERO_SKILL_CAPACITY, draftSkills } from '../systems/SkillDraft.js';
 import { SupportSystem } from '../systems/SupportSystem.js';
+import { applyProjectileTint, applySlow, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -295,7 +296,7 @@ export class GameScene extends Phaser.Scene {
         const speed = enemy.getData('speed');
         enemy.setVelocity(dx / distance * speed, dy / distance * speed);
       }
-      if(enemy.getData('slowUntil')>this.elapsed)enemy.setVelocity(enemy.body.velocity.x*.5,enemy.body.velocity.y*.5);
+      applySlow(enemy, this.elapsed);
       if (distance > 1900 && !enemy.getData('isBoss')) enemy.destroy();
       enemy.setFlipX(dx < 0);
       this.animateCharacter(enemy,enemy.getData('artKey'),'walk');
@@ -491,7 +492,6 @@ export class GameScene extends Phaser.Scene {
       }
       case 'shield':
         this.stats.shield += (skill.shield || 45) * (1 + (skill.level - 1) * .25);
-        if (skill.restore) this.stats.mana = Math.min(this.stats.maxMana, this.stats.mana + skill.restore);
         this.shieldEffect();
         break;
       case 'chain':
@@ -509,7 +509,7 @@ export class GameScene extends Phaser.Scene {
         break;
       default: break;
     }
-    if (skill.restore) this.stats.mana = Math.min(this.stats.maxMana, this.stats.mana + skill.restore);
+    restoreSkillMana(this.stats, skill.restore);
     skill.remaining = skill.cooldown;
     this.audio.sfx(this.heroData.id === 'kukul' ? 'dart' : 'spell', .06);
   }
@@ -553,7 +553,8 @@ export class GameScene extends Phaser.Scene {
     projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(16);
     projectile.anims.stop();
     projectile.setTexture(isDart?'player-dart':'fx-1');
-    projectile.clearTint().setRotation(angle+(isDart?Math.PI/4:0)).setDisplaySize((isDart?44:54)*scale,(isDart?44:54)*scale);
+    applyProjectileTint(projectile, tint);
+    projectile.setRotation(angle+(isDart?Math.PI/4:0)).setDisplaySize((isDart?44:54)*scale,(isDart?44:54)*scale);
     if(!isDart) projectile.play('bolt-1');
     projectile.body.setCircle(18,46,46);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
@@ -604,16 +605,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   chainAttack(target, range, damage, count) {
-    if (!target) return;
-    const candidates = this.enemies.getChildren().filter((enemy) => enemy.active && Phaser.Math.Distance.Between(this.player.x, this.player.y, enemy.x, enemy.y) < range);
-    candidates.sort((a, b) => Phaser.Math.Distance.Between(target.x, target.y, a.x, a.y) - Phaser.Math.Distance.Between(target.x, target.y, b.x, b.y));
-    let previous = this.player;
-    candidates.slice(0, count).forEach((enemy, index) => {
-      const line = this.add.line(0, 0, previous.x, previous.y, enemy.x, enemy.y, 0xa6ffe1, .78).setOrigin(0).setDepth(17).setLineWidth(3, 1);
-      this.tweens.add({ targets: line, alpha: 0, duration: 180 + index * 25, onComplete: () => line.destroy() });
-      this.damageEnemy(enemy, damage * Math.pow(.88, index), 0, 90);
-      previous = enemy;
-    });
+    performChainAttack(this, target, range, damage, count);
   }
 
   placeTrap(x, y, range, damage) {
@@ -756,7 +748,7 @@ export class GameScene extends Phaser.Scene {
       hp: data.hp * scale, maxHp: data.hp * scale,
       speed: data.speed * (1 + progress * .16), damage: data.damage * this.mapData.difficulty * (1 + progress * .38), xp: data.xp,
       ranged: data.ranged || false, nextShot: 1 + Math.random(), isBoss: false,
-      stunUntil:0,slowUntil:0,tauntUntil:0,markUntil:0,silenceUntil:0,disarmUntil:0,poisonUntil:0,bleedUntil:0,
+      stunUntil:0,slowUntil:0,slowPct:.5,tauntUntil:0,markUntil:0,silenceUntil:0,disarmUntil:0,poisonUntil:0,bleedUntil:0,
     });
   }
 
@@ -776,7 +768,7 @@ export class GameScene extends Phaser.Scene {
       artKey,animLock:0,serial: ++this.enemySerial, isBoss: true, bossId: data.id, displayName: data.name,
       hp: data.hp * hpScale, maxHp: data.hp * hpScale, speed: data.speed, damage: data.damage * this.mapData.difficulty,
       xp: 100, pattern: data.pattern, patternTimer: 1.5, seed: Math.random() * 20,
-      stunUntil:0,slowUntil:0,tauntUntil:0,markUntil:0,silenceUntil:0,disarmUntil:0,poisonUntil:0,bleedUntil:0,dashing:0,
+      stunUntil:0,slowUntil:0,slowPct:.5,tauntUntil:0,markUntil:0,silenceUntil:0,disarmUntil:0,poisonUntil:0,bleedUntil:0,dashing:0,
     });
     this.activeBoss = boss;
     this.hud.setBoss(data.name, 1);
@@ -989,7 +981,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   ringEffect(x, y, scale, tint) {
-    this.playEffect(4,x,y,scale*128);
+    performRingEffect(this, x, y, scale, tint);
   }
 
   coneEffect(angle, range) {
@@ -1004,9 +996,10 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(2,this.player.x,this.player.y,100);
   }
 
-  playEffect(row,x,y,size=100,angle=0) {
+  playEffect(row,x,y,size=100,angle=0,tint) {
     if(this.effects.countActive()> (this.settings.particles==='low'?20:65)) return;
     const effect=this.add.sprite(x,y,`fx-${row}`).setDepth(24).setDisplaySize(size,size).setRotation(angle);
+    if(tint!==undefined&&tint!==null)effect.setTint(tint);
     this.effects.add(effect);
     effect.play(`effect-${row}`);
     effect.once('animationcomplete',()=>effect.destroy());
