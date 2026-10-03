@@ -21,7 +21,7 @@ const uniqueById = (items) => [...new Map(items.map((item) => [item.id, item])).
  * receive one 15% same-kind swap offer instead.
  */
 export function draftSkills({
-  activeSkills = [], passiveSkills = [], activeSlots = [], passiveSlots = [],
+  activeSkills = [], passiveSkills = [], activeSlots = [], passiveSlots = [], innateSkills = [],
   activeCount = 3, passiveCount = 1, modifiers = [], boss = false,
   shuffle = (items) => [...items], random = Math.random, guaranteePassive = false,
 } = {}) {
@@ -37,6 +37,8 @@ export function draftSkills({
     .map((skill) => card(skill, 'active', 'upgrade-active', 'Active skill upgrade', { name: `${skill.name} · Lv ${skill.level + 1}` }));
   const passiveUpgrades = passiveOwned.filter((skill) => skill.level < SLOT_RULES.passive.maxLevel)
     .map((skill) => card(skill, 'passive', 'upgrade-passive', 'Passive skill upgrade', { name: `${skill.name} · Lv ${skill.level + 1}` }));
+  const innateUpgrades=innateSkills.filter(skill=>SLOT_RULES.innate.includes(skill.id)&&skill.level<SLOT_RULES.passive.maxLevel)
+    .map(skill=>card(skill,'passive','upgrade-passive','Passive skill upgrade',{name:`${skill.name} · Lv ${skill.level+1}`,innate:true}));
   const statCards = modifiers.map((modifier) => card(modifier, 'stat', 'stat', 'Stat upgrade'));
   const freeActive = activeOwned.length < activeCount;
   const freePassive = passiveOwned.length < passiveCount;
@@ -50,7 +52,7 @@ export function draftSkills({
   }
 
   const skillsOnly = [
-    ...shuffle([...activeUpgrades, ...passiveUpgrades]),
+    ...shuffle([...activeUpgrades, ...passiveUpgrades,...innateUpgrades]),
     ...(boss ? shuffle([...(freeActive ? activeNew : []), ...(freePassive ? passiveNew : [])]) : []),
   ];
   const required = [];
@@ -76,7 +78,7 @@ export function draftSkills({
   }
   if (!boss) {
     for (const candidate of shuffle(statCards)) add(candidate);
-    const allOwnedSkillsMaxed=activeUpgrades.length===0&&passiveUpgrades.length===0
+    const allOwnedSkillsMaxed=activeUpgrades.length===0&&passiveUpgrades.length===0&&innateUpgrades.length===0
       &&activeOwned.length+passiveOwned.length>0&&(!freeActive||activeNew.length===0)&&(!freePassive||passiveNew.length===0);
     if (allOwnedSkillsMaxed&&!swap) {
       const heal=card({ id: 'draft-heal', name: 'Cacao Remedy', icon: '♥', description: 'Restore 30 health.' }, 'stat', 'stat', 'Restore health', { stat: 'heal', amount: 30 });

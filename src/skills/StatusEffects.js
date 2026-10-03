@@ -12,7 +12,7 @@ export const enemyStatusDefaults = () => ({
   stunUntil: 0, slowUntil: 0, slowPct: .5, rootUntil: 0,
   fearUntil: 0, fearSource: null, confuseUntil: 0, confuseHeading: 0, confuseNextTurn: 0,
   wanderHeading: 0, wanderNextTurn: 0, pullTo: null, blindUntil: 0,
-  tauntUntil: 0, tauntTarget: null, markUntil: 0, markBonus: 0,
+  tauntUntil: 0, tauntTarget: null, markUntil: 0, markBonus: 0, markHeal: 0, markSource: null,
   silenceUntil: 0, disarmUntil: 0,
   poisonUntil: 0, poisonDps: 0, poisonSource: null, poisonByAlly: false,
   bleedUntil: 0, bleedDps: 0, bleedSource: null, bleedByAlly: false,

@@ -8,15 +8,16 @@ import { BOSSES, ENEMIES, GEAR, MAPS, RUN_MODES, STORE_ITEMS } from '../src/data
 
 const supportedEffects = new Set(['projectile', 'burst', 'nova', 'cone', 'line', 'orbit', 'trap', 'heal', 'shield', 'chain', 'summon', 'dash', 'rain']);
 
-test('the launch roster has three heroes and twenty unique skills each', () => {
+test('the roster retains legacy heroes and exposes Balam’s converted skill pool', () => {
   assert.equal(Object.keys(HEROES).length, 3);
   for (const hero of Object.values(HEROES)) {
-    assert.equal(hero.skills.length, 20, `${hero.name} should have 20 skills`);
-    assert.equal(new Set(hero.skills.map((skill) => skill.id)).size, 20, `${hero.name} skill ids should be unique`);
+    const count=hero.id==='balam'?16:20;
+    assert.equal(hero.skills.length, count, `${hero.name} active pool`);
+    assert.equal(new Set(hero.skills.map((skill) => skill.id)).size, count, `${hero.name} skill ids should be unique`);
     assert.ok(hero.base.hp > 0 && hero.base.speed > 0);
     assert.ok(hero.automatic.damage > 0 && hero.automatic.cooldown > 0);
     for (const skill of hero.skills) {
-      assert.ok(supportedEffects.has(skill.type), `${skill.name} uses a supported effect`);
+      assert.ok(supportedEffects.has(skill.type)||skill.type==='active'&&skill.owner==='balam', `${skill.name} uses a supported effect`);
       assert.ok(skill.cooldown > 0, `${skill.name} has a cooldown`);
       assert.ok(skill.description.length > 12, `${skill.name} has player-facing copy`);
     }

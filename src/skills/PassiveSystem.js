@@ -1,3 +1,4 @@
+import { PASSIVE_HANDLERS } from './index.js';
 export class EventBus {
   constructor() { this.listeners = new Map(); }
 
@@ -26,18 +27,24 @@ export class PassiveSystem {
   }
 
   equip(passive, level = 1, { innate = false } = {}) {
+    const logic=PASSIVE_HANDLERS[passive.id];
+    if(logic)passive={...logic,...passive,on:passive.on||logic.on,stat:passive.stat||logic.stat};
     this.unequip(passive.id);
     const entry = { id: passive.id, passive, level: Math.max(1, Math.min(5, level)), innate, state: {}, unsubscribe: [] };
     this.equipped.set(passive.id, entry);
     for (const [event, handler] of Object.entries(passive.on || {})) {
       entry.unsubscribe.push(this.bus.on(event, (context) => handler({ ...context, state: entry.state }, entry.level)));
     }
+    passive.on?.tick?.({scene:this.scene,stats:this.scene.stats,player:this.scene.player,state:entry.state,dt:0},entry.level);
     return entry;
   }
 
   setLevel(id, level) {
     const entry = this.equipped.get(id);
-    if (entry) entry.level = Math.max(1, Math.min(5, level));
+    if (entry) {
+      entry.level = Math.max(1, Math.min(5, level));
+      entry.passive.on?.tick?.({scene:this.scene,stats:this.scene.stats,player:this.scene.player,state:entry.state,dt:0},entry.level);
+    }
   }
 
   unequip(id) {
@@ -53,7 +60,7 @@ export class PassiveSystem {
   modifiers() {
     const result = { speedMult: 1, pickupRangeMult: 1 };
     for (const { passive, level, state } of this.equipped.values()) {
-      for (const contribution of [passive.stat?.(level), state.modifiers]) {
+      for (const contribution of [passive.stat?.(level,{scene:this.scene,stats:this.scene.stats,player:this.scene.player,state}), state.modifiers]) {
         for (const [key, value] of Object.entries(contribution || {})) {
           result[key] = key.endsWith('Mult') ? (result[key] ?? 1) * value : (result[key] ?? 0) + value;
         }

@@ -1,12 +1,14 @@
-const HEAL = [.4, .5, .6, .7, .8];
-const PICKUP_RANGE = [.25, .30, .35, .40, .45];
+import { definition, value } from '../balam/data.js';
+import { proc } from '../balam/runtime.js';
+const data=definition('jade-bounty');
 
 export const jadeBounty = {
-  id: 'jade-bounty',
-  stat: (level) => ({ pickupRangeMult: 1 + PICKUP_RANGE[level - 1] }),
+  ...data,
+  stat: (level) => ({ pickupRangeMult: 1 + data.secondaryValues[level-1]/100 }),
   on: {
-    pickup({ stats, kind }, level) {
-      if (kind === 'xp') stats.hp = Math.min(stats.maxHp, stats.hp + HEAL[level - 1]);
+    pickup({ scene, stats, kind }, level) {
+      if (kind === 'xp') {stats.hp = Math.min(stats.maxHp, stats.hp + value(data,level));proc(scene,data,scene.player,false);}
     },
+    tick({state},level){state.hudState={type:'bonus',healPerGem:value(data,level),pickupRangePct:data.secondaryValues[level-1]};},
   },
 };

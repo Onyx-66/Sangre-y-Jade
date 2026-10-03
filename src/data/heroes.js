@@ -1,3 +1,4 @@
+import { BALAM_DEFINITIONS } from '../skills/generated/balam.js';
 const skill = (id, name, icon, type, cooldown, damage, range, description, tags, extra = {}) => ({
   id, name, icon, type, cooldown, damage, range, description, tags, ...extra,
 });
@@ -106,6 +107,11 @@ export const HEROES = {
     ],
   },
 };
+
+// Preserve the v0.5.0 catalogue for migration and legacy-fallback regression tests.
+export const LEGACY_BALAM_SKILLS = HEROES.balam.skills;
+HEROES.balam.skills = BALAM_DEFINITIONS.filter(skill => skill.kind === 'active');
+HEROES.balam.passives = BALAM_DEFINITIONS.filter(skill => skill.kind === 'passive');
 
 export const MODIFIERS = [
   { id: 'might', name: 'Obsidian Edge', icon: '◆', description: '+12% damage', stat: 'damage', amount: 0.12 },

@@ -5,7 +5,7 @@ import { applyProjectileTint, applySlow, chainAttack, restoreSkillMana, ringEffe
 
 test('authored skill descriptions survive, with type copy used only as a fallback', () => {
   const roar = HEROES.balam.skills.find((skill) => skill.id === 'jaguar-roar');
-  assert.equal(roar.description, 'A stunning roar tears through nearby spirits.');
+  assert.equal(roar.description, 'A terrifying roar hurts nearby foes and makes them flee for 2 seconds.');
   assert.notEqual(roar.description, SKILL_DESCRIPTIONS[roar.type]);
   assert.equal(skillDescription(roar), roar.description);
   assert.equal(skillDescription({ type: 'nova' }), SKILL_DESCRIPTIONS.nova);

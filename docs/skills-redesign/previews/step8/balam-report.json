@@ -1,0 +1,724 @@
+{
+  "casts": [
+    {
+      "id": "jaguar-roar",
+      "level": 1,
+      "damageDone": 42,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "jaguar-roar",
+      "level": 2,
+      "damageDone": 52.5,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "jaguar-roar",
+      "level": 3,
+      "damageDone": 63,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "jaguar-roar",
+      "level": 4,
+      "damageDone": 73.5,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "jaguar-roar",
+      "level": 5,
+      "damageDone": 84,
+      "cooldown": 8.1,
+      "finite": true
+    },
+    {
+      "id": "jaguar-roar",
+      "level": 6,
+      "damageDone": 94.5,
+      "cooldown": 8.1,
+      "finite": true
+    },
+    {
+      "id": "obsidian-arc",
+      "level": 1,
+      "damageDone": 50.400000000000006,
+      "cooldown": 4.8,
+      "finite": true
+    },
+    {
+      "id": "obsidian-arc",
+      "level": 2,
+      "damageDone": 63.00000000000001,
+      "cooldown": 4.8,
+      "finite": true
+    },
+    {
+      "id": "obsidian-arc",
+      "level": 3,
+      "damageDone": 75.60000000000001,
+      "cooldown": 4.8,
+      "finite": true
+    },
+    {
+      "id": "obsidian-arc",
+      "level": 4,
+      "damageDone": 88.20000000000002,
+      "cooldown": 4.8,
+      "finite": true
+    },
+    {
+      "id": "obsidian-arc",
+      "level": 5,
+      "damageDone": 100.80000000000001,
+      "cooldown": 4.32,
+      "finite": true
+    },
+    {
+      "id": "obsidian-arc",
+      "level": 6,
+      "damageDone": 113.4,
+      "cooldown": 4.32,
+      "finite": true
+    },
+    {
+      "id": "prowlers-leap",
+      "level": 1,
+      "damageDone": 65.10000000000001,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "prowlers-leap",
+      "level": 2,
+      "damageDone": 81.37500000000001,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "prowlers-leap",
+      "level": 3,
+      "damageDone": 97.65,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "prowlers-leap",
+      "level": 4,
+      "damageDone": 113.92500000000001,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "prowlers-leap",
+      "level": 5,
+      "damageDone": 130.20000000000002,
+      "cooldown": 6.3,
+      "finite": true
+    },
+    {
+      "id": "prowlers-leap",
+      "level": 6,
+      "damageDone": 146.47500000000002,
+      "cooldown": 6.3,
+      "finite": true
+    },
+    {
+      "id": "claw-cyclone",
+      "level": 1,
+      "damageDone": 113.40000000000002,
+      "cooldown": 8.5,
+      "finite": true
+    },
+    {
+      "id": "claw-cyclone",
+      "level": 2,
+      "damageDone": 141.75000000000003,
+      "cooldown": 8.5,
+      "finite": true
+    },
+    {
+      "id": "claw-cyclone",
+      "level": 3,
+      "damageDone": 170.1,
+      "cooldown": 8.5,
+      "finite": true
+    },
+    {
+      "id": "claw-cyclone",
+      "level": 4,
+      "damageDone": 198.45,
+      "cooldown": 8.5,
+      "finite": true
+    },
+    {
+      "id": "claw-cyclone",
+      "level": 5,
+      "damageDone": 226.80000000000004,
+      "cooldown": 7.65,
+      "finite": true
+    },
+    {
+      "id": "claw-cyclone",
+      "level": 6,
+      "damageDone": 297.67500000000007,
+      "cooldown": 7.65,
+      "finite": true
+    },
+    {
+      "id": "ceiba-breaker",
+      "level": 1,
+      "damageDone": 105,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "ceiba-breaker",
+      "level": 2,
+      "damageDone": 131.25,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "ceiba-breaker",
+      "level": 3,
+      "damageDone": 157.5,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "ceiba-breaker",
+      "level": 4,
+      "damageDone": 183.75,
+      "cooldown": 7,
+      "finite": true
+    },
+    {
+      "id": "ceiba-breaker",
+      "level": 5,
+      "damageDone": 210,
+      "cooldown": 6.3,
+      "finite": true
+    },
+    {
+      "id": "ceiba-breaker",
+      "level": 6,
+      "damageDone": 236.25,
+      "cooldown": 6.3,
+      "finite": true
+    },
+    {
+      "id": "bloodless-hunt",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 4.5,
+      "finite": true
+    },
+    {
+      "id": "bloodless-hunt",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 4.5,
+      "finite": true
+    },
+    {
+      "id": "bloodless-hunt",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 4.5,
+      "finite": true
+    },
+    {
+      "id": "bloodless-hunt",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 4.5,
+      "finite": true
+    },
+    {
+      "id": "bloodless-hunt",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 4.05,
+      "finite": true
+    },
+    {
+      "id": "bloodless-hunt",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 4.05,
+      "finite": true
+    },
+    {
+      "id": "stone-maw",
+      "level": 1,
+      "damageDone": 86.10000000000001,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "stone-maw",
+      "level": 2,
+      "damageDone": 107.62500000000001,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "stone-maw",
+      "level": 3,
+      "damageDone": 129.15,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "stone-maw",
+      "level": 4,
+      "damageDone": 150.675,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "stone-maw",
+      "level": 5,
+      "damageDone": 172.20000000000002,
+      "cooldown": 8.1,
+      "finite": true
+    },
+    {
+      "id": "stone-maw",
+      "level": 6,
+      "damageDone": 193.72500000000002,
+      "cooldown": 8.1,
+      "finite": true
+    },
+    {
+      "id": "war-drum",
+      "level": 1,
+      "damageDone": 178.5,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "war-drum",
+      "level": 2,
+      "damageDone": 223.125,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "war-drum",
+      "level": 3,
+      "damageDone": 267.75,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "war-drum",
+      "level": 4,
+      "damageDone": 312.375,
+      "cooldown": 12,
+      "finite": true
+    },
+    {
+      "id": "war-drum",
+      "level": 5,
+      "damageDone": 357,
+      "cooldown": 10.8,
+      "finite": true
+    },
+    {
+      "id": "war-drum",
+      "level": 6,
+      "damageDone": 448.875,
+      "cooldown": 10.8,
+      "finite": true
+    },
+    {
+      "id": "sun-claw",
+      "level": 1,
+      "damageDone": 77.7,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "sun-claw",
+      "level": 2,
+      "damageDone": 97.125,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "sun-claw",
+      "level": 3,
+      "damageDone": 116.55000000000001,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "sun-claw",
+      "level": 4,
+      "damageDone": 135.975,
+      "cooldown": 9.5,
+      "finite": true
+    },
+    {
+      "id": "sun-claw",
+      "level": 5,
+      "damageDone": 155.4,
+      "cooldown": 8.55,
+      "finite": true
+    },
+    {
+      "id": "sun-claw",
+      "level": 6,
+      "damageDone": 174.82500000000002,
+      "cooldown": 8.55,
+      "finite": true
+    },
+    {
+      "id": "jaguar-echo",
+      "level": 1,
+      "damageDone": 147,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "jaguar-echo",
+      "level": 2,
+      "damageDone": 183.75,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "jaguar-echo",
+      "level": 3,
+      "damageDone": 236.25,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "jaguar-echo",
+      "level": 4,
+      "damageDone": 275.625,
+      "cooldown": 11,
+      "finite": true
+    },
+    {
+      "id": "jaguar-echo",
+      "level": 5,
+      "damageDone": 315,
+      "cooldown": 9.9,
+      "finite": true
+    },
+    {
+      "id": "jaguar-echo",
+      "level": 6,
+      "damageDone": 425.25,
+      "cooldown": 9.9,
+      "finite": true
+    },
+    {
+      "id": "fang-path",
+      "level": 1,
+      "damageDone": 56.7,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "fang-path",
+      "level": 2,
+      "damageDone": 70.875,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "fang-path",
+      "level": 3,
+      "damageDone": 85.05000000000001,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "fang-path",
+      "level": 4,
+      "damageDone": 99.22500000000001,
+      "cooldown": 5.4,
+      "finite": true
+    },
+    {
+      "id": "fang-path",
+      "level": 5,
+      "damageDone": 113.4,
+      "cooldown": 4.86,
+      "finite": true
+    },
+    {
+      "id": "fang-path",
+      "level": 6,
+      "damageDone": 127.575,
+      "cooldown": 4.86,
+      "finite": true
+    },
+    {
+      "id": "hunters-mark",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "hunters-mark",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "hunters-mark",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "hunters-mark",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 6.5,
+      "finite": true
+    },
+    {
+      "id": "hunters-mark",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 5.8500000000000005,
+      "finite": true
+    },
+    {
+      "id": "hunters-mark",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 5.8500000000000005,
+      "finite": true
+    },
+    {
+      "id": "nine-lives",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 16,
+      "finite": true
+    },
+    {
+      "id": "nine-lives",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 16,
+      "finite": true
+    },
+    {
+      "id": "nine-lives",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 16,
+      "finite": true
+    },
+    {
+      "id": "nine-lives",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 16,
+      "finite": true
+    },
+    {
+      "id": "nine-lives",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 14.4,
+      "finite": true
+    },
+    {
+      "id": "nine-lives",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 14.4,
+      "finite": true
+    },
+    {
+      "id": "black-mirror",
+      "level": 1,
+      "damageDone": 0,
+      "cooldown": 10,
+      "finite": true
+    },
+    {
+      "id": "black-mirror",
+      "level": 2,
+      "damageDone": 0,
+      "cooldown": 10,
+      "finite": true
+    },
+    {
+      "id": "black-mirror",
+      "level": 3,
+      "damageDone": 0,
+      "cooldown": 10,
+      "finite": true
+    },
+    {
+      "id": "black-mirror",
+      "level": 4,
+      "damageDone": 0,
+      "cooldown": 10,
+      "finite": true
+    },
+    {
+      "id": "black-mirror",
+      "level": 5,
+      "damageDone": 0,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "black-mirror",
+      "level": 6,
+      "damageDone": 0,
+      "cooldown": 9,
+      "finite": true
+    },
+    {
+      "id": "pyramid-rush",
+      "level": 1,
+      "damageDone": 96.60000000000001,
+      "cooldown": 8,
+      "finite": true
+    },
+    {
+      "id": "pyramid-rush",
+      "level": 2,
+      "damageDone": 120.75000000000001,
+      "cooldown": 8,
+      "finite": true
+    },
+    {
+      "id": "pyramid-rush",
+      "level": 3,
+      "damageDone": 144.9,
+      "cooldown": 8,
+      "finite": true
+    },
+    {
+      "id": "pyramid-rush",
+      "level": 4,
+      "damageDone": 169.05,
+      "cooldown": 8,
+      "finite": true
+    },
+    {
+      "id": "pyramid-rush",
+      "level": 5,
+      "damageDone": 193.20000000000002,
+      "cooldown": 7.2,
+      "finite": true
+    },
+    {
+      "id": "pyramid-rush",
+      "level": 6,
+      "damageDone": 217.35000000000002,
+      "cooldown": 7.2,
+      "finite": true
+    },
+    {
+      "id": "heart-of-balam",
+      "level": 1,
+      "damageDone": 157.5,
+      "cooldown": 14,
+      "finite": true
+    },
+    {
+      "id": "heart-of-balam",
+      "level": 2,
+      "damageDone": 196.875,
+      "cooldown": 14,
+      "finite": true
+    },
+    {
+      "id": "heart-of-balam",
+      "level": 3,
+      "damageDone": 236.25,
+      "cooldown": 14,
+      "finite": true
+    },
+    {
+      "id": "heart-of-balam",
+      "level": 4,
+      "damageDone": 275.625,
+      "cooldown": 14,
+      "finite": true
+    },
+    {
+      "id": "heart-of-balam",
+      "level": 5,
+      "damageDone": 315,
+      "cooldown": 12.6,
+      "finite": true
+    },
+    {
+      "id": "heart-of-balam",
+      "level": 6,
+      "damageDone": 354.375,
+      "cooldown": 12.6,
+      "finite": true
+    }
+  ],
+  "passives": [
+    {
+      "id": "bloodlust",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "stonehide",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "predators-rhythm",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "feast-of-the-fallen",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "obsidian-thorns",
+      "level": 5,
+      "hasState": false
+    },
+    {
+      "id": "jaguars-pride",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "earthshaker",
+      "level": 5,
+      "hasState": true
+    },
+    {
+      "id": "wounded-fury",
+      "level": 5,
+      "hasState": true
+    }
+  ],
+  "fxPlaceholders": 17,
+  "audioFallbacks": 17,
+  "liveFx": 24,
+  "feast": 7,
+  "errors": [],
+  "elapsedMs": 8173
+}

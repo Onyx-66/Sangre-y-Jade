@@ -1,3 +1,4 @@
+import { SHARED_DEFINITIONS } from '../skills/generated/balam.js';
 const clamp = (value, max = 1) => Math.max(0, Math.min(max, Number(value) || 0));
 export const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
@@ -30,7 +31,11 @@ export function cardKind(card) {
 }
 
 // Existing icons until the later trait-art step supplies the dedicated skill icons.
-export const INNATE_HUD = [
-  { id: 'survivors-will', name: "Survivor's Will", description: 'Taking a hit makes you run faster for a moment.', art: 65, level: 1 },
-  { id: 'jade-bounty', name: 'Jade Bounty', description: 'Collecting experience gems heals you and pulls them in from afar.', art: 63, level: 1 },
-];
+export const INNATE_HUD = SHARED_DEFINITIONS.map(skill=>({...skill,art:skill.art??65,level:1}));
+export function passiveStateText(state) {
+  if(!state)return '';
+  if(state.type==='counter'||state.type==='stacks')return `${state.value}/${state.max}`;
+  if(state.type==='timer')return `${Math.ceil(state.remaining||0)}s`;
+  if(state.type==='bonus')return `+${state.healPerGem} HP · +${state.pickupRangePct}%`;
+  return '';
+}

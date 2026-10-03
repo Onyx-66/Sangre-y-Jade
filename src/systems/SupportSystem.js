@@ -85,7 +85,7 @@ export class SupportSystem {
    case 'barrier':shield(30);break;
    case 'shockwave':for(const e of [...s.enemies.getChildren()])if(e.active&&Math.hypot(e.x-a.sprite.x,e.y-a.sprite.y)<155){s.damageEnemy(e,14*p,0,0,a.sprite);if(e.active)e.setData('stunUntil',s.elapsed+.45);}s.playEffect(5,a.sprite.x,a.sprite.y,210);break;
    case 'ambush':hit(27);s.playEffect(0,target.x,target.y,80);break;
-   case 'mark':target.setData({markUntil:s.elapsed+5,markBonus:Math.min(.65,.2*p)});s.playEffect(4,target.x,target.y,65);break;
+   case 'mark':if(s.heroData.id!=='balam'){target.setData({markUntil:s.elapsed+5,markBonus:Math.min(.65,.2*p)});s.playEffect(4,target.x,target.y,65);}break;
    case 'execute':hit(target.getData('hp')/target.getData('maxHp')<.35?65:22);s.playEffect(0,target.x,target.y,105);break;
    case 'venom':target.setData({poisonUntil:s.elapsed+5,poisonDps:5*p,poisonSource:a.sprite,poisonByAlly:true});s.playEffect(1,target.x,target.y,70);break;
    case 'silence':target.setData('silenceUntil',s.elapsed+3);hit(8);break;

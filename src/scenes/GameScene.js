@@ -12,6 +12,9 @@ import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../skills/index.js';
 import { PassiveSystem } from '../skills/PassiveSystem.js';
 import { skillContext, skillCooldown, manaCost, updateSkillEffects, applyStatus } from '../skills/common.js';
 import { HERO_EFFECT_DEFAULTS, enemyStatusDefaults, updateEnemy, canEnemyAttack, enemyDamageMult, enemyShotAngle } from '../skills/StatusEffects.js';
+import { FxDirector } from '../fx/FxDirector.js';
+import { SkillAudio } from '../systems/SkillAudio.js';
+import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -61,6 +64,10 @@ export class GameScene extends Phaser.Scene {
     this.loadoutLevel = 1;
     this.summons = [];
     this.skillEffects = [];
+    this.cleaned=false;
+    this.skillBuffs=new Map();
+    this.skillMotion=this.jaguarEcho=this.balamWard=this.blackMirror=null;
+    this.knockbackImmuneUntil=0;
     this.companion=null;
     this.support=new SupportSystem(this);
     this.pendingBossRewards=[];
@@ -100,6 +107,8 @@ export class GameScene extends Phaser.Scene {
     for (const passive of INNATE_PASSIVES) this.passives.equip(passive, 1, { innate: true });
 
     buildTextures(this);
+    this.fx=new FxDirector(this);
+    this.skillAudio=new SkillAudio(audio);
     this.physics.world.setBounds(-50000, -50000, 100000, 100000);
     this.cameras.main.setBackgroundColor(map.colors.ground);
     this.cameras.main.roundPixels = true;
@@ -200,7 +209,7 @@ export class GameScene extends Phaser.Scene {
     const dt = delta / 1000;
     this.elapsed += dt;
     this.passives.emit('tick', { dt });
-    this.autoTimer -= dt * this.stats.cooldownRecoveryMult;
+    this.autoTimer -= dt * this.stats.cooldownRecoveryMult * (this.passives.modifiers().attackSpeedMult??1) * skillModifiers(this).attackSpeedMult;
     this.spawnTimer -= dt;
     this.decorTimer -= dt;
     this.invulnerable = Math.max(0, this.invulnerable - dt);
@@ -224,6 +233,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   updateMovement(dt) {
+    if(this.skillMotion?.effect.active){this.player.setVelocity(0,0);return;}
     const keyboardX = (this.cursors.left.isDown || this.keys.left.isDown ? -1 : 0) + (this.cursors.right.isDown || this.keys.right.isDown ? 1 : 0);
     const keyboardY = (this.cursors.up.isDown || this.keys.up.isDown ? -1 : 0) + (this.cursors.down.isDown || this.keys.down.isDown ? 1 : 0);
     let x = keyboardX || this.hud.move.x;
@@ -234,12 +244,12 @@ export class GameScene extends Phaser.Scene {
 
     if (this.dash.remaining > 0) {
       this.dash.remaining -= dt;
-      const speed = this.stats.speed * this.passives.modifiers().speedMult;
+      const speed = this.stats.speed * this.passives.modifiers().speedMult * skillModifiers(this).speedMult;
       this.player.setVelocity(this.dash.x * speed * 3.65, this.dash.y * speed * 3.65);
       this.player.setAlpha(.72 + Math.sin(this.elapsed * 50) * .16);
     } else {
       this.player.setAlpha(1);
-      const speed=this.stats.speed*this.support.modifiers().speed*this.passives.modifiers().speedMult;
+      const speed=this.stats.speed*this.support.modifiers().speed*this.passives.modifiers().speedMult*skillModifiers(this).speedMult;
       this.player.setVelocity(x * speed, y * speed);
     }
     this.facing=facingFor(this.player.body.velocity.x,this.player.body.velocity.y,this.facing);
@@ -345,6 +355,14 @@ export class GameScene extends Phaser.Scene {
   updateProjectiles(dt) {
     this.projectiles.children.each((projectile) => {
       if (!projectile?.active) return;
+      const target=projectile.getData('homingTarget');
+      if(target?.active&&target.getData('serial')===projectile.getData('homingSerial')){
+        const velocity=projectile.body.velocity,angle=Math.atan2(velocity.y,velocity.x);
+        const desired=Math.atan2(target.y-projectile.y,target.x-projectile.x);
+        const difference=Phaser.Math.Angle.Wrap(desired-angle),limit=projectile.getData('homingTurn')*dt;
+        const heading=angle+clamp(difference,-limit,limit),speed=projectile.getData('homingSpeed');
+        projectile.setVelocity(Math.cos(heading)*speed,Math.sin(heading)*speed).setRotation(heading);
+      }
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
       if (life <= 0 || Phaser.Math.Distance.Between(projectile.x, projectile.y, this.player.x, this.player.y) > 1450) projectile.destroy();
@@ -418,6 +436,7 @@ export class GameScene extends Phaser.Scene {
   refreshPassiveHud() {
     const slots=(this.passiveSlots||[]).map(skill=>({...skill,hudState:this.passives?.equipped.get(skill.id)?.state.hudState||skill.hudState}));
     this.hud.setPassives?.(slots,slotCount('passive',this.loadoutLevel||1));
+    this.hud.setInnates?.([...this.passives.equipped.values()].filter(entry=>entry.innate).map(entry=>({...entry.passive,level:entry.level,hudState:entry.state.hudState})));
   }
 
   autoAttack() {
@@ -524,7 +543,7 @@ export class GameScene extends Phaser.Scene {
     }
     restoreSkillMana(this.stats, skill.restore);
     skill.remaining = ctx.cooldown;
-    this.audio.sfx(this.heroData.id === 'kukul' ? 'dart' : 'spell', .06);
+    if(!handler)this.audio.sfx(this.heroData.id === 'kukul' ? 'dart' : 'spell', .06);
     this.passives.emit('skillCast', { skill, ctx });
   }
 
@@ -572,7 +591,7 @@ export class GameScene extends Phaser.Scene {
     if(!isDart) projectile.play('bolt-1');
     projectile.body.setCircle(18,46,46);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
-    projectile.setData({ damage, pierce, life, critBonus, hit: new Set(), source: this.player, byAlly: false, status: null, onHit: null });
+    projectile.setData({ damage, pierce, life, critBonus, hit: new Set(), source: this.player, byAlly: false, status: null, onHit: null, homingTarget:null, homingSerial:null, homingTurn:0, homingSpeed:0 });
     return projectile;
   }
 
@@ -589,10 +608,10 @@ export class GameScene extends Phaser.Scene {
 
   onEnemyProjectileHit(projectile) {
     if (!projectile.active || this.stats.intangibleUntil > this.elapsed) return;
-    if (this.stats.reflectUntil > this.elapsed) {
+    if (this.stats.reflectUntil > this.elapsed && inMirrorArc(this,projectile)) {
       const velocity = projectile.body.velocity;
       const reflected = this.fireProjectile(projectile.x, projectile.y, Math.atan2(-velocity.y, -velocity.x),
-        (projectile.getData('damage') || 8) * 1.5, Math.hypot(velocity.x, velocity.y), 1, projectile.getData('life'), 0xb58cff);
+        (projectile.getData('damage') || 8) * (this.blackMirror?.reflectPct/100||1.5), Math.hypot(velocity.x, velocity.y), 1, projectile.getData('life'), 0xb58cff);
       // Retain the enemy shot if the player projectile pool cannot accept the reflection.
       if (!reflected) return;
     } else {
@@ -686,13 +705,16 @@ export class GameScene extends Phaser.Scene {
   damageEnemy(enemy, rawDamage, critBonus = 0, knockback = 0, origin = this.player, options = {}) {
     if (!enemy?.active || rawDamage <= 0) return;
     const byAlly = options.byAlly ?? Boolean(origin?.getData?.('byAlly'));
-    const crit = !options.dot && Math.random() < this.stats.crit + critBonus;
-    const damage = rawDamage * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1);
+    const heroOwned=!byAlly||options.heroSkill;
+    const modifiers=heroOwned?this.passives.modifiers():{};
+    const crit = !options.dot && options.canCrit!==false && Math.random() < this.stats.crit + critBonus;
+    const damage = rawDamage * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1);
     const hp = enemy.getData('hp') - damage;
     enemy.setData('hp', hp);
     this.stats.damageDone += damage;
-    if (!byAlly && this.stats.lifestealPct > 0) this.stats.hp = Math.min(this.stats.maxHp,
-      this.stats.hp + Math.min(damage, Math.max(0, hp + damage)) * this.stats.lifestealPct * this.stats.healing);
+    const lifesteal=this.stats.lifestealPct+(modifiers.lifestealPct??0);
+    if (heroOwned && lifesteal > 0) this.stats.hp = Math.min(this.stats.maxHp,
+      this.stats.hp + Math.min(damage, Math.max(0, hp + damage)) * lifesteal * this.stats.healing);
     const event = { enemy, damage, source: origin, byAlly, dot: Boolean(options.dot) };
     this.passives.emit('hit', event);
     if (crit) this.passives.emit('crit', event);
@@ -718,6 +740,7 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(2,x,y,isBoss?190:68);
     const bossId = enemy.getData('bossId');
     const xp = enemy.getData('xp') || 5;
+    if(enemy.getData('markUntil')>this.elapsed&&enemy.getData('markSource')===this.player)this.stats.hp=Math.min(this.stats.maxHp,this.stats.hp+enemy.getData('markHeal')*this.stats.healing);
     enemy.disableBody(true, true);
     this.stats.kills += 1;
     this.passives.emit('kill', { enemy, byAlly });
@@ -747,15 +770,16 @@ export class GameScene extends Phaser.Scene {
       this.playEffect(4, this.player.x, this.player.y, 60);
       return;
     }
-    if (melee && source?.active && this.stats.reflectUntil > this.elapsed) this.damageEnemy(source, 15);
+    if (melee && source?.active && this.stats.reflectUntil > this.elapsed) this.damageEnemy(source, this.blackMirror?.thorns??15,0,0,this.player,{canCrit:false});
     this.hitCount += 1;
     const buffs=this.support.modifiers();
-    let damage = Math.max(1, rawDamage - (this.stats.armor+buffs.armor) * .72)*(1-buffs.reduction);
+    let damage = Math.max(1, rawDamage - (this.stats.armor+buffs.armor+(this.passives.modifiers().armor??0)) * .72)*(1-buffs.reduction);
     if (this.hasGear('jaguar-vest') && this.hitCount % 7 === 0) damage = 1;
     damage *= this.stats.damageTakenMult;
     if (this.stats.shield > 0) {
       const blocked = Math.min(this.stats.shield, damage);
       this.stats.shield -= blocked;
+      if(this.balamWard){this.balamWard.remaining=Math.max(0,this.balamWard.remaining-blocked);if(this.balamWard.remaining<=0)this.balamWard.effect.destroy();}
       damage -= blocked;
       if (damage <= 0) this.floatText(this.player.x, this.player.y - 28, 'WARD', '#78e4c0');
     }
@@ -768,8 +792,10 @@ export class GameScene extends Phaser.Scene {
     }
     this.invulnerable = .58;
     const angle = Phaser.Math.Angle.Between(sourceX, sourceY, this.player.x, this.player.y);
-    this.player.body.velocity.x += Math.cos(angle) * 260;
-    this.player.body.velocity.y += Math.sin(angle) * 260;
+    if(!(this.knockbackImmuneUntil>this.elapsed)){
+      this.player.body.velocity.x += Math.cos(angle) * 260;
+      this.player.body.velocity.y += Math.sin(angle) * 260;
+    }
     this.animateCharacter(this.player,this.playerArtKey(),'hurt',.22);
     this.playEffect(3,this.player.x,this.player.y,94);
     this.player.setTint(0xff7b7d);
@@ -962,6 +988,7 @@ export class GameScene extends Phaser.Scene {
     const activeCount=slotCount('active',heroLevel);
     const passiveCount=slotCount('passive',heroLevel);
     return draftSkills({activeSkills:this.heroData.skills,passiveSkills:this.heroData.passives||[],activeSlots:this.skillSlots,passiveSlots:this.passiveSlots,
+      innateSkills:[...this.passives.equipped.values()].filter(entry=>entry.innate).map(entry=>({...entry.passive,level:entry.level})),
       activeCount,passiveCount,modifiers:MODIFIERS,boss:bossReward,shuffle,
       random:Math.random,guaranteePassive:heroLevel%2===0});
   }
@@ -988,7 +1015,10 @@ export class GameScene extends Phaser.Scene {
         this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));this.refreshPassiveHud();onDone();
       },`The new ${kind} skill starts at level 1.`,{label:'Cancel',action:onCancel});return;
     }
-    if (card.choiceType === 'new-active'||card.choiceType==='new-passive') {
+    if(card.choiceType==='upgrade-passive'&&card.innate){
+      const entry=this.passives.equipped.get(card.id);
+      if(entry?.innate)this.passives.setLevel(card.id,entry.level+1);
+    } else if (card.choiceType === 'new-active'||card.choiceType==='new-passive') {
       if(!slots.some(skill=>skill.id===card.id)){
         const skill={...pool.find(entry=>entry.id===card.id)||card,kind,level:1,remaining:0};
         slots.push(skill);
@@ -1171,10 +1201,12 @@ export class GameScene extends Phaser.Scene {
   cleanup() {
     if (this.cleaned) return;
     this.cleaned = true;
+    this.ended = true; // Destroying a ward/movement effect must not deal shutdown damage.
     window.removeEventListener('pointerup',this.releaseAttack);
     window.removeEventListener('blur',this.releaseAttack);
     this.passives?.destroy();
     this.skillEffects?.forEach((effect) => effect.destroy());
+    this.fx?.destroy();this.skillAudio?.destroy();this.skillBuffs?.clear();
     this.hud?.destroy();
   }
 }

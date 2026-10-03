@@ -86,10 +86,10 @@ test('maxed loadouts fall back to stat choices and a heal while legacy skills st
 });
 
 function choiceHarness(level, pendingLevels, ownedCount = 0) {
-  const scene = makeScene(HEROES.balam);
+  const scene = makeScene(HEROES.ixchel);
   scene.stats.level = level;
   scene.pendingLevelUps = pendingLevels;
-  scene.skillSlots = HEROES.balam.skills.slice(0, ownedCount).map((skill) => ({ ...skill, kind: 'active', level: 1, remaining: 0 }));
+  scene.skillSlots = HEROES.ixchel.skills.slice(0, ownedCount).map((skill) => ({ ...skill, kind: 'active', level: 1, remaining: 0 }));
   scene.passiveSlots = [];
   scene.completedSkillMilestones = new Set();
   scene.pendingBossRewards = [];

@@ -4,7 +4,7 @@ import { interfaceIcon } from '../art/interfaceIcons.js';
 import { SUPPORTS } from '../data/supports.js';
 import { skillDescription } from '../data/heroes.js';
 import { SLOT_RULES } from './SkillDraft.js';
-import { passiveStateMarkup, levelPips, cardKind, escapeHtml, INNATE_HUD } from './PassiveState.js';
+import { passiveStateMarkup, passiveStateText, levelPips, cardKind, escapeHtml, INNATE_HUD } from './PassiveState.js';
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
 export class Hud {
@@ -165,7 +165,7 @@ export class Hud {
       slot.classList.toggle('locked',locked);slot.classList.toggle('empty',!skill);
       const content=locked?`<span class="slot-level">${t('Lv {n}',{n:10})}</span>`:skill?`<span class="passive-icon">${iconMarkup(skill)}</span>${levelPips(skill.level)}${passiveStateMarkup(skill.hudState)}`:'<span class="slot-empty">＋</span>';
       const body=slot.querySelector('.passive-content');if(body.innerHTML!==content)body.innerHTML=content;
-      slot.dataset.tooltip=locked?t('Unlocks at level {n}',{n:10}):skill?`${t(skill.name)} · ${t('PASSIVE')} · ${t('Lv {n}',{n:skill.level})}\n${t(skillDescription(skill))}`:t('Choose a passive when you level up');
+      slot.dataset.tooltip=locked?t('Unlocks at level {n}',{n:10}):skill?`${t(skill.name)} · ${t('PASSIVE')} · ${t('Lv {n}',{n:skill.level})}\n${t(skillDescription(skill))}\n${passiveStateText(skill.hudState)}`:t('Choose a passive when you level up');
       slot.setAttribute('aria-label',slot.dataset.tooltip);
     });
   }
@@ -174,9 +174,9 @@ export class Hud {
     this.el.querySelectorAll('[data-innate]').forEach(slot=>{
       const skill=traits.find(trait=>trait.id===slot.dataset.innate);
       if(!skill)return;
-      const content=`<span class="passive-icon">${iconMarkup(skill)}</span>`;
+      const content=`<span class="passive-icon">${iconMarkup({...skill,art:skill.art??65})}</span>${passiveStateMarkup(skill.hudState)}`;
       if(slot.innerHTML!==content)slot.innerHTML=content;
-      slot.dataset.tooltip=`${t(skill.name)} · ${t('Basic trait')}\n${t(skill.description)}`;
+      slot.dataset.tooltip=`${t(skill.name)} · ${t('Basic trait')} · ${t('Lv {n}',{n:skill.level})}\n${t(skill.description)}\n${passiveStateText(skill.hudState)}`;
       slot.setAttribute('aria-label',slot.dataset.tooltip);
     });
   }

@@ -13,14 +13,16 @@ export function skillContext(scene, skill) {
   const baseOrbiters = skill.params?.orbiters;
   const baseCharges = skill.params?.charges;
   const hasCount = [baseProjectiles, baseChains, baseOrbiters, baseCharges].some((count) => count !== undefined);
-  const range = (skill.range || 0) * scene.stats.range * areaScale * (scene.hasGear('bone-bracers') ? 1.25 : 1);
+  const radiusScale=scene.stats.range*areaScale*(scene.hasGear('bone-bracers')?1.25:1);
+  const range = (skill.range || 0) * radiusScale;
   const target = scene.closestEnemy(scene.player.x, scene.player.y, Math.max(range, 680));
   const aim = scene.getAimAngle(target);
   const count = (base) => base === undefined ? undefined : base + (level >= 6 ? 1 : 0);
   return {
-    level, areaScale, durationScale: areaScale * (level >= 6 && !hasCount ? 1.2 : 1),
+    level, areaScale, radiusScale, durationScale: areaScale * (level >= 6 && !hasCount ? 1.2 : 1),
     projectiles: count(baseProjectiles), chains: count(baseChains), orbiters: count(baseOrbiters), charges: count(baseCharges),
     damage: (skill.damage || 0) * scene.stats.damage * (1 + .25 * (level - 1)) * scene.support.modifiers().damage,
+    damageScale: scene.stats.damage * (1 + .25 * (level - 1)) * scene.support.modifiers().damage,
     range, target, aim, cooldown: skillCooldown(skill), mana: manaCost(scene.stats, skill.mana),
     tx: target?.x ?? scene.player.x + Math.cos(aim) * Math.max(120, range * .65),
     ty: target?.y ?? scene.player.y + Math.sin(aim) * Math.max(120, range * .65),
@@ -66,10 +68,12 @@ export function spawnProjectile(scene, { origin = scene.player, angle = 0, damag
   return projectile;
 }
 
-function timedEffect(scene, duration, sprites, update) {
+export function timedEffect(scene, duration, sprites, update, onEnd = () => {}) {
   const effect = { remaining: duration, sprites, update, active: true, destroy() {
+    if (!this.active) return;
     this.active = false;
     this.sprites.forEach((sprite) => sprite.destroy());
+    onEnd();
   } };
   (scene.skillEffects ||= []).push(effect);
   return effect;
@@ -110,7 +114,7 @@ export function updateSkillEffects(scene, dt) {
     if (scene.pausedForChoice || scene.ended) return true;
     effect.update(Math.min(dt, effect.remaining));
     effect.remaining -= dt;
-    if (effect.remaining <= 0) effect.destroy();
+    if (effect.remaining <= 1e-9) effect.destroy();
     return effect.active;
   });
 }

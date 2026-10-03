@@ -4,7 +4,7 @@ import path from 'node:path';
 import { createServer } from 'vite';
 import { chromium } from 'playwright-core';
 
-const output=path.resolve('docs/skills-redesign/previews/step7');
+const output=path.resolve(process.env.SYJ_HUD_OUTPUT||'docs/skills-redesign/previews/step7');
 await fs.mkdir(output,{recursive:true});
 const server=await createServer({server:{host:'127.0.0.1',port:0},logLevel:'error'});
 await server.listen();
