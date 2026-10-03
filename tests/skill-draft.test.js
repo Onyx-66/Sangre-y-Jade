@@ -99,7 +99,7 @@ function choiceHarness(level, pendingLevels, ownedCount = 0) {
   scene.releaseAttack = () => {};
   scene.support = {
     chooseClass(done) { scene.companion = { skills: [] }; done(); },
-    syncLevel() {}, offerChange(done) { done(); },
+    syncLevel() {}, chooseSkill(done) { done(); },
   };
   const screens = [];
   const toasts = [];
@@ -111,6 +111,25 @@ function choiceHarness(level, pendingLevels, ownedCount = 0) {
   };
   return { scene, screens, toasts, unlocks };
 }
+
+test('companion screens occur only at level 5 recruitment and levels 8 and 14 picks',()=>{
+ const {scene,screens}=choiceHarness(14,10,0),pickLevels=[],recruitLevels=[];
+ scene.support={
+  chooseClass(done){recruitLevels.push(scene.loadoutLevel);scene.companion={skills:[]};done();},
+  syncLevel(){},chooseSkill(done){pickLevels.push(scene.loadoutLevel);done();},
+ };
+ scene.showLevelChoice();
+ while(screens.some(screen=>!screen.done)){
+  const next=screens.find(screen=>!screen.done);
+  assert.ok(next,'every normal or replacement card should be resolved before the next level');
+  next.done=true;chooseFirst(scene,next);
+ }
+ assert.deepEqual(recruitLevels,[5]);
+ assert.deepEqual(pickLevels,[8,14]);
+ assert.deepEqual(screens.map(screen=>screen.title).filter(title=>/^Level \d+$/.test(title)),Array.from({length:10},(_,i)=>`Level ${i+5}`));
+ assert.ok(screens.every(screen=>/^Level \d+$/.test(screen.title)||screen.title==='Choose a skill to replace'));
+ assert.ok(!('offerChange' in scene.support));
+});
 
 function chooseFirst(scene, screen) {
   assert.ok(screen.cards.length, `${screen.title} should offer at least one pick`);

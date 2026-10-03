@@ -7,6 +7,7 @@ import { Hud } from '../systems/Hud.js';
 import { ALLY_LEVEL, enemyPool, canSpawnEnemy, bossForHero, spawnOutsideView, facingFor } from '../systems/CombatRules.js';
 import { SLOT_RULES, slotCount, draftSkills, draftMilestoneSkills } from '../systems/SkillDraft.js';
 import { SupportSystem } from '../systems/SupportSystem.js';
+import { allyLevelEvent } from '../data/supports.js';
 import { applyProjectileTint, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
 import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../skills/index.js';
 import { PassiveSystem } from '../skills/PassiveSystem.js';
@@ -899,9 +900,13 @@ export class GameScene extends Phaser.Scene {
     const cards = this.getSkillChoices(false,earnedLevel);
     const afterPick=()=>{
       const afterSupport=()=>this.showSkillMilestone(earnedLevel,()=>this.finishSelection());
-      if(earnedLevel>=ALLY_LEVEL&&!this.companion)this.support.chooseClass(()=>{this.support.syncLevel(earnedLevel);afterSupport();});
-      else if(this.companion){this.support.syncLevel(earnedLevel);this.support.offerChange(afterSupport);}
-      else afterSupport();
+      const event=allyLevelEvent(earnedLevel,Boolean(this.companion));
+      if(event==='recruit')this.support.chooseClass(()=>{this.support.syncLevel(earnedLevel);afterSupport();});
+      else if(this.companion){
+        this.support.syncLevel(earnedLevel);
+        if(event==='pick')this.support.chooseSkill(afterSupport);
+        else afterSupport();
+      }else afterSupport();
     };
     const show=()=>this.hud.showChoice(`Level ${earnedLevel}`,cards,card=>this.applyChoice(card,afterPick,show));
     show();

@@ -1,13 +1,13 @@
 // Display-only examples from the specification. These are not equipped gameplay passives.
+import { ALLY_CATALOG } from '../../src/data/allyCatalog.js';
 export const PASSIVE_FIXTURES = {
  counter: { id:'feast-of-the-fallen',name:'Feast of the Fallen',description:'Kill counter display fixture.',kind:'passive',art:17,level:3,hudState:{type:'counter',value:7,max:12} },
  timer: { id:'lunar-boon',name:'Lunar Boon',description:'Timer display fixture.',kind:'passive',art:24,level:2,hudState:{type:'timer',remaining:0,duration:12} },
  stacks: { id:'bloodlust',name:'Bloodlust',description:'Stack display fixture.',kind:'passive',art:10,level:5,hudState:{type:'stacks',value:3,max:5} },
 };
-export const ALLY_FIXTURE = {id:'saintess',name:'Saintess',level:3,skills:[
- {id:'renew',name:'Healing Prayer',description:'Periodically restores health.',art:17,cooldown:7,remaining:3,level:3},
- {id:'blessing',name:'Jade Blessing',description:'Periodically grants a protective shield.',art:4,cooldown:9,remaining:0,level:3},
- {id:'valor',name:'Valor',description:'Increases all hero damage.',art:10,cooldown:0,remaining:0,level:3},
+export const ALLY_FIXTURE = {id:'saintess',name:'Saintess',level:10,rank:2,skills:[
+ ...ALLY_CATALOG.saintess.filter(skill=>['healing-circle','jade-ward'].includes(skill.id)).map((skill,index)=>({...skill,kind:'ally',skillKind:'active',remaining:index?0:3,level:2})),
+ {...ALLY_CATALOG.saintess.find(skill=>skill.id==='sacred-fervor'),kind:'ally',skillKind:'passive',remaining:0,level:2},
 ]};
 
 export function applyHudFixture(hud, activeSkills, locked) {

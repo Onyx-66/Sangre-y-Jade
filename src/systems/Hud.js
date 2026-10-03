@@ -35,7 +35,7 @@ export class Hud {
       <div class="joystick" aria-label="Movement joystick"><div class="joystick-knob"></div></div>
       <div class="xp-dock"><div class="xp-heading">${interfaceIcon('xp')}<b data-level>Level 1</b></div><div class="bar xp"><span></span><label>0 / 20 XP</label></div></div>
       <div class="combat-status"><span data-attack-mode>${this.settings.attackMode==='manual'?'Manual attack':'Auto-attack'}</span><span data-ally>Ally unlocks at level 5</span></div>
-      <div class="ally-panel" aria-label="${t('Ally')}"><button class="ally-portrait" data-support disabled aria-label="Support Loadout"></button><div class="ally-skills">${Array.from({length:3},(_,i)=>`<span class="ally-skill empty" data-ally-skill="${i}"><span class="skill-icon"></span><span class="ally-cooldown"></span></span>`).join('')}</div><small class="ally-name">${t('Ally unlocks at level 5')}</small></div>
+      <div class="ally-panel" aria-label="${t('Ally')}"><button class="ally-portrait" data-support disabled aria-label="Support Loadout"></button><div class="ally-skills">${Array.from({length:3},(_,i)=>`<span class="ally-skill empty" data-ally-skill="${i}"><span class="skill-icon"></span><span class="ally-cooldown"></span></span>`).join('')}</div><img class="ally-rank-badge" data-ally-rank hidden alt=""><small class="ally-name">${t('Ally unlocks at level 5')}</small></div>
       <div class="skill-dock">
       <div class="passive-row"><div class="innate-traits">${SLOT_RULES.innate.map(id=>`<span class="innate-slot" data-innate="${id}" tabindex="0"></span>`).join('')}</div><div class="passive-slots">${Array.from({length:2},(_,i)=>`<div class="passive-slot" data-passive="${i}" tabindex="0"><span class="passive-content"></span></div>`).join('')}</div></div>
       <div class="skills">
@@ -75,7 +75,10 @@ export class Hud {
       this.callbacks.dash();
     });
     this.el.querySelector('.pause-btn').addEventListener('click', () => this.callbacks.pause());
-    this.el.querySelector('[data-support]').addEventListener('click',()=>this.callbacks.support?.());
+    this.el.querySelector('.ally-panel').addEventListener('click',event=>{
+      if(event.target.closest('[data-ally-skill]')||this.el.querySelector('[data-support]').disabled)return;
+      this.callbacks.support?.();
+    });
     for (const slot of this.el.querySelectorAll('[data-passive],[data-innate],[data-ally-skill]')) {
       const show = (event) => { event.stopPropagation(); this.showTooltip(slot); };
       slot.addEventListener('pointerdown', show);
@@ -147,12 +150,16 @@ export class Hud {
     if(button.innerHTML!==portrait)button.innerHTML=portrait;
     this.el.querySelector('.ally-name').textContent=ally?t('{name} · Lv {n}',{name,n:ally.level}):name;
     if(ally)this.el.querySelector('[data-ally]').textContent=t('Support: {name} · Lv {n}',{name,n:ally.level});
+    const badge=this.el.querySelector('[data-ally-rank]');
+    badge.hidden=!ally;
+    if(ally){badge.src=artUrl(`ui/rank-badge-${clamp(ally.rank||1,1,5)}.png`);badge.alt=t('Companion rank {n}',{n:ally.rank||1});badge.title=badge.alt;}
     this.el.querySelectorAll('[data-ally-skill]').forEach((slot,index)=>{
       const skill=ally?.skills[index];
       slot.classList.toggle('empty',!skill);
+      slot.classList.toggle('passive',skill?.skillKind==='passive');
       const icon=skill?iconMarkup(skill):'';
       const image=slot.querySelector('.skill-icon');if(image.innerHTML!==icon)image.innerHTML=icon;
-      slot.style.setProperty('--remaining',`${skill?.cooldown?clamp(skill.remaining/skill.cooldown,0,1)*360:0}deg`);
+      slot.style.setProperty('--remaining',`${skill?.skillKind!=='passive'&&skill?.cooldown?clamp(skill.remaining/skill.cooldown,0,1)*360:0}deg`);
       slot.dataset.tooltip=skill?`${t(skill.name)} · ${t('ALLY')}\n${t(skillDescription(skill))}`:t('Empty ally slot');
       slot.setAttribute('aria-label',slot.dataset.tooltip);
       slot.tabIndex=skill?0:-1;
@@ -291,7 +298,8 @@ export class Hud {
       const kind=cardKind(card);
       button.dataset.kind=kind;
       button.dataset.choice=card.id || String(index);
-      button.innerHTML = `<span class="skill-ribbon" style="background-image:url('${artUrl(`ui/ribbon-${kind}.png`)}')">${t(kind.toUpperCase())}</span><span class="card-icon">${iconMarkup(card)}</span><h3>${escapeHtml(card.name)}</h3><p>${escapeHtml(skillDescription(card))}</p>${card.meta ? `<div class="card-tags"><span class="tag">${escapeHtml(card.meta)}</span></div>` : ''}`;
+      const allyDetails=card.signature?`<div class="ally-card-details"><span>${escapeHtml(t('Role: {role}',{role:t(card.role)}))}</span><span>${escapeHtml(t('Signature: {name}',{name:t(card.signature.name)}))}</span><span>${escapeHtml(t('Passives: {passives}',{passives:card.passives.map(skill=>t(skill.name)).join(', ')}))}</span></div>`:'';
+      button.innerHTML = `<span class="skill-ribbon" style="background-image:url('${artUrl(`ui/ribbon-${kind}.png`)}')">${t(kind.toUpperCase())}</span><span class="card-icon">${iconMarkup(card)}</span><h3>${escapeHtml(t(card.name))}</h3><p>${escapeHtml(t(skillDescription(card)))}</p>${allyDetails}${card.meta ? `<div class="card-tags"><span class="tag">${escapeHtml(t(card.meta))}</span></div>` : ''}`;
       button.addEventListener('click', () => {
         overlay.remove();
         onChoose(card, index);

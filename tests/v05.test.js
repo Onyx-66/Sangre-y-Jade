@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-import { SUPPORTS,supportRank,dangerousEnemy } from '../src/data/supports.js';
+import { SUPPORTS,allyRank,allyNumberMultiplier,allyCooldownMultiplier,dangerousEnemy } from '../src/data/supports.js';
 import { slotCount } from '../src/systems/SkillDraft.js';
 import {setLanguage,t,westernDigits,hasTranslation} from '../src/i18n/index.js';
 test('three distinct support classes each have ten unique translated skills',()=>{
@@ -12,7 +12,10 @@ test('hero active slots follow the level 20 unlock',()=>{
  for(const level of [1,9,10,19])assert.equal(slotCount('active',level),3);
  assert.equal(slotCount('active',20),4);
 });
-test('support rank rises with every hero level after level five',()=>{assert.equal(supportRank(5),1);assert.equal(supportRank(6),2);assert.equal(supportRank(20),16);});
+test('companion rank advances on the specified cadence and caps at five',()=>{
+ assert.deepEqual([5,9,10,14,15,20,25,80].map(allyRank),[1,1,2,2,3,4,5,5]);
+ assert.equal(allyNumberMultiplier(5),1.6);assert.equal(allyCooldownMultiplier(5),.84);
+});
 test('Assassin prefers threat over nearest low-damage enemy',()=>{
  const enemy=(x,damage,boss=false)=>({x,y:0,active:true,getData:k=>({damage,isBoss:boss})[k]});
  const weak=enemy(10,2),danger=enemy(300,35),distant=enemy(1000,200);assert.equal(dangerousEnemy([weak,danger,distant],{x:0,y:0}),danger);

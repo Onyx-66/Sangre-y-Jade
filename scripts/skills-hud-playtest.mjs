@@ -32,7 +32,7 @@ try{
   await page.evaluate(async({locale,locked})=>{
    const {setLanguage}=await import('/src/i18n/index.js');setLanguage(locale);
    const {Hud}=await import('/src/systems/Hud.js');const scene=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');
-   scene.hud.destroy();scene.hud=new Hud(document.querySelector('#ui-root'),{attackMode:'manual'},{skill:()=>window.hudCasts++,attack:()=>{},dash:()=>{},pause:()=>{},support:()=>{}});scene.hud.setHero(scene.heroData);
+   window.supportOpens=0;scene.hud.destroy();scene.hud=new Hud(document.querySelector('#ui-root'),{attackMode:'manual'},{skill:()=>window.hudCasts++,attack:()=>{},dash:()=>{},pause:()=>{},support:()=>window.supportOpens++});scene.hud.setHero(scene.heroData);
    const {applyHudFixture}=await import('/tests/fixtures/skill-hud.js');applyHudFixture(scene.hud,scene.heroData.skills,locked);
    scene.hud.el.querySelectorAll('.toast').forEach(node=>node.remove());await document.fonts.ready;
   },{locale,locked});
@@ -65,6 +65,9 @@ try{
  await page.evaluate(async()=>{const {PASSIVE_FIXTURES}=await import('/tests/fixtures/skill-hud.js');const hud=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').hud;hud.setPassives([PASSIVE_FIXTURES.stacks,PASSIVE_FIXTURES.timer],2);hud.hideTooltip();});
  check(await page.locator('.passive-stacks i.filled').count()===3&&await page.locator('.passive-timer.is-ready').count()===1,'stack pips and ready timer render');
  check(await page.locator('.ally-skill').count()===3&&await page.locator('.ally-skill button').count()===0,'three automatic ally slots render without cast buttons');
+ const rankBadgeSrc=await page.locator('[data-ally-rank]').getAttribute('src');
+ check(await page.locator('.ally-skill.passive').count()===1&&await page.locator('[data-ally-rank]').isVisible()&&rankBadgeSrc?.includes('rank-badge-2.png'),'ally passive uses its jade frame and the rank badge is shown');
+ await page.locator('.ally-panel').click({position:{x:140,y:7}});check(await page.evaluate(()=>window.supportOpens)===1,'tapping the ally panel opens its read-only loadout');
  const before=await page.locator('[data-skill="3"]').boundingBox();
  await page.evaluate(()=>{const hud=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').hud;hud.setSkills([],3);});
  assert.deepEqual(await page.locator('[data-skill="3"]').boundingBox(),before);

@@ -1,4 +1,5 @@
-// Support skills are autonomous. Their rank follows the hero after level 5.
+// Support skills are autonomous; role cards and current data come from the redesign catalogue.
+import { ALLY_CATALOG, ALLY_RULES } from './allyCatalog.js';
 const make=(id,name,fr,ar,description,frDescription,arDescription,art,cooldown=0)=>({id,name,fr,ar,description,frDescription,arDescription,art,cooldown});
 export const SUPPORTS={
  saintess:{id:'saintess',name:'Saintess',description:'Heals, shields, and buffs your hero.',supportPortrait:'saintess',color:0xa3ffe1,skills:[
@@ -38,7 +39,21 @@ export const SUPPORTS={
   make('smoke','Smoke Cover','Écran de fumée','ستار الدخان','Slows the top threat and briefly protects you.','Ralentit la cible et vous protège brièvement.','تبطئ أخطر عدو وتحميك مؤقتا.',11,10),
  ]},
 };
-export const supportRank=heroLevel=>Math.max(1,heroLevel-4);
+export const allyRank=heroLevel=>Math.min(5,1+Math.floor((Math.max(ALLY_RULES.join_level,heroLevel)-ALLY_RULES.join_level)/5));
+export const allyNumberMultiplier=rank=>1+ALLY_RULES.rank_number_bonus*(Math.min(5,Math.max(1,rank))-1);
+export const allyCooldownMultiplier=rank=>1-ALLY_RULES.rank_cooldown_reduction*(Math.min(5,Math.max(1,rank))-1);
+export function allyLevelEvent(level,hasCompanion){
+ if(!hasCompanion&&level===ALLY_RULES.join_level)return 'recruit';
+ if(hasCompanion&&ALLY_RULES.pick_levels.includes(level))return 'pick';
+ return null;
+}
+const roles={saintess:'Healer / Support',tank:'Frontline Protector',assassin:'Single-Target Hunter'};
+for(const [id,support]of Object.entries(SUPPORTS)){
+ const skills=ALLY_CATALOG[id];
+ support.role=roles[id];
+ support.signature=skills.find(skill=>skill.id===ALLY_RULES.signatures[id]);
+ support.passives=skills.filter(skill=>skill.kind==='passive');
+}
 export function threatScore(enemy,player){
  const d=enemy.getData.bind(enemy),distance=Math.hypot(enemy.x-player.x,enemy.y-player.y);
  // Potential damage is primary, then boss/ranged pressure and proximity.

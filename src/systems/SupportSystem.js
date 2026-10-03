@@ -1,47 +1,51 @@
-import { SUPPORTS, supportRank, dangerousEnemy } from '../data/supports.js';
+import { SUPPORTS, allyRank, allyNumberMultiplier, allyCooldownMultiplier, dangerousEnemy } from '../data/supports.js';
+import { ALLY_CATALOG, ALLY_RULES } from '../data/allyCatalog.js';
 import { t } from '../i18n/index.js';
 import { updateDamageOverTime } from '../skills/StatusEffects.js';
+import { AllyBrain } from './AllyBrain.js';
+import { LegacyAllyAdapter, legacyPassiveAlias } from './LegacyAllyAdapter.js';
 
 export class SupportSystem {
- constructor(scene){this.scene=scene;this.traps=[];this.effects={};}
- summon(id){
+ constructor(scene){this.scene=scene;this.traps=[];this.effects={};this.legacy=new LegacyAllyAdapter(this);this.brain=new AllyBrain(scene,this,this.legacy);}
+ summon(id,heroLevel=ALLY_RULES.join_level){
   const s=this.scene,data=SUPPORTS[id];if(s.companion||!data)return null;
   const sprite=s.add.sprite(s.player.x-75,s.player.y+40,`support-${id}`).setScale(.62).setDepth(19);
   sprite.setData('animLock',0);
   sprite.setData('byAlly',true);
-  s.companion={id,sprite,skills:[],level:supportRank(s.stats.level),shot:.5};
-  s.playEffect(4,sprite.x,sprite.y,125);s.audio.sfx('level');this.refresh();return s.companion;
+  s.companion={id,sprite,skills:[],level:heroLevel,rank:allyRank(heroLevel),shot:.5};
+  s.playEffect(4,sprite.x,sprite.y,125);s.audio.sfx('level');
+  this.equip(data.signature);this.refresh();return s.companion;
  }
  refresh(){const a=this.scene.companion;if(a)this.scene.hud.setAlly(a);}
- syncLevel(level){const a=this.scene.companion;if(!a)return;a.level=supportRank(level);a.skills.forEach(k=>k.level=a.level);this.refresh();}
- equip(skill,index){
-  const a=this.scene.companion;if(!a||a.skills.some(k=>k.id===skill.id))return;
-  const entry={...skill,level:a.level,remaining:.4};
-  if(index!==undefined&&index>=0&&index<a.skills.length)a.skills[index]=entry;
-  else if(a.skills.length<3)a.skills.push(entry);
-  this.effects={};this.refresh();
+ syncLevel(level){
+  const a=this.scene.companion;if(!a)return;
+  const previous=a.rank;a.level=level;a.rank=allyRank(level);
+  for(const skill of a.skills){skill.level=a.rank;const fraction=skill.cooldown?skill.remaining/skill.cooldown:0;skill.cooldown=skill.baseCooldown*allyCooldownMultiplier(a.rank);skill.remaining=fraction*skill.cooldown;}
+  if(a.rank>previous)this.scene.hud.toast(t('Companion rank {n}',{n:a.rank}));
+  this.refresh();
  }
- has(id){return this.scene.companion?.skills.some(k=>k.id===id);}
- power(){return 1+(this.scene.companion?.level-1||0)*.12;}
- modifiers(){
-  const s=this.scene,p=this.power(),near=s.companion&&Math.hypot(s.player.x-s.companion.sprite.x,s.player.y-s.companion.sprite.y)<220;
-  return {
-   damage:this.has('valor')?1+.12*p:1,haste:this.has('focus')?.13*p:0,
-   speed:this.has('wind')?1+Math.min(.4,.1*p):1,regen:this.has('renewal-song')?1.5*p:0,
-   armor:this.has('fortify')?3*p:0,
-   reduction:Math.min(.6,(this.has('sanctuary')?.12*p:0)+(this.has('guard')&&near?.18*p:0)+(this.effects.smoke>s.elapsed?.25:0)),
-  };
+ equip(skill){
+  const a=this.scene.companion;if(!a||!skill||a.skills.length>=ALLY_RULES.slots||a.skills.some(entry=>entry.id===skill.id))return false;
+  const rank=a.rank||1,baseCooldown=skill.cooldown||0,skillKind=skill.skillKind||skill.kind;
+  a.skills.push({...skill,kind:'ally',skillKind,level:rank,baseCooldown,cooldown:baseCooldown*allyCooldownMultiplier(rank),remaining:0});
+  this.effects={};this.refresh();return true;
  }
- preventFatal(damage){
-  const s=this.scene,a=s.companion;if(!a)return damage;
-  const p=this.power(),rescue=a.skills.find(k=>k.id==='rescue'),bastion=a.skills.find(k=>k.id==='bulwark');
-  if(rescue&&rescue.remaining<=0&&damage>=s.stats.hp){rescue.remaining=rescue.cooldown;s.stats.hp=Math.min(s.stats.maxHp,s.stats.hp+35*p);s.playEffect(4,s.player.x,s.player.y,150);return 0;}
-  if(bastion&&bastion.remaining<=0&&s.stats.hp<s.stats.maxHp*.4){bastion.remaining=bastion.cooldown;s.shieldEffect();return 0;}
-  return damage;
+ has(id){const alias=legacyPassiveAlias(id);return Boolean(this.scene.companion?.skills.some(skill=>skill.id===id||skill.legacyId===id||skill.id===alias));}
+ numberMultiplier(){return allyNumberMultiplier(this.scene.companion?.rank||1);}
+ cooldownMultiplier(){return allyCooldownMultiplier(this.scene.companion?.rank||1);}
+ effectActive(id){return (this.effects[id]||0)>this.scene.elapsed;}
+ modifiers(){return this.legacy.modifiers();}
+ preventFatal(damage){return this.legacy.preventFatal(damage);}
+ canCast(skill,target){return this.legacy.canCast(skill,target);}
+ cast(skill,target){return this.legacy.cast(skill,target);}
+ chooseSkill(done){
+  const s=this.scene,a=s.companion;if(!a||a.skills.length>=ALLY_RULES.slots){done?.();return;}
+  const cards=this.choices();if(!cards.length){done?.();return;}
+  s.hud.showChoice('Companion Pick',cards,card=>{this.equip(card);done?.();},'Choose one companion skill.');
  }
  update(dt){
   const s=this.scene,a=s.companion;if(!a)return;
-  const target=dangerousEnemy(s.enemies.getChildren(),s.player),p=this.power();
+  const target=dangerousEnemy(s.enemies.getChildren(),s.player),p=this.numberMultiplier();
   a.target=target;
   let x=s.player.x-s.lastMove.x*90,y=s.player.y-s.lastMove.y*90;
   if(a.id==='tank'&&target){const d=Math.hypot(target.x-s.player.x,target.y-s.player.y)||1;x=s.player.x+(target.x-s.player.x)/d*85;y=s.player.y+(target.y-s.player.y)/d*85;}
@@ -50,20 +54,19 @@ export class SupportSystem {
   if(d>900)a.sprite.setPosition(x,y);
   else if(d>10){const step=Math.min(d,s.stats.speed*(a.id==='assassin'?1.6:1.2)*dt);a.sprite.x+=dx/d*step;a.sprite.y+=dy/d*step;}
   a.sprite.setFlipX(dx<0);s.animateCharacter(a.sprite,`support-${a.id}`,d>10?'walk':'idle');
-  for(const k of a.skills)k.remaining=Math.max(0,k.remaining-dt);
+  for(const k of a.skills)if(k.skillKind!=='passive')k.remaining=Math.max(0,k.remaining-dt);
   a.shot-=dt;
   // The healer never attacks. Tank and Assassin have modest class basic attacks.
   if(a.id!=='saintess'&&target&&a.shot<=0&&Math.hypot(target.x-a.sprite.x,target.y-a.sprite.y)<160){
-   s.damageEnemy(target,(a.id==='assassin'?12:7)*p,0,0,a.sprite);s.playEffect(0,target.x,target.y,55);
-   s.animateCharacter(a.sprite,`support-${a.id}`,'attack',.28);a.shot=this.has('pursuit')?.65:1.2;
+   s.damageEnemy(target,(a.id==='assassin'?12:7)*p,0,0,a.sprite,{byAlly:true});s.playEffect(0,target.x,target.y,55);
+   s.animateCharacter(a.sprite,`support-${a.id}`,'attack',.28);
+   const pursuit=a.skills.find(skill=>skill.id==='relentless-pursuit');
+   const speed=pursuit?1+(pursuit.values?.[pursuit.level-1]||0)/100:1;
+   a.shot=1.2/speed;
   }
   if(s.pausedForChoice||s.ended)return;
-  if(this.has('intercept'))this.clearShots(a.sprite,70+10*p);
-  for(const k of a.skills){
-   if(!k.cooldown||k.remaining>0||['rescue','bulwark'].includes(k.id))continue;
-   if(this.cast(k,target,p)){k.remaining=k.cooldown;s.animateCharacter(a.sprite,`support-${a.id}`,'attack',.32);}
-   if(s.pausedForChoice||s.ended)break;
-  }
+  if(this.has('intercept')||this.has('bulwark-wall'))this.clearShots(a.sprite,70+10*p);
+  this.brain.update(dt);
   if(!s.pausedForChoice&&!s.ended)this.updateTraps(dt);
  }
  clearShots(origin,radius){const s=this.scene;for(const shot of [...s.enemyProjectiles.getChildren()])if(shot.active&&Math.hypot(shot.x-origin.x,shot.y-origin.y)<radius){s.playEffect(4,shot.x,shot.y,30);shot.destroy();}}
@@ -122,18 +125,9 @@ export class SupportSystem {
   updateDamageOverTime(this.scene,enemy,dt);
  }
  chooseClass(done){
-  const s=this.scene;s.hud.showChoice('Choose Your Support',Object.values(SUPPORTS).map(ally=>({...ally,kind:'ally'})),card=>{this.summon(card.id);this.chooseInitial(done);},'One support per run. Choose 3 skills; they activate automatically.');
+  const s=this.scene;
+  const cards=Object.values(SUPPORTS).map(ally=>({...ally,kind:'ally',signature:ally.signature,passives:ally.passives}));
+  s.hud.showChoice('Choose Your Companion',cards,card=>{this.summon(card.id,s.loadoutLevel||ALLY_RULES.join_level);done?.();},'Choose one companion to join your run.');
  }
- choices(){const a=this.scene.companion;return [...SUPPORTS[a.id].skills].filter(k=>!a.skills.some(o=>o.id===k.id)).sort(()=>Math.random()-.5).slice(0,3).map(k=>({...k,kind:'ally',meta:'New support skill'}));}
- chooseInitial(done){
-  const s=this.scene,a=s.companion;
-  if(a.skills.length>=3){done();return;}
-  s.hud.showChoice(t('Choose support skill {n} of 3',{n:a.skills.length+1}),this.choices(),card=>{this.equip(card);this.chooseInitial(done);},'Support skills level up automatically with your hero.');
- }
- offerChange(done,cards=this.choices()){
-  const s=this.scene,a=s.companion;
-  s.hud.showChoice('Support Skills',cards,card=>{
-   s.hud.showChoice('Choose a skill to replace',a.skills.map(skill=>({...skill,kind:'ally'})),(_,index)=>{this.equip(card,index);done();},'Support skills level up automatically with your hero.',{label:'Cancel',action:()=>this.offerChange(done,cards)});
-  },'Support skills level up automatically with your hero.',{label:'Keep current skills',action:done});
- }
+ choices(){const a=this.scene.companion;if(!a)return[];return ALLY_CATALOG[a.id].filter(skill=>!a.skills.some(owned=>owned.id===skill.id)).sort(()=>Math.random()-.5).slice(0,3).map(skill=>({...skill,kind:'ally',skillKind:skill.kind,meta:skill.kind==='passive'?'Passive companion skill':'New companion skill'}));}
 }
