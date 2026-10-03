@@ -914,7 +914,15 @@ export class GameScene extends Phaser.Scene {
     while (this.stats.xp >= this.stats.nextXp) {
       this.stats.xp -= this.stats.nextXp;
       this.stats.level += 1;
-      this.stats.nextXp = Math.round(18 + this.stats.level * 11 + Math.pow(this.stats.level, 1.25) * 2.5);
+      // XP-only pacing calibration; preserve the 18-XP first pick and milestone levels.
+      // Ixchel's current mana-limited kit earns XP more slowly (see PACING.md).
+      const baseXp = 18 + this.stats.level * 11 + Math.pow(this.stats.level, 1.25) * 2.5;
+      const earlyXp = 18 + 9 * 11 + Math.pow(9, 1.25) * 2.5;
+      const mage = this.heroData.id === 'ixchel';
+      const heroXp = mage
+        ? baseXp * 1.25
+        : baseXp * 2.5 - 15 - Math.max(0, baseXp - earlyXp) * .7;
+      this.stats.nextXp = Math.round(heroXp * (this.modeData.id === 'full' ? (mage ? 1.1 : 1.09) : 1));
       this.pendingLevelUps += 1;
     }
     if (this.pendingLevelUps > 0 && !this.pausedForChoice) this.showLevelChoice();

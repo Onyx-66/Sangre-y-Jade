@@ -1,0 +1,1824 @@
+{
+  "label": "pilot-full",
+  "createdAt": "2026-10-03T17:32:54.812Z",
+  "policy": "pacing-bot-v1",
+  "map": "overgrown",
+  "viewport": [
+    1280,
+    720
+  ],
+  "stepHz": 30,
+  "seeds": [
+    1701
+  ],
+  "seconds": null,
+  "meta": "fresh save; no shrine upgrades",
+  "settings": "auto attack/aim, high enemy density, muted audio",
+  "targets": {
+    "quick": {
+      "10": [
+        210,
+        270
+      ],
+      "20": [
+        480,
+        570
+      ]
+    },
+    "full": {
+      "10": [
+        240,
+        330
+      ],
+      "20": [
+        540,
+        720
+      ]
+    }
+  },
+  "runs": [
+    {
+      "hero": "balam",
+      "mode": "quick",
+      "seed": 1701,
+      "seconds": 600.0000000001116,
+      "level10": 124.83333333332881,
+      "level20": 396.0000000000994,
+      "endLevel": 24,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 150,
+      "kills": 845,
+      "damageTaken": 65.07466666666735,
+      "xpTotal": 4817,
+      "collected": 842,
+      "spawned": 955,
+      "frames": 18020,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 9.833333333333309,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 19.733333333333473,
+          "xpTotal": 64
+        },
+        {
+          "level": 4,
+          "seconds": 30.166666666667325,
+          "xpTotal": 128
+        },
+        {
+          "level": 5,
+          "seconds": 46.96666666666656,
+          "xpTotal": 203
+        },
+        {
+          "level": 6,
+          "seconds": 64.29999999999892,
+          "xpTotal": 298
+        },
+        {
+          "level": 7,
+          "seconds": 73.06666666666509,
+          "xpTotal": 408
+        },
+        {
+          "level": 8,
+          "seconds": 85.46666666666438,
+          "xpTotal": 526
+        },
+        {
+          "level": 9,
+          "seconds": 101.63333333333013,
+          "xpTotal": 665
+        },
+        {
+          "level": 10,
+          "seconds": 124.83333333332881,
+          "xpTotal": 820
+        },
+        {
+          "level": 11,
+          "seconds": 149.6333333333274,
+          "xpTotal": 995
+        },
+        {
+          "level": 12,
+          "seconds": 177.0666666666592,
+          "xpTotal": 1180
+        },
+        {
+          "level": 13,
+          "seconds": 200.33333333332453,
+          "xpTotal": 1387
+        },
+        {
+          "level": 14,
+          "seconds": 218.69999999999015,
+          "xpTotal": 1610
+        },
+        {
+          "level": 15,
+          "seconds": 239.23333333332232,
+          "xpTotal": 1850
+        },
+        {
+          "level": 16,
+          "seconds": 256.69999999998856,
+          "xpTotal": 2106
+        },
+        {
+          "level": 17,
+          "seconds": 277.63333333333856,
+          "xpTotal": 2383
+        },
+        {
+          "level": 18,
+          "seconds": 308.80000000003,
+          "xpTotal": 2671
+        },
+        {
+          "level": 19,
+          "seconds": 350.20000000006297,
+          "xpTotal": 2980
+        },
+        {
+          "level": 20,
+          "seconds": 396.0000000000994,
+          "xpTotal": 3314
+        },
+        {
+          "level": 21,
+          "seconds": 436.16666666679805,
+          "xpTotal": 3652
+        },
+        {
+          "level": 22,
+          "seconds": 496.833333333513,
+          "xpTotal": 4014
+        },
+        {
+          "level": 23,
+          "seconds": 570.1666666668054,
+          "xpTotal": 4390
+        },
+        {
+          "level": 24,
+          "seconds": 592.5333333334518,
+          "xpTotal": 4790
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 9.833333333333309,
+          "level": 2,
+          "title": "Level 2",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 19.733333333333473,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 30.166666666667325,
+          "level": 4,
+          "title": "Level 4",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 46.96666666666656,
+          "level": 5,
+          "title": "Level 5",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 46.96666666666656,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "saintess",
+          "kind": "ally"
+        },
+        {
+          "seconds": 64.29999999999892,
+          "level": 6,
+          "title": "Level 6",
+          "id": "war-drum",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 73.06666666666509,
+          "level": 7,
+          "title": "Level 7",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 85.46666666666438,
+          "level": 8,
+          "title": "Level 8",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 85.46666666666438,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "saving-grace",
+          "kind": "ally"
+        },
+        {
+          "seconds": 101.63333333333013,
+          "level": 9,
+          "title": "Level 9",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 124.83333333332881,
+          "level": 10,
+          "title": "Level 10",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 124.83333333332881,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 149.6333333333274,
+          "level": 11,
+          "title": "Level 11",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 177.0666666666592,
+          "level": 12,
+          "title": "Level 12",
+          "id": "ceiba-breaker",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 191.63333333332503,
+          "level": 12,
+          "title": "Boss Defeated",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 200.33333333332453,
+          "level": 13,
+          "title": "Level 13",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 218.69999999999015,
+          "level": 14,
+          "title": "Level 14",
+          "id": "bloodlust",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 218.69999999999015,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "jade-ward",
+          "kind": "ally"
+        },
+        {
+          "seconds": 239.23333333332232,
+          "level": 15,
+          "title": "Level 15",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 256.69999999998856,
+          "level": 16,
+          "title": "Level 16",
+          "id": "war-drum",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 277.63333333333856,
+          "level": 17,
+          "title": "Level 17",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 308.80000000003,
+          "level": 18,
+          "title": "Level 18",
+          "id": "bloodlust",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 350.20000000006297,
+          "level": 19,
+          "title": "Level 19",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 396.0000000000994,
+          "level": 20,
+          "title": "Level 20",
+          "id": "bloodlust",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 396.0000000000994,
+          "level": 20,
+          "title": "Fourth Active Slot Unlocked",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 436.16666666679805,
+          "level": 21,
+          "title": "Level 21",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 436.83333333346525,
+          "level": 21,
+          "title": "Boss Defeated",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 496.833333333513,
+          "level": 22,
+          "title": "Level 22",
+          "id": "war-drum",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 542.5666666668305,
+          "level": 22,
+          "title": "Boss Defeated",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 570.1666666668054,
+          "level": 23,
+          "title": "Level 23",
+          "id": "ceiba-breaker",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 592.5333333334518,
+          "level": 24,
+          "title": "Level 24",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 121,
+          "kills": 28,
+          "hp": 150,
+          "alive": 11,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 5,
+          "xpTotal": 280,
+          "kills": 64,
+          "hp": 150,
+          "alive": 14,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 8,
+          "xpTotal": 560,
+          "kills": 108,
+          "hp": 150,
+          "alive": 12,
+          "drops": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 9,
+          "xpTotal": 807,
+          "kills": 151,
+          "hp": 150,
+          "alive": 13,
+          "drops": 0
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 11,
+          "xpTotal": 995,
+          "kills": 187,
+          "hp": 150,
+          "alive": 24,
+          "drops": 0
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 12,
+          "xpTotal": 1229,
+          "kills": 229,
+          "hp": 150,
+          "alive": 42,
+          "drops": 7
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 13,
+          "xpTotal": 1466,
+          "kills": 272,
+          "hp": 150,
+          "alive": 55,
+          "drops": 0
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 15,
+          "xpTotal": 1908,
+          "kills": 349,
+          "hp": 150,
+          "alive": 54,
+          "drops": 0
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 16,
+          "xpTotal": 2255,
+          "kills": 409,
+          "hp": 150,
+          "alive": 66,
+          "drops": 0
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 17,
+          "xpTotal": 2594,
+          "kills": 466,
+          "hp": 150,
+          "alive": 72,
+          "drops": 0
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 18,
+          "xpTotal": 2824,
+          "kills": 507,
+          "hp": 150,
+          "alive": 76,
+          "drops": 0
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 19,
+          "xpTotal": 3028,
+          "kills": 541,
+          "hp": 150,
+          "alive": 78,
+          "drops": 2
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 19,
+          "xpTotal": 3289,
+          "kills": 581,
+          "hp": 150,
+          "alive": 83,
+          "drops": 0
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 20,
+          "xpTotal": 3501,
+          "kills": 617,
+          "hp": 150,
+          "alive": 86,
+          "drops": 1
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 21,
+          "xpTotal": 3725,
+          "kills": 654,
+          "hp": 150,
+          "alive": 92,
+          "drops": 0
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 21,
+          "xpTotal": 3916,
+          "kills": 685,
+          "hp": 150,
+          "alive": 97,
+          "drops": 0
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 22,
+          "xpTotal": 4049,
+          "kills": 708,
+          "hp": 150,
+          "alive": 102,
+          "drops": 0
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 22,
+          "xpTotal": 4153,
+          "kills": 728,
+          "hp": 150,
+          "alive": 106,
+          "drops": 1
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 22,
+          "xpTotal": 4342,
+          "kills": 784,
+          "hp": 150,
+          "alive": 94,
+          "drops": 25
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 24,
+          "xpTotal": 4817,
+          "kills": 845,
+          "hp": 150,
+          "alive": 114,
+          "drops": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "jaguar-roar",
+          "level": 6
+        },
+        {
+          "id": "war-drum",
+          "level": 3
+        },
+        {
+          "id": "ceiba-breaker",
+          "level": 2
+        },
+        {
+          "id": "nine-lives",
+          "level": 5
+        }
+      ],
+      "passives": [
+        {
+          "id": "feast-of-the-fallen",
+          "level": 5
+        },
+        {
+          "id": "bloodlust",
+          "level": 3
+        }
+      ],
+      "ally": "saintess",
+      "summary": null,
+      "errors": []
+    },
+    {
+      "hero": "ixchel",
+      "mode": "quick",
+      "seed": 1701,
+      "seconds": 600.0000000001116,
+      "level10": 204.69999999999095,
+      "level20": 544.2000000001624,
+      "endLevel": 21,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 105,
+      "kills": 770,
+      "damageTaken": 0,
+      "xpTotal": 3874,
+      "collected": 768,
+      "spawned": 883,
+      "frames": 18021,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 8.999999999999979,
+          "xpTotal": 18
+        },
+        {
+          "level": 3,
+          "seconds": 25.500000000000426,
+          "xpTotal": 64
+        },
+        {
+          "level": 4,
+          "seconds": 45.06666666666667,
+          "xpTotal": 128
+        },
+        {
+          "level": 5,
+          "seconds": 69.39999999999863,
+          "xpTotal": 202
+        },
+        {
+          "level": 6,
+          "seconds": 82.8333333333312,
+          "xpTotal": 294
+        },
+        {
+          "level": 7,
+          "seconds": 103.63333333333001,
+          "xpTotal": 405
+        },
+        {
+          "level": 8,
+          "seconds": 126.29999999999539,
+          "xpTotal": 525
+        },
+        {
+          "level": 9,
+          "seconds": 172.89999999999276,
+          "xpTotal": 663
+        },
+        {
+          "level": 10,
+          "seconds": 204.69999999999095,
+          "xpTotal": 819
+        },
+        {
+          "level": 11,
+          "seconds": 226.99999999998968,
+          "xpTotal": 997
+        },
+        {
+          "level": 12,
+          "seconds": 260.6666666666584,
+          "xpTotal": 1183
+        },
+        {
+          "level": 13,
+          "seconds": 283.03333333334285,
+          "xpTotal": 1388
+        },
+        {
+          "level": 14,
+          "seconds": 312.50000000003297,
+          "xpTotal": 1610
+        },
+        {
+          "level": 15,
+          "seconds": 360.300000000071,
+          "xpTotal": 1852
+        },
+        {
+          "level": 16,
+          "seconds": 404.86666666677314,
+          "xpTotal": 2110
+        },
+        {
+          "level": 17,
+          "seconds": 425.80000000012313,
+          "xpTotal": 2380
+        },
+        {
+          "level": 18,
+          "seconds": 476.3000000001633,
+          "xpTotal": 2672
+        },
+        {
+          "level": 19,
+          "seconds": 529.0333333335095,
+          "xpTotal": 2982
+        },
+        {
+          "level": 20,
+          "seconds": 544.2000000001624,
+          "xpTotal": 3308
+        },
+        {
+          "level": 21,
+          "seconds": 561.9666666668129,
+          "xpTotal": 3652
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 8.999999999999979,
+          "level": 2,
+          "title": "Level 2",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 25.500000000000426,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 45.06666666666667,
+          "level": 4,
+          "title": "Level 4",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 69.39999999999863,
+          "level": 5,
+          "title": "Level 5",
+          "id": "raincaller",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 69.39999999999863,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "saintess",
+          "kind": "ally"
+        },
+        {
+          "seconds": 82.8333333333312,
+          "level": 6,
+          "title": "Level 6",
+          "id": "jade-needles",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 103.63333333333001,
+          "level": 7,
+          "title": "Level 7",
+          "id": "raincaller",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 126.29999999999539,
+          "level": 8,
+          "title": "Level 8",
+          "id": "jade-needles",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 126.29999999999539,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "jade-ward",
+          "kind": "ally"
+        },
+        {
+          "seconds": 172.89999999999276,
+          "level": 9,
+          "title": "Level 9",
+          "id": "ixchels-mantle",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 182.1666666666589,
+          "level": 9,
+          "title": "Boss Defeated",
+          "id": "jade-needles",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 204.69999999999095,
+          "level": 10,
+          "title": "Level 10",
+          "id": "ixchels-mantle",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 226.99999999998968,
+          "level": 11,
+          "title": "Level 11",
+          "id": "jade-needles",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 260.6666666666584,
+          "level": 12,
+          "title": "Level 12",
+          "id": "jade-needles",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 283.03333333334285,
+          "level": 13,
+          "title": "Level 13",
+          "id": "jade-needles",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 312.50000000003297,
+          "level": 14,
+          "title": "Level 14",
+          "id": "ixchels-mantle",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 312.50000000003297,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "saving-grace",
+          "kind": "ally"
+        },
+        {
+          "seconds": 360.300000000071,
+          "level": 15,
+          "title": "Level 15",
+          "id": "raincaller",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 404.86666666677314,
+          "level": 16,
+          "title": "Level 16",
+          "id": "raincaller",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 425.80000000012313,
+          "level": 17,
+          "title": "Level 17",
+          "id": "ixchels-mantle",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 476.3000000001633,
+          "level": 18,
+          "title": "Level 18",
+          "id": "ixchels-mantle",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 529.0333333335095,
+          "level": 19,
+          "title": "Level 19",
+          "id": "ixchels-mantle",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 544.2000000001624,
+          "level": 20,
+          "title": "Level 20",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 544.2000000001624,
+          "level": 20,
+          "title": "Fourth Active Slot Unlocked",
+          "id": "raincaller",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 561.9666666668129,
+          "level": 21,
+          "title": "Level 21",
+          "id": "raincaller",
+          "kind": "active",
+          "choice": "upgrade-active"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 74,
+          "kills": 22,
+          "hp": 105,
+          "alive": 16,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 4,
+          "xpTotal": 173,
+          "kills": 43,
+          "hp": 105,
+          "alive": 24,
+          "drops": 1
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 6,
+          "xpTotal": 340,
+          "kills": 83,
+          "hp": 105,
+          "alive": 15,
+          "drops": 2
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 7,
+          "xpTotal": 473,
+          "kills": 117,
+          "hp": 105,
+          "alive": 23,
+          "drops": 5
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 8,
+          "xpTotal": 601,
+          "kills": 140,
+          "hp": 105,
+          "alive": 41,
+          "drops": 0
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 9,
+          "xpTotal": 712,
+          "kills": 165,
+          "hp": 105,
+          "alive": 46,
+          "drops": 0
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 10,
+          "xpTotal": 853,
+          "kills": 196,
+          "hp": 105,
+          "alive": 51,
+          "drops": 4
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 11,
+          "xpTotal": 1063,
+          "kills": 231,
+          "hp": 105,
+          "alive": 56,
+          "drops": 2
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 12,
+          "xpTotal": 1282,
+          "kills": 273,
+          "hp": 105,
+          "alive": 62,
+          "drops": 5
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 13,
+          "xpTotal": 1573,
+          "kills": 332,
+          "hp": 105,
+          "alive": 70,
+          "drops": 2
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 14,
+          "xpTotal": 1703,
+          "kills": 358,
+          "hp": 105,
+          "alive": 74,
+          "drops": 2
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 14,
+          "xpTotal": 1825,
+          "kills": 387,
+          "hp": 105,
+          "alive": 78,
+          "drops": 7
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 15,
+          "xpTotal": 2032,
+          "kills": 443,
+          "hp": 105,
+          "alive": 85,
+          "drops": 19
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 16,
+          "xpTotal": 2365,
+          "kills": 482,
+          "hp": 105,
+          "alive": 88,
+          "drops": 2
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 17,
+          "xpTotal": 2472,
+          "kills": 505,
+          "hp": 105,
+          "alive": 92,
+          "drops": 3
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 18,
+          "xpTotal": 2682,
+          "kills": 545,
+          "hp": 105,
+          "alive": 96,
+          "drops": 3
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 18,
+          "xpTotal": 2878,
+          "kills": 647,
+          "hp": 105,
+          "alive": 102,
+          "drops": 74
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 19,
+          "xpTotal": 3161,
+          "kills": 671,
+          "hp": 105,
+          "alive": 106,
+          "drops": 43
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 21,
+          "xpTotal": 3736,
+          "kills": 741,
+          "hp": 105,
+          "alive": 108,
+          "drops": 6
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 21,
+          "xpTotal": 3874,
+          "kills": 770,
+          "hp": 105,
+          "alive": 115,
+          "drops": 5
+        }
+      ],
+      "skills": [
+        {
+          "id": "raincaller",
+          "level": 6
+        },
+        {
+          "id": "jade-needles",
+          "level": 6
+        },
+        {
+          "id": "ixchels-mantle",
+          "level": 6
+        }
+      ],
+      "passives": [],
+      "ally": "saintess",
+      "summary": null,
+      "errors": []
+    },
+    {
+      "hero": "kukul",
+      "mode": "quick",
+      "seed": 1701,
+      "seconds": 600.0000000001116,
+      "level10": 141.0333333333279,
+      "level20": 329.266666666713,
+      "endLevel": 29,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 118,
+      "kills": 1609,
+      "damageTaken": 0,
+      "xpTotal": 7486,
+      "collected": 1442,
+      "spawned": 1694,
+      "frames": 18024,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 7.533333333333316,
+          "xpTotal": 19
+        },
+        {
+          "level": 3,
+          "seconds": 21.200000000000212,
+          "xpTotal": 66
+        },
+        {
+          "level": 4,
+          "seconds": 38.233333333333725,
+          "xpTotal": 127
+        },
+        {
+          "level": 5,
+          "seconds": 49.26666666666643,
+          "xpTotal": 201
+        },
+        {
+          "level": 6,
+          "seconds": 66.56666666666545,
+          "xpTotal": 295
+        },
+        {
+          "level": 7,
+          "seconds": 81.46666666666461,
+          "xpTotal": 406
+        },
+        {
+          "level": 8,
+          "seconds": 96.86666666666373,
+          "xpTotal": 525
+        },
+        {
+          "level": 9,
+          "seconds": 116.63333333332928,
+          "xpTotal": 663
+        },
+        {
+          "level": 10,
+          "seconds": 141.0333333333279,
+          "xpTotal": 823
+        },
+        {
+          "level": 11,
+          "seconds": 161.86666666666005,
+          "xpTotal": 994
+        },
+        {
+          "level": 12,
+          "seconds": 186.46666666665865,
+          "xpTotal": 1183
+        },
+        {
+          "level": 13,
+          "seconds": 201.96666666665777,
+          "xpTotal": 1392
+        },
+        {
+          "level": 14,
+          "seconds": 216.99999999999025,
+          "xpTotal": 1612
+        },
+        {
+          "level": 15,
+          "seconds": 227.99999999998963,
+          "xpTotal": 1851
+        },
+        {
+          "level": 16,
+          "seconds": 242.33333333332214,
+          "xpTotal": 2108
+        },
+        {
+          "level": 17,
+          "seconds": 264.69999999999493,
+          "xpTotal": 2380
+        },
+        {
+          "level": 18,
+          "seconds": 282.63333333334253,
+          "xpTotal": 2672
+        },
+        {
+          "level": 19,
+          "seconds": 305.70000000002756,
+          "xpTotal": 2980
+        },
+        {
+          "level": 20,
+          "seconds": 329.266666666713,
+          "xpTotal": 3306
+        },
+        {
+          "level": 21,
+          "seconds": 353.9000000000659,
+          "xpTotal": 3653
+        },
+        {
+          "level": 22,
+          "seconds": 374.96666666674935,
+          "xpTotal": 4016
+        },
+        {
+          "level": 23,
+          "seconds": 399.7333333334357,
+          "xpTotal": 4392
+        },
+        {
+          "level": 24,
+          "seconds": 430.0000000001265,
+          "xpTotal": 4789
+        },
+        {
+          "level": 25,
+          "seconds": 455.43333333348005,
+          "xpTotal": 5205
+        },
+        {
+          "level": 26,
+          "seconds": 485.8000000001709,
+          "xpTotal": 5640
+        },
+        {
+          "level": 27,
+          "seconds": 515.7333333335216,
+          "xpTotal": 6087
+        },
+        {
+          "level": 28,
+          "seconds": 550.6666666668232,
+          "xpTotal": 6558
+        },
+        {
+          "level": 29,
+          "seconds": 577.0666666667992,
+          "xpTotal": 7048
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 7.533333333333316,
+          "level": 2,
+          "title": "Level 2",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 21.200000000000212,
+          "level": 3,
+          "title": "Level 3",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 38.233333333333725,
+          "level": 4,
+          "title": "Level 4",
+          "id": "atlatl-volley",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 49.26666666666643,
+          "level": 5,
+          "title": "Level 5",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 49.26666666666643,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "saintess",
+          "kind": "ally"
+        },
+        {
+          "seconds": 66.56666666666545,
+          "level": 6,
+          "title": "Level 6",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 81.46666666666461,
+          "level": 7,
+          "title": "Level 7",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 96.86666666666373,
+          "level": 8,
+          "title": "Level 8",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 96.86666666666373,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "jade-ward",
+          "kind": "ally"
+        },
+        {
+          "seconds": 116.63333333332928,
+          "level": 9,
+          "title": "Level 9",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 141.0333333333279,
+          "level": 10,
+          "title": "Level 10",
+          "id": "atlatl-volley",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 141.0333333333279,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "jungle-instinct",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 161.86666666666005,
+          "level": 11,
+          "title": "Level 11",
+          "id": "jungle-instinct",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 186.46666666665865,
+          "level": 12,
+          "title": "Level 12",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 189.53333333332515,
+          "level": 12,
+          "title": "Boss Defeated",
+          "id": "atlatl-volley",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 201.96666666665777,
+          "level": 13,
+          "title": "Level 13",
+          "id": "storm-nest",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 216.99999999999025,
+          "level": 14,
+          "title": "Level 14",
+          "id": "atlatl-volley",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 216.99999999999025,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "saving-grace",
+          "kind": "ally"
+        },
+        {
+          "seconds": 227.99999999998963,
+          "level": 15,
+          "title": "Level 15",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 242.33333333332214,
+          "level": 16,
+          "title": "Level 16",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 264.69999999999493,
+          "level": 17,
+          "title": "Level 17",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 282.63333333334253,
+          "level": 18,
+          "title": "Level 18",
+          "id": "atlatl-volley",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 305.70000000002756,
+          "level": 19,
+          "title": "Level 19",
+          "id": "atlatl-volley",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 329.266666666713,
+          "level": 20,
+          "title": "Level 20",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 329.266666666713,
+          "level": 20,
+          "title": "Fourth Active Slot Unlocked",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 353.9000000000659,
+          "level": 21,
+          "title": "Level 21",
+          "id": "jungle-instinct",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 374.96666666674935,
+          "level": 22,
+          "title": "Level 22",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 399.7333333334357,
+          "level": 23,
+          "title": "Level 23",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 430.0000000001265,
+          "level": 24,
+          "title": "Level 24",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 438.16666666679964,
+          "level": 24,
+          "title": "Boss Defeated",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 455.43333333348005,
+          "level": 25,
+          "title": "Level 25",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 485.8000000001709,
+          "level": 26,
+          "title": "Level 26",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 515.7333333335216,
+          "level": 27,
+          "title": "Level 27",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 550.6666666668232,
+          "level": 28,
+          "title": "Level 28",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 577.0666666667992,
+          "level": 29,
+          "title": "Level 29",
+          "id": "jungle-instinct",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 98,
+          "kills": 28,
+          "hp": 118,
+          "alive": 10,
+          "drops": 1
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 5,
+          "xpTotal": 253,
+          "kills": 65,
+          "hp": 118,
+          "alive": 13,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 7,
+          "xpTotal": 480,
+          "kills": 109,
+          "hp": 118,
+          "alive": 11,
+          "drops": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 9,
+          "xpTotal": 688,
+          "kills": 151,
+          "hp": 118,
+          "alive": 12,
+          "drops": 2
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 10,
+          "xpTotal": 886,
+          "kills": 191,
+          "hp": 118,
+          "alive": 18,
+          "drops": 3
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 11,
+          "xpTotal": 1119,
+          "kills": 241,
+          "hp": 118,
+          "alive": 46,
+          "drops": 7
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 13,
+          "xpTotal": 1535,
+          "kills": 335,
+          "hp": 118,
+          "alive": 42,
+          "drops": 21
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 15,
+          "xpTotal": 2051,
+          "kills": 419,
+          "hp": 118,
+          "alive": 52,
+          "drops": 10
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 17,
+          "xpTotal": 2442,
+          "kills": 505,
+          "hp": 118,
+          "alive": 62,
+          "drops": 20
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 18,
+          "xpTotal": 2891,
+          "kills": 593,
+          "hp": 118,
+          "alive": 65,
+          "drops": 16
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 20,
+          "xpTotal": 3306,
+          "kills": 687,
+          "hp": 118,
+          "alive": 64,
+          "drops": 27
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 21,
+          "xpTotal": 3758,
+          "kills": 786,
+          "hp": 118,
+          "alive": 79,
+          "drops": 43
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 22,
+          "xpTotal": 4257,
+          "kills": 886,
+          "hp": 118,
+          "alive": 81,
+          "drops": 26
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 23,
+          "xpTotal": 4655,
+          "kills": 981,
+          "hp": 118,
+          "alive": 85,
+          "drops": 39
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 24,
+          "xpTotal": 5073,
+          "kills": 1076,
+          "hp": 118,
+          "alive": 93,
+          "drops": 44
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 25,
+          "xpTotal": 5549,
+          "kills": 1160,
+          "hp": 118,
+          "alive": 97,
+          "drops": 34
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 26,
+          "xpTotal": 6026,
+          "kills": 1249,
+          "hp": 118,
+          "alive": 100,
+          "drops": 34
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 27,
+          "xpTotal": 6387,
+          "kills": 1343,
+          "hp": 118,
+          "alive": 106,
+          "drops": 25
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 28,
+          "xpTotal": 6888,
+          "kills": 1438,
+          "hp": 118,
+          "alive": 111,
+          "drops": 17
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 29,
+          "xpTotal": 7486,
+          "kills": 1609,
+          "hp": 118,
+          "alive": 88,
+          "drops": 73
+        }
+      ],
+      "skills": [
+        {
+          "id": "plume-guard",
+          "level": 6
+        },
+        {
+          "id": "atlatl-volley",
+          "level": 6
+        },
+        {
+          "id": "storm-nest",
+          "level": 1
+        },
+        {
+          "id": "featherstorm",
+          "level": 6
+        }
+      ],
+      "passives": [
+        {
+          "id": "venomous-darts",
+          "level": 5
+        },
+        {
+          "id": "jungle-instinct",
+          "level": 4
+        }
+      ],
+      "ally": "saintess",
+      "summary": null,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "wallSeconds": 29.4293363
+}

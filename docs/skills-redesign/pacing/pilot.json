@@ -1,0 +1,116 @@
+{
+  "label": "pilot",
+  "createdAt": "2026-10-03T17:32:36.364Z",
+  "policy": "pacing-bot-v1",
+  "map": "overgrown",
+  "viewport": [
+    1280,
+    720
+  ],
+  "stepHz": 30,
+  "seeds": [
+    1701
+  ],
+  "seconds": 30,
+  "meta": "fresh save; no shrine upgrades",
+  "settings": "auto attack/aim, high enemy density, muted audio",
+  "targets": {
+    "quick": {
+      "10": [
+        210,
+        270
+      ],
+      "20": [
+        480,
+        570
+      ]
+    },
+    "full": {
+      "10": [
+        240,
+        330
+      ],
+      "20": [
+        540,
+        720
+      ]
+    }
+  },
+  "runs": [
+    {
+      "hero": "balam",
+      "mode": "quick",
+      "seed": 1701,
+      "seconds": 30.00000000000065,
+      "level10": null,
+      "level20": null,
+      "endLevel": 3,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 150,
+      "kills": 28,
+      "damageTaken": 0,
+      "xpTotal": 121,
+      "collected": 28,
+      "spawned": 39,
+      "frames": 902,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 9.833333333333309,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 19.733333333333473,
+          "xpTotal": 64
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 9.833333333333309,
+          "level": 2,
+          "title": "Level 2",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 19.733333333333473,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 121,
+          "kills": 28,
+          "hp": 150,
+          "alive": 11,
+          "drops": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "jaguar-roar",
+          "level": 2
+        }
+      ],
+      "passives": [],
+      "summary": null,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "wallSeconds": 7.8400823
+}
