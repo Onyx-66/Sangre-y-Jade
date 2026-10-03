@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
 import { ALLY_CATALOG } from '../src/data/allyCatalog.js';
 import { activate, harness } from '../tests/helpers/ally-skills-fixture.js';
 
@@ -6,6 +7,7 @@ const SIM_SECONDS = 600;
 const DT = 0.2;
 const PHASE_SECONDS = SIM_SECONDS / 6;
 const reports = [];
+const records = [];
 
 function equipAuditPassives({ scene, support }, role) {
   const passives = ALLY_CATALOG[role].filter((skill) => skill.kind === 'passive');
@@ -67,9 +69,12 @@ for (const role of Object.keys(ALLY_CATALOG)) {
   const castReport = active.map((skill) => `${skill.id}=${initial.scene.allyCasts[skill.id] || 0}`).join(', ');
   const passiveReport = passives.map((skill) => `${skill.id}=${passiveTriggers[skill.id] || 0}`).join(', ');
   reports.push(`${role} (600s): casts [${castReport}] | passive triggers [${passiveReport}]`);
+  records.push({role,seconds:SIM_SECONDS,casts:{...initial.scene.allyCasts},passiveTriggers});
   assert.ok(Math.abs(initial.scene.elapsed - start - SIM_SECONDS) < 1e-6, `${role} simulated duration`);
 }
 
 console.log(`Ally skill dead-skill report (${SIM_SECONDS} simulated seconds per role; six 100-second active rotations):`);
 for (const report of reports) console.log(report);
 console.log('Dead skills: none (all 18 actives cast; all 6 passives were observed).');
+const reportFile=process.argv.find(arg=>arg.startsWith('--report='))?.slice(9);
+if(reportFile)await fs.writeFile(reportFile,JSON.stringify({fixture:'Controlled 600-second mock-scene AI audit; six 100-second active rotations, not legal in-run replacement or natural survival coverage.',records},null,2)+'\n');

@@ -1,0 +1,2701 @@
+{
+  "label": "companion-tank",
+  "createdAt": "2026-10-03T18:12:07.692Z",
+  "policy": "pacing-bot-v1",
+  "map": "overgrown",
+  "viewport": [
+    1280,
+    720
+  ],
+  "stepHz": 30,
+  "seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "seconds": null,
+  "meta": "fresh save; no shrine upgrades",
+  "settings": "auto attack/aim, high enemy density, muted audio",
+  "targets": {
+    "quick": {
+      "10": [
+        210,
+        270
+      ],
+      "20": [
+        480,
+        570
+      ]
+    },
+    "full": {
+      "10": [
+        240,
+        330
+      ],
+      "20": [
+        540,
+        720
+      ]
+    }
+  },
+  "runs": [
+    {
+      "hero": "balam",
+      "mode": "quick",
+      "seed": 1701,
+      "seconds": 600.0000000001116,
+      "level10": 213.49999999999045,
+      "level20": 436.3666666667982,
+      "endLevel": 28,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 150,
+      "kills": 2342,
+      "damageTaken": 802.7077555555867,
+      "xpTotal": 14075,
+      "collected": 2337,
+      "spawned": 2441,
+      "frames": 18023,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 9.833333333333309,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 32.700000000000706,
+          "xpTotal": 120
+        },
+        {
+          "level": 4,
+          "seconds": 58.133333333332594,
+          "xpTotal": 259
+        },
+        {
+          "level": 5,
+          "seconds": 83.06666666666452,
+          "xpTotal": 430
+        },
+        {
+          "level": 6,
+          "seconds": 106.96666666666316,
+          "xpTotal": 647
+        },
+        {
+          "level": 7,
+          "seconds": 142.86666666666113,
+          "xpTotal": 899
+        },
+        {
+          "level": 8,
+          "seconds": 172.59999999999278,
+          "xpTotal": 1192
+        },
+        {
+          "level": 9,
+          "seconds": 190.56666666665842,
+          "xpTotal": 1528
+        },
+        {
+          "level": 10,
+          "seconds": 213.49999999999045,
+          "xpTotal": 1901
+        },
+        {
+          "level": 11,
+          "seconds": 232.49999999998937,
+          "xpTotal": 2307
+        },
+        {
+          "level": 12,
+          "seconds": 255.06666666665475,
+          "xpTotal": 2743
+        },
+        {
+          "level": 13,
+          "seconds": 277.80000000000535,
+          "xpTotal": 3207
+        },
+        {
+          "level": 14,
+          "seconds": 304.46666666669324,
+          "xpTotal": 3707
+        },
+        {
+          "level": 15,
+          "seconds": 327.3333333333781,
+          "xpTotal": 4232
+        },
+        {
+          "level": 16,
+          "seconds": 358.86666666673653,
+          "xpTotal": 4783
+        },
+        {
+          "level": 17,
+          "seconds": 387.3666666667592,
+          "xpTotal": 5372
+        },
+        {
+          "level": 18,
+          "seconds": 402.4333333334379,
+          "xpTotal": 5991
+        },
+        {
+          "level": 19,
+          "seconds": 420.23333333345204,
+          "xpTotal": 6642
+        },
+        {
+          "level": 20,
+          "seconds": 436.3666666667982,
+          "xpTotal": 7322
+        },
+        {
+          "level": 21,
+          "seconds": 462.56666666681906,
+          "xpTotal": 8034
+        },
+        {
+          "level": 22,
+          "seconds": 485.2000000001704,
+          "xpTotal": 8782
+        },
+        {
+          "level": 23,
+          "seconds": 500.1333333335156,
+          "xpTotal": 9557
+        },
+        {
+          "level": 24,
+          "seconds": 529.200000000176,
+          "xpTotal": 10365
+        },
+        {
+          "level": 25,
+          "seconds": 547.5000000001594,
+          "xpTotal": 11210
+        },
+        {
+          "level": 26,
+          "seconds": 562.966666666812,
+          "xpTotal": 12085
+        },
+        {
+          "level": 27,
+          "seconds": 579.1666666667973,
+          "xpTotal": 12987
+        },
+        {
+          "level": 28,
+          "seconds": 596.9000000001145,
+          "xpTotal": 13929
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 9.833333333333309,
+          "level": 2,
+          "title": "Level 2",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 32.700000000000706,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 58.133333333332594,
+          "level": 4,
+          "title": "Level 4",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 83.06666666666452,
+          "level": 5,
+          "title": "Level 5",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 83.06666666666452,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "tank",
+          "kind": "ally"
+        },
+        {
+          "seconds": 106.96666666666316,
+          "level": 6,
+          "title": "Level 6",
+          "id": "pyramid-rush",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 142.86666666666113,
+          "level": 7,
+          "title": "Level 7",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 172.59999999999278,
+          "level": 8,
+          "title": "Level 8",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 172.59999999999278,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "guardian-link",
+          "kind": "ally"
+        },
+        {
+          "seconds": 174.633333333326,
+          "level": 8,
+          "title": "Boss Defeated",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 190.56666666665842,
+          "level": 9,
+          "title": "Level 9",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 213.49999999999045,
+          "level": 10,
+          "title": "Level 10",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 213.49999999999045,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 232.49999999998937,
+          "level": 11,
+          "title": "Level 11",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 255.06666666665475,
+          "level": 12,
+          "title": "Level 12",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 277.80000000000535,
+          "level": 13,
+          "title": "Level 13",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 304.46666666669324,
+          "level": 14,
+          "title": "Level 14",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 304.46666666669324,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "clay-bomb",
+          "kind": "ally"
+        },
+        {
+          "seconds": 327.3333333333781,
+          "level": 15,
+          "title": "Level 15",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 358.86666666673653,
+          "level": 16,
+          "title": "Level 16",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 364.76666666674123,
+          "level": 16,
+          "title": "Boss Defeated",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 387.3666666667592,
+          "level": 17,
+          "title": "Level 17",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 402.4333333334379,
+          "level": 18,
+          "title": "Level 18",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 420.23333333345204,
+          "level": 19,
+          "title": "Level 19",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 436.3666666667982,
+          "level": 20,
+          "title": "Level 20",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 436.3666666667982,
+          "level": 20,
+          "title": "Fourth Active Slot Unlocked",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 462.56666666681906,
+          "level": 21,
+          "title": "Level 21",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 485.2000000001704,
+          "level": 22,
+          "title": "Level 22",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 500.1333333335156,
+          "level": 23,
+          "title": "Level 23",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 515.3666666668553,
+          "level": 23,
+          "title": "Boss Defeated",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 529.200000000176,
+          "level": 24,
+          "title": "Level 24",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 547.5000000001594,
+          "level": 25,
+          "title": "Level 25",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 562.966666666812,
+          "level": 26,
+          "title": "Level 26",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 579.1666666667973,
+          "level": 27,
+          "title": "Level 27",
+          "id": "nine-lives",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 596.9000000001145,
+          "level": 28,
+          "title": "Level 28",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 2,
+          "xpTotal": 108,
+          "kills": 27,
+          "hp": 150,
+          "alive": 11,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 4,
+          "xpTotal": 292,
+          "kills": 67,
+          "hp": 150,
+          "alive": 10,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 5,
+          "xpTotal": 510,
+          "kills": 108,
+          "hp": 150,
+          "alive": 10,
+          "drops": 0
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 6,
+          "xpTotal": 740,
+          "kills": 150,
+          "hp": 150,
+          "alive": 10,
+          "drops": 0
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 7,
+          "xpTotal": 978,
+          "kills": 192,
+          "hp": 150,
+          "alive": 13,
+          "drops": 0
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 8,
+          "xpTotal": 1383,
+          "kills": 260,
+          "hp": 150,
+          "alive": 23,
+          "drops": 0
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 9,
+          "xpTotal": 1879,
+          "kills": 348,
+          "hp": 141.63488000000024,
+          "alive": 31,
+          "drops": 0
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 11,
+          "xpTotal": 2451,
+          "kills": 441,
+          "hp": 140.9529058333334,
+          "alive": 36,
+          "drops": 2
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 12,
+          "xpTotal": 3018,
+          "kills": 541,
+          "hp": 145.22500000000002,
+          "alive": 42,
+          "drops": 7
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 13,
+          "xpTotal": 3653,
+          "kills": 639,
+          "hp": 150,
+          "alive": 55,
+          "drops": 3
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 15,
+          "xpTotal": 4297,
+          "kills": 755,
+          "hp": 145.6530477777776,
+          "alive": 74,
+          "drops": 6
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 16,
+          "xpTotal": 4816,
+          "kills": 844,
+          "hp": 143.1752355555553,
+          "alive": 69,
+          "drops": 0
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 17,
+          "xpTotal": 5457,
+          "kills": 953,
+          "hp": 150,
+          "alive": 80,
+          "drops": 0
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 18,
+          "xpTotal": 6619,
+          "kills": 1128,
+          "hp": 150,
+          "alive": 73,
+          "drops": 6
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 20,
+          "xpTotal": 7746,
+          "kills": 1306,
+          "hp": 144.41577777777687,
+          "alive": 94,
+          "drops": 5
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 21,
+          "xpTotal": 8461,
+          "kills": 1434,
+          "hp": 144.38,
+          "alive": 94,
+          "drops": 5
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 23,
+          "xpTotal": 9875,
+          "kills": 1657,
+          "hp": 150,
+          "alive": 83,
+          "drops": 6
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 24,
+          "xpTotal": 10941,
+          "kills": 1834,
+          "hp": 150,
+          "alive": 98,
+          "drops": 5
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 26,
+          "xpTotal": 12390,
+          "kills": 2060,
+          "hp": 150,
+          "alive": 108,
+          "drops": 7
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 28,
+          "xpTotal": 14075,
+          "kills": 2342,
+          "hp": 150,
+          "alive": 103,
+          "drops": 4
+        }
+      ],
+      "skills": [
+        {
+          "id": "jaguar-roar",
+          "level": 6
+        },
+        {
+          "id": "sun-claw",
+          "level": 6
+        },
+        {
+          "id": "pyramid-rush",
+          "level": 1
+        },
+        {
+          "id": "nine-lives",
+          "level": 6
+        }
+      ],
+      "passives": [
+        {
+          "id": "feast-of-the-fallen",
+          "level": 5
+        },
+        {
+          "id": "earthshaker",
+          "level": 5
+        }
+      ],
+      "ally": "tank",
+      "summary": null,
+      "audit": {
+        "damage": {
+          "basic-attack": 21721.140000000327,
+          "jaguar-roar": 85966.6500000001,
+          "sun-claw": 158170.36375000095,
+          "ally-unattributed": 14824.652500000044,
+          "pyramid-rush": 36471.32999999975,
+          "unattributed": 5090.4,
+          "earthshaker": 5655.446999999994
+        },
+        "casts": {
+          "jaguar-roar": 75,
+          "sun-claw": 65,
+          "pyramid-rush": 66
+        },
+        "bosses": [
+          {
+            "id": "jaguar-chief",
+            "spawn": 150.0333333333274,
+            "kill": 174.633333333326,
+            "seconds": 24.5999999999986
+          },
+          {
+            "id": "zipacna",
+            "spawn": 300.000000000023,
+            "kill": 364.76666666674123,
+            "seconds": 64.76666666671821
+          },
+          {
+            "id": "high-priest",
+            "spawn": 450.0000000001424,
+            "kill": 515.3666666668553,
+            "seconds": 65.36666666671289
+          },
+          {
+            "id": "ahpuch",
+            "spawn": 600.0000000001116,
+            "kill": null
+          }
+        ],
+        "slots": [
+          {
+            "level": 1,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 2,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 3,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 4,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 5,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 0,
+            "allySkills": 1
+          },
+          {
+            "level": 6,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 3,
+            "ownedPassive": 0,
+            "allySkills": 1
+          },
+          {
+            "level": 7,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 3,
+            "ownedPassive": 0,
+            "allySkills": 1
+          },
+          {
+            "level": 8,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 3,
+            "ownedPassive": 0,
+            "allySkills": 2
+          },
+          {
+            "level": 9,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 3,
+            "ownedPassive": 0,
+            "allySkills": 2
+          },
+          {
+            "level": 10,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 11,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 12,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 13,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 14,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 15,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 16,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 17,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 18,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 19,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 20,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 21,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 22,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 23,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 24,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 25,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 26,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 27,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 28,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          }
+        ],
+        "milestones": [
+          10,
+          20
+        ],
+        "allyEvents": [
+          {
+            "kind": "recruit",
+            "level": 5
+          },
+          {
+            "kind": "pick",
+            "level": 8
+          },
+          {
+            "kind": "pick",
+            "level": 14
+          }
+        ],
+        "peakFx": 24,
+        "allyCasts": {
+          "war-cry": 46,
+          "clay-bomb": 40
+        }
+      },
+      "warnings": [
+        "[skills] Placeholder: fx/war-cry/main.png",
+        "[skills] Placeholder: fx/clay-bomb/main.png"
+      ],
+      "httpErrors": [],
+      "errors": []
+    },
+    {
+      "hero": "balam",
+      "mode": "quick",
+      "seed": 1702,
+      "seconds": 600.0000000001116,
+      "level10": 209.633333333324,
+      "level20": 457.26666666681484,
+      "endLevel": 26,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 150,
+      "kills": 2143,
+      "damageTaken": 116.47905333333458,
+      "xpTotal": 12814,
+      "collected": 2139,
+      "spawned": 2252,
+      "frames": 18015,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 11.799999999999969,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 31.60000000000073,
+          "xpTotal": 120
+        },
+        {
+          "level": 4,
+          "seconds": 52.96666666666622,
+          "xpTotal": 257
+        },
+        {
+          "level": 5,
+          "seconds": 79.59999999999805,
+          "xpTotal": 431
+        },
+        {
+          "level": 6,
+          "seconds": 105.83333333332989,
+          "xpTotal": 646
+        },
+        {
+          "level": 7,
+          "seconds": 136.7999999999948,
+          "xpTotal": 898
+        },
+        {
+          "level": 8,
+          "seconds": 165.76666666665983,
+          "xpTotal": 1193
+        },
+        {
+          "level": 9,
+          "seconds": 184.8333333333254,
+          "xpTotal": 1527
+        },
+        {
+          "level": 10,
+          "seconds": 209.633333333324,
+          "xpTotal": 1906
+        },
+        {
+          "level": 11,
+          "seconds": 233.366666666656,
+          "xpTotal": 2307
+        },
+        {
+          "level": 12,
+          "seconds": 260.59999999999167,
+          "xpTotal": 2743
+        },
+        {
+          "level": 13,
+          "seconds": 290.50000000001546,
+          "xpTotal": 3214
+        },
+        {
+          "level": 14,
+          "seconds": 304.3333333333598,
+          "xpTotal": 3704
+        },
+        {
+          "level": 15,
+          "seconds": 337.700000000053,
+          "xpTotal": 4231
+        },
+        {
+          "level": 16,
+          "seconds": 366.73333333340946,
+          "xpTotal": 4786
+        },
+        {
+          "level": 17,
+          "seconds": 406.1333333334408,
+          "xpTotal": 5376
+        },
+        {
+          "level": 18,
+          "seconds": 414.23333333344726,
+          "xpTotal": 5990
+        },
+        {
+          "level": 19,
+          "seconds": 437.2666666667989,
+          "xpTotal": 6645
+        },
+        {
+          "level": 20,
+          "seconds": 457.26666666681484,
+          "xpTotal": 7322
+        },
+        {
+          "level": 21,
+          "seconds": 477.6666666668311,
+          "xpTotal": 8036
+        },
+        {
+          "level": 22,
+          "seconds": 499.03333333351475,
+          "xpTotal": 8781
+        },
+        {
+          "level": 23,
+          "seconds": 520.7000000001838,
+          "xpTotal": 9557
+        },
+        {
+          "level": 24,
+          "seconds": 548.8000000001582,
+          "xpTotal": 10369
+        },
+        {
+          "level": 25,
+          "seconds": 572.7666666668031,
+          "xpTotal": 11211
+        },
+        {
+          "level": 26,
+          "seconds": 586.2666666667908,
+          "xpTotal": 12081
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 11.799999999999969,
+          "level": 2,
+          "title": "Level 2",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 31.60000000000073,
+          "level": 3,
+          "title": "Level 3",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 52.96666666666622,
+          "level": 4,
+          "title": "Level 4",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 79.59999999999805,
+          "level": 5,
+          "title": "Level 5",
+          "id": "heart-of-balam",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 79.59999999999805,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "tank",
+          "kind": "ally"
+        },
+        {
+          "seconds": 105.83333333332989,
+          "level": 6,
+          "title": "Level 6",
+          "id": "heart-of-balam",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 136.7999999999948,
+          "level": 7,
+          "title": "Level 7",
+          "id": "heart-of-balam",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 165.76666666665983,
+          "level": 8,
+          "title": "Level 8",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 165.76666666665983,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "clay-bomb",
+          "kind": "ally"
+        },
+        {
+          "seconds": 173.83333333332604,
+          "level": 8,
+          "title": "Boss Defeated",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 184.8333333333254,
+          "level": 9,
+          "title": "Level 9",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 209.633333333324,
+          "level": 10,
+          "title": "Level 10",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 209.633333333324,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "bloodlust",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 233.366666666656,
+          "level": 11,
+          "title": "Level 11",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 260.59999999999167,
+          "level": 12,
+          "title": "Level 12",
+          "id": "heart-of-balam",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 290.50000000001546,
+          "level": 13,
+          "title": "Level 13",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 304.3333333333598,
+          "level": 14,
+          "title": "Level 14",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 304.3333333333598,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "bodyguard",
+          "kind": "ally"
+        },
+        {
+          "seconds": 337.700000000053,
+          "level": 15,
+          "title": "Level 15",
+          "id": "heart-of-balam",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 358.43333333340286,
+          "level": 15,
+          "title": "Boss Defeated",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 366.73333333340946,
+          "level": 16,
+          "title": "Level 16",
+          "id": "sun-claw",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 406.1333333334408,
+          "level": 17,
+          "title": "Level 17",
+          "id": "bloodlust",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 414.23333333344726,
+          "level": 18,
+          "title": "Level 18",
+          "id": "heart-of-balam",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 437.2666666667989,
+          "level": 19,
+          "title": "Level 19",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 457.26666666681484,
+          "level": 20,
+          "title": "Level 20",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 457.26666666681484,
+          "level": 20,
+          "title": "Fourth Active Slot Unlocked",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 477.6666666668311,
+          "level": 21,
+          "title": "Level 21",
+          "id": "bloodlust",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 499.03333333351475,
+          "level": 22,
+          "title": "Level 22",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 508.5333333335223,
+          "level": 22,
+          "title": "Boss Defeated",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 520.7000000001838,
+          "level": 23,
+          "title": "Level 23",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 548.8000000001582,
+          "level": 24,
+          "title": "Level 24",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 572.7666666668031,
+          "level": 25,
+          "title": "Level 25",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 586.2666666667908,
+          "level": 26,
+          "title": "Level 26",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 2,
+          "xpTotal": 100,
+          "kills": 25,
+          "hp": 150,
+          "alive": 13,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 4,
+          "xpTotal": 278,
+          "kills": 62,
+          "hp": 150,
+          "alive": 15,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 5,
+          "xpTotal": 528,
+          "kills": 109,
+          "hp": 150,
+          "alive": 9,
+          "drops": 0
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 6,
+          "xpTotal": 761,
+          "kills": 149,
+          "hp": 150,
+          "alive": 11,
+          "drops": 0
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 7,
+          "xpTotal": 1031,
+          "kills": 194,
+          "hp": 150,
+          "alive": 11,
+          "drops": 0
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 8,
+          "xpTotal": 1420,
+          "kills": 263,
+          "hp": 150,
+          "alive": 32,
+          "drops": 0
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 10,
+          "xpTotal": 1914,
+          "kills": 354,
+          "hp": 150,
+          "alive": 35,
+          "drops": 1
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 11,
+          "xpTotal": 2366,
+          "kills": 434,
+          "hp": 150,
+          "alive": 55,
+          "drops": 1
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 12,
+          "xpTotal": 2869,
+          "kills": 519,
+          "hp": 150,
+          "alive": 62,
+          "drops": 1
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 13,
+          "xpTotal": 3324,
+          "kills": 636,
+          "hp": 150,
+          "alive": 24,
+          "drops": 51
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 14,
+          "xpTotal": 4204,
+          "kills": 730,
+          "hp": 150,
+          "alive": 65,
+          "drops": 5
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 15,
+          "xpTotal": 4657,
+          "kills": 809,
+          "hp": 148.8943999999996,
+          "alive": 79,
+          "drops": 9
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 16,
+          "xpTotal": 5138,
+          "kills": 893,
+          "hp": 150,
+          "alive": 85,
+          "drops": 4
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 18,
+          "xpTotal": 6148,
+          "kills": 1044,
+          "hp": 150,
+          "alive": 60,
+          "drops": 4
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 19,
+          "xpTotal": 7118,
+          "kills": 1209,
+          "hp": 150,
+          "alive": 94,
+          "drops": 6
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 21,
+          "xpTotal": 8144,
+          "kills": 1382,
+          "hp": 150,
+          "alive": 57,
+          "drops": 10
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 22,
+          "xpTotal": 9204,
+          "kills": 1551,
+          "hp": 150,
+          "alive": 76,
+          "drops": 11
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 23,
+          "xpTotal": 10085,
+          "kills": 1707,
+          "hp": 150,
+          "alive": 104,
+          "drops": 8
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 24,
+          "xpTotal": 10842,
+          "kills": 1835,
+          "hp": 150,
+          "alive": 108,
+          "drops": 8
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 26,
+          "xpTotal": 12814,
+          "kills": 2143,
+          "hp": 150,
+          "alive": 113,
+          "drops": 9
+        }
+      ],
+      "skills": [
+        {
+          "id": "sun-claw",
+          "level": 6
+        },
+        {
+          "id": "heart-of-balam",
+          "level": 6
+        },
+        {
+          "id": "claw-cyclone",
+          "level": 6
+        },
+        {
+          "id": "jaguar-roar",
+          "level": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "bloodlust",
+          "level": 3
+        },
+        {
+          "id": "feast-of-the-fallen",
+          "level": 3
+        }
+      ],
+      "ally": "tank",
+      "summary": null,
+      "audit": {
+        "damage": {
+          "basic-attack": 24690.960000000425,
+          "sun-claw": 147921.76875000139,
+          "ally-unattributed": 15060.090000000038,
+          "heart-of-balam": 153859.78125,
+          "claw-cyclone": 34468.63875000053,
+          "unattributed": 984.4800000000005,
+          "jaguar-roar": 5833.275
+        },
+        "casts": {
+          "sun-claw": 67,
+          "heart-of-balam": 41,
+          "claw-cyclone": 55,
+          "jaguar-roar": 10
+        },
+        "bosses": [
+          {
+            "id": "jaguar-chief",
+            "spawn": 150.0333333333274,
+            "kill": 173.83333333332604,
+            "seconds": 23.799999999998647
+          },
+          {
+            "id": "zipacna",
+            "spawn": 300.000000000023,
+            "kill": 358.43333333340286,
+            "seconds": 58.433333333379835
+          },
+          {
+            "id": "high-priest",
+            "spawn": 450.0000000001424,
+            "kill": 508.5333333335223,
+            "seconds": 58.533333333379915
+          },
+          {
+            "id": "ahpuch",
+            "spawn": 600.0000000001116,
+            "kill": null
+          }
+        ],
+        "slots": [
+          {
+            "level": 1,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 2,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 3,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 4,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 5,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 0,
+            "allySkills": 1
+          },
+          {
+            "level": 6,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 0,
+            "allySkills": 1
+          },
+          {
+            "level": 7,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 0,
+            "allySkills": 1
+          },
+          {
+            "level": 8,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 0,
+            "allySkills": 2
+          },
+          {
+            "level": 9,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 3,
+            "ownedPassive": 0,
+            "allySkills": 2
+          },
+          {
+            "level": 10,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 11,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 12,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 13,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 14,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 15,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 16,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 17,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 18,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 19,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 20,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 21,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 22,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 23,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 24,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 25,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 26,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          }
+        ],
+        "milestones": [
+          10,
+          20
+        ],
+        "allyEvents": [
+          {
+            "kind": "recruit",
+            "level": 5
+          },
+          {
+            "kind": "pick",
+            "level": 8
+          },
+          {
+            "kind": "pick",
+            "level": 14
+          }
+        ],
+        "peakFx": 24,
+        "allyCasts": {
+          "war-cry": 46,
+          "clay-bomb": 56
+        }
+      },
+      "warnings": [
+        "[skills] Placeholder: fx/war-cry/main.png",
+        "[skills] Placeholder: fx/clay-bomb/main.png"
+      ],
+      "httpErrors": [],
+      "errors": []
+    },
+    {
+      "hero": "balam",
+      "mode": "quick",
+      "seed": 1703,
+      "seconds": 600.0000000001116,
+      "level10": 231.93333333332274,
+      "level20": 542.6333333334971,
+      "endLevel": 21,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 150,
+      "kills": 1403,
+      "damageTaken": 700.8108333333403,
+      "xpTotal": 8068,
+      "collected": 1399,
+      "spawned": 1513,
+      "frames": 18015,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 8.833333333333313,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 36.866666666667136,
+          "xpTotal": 120
+        },
+        {
+          "level": 4,
+          "seconds": 64.66666666666556,
+          "xpTotal": 255
+        },
+        {
+          "level": 5,
+          "seconds": 88.86666666666419,
+          "xpTotal": 433
+        },
+        {
+          "level": 6,
+          "seconds": 122.03333333332897,
+          "xpTotal": 648
+        },
+        {
+          "level": 7,
+          "seconds": 150.93333333332734,
+          "xpTotal": 899
+        },
+        {
+          "level": 8,
+          "seconds": 186.399999999992,
+          "xpTotal": 1193
+        },
+        {
+          "level": 9,
+          "seconds": 212.89999999999048,
+          "xpTotal": 1533
+        },
+        {
+          "level": 10,
+          "seconds": 231.93333333332274,
+          "xpTotal": 1902
+        },
+        {
+          "level": 11,
+          "seconds": 259.2666666666573,
+          "xpTotal": 2311
+        },
+        {
+          "level": 12,
+          "seconds": 286.86666666667924,
+          "xpTotal": 2747
+        },
+        {
+          "level": 13,
+          "seconds": 320.6333333333728,
+          "xpTotal": 3209
+        },
+        {
+          "level": 14,
+          "seconds": 360.4666666667378,
+          "xpTotal": 3703
+        },
+        {
+          "level": 15,
+          "seconds": 407.43333333344185,
+          "xpTotal": 4230
+        },
+        {
+          "level": 16,
+          "seconds": 443.2666666668037,
+          "xpTotal": 4788
+        },
+        {
+          "level": 17,
+          "seconds": 460.56666666681747,
+          "xpTotal": 5375
+        },
+        {
+          "level": 18,
+          "seconds": 482.4000000001682,
+          "xpTotal": 5990
+        },
+        {
+          "level": 19,
+          "seconds": 507.73333333352167,
+          "xpTotal": 6641
+        },
+        {
+          "level": 20,
+          "seconds": 542.6333333334971,
+          "xpTotal": 7321
+        },
+        {
+          "level": 21,
+          "seconds": 597.5000000001139,
+          "xpTotal": 8036
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 8.833333333333313,
+          "level": 2,
+          "title": "Level 2",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 36.866666666667136,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 64.66666666666556,
+          "level": 4,
+          "title": "Level 4",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 88.86666666666419,
+          "level": 5,
+          "title": "Level 5",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 88.86666666666419,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "tank",
+          "kind": "ally"
+        },
+        {
+          "seconds": 122.03333333332897,
+          "level": 6,
+          "title": "Level 6",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 150.93333333332734,
+          "level": 7,
+          "title": "Level 7",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 186.399999999992,
+          "level": 8,
+          "title": "Level 8",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 186.399999999992,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "shield-throw",
+          "kind": "ally"
+        },
+        {
+          "seconds": 195.29999999999148,
+          "level": 8,
+          "title": "Boss Defeated",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 212.89999999999048,
+          "level": 9,
+          "title": "Level 9",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 231.93333333332274,
+          "level": 10,
+          "title": "Level 10",
+          "id": "obsidian-arc",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 231.93333333332274,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 259.2666666666573,
+          "level": 11,
+          "title": "Level 11",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 286.86666666667924,
+          "level": 12,
+          "title": "Level 12",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 320.6333333333728,
+          "level": 13,
+          "title": "Level 13",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 360.4666666667378,
+          "level": 14,
+          "title": "Level 14",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 360.4666666667378,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "guardian-link",
+          "kind": "ally"
+        },
+        {
+          "seconds": 407.43333333344185,
+          "level": 15,
+          "title": "Level 15",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 424.63333333345554,
+          "level": 15,
+          "title": "Boss Defeated",
+          "id": "feast-of-the-fallen",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 443.2666666668037,
+          "level": 16,
+          "title": "Level 16",
+          "id": "claw-cyclone",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 460.56666666681747,
+          "level": 17,
+          "title": "Level 17",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 482.4000000001682,
+          "level": 18,
+          "title": "Level 18",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 507.73333333352167,
+          "level": 19,
+          "title": "Level 19",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 542.6333333334971,
+          "level": 20,
+          "title": "Level 20",
+          "id": "earthshaker",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 542.6333333334971,
+          "level": 20,
+          "title": "Fourth Active Slot Unlocked",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 594.9666666667829,
+          "level": 20,
+          "title": "Boss Defeated",
+          "id": "prowlers-leap",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 597.5000000001139,
+          "level": 21,
+          "title": "Level 21",
+          "id": "jaguar-roar",
+          "kind": "active",
+          "choice": "upgrade-active"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 2,
+          "xpTotal": 88,
+          "kills": 22,
+          "hp": 150,
+          "alive": 16,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 3,
+          "xpTotal": 233,
+          "kills": 53,
+          "hp": 150,
+          "alive": 23,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 5,
+          "xpTotal": 437,
+          "kills": 95,
+          "hp": 150,
+          "alive": 20,
+          "drops": 0
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 5,
+          "xpTotal": 613,
+          "kills": 126,
+          "hp": 150,
+          "alive": 31,
+          "drops": 0
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 6,
+          "xpTotal": 887,
+          "kills": 178,
+          "hp": 150,
+          "alive": 23,
+          "drops": 1
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 7,
+          "xpTotal": 1013,
+          "kills": 202,
+          "hp": 150,
+          "alive": 43,
+          "drops": 0
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 8,
+          "xpTotal": 1445,
+          "kills": 274,
+          "hp": 150,
+          "alive": 49,
+          "drops": 0
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 10,
+          "xpTotal": 2023,
+          "kills": 378,
+          "hp": 150,
+          "alive": 41,
+          "drops": 1
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 11,
+          "xpTotal": 2512,
+          "kills": 464,
+          "hp": 150,
+          "alive": 57,
+          "drops": 0
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 12,
+          "xpTotal": 2955,
+          "kills": 542,
+          "hp": 150,
+          "alive": 68,
+          "drops": 0
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 13,
+          "xpTotal": 3314,
+          "kills": 606,
+          "hp": 119.33999999999986,
+          "alive": 73,
+          "drops": 0
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 13,
+          "xpTotal": 3699,
+          "kills": 672,
+          "hp": 132.95999999999992,
+          "alive": 76,
+          "drops": 0
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 14,
+          "xpTotal": 4029,
+          "kills": 729,
+          "hp": 128.0414999999994,
+          "alive": 82,
+          "drops": 1
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 15,
+          "xpTotal": 4367,
+          "kills": 786,
+          "hp": 138.01599999999996,
+          "alive": 88,
+          "drops": 0
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 16,
+          "xpTotal": 5241,
+          "kills": 911,
+          "hp": 150,
+          "alive": 57,
+          "drops": 0
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 17,
+          "xpTotal": 5778,
+          "kills": 1032,
+          "hp": 150,
+          "alive": 64,
+          "drops": 33
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 19,
+          "xpTotal": 6664,
+          "kills": 1158,
+          "hp": 144.31599999999997,
+          "alive": 102,
+          "drops": 0
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 19,
+          "xpTotal": 7257,
+          "kills": 1259,
+          "hp": 139.88,
+          "alive": 105,
+          "drops": 0
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 20,
+          "xpTotal": 7659,
+          "kills": 1330,
+          "hp": 150,
+          "alive": 110,
+          "drops": 3
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 21,
+          "xpTotal": 8068,
+          "kills": 1403,
+          "hp": 150,
+          "alive": 114,
+          "drops": 1
+        }
+      ],
+      "skills": [
+        {
+          "id": "claw-cyclone",
+          "level": 6
+        },
+        {
+          "id": "jaguar-roar",
+          "level": 6
+        },
+        {
+          "id": "obsidian-arc",
+          "level": 1
+        },
+        {
+          "id": "prowlers-leap",
+          "level": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "feast-of-the-fallen",
+          "level": 5
+        },
+        {
+          "id": "earthshaker",
+          "level": 3
+        }
+      ],
+      "ally": "tank",
+      "summary": null,
+      "audit": {
+        "damage": {
+          "basic-attack": 27176.940000000446,
+          "ally-unattributed": 2894.1849999999945,
+          "claw-cyclone": 33699.17250000056,
+          "shield-throw": 7471.139999999984,
+          "jaguar-roar": 33573.749999999985,
+          "obsidian-arc": 19388.984999998,
+          "earthshaker": 1412.208,
+          "unattributed": 33.6,
+          "prowlers-leap": 195.3
+        },
+        "casts": {
+          "claw-cyclone": 56,
+          "jaguar-roar": 43,
+          "obsidian-arc": 74,
+          "prowlers-leap": 1
+        },
+        "bosses": [
+          {
+            "id": "jaguar-chief",
+            "spawn": 150.0333333333274,
+            "kill": 195.29999999999148,
+            "seconds": 45.266666666664094
+          },
+          {
+            "id": "zipacna",
+            "spawn": 300.000000000023,
+            "kill": 424.63333333345554,
+            "seconds": 124.63333333343252
+          },
+          {
+            "id": "high-priest",
+            "spawn": 450.0000000001424,
+            "kill": 594.9666666667829,
+            "seconds": 144.9666666666405
+          },
+          {
+            "id": "ahpuch",
+            "spawn": 600.0000000001116,
+            "kill": null
+          }
+        ],
+        "slots": [
+          {
+            "level": 1,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 2,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 3,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 0,
+            "allySkills": 0
+          },
+          {
+            "level": 4,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 1,
+            "allySkills": 0
+          },
+          {
+            "level": 5,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 1,
+            "allySkills": 1
+          },
+          {
+            "level": 6,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 0,
+            "ownedPassive": 1,
+            "allySkills": 1
+          },
+          {
+            "level": 7,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 1,
+            "allySkills": 1
+          },
+          {
+            "level": 8,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 1,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 9,
+            "active": 3,
+            "passive": 1,
+            "ownedActive": 2,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 10,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 11,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 12,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 13,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 2
+          },
+          {
+            "level": 14,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 15,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 16,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 17,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 1,
+            "allySkills": 3
+          },
+          {
+            "level": 18,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 19,
+            "active": 3,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 20,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 3,
+            "ownedPassive": 2,
+            "allySkills": 3
+          },
+          {
+            "level": 21,
+            "active": 4,
+            "passive": 2,
+            "ownedActive": 4,
+            "ownedPassive": 2,
+            "allySkills": 3
+          }
+        ],
+        "milestones": [
+          10,
+          20
+        ],
+        "allyEvents": [
+          {
+            "kind": "recruit",
+            "level": 5
+          },
+          {
+            "kind": "pick",
+            "level": 8
+          },
+          {
+            "kind": "pick",
+            "level": 14
+          }
+        ],
+        "peakFx": 24,
+        "allyCasts": {
+          "war-cry": 45,
+          "shield-throw": 61
+        }
+      },
+      "warnings": [
+        "[skills] Placeholder: fx/war-cry/main.png",
+        "[skills] Placeholder: fx/shield-throw/main.png"
+      ],
+      "httpErrors": [],
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "wallSeconds": 45.055613
+}

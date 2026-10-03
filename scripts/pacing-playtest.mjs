@@ -12,11 +12,14 @@ const heroes=(arg('heroes')||'balam,ixchel,kukul').split(',');
 const modes=(arg('modes')||'quick,full').split(',');
 const seeds=(arg('seeds')||'1701,1702,1703').split(',').map(Number);
 const seconds=Number(arg('seconds'))||null;
+const verification=process.argv.includes('--verification');
+const preferredAlly=arg('ally')||'saintess';
+assert.ok(['saintess','tank','assassin'].includes(preferredAlly),'Unknown companion');
 assert.ok(heroes.every(id=>['balam','ixchel','kukul'].includes(id)),'Unknown hero');
 assert.ok(modes.every(id=>['quick','full'].includes(id)),'Unknown mode');
 assert.ok(seeds.length&&seeds.every(Number.isSafeInteger)&&new Set(seeds).size===seeds.length,'Seeds must be distinct integers');
 assert.ok(seconds===null||(seconds>0&&seconds<=1200),'Invalid duration');
-const output=path.resolve('docs/skills-redesign/pacing');
+const output=path.resolve(verification?'docs/skills-redesign/verification':'docs/skills-redesign/pacing');
 await fs.mkdir(output,{recursive:true});
 const start=performance.now();
 const report={label,createdAt:new Date().toISOString(),policy:'pacing-bot-v1',map:'overgrown',viewport:[1280,720],
@@ -29,7 +32,8 @@ const save=()=>fs.writeFile(path.join(output,`${label}.json`),JSON.stringify({..
 try{
  for(const hero of heroes)for(const mode of modes)for(const seed of seeds){
   const context=await browser.newContext({viewport:{width:1280,height:720}}),page=await context.newPage();
-  const errors=[];page.on('pageerror',error=>{errors.push(error.stack);report.errors.push(`${hero}/${mode}/${seed}: ${error.stack}`);console.error(error.stack);});
+  const errors=[],warnings=[],httpErrors=[];page.on('pageerror',error=>{errors.push(error.stack);report.errors.push(`${hero}/${mode}/${seed}: ${error.stack}`);console.error(error.stack);});
+  if(verification){page.on('console',message=>{if(message.type()==='error')errors.push(message.text());if(message.type()==='warning'&&/Placeholder:|Sound fallback:|No active handler:/.test(message.text()))warnings.push(message.text());});page.on('response',r=>{if(r.status()>=400)httpErrors.push(`${r.status()} ${r.url()}`);});}
   await page.goto(`http://127.0.0.1:${server.httpServer.address().port}`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>!!window.__SANGRE_Y_JADE__);
   await page.evaluate(async({hero,mode,seed})=>{
@@ -49,9 +53,10 @@ try{
    app.startRun();
   },{hero,mode,seed});
   await page.locator('.hud').waitFor();
-  const result=await page.evaluate(async({hero,mode,seed,seconds})=>{
+  const result=await page.evaluate(async({hero,mode,seed,seconds,verification,preferredAlly})=>{
    const {GameScene}=await import('/src/scenes/GameScene.js');
    const game=window.__SANGRE_Y_JADE__.game,scene=game.scene.getScene('Ritual');game.loop.stop();
+   const audit=verification?(await import('/scripts/verification-observers.mjs')).observeRun(scene,(await import('/src/systems/SkillDraft.js')).slotCount):null;
    const delta=1000/30;let clock=scene.time.now,frames=0,nextDecision=0,pending=null;
    const times={},levels=[{level:1,seconds:0,xpTotal:0}],choices=[],samples=[];
    let xpTotal=0,spawned=0,collected=0,nextSample=30,summary=null;
@@ -72,7 +77,7 @@ try{
     ixchel:['ancestor-flame','jade-needles','glyph-comet','raincaller','verdant-mercy','ixchels-mantle'],
     kukul:['featherstorm','atlatl-volley','gale-ring','skyfall','plume-guard','venomous-darts','full-quiver','jungle-instinct']}[hero];
    const score=card=>{
-    if(card.supportPortrait)return card.id==='saintess'?100:0;
+    if(card.supportPortrait)return card.id===preferredAlly?100:0;
     if(card.kind==='ally')return ({'saving-grace':100,'jade-ward':90,'sanctuary-dome':80,'lifebond':70,'sacred-fervor':60})[card.id]||20;
     if(card.choiceType==='swap')return -100;
     let value=priority.includes(card.id)?100-priority.indexOf(card.id)*3:30;
@@ -120,7 +125,7 @@ try{
    }
    const end=seconds||scene.modeData.duration;
    while(scene.elapsed<end-1e-6&&!scene.ended){
-    choose();
+    choose();audit?.snapshot();
     if(scene.pausedForChoice)throw Error('Choice paused without a draft');
     if(scene.elapsed>=nextDecision){drive();nextDecision=scene.elapsed+.2;}
     clock+=delta;
@@ -133,8 +138,10 @@ try{
    return {hero,mode,seed,seconds:scene.elapsed,level10:times[10]??null,level20:times[20]??null,endLevel:scene.stats.level,
     completedDuration:scene.elapsed>=end-1e-6,ended:scene.ended,hp:scene.stats.hp,kills:scene.stats.kills,damageTaken:scene.stats.damageTaken,
     xpTotal,collected,spawned,frames,levels,choices,samples,skills:scene.skillSlots.map(s=>({id:s.id,level:s.level})),
-    passives:scene.passiveSlots.map(s=>({id:s.id,level:s.level})),ally:scene.companion?.id,summary};
-  },{hero,mode,seed,seconds});
+    passives:scene.passiveSlots.map(s=>({id:s.id,level:s.level})),ally:scene.companion?.id,summary,
+    ...(audit?{audit:{...audit,snapshot:undefined,allyCasts:{...scene.allyCasts}}}:{})};
+  },{hero,mode,seed,seconds,verification,preferredAlly});
+  if(verification){result.warnings=warnings;result.httpErrors=httpErrors;}
   result.errors=errors;report.runs.push(result);await save();
   console.log(`${label} ${hero}/${mode}/${seed}: Lv10=${result.level10?.toFixed(1)??'-'}s Lv20=${result.level20?.toFixed(1)??'-'}s end=${result.endLevel} at ${result.seconds.toFixed(1)}s kills=${result.kills} ${result.completedDuration?'FULL DURATION':'DIED'}`);
   await context.close();

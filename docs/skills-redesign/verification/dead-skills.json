@@ -1,0 +1,53 @@
+{
+  "fixture": "Controlled 600-second mock-scene AI audit; six 100-second active rotations, not legal in-run replacement or natural survival coverage.",
+  "records": [
+    {
+      "role": "saintess",
+      "seconds": 600,
+      "casts": {
+        "healing-circle": 8,
+        "jade-ward": 2,
+        "cleansing-light": 1,
+        "sanctuary-dome": 7,
+        "radiant-beacon": 6,
+        "lifebond": 8
+      },
+      "passiveTriggers": {
+        "saving-grace": 1,
+        "sacred-fervor": 1
+      }
+    },
+    {
+      "role": "tank",
+      "seconds": 600,
+      "casts": {
+        "bulwark-wall": 8,
+        "war-cry": 9,
+        "shield-bash": 13,
+        "ground-slam": 13,
+        "clay-bomb": 1,
+        "shield-throw": 15
+      },
+      "passiveTriggers": {
+        "bodyguard": 1,
+        "guardian-link": 1
+      }
+    },
+    {
+      "role": "assassin",
+      "seconds": 600,
+      "casts": {
+        "ambush": 30,
+        "execute": 5,
+        "venom-blade": 17,
+        "silencing-dart": 13,
+        "smoke-bomb": 10,
+        "vanish": 6
+      },
+      "passiveTriggers": {
+        "relentless-pursuit": 1,
+        "bounty-contract": 3
+      }
+    }
+  ]
+}

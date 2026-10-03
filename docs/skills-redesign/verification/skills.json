@@ -1,0 +1,2263 @@
+{
+  "cases": [
+    {
+      "id": "jaguar-roar",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast"
+      ],
+      "state": null,
+      "damage": 168,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "obsidian-arc",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 214.2000000000042,
+      "peakFx": 24,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "prowlers-leap",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact",
+        "ground"
+      ],
+      "state": null,
+      "damage": 260.40000000000003,
+      "peakFx": 7,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "claw-cyclone",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 226.80000000000004,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "ceiba-breaker",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact",
+        "ground"
+      ],
+      "state": null,
+      "damage": 105,
+      "peakFx": 10,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "bloodless-hunt",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 130.2,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "stone-maw",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 344.40000000000003,
+      "peakFx": 11,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "war-drum",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura",
+        "impact"
+      ],
+      "state": null,
+      "damage": 535.5,
+      "peakFx": 3,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "sun-claw",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 436.80000000000825,
+      "peakFx": 5,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "jaguar-echo",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 147,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "fang-path",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground"
+      ],
+      "state": null,
+      "damage": 226.8,
+      "peakFx": 24,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "hunters-mark",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "nine-lives",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 3,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "black-mirror",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "pyramid-rush",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 386.40000000000003,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "heart-of-balam",
+      "owner": "balam",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura",
+        "impact"
+      ],
+      "state": null,
+      "damage": 630,
+      "peakFx": 11,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "bloodlust",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "stacks",
+        "value": 5,
+        "max": 5
+      },
+      "damage": 0,
+      "peakFx": 12,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "attackSpeedMult": 1.2
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "stonehide",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "stacks",
+        "value": 4,
+        "max": 4
+      },
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "armor": 4
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "predators-rhythm",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "timer",
+        "remaining": 3.552713678800501e-15,
+        "duration": 1
+      },
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "feast-of-the-fallen",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "counter",
+        "value": 0,
+        "max": 12
+      },
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "obsidian-thorns",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": null,
+      "damage": 92.00000000000001,
+      "peakFx": 8,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "jaguars-pride",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "aura"
+      ],
+      "state": {
+        "type": "stacks",
+        "value": 3,
+        "max": 5
+      },
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "damageMult": 1.18
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "earthshaker",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "counter",
+        "value": 0,
+        "max": 4
+      },
+      "damage": 181.44000000000003,
+      "peakFx": 6,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "wounded-fury",
+      "owner": "balam",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc",
+        "aura"
+      ],
+      "state": {
+        "type": "timer",
+        "ready": true,
+        "remaining": 0,
+        "duration": 1
+      },
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "damageMult": 1.2,
+          "lifestealPct": 0.04
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "copal-star",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 174.72000000000003,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "jade-halo",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 5,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "ancestor-flame",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 175.60030208,
+      "peakFx": 21,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "moonwell",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 156.8,
+      "peakFx": 3,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "censer-wave",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 224.00000000000003,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "verdant-mercy",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "copal-veil",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "glyph-comet",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 385.28000000000003,
+      "peakFx": 21,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "cacao-bloom",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 215.04000000000002,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "raincaller",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 24,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "spirit-familiar",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 453.6000000000001,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "serpent-coil",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 340.48,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "jade-needles",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 38.080000000000005,
+      "peakFx": 12,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "dreamwalk",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast"
+      ],
+      "state": null,
+      "damage": 116.48000000000002,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "four-directions",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 672.0000000000001,
+      "peakFx": 15,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "ixchels-mantle",
+      "owner": "ixchel",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": true,
+      "passiveEvidence": null
+    },
+    {
+      "id": "ancestral-echo",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "mana-spring",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "lunar-boon",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "rooted-meditation",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "jade-resilience",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "spirit-harvest",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "crescent-blessing",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "mana-overflow",
+      "owner": "ixchel",
+      "seconds": 0,
+      "missing": "Gameplay definition/handler is absent"
+    },
+    {
+      "id": "atlatl-volley",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 117.6,
+      "peakFx": 12,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "featherstorm",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 109.75999999999999,
+      "peakFx": 5,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "serpent-path",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 5,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "windstep",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact",
+        "ground"
+      ],
+      "state": null,
+      "damage": 290.0799999999999,
+      "peakFx": 6,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "quetzal-flip",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 70.56,
+      "peakFx": 8,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "hunter-snare",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact",
+        "ground"
+      ],
+      "state": null,
+      "damage": 243.04,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "eagle-eye",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 281.35799999999995,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "sun-dart",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 195.57174000000003,
+      "peakFx": 13,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "storm-nest",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 352.79999999999984,
+      "peakFx": 7,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "plume-guard",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "cacao-bomb",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 286.15999999999997,
+      "peakFx": 6,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "forked-flight",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 88.19999999999999,
+      "peakFx": 6,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "gale-ring",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 180.32,
+      "peakFx": 5,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "hunters-trance",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 3,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "skyfall",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 16,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "kukulkans-breath",
+      "owner": "kukul",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura",
+        "impact"
+      ],
+      "state": null,
+      "damage": 627.1999999999998,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "sharpened-flint",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": null,
+      "damage": 784.0000000000006,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "pierce": 1
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "venomous-darts",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "stacks",
+        "value": 3,
+        "max": 3
+      },
+      "damage": 1210.0000000000525,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "full-quiver",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "counter",
+        "value": 0,
+        "max": 6
+      },
+      "damage": 5429.200000000012,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "hunters-focus",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "stacks",
+        "value": 1,
+        "max": 5
+      },
+      "damage": 831.0399999999995,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "fleet-hunter",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "timer",
+        "remaining": 0,
+        "duration": 3,
+        "ready": false
+      },
+      "damage": 1254.3999999999996,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "basicDamageMult": 1
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "jungle-instinct",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "trophy-hunter",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "timer",
+        "remaining": 19.000000000000004,
+        "duration": 20,
+        "ready": true
+      },
+      "damage": 1090000,
+      "peakFx": 4,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "damageMult": 1.1
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "steady-aim",
+      "owner": "kukul",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc",
+        "aura"
+      ],
+      "state": {
+        "type": "timer",
+        "remaining": 0,
+        "duration": 1,
+        "ready": true
+      },
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "crit": 0.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "survivors-will",
+      "owner": "shared",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "timer",
+        "remaining": 2,
+        "duration": 6
+      },
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "jade-bounty",
+      "owner": "shared",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "bonus",
+        "healPerGem": 0.4,
+        "pickupRangePct": 25
+      },
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": true,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": null
+      }
+    },
+    {
+      "id": "healing-circle",
+      "owner": "ally:saintess",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/healing-circle/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "jade-ward",
+      "owner": "ally:saintess",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [
+        "fx/jade-ward/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "cleansing-light",
+      "owner": "ally:saintess",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/cleansing-light/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "sanctuary-dome",
+      "owner": "ally:saintess",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/sanctuary-dome/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "radiant-beacon",
+      "owner": "ally:saintess",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/radiant-beacon/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "lifebond",
+      "owner": "ally:saintess",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/lifebond/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "saving-grace",
+      "owner": "ally:saintess",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [
+        "proc"
+      ],
+      "state": {
+        "type": "timer",
+        "remaining": 50.00000000000003,
+        "duration": 60,
+        "ready": false
+      },
+      "damage": 0,
+      "peakFx": 1,
+      "missingStills": [
+        "fx/saving-grace/proc.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": {
+          "damage": 1,
+          "haste": 0,
+          "speed": 1,
+          "regen": 0,
+          "armor": 0,
+          "reduction": 0,
+          "lifestealPct": 0,
+          "tankDamageTakenMult": 1
+        }
+      }
+    },
+    {
+      "id": "sacred-fervor",
+      "owner": "ally:saintess",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [],
+      "state": null,
+      "damage": 0,
+      "peakFx": 0,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "damageMult": 1.12
+        },
+        "support": {
+          "damage": 1,
+          "haste": 0,
+          "speed": 1,
+          "regen": 0,
+          "armor": 0,
+          "reduction": 0,
+          "lifestealPct": 0,
+          "tankDamageTakenMult": 1
+        }
+      }
+    },
+    {
+      "id": "bulwark-wall",
+      "owner": "ally:tank",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/bulwark-wall/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "war-cry",
+      "owner": "ally:tank",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/war-cry/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "shield-bash",
+      "owner": "ally:tank",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 32,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/shield-bash/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "ground-slam",
+      "owner": "ally:tank",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 180,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/ground-slam/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "clay-bomb",
+      "owner": "ally:tank",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "state": null,
+      "damage": 32,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/clay-bomb/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "shield-throw",
+      "owner": "ally:tank",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast",
+        "impact",
+        "travel"
+      ],
+      "state": null,
+      "damage": 192,
+      "peakFx": 7,
+      "missingStills": [
+        "fx/shield-throw/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "bodyguard",
+      "owner": "ally:tank",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [],
+      "state": null,
+      "damage": 0,
+      "peakFx": 0,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "reduction": 0.18
+        },
+        "support": {
+          "damage": 1,
+          "haste": 0,
+          "speed": 1,
+          "regen": 0,
+          "armor": 0,
+          "reduction": 0.18,
+          "lifestealPct": 0,
+          "tankDamageTakenMult": 1
+        }
+      }
+    },
+    {
+      "id": "guardian-link",
+      "owner": "ally:tank",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [],
+      "state": null,
+      "damage": 0,
+      "peakFx": 0,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25
+        },
+        "support": {
+          "damage": 1,
+          "haste": 0,
+          "speed": 1,
+          "regen": 0,
+          "armor": 0,
+          "reduction": 0,
+          "lifestealPct": 0,
+          "tankDamageTakenMult": 1
+        }
+      }
+    },
+    {
+      "id": "ambush",
+      "owner": "ally:assassin",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 4,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 136,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/ambush/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "execute",
+      "owner": "ally:assassin",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 130,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/execute/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "venom-blade",
+      "owner": "ally:assassin",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast"
+      ],
+      "state": null,
+      "damage": 42.83333333333333,
+      "peakFx": 1,
+      "missingStills": [
+        "fx/venom-blade/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "silencing-dart",
+      "owner": "ally:assassin",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 2,
+      "stages": [
+        "cast",
+        "impact"
+      ],
+      "state": null,
+      "damage": 16,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/silencing-dart/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "smoke-bomb",
+      "owner": "ally:assassin",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "ground"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/smoke-bomb/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "vanish",
+      "owner": "ally:assassin",
+      "kind": "active",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 1,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "state": null,
+      "damage": 0,
+      "peakFx": 2,
+      "missingStills": [
+        "fx/vanish/main.png"
+      ],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": null
+    },
+    {
+      "id": "relentless-pursuit",
+      "owner": "ally:assassin",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [],
+      "state": null,
+      "damage": 0,
+      "peakFx": 0,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "allyAttackSpeedMult": 1.35
+        },
+        "support": {
+          "damage": 1,
+          "haste": 0,
+          "speed": 1,
+          "regen": 0,
+          "armor": 0,
+          "reduction": 0,
+          "lifestealPct": 0,
+          "tankDamageTakenMult": 1
+        }
+      }
+    },
+    {
+      "id": "bounty-contract",
+      "owner": "ally:assassin",
+      "kind": "passive",
+      "seconds": 9.999999999999972,
+      "frames": 300,
+      "casts": 0,
+      "stages": [],
+      "state": null,
+      "damage": 0,
+      "peakFx": 0,
+      "missingStills": [],
+      "missingSounds": [],
+      "recipe": false,
+      "compatibility": false,
+      "passiveEvidence": {
+        "registered": true,
+        "modifiers": {
+          "speedMult": 1,
+          "pickupRangeMult": 1.25,
+          "cacaoBonusPct": 50
+        },
+        "support": {
+          "damage": 1,
+          "haste": 0,
+          "speed": 1,
+          "regen": 0,
+          "armor": 0,
+          "reduction": 0,
+          "lifestealPct": 0,
+          "tankDamageTakenMult": 1
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "id": "healing-circle",
+      "message": "[skills] Placeholder: fx/healing-circle/main.png"
+    },
+    {
+      "id": "jade-ward",
+      "message": "[skills] Placeholder: fx/jade-ward/main.png"
+    },
+    {
+      "id": "cleansing-light",
+      "message": "[skills] Placeholder: fx/cleansing-light/main.png"
+    },
+    {
+      "id": "sanctuary-dome",
+      "message": "[skills] Placeholder: fx/sanctuary-dome/main.png"
+    },
+    {
+      "id": "radiant-beacon",
+      "message": "[skills] Placeholder: fx/radiant-beacon/main.png"
+    },
+    {
+      "id": "lifebond",
+      "message": "[skills] Placeholder: fx/lifebond/main.png"
+    },
+    {
+      "id": "saving-grace",
+      "message": "[skills] Placeholder: fx/saving-grace/proc.png"
+    },
+    {
+      "id": "bulwark-wall",
+      "message": "[skills] Placeholder: fx/bulwark-wall/main.png"
+    },
+    {
+      "id": "war-cry",
+      "message": "[skills] Placeholder: fx/war-cry/main.png"
+    },
+    {
+      "id": "shield-bash",
+      "message": "[skills] Placeholder: fx/shield-bash/main.png"
+    },
+    {
+      "id": "ground-slam",
+      "message": "[skills] Placeholder: fx/ground-slam/main.png"
+    },
+    {
+      "id": "clay-bomb",
+      "message": "[skills] Placeholder: fx/clay-bomb/main.png"
+    },
+    {
+      "id": "shield-throw",
+      "message": "[skills] Placeholder: fx/shield-throw/main.png"
+    },
+    {
+      "id": "ambush",
+      "message": "[skills] Placeholder: fx/ambush/main.png"
+    },
+    {
+      "id": "execute",
+      "message": "[skills] Placeholder: fx/execute/main.png"
+    },
+    {
+      "id": "venom-blade",
+      "message": "[skills] Placeholder: fx/venom-blade/main.png"
+    },
+    {
+      "id": "silencing-dart",
+      "message": "[skills] Placeholder: fx/silencing-dart/main.png"
+    },
+    {
+      "id": "smoke-bomb",
+      "message": "[skills] Placeholder: fx/smoke-bomb/main.png"
+    },
+    {
+      "id": "vanish",
+      "message": "[skills] Placeholder: fx/vanish/main.png"
+    }
+  ],
+  "httpErrors": [],
+  "passed": false
+}

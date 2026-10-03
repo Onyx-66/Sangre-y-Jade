@@ -1,6 +1,7 @@
 import { ALLY_RULES } from '../data/allyCatalog.js';
 import { dangerousEnemy } from '../data/supports.js';
 import { ALLY_ACTIVE_HANDLERS } from '../skills/allies/index.js';
+import { runtimeDebugEnabled } from './DebugAccess.js';
 
 const HOSTILE = ['slow', 'poison', 'bleed', 'burn', 'confuse'];
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
@@ -62,7 +63,7 @@ export class AllyBrain {
   constructor(scene,support) {
     this.scene=scene;this.support=support;this.accumulator=0;this.lastCast=-Infinity;
     this.readySince=new Map();this.casts=Object.create(null);scene.allyCasts=this.casts;
-    if(typeof window!=='undefined')window.__allyCasts=this.casts;
+    if(typeof window!=='undefined'&&runtimeDebugEnabled())window.__allyCasts=this.casts;
   }
 
   update(dt) {
@@ -102,7 +103,7 @@ export class AllyBrain {
     this.readySince.delete(skill.id);this.lastCast=scene.elapsed;
     this.casts[skill.id]=(this.casts[skill.id]||0)+1;
     scene.skillAudio?.ui?.('ally-cast');
-    if(typeof window!=='undefined')window.__allyCasts=this.casts;
+    if(typeof window!=='undefined'&&runtimeDebugEnabled())window.__allyCasts=this.casts;
     scene.animateCharacter?.(ally.sprite,`support-${ally.id}`,'attack',.32);
     this.popIcon(skill,ally);
     scene.hud?.setAlly?.(ally);
@@ -112,7 +113,7 @@ export class AllyBrain {
   popIcon(skill,ally) {
     const scene=this.scene;
     if(!scene.add?.image)return;
-    const icon=scene.add.image(ally.sprite.x,ally.sprite.y-48,`icon-${skill.art??63}`).setDepth(22).setDisplaySize(28,28);
+    const icon=scene.add.image(ally.sprite.x,ally.sprite.y-48,`skill-icon-${skill.id}`).setDepth(22).setDisplaySize(28,28);
     if(scene.tweens?.add)scene.tweens.add({targets:icon,y:icon.y-26,alpha:0,duration:600,onComplete:()=>icon.destroy()});
     else scene.time?.delayedCall?.(600,()=>icon.destroy());
   }

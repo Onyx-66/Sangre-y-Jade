@@ -309,5 +309,6 @@ class SangreYJadeApp {
 }
 
 const app = new SangreYJadeApp();
-window.__SANGRE_Y_JADE__ = app;
+// Test access is available in development and in the explicit FX diagnostic mode.
+if (import.meta.env.DEV || new URLSearchParams(location.search).get('fxdebug') === '1') window.__SANGRE_Y_JADE__ = app;
 

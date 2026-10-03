@@ -1,0 +1,272 @@
+{
+  "date": "2026-10-03",
+  "releaseReady": false,
+  "slots": [
+    {
+      "hero": "balam",
+      "ally": "saintess",
+      "seed": 1701,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "saintess",
+      "seed": 1702,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "saintess",
+      "seed": 1703,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "ixchel",
+      "ally": "saintess",
+      "seed": 1701,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        20
+      ],
+      "picksPass": false
+    },
+    {
+      "hero": "ixchel",
+      "ally": "saintess",
+      "seed": 1702,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        20
+      ],
+      "picksPass": false
+    },
+    {
+      "hero": "ixchel",
+      "ally": "saintess",
+      "seed": 1703,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        20
+      ],
+      "picksPass": false
+    },
+    {
+      "hero": "kukul",
+      "ally": "saintess",
+      "seed": 1701,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10
+      ],
+      "picks": [
+        10
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "kukul",
+      "ally": "saintess",
+      "seed": 1702,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "kukul",
+      "ally": "saintess",
+      "seed": 1703,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "tank",
+      "seed": 1701,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "tank",
+      "seed": 1702,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "tank",
+      "seed": 1703,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "assassin",
+      "seed": 1701,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "assassin",
+      "seed": 1702,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    },
+    {
+      "hero": "balam",
+      "ally": "assassin",
+      "seed": 1703,
+      "capacity": true,
+      "markers": true,
+      "allyFlow": true,
+      "expected": [
+        10,
+        20
+      ],
+      "picks": [
+        10,
+        20
+      ],
+      "picksPass": true
+    }
+  ],
+  "gates": {
+    "strictValidator": true,
+    "canonicalAssets": false,
+    "allSkills": false,
+    "capacityAndMarkers": true,
+    "milestoneCards": false,
+    "allyAcquisition": true,
+    "controlledAllyTriggers": true,
+    "naturalAllAllySkills": false,
+    "balanceSpread": false,
+    "unit": false,
+    "build": true,
+    "languageStartup": true,
+    "desktopPerformance": false,
+    "physicalPhone": false
+  }
+}

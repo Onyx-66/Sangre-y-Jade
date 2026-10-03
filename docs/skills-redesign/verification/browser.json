@@ -1,0 +1,423 @@
+{
+  "environment": {
+    "browser": "154.0.8037.97",
+    "host": "win32",
+    "physicalPhone": false,
+    "cpuThrottle": 1,
+    "notes": "Desktop headless Chromium, touch/mobile viewports; not physical-device certification."
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "width": 568,
+      "height": 320,
+      "title": "Play",
+      "language": "en",
+      "direction": "ltr",
+      "gameHandle": false,
+      "allyHandle": false,
+      "fatal": false,
+      "canvas": true,
+      "overflow": false,
+      "controls": [
+        {
+          "class": "ally-panel",
+          "outside": false
+        },
+        {
+          "class": "passive-slot empty",
+          "outside": false
+        },
+        {
+          "class": "passive-slot locked empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty locked",
+          "outside": false
+        },
+        {
+          "class": "dash-btn is-ready",
+          "outside": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "title": "Play",
+      "language": "en",
+      "direction": "ltr",
+      "gameHandle": false,
+      "allyHandle": false,
+      "fatal": false,
+      "canvas": true,
+      "overflow": false,
+      "controls": [
+        {
+          "class": "ally-panel",
+          "outside": false
+        },
+        {
+          "class": "passive-slot empty",
+          "outside": false
+        },
+        {
+          "class": "passive-slot locked empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty locked",
+          "outside": false
+        },
+        {
+          "class": "dash-btn is-ready",
+          "outside": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "locale": "fr",
+      "width": 568,
+      "height": 320,
+      "title": "Jouer",
+      "language": "fr",
+      "direction": "ltr",
+      "gameHandle": false,
+      "allyHandle": false,
+      "fatal": false,
+      "canvas": true,
+      "overflow": false,
+      "controls": [
+        {
+          "class": "ally-panel",
+          "outside": false
+        },
+        {
+          "class": "passive-slot empty",
+          "outside": false
+        },
+        {
+          "class": "passive-slot locked empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty locked",
+          "outside": false
+        },
+        {
+          "class": "dash-btn is-ready",
+          "outside": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "locale": "fr",
+      "width": 320,
+      "height": 568,
+      "title": "Jouer",
+      "language": "fr",
+      "direction": "ltr",
+      "gameHandle": false,
+      "allyHandle": false,
+      "fatal": false,
+      "canvas": true,
+      "overflow": false,
+      "controls": [
+        {
+          "class": "ally-panel",
+          "outside": false
+        },
+        {
+          "class": "passive-slot empty",
+          "outside": false
+        },
+        {
+          "class": "passive-slot locked empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty locked",
+          "outside": false
+        },
+        {
+          "class": "dash-btn is-ready",
+          "outside": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "width": 568,
+      "height": 320,
+      "title": "العب",
+      "language": "ar",
+      "direction": "rtl",
+      "gameHandle": false,
+      "allyHandle": false,
+      "fatal": false,
+      "canvas": true,
+      "overflow": false,
+      "controls": [
+        {
+          "class": "ally-panel",
+          "outside": false
+        },
+        {
+          "class": "passive-slot empty",
+          "outside": false
+        },
+        {
+          "class": "passive-slot locked empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty locked",
+          "outside": false
+        },
+        {
+          "class": "dash-btn is-ready",
+          "outside": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "width": 320,
+      "height": 568,
+      "title": "العب",
+      "language": "ar",
+      "direction": "rtl",
+      "gameHandle": false,
+      "allyHandle": false,
+      "fatal": false,
+      "canvas": true,
+      "overflow": false,
+      "controls": [
+        {
+          "class": "ally-panel",
+          "outside": false
+        },
+        {
+          "class": "passive-slot empty",
+          "outside": false
+        },
+        {
+          "class": "passive-slot locked empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty",
+          "outside": false
+        },
+        {
+          "class": "skill-btn active-slot empty locked",
+          "outside": false
+        },
+        {
+          "class": "dash-btn is-ready",
+          "outside": false
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "performance": [
+    {
+      "hero": "balam",
+      "width": 568,
+      "height": 320,
+      "seconds": 9.9935,
+      "frames": 1432,
+      "fps": 143.29314054135187,
+      "p95FrameMs": 7.5,
+      "maxFrameMs": 41.299999999813735,
+      "framesOver33ms": 1,
+      "peakFx": 24,
+      "peakEffectSprites": 84,
+      "casts": {
+        "claw-cyclone": 2,
+        "war-drum": 2,
+        "sun-claw": 2
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passed": false
+    },
+    {
+      "hero": "balam",
+      "width": 320,
+      "height": 568,
+      "seconds": 9.999399999999907,
+      "frames": 1403,
+      "fps": 140.3084185051116,
+      "p95FrameMs": 7.5,
+      "maxFrameMs": 74.39999999990687,
+      "framesOver33ms": 4,
+      "peakFx": 24,
+      "peakEffectSprites": 84,
+      "casts": {
+        "claw-cyclone": 2,
+        "war-drum": 2,
+        "sun-claw": 2
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passed": false
+    },
+    {
+      "hero": "ixchel",
+      "width": 568,
+      "height": 320,
+      "seconds": 9.993,
+      "frames": 1439,
+      "fps": 144.00080056039226,
+      "p95FrameMs": 7.5,
+      "maxFrameMs": 16.09999999962747,
+      "framesOver33ms": 0,
+      "peakFx": 24,
+      "peakEffectSprites": 29,
+      "casts": {
+        "jade-halo": 2,
+        "raincaller": 2,
+        "serpent-coil": 2
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passed": true
+    },
+    {
+      "hero": "ixchel",
+      "width": 320,
+      "height": 568,
+      "seconds": 9.993700000000187,
+      "frames": 1439,
+      "fps": 143.99071414991175,
+      "p95FrameMs": 7.5,
+      "maxFrameMs": 16.100000000093132,
+      "framesOver33ms": 0,
+      "peakFx": 24,
+      "peakEffectSprites": 31,
+      "casts": {
+        "jade-halo": 2,
+        "raincaller": 2,
+        "serpent-coil": 2
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "width": 568,
+      "height": 320,
+      "seconds": 9.999899999999906,
+      "frames": 1440,
+      "fps": 144.00144001440148,
+      "p95FrameMs": 7.5,
+      "maxFrameMs": 10.5,
+      "framesOver33ms": 0,
+      "peakFx": 23,
+      "peakEffectSprites": 27,
+      "casts": {
+        "featherstorm": 2,
+        "skyfall": 2,
+        "kukulkans-breath": 2
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passed": true
+    },
+    {
+      "hero": "kukul",
+      "width": 320,
+      "height": 568,
+      "seconds": 9.998100000000093,
+      "frames": 1440,
+      "fps": 144.02736519938654,
+      "p95FrameMs": 7.5,
+      "maxFrameMs": 11.199999999720603,
+      "framesOver33ms": 0,
+      "peakFx": 23,
+      "peakEffectSprites": 27,
+      "casts": {
+        "featherstorm": 2,
+        "skyfall": 2,
+        "kukulkans-breath": 2
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": false
+}
