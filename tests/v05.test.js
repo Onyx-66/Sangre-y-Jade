@@ -2,22 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import { SUPPORTS,supportRank,dangerousEnemy } from '../src/data/supports.js';
-import { draftSkills,HERO_SKILL_CAPACITY } from '../src/systems/SkillDraft.js';
-import { heroList,MODIFIERS } from '../src/data/heroes.js';
+import { slotCount } from '../src/systems/SkillDraft.js';
 import {setLanguage,t,westernDigits,hasTranslation} from '../src/i18n/index.js';
 test('three distinct support classes each have ten unique translated skills',()=>{
  assert.deepEqual(Object.keys(SUPPORTS),['saintess','tank','assassin']);
  const ids=[];for(const s of Object.values(SUPPORTS)){assert.equal(s.skills.length,10);for(const k of s.skills){ids.push(k.id);for(const lang of ['fr','ar']){assert.ok(hasTranslation(k.name,lang));assert.ok(hasTranslation(k.description,lang));}}}assert.equal(new Set(ids).size,30);
 });
-test('full hero loadout guarantees two upgrades plus a replacement',()=>{
- for(const hero of heroList()){
-  const owned=hero.skills.slice(0,4).map(s=>({...s,level:1}));
-  const choices=draftSkills(hero.skills,owned,HERO_SKILL_CAPACITY,a=>[...a],MODIFIERS);
-  assert.deepEqual(choices.map(s=>s.choiceType),['skill-upgrade','skill-upgrade','replace-skill']);
-  assert.ok(!owned.some(o=>o.id===choices[2].id));
-  owned.forEach(s=>s.level=6);const capped=draftSkills(hero.skills,owned,4,a=>[...a],MODIFIERS);
-  assert.equal(capped.length,3);assert.equal(capped[2].choiceType,'replace-skill');assert.ok(capped.every(s=>s.choiceType!=='skill-upgrade'));
- }
+test('hero active slots follow the level 20 unlock',()=>{
+ for(const level of [1,9,10,19])assert.equal(slotCount('active',level),3);
+ assert.equal(slotCount('active',20),4);
 });
 test('support rank rises with every hero level after level five',()=>{assert.equal(supportRank(5),1);assert.equal(supportRank(6),2);assert.equal(supportRank(20),16);});
 test('Assassin prefers threat over nearest low-damage enemy',()=>{

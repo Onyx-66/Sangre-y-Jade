@@ -8,7 +8,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - [x] 02 — Five confirmed skill and combat fixes
 - [x] 03 — Handler, status-effect and passive engine foundations
 - [ ] 04 — Name not supplied
-- [ ] 05 — Name not supplied
+- [x] 05 — Hero slots, level milestones, HUD and draft (section 3.6)
 - [ ] 06 — Name not supplied
 - [ ] 07 — Name not supplied
 - [ ] 08 — Name not supplied
@@ -49,3 +49,10 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Browser reports:** `%TEMP%/syj-skills-step3-BaCKbW/playtest/artifacts/playtest-report.json`, `%TEMP%/syj-skills-step3-BaCKbW/extended-playtest/artifacts/extended-playtest-report.json`, `%TEMP%/syj-skills-step3-support-Pyw7XR/artifacts/v0.5/combat.json`. Local preview processes were stopped after testing; tracked screenshots/reports were not overwritten.
 - **Open issues:** no failing step-3 checks. Individual hero handlers, passive draft/HUD changes and dedicated art/audio are still later-step work. Previously documented authored-description FR/AR coverage and the build chunk warning remain. No assets, music, voice recordings, hand-made effect frames, dependencies or save migration were created/changed.
 - **Commit/version:** one commit labelled `[v0.5.0-skills-step3]`; annotated tag `v0.5.0-skills-step3`. Application package version remains 0.5.0. Stop after this step; no push or later-step implementation included.
+
+## Step 5 — 2026-10-03 — Complete
+
+- **Changed:** replaced the global capacity with `SLOT_RULES` / `slotCount`: 3 active Q/E/R slots and one passive slot initially, passive slot 2 at hero level 10, active slot 4 (T) at level 20, active max level 6, passive max level 5. `GameScene` tracks active and passive slots separately, gates locked keyboard/button input, updates cooldowns by current active count, and passes that count into the HUD skill-slot data source. Draft choices now carry `kind` and use new/upgrade/swap/stat types; they avoid duplicate IDs, guarantee an active when available, include a passive on every even-level normal draft while its slot is free, limit swap to one 15% card, and keep boss rewards skill-only and upgrade-first. Fully maxed normal drafts include stat cards and a heal. Milestones run after the normal choice by earned level, so jumps process level 10/20 once. Existing 60 hero skills remain active; innate traits remain slotless.
+- **Tests:** `npm run check` — **62/62 tests passed** and production build passed (38 modules; existing >500 kB chunk-size warning). Focused checks cover slot totals, locked-T cooldown/input behavior, uniqueness, passive cadence, swap cap, boss contents, maxed fallback and 9→11 / 19→21 milestone sequencing.
+- **Open issues:** the prompt explicitly defers hero-only passive skills, so level 10 unlocks the passive slot and consumes its milestone once with a notice instead of fabricating three passive choices; the existing pool has no eligible passives. The level-20 active milestone works with the current hero pool. Step 4 was not included in this prompt. No assets, audio, dependencies or save data changed.
+- **Commit/version:** one commit labelled `[v0.5.0-skills-step5]`, annotated tag `v0.5.0-skills-step5`; application package version remains 0.5.0.

@@ -3,7 +3,7 @@ import { t, translateDOM } from '../i18n/index.js';
 import { interfaceIcon } from '../art/interfaceIcons.js';
 import { SUPPORTS } from '../data/supports.js';
 import { skillDescription } from '../data/heroes.js';
-import { HERO_SKILL_CAPACITY } from './SkillDraft.js';
+import { SLOT_RULES } from './SkillDraft.js';
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
 export class Hud {
@@ -12,7 +12,7 @@ export class Hud {
     this.settings = settings;
     this.callbacks = callbacks;
     this.move = { x: 0, y: 0 };
-    this.cooldowns = Array(HERO_SKILL_CAPACITY).fill(0);
+    this.cooldowns = Array(SLOT_RULES.active.keys.length).fill(0);
     this.attackHeld=false;
     this.mount();
   }
@@ -37,7 +37,7 @@ export class Hud {
       <button class="support-loadout" data-support hidden aria-label="Support Loadout"></button>
       <div class="skills">
         <button class="attack-btn" data-attack aria-label="Attack" ${this.settings.attackMode==='manual'?'':'hidden'}><span class="key">F</span>${iconMarkup({art:1})}</button>
-        ${Array.from({length:HERO_SKILL_CAPACITY},(_,i) => `<button class="skill-btn empty" data-skill="${i}" aria-label="Empty skill slot ${i + 1}"><span class="key">${['Q','E','R','T'][i]}</span><span class="skill-icon">＋</span><span class="cooldown"></span></button>`).join('')}
+        ${Array.from({length:SLOT_RULES.active.keys.length},(_,i) => `<button class="skill-btn empty" data-skill="${i}" aria-label="Empty skill slot ${i + 1}"><span class="key">${SLOT_RULES.active.keys[i]}</span><span class="skill-icon">＋</span><span class="cooldown"></span></button>`).join('')}
         <button class="dash-btn" data-dash aria-label="Dash"><span class="key">SPACE</span><span class="skill-icon">${iconMarkup({art:45})}</span><span class="cooldown"></span></button>
       </div>`;
     this.root.replaceChildren(this.el);
@@ -146,9 +146,10 @@ export class Hud {
     this.kills.textContent = state.kills;
   }
 
-  setSkills(slots) {
+  setSkills(slots, activeSlotCount = SLOT_RULES.active.keys.length) {
     this.skillEls.forEach((button, index) => {
       const skill = slots[index];
+      button.disabled = index >= activeSlotCount;
       button.classList.toggle('empty', !skill);
       button.querySelector('.skill-icon').innerHTML = skill ? iconMarkup(skill) : '＋';
       button.setAttribute('aria-label', t(skill ? `${skill.name}, level ${skill.level}` : `Empty skill slot ${index + 1}`));

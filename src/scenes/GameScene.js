@@ -5,7 +5,7 @@ import { ENEMIES, BOSSES, GEAR } from '../data/world.js';
 import { MODIFIERS } from '../data/heroes.js';
 import { Hud } from '../systems/Hud.js';
 import { ALLY_LEVEL, enemyPool, canSpawnEnemy, bossForHero, spawnOutsideView, facingFor } from '../systems/CombatRules.js';
-import { HERO_SKILL_CAPACITY, draftSkills } from '../systems/SkillDraft.js';
+import { SLOT_RULES, slotCount, draftSkills, draftMilestoneSkills } from '../systems/SkillDraft.js';
 import { SupportSystem } from '../systems/SupportSystem.js';
 import { applyProjectileTint, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
 import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../skills/index.js';
@@ -56,6 +56,9 @@ export class GameScene extends Phaser.Scene {
     this.chunks = new Set();
     this.gear = [];
     this.skillSlots = [];
+    this.passiveSlots = [];
+    this.completedSkillMilestones = new Set();
+    this.loadoutLevel = 1;
     this.summons = [];
     this.skillEffects = [];
     this.companion=null;
@@ -113,7 +116,7 @@ export class GameScene extends Phaser.Scene {
       attack:()=>{if(this.settings.attackMode==='manual' && this.autoTimer<=0 && !this.pausedForChoice)this.autoAttack();},
     });
     this.hud.setHero(hero);
-    this.hud.setSkills(this.skillSlots);
+    this.hud.setSkills(this.skillSlots, slotCount('active', this.loadoutLevel));
     this.hud.toast(`${map.name} · ${mode.name}`);
     this.audio.music(map.music);
     this.events.once('shutdown', () => this.cleanup());
@@ -249,8 +252,12 @@ export class GameScene extends Phaser.Scene {
     const moving = this.player.body.speed > 5;
     const movingHaste = moving && this.hasGear('feathered-headdress') ? .12 : 0;
     const recovery = (1 + this.stats.haste + movingHaste + this.support.modifiers().haste) * this.stats.cooldownRecoveryMult;
-    this.skillSlots.forEach((skill) => { skill.remaining = Math.max(0, skill.remaining - dt * recovery); });
-    for(let i=0;i<HERO_SKILL_CAPACITY;i++)this.hud.setCooldown(i,this.skillSlots[i]?this.skillSlots[i].remaining/skillCooldown(this.skillSlots[i]):0);
+    const activeCount=slotCount('active',this.stats.level);
+    for(let i=0;i<Math.min(activeCount,this.skillSlots.length);i++){
+      const skill=this.skillSlots[i];
+      skill.remaining=Math.max(0,skill.remaining-dt*recovery);
+    }
+    for(let i=0;i<activeCount;i++)this.hud.setCooldown(i,this.skillSlots[i]?this.skillSlots[i].remaining/skillCooldown(this.skillSlots[i]):0);
     this.hud.setCooldown(0, this.dash.cooldown / 3.1, true);
   }
 
@@ -431,6 +438,7 @@ export class GameScene extends Phaser.Scene {
 
   castSkill(index) {
     if (this.ended || this.pausedForChoice || this.scene.isPaused()) return;
+    if (index < 0 || index >= slotCount('active', this.stats.level)) return;
     const skill = this.skillSlots[index];
     if (!skill || skill.remaining > 0) return;
     const ctx = skillContext(this, skill);
@@ -895,16 +903,34 @@ export class GameScene extends Phaser.Scene {
   showLevelChoice() {
     const earnedLevel=this.stats.level-this.pendingLevelUps+1;
     this.pendingLevelUps -= 1;
+    this.loadoutLevel=earnedLevel;
+    this.hud.setSkills(this.skillSlots,slotCount('active',earnedLevel));
     this.pauseForSelection();
     this.audio.sfx('level');
-    const cards = this.getSkillChoices(false);
-    const supportStep=()=>{
-      if(earnedLevel>=ALLY_LEVEL&&!this.companion)this.support.chooseClass(()=>{this.support.syncLevel(earnedLevel);this.finishSelection();});
-      else if(this.companion){this.support.syncLevel(earnedLevel);this.support.offerChange(()=>this.finishSelection());}
-      else this.finishSelection();
+    const cards = this.getSkillChoices(false,earnedLevel);
+    const afterPick=()=>{
+      const afterSupport=()=>this.showSkillMilestone(earnedLevel,()=>this.finishSelection());
+      if(earnedLevel>=ALLY_LEVEL&&!this.companion)this.support.chooseClass(()=>{this.support.syncLevel(earnedLevel);afterSupport();});
+      else if(this.companion){this.support.syncLevel(earnedLevel);this.support.offerChange(afterSupport);}
+      else afterSupport();
     };
-    const show=()=>this.hud.showChoice(`Level ${earnedLevel}`,cards,card=>this.applyChoice(card,supportStep,show));
+    const show=()=>this.hud.showChoice(`Level ${earnedLevel}`,cards,card=>this.applyChoice(card,afterPick,show));
     show();
+  }
+
+  showSkillMilestone(earnedLevel,onDone) {
+    const kind=earnedLevel===10?'passive':earnedLevel===20?'active':null;
+    if(!kind||this.completedSkillMilestones.has(earnedLevel)){onDone();return;}
+    this.completedSkillMilestones.add(earnedLevel);
+    const cards=this.getMilestoneChoices(kind,earnedLevel);
+    if(!cards.length){
+      // Hero-only passives arrive in later conversion steps; do not invent placeholder skills.
+      this.hud.toast(kind==='passive'?'Passive slot 2 unlocked; passive skills arrive in a later update.':'Skill slot unlocked.');
+      onDone();
+      return;
+    }
+    const title=kind==='passive'?'Passive Slot Unlocked':'Fourth Active Slot Unlocked';
+    this.hud.showChoice(title,cards,card=>this.applyChoice(card,onDone,()=>this.finishSelection()),`Choose one ${kind} skill.`);
   }
 
   pauseForSelection(){this.pausedForChoice=true;this.physics.pause();this.tweens.pauseAll();this.time.paused=true;this.releaseAttack();this.hud.move={x:0,y:0};}
@@ -921,32 +947,57 @@ export class GameScene extends Phaser.Scene {
     this.hud.showChoice('Support Loadout',this.companion.skills.map(k=>({...k,name:t('{name} · Lv {n}',{name:t(k.name),n:k.level})})),()=>this.finishSelection(),'Support skills level up automatically with your hero.',{label:'Resume',action:()=>this.finishSelection()});
   }
 
-  getSkillChoices(bossReward) {
-    return draftSkills(this.heroData.skills,this.skillSlots,HERO_SKILL_CAPACITY,shuffle,MODIFIERS,bossReward);
+  getSkillChoices(bossReward,heroLevel=this.stats.level) {
+    const activeCount=slotCount('active',heroLevel);
+    const passiveCount=slotCount('passive',heroLevel);
+    return draftSkills({activeSkills:this.heroData.skills,passiveSkills:this.heroData.passives||[],activeSlots:this.skillSlots,passiveSlots:this.passiveSlots,
+      activeCount,passiveCount,modifiers:MODIFIERS,boss:bossReward,shuffle,
+      random:Math.random,guaranteePassive:heroLevel%2===0});
+  }
+
+  getMilestoneChoices(kind,heroLevel=this.stats.level) {
+    return draftMilestoneSkills(kind,{activeSkills:this.heroData.skills,passiveSkills:this.heroData.passives||[],activeSlots:this.skillSlots,passiveSlots:this.passiveSlots,
+      activeCount:slotCount('active',heroLevel),passiveCount:slotCount('passive',heroLevel),shuffle,random:Math.random});
   }
 
   applyChoice(card,onDone=()=>{},onCancel=()=>this.finishSelection()) {
-    if(card.choiceType==='replace-skill'||(card.choiceType==='new-skill'&&this.skillSlots.length>=HERO_SKILL_CAPACITY)){
-      this.hud.showChoice('Choose a skill to replace',this.skillSlots,(_,index)=>{
-        this.skillSlots[index]={...this.heroData.skills.find(s=>s.id===card.id),level:1,remaining:0};
-        this.hud.setSkills(this.skillSlots);onDone();
-      },'The new hero skill starts at level 1.',{label:'Cancel',action:onCancel});return;
+    const kind=card.kind||'active';
+    const slots=kind==='passive'?this.passiveSlots:this.skillSlots;
+    const pool=kind==='passive'?(this.heroData.passives||[]):this.heroData.skills;
+    if(card.choiceType==='swap'){
+      this.hud.showChoice('Choose a skill to replace',slots.filter(skill=>(skill.kind||kind)===kind),(_,index)=>{
+        const replaceable=slots.map((skill,slotIndex)=>({skill,slotIndex})).filter(({skill})=>(skill.kind||kind)===kind);
+        const target=replaceable[index]?.skill;
+        const slotIndex=replaceable[index]?.slotIndex;
+        if(target&&slotIndex!==undefined){
+          if(kind==='passive')this.passives.unequip(target.id);
+          slots[slotIndex]={...pool.find(skill=>skill.id===card.id)||card,kind,level:1,remaining:0};
+          if(kind==='passive')this.passives.equip(slots[slotIndex],1);
+        }
+        this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));onDone();
+      },`The new ${kind} skill starts at level 1.`,{label:'Cancel',action:onCancel});return;
     }
-    if (card.choiceType === 'new-skill') {
-      if(!this.skillSlots.some(s=>s.id===card.id))this.skillSlots.push({ ...card, level: 1, remaining: 0 });
-    } else if (card.choiceType === 'skill-upgrade') {
-      const existing = this.skillSlots.find((entry) => entry.id === card.id);
-      if (existing) existing.level = Math.min(6, existing.level + 1);
+    if (card.choiceType === 'new-active'||card.choiceType==='new-passive') {
+      if(!slots.some(skill=>skill.id===card.id)){
+        const skill={...pool.find(entry=>entry.id===card.id)||card,kind,level:1,remaining:0};
+        slots.push(skill);
+        if(kind==='passive')this.passives.equip(skill,1);
+      }
+    } else if (card.choiceType === 'upgrade-active'||card.choiceType==='upgrade-passive') {
+      const existing = slots.find((entry) => entry.id === card.id);
+      const maxLevel=kind==='passive'?SLOT_RULES.passive.maxLevel:SLOT_RULES.active.maxLevel;
+      if (existing){existing.level=Math.min(maxLevel,existing.level+1);if(kind==='passive')this.passives.setLevel(existing.id,existing.level);}
     } else {
       this.applyModifier(card);
     }
-    this.hud.setSkills(this.skillSlots);
+    this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));
     onDone();
   }
 
   applyModifier(card) {
     const { stat, amount } = card;
-    if (stat === 'damage') this.stats.damage += amount;
+    if (stat === 'heal') this.stats.hp=Math.min(this.stats.maxHp,this.stats.hp+amount);
+    else if (stat === 'damage') this.stats.damage += amount;
     else if (stat === 'maxHp') { this.stats.maxHp += amount; this.stats.hp = Math.min(this.stats.maxHp, this.stats.hp + amount); }
     else if (stat === 'speed') this.stats.speed *= 1 + amount;
     else if (stat === 'haste') this.stats.haste += amount;
