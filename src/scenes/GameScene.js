@@ -16,6 +16,7 @@ import { HERO_EFFECT_DEFAULTS, enemyStatusDefaults, updateEnemy, canEnemyAttack,
 import { FxDirector } from '../fx/FxDirector.js';
 import '../fx/recipes/balam.js';
 import { IXCHEL_FX_IDS } from '../fx/recipes/ixchel.js';
+import '../fx/recipes/kukul.js';
 import { decorateIxchelProjectile } from '../fx/ixchelStages.js';
 import { SkillAudio } from '../systems/SkillAudio.js';
 import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';

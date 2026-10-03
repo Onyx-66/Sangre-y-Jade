@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step16/contact-sheet-2.png",
+  "items": [
+    {
+      "file": "fx/storm-nest/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/storm-nest/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/plume-guard/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/plume-guard/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/cacao-bomb/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/cacao-bomb/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/forked-flight/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/forked-flight/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/gale-ring/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/gale-ring/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/hunters-trance/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/hunters-trance/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/skyfall/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/skyfall/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/kukulkans-breath/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/kukulkans-breath/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

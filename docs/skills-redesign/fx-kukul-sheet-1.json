@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step16/contact-sheet-1.png",
+  "items": [
+    {
+      "file": "fx/atlatl-volley/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/atlatl-volley/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/featherstorm/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/featherstorm/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/serpent-path/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/serpent-path/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/windstep/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/windstep/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/quetzal-flip/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/quetzal-flip/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/hunter-snare/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/hunter-snare/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/eagle-eye/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/eagle-eye/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/sun-dart/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/sun-dart/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

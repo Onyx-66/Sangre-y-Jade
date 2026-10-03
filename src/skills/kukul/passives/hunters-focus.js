@@ -11,7 +11,8 @@ export const huntersFocus={...data,
   if(dot||byAlly)return;
   const same=enemy===state.target&&enemy.getData('serial')===state.serial;
   state.stacks=Math.min(data.params.maxStacks,same?(state.stacks||0)+1:1);state.target=enemy;state.serial=enemy.getData('serial');
-  state.hudState={type:'stacks',value:state.stacks,max:data.params.maxStacks};proc(scene,data,enemy);
+  state.hudState={type:'stacks',value:state.stacks,max:data.params.maxStacks};
+  const serial=state.serial;proc(scene,data,enemy,true,{target:enemy,stacks:state.stacks,isAlive:()=>enemy.active&&enemy.getData('serial')===serial});
  },
  tick({state}){state.hudState??={type:'stacks',value:0,max:data.params.maxStacks};},
 }};

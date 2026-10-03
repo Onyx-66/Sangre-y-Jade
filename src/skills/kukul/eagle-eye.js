@@ -11,6 +11,6 @@ export function eagleEye(scene,skill,ctx) {
   if(scene.eagleFocus===focus)scene.eagleFocus=null;
   if(focus.cancelled||scene.ended)return;
   const angle=scene.getAimAngle(ctx.target?.active?ctx.target:null);
-  for(let i=0;i<ctx.projectiles;i++){spawnProjectile(scene,{angle,damage:ctx.damage,critBonus:1,pierce:p.pierce,life:ctx.range/620,tint:skill.palette[0],skillId:skill.id,onHit:enemy=>present(scene,skill,'impact',{x:enemy.x,y:enemy.y})});present(scene,skill,'travel',{angle});}
+  for(let i=0;i<ctx.projectiles;i++){const shot=spawnProjectile(scene,{angle,damage:ctx.damage,critBonus:1,pierce:p.pierce,life:ctx.range/620,tint:skill.palette[0],skillId:skill.id,onHit:enemy=>present(scene,skill,'impact',{x:enemy.x,y:enemy.y})});present(scene,skill,'travel',{projectile:shot});}
  });
 }

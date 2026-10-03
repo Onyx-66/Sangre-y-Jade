@@ -1,0 +1,50 @@
+{
+  "expectedCount": 8,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step16/contact-sheet-3.png",
+  "items": [
+    {
+      "file": "fx/sharpened-flint/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/venomous-darts/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/full-quiver/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/hunters-focus/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/fleet-hunter/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/jungle-instinct/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/trophy-hunter/proc.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "fx/steady-aim/proc.png",
+      "width": 128,
+      "height": 128
+    }
+  ]
+}

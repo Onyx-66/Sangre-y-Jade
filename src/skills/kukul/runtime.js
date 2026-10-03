@@ -1,5 +1,10 @@
-import { present, proc, within, nearest, motion, buff, pulses, segmentDistance } from '../balam/runtime.js';
-export { present, proc, within, nearest, motion, buff, pulses, segmentDistance };
+import { present as sharedPresent, proc, within, nearest, motion, buff, pulses, segmentDistance } from '../balam/runtime.js';
+import { playKukulProjectile } from '../../fx/kukulStages.js';
+export { proc, within, nearest, motion, buff, pulses, segmentDistance };
+export function present(scene,skill,stage='cast',context={}){
+ if(stage==='travel'&&context.projectile){const {projectile,...ctx}=context;return playKukulProjectile(scene,skill,projectile,ctx);}
+ return sharedPresent(scene,skill,stage,context);
+}
 export const MOBILITY_SECONDS = .24; // Preserve the previous skill-dash timing where unstated.
 export function wantsToMove(scene) {
  const keys=scene.keys||{},cursors=scene.cursors||{};

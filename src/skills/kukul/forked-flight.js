@@ -3,6 +3,7 @@ import { present, within } from './runtime.js';
 export function forkedFlight(scene,skill,ctx) {
  const p=skill.params;present(scene,skill);
  const parent=spawnProjectile(scene,{angle:ctx.aim,damage:0,life:p.splitSeconds*ctx.durationScale,skillId:skill.id,tint:skill.palette[0]});if(!parent)return;
+ present(scene,skill,'travel',{projectile:parent});
  const owner={};parent.setData({pendingSplit:true,splitOwner:owner});
  let age=0;const start={x:parent.x,y:parent.y},speed=Math.hypot(parent.body.velocity.x,parent.body.velocity.y);
  const effect=timedEffect(scene,p.splitSeconds*ctx.durationScale,[],dt=>{age+=dt;},()=>{
@@ -14,7 +15,7 @@ export function forkedFlight(scene,skill,ctx) {
   for(let i=0;i<ctx.projectiles;i++){
    const target=targets[i%Math.max(1,targets.length)],angle=target?Math.atan2(target.y-origin.y,target.x-origin.x):ctx.aim+(i-(ctx.projectiles-1)/2)*.13;
    const shot=spawnProjectile(scene,{origin,angle,damage:ctx.damage,tint:skill.palette[0],skillId:skill.id,onHit:enemy=>present(scene,skill,'impact',{x:enemy.x,y:enemy.y})});
-   shot?.setData({homingTarget:target,homingSerial:target?.getData('serial'),homingTurn:Math.PI*2,homingSpeed:620});present(scene,skill,'travel',{...origin,angle});
+   shot?.setData({homingTarget:target,homingSerial:target?.getData('serial'),homingTurn:Math.PI*2,homingSpeed:620});present(scene,skill,'travel',{projectile:shot});
   }
  });return effect;
 }

@@ -1,0 +1,307 @@
+{
+  "audits": [
+    {
+      "id": "atlatl-volley",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 5.4,
+      "maxLiveUnits": 8
+    },
+    {
+      "id": "featherstorm",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 9.5,
+      "maxLiveUnits": 5
+    },
+    {
+      "id": "serpent-path",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 6.5,
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "windstep",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "impact",
+        "ground"
+      ],
+      "cooldown": 5.5,
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "quetzal-flip",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 5.5,
+      "maxLiveUnits": 8
+    },
+    {
+      "id": "hunter-snare",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact",
+        "ground"
+      ],
+      "cooldown": 7.8,
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "eagle-eye",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 5.5,
+      "maxLiveUnits": 3
+    },
+    {
+      "id": "sun-dart",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 6.6,
+      "maxLiveUnits": 13
+    },
+    {
+      "id": "storm-nest",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 10.5,
+      "maxLiveUnits": 7
+    },
+    {
+      "id": "plume-guard",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "impact"
+      ],
+      "cooldown": 11,
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "cacao-bomb",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "ground",
+        "impact"
+      ],
+      "cooldown": 8.4,
+      "maxLiveUnits": 6
+    },
+    {
+      "id": "forked-flight",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 5.8,
+      "maxLiveUnits": 7
+    },
+    {
+      "id": "gale-ring",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "impact"
+      ],
+      "cooldown": 7.2,
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "hunters-trance",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura"
+      ],
+      "cooldown": 13,
+      "maxLiveUnits": 3
+    },
+    {
+      "id": "skyfall",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "ground",
+        "travel",
+        "impact"
+      ],
+      "cooldown": 12,
+      "maxLiveUnits": 16
+    },
+    {
+      "id": "kukulkans-breath",
+      "kind": "active",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "cast",
+        "aura",
+        "impact"
+      ],
+      "cooldown": 10.5,
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "sharpened-flint",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 1
+    },
+    {
+      "id": "venomous-darts",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "full-quiver",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 1
+    },
+    {
+      "id": "hunters-focus",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "fleet-hunter",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 1
+    },
+    {
+      "id": "jungle-instinct",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 1
+    },
+    {
+      "id": "trophy-hunter",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc"
+      ],
+      "maxLiveUnits": 4
+    },
+    {
+      "id": "steady-aim",
+      "kind": "passive",
+      "seconds": 10,
+      "frames": 300,
+      "stages": [
+        "proc",
+        "aura"
+      ],
+      "maxLiveUnits": 2
+    }
+  ],
+  "plumePops": 3,
+  "stressMaxLiveUnits": 24,
+  "loadedStills": 40,
+  "missingTextures": [],
+  "maxLiveUnits": 24,
+  "missingSeen": [],
+  "errors": [],
+  "consoleErrors": [],
+  "missingStills": [],
+  "elapsedMs": 7710
+}

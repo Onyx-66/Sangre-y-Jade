@@ -170,3 +170,48 @@ Shared prompt for all 42 cells: gpt-image-2.5 Flare, transparent 4×4 2048×2048
 - `fx/spirit-harvest/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 6: upright pale-green wisp with tiny curling trail.
 - `fx/crescent-blessing/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 7: blue diamond sparkle with a small target-to-hero tail.
 - `fx/mana-overflow/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 8: two blue energy ellipses, mana ring and faint hero aura.
+
+## Step 16 — Kukul effect stills — 2026-10-03
+
+Generated through built-in ImageGen with `style_reference_fx.png` and `style_reference.png`; full prompts and the one single-cell correction are preserved in `FX_PROMPTS_KUKUL.json`. The tool exposes no model/variant selector, so the labels below record the requested routing, not verified service metadata. Final images have genuine alpha, active files are 256×256 and passive files 128×128. Preserved raw/normalized sheets and inspected contact sheets are in `previews/step16/`. Sheet 1 was regenerated for adequate cell margins; Sharpened Flint was regenerated once to remove its yellow core. All 40 final outputs were visually reviewed and passed size, transparent-border, no-magenta and distinct-file checks. No downloads, programmatically drawn sprite art, audio or frame sequences.
+
+- `fx/atlatl-volley/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 1: slim turquoise dart with red-feather fletching.
+- `fx/atlatl-volley/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 2: turquoise muzzle sparkle and red feather burst.
+- `fx/featherstorm/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 3: tapered tornado funnel of dark-red and ivory feathers.
+- `fx/featherstorm/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 4: curved fan of red-white feather debris.
+- `fx/serpent-path/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 5: sinuous jade serpent with luminous head and pale tail.
+- `fx/serpent-path/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 6: wavy translucent green trail with scale sparkles.
+- `fx/windstep/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 7: tapering cyan speed streaks and leading swirl.
+- `fx/windstep/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 8: curled white-cyan translucent wind ribbon.
+- `fx/quetzal-flip/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 9: red-jade semicircular feather afterimage.
+- `fx/quetzal-flip/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 10: compact red-green take-off feather spray.
+- `fx/hunter-snare/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 11: unfurled brown diamond-mesh rope net.
+- `fx/hunter-snare/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 12: overhead sticky grass circle and loose rope strands.
+- `fx/eagle-eye/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 13: golden eye with thin focus-ring motif, no head.
+- `fx/eagle-eye/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 14: narrow gold-white beam ending in a white star.
+- `fx/sun-dart/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 15: gold solar dart with orange spark tail.
+- `fx/sun-dart/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 1 cell 16: angular orange-gold sunburst and kinked ricochet ray.
+- `fx/storm-nest/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 1: woven brown nest with ivory eggs and blue gale.
+- `fx/storm-nest/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 2: tight fan of three thin blue dart streaks.
+- `fx/plume-guard/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 3: single jade quetzal feather with red base.
+- `fx/plume-guard/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 4: green feather-pop flash and red quill flecks.
+- `fx/cacao-bomb/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 5: brown clay cacao pot with lit fuse and small shadow.
+- `fx/cacao-bomb/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 6: orange-brown blast with cacao-bean shrapnel.
+- `fx/forked-flight/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 7: slim turquoise dart and white curved tail, no red feathers.
+- `fx/forked-flight/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 8: white-turquoise fork flash and three diverging trails.
+- `fx/gale-ring/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 9: thin blue-white wind ring with leaf debris.
+- `fx/gale-ring/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 10: scattered leaf puff with cyan edges.
+- `fx/hunters-trance/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 11: pair of golden eye-shaped light marks, no face.
+- `fx/hunters-trance/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 12: open gold crosshair with orbit sparks.
+- `fx/skyfall/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 13: heavy dark dart with red-brown smoke trail.
+- `fx/skyfall/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 14: red overhead telegraph circle and brown impact dust.
+- `fx/kukulkans-breath/main.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 15: luminous green-turquoise-gold scaled beam.
+- `fx/kukulkans-breath/accent.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 2 cell 16: jade feathered serpent head with open mouth and gold fangs.
+- `fx/sharpened-flint/proc.png` — gpt-image-2.5 Sunburst (requested correction) — 2026-10-03 — Sheet 3 cell 1 replacement: tiny grey-white flint tip with pure white glint, no yellow/gold.
+- `fx/venomous-darts/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 2: three green poison droplets with bright acid cores.
+- `fx/full-quiver/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 3: flashing brown quiver of red-feather turquoise darts.
+- `fx/hunters-focus/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 4: small red crosshair and targeting pips, no eye.
+- `fx/fleet-hunter/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 5: white-cyan wind swirl around a turquoise dart.
+- `fx/jungle-instinct/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 6: green leaf burst and translucent wind afterimage, no body/face.
+- `fx/trophy-hunter/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 7: gold quills and amber celebratory feather sparks.
+- `fx/steady-aim/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 8: thin jade reticle with white ticks and transparent centre.

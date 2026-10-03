@@ -1,11 +1,12 @@
+import { kukulProjectileContext } from '../../fx/kukulStages.js';
 // Metadata belongs to the shot, not the shooter: upgrades cannot retroactively change it.
 export function configureProjectile(scene, projectile, {basicAttack=false,skillId=null,byAlly=false}={}) {
  if(!projectile)return projectile;
- projectile.setData({basicAttack,skillId});
+ projectile.setData({basicAttack,skillId,fxBasicCount:basicAttack?(scene.basicAttackCount||0)+1:null});
  if(byAlly)return projectile;
  const modifiers=scene.passives.modifiers();
  projectile.setData('pierce',projectile.getData('pierce')+(modifiers.pierce||0));
- if(modifiers.pierce)scene.fx?.play('sharpened-flint','proc',{x:projectile.x,y:projectile.y,duration:.1});
+ if(modifiers.pierce)scene.fx?.play('sharpened-flint','proc',{...kukulProjectileContext(scene,projectile),replace:false,duration:.1});
  if(scene.skillBuffs?.has('hunters-trance')){
   const target=scene.closestEnemy(projectile.x,projectile.y,scene.heroData.automatic.range*scene.stats.range);
   const velocity=projectile.body.velocity;

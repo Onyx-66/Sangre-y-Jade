@@ -8,5 +8,8 @@ export const steadyAim={...data,
   const still=stationary(scene,state),was=state.ready;state.stillFor=still?(state.stillFor||0)+dt:0;state.ready=state.stillFor+1e-9>=data.params.standSeconds;
   state.point={x:scene.player.x,y:scene.player.y};state.hudState={type:'timer',remaining:Math.max(0,data.params.standSeconds-state.stillFor),duration:data.params.standSeconds,ready:state.ready};
   if(state.ready&&!was)proc(scene,data,scene.player,false);
+  if(!state.ready){state.fx?.destroy();state.fx=null;}
+  else if(!state.fx?.active)state.fx=scene.fx?.play(data.id,'aura',{target:scene.player,
+   isAlive:()=>scene.passives.equipped.get(data.id)?.state===state&&state.ready&&stationary(scene,state)});
  }},
 };
