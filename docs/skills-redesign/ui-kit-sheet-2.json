@@ -1,0 +1,12 @@
+{
+  "expectedCount": 2,
+  "columns": 2,
+  "rows": 1,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/ui-kit-contact-02.png",
+  "items": [
+    { "file": "ui/rank-badge-5.png", "width": 64, "height": 64 },
+    { "file": "ui/ally-panel-bg.png", "width": 384, "height": 112 }
+  ]
+}

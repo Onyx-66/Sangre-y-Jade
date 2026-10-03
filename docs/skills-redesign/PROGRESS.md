@@ -9,7 +9,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - [x] 03 — Handler, status-effect and passive engine foundations
 - [ ] 04 — Name not supplied
 - [x] 05 — Hero slots, level milestones, HUD and draft (section 3.6)
-- [ ] 06 — Name not supplied
+- [x] 06 — UI kit assets and sheet-slicing tool
 - [ ] 07 — Name not supplied
 - [ ] 08 — Name not supplied
 - [ ] 09 — Name not supplied
@@ -56,3 +56,10 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Tests:** `npm run check` — **62/62 tests passed** and production build passed (38 modules; existing >500 kB chunk-size warning). Focused checks cover slot totals, locked-T cooldown/input behavior, uniqueness, passive cadence, swap cap, boss contents, maxed fallback and 9→11 / 19→21 milestone sequencing.
 - **Open issues:** the prompt explicitly defers hero-only passive skills, so level 10 unlocks the passive slot and consumes its milestone once with a notice instead of fabricating three passive choices; the existing pool has no eligible passives. The level-20 active milestone works with the current hero pool. Step 4 was not included in this prompt. No assets, audio, dependencies or save data changed.
 - **Commit/version:** one commit labelled `[v0.5.0-skills-step5]`, annotated tag `v0.5.0-skills-step5`; application package version remains 0.5.0.
+
+## Step 6 — 2026-10-03 — Complete
+
+- **Changed:** created `scripts/slice-sheet.mjs`, a Sharp-based CLI that detects connected foreground components, groups detached accents within declared reading-order cells, checks counts, trims/centres/resizes to manifest dimensions with Lanczos3, removes magenta/black/transparent backgrounds with edge cleanup, writes alpha PNGs and contact previews. Added reusable JSON manifests for the 16-cell and 2-cell sheets and a focused slicer test. Generated all 18 requested UI assets with gpt-image-2.5 Flare; one milestone banner was regenerated with Sunburst to remove a stray speck. Final images are in `public/assets/pixel/ui/`, source sheets/contact sheets in `docs/skills-redesign/previews/`, and prompts are logged in `ASSET_LOG.md`. Logo/branding unchanged.
+- **Tests:** `npm run check` — **67/67 tests passed** and production build passed (38 modules; existing >500 kB chunk-size warning). Added a cross-platform metadata test for exact dimensions and alpha on all 18 PNGs; visually inspected both generated contact sheets and the regenerated milestone banner. `git diff --check` passed.
+- **Open issues:** the image service returned smaller source sheets than the requested 2048×2048/1024×512, so cell detection uses each actual sheet's grid and the final output dimensions are exact. `sharp` was already installed; no dependency was added. UI kit assets are not wired into the HUD in this asset-generation step.
+- **Commit/version:** one step-6 commit tagged `v0.5.0-skills-step6`; application package version remains 0.5.0.

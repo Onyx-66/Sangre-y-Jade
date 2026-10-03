@@ -73,3 +73,7 @@ The current XP formula (`GameScene.js:64,849-854`) yields **819 total XP for lev
 ## Step 5 — Slot and passive-milestone staging
 
 The section 3.6 level-10 reward calls for three passive cards, while this prompt explicitly says that until the later hero-conversion steps the pool contains no passives other than the two shared innate traits. Innate traits cannot be drafted or equipped into `passiveSlots`. Therefore, level 10 unlocks slot two and the milestone is marked consumed exactly once, but no fake or duplicated cards are shown; a notice explains that hero passives arrive in a later update. Once real passives are supplied, the same milestone path drafts three distinct kind-matched cards. Normal passive offers are surfaced on every even earned level while a passive slot remains free (level 2, then 4 if still empty). Existing hero skills are tagged active at draft time rather than rewriting the legacy hero catalogue in this step.
+
+## Step 6 — Slicer dependency and generated-sheet dimensions
+
+The slicer uses the already-declared `sharp` development dependency (`package.json`); no new dependency was needed. The built-in image model returned the first sheet at 1254×1254 and the second at 1774×887 rather than their requested 2048×2048 and 1024×512 canvases. Preserve those generated originals, detect/group components in the declared 4×4 and 2×1 cell grids, and produce every final asset at its requested exact dimensions. The milestone banner was the only corrected cell and was regenerated with the requested Sunburst variant; all other assets remain Flare.

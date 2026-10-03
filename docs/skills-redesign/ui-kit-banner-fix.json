@@ -1,0 +1,11 @@
+{
+  "expectedCount": 1,
+  "columns": 1,
+  "rows": 1,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/ui-kit-contact-banner-fix.png",
+  "items": [
+    { "file": "ui/milestone-banner.png", "width": 768, "height": 192 }
+  ]
+}

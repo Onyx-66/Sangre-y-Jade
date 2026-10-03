@@ -1,0 +1,26 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/ui-kit-contact-01.png",
+  "items": [
+    { "file": "ui/slot-active-plate.png", "width": 144, "height": 144 },
+    { "file": "ui/slot-passive-ring.png", "width": 120, "height": 120 },
+    { "file": "ui/slot-ally-plate.png", "width": 96, "height": 96 },
+    { "file": "ui/slot-locked-plate.png", "width": 144, "height": 144 },
+    { "file": "ui/slot-locked-ring.png", "width": 120, "height": 120 },
+    { "file": "ui/slot-trait-ring.png", "width": 56, "height": 56 },
+    { "file": "ui/ribbon-active.png", "width": 256, "height": 56 },
+    { "file": "ui/ribbon-passive.png", "width": 256, "height": 56 },
+    { "file": "ui/ribbon-ally.png", "width": 256, "height": 56 },
+    { "file": "ui/ribbon-stat.png", "width": 256, "height": 56 },
+    { "file": "ui/milestone-banner.png", "width": 768, "height": 192 },
+    { "file": "ui/unlock-burst.png", "width": 256, "height": 256 },
+    { "file": "ui/rank-badge-1.png", "width": 64, "height": 64 },
+    { "file": "ui/rank-badge-2.png", "width": 64, "height": 64 },
+    { "file": "ui/rank-badge-3.png", "width": 64, "height": 64 },
+    { "file": "ui/rank-badge-4.png", "width": 64, "height": 64 }
+  ]
+}
