@@ -1,5 +1,6 @@
 import { SUPPORTS, supportRank, dangerousEnemy } from '../data/supports.js';
 import { t } from '../i18n/index.js';
+import { updateDamageOverTime } from '../skills/StatusEffects.js';
 
 export class SupportSystem {
  constructor(scene){this.scene=scene;this.traps=[];this.effects={};}
@@ -7,6 +8,7 @@ export class SupportSystem {
   const s=this.scene,data=SUPPORTS[id];if(s.companion||!data)return null;
   const sprite=s.add.sprite(s.player.x-75,s.player.y+40,`support-${id}`).setScale(.62).setDepth(19);
   sprite.setData('animLock',0);
+  sprite.setData('byAlly',true);
   s.companion={id,sprite,skills:[],level:supportRank(s.stats.level),shot:.5};
   s.playEffect(4,sprite.x,sprite.y,125);s.audio.sfx('level');this.refresh();return s.companion;
  }
@@ -85,12 +87,12 @@ export class SupportSystem {
    case 'ambush':hit(27);s.playEffect(0,target.x,target.y,80);break;
    case 'mark':target.setData({markUntil:s.elapsed+5,markBonus:Math.min(.65,.2*p)});s.playEffect(4,target.x,target.y,65);break;
    case 'execute':hit(target.getData('hp')/target.getData('maxHp')<.35?65:22);s.playEffect(0,target.x,target.y,105);break;
-   case 'venom':target.setData({poisonUntil:s.elapsed+5,poisonDps:5*p});s.playEffect(1,target.x,target.y,70);break;
+   case 'venom':target.setData({poisonUntil:s.elapsed+5,poisonDps:5*p,poisonSource:a.sprite,poisonByAlly:true});s.playEffect(1,target.x,target.y,70);break;
    case 'silence':target.setData('silenceUntil',s.elapsed+3);hit(8);break;
    case 'disarm':target.setData('disarmUntil',s.elapsed+4);hit(10);break;
-   case 'rupture':target.setData({bleedUntil:s.elapsed+4,bleedDps:8*p});s.playEffect(3,target.x,target.y,65);break;
+   case 'rupture':target.setData({bleedUntil:s.elapsed+4,bleedDps:8*p,bleedSource:a.sprite,bleedByAlly:true});s.playEffect(3,target.x,target.y,65);break;
    case 'volley':hit(36);s.playEffect(0,target.x,target.y,70);s.playEffect(2,target.x+16,target.y-12,45);break;
-   case 'smoke':target.setData('slowUntil',s.elapsed+4);this.effects.smoke=s.elapsed+3;s.playEffect(5,s.player.x,s.player.y,145);break;
+   case 'smoke':target.setData({slowUntil:s.elapsed+4,slowPct:.5});this.effects.smoke=s.elapsed+3;s.playEffect(5,s.player.x,s.player.y,145);break;
    default:return false;
   }
   return true;
@@ -98,6 +100,7 @@ export class SupportSystem {
  placeTrap(kind,p){
   const s=this.scene;if(this.traps.length>=6){const old=this.traps.shift();old.sprite.destroy();}
   const sprite=s.add.image(s.player.x-s.lastMove.x*45,s.player.y-s.lastMove.y*45,`support-${kind}`).setDisplaySize(kind==='snare'?54:42,kind==='snare'?54:42).setDepth(8);
+  sprite.setData('byAlly',true);
   this.traps.push({kind,sprite,life:12,power:p,armed:.45});
  }
  updateTraps(dt){
@@ -109,15 +112,14 @@ export class SupportSystem {
     s.playEffect(trap.kind==='bomb'?5:4,trap.sprite.x,trap.sprite.y,160);
     for(const e of [...s.enemies.getChildren()])if(e.active&&Math.hypot(e.x-trap.sprite.x,e.y-trap.sprite.y)<135){
      if(trap.kind==='bomb')s.damageEnemy(e,32*trap.power,0,0,trap.sprite);
-     else e.setData('slowUntil',s.elapsed+4);
+     else e.setData({slowUntil:s.elapsed+4,slowPct:.5});
     }
    }
    if(target||trap.life<=0){trap.sprite.destroy();return false;}return true;
   });
  }
  updateEnemy(enemy,dt){
-  const s=this.scene,dps=(enemy.getData('poisonUntil')>s.elapsed?enemy.getData('poisonDps'):0)+(enemy.getData('bleedUntil')>s.elapsed?enemy.getData('bleedDps'):0);
-  if(dps){const hp=enemy.getData('hp')-dps*dt;enemy.setData('hp',hp);s.stats.damageDone+=dps*dt;if(hp<=0)s.killEnemy(enemy);}
+  updateDamageOverTime(this.scene,enemy,dt);
  }
  chooseClass(done){
   const s=this.scene;s.hud.showChoice('Choose Your Support',Object.values(SUPPORTS),card=>{this.summon(card.id);this.chooseInitial(done);},'One support per run. Choose 3 skills; they activate automatically.');

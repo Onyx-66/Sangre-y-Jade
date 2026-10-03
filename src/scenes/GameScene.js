@@ -7,7 +7,11 @@ import { Hud } from '../systems/Hud.js';
 import { ALLY_LEVEL, enemyPool, canSpawnEnemy, bossForHero, spawnOutsideView, facingFor } from '../systems/CombatRules.js';
 import { HERO_SKILL_CAPACITY, draftSkills } from '../systems/SkillDraft.js';
 import { SupportSystem } from '../systems/SupportSystem.js';
-import { applyProjectileTint, applySlow, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
+import { applyProjectileTint, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
+import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../skills/index.js';
+import { PassiveSystem } from '../skills/PassiveSystem.js';
+import { skillContext, skillCooldown, manaCost, updateSkillEffects, applyStatus } from '../skills/common.js';
+import { HERO_EFFECT_DEFAULTS, enemyStatusDefaults, updateEnemy, canEnemyAttack, enemyDamageMult, enemyShotAngle } from '../skills/StatusEffects.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -40,6 +44,7 @@ export class GameScene extends Phaser.Scene {
     this.pausedForChoice = false;
     this.elapsed = 0;
     this.autoTimer = 0;
+    this.basicAttackCount = 0;
     this.spawnTimer = 0;
     this.decorTimer = 0;
     this.nextBossIndex = 0;
@@ -52,6 +57,7 @@ export class GameScene extends Phaser.Scene {
     this.gear = [];
     this.skillSlots = [];
     this.summons = [];
+    this.skillEffects = [];
     this.companion=null;
     this.support=new SupportSystem(this);
     this.pendingBossRewards=[];
@@ -84,7 +90,11 @@ export class GameScene extends Phaser.Scene {
       damageDone: 0,
       damageTaken: 0,
       duration: mode.duration,
+      ...HERO_EFFECT_DEFAULTS,
     };
+
+    this.passives = new PassiveSystem(this);
+    for (const passive of INNATE_PASSIVES) this.passives.equip(passive, 1, { innate: true });
 
     buildTextures(this);
     this.physics.world.setBounds(-50000, -50000, 100000, 100000);
@@ -139,6 +149,7 @@ export class GameScene extends Phaser.Scene {
     this.player.body.setCircle(23, 41, 54);
     this.player.play(`hero-${this.heroData.id}-idle`);
     this.player.setData('animLock',0);
+    this.player.hiddenUntil = 0;
     this.cameras.main.startFollow(this.player, true, .09, .09);
     this.cameras.main.setZoom(1);
     this.invulnerable = 0;
@@ -173,9 +184,7 @@ export class GameScene extends Phaser.Scene {
     });
     this.physics.add.overlap(this.player, this.enemies, (_, enemy) => this.touchEnemy(enemy));
     this.physics.add.overlap(this.player, this.enemyProjectiles, (_, projectile) => {
-      if (!projectile.active) return;
-      this.damagePlayer(projectile.getData('damage') || 8, projectile.x, projectile.y);
-      projectile.destroy();
+      this.onEnemyProjectileHit(projectile);
     });
     this.physics.add.overlap(this.player, this.pickups, (_, pickup) => this.collectPickup(pickup));
     this.physics.add.overlap(this.player,this.props,(_,prop)=>this.damageProp(prop,Infinity));
@@ -186,7 +195,8 @@ export class GameScene extends Phaser.Scene {
     const delta = Math.min(deltaRaw, 50);
     const dt = delta / 1000;
     this.elapsed += dt;
-    this.autoTimer -= dt;
+    this.passives.emit('tick', { dt });
+    this.autoTimer -= dt * this.stats.cooldownRecoveryMult;
     this.spawnTimer -= dt;
     this.decorTimer -= dt;
     this.invulnerable = Math.max(0, this.invulnerable - dt);
@@ -199,6 +209,8 @@ export class GameScene extends Phaser.Scene {
     this.updatePickups(dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateSummons(dt);
+    updateSkillEffects(this, dt);
+    if(this.pausedForChoice||this.ended)return;
     this.updateCompanion(dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateVitals(dt);
@@ -218,11 +230,12 @@ export class GameScene extends Phaser.Scene {
 
     if (this.dash.remaining > 0) {
       this.dash.remaining -= dt;
-      this.player.setVelocity(this.dash.x * this.stats.speed * 3.65, this.dash.y * this.stats.speed * 3.65);
+      const speed = this.stats.speed * this.passives.modifiers().speedMult;
+      this.player.setVelocity(this.dash.x * speed * 3.65, this.dash.y * speed * 3.65);
       this.player.setAlpha(.72 + Math.sin(this.elapsed * 50) * .16);
     } else {
       this.player.setAlpha(1);
-      const speed=this.stats.speed*this.support.modifiers().speed;
+      const speed=this.stats.speed*this.support.modifiers().speed*this.passives.modifiers().speedMult;
       this.player.setVelocity(x * speed, y * speed);
     }
     this.facing=facingFor(this.player.body.velocity.x,this.player.body.velocity.y,this.facing);
@@ -235,16 +248,16 @@ export class GameScene extends Phaser.Scene {
   updateCooldowns(dt) {
     const moving = this.player.body.speed > 5;
     const movingHaste = moving && this.hasGear('feathered-headdress') ? .12 : 0;
-    const recovery = 1 + this.stats.haste + movingHaste + this.support.modifiers().haste;
+    const recovery = (1 + this.stats.haste + movingHaste + this.support.modifiers().haste) * this.stats.cooldownRecoveryMult;
     this.skillSlots.forEach((skill) => { skill.remaining = Math.max(0, skill.remaining - dt * recovery); });
-    for(let i=0;i<HERO_SKILL_CAPACITY;i++)this.hud.setCooldown(i,this.skillSlots[i]?this.skillSlots[i].remaining/this.skillSlots[i].cooldown:0);
+    for(let i=0;i<HERO_SKILL_CAPACITY;i++)this.hud.setCooldown(i,this.skillSlots[i]?this.skillSlots[i].remaining/skillCooldown(this.skillSlots[i]):0);
     this.hud.setCooldown(0, this.dash.cooldown / 3.1, true);
   }
 
   updateVitals(dt) {
     const regen=this.stats.regen+this.support.modifiers().regen;
     if (regen) this.stats.hp = Math.min(this.stats.maxHp, this.stats.hp + regen * dt);
-    if (this.stats.maxMana) this.stats.mana = Math.min(this.stats.maxMana, this.stats.mana + 11 * dt);
+    if (this.stats.maxMana) this.stats.mana = Math.min(this.stats.maxMana, this.stats.mana + 11 * dt * this.stats.manaRegenMult);
     const attacking=this.settings.attackMode!=='manual'||this.keys.attack.isDown||this.hud.attackHeld||this.manualPointer;
     if (this.autoTimer <= 0 && attacking) this.autoAttack();
   }
@@ -272,38 +285,14 @@ export class GameScene extends Phaser.Scene {
   }
 
   updateEnemies(dt) {
-    const px = this.player.x;
-    const py = this.player.y;
     this.enemies.children.each((enemy) => {
       if (!enemy?.active||this.pausedForChoice||this.ended) return;
-      this.support.updateEnemy(enemy,dt);if(!enemy.active||this.pausedForChoice)return;
-      if(enemy.getData('stunUntil')>this.elapsed){enemy.setVelocity(0,0);return;}
-      const taunted=enemy.getData('tauntUntil')>this.elapsed&&this.companion;
-      const dx = (taunted?this.companion.sprite.x:px) - enemy.x;
-      const dy = (taunted?this.companion.sprite.y:py) - enemy.y;
-      const distance = Math.hypot(dx, dy) || 1;
-      if (enemy.getData('isBoss')) {
-        this.updateBoss(enemy, dt, dx, dy, distance);
-      } else if (enemy.getData('ranged') && distance < 410) {
-        enemy.setVelocity(-dy / distance * 16, dx / distance * 16);
-        const nextShot = (enemy.getData('nextShot') || 0) - dt;
-        enemy.setData('nextShot', nextShot);
-        if (nextShot <= 0 && !(enemy.getData('silenceUntil')>this.elapsed)) {
-          this.spawnEnemyProjectile(enemy.x, enemy.y, Math.atan2(dy, dx), 210, (8 + this.elapsed / 150)*(enemy.getData('disarmUntil')>this.elapsed?.55:1));
-          enemy.setData('nextShot', 2.2 + Math.random() * .8);
-        }
-      } else {
-        const speed = enemy.getData('speed');
-        enemy.setVelocity(dx / distance * speed, dy / distance * speed);
-      }
-      applySlow(enemy, this.elapsed);
-      if (distance > 1900 && !enemy.getData('isBoss')) enemy.destroy();
-      enemy.setFlipX(dx < 0);
-      this.animateCharacter(enemy,enemy.getData('artKey'),'walk');
+      updateEnemy(this, enemy, dt);
     });
   }
 
   updateBoss(boss, dt, dx, dy, distance) {
+    if (!canEnemyAttack(this, boss)) { boss.setVelocity(0, 0); return; }
     const pattern = boss.getData('pattern');
     let timer = (boss.getData('patternTimer') || 1) - dt;
     boss.setData('patternTimer', timer);
@@ -323,20 +312,21 @@ export class GameScene extends Phaser.Scene {
       this.audio.sfx('boss');
     } else if (pattern === 'quake') {
       this.bossTelegraph(this.player.x, this.player.y, 150, 0xe39c59, () => {
-        if (Phaser.Math.Distance.Between(this.player.x, this.player.y, this.quakeX, this.quakeY) < 155) this.damagePlayer(22, this.quakeX, this.quakeY);
+        if (!boss.active || !canEnemyAttack(this, boss)) return;
+        if (Phaser.Math.Distance.Between(this.player.x, this.player.y, this.quakeX, this.quakeY) < 155) this.damagePlayer(22 * enemyDamageMult(this, boss), this.quakeX, this.quakeY, boss);
         this.damageArea({ x: this.quakeX, y: this.quakeY }, 155, 0, 0, false);
       });
       this.quakeX = this.player.x; this.quakeY = this.player.y;
       boss.setData('patternTimer', 4.1);
     } else if (pattern === 'sun') {
-      const base = Math.atan2(dy, dx);
-      for (let i = -2; i <= 2; i += 1) this.spawnEnemyProjectile(boss.x, boss.y, base + i * .18, 235, 13*(boss.getData('disarmUntil')>this.elapsed?.55:1));
+      const base = enemyShotAngle(this, boss, Math.atan2(dy, dx));
+      for (let i = -2; i <= 2; i += 1) this.spawnEnemyProjectile(boss.x, boss.y, base + i * .18, 235, 13 * enemyDamageMult(this, boss), boss);
       boss.setData('patternTimer', 2.05);
       this.audio.sfx('spell');
     } else {
       const hpRatio = boss.getData('hp') / boss.getData('maxHp');
       const count = hpRatio > .6 ? 7 : hpRatio > .3 ? 10 : 14;
-      for (let i = 0; i < count; i += 1) this.spawnEnemyProjectile(boss.x, boss.y, (i / count) * TAU + this.elapsed, 185 + (i % 2) * 55, 14*(boss.getData('disarmUntil')>this.elapsed?.55:1));
+      for (let i = 0; i < count; i += 1) this.spawnEnemyProjectile(boss.x, boss.y, (i / count) * TAU + this.elapsed, 185 + (i % 2) * 55, 14 * enemyDamageMult(this, boss), boss);
       if (hpRatio < .65) for (let i = 0; i < (hpRatio < .3 ? 3 : 1); i += 1) this.spawnEnemy('shade', 260 + i * 35);
       boss.setData('patternTimer', hpRatio < .3 ? 1.35 : 2.15);
       this.audio.sfx('boss');
@@ -360,13 +350,15 @@ export class GameScene extends Phaser.Scene {
   }
 
   updatePickups() {
+    const xpPickupRange = 170 * this.passives.modifiers().pickupRangeMult;
     // Containers open on contact too; collecting loot never requires an attack.
     for(const prop of [...this.props.getChildren()])if(prop.active&&Phaser.Math.Distance.Between(prop.x,prop.y,this.player.x,this.player.y)<50)this.damageProp(prop,Infinity);
     this.pickups.children.each((pickup) => {
       if (!pickup?.active||this.pausedForChoice||this.ended) return;
       const distance = Phaser.Math.Distance.Between(pickup.x, pickup.y, this.player.x, this.player.y);
+      const pickupRange = pickup.getData('kind') === 'xp' ? xpPickupRange : 170;
       if(distance<30){this.collectPickup(pickup);return;}
-      if (distance < 170) this.physics.moveToObject(pickup, this.player, 190 + (170 - distance) * 2.2);
+      if (distance < pickupRange) this.physics.moveToObject(pickup, this.player, 190 + (pickupRange - distance) * 2.2);
       else pickup.setVelocity(0, 0);
       const bubble=pickup.getData('bubble');if(bubble?.active){const pulse=1+Math.sin(this.elapsed*3+pickup.getData('phase'))*.07;bubble.setPosition(pickup.x,pickup.y).setDisplaySize(pickup.getData('bubbleSize')*pulse,pickup.getData('bubbleSize')*pulse);}
       if (distance > 1900) pickup.destroy();
@@ -379,9 +371,12 @@ export class GameScene extends Phaser.Scene {
       summon.shot -= dt;
       if (summon.life <= 0 || !summon.sprite.active) { summon.sprite.destroy(); return false; }
       if (summon.shot <= 0) {
-        const target = this.closestEnemy(summon.sprite.x, summon.sprite.y, 500);
-        if (target) this.fireProjectile(summon.sprite.x, summon.sprite.y, Phaser.Math.Angle.Between(summon.sprite.x, summon.sprite.y, target.x, target.y), summon.damage, 520, 1, 1.1, 0x69e7c0);
-        summon.shot = .65;
+        const target = this.closestEnemy(summon.sprite.x, summon.sprite.y, summon.range || 500);
+        if (target) {
+          const projectile = this.fireProjectile(summon.sprite.x, summon.sprite.y, Phaser.Math.Angle.Between(summon.sprite.x, summon.sprite.y, target.x, target.y), summon.damage, summon.speed || 520, summon.pierce || 1, 1.1, summon.tint ?? 0x69e7c0);
+          projectile?.setData({ source: summon.sprite, byAlly: true, status: summon.status || null });
+        }
+        summon.shot = summon.interval || .65;
       }
       summon.sprite.setAngle(Math.sin(this.elapsed * 5) * 5);
       return true;
@@ -413,10 +408,11 @@ export class GameScene extends Phaser.Scene {
   autoAttack() {
     if(this.ended||this.pausedForChoice)return;
     const weapon = this.heroData.automatic;
+    const cost = manaCost(this.stats, weapon.mana);
     const target = this.closestEnemy(this.player.x, this.player.y, weapon.range * this.stats.range);
     if (!target && this.settings.attackMode!=='manual') { this.autoTimer = .12; return; }
-    if (weapon.mana && this.stats.mana < weapon.mana) { this.autoTimer = .18; return; }
-    if (weapon.mana) this.stats.mana -= weapon.mana;
+    if (this.stats.mana < cost) { this.autoTimer = .18; return; }
+    this.stats.mana -= cost;
     const damage = weapon.damage * this.stats.damage * this.support.modifiers().damage;
     this.animateCharacter(this.player,this.playerArtKey(),'attack',.24);
     const angle = this.getAimAngle(target);
@@ -430,88 +426,90 @@ export class GameScene extends Phaser.Scene {
       this.audio.sfx(this.heroData.id === 'kukul' ? 'dart' : 'spell', .07);
     }
     this.autoTimer = weapon.cooldown / (1 + this.stats.haste + this.support.modifiers().haste);
+    this.passives.emit('basicAttack', { count: ++this.basicAttackCount, weapon, target });
   }
 
   castSkill(index) {
     if (this.ended || this.pausedForChoice || this.scene.isPaused()) return;
     const skill = this.skillSlots[index];
     if (!skill || skill.remaining > 0) return;
-    const mana = skill.mana || 0;
+    const ctx = skillContext(this, skill);
+    const mana = ctx.mana;
     if (mana && this.stats.mana < mana) { this.hud.toast('Not enough mana'); return; }
     this.stats.mana -= mana;
     this.animateCharacter(this.player,this.playerArtKey(),'attack',.28);
-    const levelScale = 1 + (skill.level - 1) * .32;
-    const damage = skill.damage * this.stats.damage * levelScale * this.support.modifiers().damage;
-    const range = skill.range * this.stats.range * (1 + (this.hasGear('bone-bracers') ? .25 : 0));
-    const target = this.closestEnemy(this.player.x, this.player.y, Math.max(range, 680));
-    const aim = this.getAimAngle(target);
-    const tx = target?.x ?? this.player.x + Math.cos(aim) * Math.max(120, range * .65);
-    const ty = target?.y ?? this.player.y + Math.sin(aim) * Math.max(120, range * .65);
-
-    switch (skill.type) {
-      case 'projectile':
-        this.fireProjectile(this.player.x, this.player.y, aim, damage, 720, skill.pierce || 1, 1.35, 0x69eec1, skill.critBonus || 0);
-        break;
-      case 'burst': {
-        const count = skill.projectiles || 7;
-        const radial = count >= 8;
-        for (let i = 0; i < count; i += 1) {
-          const angle = radial ? (i / count) * TAU : aim + (i - (count - 1) / 2) * .13;
-          this.fireProjectile(this.player.x, this.player.y, angle, damage, 610, skill.pierce || 1, 1.25, 0x75e0b6);
+    const { damage, range, target, aim, tx, ty } = ctx;
+    const handler = ACTIVE_HANDLERS[skill.id];
+    if (handler) {
+      handler(this, skill, ctx);
+    } else {
+      // LEGACY FALLBACK — TODO: remove in step 10, when the last hero is converted.
+      switch (skill.type) {
+        case 'projectile':
+          for (let i = 0; i < ctx.projectiles; i += 1) this.fireProjectile(this.player.x, this.player.y, aim + (i - (ctx.projectiles - 1) / 2) * .13, damage, 720, skill.pierce || 1, 1.35 * ctx.durationScale, 0x69eec1, skill.critBonus || 0);
+          break;
+        case 'burst': {
+          const count = ctx.projectiles;
+          const radial = count >= 8;
+          for (let i = 0; i < count; i += 1) {
+            const angle = radial ? (i / count) * TAU : aim + (i - (count - 1) / 2) * .13;
+            this.fireProjectile(this.player.x, this.player.y, angle, damage, 610, skill.pierce || 1, 1.25 * ctx.durationScale, 0x75e0b6);
+          }
+          break;
         }
-        break;
+        case 'nova':
+          this.damageArea(this.player, range, damage, skill.knockback || 180);
+          this.ringEffect(this.player.x, this.player.y, range / 64, 0x62e7b9);
+          this.damagePropsInArea(this.player.x, this.player.y, range);
+          break;
+        case 'cone':
+          this.attackCone(aim, range, damage, Math.PI * .72, skill.knockback || 170);
+          this.coneEffect(aim, range);
+          this.damagePropsInArea(this.player.x + Math.cos(aim) * range * .45, this.player.y + Math.sin(aim) * range * .45, range * .55);
+          break;
+        case 'line':
+          for (let i = 0; i < ctx.projectiles; i += 1) this.fireProjectile(this.player.x, this.player.y, aim + (i - (ctx.projectiles - 1) / 2) * .13, damage, 770, skill.pierce || 12, 1.25 * ctx.durationScale, 0x8affd1, 0, 1.45);
+          break;
+        case 'orbit': {
+          const count = ctx.projectiles;
+          for (let i = 0; i < count; i += 1) this.fireProjectile(this.player.x, this.player.y, (i / count) * TAU + this.elapsed, damage, 330, 3, 1.4 * ctx.durationScale, 0xefc27a);
+          this.stats.shield += 7 + skill.level * 3;
+          break;
+        }
+        case 'trap':
+          this.placeTrap(tx, ty, range, damage, ctx.durationScale);
+          break;
+        case 'heal': {
+          const heal = (skill.heal || 24) * (1 + (skill.level - 1) * .2) * this.stats.healing;
+          this.stats.hp = Math.min(this.stats.maxHp, this.stats.hp + heal);
+          if (skill.shield) this.stats.shield += skill.shield;
+          this.healEffect();
+          break;
+        }
+        case 'shield':
+          this.stats.shield += (skill.shield || 45) * (1 + (skill.level - 1) * .25);
+          this.shieldEffect();
+          break;
+        case 'chain':
+          this.chainAttack(target, range, damage, ctx.chains);
+          break;
+        case 'summon':
+          this.createSummon(damage, { duration: 12 * ctx.durationScale });
+          break;
+        case 'dash':
+          this.attackCone(aim, range, damage, Math.PI * .52, 260);
+          this.forceDash(aim, .24 * ctx.durationScale);
+          break;
+        case 'rain':
+          this.rainAttack(tx, ty, range, damage, ctx.projectiles);
+          break;
+        default: break;
       }
-      case 'nova':
-        this.damageArea(this.player, range, damage, skill.knockback || 180);
-        this.ringEffect(this.player.x, this.player.y, range / 64, 0x62e7b9);
-        this.damagePropsInArea(this.player.x, this.player.y, range);
-        break;
-      case 'cone':
-        this.attackCone(aim, range, damage, Math.PI * .72, skill.knockback || 170);
-        this.coneEffect(aim, range);
-        this.damagePropsInArea(this.player.x + Math.cos(aim) * range * .45, this.player.y + Math.sin(aim) * range * .45, range * .55);
-        break;
-      case 'line':
-        this.fireProjectile(this.player.x, this.player.y, aim, damage, 770, skill.pierce || 12, 1.25, 0x8affd1, 0, 1.45);
-        break;
-      case 'orbit': {
-        const count = skill.projectiles || 4;
-        for (let i = 0; i < count; i += 1) this.fireProjectile(this.player.x, this.player.y, (i / count) * TAU + this.elapsed, damage, 330, 3, 1.4, 0xefc27a);
-        this.stats.shield += 7 + skill.level * 3;
-        break;
-      }
-      case 'trap':
-        this.placeTrap(tx, ty, range, damage);
-        break;
-      case 'heal': {
-        const heal = (skill.heal || 24) * (1 + (skill.level - 1) * .2) * this.stats.healing;
-        this.stats.hp = Math.min(this.stats.maxHp, this.stats.hp + heal);
-        if (skill.shield) this.stats.shield += skill.shield;
-        this.healEffect();
-        break;
-      }
-      case 'shield':
-        this.stats.shield += (skill.shield || 45) * (1 + (skill.level - 1) * .25);
-        this.shieldEffect();
-        break;
-      case 'chain':
-        this.chainAttack(target, range, damage, skill.chains || 4);
-        break;
-      case 'summon':
-        this.createSummon(damage);
-        break;
-      case 'dash':
-        this.attackCone(aim, range, damage, Math.PI * .52, 260);
-        this.forceDash(aim, .24);
-        break;
-      case 'rain':
-        this.rainAttack(tx, ty, range, damage, skill.projectiles || 8);
-        break;
-      default: break;
     }
     restoreSkillMana(this.stats, skill.restore);
-    skill.remaining = skill.cooldown;
+    skill.remaining = ctx.cooldown;
     this.audio.sfx(this.heroData.id === 'kukul' ? 'dart' : 'spell', .06);
+    this.passives.emit('skillCast', { skill, ctx });
   }
 
   getAimAngle(target) {
@@ -558,18 +556,33 @@ export class GameScene extends Phaser.Scene {
     if(!isDart) projectile.play('bolt-1');
     projectile.body.setCircle(18,46,46);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
-    projectile.setData({ damage, pierce, life, critBonus, hit: new Set() });
+    projectile.setData({ damage, pierce, life, critBonus, hit: new Set(), source: this.player, byAlly: false, status: null, onHit: null });
     return projectile;
   }
 
-  spawnEnemyProjectile(x, y, angle, speed, damage) {
+  spawnEnemyProjectile(x, y, angle, speed, damage, source = null) {
     const projectile = this.enemyProjectiles.get(x, y, 'fx-5');
     if (!projectile) return;
     projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(15);
     projectile.setDisplaySize(42,42).setRotation(angle).play('bolt-5');
     projectile.body.setCircle(21,43,43);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
-    projectile.setData({ damage, life: 4 });
+    projectile.setData({ damage, life: 4, source });
+    return projectile;
+  }
+
+  onEnemyProjectileHit(projectile) {
+    if (!projectile.active || this.stats.intangibleUntil > this.elapsed) return;
+    if (this.stats.reflectUntil > this.elapsed) {
+      const velocity = projectile.body.velocity;
+      const reflected = this.fireProjectile(projectile.x, projectile.y, Math.atan2(-velocity.y, -velocity.x),
+        (projectile.getData('damage') || 8) * 1.5, Math.hypot(velocity.x, velocity.y), 1, projectile.getData('life'), 0xb58cff);
+      // Retain the enemy shot if the player projectile pool cannot accept the reflection.
+      if (!reflected) return;
+    } else {
+      this.damagePlayer(projectile.getData('damage') || 8, projectile.x, projectile.y, projectile.getData('source') || projectile);
+    }
+    projectile.destroy();
   }
 
   onProjectileHit(projectile, enemy) {
@@ -577,7 +590,14 @@ export class GameScene extends Phaser.Scene {
     const hit = projectile.getData('hit');
     if (hit?.has(enemy.getData('serial'))) return;
     hit?.add(enemy.getData('serial'));
-    this.damageEnemy(enemy, projectile.getData('damage'), projectile.getData('critBonus') || 0, 75);
+    this.damageEnemy(enemy, projectile.getData('damage'), projectile.getData('critBonus') || 0, 75,
+      projectile.getData('source') || this.player, { byAlly: projectile.getData('byAlly') });
+    if (enemy.active && projectile.getData('status')) {
+      const status = projectile.getData('status');
+      applyStatus(this, enemy, status.id, status.duration, { source: projectile.getData('source') || this.player,
+        byAlly: projectile.getData('byAlly') ?? false, ...status.params });
+    }
+    projectile.getData('onHit')?.(enemy);
     this.consumeProjectile(projectile);
   }
 
@@ -608,9 +628,9 @@ export class GameScene extends Phaser.Scene {
     performChainAttack(this, target, range, damage, count);
   }
 
-  placeTrap(x, y, range, damage) {
+  placeTrap(x, y, range, damage, durationScale = 1) {
     const trap = this.add.image(x, y, 'trap').setDepth(7).setAlpha(.82).setScale(.7);
-    this.tweens.add({ targets: trap, scale: range / 64, alpha: .35, duration: 620, yoyo: true, onComplete: () => {
+    this.tweens.add({ targets: trap, scale: range / 64, alpha: .35, duration: 620 * durationScale, yoyo: true, onComplete: () => {
       this.damageArea({ x, y }, range, damage, 230);
       this.damagePropsInArea(x, y, range);
       this.ringEffect(x, y, range / 64, 0xefc27a);
@@ -635,34 +655,47 @@ export class GameScene extends Phaser.Scene {
     }
   }
 
-  createSummon(damage) {
+  createSummon(damage, options = {}) {
     const angle = Math.random() * TAU;
-    const sprite = this.add.image(this.player.x + Math.cos(angle) * 65, this.player.y + Math.sin(angle) * 65, 'summon').setDisplaySize(70,70).setDepth(14);
+    const origin = options.origin || this.player;
+    const sprite = this.add.image(origin.x + Math.cos(angle) * 65, origin.y + Math.sin(angle) * 65, options.texture || 'summon').setDisplaySize(70,70).setDepth(14);
+    sprite.setData('byAlly', true);
+    if (options.tint !== undefined) sprite.setTint(options.tint);
     this.playEffect(4,sprite.x,sprite.y,100);
-    this.summons.push({ sprite, damage, life: 12, shot: .15 });
+    const summoned = { ...options, sprite, damage, life: options.duration ?? 12, shot: .15 };
+    this.summons.push(summoned);
+    return summoned;
   }
 
-  damageEnemy(enemy, rawDamage, critBonus = 0, knockback = 0, origin = this.player) {
+  damageEnemy(enemy, rawDamage, critBonus = 0, knockback = 0, origin = this.player, options = {}) {
     if (!enemy?.active || rawDamage <= 0) return;
-    const crit = Math.random() < this.stats.crit + critBonus;
+    const byAlly = options.byAlly ?? Boolean(origin?.getData?.('byAlly'));
+    const crit = !options.dot && Math.random() < this.stats.crit + critBonus;
     const damage = rawDamage * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1);
     const hp = enemy.getData('hp') - damage;
     enemy.setData('hp', hp);
     this.stats.damageDone += damage;
-    this.animateCharacter(enemy,enemy.getData('artKey'),'hurt',.16);
-    if(this.settings.particles!=='low'||crit) this.playEffect(2,enemy.x,enemy.y,crit?62:38);
-    enemy.setTint(crit ? 0xffe294 : 0xd5fff1);
-    this.time.delayedCall(65, () => enemy?.active && enemy.clearTint());
-    if (knockback && enemy.body) {
-      const angle = Phaser.Math.Angle.Between(origin.x, origin.y, enemy.x, enemy.y);
-      enemy.body.velocity.x += Math.cos(angle) * knockback;
-      enemy.body.velocity.y += Math.sin(angle) * knockback;
+    if (!byAlly && this.stats.lifestealPct > 0) this.stats.hp = Math.min(this.stats.maxHp,
+      this.stats.hp + Math.min(damage, Math.max(0, hp + damage)) * this.stats.lifestealPct * this.stats.healing);
+    const event = { enemy, damage, source: origin, byAlly, dot: Boolean(options.dot) };
+    this.passives.emit('hit', event);
+    if (crit) this.passives.emit('crit', event);
+    if (options.visuals !== false) {
+      this.animateCharacter(enemy,enemy.getData('artKey'),'hurt',.16);
+      if(this.settings.particles!=='low'||crit) this.playEffect(2,enemy.x,enemy.y,crit?62:38);
+      enemy.setTint(crit ? 0xffe294 : 0xd5fff1);
+      this.time.delayedCall(65, () => enemy?.active && (enemy.getData('burnUntil') > this.elapsed ? enemy.setTint(0xff8a36) : enemy.clearTint()));
+      if (knockback && enemy.body) {
+        const angle = Phaser.Math.Angle.Between(origin.x, origin.y, enemy.x, enemy.y);
+        enemy.body.velocity.x += Math.cos(angle) * knockback;
+        enemy.body.velocity.y += Math.sin(angle) * knockback;
+      }
+      if (this.settings.damageNumbers && (crit || damage >= 45)) this.floatText(enemy.x, enemy.y - 18, `${crit ? '✦ ' : ''}${Math.round(damage)}`, crit ? '#ffd77b' : '#d2fff0');
     }
-    if (this.settings.damageNumbers && (crit || damage >= 45)) this.floatText(enemy.x, enemy.y - 18, `${crit ? '✦ ' : ''}${Math.round(damage)}`, crit ? '#ffd77b' : '#d2fff0');
-    if (hp <= 0) this.killEnemy(enemy);
+    if (enemy.getData('hp') <= 0) this.killEnemy(enemy, byAlly);
   }
 
-  killEnemy(enemy) {
+  killEnemy(enemy, byAlly = false) {
     if (!enemy.active) return;
     const x = enemy.x; const y = enemy.y;
     const isBoss = enemy.getData('isBoss');
@@ -671,6 +704,7 @@ export class GameScene extends Phaser.Scene {
     const xp = enemy.getData('xp') || 5;
     enemy.disableBody(true, true);
     this.stats.kills += 1;
+    this.passives.emit('kill', { enemy, byAlly });
     if (isBoss) {
       this.activeBoss = null;
       this.hud.clearBoss();
@@ -689,12 +723,20 @@ export class GameScene extends Phaser.Scene {
     }
   }
 
-  damagePlayer(rawDamage, sourceX, sourceY) {
-    if (this.invulnerable > 0 || this.ended) return;
+  damagePlayer(rawDamage, sourceX, sourceY, source = null, melee = false) {
+    if (this.invulnerable > 0 || this.stats.intangibleUntil > this.elapsed || this.ended || this.pausedForChoice) return;
+    if (this.stats.dodgeCharges > 0) {
+      this.stats.dodgeCharges -= 1;
+      this.invulnerable = .58;
+      this.playEffect(4, this.player.x, this.player.y, 60);
+      return;
+    }
+    if (melee && source?.active && this.stats.reflectUntil > this.elapsed) this.damageEnemy(source, 15);
     this.hitCount += 1;
     const buffs=this.support.modifiers();
     let damage = Math.max(1, rawDamage - (this.stats.armor+buffs.armor) * .72)*(1-buffs.reduction);
     if (this.hasGear('jaguar-vest') && this.hitCount % 7 === 0) damage = 1;
+    damage *= this.stats.damageTakenMult;
     if (this.stats.shield > 0) {
       const blocked = Math.min(this.stats.shield, damage);
       this.stats.shield -= blocked;
@@ -705,6 +747,7 @@ export class GameScene extends Phaser.Scene {
       damage=this.support.preventFatal(damage);
       this.stats.hp -= damage;
       this.stats.damageTaken += damage;
+      if (damage > 0) this.passives.emit('damageTaken', { amount: damage, source: source || { x: sourceX, y: sourceY }, melee });
       this.floatText(this.player.x, this.player.y - 25, `-${Math.ceil(damage)}`, '#ff7077');
     }
     this.invulnerable = .58;
@@ -721,8 +764,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   touchEnemy(enemy) {
-    if (!enemy?.active) return;
-    this.damagePlayer((enemy.getData('damage') || 8)*(enemy.getData('disarmUntil')>this.elapsed?.55:1), enemy.x, enemy.y);
+    if (!enemy?.active || !canEnemyAttack(this, enemy, true)) return;
+    this.damagePlayer((enemy.getData('damage') || 8) * enemyDamageMult(this, enemy), enemy.x, enemy.y, enemy, true);
   }
 
   spawnEnemy(forcedType, forcedRadius) {
@@ -748,7 +791,7 @@ export class GameScene extends Phaser.Scene {
       hp: data.hp * scale, maxHp: data.hp * scale,
       speed: data.speed * (1 + progress * .16), damage: data.damage * this.mapData.difficulty * (1 + progress * .38), xp: data.xp,
       ranged: data.ranged || false, nextShot: 1 + Math.random(), isBoss: false,
-      stunUntil:0,slowUntil:0,slowPct:.5,tauntUntil:0,markUntil:0,silenceUntil:0,disarmUntil:0,poisonUntil:0,bleedUntil:0,
+      ...enemyStatusDefaults(),
     });
   }
 
@@ -768,7 +811,7 @@ export class GameScene extends Phaser.Scene {
       artKey,animLock:0,serial: ++this.enemySerial, isBoss: true, bossId: data.id, displayName: data.name,
       hp: data.hp * hpScale, maxHp: data.hp * hpScale, speed: data.speed, damage: data.damage * this.mapData.difficulty,
       xp: 100, pattern: data.pattern, patternTimer: 1.5, seed: Math.random() * 20,
-      stunUntil:0,slowUntil:0,slowPct:.5,tauntUntil:0,markUntil:0,silenceUntil:0,disarmUntil:0,poisonUntil:0,bleedUntil:0,dashing:0,
+      ...enemyStatusDefaults(), dashing: 0,
     });
     this.activeBoss = boss;
     this.hud.setBoss(data.name, 1);
@@ -812,7 +855,6 @@ export class GameScene extends Phaser.Scene {
       this.stats.xp += value * this.stats.xpGain;
       this.audio.sfx('pickup', .09);
       pickup.destroy();
-      this.checkLevelUp();
     } else if (kind === 'cacao') {
       this.stats.cacao += Math.max(1, Math.round(value * (1 + this.stats.fortune)));
       this.audio.sfx('cacao', .08);
@@ -823,6 +865,8 @@ export class GameScene extends Phaser.Scene {
       this.healEffect();
       pickup.destroy();
     }
+    if (['xp', 'cacao', 'potion'].includes(kind)) this.passives.emit('pickup', { kind, value });
+    if (kind === 'xp') this.checkLevelUp();
   }
 
   spawnPickup(kind, x, y, value) {
@@ -1066,6 +1110,8 @@ export class GameScene extends Phaser.Scene {
     this.cleaned = true;
     window.removeEventListener('pointerup',this.releaseAttack);
     window.removeEventListener('blur',this.releaseAttack);
+    this.passives?.destroy();
+    this.skillEffects?.forEach((effect) => effect.destroy());
     this.hud?.destroy();
   }
 }

@@ -6,7 +6,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 
 - [x] 01 — Read-only investigation and project setup
 - [x] 02 — Five confirmed skill and combat fixes
-- [ ] 03 — Name not supplied
+- [x] 03 — Handler, status-effect and passive engine foundations
 - [ ] 04 — Name not supplied
 - [ ] 05 — Name not supplied
 - [ ] 06 — Name not supplied
@@ -41,3 +41,11 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Tests:** `npm run test` — 28/28 passed. `npm run build` — succeeded (32 modules); the existing >500 kB JS chunk warning remains. No additional playtest was in this step's request.
 - **Open issues:** authored skill descriptions are English and remain untranslated in French/Arabic; the old locale test had implicitly tested the replaced generic descriptions and now limits its skill assertions to translated names. The redesign spec's translation phase remains future work. Existing large-chunk warning is unchanged.
 - **Commit/version:** one commit labelled `[v0.5.0-skills-step2]`; annotated tag `v0.5.0-skills-step2`. Application package version remains 0.5.0.
+
+## Step 3 — 2026-10-03 — Complete
+
+- **Changed:** added the ID-keyed active-handler registry and the eight shared helpers (area, cone, line, projectile, orbit, zone, summon, status), with a timed-effect lifecycle. Centralized the specified level scaling and shared mana/cooldown handling while retaining every old skill under a clearly marked step-10 legacy fallback. Added fear, confuse, root, pull, burn, blind and hero concealment; retained slow, stun, taunt, silence, disarm, poison, bleed and mark; reset status data on enemy reuse. Wired all eight hero effect fields into combat, resource regeneration and recovery. Added an event bus for all eight specified events with source/ally attribution, plus the two innate traits at level 1 on every hero, without using a skill slot. Kept companion DOT compatibility and ally attribution. Added Node regression coverage using the real scene methods with only rendering mocked.
+- **Tests:** final `npm run test` — **53/53 passed**, including one test for every status, all 60 old skills at all 6 levels (360 fallback casts), registry/legacy resource handling, all event sources, all five innate-trait value levels, XP-only attraction, single pickup healing, hero effects and shared-helper lifecycle. Final `npm run build` — passed, 38 modules, existing >500 kB chunk warning. Existing browser scripts passed against the built game: `playtest.mjs` **23 checks** (98.93 s), `extended-playtest.mjs` **8 checks** (76.87 s), `v05-combat-test.mjs` **26 checks** (28.99 s); zero runtime errors. The final XP-only attraction refinement is additionally covered by the final unit suite.
+- **Browser reports:** `%TEMP%/syj-skills-step3-BaCKbW/playtest/artifacts/playtest-report.json`, `%TEMP%/syj-skills-step3-BaCKbW/extended-playtest/artifacts/extended-playtest-report.json`, `%TEMP%/syj-skills-step3-support-Pyw7XR/artifacts/v0.5/combat.json`. Local preview processes were stopped after testing; tracked screenshots/reports were not overwritten.
+- **Open issues:** no failing step-3 checks. Individual hero handlers, passive draft/HUD changes and dedicated art/audio are still later-step work. Previously documented authored-description FR/AR coverage and the build chunk warning remain. No assets, music, voice recordings, hand-made effect frames, dependencies or save migration were created/changed.
+- **Commit/version:** one commit labelled `[v0.5.0-skills-step3]`; annotated tag `v0.5.0-skills-step3`. Application package version remains 0.5.0. Stop after this step; no push or later-step implementation included.

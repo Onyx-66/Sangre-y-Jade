@@ -1,0 +1,69 @@
+export class EventBus {
+  constructor() { this.listeners = new Map(); }
+
+  on(event, listener) {
+    if (!this.listeners.has(event)) this.listeners.set(event, new Set());
+    this.listeners.get(event).add(listener);
+    return () => {
+      const listeners = this.listeners.get(event);
+      listeners?.delete(listener);
+      if (!listeners?.size) this.listeners.delete(event);
+    };
+  }
+
+  emit(event, context) {
+    for (const listener of [...(this.listeners.get(event) || [])]) listener(context);
+  }
+
+  clear() { this.listeners.clear(); }
+}
+
+export class PassiveSystem {
+  constructor(scene) {
+    this.scene = scene;
+    this.bus = new EventBus();
+    this.equipped = new Map();
+  }
+
+  equip(passive, level = 1, { innate = false } = {}) {
+    this.unequip(passive.id);
+    const entry = { id: passive.id, passive, level: Math.max(1, Math.min(5, level)), innate, state: {}, unsubscribe: [] };
+    this.equipped.set(passive.id, entry);
+    for (const [event, handler] of Object.entries(passive.on || {})) {
+      entry.unsubscribe.push(this.bus.on(event, (context) => handler({ ...context, state: entry.state }, entry.level)));
+    }
+    return entry;
+  }
+
+  setLevel(id, level) {
+    const entry = this.equipped.get(id);
+    if (entry) entry.level = Math.max(1, Math.min(5, level));
+  }
+
+  unequip(id) {
+    const entry = this.equipped.get(id);
+    entry?.unsubscribe.forEach((unsubscribe) => unsubscribe());
+    this.equipped.delete(id);
+  }
+
+  emit(event, payload = {}) {
+    this.bus.emit(event, { ...payload, scene: this.scene, stats: this.scene.stats, player: this.scene.player });
+  }
+
+  modifiers() {
+    const result = { speedMult: 1, pickupRangeMult: 1 };
+    for (const { passive, level, state } of this.equipped.values()) {
+      for (const contribution of [passive.stat?.(level), state.modifiers]) {
+        for (const [key, value] of Object.entries(contribution || {})) {
+          result[key] = key.endsWith('Mult') ? (result[key] ?? 1) * value : (result[key] ?? 0) + value;
+        }
+      }
+    }
+    return result;
+  }
+
+  destroy() {
+    for (const id of this.equipped.keys()) this.unequip(id);
+    this.bus.clear();
+  }
+}
