@@ -1,0 +1,26 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step14/contact-sheet-2.png",
+  "items": [
+    { "file": "fx/sun-claw/main.png", "width": 256, "height": 256 },
+    { "file": "fx/sun-claw/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/jaguar-echo/main.png", "width": 256, "height": 256 },
+    { "file": "fx/jaguar-echo/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/fang-path/main.png", "width": 256, "height": 256 },
+    { "file": "fx/fang-path/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/hunters-mark/main.png", "width": 256, "height": 256 },
+    { "file": "fx/hunters-mark/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/nine-lives/main.png", "width": 256, "height": 256 },
+    { "file": "fx/nine-lives/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/black-mirror/main.png", "width": 256, "height": 256 },
+    { "file": "fx/black-mirror/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/pyramid-rush/main.png", "width": 256, "height": 256 },
+    { "file": "fx/pyramid-rush/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/heart-of-balam/main.png", "width": 256, "height": 256 },
+    { "file": "fx/heart-of-balam/accent.png", "width": 256, "height": 256 }
+  ]
+}

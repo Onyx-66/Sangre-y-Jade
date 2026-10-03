@@ -1,0 +1,26 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step14/contact-sheet-1.png",
+  "items": [
+    { "file": "fx/jaguar-roar/main.png", "width": 256, "height": 256 },
+    { "file": "fx/jaguar-roar/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/obsidian-arc/main.png", "width": 256, "height": 256 },
+    { "file": "fx/obsidian-arc/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/prowlers-leap/main.png", "width": 256, "height": 256 },
+    { "file": "fx/prowlers-leap/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/claw-cyclone/main.png", "width": 256, "height": 256 },
+    { "file": "fx/claw-cyclone/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/ceiba-breaker/main.png", "width": 256, "height": 256 },
+    { "file": "fx/ceiba-breaker/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/bloodless-hunt/main.png", "width": 256, "height": 256 },
+    { "file": "fx/bloodless-hunt/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/stone-maw/main.png", "width": 256, "height": 256 },
+    { "file": "fx/stone-maw/accent.png", "width": 256, "height": 256 },
+    { "file": "fx/war-drum/main.png", "width": 256, "height": 256 },
+    { "file": "fx/war-drum/accent.png", "width": 256, "height": 256 }
+  ]
+}

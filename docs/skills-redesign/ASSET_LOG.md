@@ -78,3 +78,50 @@ The three 4×4 source sheets and single correction use `style_reference.png` onl
 - `skills/ui-shrine-vitality.png` — gpt-image-2.5 Flare — 2026-10-03 — sheet 3 cell 14: carved stone idol glowing green.
 - `skills/ui-shrine-speed.png` — gpt-image-2.5 Flare — 2026-10-03 — sheet 3 cell 15: carved stone idol glowing blue.
 - `skills/ui-shrine-fortune.png` — gpt-image-2.5 Flare — 2026-10-03 — sheet 3 cell 16: carved stone idol glowing gold.
+
+## Step 14 — Balam and shared FX stills — 2026-10-03
+
+Shared prompt for all 42 cells: gpt-image-2.5 Flare, transparent 4×4 2048×2048 sheet; one centered isolated still VFX in each listed cell, crisp luminous pixel art matching `style_reference_fx.png` and `style_reference.png`, ample transparent padding, no text/characters/watermark, palette and shape exactly as listed below. The image service returned 1254×1254 sheets; the original outputs are retained in `previews/step14/`, resized working sheets are 2048×2048, then sliced to final sizes with `slice-sheet.mjs`.
+
+- `fx/jaguar-roar/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 1: three concentric amber sound-wave rings, #f2b34c / #7a3b12.
+- `fx/jaguar-roar/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 2: sharp golden jaguar-head sound-flash silhouette, amber palette.
+- `fx/obsidian-arc/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 3: sweeping black-glass crescent with violet edge, #9b7bff / #15121c.
+- `fx/obsidian-arc/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 4: eight angular obsidian shards bursting outward with violet highlights.
+- `fx/prowlers-leap/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 5: compact oval earthy landing shadow, #c58a3d / #6b4a2b.
+- `fx/prowlers-leap/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 6: dusty landing ring, four dirt fragments and crack marks.
+- `fx/claw-cyclone/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 7: three golden claw arcs swirling into a cyclone, #f4c542 / #fff2b0.
+- `fx/claw-cyclone/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 8: circular white-gold ground claw-flash ring.
+- `fx/ceiba-breaker/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 9: descending translucent ceiba log with bark bands, #6b8e3a / #3b2a1a.
+- `fx/ceiba-breaker/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 10: crater burst of bark chips and green leaves.
+- `fx/bloodless-hunt/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 11: cyan jaguar-fang comet with pale spectral wisps, #5fe3f2 / #dff9ff.
+- `fx/bloodless-hunt/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 12: cyan fang impact flash with three bite-mark crescents.
+- `fx/stone-maw/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 13: rising carved grey stone jaw with separated teeth, #8a8fa0.
+- `fx/stone-maw/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 14: sand-gold armed rune ring with dust and stone chips, #c9b37a.
+- `fx/war-drum/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 15: floating front-facing carved Maya war drum, #b5452b / #f0c27a.
+- `fx/war-drum/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 1 cell 16: small/medium/large red-brown beat rings with musical glyph-sparks.
+- `fx/sun-claw/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 1: four outward-rotating sun-gold crescent slashes, #ffd45a / #ff8a1f.
+- `fx/sun-claw/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 2: bright white-gold central flare with orange embers.
+- `fx/jaguar-echo/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 3: cyan spectral jaguar pawprint and swift spirit streaks, #5fe3f2 / #2b6f8f.
+- `fx/jaguar-echo/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 4: pale cyan pawprint trail with blue mist puff.
+- `fx/fang-path/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 5: jade tooth spikes rising from a luminous ground line, #4fd6a0 / #d8fff0.
+- `fx/fang-path/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 6: thin green path light with emerald dust motes.
+- `fx/hunters-mark/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 7: red glyph composed of exactly three claw scratches, #d9413a / #ffb3a0.
+- `fx/hunters-mark/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 8: sharp red claw-spark burst.
+- `fx/nine-lives/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 9: spiral of tiny golden jaguar spirit silhouettes, #ffd45a.
+- `fx/nine-lives/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 10: warm gold aura ring with small green healing-cross shapes, #9ef0a8.
+- `fx/black-mirror/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 11: reflective obsidian disc with 120-degree violet barrier rim, #2a2540 / #b58cff.
+- `fx/black-mirror/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 12: violet shot visibly reversing off a curved barrier.
+- `fx/pyramid-rush/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 13: five receding stone-step afterimage slabs and brown speed streaks, #b08a5a / #6a4b2b.
+- `fx/pyramid-rush/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 14: long horizontal rolling dust cloud with brown trails.
+- `fx/heart-of-balam/main.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 15: luminous golden jaguar heart gem with orbiting motes, #ffcf4a / #c4412b.
+- `fx/heart-of-balam/accent.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 2 cell 16: translucent gold dome rim, shockwave and crack pattern.
+- `fx/bloodlust/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 1: compact red three-claw aura emblem, #d9413a.
+- `fx/stonehide/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 2: layered faceted grey stone plates, #8a8fa0.
+- `fx/predators-rhythm/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 3: gold pulse ring around one pawprint flash, #f4c542.
+- `fx/feast-of-the-fallen/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 4: green-gold wisps curving toward a heart mote.
+- `fx/obsidian-thorns/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 5: black obsidian shard burst with violet-grey edge lights.
+- `fx/jaguars-pride/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 6: thin golden radius ring around a small jaguar paw glyph.
+- `fx/earthshaker/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 7: brown shockwave ring with five pebbles.
+- `fx/wounded-fury/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 8: compact red-orange flame outline aura, #d9413a / #ff8a1f.
+- `fx/survivors-will/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 9: pale speed streaks behind a heart-shaped spark.
+- `fx/jade-bounty/proc.png` — gpt-image-2.5 Flare — 2026-10-03 — Sheet 3 cell 10: bright green sparkle burst with emerald particles, #4fd6a0 / #d8fff0.

@@ -140,10 +140,10 @@ test('Pyramid Rush sweeps scaled collision radii so narrow grazes hit without ov
  const graze=addEnemy(s,{},45),outside=addEnemy(s,{},90);graze.y=25;outside.y=40;graze.body.halfWidth=outside.body.halfWidth=14;
  cast(s,'pyramid-rush');advance(s,.5);assert.equal(graze.getData('hp'),908);assert.equal(outside.getData('hp'),1000);
 });
-test('Balam effect placeholders are deterministic and capped at 24; sound fallback is throttled and stoppable',()=>{
+test('procedural fallback is deterministic and capped at 24; sound fallback is throttled and stoppable',()=>{
  assert.deepEqual(placeholderStyle('jaguar-roar'),placeholderStyle('jaguar-roar'));assert.notDeepEqual(placeholderStyle('jaguar-roar'),placeholderStyle('fang-path'));
  const s=scene();s.textures={exists:()=>true};const fx=new FxDirector(s),originalWarn=console.warn;console.warn=()=>{};
- try{for(let i=0;i<30;i++)fx.play('jaguar-roar','cast');assert.equal(fx.live.length,24);assert.equal(fx.missing.size,1);fx.destroy();assert.equal(fx.live.length,0);
+ try{for(let i=0;i<30;i++)fx.play('unregistered-test','cast');assert.equal(fx.live.length,24);assert.equal(fx.missing.size,1);fx.destroy();assert.equal(fx.live.length,0);
   let sounds=0;const audio=new SkillAudio({sfx(){sounds++;}});audio.play('jaguar-roar');audio.play('jaguar-roar');assert.equal(sounds,1);audio.loop('war-drum');audio.loop('war-drum');assert.equal(sounds,2);audio.stop('war-drum');assert.equal(audio.loops.size,0);audio.destroy();
  }finally{console.warn=originalWarn;}
 });

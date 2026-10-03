@@ -14,6 +14,7 @@ import { PassiveSystem } from '../skills/PassiveSystem.js';
 import { skillContext, skillCooldown, manaCost, updateSkillEffects, applyStatus } from '../skills/common.js';
 import { HERO_EFFECT_DEFAULTS, enemyStatusDefaults, updateEnemy, canEnemyAttack, enemyDamageMult, enemyShotAngle } from '../skills/StatusEffects.js';
 import { FxDirector } from '../fx/FxDirector.js';
+import '../fx/recipes/balam.js';
 import { SkillAudio } from '../systems/SkillAudio.js';
 import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';
 import { configureProjectile } from '../skills/kukul/projectiles.js';
@@ -36,7 +37,11 @@ export class GameScene extends Phaser.Scene {
     this.options = options;
   }
 
-  preload() { preloadTextures(this); }
+  preload() {
+    preloadTextures(this);
+    const hero=this.options.hero;
+    FxDirector.preload(this,[...(hero.skills||[]),...(hero.passives||[]),{id:'survivors-will'},{id:'jade-bounty'}].map(skill=>skill.id));
+  }
 
   create() {
     const { hero, map, mode, meta, settings, audio, uiRoot } = this.options;
@@ -572,6 +577,7 @@ export class GameScene extends Phaser.Scene {
         (projectile.getData('damage') || 8) * (this.blackMirror?.reflectPct/100||1.5), Math.hypot(velocity.x, velocity.y), 1, projectile.getData('life'), 0xb58cff);
       // Retain the enemy shot if the player projectile pool cannot accept the reflection.
       if (!reflected) return;
+      this.fx?.play('black-mirror','impact',{x:projectile.x,y:projectile.y,angle:Math.atan2(-velocity.y,-velocity.x)});
     } else {
       if(this.support.blocksProjectile?.(projectile,{x:projectile.getData('previousX')??projectile.x,y:projectile.getData('previousY')??projectile.y}))return;
       this.damagePlayer(projectile.getData('damage') || 8, projectile.x, projectile.y, projectile.getData('source') || projectile);
@@ -701,7 +707,10 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(2,x,y,isBoss?190:68);
     const bossId = enemy.getData('bossId');
     const xp = enemy.getData('xp') || 5;
-    if(enemy.getData('markUntil')>this.elapsed&&enemy.getData('markSource')===this.player)this.stats.hp=Math.min(this.stats.maxHp,this.stats.hp+enemy.getData('markHeal')*this.stats.healing);
+    if(enemy.getData('markUntil')>this.elapsed&&enemy.getData('markSource')===this.player){
+      this.stats.hp=Math.min(this.stats.maxHp,this.stats.hp+enemy.getData('markHeal')*this.stats.healing);
+      this.fx?.play('hunters-mark','impact',{x,y,target:{x,y}});
+    }
     enemy.disableBody(true, true);
     this.stats.kills += 1;
     this.passives.emit('kill', { enemy, byAlly, wasTopThreat });
@@ -871,7 +880,7 @@ export class GameScene extends Phaser.Scene {
       this.healEffect();
       pickup.destroy();
     }
-    if (['xp', 'cacao', 'potion'].includes(kind)) this.passives.emit('pickup', { kind, value });
+    if (['xp', 'cacao', 'potion'].includes(kind)) this.passives.emit('pickup', { kind, value, pickup: { x: pickup.x, y: pickup.y } });
     if (kind === 'xp') this.checkLevelUp();
   }
 

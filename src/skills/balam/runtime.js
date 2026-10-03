@@ -14,8 +14,8 @@ export function present(scene, skill, stage='cast', ctx={}) {
  else if(stage==='impact')scene.skillAudio?.play(skill.id,'hit');
  return sprite;
 }
-export function proc(scene, passive, point=scene.player, sound=true) {
- scene.fx?.play(passive.id,'proc',{x:point.x,y:point.y});
+export function proc(scene, passive, point=scene.player, sound=true, fxContext={}) {
+ scene.fx?.play(passive.id,'proc',{x:point.x,y:point.y,...fxContext});
  if(sound)scene.skillAudio?.play(passive.id,'proc');
 }
 export function skillModifiers(scene) {
@@ -56,5 +56,5 @@ export function detonateWard(scene,ward) {
  if(scene.balamWard===ward)scene.balamWard=null;
  scene.skillAudio?.stop(ward.skill.id);
  if(scene.ended)return;
- damageArea(scene,scene.player,ward.range,ward.damage);present(scene,ward.skill,'impact',{scale:ward.range/100});
+ damageArea(scene,scene.player,ward.range,ward.damage);present(scene,ward.skill,'impact',{scale:ward.range/100,range:ward.range,radius:ward.range});
 }

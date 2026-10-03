@@ -1,0 +1,20 @@
+{
+  "expectedCount": 10,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/skills-redesign/previews/step14/contact-sheet-3.png",
+  "items": [
+    { "file": "fx/bloodlust/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/stonehide/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/predators-rhythm/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/feast-of-the-fallen/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/obsidian-thorns/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/jaguars-pride/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/earthshaker/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/wounded-fury/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/survivors-will/proc.png", "width": 128, "height": 128 },
+    { "file": "fx/jade-bounty/proc.png", "width": 128, "height": 128 }
+  ]
+}

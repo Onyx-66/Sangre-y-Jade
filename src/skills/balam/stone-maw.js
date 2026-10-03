@@ -5,7 +5,7 @@ export function stoneMaw(scene,skill,ctx) {
  const point=candidates.sort((a,b)=>within(scene,radius,b).length-within(scene,radius,a).length)[0]||{x:scene.player.x+Math.cos(ctx.aim)*ctx.range,y:scene.player.y+Math.sin(ctx.aim)*ctx.range};
  const origin={x:point.x,y:point.y};present(scene,skill,'cast');
  const sprite=present(scene,skill,'ground',{...origin,duration:p.duration*ctx.durationScale});let elapsed=0;
- const effect=timedEffect(scene,p.duration*ctx.durationScale,sprite?[sprite]:[],dt=>{
+ const effect=timedEffect(scene,p.duration*ctx.durationScale,sprite?(Array.isArray(sprite)?sprite:[sprite]):[],dt=>{
   elapsed+=dt;
   if(elapsed+1e-9<p.armSeconds*ctx.durationScale)return;
   if(within(scene,p.triggerRadius*ctx.radiusScale,origin).length||elapsed+1e-9>=(p.armSeconds+p.armedSeconds)*ctx.durationScale){

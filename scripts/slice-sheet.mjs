@@ -142,8 +142,8 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
   if (!['transparent', 'magenta', 'black'].includes(mode)) throw new Error(`Unknown background mode "${mode}"; use transparent, magenta, or black.`);
   const { expectedCount, columns, rows, items } = manifest;
   if (!Number.isInteger(expectedCount) || expectedCount < 1) throw new Error('Manifest expectedCount must be a positive integer.');
-  if (!Number.isInteger(columns) || !Number.isInteger(rows) || columns * rows !== expectedCount) {
-    throw new Error(`Manifest grid ${columns}x${rows} must have exactly expectedCount=${expectedCount}.`);
+  if (!Number.isInteger(columns) || !Number.isInteger(rows) || columns * rows < expectedCount) {
+    throw new Error(`Manifest grid ${columns}x${rows} must have capacity for expectedCount=${expectedCount}.`);
   }
   if (!Array.isArray(items) || items.length !== expectedCount) {
     throw new Error(`Manifest has ${items?.length ?? 0} output items, but expectedCount is ${expectedCount}.`);

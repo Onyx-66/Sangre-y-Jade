@@ -3,7 +3,7 @@ import { present, nearest } from './runtime.js';
 export function jaguarEcho(scene,skill,ctx) {
  const p=skill.params;scene.jaguarEcho?.destroy();present(scene,skill,'cast');
  const sprite=scene.add.sprite(scene.player.x,scene.player.y,'enemy-jaguar').setTint(skill.palette[0]).setScale(.55).setDepth(19);
- sprite.setData('byAlly',true);let timer=p.interval;
+ sprite.setData('byAlly',true);present(scene,skill,'travel',{target:sprite,angle:ctx.aim,duration:p.duration*ctx.durationScale});let timer=p.interval;
  scene.jaguarEcho=timedEffect(scene,p.duration*ctx.durationScale,[sprite],dt=>{
   const target=nearest(scene,Infinity,sprite);if(!target)return;
   const dx=target.x-sprite.x,dy=target.y-sprite.y,distance=Math.hypot(dx,dy),step=Math.min(Math.max(0,distance-ctx.range),p.speed*dt);
