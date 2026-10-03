@@ -1,0 +1,90 @@
+{
+  "id": "smoke-bomb",
+  "owner": "ally:assassin",
+  "kind": "active",
+  "brief": "Soft pop then a hiss.",
+  "sounds": {
+    "cast": {
+      "duration": 0.58,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2486073651,
+      "layers": [
+        {
+          "duration": 0.58,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 449.685,
+          "gain": 0.35,
+          "endFrequency": 129.909
+        },
+        {
+          "duration": 0.58,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16,
+          "filter": {
+            "lowpass": 1498.95,
+            "highpass": 200
+          }
+        },
+        {
+          "duration": 0.58,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1692307692307692,
+          "filter": {
+            "lowpass": 6195.66,
+            "highpass": 1700
+          }
+        },
+        {
+          "duration": 0.58,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.13076923076923078,
+          "filter": {
+            "lowpass": 2598.18,
+            "highpass": 500
+          },
+          "pulseHz": 8
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028999999999999998,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07100000000000001,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

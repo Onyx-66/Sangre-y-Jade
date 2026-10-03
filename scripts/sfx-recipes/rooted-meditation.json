@@ -1,0 +1,152 @@
+{
+  "id": "rooted-meditation",
+  "owner": "ixchel",
+  "kind": "passive",
+  "brief": "Soft wooden hum (looped, very quiet).",
+  "sounds": {
+    "proc": {
+      "duration": 0.28,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 2189929926,
+      "layers": [
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 247.758,
+          "gain": 0.4,
+          "endFrequency": 155.456,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2720.48,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 174.888,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 262.332,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.072,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 2.5,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 1622997752,
+      "layers": [
+        {
+          "duration": 2.5,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 183.391,
+          "gain": 0.4,
+          "endFrequency": 164.384,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 2.5,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2876.72,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 2.5,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 129.452,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 2.5,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 194.179,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.076,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "feast-of-the-fallen",
+  "owner": "balam",
+  "kind": "passive",
+  "brief": "Soft gulp plus a chime.",
+  "sounds": {
+    "proc": {
+      "duration": 0.28,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 416746024,
+      "layers": [
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.35,
+          "filter": {
+            "lowpass": 1310.66,
+            "highpass": 240
+          },
+          "distortion": 0.6
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 272.214,
+          "gain": 0.3,
+          "endFrequency": 70.574,
+          "fm": {
+            "ratio": 1.2,
+            "index": 1.1
+          }
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 887.216,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1779.473,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.035,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.063,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

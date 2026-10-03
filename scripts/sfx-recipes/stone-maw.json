@@ -1,0 +1,182 @@
+{
+  "id": "stone-maw",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Grinding stone rise, huge stone clamp.",
+  "sounds": {
+    "cast": {
+      "duration": 0.62,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3729257460,
+      "layers": [
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1878.34,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 192.777,
+          "gain": 0.24,
+          "endFrequency": 89.963,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 5437.3,
+            "highpass": 1600
+          },
+          "pulseHz": 55,
+          "pulseSharpness": 3
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.0923076923076923,
+          "filter": {
+            "lowpass": 1087.46,
+            "highpass": 110
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.04,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.36,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 4020339322,
+      "layers": [
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1932.3,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 198.315,
+          "gain": 0.24,
+          "endFrequency": 92.547,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 116.955,
+          "gain": 0.5,
+          "endFrequency": 42.714
+        },
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 732.24,
+            "highpass": 35
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.04,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.076,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

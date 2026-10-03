@@ -1,0 +1,92 @@
+{
+  "id": "windstep",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Fast air rush.",
+  "sounds": {
+    "cast": {
+      "duration": 0.28,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2867150219,
+      "layers": [
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2172.06,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 888.57,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.012,
+            "decay": 0.08,
+            "sustain": 0.25,
+            "release": 0.06
+          },
+          "type": "sine",
+          "frequency": 1135.395,
+          "gain": 0.1846153846153846,
+          "endFrequency": 2172.06,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.28,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.07692307692307693,
+          "filter": {
+            "lowpass": 5133.96,
+            "highpass": 1800
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

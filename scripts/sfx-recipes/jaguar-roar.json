@@ -1,0 +1,97 @@
+{
+  "id": "jaguar-roar",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Deep jaguar growl layered with a low sub-boom, 0.8s, short reverb tail.",
+  "sounds": {
+    "cast": {
+      "duration": 0.8,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3253849402,
+      "layers": [
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "saw",
+          "frequency": 86.428,
+          "gain": 0.4,
+          "endFrequency": 48.806,
+          "distortion": 2,
+          "fm": {
+            "ratio": 3,
+            "index": 1.7
+          },
+          "filter": {
+            "postLowpass": 700
+          },
+          "pulseHz": 23
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 864.28,
+            "highpass": 80
+          },
+          "pulseHz": 27
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 116.932,
+          "gain": 0.5,
+          "endFrequency": 42.706
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 732.1,
+            "highpass": 35
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

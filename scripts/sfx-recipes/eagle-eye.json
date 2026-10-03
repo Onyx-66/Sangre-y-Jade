@@ -1,0 +1,174 @@
+{
+  "id": "eagle-eye",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Low tension riser then one sharp crack.",
+  "sounds": {
+    "cast": {
+      "duration": 0.6,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 476063953,
+      "layers": [
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 182.646,
+          "gain": 0.25,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 273.969,
+          "gain": 0.13,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1166.905,
+          "gain": 0.1846153846153846,
+          "endFrequency": 2232.34,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.07692307692307693,
+          "filter": {
+            "lowpass": 5276.44,
+            "highpass": 1800
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.043,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.074,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.17,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3745503569,
+      "layers": [
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1901.71,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 195.175,
+          "gain": 0.24,
+          "endFrequency": 91.082,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 4504.05,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1100.99,
+          "gain": 0.12307692307692307,
+          "endFrequency": 180.162
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.043,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.074,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

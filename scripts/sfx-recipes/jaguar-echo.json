@@ -1,0 +1,252 @@
+{
+  "id": "jaguar-echo",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Low spirit growl on spawn, soft paw loops, short bite on hit.",
+  "sounds": {
+    "cast": {
+      "duration": 0.64,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2739116049,
+      "layers": [
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "saw",
+          "frequency": 84.346,
+          "gain": 0.4,
+          "endFrequency": 47.63,
+          "distortion": 2,
+          "fm": {
+            "ratio": 3,
+            "index": 1.7
+          },
+          "filter": {
+            "postLowpass": 700
+          },
+          "pulseHz": 23
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 843.45,
+            "highpass": 80
+          },
+          "pulseHz": 27
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.14615384615384616,
+          "filter": {
+            "lowpass": 3274.59,
+            "highpass": 650
+          },
+          "pulseHz": 17
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 456.458,
+          "gain": 0.0923076923076923,
+          "endFrequency": 257.998,
+          "vibrato": 0.012
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.077,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 1.2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 4012432256,
+      "layers": [
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.25,
+          "filter": {
+            "lowpass": 4297.42,
+            "highpass": 900
+          },
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.14,
+          "filter": {
+            "lowpass": 899.46,
+            "highpass": 120
+          },
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 254.847,
+          "gain": 0.3076923076923077,
+          "endFrequency": 159.904,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          },
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.13846153846153844,
+          "filter": {
+            "lowpass": 2798.32,
+            "highpass": 350
+          },
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.072,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.18,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3158518161,
+      "layers": [
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.35,
+          "filter": {
+            "lowpass": 1285.57,
+            "highpass": 240
+          },
+          "distortion": 0.6
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 267.003,
+          "gain": 0.3,
+          "endFrequency": 69.223,
+          "fm": {
+            "ratio": 1.2,
+            "index": 1.1
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 445.005,
+          "gain": 0.2692307692307692,
+          "endFrequency": 128.557
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 1483.35,
+            "highpass": 200
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.065,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

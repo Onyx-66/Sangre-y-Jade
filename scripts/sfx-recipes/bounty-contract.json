@@ -1,0 +1,87 @@
+{
+  "id": "bounty-contract",
+  "owner": "ally:assassin",
+  "kind": "passive",
+  "brief": "Coin chime.",
+  "sounds": {
+    "proc": {
+      "duration": 0.27,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 1736342654,
+      "layers": [
+        {
+          "duration": 0.27,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2031.884,
+          "gain": 0.27,
+          "fm": {
+            "ratio": 2.1,
+            "index": 0.6
+          }
+        },
+        {
+          "duration": 0.27,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.09,
+            "sustain": 0.04,
+            "release": 0.14
+          },
+          "type": "sine",
+          "frequency": 3044.429,
+          "gain": 0.12
+        },
+        {
+          "duration": 0.27,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 854.304,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.27,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1713.462,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.067,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

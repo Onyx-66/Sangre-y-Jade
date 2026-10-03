@@ -27,18 +27,18 @@ export class SupportSystem {
   sprite.setData('animLock',0);
   sprite.setData('byAlly',true);
   s.companion={id,sprite,skills:[],level:heroLevel,rank:allyRank(heroLevel),shot:.5,hp:100};
-  s.playEffect(4,sprite.x,sprite.y,125);s.audio.sfx('level');
-  this.equip(data.signature);this.refresh();return s.companion;
+  s.playEffect(4,sprite.x,sprite.y,125);s.skillAudio?.ui?.('companion-join');
+  this.equip(data.signature,{silent:true});this.refresh();return s.companion;
  }
  refresh(){const a=this.scene.companion;if(a)this.scene.hud.setAlly(a);}
  syncLevel(level){
   const a=this.scene.companion;if(!a)return;
   const previous=a.rank;a.level=level;a.rank=allyRank(level);
   for(const skill of a.skills){skill.level=a.rank;this.scene.passives?.setLevel(skill.id,a.rank);const fraction=skill.cooldown?skill.remaining/skill.cooldown:0;skill.cooldown=skill.baseCooldown*allyCooldownMultiplier(a.rank);skill.remaining=fraction*skill.cooldown;}
-  if(a.rank>previous)this.scene.hud.toast(t('Companion rank {n}',{n:a.rank}));
+  if(a.rank>previous){this.scene.hud.toast(t('Companion rank {n}',{n:a.rank}));this.scene.skillAudio?.ui?.('ally-rank');}
   this.refresh();
  }
- equip(skill){
+ equip(skill,{silent=false}={}){
   const a=this.scene.companion;if(!a||!skill||a.skills.length>=ALLY_RULES.slots||a.skills.some(entry=>entry.id===skill.id))return false;
   const catalogSkill=ALLY_CATALOG[a.id].find(entry=>entry.id===skill.id);
   if(!catalogSkill||catalogSkill.owner!==`ally:${a.id}`)return false;
@@ -50,6 +50,7 @@ export class SupportSystem {
    if(logic)this.scene.passives?.equip({...logic,...entry,on:logic.on||entry.on,stat:logic.stat||entry.stat,
     preventFatal:logic.preventFatal,redirectDamage:logic.redirectDamage},rank);
   }
+  if(!silent)this.scene.skillAudio?.ui?.('pick-ally');
   this.refresh();return true;
  }
  has(id){return Boolean(this.scene.companion?.skills.some(skill=>skill.id===id));}

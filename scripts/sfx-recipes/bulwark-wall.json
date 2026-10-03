@@ -1,0 +1,182 @@
+{
+  "id": "bulwark-wall",
+  "owner": "ally:tank",
+  "kind": "active",
+  "brief": "Stone grinding and a thud.",
+  "sounds": {
+    "cast": {
+      "duration": 0.72,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2045306234,
+      "layers": [
+        {
+          "duration": 0.72,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1921.28,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.72,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 197.184,
+          "gain": 0.24,
+          "endFrequency": 92.019,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 0.72,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 5561.6,
+            "highpass": 1600
+          },
+          "pulseHz": 55,
+          "pulseSharpness": 3
+        },
+        {
+          "duration": 0.72,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.0923076923076923,
+          "filter": {
+            "lowpass": 1112.32,
+            "highpass": 110
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.067,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.26,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3589888740,
+      "layers": [
+        {
+          "duration": 0.26,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 115.276,
+          "gain": 0.65,
+          "endFrequency": 42.101
+        },
+        {
+          "duration": 0.26,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.26,
+          "filter": {
+            "lowpass": 721.73,
+            "highpass": 35
+          }
+        },
+        {
+          "duration": 0.26,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.3076923076923077,
+          "filter": {
+            "lowpass": 1904.56,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.26,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 195.468,
+          "gain": 0.1846153846153846,
+          "endFrequency": 91.218,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

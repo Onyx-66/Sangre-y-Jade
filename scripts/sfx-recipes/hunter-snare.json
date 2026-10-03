@@ -1,0 +1,178 @@
+{
+  "id": "hunter-snare",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Rope whip and a soft thud.",
+  "sounds": {
+    "cast": {
+      "duration": 0.42,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 598460249,
+      "layers": [
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 5620.45,
+            "highpass": 1600
+          },
+          "pulseHz": 55,
+          "pulseSharpness": 3
+        },
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12,
+          "filter": {
+            "lowpass": 1124.09,
+            "highpass": 110
+          }
+        },
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2248.18,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 919.71,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.063,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.19,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2509563689,
+      "layers": [
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 255.025,
+          "gain": 0.4,
+          "endFrequency": 160.016,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2800.28,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 115.011,
+          "gain": 0.5,
+          "endFrequency": 42.004
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 720.07,
+            "highpass": 35
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.068,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

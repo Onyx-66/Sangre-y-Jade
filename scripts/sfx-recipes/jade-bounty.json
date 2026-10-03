@@ -1,0 +1,92 @@
+{
+  "id": "jade-bounty",
+  "owner": "shared",
+  "kind": "passive",
+  "brief": "Existing pickup sound.",
+  "sounds": {
+    "proc": {
+      "duration": 0.18,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 3883104564,
+      "layers": [
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 961.97,
+          "gain": 0.25,
+          "endFrequency": 334.158,
+          "fm": {
+            "ratio": 1.6,
+            "index": 1.3
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.15,
+          "filter": {
+            "lowpass": 1721.42,
+            "highpass": 250
+          },
+          "pulseHz": 14
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 891.088,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1787.239,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -110,6 +110,9 @@ export class FxDirector {
     return stills;
   }
   play(id,stage,ctx={}) {
+    // Shared presentation hook also covers direct stage calls and the existing
+    // Ixchel compatibility bridge. Sound lifetime is independent of sprite caps.
+    this.scene.skillAudio?.onFx?.(id,stage,ctx);
     const recipe=FxDirector.recipes.get(id),draw=recipe?.[stage];
     if(!recipe)return this.playPlaceholder(id,stage,ctx);
     if(!draw)return null;

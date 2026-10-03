@@ -1,0 +1,87 @@
+{
+  "id": "bloodlust",
+  "owner": "balam",
+  "kind": "passive",
+  "brief": "Soft heartbeat tick per stack.",
+  "sounds": {
+    "proc": {
+      "duration": 0.14,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 891601642,
+      "layers": [
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 66.196,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 109.987,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 458.28,
+          "gain": 0.2692307692307692,
+          "endFrequency": 132.392
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 1527.6,
+            "highpass": 200
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028999999999999998,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.08,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

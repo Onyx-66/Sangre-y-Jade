@@ -1,0 +1,88 @@
+{
+  "id": "ui-pick-passive",
+  "owner": "ui",
+  "brief": "soft jade bell, gentle decay",
+  "sounds": {
+    "ui": {
+      "duration": 0.25,
+      "loop": false,
+      "peakDb": -6,
+      "seed": 1009968240,
+      "layers": [
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.13,
+            "sustain": 0.12,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 633.906,
+          "gain": 0.34,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1197.378,
+          "gain": 0.14,
+          "vibrato": 0.002
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 181.116,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 271.674,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.043,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

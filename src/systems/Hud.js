@@ -200,6 +200,7 @@ export class Hud {
   hideTooltip() { this.tooltip.hidden=true;clearTimeout(this.tooltipTimer); }
 
   showUnlock(kind) {
+    this.callbacks.uiSound?.('slot-unlock');
     const slot=kind==='passive'?this.passiveEls[1]:this.skillEls[3];
     const burst=document.createElement('img');burst.className='slot-unlock-burst';burst.src=artUrl('ui/unlock-burst.png');burst.alt='';
     slot.append(burst);

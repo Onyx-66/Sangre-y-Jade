@@ -1,0 +1,287 @@
+{
+  "id": "four-directions",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Four ascending chime notes.",
+  "sounds": {
+    "cast": {
+      "duration": 0.82,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2412732546,
+      "layers": [
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 854.656,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1714.168,
+          "gain": 0.12,
+          "start": 0
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.045,
+            "decay": 0.1,
+            "sustain": 0.6,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 640.992,
+          "gain": 0.2,
+          "vibrato": 0.006,
+          "start": 0
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.05384615384615385,
+          "filter": {
+            "lowpass": 2913.6,
+            "highpass": 1700
+          },
+          "start": 0,
+          "frequency": 213.664
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 999.948,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.16399999999999998
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2005.577,
+          "gain": 0.12,
+          "start": 0.16399999999999998
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.045,
+            "decay": 0.1,
+            "sustain": 0.6,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 749.961,
+          "gain": 0.2,
+          "vibrato": 0.006,
+          "start": 0.16399999999999998
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.05384615384615385,
+          "filter": {
+            "lowpass": 2913.6,
+            "highpass": 1700
+          },
+          "start": 0.16399999999999998,
+          "frequency": 249.987
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1169.939,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.32799999999999996
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2346.525,
+          "gain": 0.12,
+          "start": 0.32799999999999996
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.045,
+            "decay": 0.1,
+            "sustain": 0.6,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 877.454,
+          "gain": 0.2,
+          "vibrato": 0.006,
+          "start": 0.32799999999999996
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.05384615384615385,
+          "filter": {
+            "lowpass": 2913.6,
+            "highpass": 1700
+          },
+          "start": 0.32799999999999996,
+          "frequency": 292.485
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1368.828,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.49199999999999994
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2745.434,
+          "gain": 0.12,
+          "start": 0.49199999999999994
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.045,
+            "decay": 0.1,
+            "sustain": 0.6,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 1026.621,
+          "gain": 0.2,
+          "vibrato": 0.006,
+          "start": 0.49199999999999994
+        },
+        {
+          "duration": 0.29519999999999996,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.05384615384615385,
+          "filter": {
+            "lowpass": 2913.6,
+            "highpass": 1700
+          },
+          "start": 0.49199999999999994,
+          "frequency": 342.207
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.035,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.064,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

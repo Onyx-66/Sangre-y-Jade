@@ -1,0 +1,618 @@
+{
+  "skills": {
+    "jaguar-roar": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "obsidian-arc": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "prowlers-leap": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "claw-cyclone": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "cast",
+      "effectSeconds": 1.5,
+      "stopOnImpact": false
+    },
+    "ceiba-breaker": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "bloodless-hunt": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "stone-maw": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "war-drum": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 6,
+      "stopOnImpact": false
+    },
+    "sun-claw": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "jaguar-echo": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "travel",
+      "effectSeconds": 8,
+      "stopOnImpact": false
+    },
+    "fang-path": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "hunters-mark": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "nine-lives": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "black-mirror": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "pyramid-rush": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "travel",
+      "effectSeconds": 0.6,
+      "stopOnImpact": false
+    },
+    "heart-of-balam": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 6,
+      "stopOnImpact": true
+    },
+    "bloodlust": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "stonehide": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "predators-rhythm": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "feast-of-the-fallen": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "obsidian-thorns": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "jaguars-pride": {
+      "kinds": [],
+      "silent": true
+    },
+    "earthshaker": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "wounded-fury": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "copal-star": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "jade-halo": {
+      "kinds": [
+        "cast",
+        "hit",
+        "loop"
+      ],
+      "loopStage": "travel",
+      "effectSeconds": 1.4,
+      "stopOnImpact": false
+    },
+    "ancestor-flame": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "moonwell": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "ground",
+      "effectSeconds": 5,
+      "stopOnImpact": false
+    },
+    "censer-wave": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "verdant-mercy": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "copal-veil": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "glyph-comet": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "cacao-bloom": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "raincaller": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "ground",
+      "effectSeconds": 2.5,
+      "stopOnImpact": false
+    },
+    "spirit-familiar": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 12,
+      "stopOnImpact": false
+    },
+    "serpent-coil": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "jade-needles": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "dreamwalk": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "four-directions": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "ixchels-mantle": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "ancestral-echo": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "mana-spring": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "lunar-boon": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "rooted-meditation": {
+      "kinds": [
+        "proc",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 0.65,
+      "stopOnImpact": false
+    },
+    "jade-resilience": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "spirit-harvest": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "crescent-blessing": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "mana-overflow": {
+      "kinds": [],
+      "silent": true
+    },
+    "atlatl-volley": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "featherstorm": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "travel",
+      "effectSeconds": 4,
+      "stopOnImpact": false
+    },
+    "serpent-path": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "windstep": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "quetzal-flip": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "hunter-snare": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "eagle-eye": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "sun-dart": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "storm-nest": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "ground",
+      "effectSeconds": 8,
+      "stopOnImpact": false
+    },
+    "plume-guard": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "cacao-bomb": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "travel",
+      "effectSeconds": 0.7,
+      "stopOnImpact": true
+    },
+    "forked-flight": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "gale-ring": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "hunters-trance": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 6,
+      "stopOnImpact": false
+    },
+    "skyfall": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "kukulkans-breath": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 2.25,
+      "stopOnImpact": false
+    },
+    "sharpened-flint": {
+      "kinds": [],
+      "silent": true
+    },
+    "venomous-darts": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "full-quiver": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "hunters-focus": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "fleet-hunter": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "jungle-instinct": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "trophy-hunter": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "steady-aim": {
+      "kinds": [],
+      "silent": true
+    },
+    "survivors-will": {
+      "kinds": [],
+      "silent": true
+    },
+    "jade-bounty": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "healing-circle": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "jade-ward": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "cleansing-light": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "sanctuary-dome": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 5,
+      "stopOnImpact": false
+    },
+    "radiant-beacon": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "lifebond": {
+      "kinds": [
+        "cast",
+        "loop"
+      ],
+      "loopStage": "aura",
+      "effectSeconds": 6,
+      "stopOnImpact": false
+    },
+    "saving-grace": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "sacred-fervor": {
+      "kinds": [],
+      "silent": true
+    },
+    "bulwark-wall": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "war-cry": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "shield-bash": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "ground-slam": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "clay-bomb": {
+      "kinds": [
+        "cast",
+        "loop",
+        "hit"
+      ],
+      "loopStage": "ground",
+      "effectSeconds": 3,
+      "stopOnImpact": true
+    },
+    "shield-throw": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "bodyguard": {
+      "kinds": [],
+      "silent": true
+    },
+    "guardian-link": {
+      "kinds": [
+        "proc"
+      ]
+    },
+    "ambush": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "execute": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "venom-blade": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "silencing-dart": {
+      "kinds": [
+        "cast",
+        "hit"
+      ]
+    },
+    "smoke-bomb": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "vanish": {
+      "kinds": [
+        "cast"
+      ]
+    },
+    "relentless-pursuit": {
+      "kinds": [],
+      "silent": true
+    },
+    "bounty-contract": {
+      "kinds": [
+        "proc"
+      ]
+    }
+  },
+  "ui": {
+    "slot-unlock": {
+      "id": "ui-slot-unlock"
+    },
+    "milestone-pick": {
+      "id": "ui-milestone-pick"
+    },
+    "pick-active": {
+      "id": "ui-pick-active"
+    },
+    "pick-passive": {
+      "id": "ui-pick-passive"
+    },
+    "pick-ally": {
+      "id": "ui-pick-ally"
+    },
+    "companion-join": {
+      "id": "ui-companion-join"
+    },
+    "ally-cast": {
+      "id": "ui-ally-cast"
+    },
+    "ally-rank": {
+      "id": "ui-ally-rank"
+    }
+  }
+}

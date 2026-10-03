@@ -1,0 +1,91 @@
+{
+  "id": "hunters-focus",
+  "owner": "kukul",
+  "kind": "passive",
+  "brief": "Light tick per stack.",
+  "sounds": {
+    "proc": {
+      "duration": 0.11,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 191789496,
+      "layers": [
+        {
+          "duration": 0.11,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 259.539,
+          "gain": 0.4,
+          "endFrequency": 162.848,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.11,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2849.84,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 0.11,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 895.664,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.11,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1796.417,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.072,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

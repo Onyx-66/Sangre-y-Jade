@@ -1,0 +1,177 @@
+{
+  "id": "bloodless-hunt",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Ghostly whispering whoosh, wet bite on impact.",
+  "sounds": {
+    "cast": {
+      "duration": 0.6,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 952247812,
+      "layers": [
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.19,
+          "filter": {
+            "lowpass": 3288.78,
+            "highpass": 650
+          },
+          "pulseHz": 17
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 458.436,
+          "gain": 0.12,
+          "endFrequency": 259.116,
+          "vibrato": 0.012
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2192.52,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 896.94,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.076,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.18,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2642993738,
+      "layers": [
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.35,
+          "filter": {
+            "lowpass": 1323.14,
+            "highpass": 240
+          },
+          "distortion": 0.6
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 274.806,
+          "gain": 0.3,
+          "endFrequency": 71.246,
+          "fm": {
+            "ratio": 1.2,
+            "index": 1.1
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 458.01,
+          "gain": 0.2692307692307692,
+          "endFrequency": 132.314
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 1526.7,
+            "highpass": 200
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.065,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

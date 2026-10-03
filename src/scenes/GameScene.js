@@ -136,6 +136,7 @@ export class GameScene extends Phaser.Scene {
       dash: () => this.tryDash(),
       pause: () => this.togglePause(),
       support:()=>this.showSupportLoadout(),
+      uiSound:name=>this.skillAudio.ui(name),
       attack:()=>{if(this.settings.attackMode==='manual' && this.autoTimer<=0 && !this.pausedForChoice)this.autoAttack();},
     });
     this.hud.setHero(hero);
@@ -223,6 +224,7 @@ export class GameScene extends Phaser.Scene {
     const delta = Math.min(deltaRaw, 50);
     const dt = delta / 1000;
     this.elapsed += dt;
+    this.skillAudio?.update?.(dt);
     this.passives.emit('tick', { dt });
     this.autoTimer -= dt * this.stats.cooldownRecoveryMult * (this.passives.modifiers().attackSpeedMult??1) * skillModifiers(this).attackSpeedMult;
     this.spawnTimer -= dt;
@@ -879,7 +881,7 @@ export class GameScene extends Phaser.Scene {
     const value = pickup.getData('value') || 1;
     if (kind === 'xp') {
       this.stats.xp += value * this.stats.xpGain;
-      this.audio.sfx('pickup', .09);
+      if(!this.passives.equipped.has('jade-bounty'))this.audio.sfx('pickup', .09);
       pickup.destroy();
     } else if (kind === 'cacao') {
       this.stats.cacao += Math.max(1, Math.round(value * (1 + this.stats.fortune)));
@@ -946,7 +948,6 @@ export class GameScene extends Phaser.Scene {
     if(!kind||this.completedSkillMilestones.has(earnedLevel)){onDone();return;}
     this.completedSkillMilestones.add(earnedLevel);
     this.hud.showUnlock?.(kind);
-    this.audio.sfx('click'); // Existing placeholder; dedicated unlock sound arrives in step 18.
     const cards=this.getMilestoneChoices(kind,earnedLevel);
     if(!cards.length){
       // Hero-only passives arrive in later conversion steps; do not invent placeholder skills.
@@ -955,15 +956,16 @@ export class GameScene extends Phaser.Scene {
       return;
     }
     const title=kind==='passive'?'Passive Slot Unlocked':'Fourth Active Slot Unlocked';
-    this.hud.showChoice(title,cards,card=>this.applyChoice(card,onDone,()=>this.finishSelection()),`Choose one ${kind} skill.`);
+    this.hud.showChoice(title,cards,card=>this.applyChoice(card,()=>{this.skillAudio?.ui?.('milestone-pick');onDone();},()=>this.finishSelection()),`Choose one ${kind} skill.`);
   }
 
-  pauseForSelection(){this.pausedForChoice=true;this.physics.pause();this.tweens.pauseAll();this.time.paused=true;this.releaseAttack();this.hud.move={x:0,y:0};}
+  pauseForSelection(){this.pausedForChoice=true;this.skillAudio?.pause?.();this.physics.pause();this.tweens.pauseAll();this.time.paused=true;this.releaseAttack();this.hud.move={x:0,y:0};}
   finishSelection(){
     if(this.ended)return;
     if(this.pendingLevelUps>0){this.showLevelChoice();return;}
     if(this.pendingBossRewards.length){this.pausedForChoice=false;this.grantBossReward(this.pendingBossRewards.shift());return;}
     this.pausedForChoice=false;this.physics.resume();this.tweens.resumeAll();this.time.paused=false;
+    this.skillAudio?.resume?.();
   }
   showSupportLoadout(){
     if(!this.companion||this.pausedForChoice||this.ended)return;
@@ -999,6 +1001,7 @@ export class GameScene extends Phaser.Scene {
           if(kind==='passive')this.passives.unequip(target.id);
           slots[slotIndex]={...pool.find(skill=>skill.id===card.id)||card,kind,level:1,remaining:0};
           if(kind==='passive')this.passives.equip(slots[slotIndex],1);
+          this.skillAudio?.ui?.(kind==='passive'?'pick-passive':'pick-active');
         }
         this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));this.refreshPassiveHud();onDone();
       },`The new ${kind} skill starts at level 1.`,{label:'Cancel',action:onCancel});return;
@@ -1021,6 +1024,7 @@ export class GameScene extends Phaser.Scene {
     }
     this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));
     this.refreshPassiveHud();
+    if(kind==='active'||kind==='passive')this.skillAudio?.ui?.(`pick-${kind}`);
     onDone();
   }
 
@@ -1149,6 +1153,7 @@ export class GameScene extends Phaser.Scene {
   togglePause() {
     if (this.ended || this.pausedForChoice) return;
     this.pausedForChoice = true;
+    this.skillAudio?.pause?.();
     this.physics.pause();
     this.tweens.pauseAll();
     this.time.paused=true;
@@ -1157,12 +1162,14 @@ export class GameScene extends Phaser.Scene {
       this.physics.resume();
       this.tweens.resumeAll();
       this.time.paused=false;
+      this.skillAudio?.resume?.();
     }, () => this.finishRun(false, true));
   }
 
   finishRun(victory, abandoned = false) {
     if (this.ended) return;
     this.ended = true;
+    this.skillAudio?.stopAll?.();
     this.tweens.pauseAll();
     this.time.paused=false;
     this.physics.pause();

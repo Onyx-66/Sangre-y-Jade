@@ -1,0 +1,90 @@
+{
+  "id": "guardian-link",
+  "owner": "ally:tank",
+  "kind": "passive",
+  "brief": "Metal chain clink.",
+  "sounds": {
+    "proc": {
+      "duration": 0.18,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 2391476276,
+      "layers": [
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1489.698,
+          "gain": 0.27,
+          "fm": {
+            "ratio": 1.41,
+            "index": 2.2
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 2270.016,
+          "gain": 0.17,
+          "filter": {
+            "postLowpass": 4100
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 456.03,
+          "gain": 0.2692307692307692,
+          "endFrequency": 131.742
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 1520.1,
+            "highpass": 200
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.077,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

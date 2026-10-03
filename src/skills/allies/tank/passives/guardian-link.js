@@ -11,6 +11,7 @@ export const guardianLink = {
     const amount = damage * valueAt(level, definition.values) / 100;
     const absorbed = Math.min(amount, Math.max(0, (ally.hp ?? 100) - 1));
     ally.hp = Math.max(1, (ally.hp ?? 100) - absorbed);
+    if (absorbed > 0) scene.skillAudio?.play(definition.id, 'proc');
     return damage - absorbed;
   },
 };

@@ -1,0 +1,94 @@
+{
+  "id": "copal-star",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Soft chime with a light crackle.",
+  "sounds": {
+    "cast": {
+      "duration": 0.52,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 87491485,
+      "layers": [
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.13,
+            "sustain": 0.12,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 633.969,
+          "gain": 0.34,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1197.497,
+          "gain": 0.14,
+          "vibrato": 0.002
+        },
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.15384615384615385,
+          "filter": {
+            "lowpass": 6943.47,
+            "highpass": 2100
+          },
+          "pulseHz": 91,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.13076923076923078,
+          "filter": {
+            "lowpass": 3220.16,
+            "highpass": 500
+          },
+          "pulseHz": 61,
+          "pulseSharpness": 9
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028999999999999998,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

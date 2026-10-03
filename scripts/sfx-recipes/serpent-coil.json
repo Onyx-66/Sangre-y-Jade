@@ -1,0 +1,96 @@
+{
+  "id": "serpent-coil",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Hiss then a constricting creak.",
+  "sounds": {
+    "cast": {
+      "duration": 0.64,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 87331280,
+      "layers": [
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.22,
+          "filter": {
+            "lowpass": 6345.08,
+            "highpass": 1700
+          }
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.17,
+          "filter": {
+            "lowpass": 2660.84,
+            "highpass": 500
+          },
+          "pulseHz": 8
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.3076923076923077,
+          "filter": {
+            "lowpass": 1944.46,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 199.563,
+          "gain": 0.1846153846153846,
+          "endFrequency": 93.129,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.039,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.063,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

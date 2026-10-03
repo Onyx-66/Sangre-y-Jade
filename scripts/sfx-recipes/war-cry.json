@@ -1,0 +1,96 @@
+{
+  "id": "war-cry",
+  "owner": "ally:tank",
+  "kind": "active",
+  "brief": "Deep battle shout.",
+  "sounds": {
+    "cast": {
+      "duration": 0.78,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 824592016,
+      "layers": [
+        {
+          "duration": 0.78,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 130.13,
+          "gain": 0.33,
+          "endFrequency": 75.075,
+          "fm": {
+            "frequency": 310,
+            "index": 1.6
+          },
+          "distortion": 1.5,
+          "filter": {
+            "postLowpass": 1900
+          }
+        },
+        {
+          "duration": 0.78,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.3,
+          "filter": {
+            "lowpass": 1501.5,
+            "highpass": 180
+          },
+          "pulseHz": 34
+        },
+        {
+          "duration": 0.78,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 115.115,
+          "gain": 0.5,
+          "endFrequency": 42.042
+        },
+        {
+          "duration": 0.78,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 720.72,
+            "highpass": 35
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028999999999999998,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.065,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

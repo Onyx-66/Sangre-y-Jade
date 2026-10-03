@@ -1,0 +1,150 @@
+{
+  "id": "sanctuary-dome",
+  "owner": "ally:saintess",
+  "kind": "active",
+  "brief": "Low resonant hum.",
+  "sounds": {
+    "cast": {
+      "duration": 0.6,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2106223145,
+      "layers": [
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 183.942,
+          "gain": 0.25,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 275.913,
+          "gain": 0.13,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.14,
+            "sustain": 0.08,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 327.008,
+          "gain": 0.2,
+          "fm": {
+            "ratio": 1.414,
+            "index": 1.4
+          }
+        },
+        {
+          "duration": 0.6,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 702.045,
+          "gain": 0.14615384615384616,
+          "fm": {
+            "ratio": 2.76,
+            "index": 0.6
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.039,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.078,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 3,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 1738210920,
+      "layers": [
+        {
+          "duration": 3,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 127.033,
+          "gain": 0.25,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 3,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 190.55,
+          "gain": 0.13,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        },
+        {
+          "duration": 3,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 276.65,
+          "gain": 0.15384615384615385,
+          "fm": {
+            "ratio": 3,
+            "index": 0.3
+          },
+          "vibrato": 0.005
+        },
+        {
+          "duration": 3,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 414.481,
+          "gain": 0.12307692307692307,
+          "vibrato": 0.004
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.039,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.073,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

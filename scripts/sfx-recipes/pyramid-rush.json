@@ -1,0 +1,174 @@
+{
+  "id": "pyramid-rush",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Rumbling stone drag and a charge growl.",
+  "sounds": {
+    "cast": {
+      "duration": 0.4,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 227909992,
+      "layers": [
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "saw",
+          "frequency": 84.813,
+          "gain": 0.4,
+          "endFrequency": 47.894,
+          "distortion": 2,
+          "fm": {
+            "ratio": 3,
+            "index": 1.7
+          },
+          "filter": {
+            "postLowpass": 700
+          },
+          "pulseHz": 23
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 848.13,
+            "highpass": 80
+          },
+          "pulseHz": 27
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.3076923076923077,
+          "filter": {
+            "lowpass": 1895.82,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 194.571,
+          "gain": 0.1846153846153846,
+          "endFrequency": 90.8,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.035,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.068,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 1.2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 394101133,
+      "layers": [
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1870.93,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 192.017,
+          "gain": 0.24,
+          "endFrequency": 89.608,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "saw",
+          "frequency": 83.7,
+          "gain": 0.3076923076923077,
+          "endFrequency": 47.266,
+          "distortion": 2,
+          "fm": {
+            "ratio": 3,
+            "index": 1.7
+          },
+          "filter": {
+            "postLowpass": 700
+          },
+          "pulseHz": 23
+        },
+        {
+          "duration": 1.2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 837,
+            "highpass": 80
+          },
+          "pulseHz": 27
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.035,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.073,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

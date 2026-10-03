@@ -1,0 +1,90 @@
+{
+  "id": "ui-pick-active",
+  "owner": "ui",
+  "brief": "short bright golden ping",
+  "sounds": {
+    "ui": {
+      "duration": 0.2,
+      "loop": false,
+      "peakDb": -6,
+      "seed": 1857394005,
+      "layers": [
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 871.816,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1748.586,
+          "gain": 0.12
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1535.585,
+          "gain": 0.23076923076923075,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2734.332,
+          "gain": 0.1076923076923077,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.081,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "ui-pick-ally",
+  "owner": "ui",
+  "brief": "airy sky-blue chime",
+  "sounds": {
+    "ui": {
+      "duration": 0.25,
+      "loop": false,
+      "peakDb": -6,
+      "seed": 305963617,
+      "layers": [
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 872.872,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1750.704,
+          "gain": 0.12
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2182.18,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 892.71,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.033,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.08,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

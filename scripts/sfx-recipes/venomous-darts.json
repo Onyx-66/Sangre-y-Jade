@@ -1,0 +1,95 @@
+{
+  "id": "venomous-darts",
+  "owner": "kukul",
+  "kind": "passive",
+  "brief": "Soft sizzle.",
+  "sounds": {
+    "proc": {
+      "duration": 0.22,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 965405471,
+      "layers": [
+        {
+          "duration": 0.22,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.22,
+          "filter": {
+            "lowpass": 6093.98,
+            "highpass": 1700
+          }
+        },
+        {
+          "duration": 0.22,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.17,
+          "filter": {
+            "lowpass": 2555.54,
+            "highpass": 500
+          },
+          "pulseHz": 8
+        },
+        {
+          "duration": 0.22,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 933.755,
+          "gain": 0.1923076923076923,
+          "endFrequency": 324.357,
+          "fm": {
+            "ratio": 1.6,
+            "index": 1.3
+          }
+        },
+        {
+          "duration": 0.22,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.11538461538461538,
+          "filter": {
+            "lowpass": 1670.93,
+            "highpass": 250
+          },
+          "pulseHz": 14
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.064,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

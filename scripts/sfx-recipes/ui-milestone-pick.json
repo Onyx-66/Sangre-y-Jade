@@ -1,0 +1,167 @@
+{
+  "id": "ui-milestone-pick",
+  "owner": "ui",
+  "brief": "warm three-note fanfare on a soft hollow drum",
+  "sounds": {
+    "ui": {
+      "duration": 1.2,
+      "loop": false,
+      "peakDb": -9,
+      "seed": 4199396347,
+      "layers": [
+        {
+          "duration": 0.5599999999999999,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 255,
+          "gain": 0.26,
+          "endFrequency": 160,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          },
+          "start": 0
+        },
+        {
+          "duration": 0.5599999999999999,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.11699999999999999,
+          "filter": {
+            "lowpass": 2800,
+            "highpass": 350
+          },
+          "start": 0,
+          "frequency": 220
+        },
+        {
+          "duration": 0.5599999999999999,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 318.75,
+          "gain": 0.26,
+          "endFrequency": 160,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          },
+          "start": 0.3
+        },
+        {
+          "duration": 0.5599999999999999,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.11699999999999999,
+          "filter": {
+            "lowpass": 2800,
+            "highpass": 350
+          },
+          "start": 0.3,
+          "frequency": 275
+        },
+        {
+          "duration": 0.5599999999999999,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 382.5,
+          "gain": 0.26,
+          "endFrequency": 160,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          },
+          "start": 0.6
+        },
+        {
+          "duration": 0.5599999999999999,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.11699999999999999,
+          "filter": {
+            "lowpass": 2800,
+            "highpass": 350
+          },
+          "start": 0.6,
+          "frequency": 330
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.025,
+            "decay": 0.08,
+            "sustain": 0.5,
+            "release": 0.18
+          },
+          "type": "saw",
+          "frequency": 294,
+          "gain": 0.11200000000000002,
+          "filter": {
+            "postLowpass": 1550
+          },
+          "vibrato": 0.004
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 440,
+          "gain": 0.064
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.04,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

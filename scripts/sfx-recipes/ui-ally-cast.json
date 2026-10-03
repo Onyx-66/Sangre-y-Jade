@@ -1,0 +1,90 @@
+{
+  "id": "ui-ally-cast",
+  "owner": "ui",
+  "brief": "small soft repeating pop",
+  "sounds": {
+    "ui": {
+      "duration": 0.25,
+      "loop": false,
+      "peakDb": -18,
+      "seed": 2104476145,
+      "layers": [
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 446.715,
+          "gain": 0.35,
+          "endFrequency": 129.051
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16,
+          "filter": {
+            "lowpass": 1489.05,
+            "highpass": 200
+          }
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2183.94,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.25,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 893.43,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.031,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.077,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

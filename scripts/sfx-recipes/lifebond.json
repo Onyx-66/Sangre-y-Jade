@@ -1,0 +1,143 @@
+{
+  "id": "lifebond",
+  "owner": "ally:saintess",
+  "kind": "active",
+  "brief": "Heartbeat with a soft chime.",
+  "sounds": {
+    "cast": {
+      "duration": 0.64,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3388061894,
+      "layers": [
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 63.622,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 105.71,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 861.344,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.64,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1727.582,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.064,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 348730763,
+      "layers": [
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 45.941,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 76.333,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 445.278,
+          "gain": 0.26153846153846155,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 841.08,
+          "gain": 0.1076923076923077,
+          "vibrato": 0.002
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07100000000000001,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

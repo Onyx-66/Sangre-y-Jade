@@ -1,0 +1,89 @@
+{
+  "id": "cleansing-light",
+  "owner": "ally:saintess",
+  "kind": "active",
+  "brief": "Pure choir note.",
+  "sounds": {
+    "cast": {
+      "duration": 0.88,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1296879336,
+      "layers": [
+        {
+          "duration": 0.88,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.055,
+            "decay": 0.12,
+            "sustain": 0.65,
+            "release": 0.2
+          },
+          "type": "triangle",
+          "frequency": 381.73,
+          "gain": 0.2,
+          "fm": {
+            "ratio": 3,
+            "index": 0.3
+          },
+          "vibrato": 0.005
+        },
+        {
+          "duration": 0.88,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.04,
+            "decay": 0.1,
+            "sustain": 0.65,
+            "release": 0.25
+          },
+          "type": "sine",
+          "frequency": 571.913,
+          "gain": 0.16,
+          "vibrato": 0.004
+        },
+        {
+          "duration": 0.88,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.045,
+            "decay": 0.1,
+            "sustain": 0.6,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 642.708,
+          "gain": 0.2,
+          "vibrato": 0.006
+        },
+        {
+          "duration": 0.88,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.05384615384615385,
+          "filter": {
+            "lowpass": 2921.4,
+            "highpass": 1700
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "dreamwalk",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Dreamy reversed-cymbal swell, soft pop on return.",
+  "sounds": {
+    "cast": {
+      "duration": 0.75,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3470731331,
+      "layers": [
+        {
+          "duration": 0.75,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2209.02,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.75,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 903.69,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.75,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 321.312,
+          "gain": 0.2,
+          "fm": {
+            "ratio": 1.414,
+            "index": 1.4
+          }
+        },
+        {
+          "duration": 0.75,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 689.817,
+          "gain": 0.14615384615384616,
+          "fm": {
+            "ratio": 2.76,
+            "index": 0.6
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.038,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.068,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.18,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1326407023,
+      "layers": [
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 462.735,
+          "gain": 0.35,
+          "endFrequency": 133.679
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16,
+          "filter": {
+            "lowpass": 1542.45,
+            "highpass": 200
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 904.904,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1814.949,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.038,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.068,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "copal-veil",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Muffled cloth whoosh, glass ping on absorb.",
+  "sounds": {
+    "cast": {
+      "duration": 0.52,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3810306921,
+      "layers": [
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2265.78,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 926.91,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1923076923076923,
+          "filter": {
+            "lowpass": 4428.57,
+            "highpass": 900
+          },
+          "pulseHz": 33,
+          "pulseSharpness": 5
+        },
+        {
+          "duration": 0.52,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1076923076923077,
+          "filter": {
+            "lowpass": 926.91,
+            "highpass": 120
+          },
+          "pulseHz": 19
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.08,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.2,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3692279545,
+      "layers": [
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1582.395,
+          "gain": 0.3,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2817.684,
+          "gain": 0.14,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.13,
+            "sustain": 0.12,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 643.167,
+          "gain": 0.26153846153846155,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1214.871,
+          "gain": 0.1076923076923077,
+          "vibrato": 0.002
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.08,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

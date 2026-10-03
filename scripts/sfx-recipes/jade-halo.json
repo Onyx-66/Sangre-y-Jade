@@ -1,0 +1,232 @@
+{
+  "id": "jade-halo",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Glassy bead clacks over a soft hum loop.",
+  "sounds": {
+    "cast": {
+      "duration": 0.42,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 919417080,
+      "layers": [
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.13,
+            "sustain": 0.12,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 641.214,
+          "gain": 0.34,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1211.182,
+          "gain": 0.14,
+          "vibrato": 0.002
+        },
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1577.59,
+          "gain": 0.23076923076923075,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.42,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2809.128,
+          "gain": 0.1076923076923077,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.034,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.067,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.14,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2574019670,
+      "layers": [
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1562.09,
+          "gain": 0.3,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2781.528,
+          "gain": 0.14,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 453.51,
+          "gain": 0.2692307692307692,
+          "endFrequency": 131.014
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 1511.7,
+            "highpass": 200
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.034,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 1962634429,
+      "layers": [
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 123.77,
+          "gain": 0.25,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 185.655,
+          "gain": 0.13,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 433.194,
+          "gain": 0.26153846153846155,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 818.256,
+          "gain": 0.1076923076923077,
+          "vibrato": 0.002
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.034,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

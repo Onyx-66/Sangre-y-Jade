@@ -11,7 +11,9 @@ export const bountyContract = {
   },
   on: {
     kill({ scene, enemy, byAlly, wasTopThreat }) {
-      if (!byAlly || !wasTopThreat || !equipped(scene, 'assassin', definition.id)) return;
+      if (!byAlly || !equipped(scene, 'assassin', definition.id)) return;
+      scene.skillAudio?.play(definition.id, 'proc');
+      if (!wasTopThreat) return;
       const bonus = definition.params.bonusCacao;
       for (let i = 0; i < bonus; i += 1) scene.spawnPickup('cacao', enemy.x + (i - 1) * 8, enemy.y, 1);
     },

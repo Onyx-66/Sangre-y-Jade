@@ -1,0 +1,143 @@
+{
+  "id": "hunters-trance",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Slow heartbeat, one bell.",
+  "sounds": {
+    "cast": {
+      "duration": 0.8,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3274414542,
+      "layers": [
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 64.038,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 106.402,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 866.976,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1738.878,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.073,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 2472407011,
+      "layers": [
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 64.591,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 107.32,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 178.866,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 268.299,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

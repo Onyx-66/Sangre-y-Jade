@@ -1,0 +1,283 @@
+{
+  "id": "verdant-mercy",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Harp glissando with a wind chime.",
+  "sounds": {
+    "cast": {
+      "duration": 0.85,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2910226326,
+      "layers": [
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.12,
+            "sustain": 0.03,
+            "release": 0.14
+          },
+          "type": "triangle",
+          "frequency": 512.576,
+          "gain": 0.32,
+          "start": 0
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1025.151,
+          "gain": 0.12,
+          "fm": {
+            "ratio": 2,
+            "index": 0.18
+          },
+          "start": 0
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 862.048,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1728.994,
+          "gain": 0.0923076923076923,
+          "start": 0
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.12,
+            "sustain": 0.03,
+            "release": 0.14
+          },
+          "type": "triangle",
+          "frequency": 599.714,
+          "gain": 0.32,
+          "start": 0.16999999999999998
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1199.427,
+          "gain": 0.12,
+          "fm": {
+            "ratio": 2,
+            "index": 0.18
+          },
+          "start": 0.16999999999999998
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1008.596,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.16999999999999998
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2022.923,
+          "gain": 0.0923076923076923,
+          "start": 0.16999999999999998
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.12,
+            "sustain": 0.03,
+            "release": 0.14
+          },
+          "type": "triangle",
+          "frequency": 701.665,
+          "gain": 0.32,
+          "start": 0.33999999999999997
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1403.33,
+          "gain": 0.12,
+          "fm": {
+            "ratio": 2,
+            "index": 0.18
+          },
+          "start": 0.33999999999999997
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1180.058,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.33999999999999997
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2366.82,
+          "gain": 0.0923076923076923,
+          "start": 0.33999999999999997
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.12,
+            "sustain": 0.03,
+            "release": 0.14
+          },
+          "type": "triangle",
+          "frequency": 820.948,
+          "gain": 0.32,
+          "start": 0.51
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1641.896,
+          "gain": 0.12,
+          "fm": {
+            "ratio": 2,
+            "index": 0.18
+          },
+          "start": 0.51
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1380.667,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.51
+        },
+        {
+          "duration": 0.306,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2769.179,
+          "gain": 0.0923076923076923,
+          "start": 0.51
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.034,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.077,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

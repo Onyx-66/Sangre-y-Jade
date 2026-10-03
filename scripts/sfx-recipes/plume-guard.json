@@ -1,0 +1,177 @@
+{
+  "id": "plume-guard",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Soft feather flutter, chime on absorb.",
+  "sounds": {
+    "cast": {
+      "duration": 0.4,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 284726594,
+      "layers": [
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2191.2,
+            "highpass": 340
+          },
+          "pulseHz": 28,
+          "pulseSharpness": 6
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 288.84,
+          "gain": 0.11,
+          "pulseHz": 28
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2191.2,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 896.4,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.08,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.21,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2226703004,
+      "layers": [
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 858.176,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1721.228,
+          "gain": 0.12
+        },
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1923076923076923,
+          "filter": {
+            "lowpass": 4193.36,
+            "highpass": 900
+          },
+          "pulseHz": 33,
+          "pulseSharpness": 5
+        },
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1076923076923077,
+          "filter": {
+            "lowpass": 877.68,
+            "highpass": 120
+          },
+          "pulseHz": 19
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.073,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

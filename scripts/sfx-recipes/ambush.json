@@ -1,0 +1,91 @@
+{
+  "id": "ambush",
+  "owner": "ally:assassin",
+  "kind": "active",
+  "brief": "Short blade swish.",
+  "sounds": {
+    "cast": {
+      "duration": 0.24,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1506255879,
+      "layers": [
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 4495.05,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1098.79,
+          "gain": 0.16,
+          "endFrequency": 179.802
+        },
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 5493.95,
+            "highpass": 1600
+          },
+          "pulseHz": 55,
+          "pulseSharpness": 3
+        },
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.0923076923076923,
+          "filter": {
+            "lowpass": 1098.79,
+            "highpass": 110
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.038,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.078,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

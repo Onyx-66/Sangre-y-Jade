@@ -1,0 +1,180 @@
+{
+  "id": "obsidian-arc",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Sharp glassy slash plus a short stone crack.",
+  "sounds": {
+    "cast": {
+      "duration": 0.36,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2035103279,
+      "layers": [
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1549.535,
+          "gain": 0.3,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2759.172,
+          "gain": 0.14,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 4498.65,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.36,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1099.67,
+          "gain": 0.12307692307692307,
+          "endFrequency": 179.946
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.078,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.19,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 4097782531,
+      "layers": [
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1953.01,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 200.441,
+          "gain": 0.24,
+          "endFrequency": 93.539,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1593.245,
+          "gain": 0.23076923076923075,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2837.004,
+          "gain": 0.1076923076923077,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.077,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

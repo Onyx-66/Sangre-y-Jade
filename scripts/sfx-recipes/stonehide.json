@@ -1,0 +1,94 @@
+{
+  "id": "stonehide",
+  "owner": "balam",
+  "kind": "passive",
+  "brief": "Low stone creak when a new tier is reached.",
+  "sounds": {
+    "proc": {
+      "duration": 0.3,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 2352404441,
+      "layers": [
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.4,
+          "filter": {
+            "lowpass": 1885.37,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 193.498,
+          "gain": 0.24,
+          "endFrequency": 90.299,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 178.614,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 267.921,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.041999999999999996,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.075,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

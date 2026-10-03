@@ -1,0 +1,95 @@
+{
+  "id": "venom-blade",
+  "owner": "ally:assassin",
+  "kind": "active",
+  "brief": "Wet sizzle.",
+  "sounds": {
+    "cast": {
+      "duration": 0.4,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3193247047,
+      "layers": [
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 949.715,
+          "gain": 0.25,
+          "endFrequency": 329.901,
+          "fm": {
+            "ratio": 1.6,
+            "index": 1.3
+          }
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.15,
+          "filter": {
+            "lowpass": 1699.49,
+            "highpass": 250
+          },
+          "pulseHz": 14
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1692307692307692,
+          "filter": {
+            "lowpass": 6198.14,
+            "highpass": 1700
+          }
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.13076923076923078,
+          "filter": {
+            "lowpass": 2599.22,
+            "highpass": 500
+          },
+          "pulseHz": 8
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.03,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.065,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

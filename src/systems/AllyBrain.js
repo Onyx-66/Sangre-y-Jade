@@ -101,6 +101,7 @@ export class AllyBrain {
     skill.cooldownRefund=0;
     this.readySince.delete(skill.id);this.lastCast=scene.elapsed;
     this.casts[skill.id]=(this.casts[skill.id]||0)+1;
+    scene.skillAudio?.ui?.('ally-cast');
     if(typeof window!=='undefined')window.__allyCasts=this.casts;
     scene.animateCharacter?.(ally.sprite,`support-${ally.id}`,'attack',.32);
     this.popIcon(skill,ally);

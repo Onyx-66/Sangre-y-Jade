@@ -1,0 +1,91 @@
+{
+  "id": "fleet-hunter",
+  "owner": "kukul",
+  "kind": "passive",
+  "brief": "Quick whoosh on the next shot.",
+  "sounds": {
+    "proc": {
+      "duration": 0.19,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 1979157843,
+      "layers": [
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2231.9,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 913.05,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 4565.25,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.19,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1115.95,
+          "gain": 0.12307692307692307,
+          "endFrequency": 182.61
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.034,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.075,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

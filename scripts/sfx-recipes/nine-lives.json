@@ -1,0 +1,91 @@
+{
+  "id": "nine-lives",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Soft choir swell with a purr.",
+  "sounds": {
+    "cast": {
+      "duration": 0.92,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3749125741,
+      "layers": [
+        {
+          "duration": 0.92,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.055,
+            "decay": 0.12,
+            "sustain": 0.65,
+            "release": 0.2
+          },
+          "type": "triangle",
+          "frequency": 391.961,
+          "gain": 0.2,
+          "fm": {
+            "ratio": 3,
+            "index": 0.3
+          },
+          "vibrato": 0.005
+        },
+        {
+          "duration": 0.92,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.04,
+            "decay": 0.1,
+            "sustain": 0.65,
+            "release": 0.25
+          },
+          "type": "sine",
+          "frequency": 587.241,
+          "gain": 0.16,
+          "vibrato": 0.004
+        },
+        {
+          "duration": 0.92,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 76.992,
+          "gain": 0.1846153846153846,
+          "pulseHz": 26,
+          "distortion": 0.8
+        },
+        {
+          "duration": 0.92,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 599.94,
+            "highpass": 60
+          },
+          "pulseHz": 26
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.067,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

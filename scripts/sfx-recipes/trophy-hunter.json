@@ -1,0 +1,87 @@
+{
+  "id": "trophy-hunter",
+  "owner": "kukul",
+  "kind": "passive",
+  "brief": "Triumphant short horn.",
+  "sounds": {
+    "proc": {
+      "duration": 0.38,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 3171333187,
+      "layers": [
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.025,
+            "decay": 0.08,
+            "sustain": 0.5,
+            "release": 0.18
+          },
+          "type": "saw",
+          "frequency": 294.97,
+          "gain": 0.28,
+          "filter": {
+            "postLowpass": 1550
+          },
+          "vibrato": 0.004
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 441.452,
+          "gain": 0.16
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 882.904,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1770.825,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

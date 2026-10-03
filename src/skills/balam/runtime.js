@@ -15,7 +15,7 @@ export function present(scene, skill, stage='cast', ctx={}) {
  return sprite;
 }
 export function proc(scene, passive, point=scene.player, sound=true, fxContext={}) {
- scene.fx?.play(passive.id,'proc',{x:point.x,y:point.y,...fxContext});
+ scene.fx?.play(passive.id,'proc',{x:point.x,y:point.y,sound,...fxContext});
  if(sound)scene.skillAudio?.play(passive.id,'proc');
 }
 export function skillModifiers(scene) {

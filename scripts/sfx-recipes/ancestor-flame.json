@@ -1,0 +1,184 @@
+{
+  "id": "ancestor-flame",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Crackle with a low whoosh per jump.",
+  "sounds": {
+    "cast": {
+      "duration": 0.39,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3311874926,
+      "layers": [
+        {
+          "duration": 0.39,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 7101.48,
+            "highpass": 2100
+          },
+          "pulseHz": 91,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.39,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.17,
+          "filter": {
+            "lowpass": 3293.44,
+            "highpass": 500
+          },
+          "pulseHz": 61,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 0.39,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2264.24,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.39,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 926.28,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.17,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2669127616,
+      "layers": [
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 6764.76,
+            "highpass": 2100
+          },
+          "pulseHz": 91,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.17,
+          "filter": {
+            "lowpass": 3137.28,
+            "highpass": 500
+          },
+          "pulseHz": 61,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.14615384615384616,
+          "filter": {
+            "lowpass": 3235.32,
+            "highpass": 650
+          },
+          "pulseHz": 17
+        },
+        {
+          "duration": 0.17,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 450.984,
+          "gain": 0.0923076923076923,
+          "endFrequency": 254.904,
+          "vibrato": 0.012
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.067,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

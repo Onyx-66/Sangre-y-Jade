@@ -215,3 +215,158 @@ Generated through built-in ImageGen with `style_reference_fx.png` and `style_ref
 - `fx/jungle-instinct/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 6: green leaf burst and translucent wind afterimage, no body/face.
 - `fx/trophy-hunter/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 7: gold quills and amber celebratory feather sparks.
 - `fx/steady-aim/proc.png` — gpt-image-2.5 Flare (requested) — 2026-10-03 — Sheet 3 cell 8: thin jade reticle with white ticks and transparent centre.
+
+## Step 18 — Offline procedural skill and UI sound effects — 2026-10-03
+
+150 unique mono PCM16 / 44.1 kHz WAV files generated entirely in plain Node from deterministic seeds. No downloaded samples, music, voice recordings or existing audio assets were modified. The full metrics and per-skill file inventory are in [SFX_REPORT.md](SFX_REPORT.md). Eight `None (passive)` entries deliberately produce no file. All generated effects are logged below.
+
+- `audio/sfx/skills/sfx-ambush-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ambush.json`; brief: Short blade swish.
+- `audio/sfx/skills/sfx-ancestor-flame-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ancestor-flame.json`; brief: Crackle with a low whoosh per jump.
+- `audio/sfx/skills/sfx-ancestor-flame-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ancestor-flame.json`; brief: Crackle with a low whoosh per jump.
+- `audio/sfx/skills/sfx-ancestral-echo-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ancestral-echo.json`; brief: Whispery crackle.
+- `audio/sfx/skills/sfx-atlatl-volley-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/atlatl-volley.json`; brief: Rapid thwip-thwip-thwip.
+- `audio/sfx/skills/sfx-black-mirror-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/black-mirror.json`; brief: Glassy ring on cast, metallic ping per reflection.
+- `audio/sfx/skills/sfx-black-mirror-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/black-mirror.json`; brief: Glassy ring on cast, metallic ping per reflection.
+- `audio/sfx/skills/sfx-bloodless-hunt-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/bloodless-hunt.json`; brief: Ghostly whispering whoosh, wet bite on impact.
+- `audio/sfx/skills/sfx-bloodless-hunt-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/bloodless-hunt.json`; brief: Ghostly whispering whoosh, wet bite on impact.
+- `audio/sfx/skills/sfx-bloodlust-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/bloodlust.json`; brief: Soft heartbeat tick per stack.
+- `audio/sfx/skills/sfx-bounty-contract-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/bounty-contract.json`; brief: Coin chime.
+- `audio/sfx/skills/sfx-bulwark-wall-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/bulwark-wall.json`; brief: Stone grinding and a thud.
+- `audio/sfx/skills/sfx-bulwark-wall-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/bulwark-wall.json`; brief: Stone grinding and a thud.
+- `audio/sfx/skills/sfx-cacao-bloom-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/cacao-bloom.json`; brief: Soft pluck pop with a squelch.
+- `audio/sfx/skills/sfx-cacao-bloom-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/cacao-bloom.json`; brief: Soft pluck pop with a squelch.
+- `audio/sfx/skills/sfx-cacao-bomb-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/cacao-bomb.json`; brief: Fuse hiss then a boom.
+- `audio/sfx/skills/sfx-cacao-bomb-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/cacao-bomb.json`; brief: Fuse hiss then a boom.
+- `audio/sfx/skills/sfx-cacao-bomb-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/cacao-bomb.json`; brief: Fuse hiss then a boom.
+- `audio/sfx/skills/sfx-ceiba-breaker-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ceiba-breaker.json`; brief: Heavy wood crash plus a deep thump.
+- `audio/sfx/skills/sfx-ceiba-breaker-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ceiba-breaker.json`; brief: Heavy wood crash plus a deep thump.
+- `audio/sfx/skills/sfx-censer-wave-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/censer-wave.json`; brief: Soft low whoosh with puffing exhales.
+- `audio/sfx/skills/sfx-claw-cyclone-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/claw-cyclone.json`; brief: Looping airy whirr (1.5s) with a light claw tick per hit.
+- `audio/sfx/skills/sfx-claw-cyclone-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/claw-cyclone.json`; brief: Looping airy whirr (1.5s) with a light claw tick per hit.
+- `audio/sfx/skills/sfx-claw-cyclone-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/claw-cyclone.json`; brief: Looping airy whirr (1.5s) with a light claw tick per hit.
+- `audio/sfx/skills/sfx-clay-bomb-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/clay-bomb.json`; brief: Fuse hiss then boom.
+- `audio/sfx/skills/sfx-clay-bomb-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/clay-bomb.json`; brief: Fuse hiss then boom.
+- `audio/sfx/skills/sfx-clay-bomb-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/clay-bomb.json`; brief: Fuse hiss then boom.
+- `audio/sfx/skills/sfx-cleansing-light-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/cleansing-light.json`; brief: Pure choir note.
+- `audio/sfx/skills/sfx-copal-star-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/copal-star.json`; brief: Soft chime with a light crackle.
+- `audio/sfx/skills/sfx-copal-veil-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/copal-veil.json`; brief: Muffled cloth whoosh, glass ping on absorb.
+- `audio/sfx/skills/sfx-copal-veil-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/copal-veil.json`; brief: Muffled cloth whoosh, glass ping on absorb.
+- `audio/sfx/skills/sfx-crescent-blessing-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/crescent-blessing.json`; brief: Light crystal tick.
+- `audio/sfx/skills/sfx-dreamwalk-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/dreamwalk.json`; brief: Dreamy reversed-cymbal swell, soft pop on return.
+- `audio/sfx/skills/sfx-dreamwalk-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/dreamwalk.json`; brief: Dreamy reversed-cymbal swell, soft pop on return.
+- `audio/sfx/skills/sfx-eagle-eye-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/eagle-eye.json`; brief: Low tension riser then one sharp crack.
+- `audio/sfx/skills/sfx-eagle-eye-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/eagle-eye.json`; brief: Low tension riser then one sharp crack.
+- `audio/sfx/skills/sfx-earthshaker-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/earthshaker.json`; brief: Dull ground thump.
+- `audio/sfx/skills/sfx-execute-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/execute.json`; brief: Heavy blade thunk.
+- `audio/sfx/skills/sfx-execute-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/execute.json`; brief: Heavy blade thunk.
+- `audio/sfx/skills/sfx-fang-path-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/fang-path.json`; brief: Rapid run of bone-stone cracks rising in pitch.
+- `audio/sfx/skills/sfx-fang-path-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/fang-path.json`; brief: Rapid run of bone-stone cracks rising in pitch.
+- `audio/sfx/skills/sfx-feast-of-the-fallen-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/feast-of-the-fallen.json`; brief: Soft gulp plus a chime.
+- `audio/sfx/skills/sfx-featherstorm-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/featherstorm.json`; brief: Flapping whirr loop with slicing ticks.
+- `audio/sfx/skills/sfx-featherstorm-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/featherstorm.json`; brief: Flapping whirr loop with slicing ticks.
+- `audio/sfx/skills/sfx-featherstorm-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/featherstorm.json`; brief: Flapping whirr loop with slicing ticks.
+- `audio/sfx/skills/sfx-fleet-hunter-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/fleet-hunter.json`; brief: Quick whoosh on the next shot.
+- `audio/sfx/skills/sfx-forked-flight-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/forked-flight.json`; brief: Whistle then three soft ticks.
+- `audio/sfx/skills/sfx-forked-flight-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/forked-flight.json`; brief: Whistle then three soft ticks.
+- `audio/sfx/skills/sfx-four-directions-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/four-directions.json`; brief: Four ascending chime notes.
+- `audio/sfx/skills/sfx-full-quiver-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/full-quiver.json`; brief: Quick extra thwips.
+- `audio/sfx/skills/sfx-gale-ring-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/gale-ring.json`; brief: Strong gust blast.
+- `audio/sfx/skills/sfx-glyph-comet-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/glyph-comet.json`; brief: Rising scream then heavy impact.
+- `audio/sfx/skills/sfx-glyph-comet-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/glyph-comet.json`; brief: Rising scream then heavy impact.
+- `audio/sfx/skills/sfx-ground-slam-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ground-slam.json`; brief: Heavy ground boom.
+- `audio/sfx/skills/sfx-ground-slam-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ground-slam.json`; brief: Heavy ground boom.
+- `audio/sfx/skills/sfx-guardian-link-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/guardian-link.json`; brief: Metal chain clink.
+- `audio/sfx/skills/sfx-healing-circle-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/healing-circle.json`; brief: Warm harp swell with a bell.
+- `audio/sfx/skills/sfx-heart-of-balam-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/heart-of-balam.json`; brief: Heartbeat loop under the ward; roar plus glass shatter on break.
+- `audio/sfx/skills/sfx-heart-of-balam-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/heart-of-balam.json`; brief: Heartbeat loop under the ward; roar plus glass shatter on break.
+- `audio/sfx/skills/sfx-heart-of-balam-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/heart-of-balam.json`; brief: Heartbeat loop under the ward; roar plus glass shatter on break.
+- `audio/sfx/skills/sfx-hunter-snare-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/hunter-snare.json`; brief: Rope whip and a soft thud.
+- `audio/sfx/skills/sfx-hunter-snare-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/hunter-snare.json`; brief: Rope whip and a soft thud.
+- `audio/sfx/skills/sfx-hunters-focus-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/hunters-focus.json`; brief: Light tick per stack.
+- `audio/sfx/skills/sfx-hunters-mark-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/hunters-mark.json`; brief: Three quick claw scratches, low chime when marked.
+- `audio/sfx/skills/sfx-hunters-trance-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/hunters-trance.json`; brief: Slow heartbeat, one bell.
+- `audio/sfx/skills/sfx-hunters-trance-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/hunters-trance.json`; brief: Slow heartbeat, one bell.
+- `audio/sfx/skills/sfx-ixchels-mantle-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ixchels-mantle.json`; brief: Soft shimmering chord.
+- `audio/sfx/skills/sfx-jade-bounty-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-bounty.json`; brief: Existing pickup sound.
+- `audio/sfx/skills/sfx-jade-halo-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-halo.json`; brief: Glassy bead clacks over a soft hum loop.
+- `audio/sfx/skills/sfx-jade-halo-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-halo.json`; brief: Glassy bead clacks over a soft hum loop.
+- `audio/sfx/skills/sfx-jade-halo-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-halo.json`; brief: Glassy bead clacks over a soft hum loop.
+- `audio/sfx/skills/sfx-jade-needles-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-needles.json`; brief: Rapid thin whistles, glass shatter ticks.
+- `audio/sfx/skills/sfx-jade-needles-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-needles.json`; brief: Rapid thin whistles, glass shatter ticks.
+- `audio/sfx/skills/sfx-jade-resilience-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-resilience.json`; brief: Soft crystal chime on full.
+- `audio/sfx/skills/sfx-jade-ward-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jade-ward.json`; brief: Glass chime.
+- `audio/sfx/skills/sfx-jaguar-echo-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jaguar-echo.json`; brief: Low spirit growl on spawn, soft paw loops, short bite on hit.
+- `audio/sfx/skills/sfx-jaguar-echo-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jaguar-echo.json`; brief: Low spirit growl on spawn, soft paw loops, short bite on hit.
+- `audio/sfx/skills/sfx-jaguar-echo-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jaguar-echo.json`; brief: Low spirit growl on spawn, soft paw loops, short bite on hit.
+- `audio/sfx/skills/sfx-jaguar-roar-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jaguar-roar.json`; brief: Deep jaguar growl layered with a low sub-boom, 0.8s, short reverb tail.
+- `audio/sfx/skills/sfx-jungle-instinct-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/jungle-instinct.json`; brief: Quick leaf rustle.
+- `audio/sfx/skills/sfx-kukulkans-breath-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/kukulkans-breath.json`; brief: Sustained roaring wind layered with chimes.
+- `audio/sfx/skills/sfx-kukulkans-breath-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/kukulkans-breath.json`; brief: Sustained roaring wind layered with chimes.
+- `audio/sfx/skills/sfx-lifebond-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/lifebond.json`; brief: Heartbeat with a soft chime.
+- `audio/sfx/skills/sfx-lifebond-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/lifebond.json`; brief: Heartbeat with a soft chime.
+- `audio/sfx/skills/sfx-lunar-boon-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/lunar-boon.json`; brief: Bell shimmer when ready.
+- `audio/sfx/skills/sfx-mana-spring-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/mana-spring.json`; brief: Soft water drop.
+- `audio/sfx/skills/sfx-moonwell-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/moonwell.json`; brief: Watery shimmer loop with a soft flute note.
+- `audio/sfx/skills/sfx-moonwell-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/moonwell.json`; brief: Watery shimmer loop with a soft flute note.
+- `audio/sfx/skills/sfx-nine-lives-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/nine-lives.json`; brief: Soft choir swell with a purr.
+- `audio/sfx/skills/sfx-obsidian-arc-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/obsidian-arc.json`; brief: Sharp glassy slash plus a short stone crack.
+- `audio/sfx/skills/sfx-obsidian-arc-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/obsidian-arc.json`; brief: Sharp glassy slash plus a short stone crack.
+- `audio/sfx/skills/sfx-obsidian-thorns-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/obsidian-thorns.json`; brief: Glass tick.
+- `audio/sfx/skills/sfx-plume-guard-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/plume-guard.json`; brief: Soft feather flutter, chime on absorb.
+- `audio/sfx/skills/sfx-plume-guard-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/plume-guard.json`; brief: Soft feather flutter, chime on absorb.
+- `audio/sfx/skills/sfx-predators-rhythm-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/predators-rhythm.json`; brief: Short soft gong.
+- `audio/sfx/skills/sfx-prowlers-leap-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/prowlers-leap.json`; brief: Rising whoosh, heavy thud with paw scrape.
+- `audio/sfx/skills/sfx-prowlers-leap-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/prowlers-leap.json`; brief: Rising whoosh, heavy thud with paw scrape.
+- `audio/sfx/skills/sfx-pyramid-rush-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/pyramid-rush.json`; brief: Rumbling stone drag and a charge growl.
+- `audio/sfx/skills/sfx-pyramid-rush-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/pyramid-rush.json`; brief: Rumbling stone drag and a charge growl.
+- `audio/sfx/skills/sfx-quetzal-flip-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/quetzal-flip.json`; brief: Feather flutter then three quick thwips.
+- `audio/sfx/skills/sfx-radiant-beacon-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/radiant-beacon.json`; brief: Bell and rising shimmer.
+- `audio/sfx/skills/sfx-raincaller-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/raincaller.json`; brief: Rain loop with thunder cracks.
+- `audio/sfx/skills/sfx-raincaller-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/raincaller.json`; brief: Rain loop with thunder cracks.
+- `audio/sfx/skills/sfx-raincaller-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/raincaller.json`; brief: Rain loop with thunder cracks.
+- `audio/sfx/skills/sfx-rooted-meditation-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/rooted-meditation.json`; brief: Soft wooden hum (looped, very quiet).
+- `audio/sfx/skills/sfx-rooted-meditation-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/rooted-meditation.json`; brief: Soft wooden hum (looped, very quiet).
+- `audio/sfx/skills/sfx-sanctuary-dome-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/sanctuary-dome.json`; brief: Low resonant hum.
+- `audio/sfx/skills/sfx-sanctuary-dome-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/sanctuary-dome.json`; brief: Low resonant hum.
+- `audio/sfx/skills/sfx-saving-grace-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/saving-grace.json`; brief: Choir swell and a bell.
+- `audio/sfx/skills/sfx-serpent-coil-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/serpent-coil.json`; brief: Hiss then a constricting creak.
+- `audio/sfx/skills/sfx-serpent-path-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/serpent-path.json`; brief: Hissing slither whoosh.
+- `audio/sfx/skills/sfx-shield-bash-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/shield-bash.json`; brief: Dull stone clang.
+- `audio/sfx/skills/sfx-shield-bash-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/shield-bash.json`; brief: Dull stone clang.
+- `audio/sfx/skills/sfx-shield-throw-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/shield-throw.json`; brief: Whirring disc plus metal ping.
+- `audio/sfx/skills/sfx-shield-throw-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/shield-throw.json`; brief: Whirring disc plus metal ping.
+- `audio/sfx/skills/sfx-silencing-dart-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/silencing-dart.json`; brief: Quick pff and a muted pop.
+- `audio/sfx/skills/sfx-silencing-dart-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/silencing-dart.json`; brief: Quick pff and a muted pop.
+- `audio/sfx/skills/sfx-skyfall-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/skyfall.json`; brief: Distant whistling rain of darts and impacts.
+- `audio/sfx/skills/sfx-skyfall-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/skyfall.json`; brief: Distant whistling rain of darts and impacts.
+- `audio/sfx/skills/sfx-smoke-bomb-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/smoke-bomb.json`; brief: Soft pop then a hiss.
+- `audio/sfx/skills/sfx-spirit-familiar-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/spirit-familiar.json`; brief: Buzzing hum loop with tiny chirps.
+- `audio/sfx/skills/sfx-spirit-familiar-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/spirit-familiar.json`; brief: Buzzing hum loop with tiny chirps.
+- `audio/sfx/skills/sfx-spirit-harvest-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/spirit-harvest.json`; brief: Whispery pickup chime.
+- `audio/sfx/skills/sfx-stone-maw-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/stone-maw.json`; brief: Grinding stone rise, huge stone clamp.
+- `audio/sfx/skills/sfx-stone-maw-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/stone-maw.json`; brief: Grinding stone rise, huge stone clamp.
+- `audio/sfx/skills/sfx-stonehide-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/stonehide.json`; brief: Low stone creak when a new tier is reached.
+- `audio/sfx/skills/sfx-storm-nest-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/storm-nest.json`; brief: Chirp plus gust loops.
+- `audio/sfx/skills/sfx-storm-nest-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/storm-nest.json`; brief: Chirp plus gust loops.
+- `audio/sfx/skills/sfx-sun-claw-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/sun-claw.json`; brief: Bright crackling flare with a sizzle.
+- `audio/sfx/skills/sfx-sun-claw-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/sun-claw.json`; brief: Bright crackling flare with a sizzle.
+- `audio/sfx/skills/sfx-sun-dart-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/sun-dart.json`; brief: Metal ping that rises in pitch on each bounce.
+- `audio/sfx/skills/sfx-sun-dart-hit.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/sun-dart.json`; brief: Metal ping that rises in pitch on each bounce.
+- `audio/sfx/skills/sfx-trophy-hunter-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/trophy-hunter.json`; brief: Triumphant short horn.
+- `audio/sfx/ui/sfx-ui-ally-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-ally-cast.json`; brief: small soft repeating pop
+- `audio/sfx/ui/sfx-ui-ally-rank.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-ally-rank.json`; brief: bright rising four-note arpeggio
+- `audio/sfx/ui/sfx-ui-companion-join.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-companion-join.json`; brief: friendly clay horn call with shimmer
+- `audio/sfx/ui/sfx-ui-milestone-pick.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-milestone-pick.json`; brief: warm three-note fanfare on a soft hollow drum
+- `audio/sfx/ui/sfx-ui-pick-active.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-pick-active.json`; brief: short bright golden ping
+- `audio/sfx/ui/sfx-ui-pick-ally.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-pick-ally.json`; brief: airy sky-blue chime
+- `audio/sfx/ui/sfx-ui-pick-passive.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-pick-passive.json`; brief: soft jade bell, gentle decay
+- `audio/sfx/ui/sfx-ui-slot-unlock.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/ui-slot-unlock.json`; brief: stone padlock click, rising two-note golden chime
+- `audio/sfx/skills/sfx-vanish-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/vanish.json`; brief: Soft whoosh and a fading echo.
+- `audio/sfx/skills/sfx-venom-blade-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/venom-blade.json`; brief: Wet sizzle.
+- `audio/sfx/skills/sfx-venomous-darts-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/venomous-darts.json`; brief: Soft sizzle.
+- `audio/sfx/skills/sfx-verdant-mercy-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/verdant-mercy.json`; brief: Harp glissando with a wind chime.
+- `audio/sfx/skills/sfx-war-cry-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/war-cry.json`; brief: Deep battle shout.
+- `audio/sfx/skills/sfx-war-drum-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/war-drum.json`; brief: Tribal drum loop: two soft hits then one heavy, 60 bpm.
+- `audio/sfx/skills/sfx-war-drum-loop.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/war-drum.json`; brief: Tribal drum loop: two soft hits then one heavy, 60 bpm.
+- `audio/sfx/skills/sfx-windstep-cast.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/windstep.json`; brief: Fast air rush.
+- `audio/sfx/skills/sfx-wounded-fury-proc.wav` — procedural synthesis, `scripts/synth-sfx.mjs`, 2026-10-03 — `scripts/sfx-recipes/wounded-fury.json`; brief: Low growl on entering the state (cooldown 8s).

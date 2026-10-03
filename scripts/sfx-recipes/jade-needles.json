@@ -1,0 +1,177 @@
+{
+  "id": "jade-needles",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Rapid thin whistles, glass shatter ticks.",
+  "sounds": {
+    "cast": {
+      "duration": 0.45,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3983547210,
+      "layers": [
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.012,
+            "decay": 0.08,
+            "sustain": 0.25,
+            "release": 0.06
+          },
+          "type": "sine",
+          "frequency": 1147.24,
+          "gain": 0.24,
+          "endFrequency": 2194.72,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1,
+          "filter": {
+            "lowpass": 5187.52,
+            "highpass": 1800
+          }
+        },
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 4489.2,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1097.36,
+          "gain": 0.12307692307692307,
+          "endFrequency": 179.568
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.035,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.064,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.14,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1180636980,
+      "layers": [
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1572.32,
+          "gain": 0.3,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2799.744,
+          "gain": 0.14,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.15384615384615385,
+          "filter": {
+            "lowpass": 6999.36,
+            "highpass": 2100
+          },
+          "pulseHz": 91,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.14,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.13076923076923078,
+          "filter": {
+            "lowpass": 3246.08,
+            "highpass": 500
+          },
+          "pulseHz": 61,
+          "pulseSharpness": 9
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.035,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.063,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

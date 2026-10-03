@@ -1,0 +1,89 @@
+{
+  "id": "full-quiver",
+  "owner": "kukul",
+  "kind": "passive",
+  "brief": "Quick extra thwips.",
+  "sounds": {
+    "proc": {
+      "duration": 0.18,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 565974420,
+      "layers": [
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 4484.7,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1096.26,
+          "gain": 0.16,
+          "endFrequency": 179.388
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2192.52,
+            "highpass": 340
+          },
+          "pulseHz": 28,
+          "pulseSharpness": 6
+        },
+        {
+          "duration": 0.18,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 289.014,
+          "gain": 0.0846153846153846,
+          "pulseHz": 28
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

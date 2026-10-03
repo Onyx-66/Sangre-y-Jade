@@ -1,0 +1,91 @@
+{
+  "id": "gale-ring",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Strong gust blast.",
+  "sounds": {
+    "cast": {
+      "duration": 0.55,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1693344733,
+      "layers": [
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2250.82,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 920.79,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 117.656,
+          "gain": 0.5,
+          "endFrequency": 42.97
+        },
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 736.63,
+            "highpass": 35
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.04,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.08,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "jade-ward",
+  "owner": "ally:saintess",
+  "kind": "active",
+  "brief": "Glass chime.",
+  "sounds": {
+    "cast": {
+      "duration": 0.5,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3345889640,
+      "layers": [
+        {
+          "duration": 0.5,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.13,
+            "sustain": 0.12,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 644.742,
+          "gain": 0.34,
+          "fm": {
+            "ratio": 2.37,
+            "index": 0.7
+          }
+        },
+        {
+          "duration": 0.5,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1217.846,
+          "gain": 0.14,
+          "vibrato": 0.002
+        },
+        {
+          "duration": 0.5,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1586.27,
+          "gain": 0.23076923076923075,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.5,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2824.584,
+          "gain": 0.1076923076923077,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

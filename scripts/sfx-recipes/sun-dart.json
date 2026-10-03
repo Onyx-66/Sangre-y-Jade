@@ -1,0 +1,172 @@
+{
+  "id": "sun-dart",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Metal ping that rises in pitch on each bounce.",
+  "sounds": {
+    "cast": {
+      "duration": 0.24,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 582882075,
+      "layers": [
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1436.043,
+          "gain": 0.27,
+          "fm": {
+            "ratio": 1.41,
+            "index": 2.2
+          }
+        },
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 2188.256,
+          "gain": 0.17,
+          "filter": {
+            "postLowpass": 4100
+          }
+        },
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 859.672,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.24,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1724.228,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07100000000000001,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.16,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 4158120023,
+      "layers": [
+        {
+          "duration": 0.16,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1439.865,
+          "gain": 0.27,
+          "fm": {
+            "ratio": 1.41,
+            "index": 2.2
+          }
+        },
+        {
+          "duration": 0.16,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 2194.08,
+          "gain": 0.17,
+          "filter": {
+            "postLowpass": 4100
+          }
+        },
+        {
+          "duration": 0.16,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2050.093,
+          "gain": 0.2076923076923077,
+          "fm": {
+            "ratio": 2.1,
+            "index": 0.6
+          }
+        },
+        {
+          "duration": 0.16,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.09,
+            "sustain": 0.04,
+            "release": 0.14
+          },
+          "type": "sine",
+          "frequency": 3071.712,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

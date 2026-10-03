@@ -1,0 +1,178 @@
+{
+  "id": "ceiba-breaker",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Heavy wood crash plus a deep thump.",
+  "sounds": {
+    "cast": {
+      "duration": 0.55,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 502179960,
+      "layers": [
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 258.315,
+          "gain": 0.4,
+          "endFrequency": 162.08,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2836.4,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 2228.6,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.55,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16153846153846152,
+          "filter": {
+            "lowpass": 911.7,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.033,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.074,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.37,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3228419798,
+      "layers": [
+        {
+          "duration": 0.37,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 256.173,
+          "gain": 0.4,
+          "endFrequency": 160.736,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.37,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2812.88,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 0.37,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 115.529,
+          "gain": 0.5,
+          "endFrequency": 42.193
+        },
+        {
+          "duration": 0.37,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2,
+          "filter": {
+            "lowpass": 723.31,
+            "highpass": 35
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.033,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.075,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

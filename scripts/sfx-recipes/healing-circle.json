@@ -1,0 +1,87 @@
+{
+  "id": "healing-circle",
+  "owner": "ally:saintess",
+  "kind": "active",
+  "brief": "Warm harp swell with a bell.",
+  "sounds": {
+    "cast": {
+      "duration": 0.8,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2446368372,
+      "layers": [
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.12,
+            "sustain": 0.03,
+            "release": 0.14
+          },
+          "type": "triangle",
+          "frequency": 526.076,
+          "gain": 0.32
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1052.151,
+          "gain": 0.12,
+          "fm": {
+            "ratio": 2,
+            "index": 0.18
+          }
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 884.752,
+          "gain": 0.2692307692307692,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.8,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1774.531,
+          "gain": 0.0923076923076923
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.043,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.081,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

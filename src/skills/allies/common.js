@@ -27,6 +27,9 @@ export function effectActive(support, skill) {
 export function damage(scene, support, skill, target, amount) {
   if (!target?.active) return false;
   scene.damageEnemy(target, scale(support, amount), 0, 0, scene.companion.sprite, { byAlly: true });
+  // Lethal hits still need their impact sound even though the old visual hook
+  // only renders on survivors. Do not change the Step 17 visual work here.
+  if (!target.active) scene.skillAudio?.play(skill.id, 'hit');
   if (target.active) impactFx(scene, skill, target);
   return true;
 }

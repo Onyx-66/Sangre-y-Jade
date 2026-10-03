@@ -1,0 +1,171 @@
+{
+  "id": "forked-flight",
+  "owner": "kukul",
+  "kind": "active",
+  "brief": "Whistle then three soft ticks.",
+  "sounds": {
+    "cast": {
+      "duration": 0.48,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1978090795,
+      "layers": [
+        {
+          "duration": 0.48,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.012,
+            "decay": 0.08,
+            "sustain": 0.25,
+            "release": 0.06
+          },
+          "type": "sine",
+          "frequency": 1162.075,
+          "gain": 0.24,
+          "endFrequency": 2223.1,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.48,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.1,
+          "filter": {
+            "lowpass": 5254.6,
+            "highpass": 1800
+          }
+        },
+        {
+          "duration": 0.48,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 4547.25,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.48,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1111.55,
+          "gain": 0.12307692307692307,
+          "endFrequency": 181.89
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.038,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.067,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.12,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 645236839,
+      "layers": [
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 248.345,
+          "gain": 0.4,
+          "endFrequency": 155.824,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.18,
+          "filter": {
+            "lowpass": 2726.92,
+            "highpass": 350
+          }
+        },
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.24615384615384614,
+          "filter": {
+            "lowpass": 4382.55,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1071.29,
+          "gain": 0.12307692307692307,
+          "endFrequency": 175.302
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.038,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.078,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

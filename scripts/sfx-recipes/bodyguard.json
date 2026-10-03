@@ -1,0 +1,7 @@
+{
+  "id": "bodyguard",
+  "owner": "ally:tank",
+  "kind": "passive",
+  "brief": "None (passive).",
+  "sounds": {}
+}

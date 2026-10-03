@@ -1,0 +1,91 @@
+{
+  "id": "obsidian-thorns",
+  "owner": "balam",
+  "kind": "passive",
+  "brief": "Glass tick.",
+  "sounds": {
+    "proc": {
+      "duration": 0.12,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 2276974644,
+      "layers": [
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1586.89,
+          "gain": 0.3,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2825.688,
+          "gain": 0.14,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 460.71,
+          "gain": 0.2692307692307692,
+          "endFrequency": 133.094
+        },
+        {
+          "duration": 0.12,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.12307692307692307,
+          "filter": {
+            "lowpass": 1535.7,
+            "highpass": 200
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.033,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.068,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

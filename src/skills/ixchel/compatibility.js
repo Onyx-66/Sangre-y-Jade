@@ -23,7 +23,7 @@ export const IXCHEL_COMPATIBILITY_HANDLERS=Object.fromEntries(HEROES.ixchel.skil
  return[skill.id,(scene,definition,ctx)=>{
   const id=ixchelFxId(definition.id);
   if(id)scene.fx?.play(id,'cast',{x:scene.player.x,y:scene.player.y,angle:ctx.aim,range:ctx.range});
-  handler(scene,definition,ctx);scene.audio.sfx('spell',.06);
+  handler(scene,definition,ctx);if(!id)scene.audio.sfx('spell',.06);
   if(id&&definition.type==='cone')scene.fx?.play(id,'impact',{x:scene.player.x+Math.cos(ctx.aim)*ctx.range*.5,y:scene.player.y+Math.sin(ctx.aim)*ctx.range*.5});
   if(id&&definition.type==='shield')scene.fx?.play(id,'aura',{target:scene.player,duration:.5});
  }];

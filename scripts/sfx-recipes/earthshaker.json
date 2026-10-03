@@ -1,0 +1,93 @@
+{
+  "id": "earthshaker",
+  "owner": "balam",
+  "kind": "passive",
+  "brief": "Dull ground thump.",
+  "sounds": {
+    "proc": {
+      "duration": 0.21,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 3588950850,
+      "layers": [
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 117.668,
+          "gain": 0.65,
+          "endFrequency": 42.974
+        },
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.26,
+          "filter": {
+            "lowpass": 736.7,
+            "highpass": 35
+          }
+        },
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.3076923076923077,
+          "filter": {
+            "lowpass": 1944.08,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.21,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 199.524,
+          "gain": 0.1846153846153846,
+          "endFrequency": 93.111,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.032,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

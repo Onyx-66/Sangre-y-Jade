@@ -1,0 +1,162 @@
+{
+  "id": "spirit-familiar",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Buzzing hum loop with tiny chirps.",
+  "sounds": {
+    "cast": {
+      "duration": 0.4,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2783081344,
+      "layers": [
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1536.3,
+          "gain": 0.25,
+          "endFrequency": 2970.18,
+          "vibrato": 0.018,
+          "vibratoHz": 30,
+          "pulseHz": 12
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.08,
+          "filter": {
+            "lowpass": 3584.7,
+            "highpass": 1500
+          }
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "saw",
+          "frequency": 220.203,
+          "gain": 0.13076923076923078,
+          "fm": {
+            "ratio": 2,
+            "index": 0.3
+          },
+          "filter": {
+            "postLowpass": 1800
+          }
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.07692307692307693,
+          "filter": {
+            "lowpass": 1229.04,
+            "highpass": 200
+          },
+          "pulseHz": 80
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07100000000000001,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 1238802069,
+      "layers": [
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "saw",
+          "frequency": 212.399,
+          "gain": 0.17,
+          "fm": {
+            "ratio": 2,
+            "index": 0.3
+          },
+          "filter": {
+            "postLowpass": 1800
+          }
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.1,
+          "filter": {
+            "lowpass": 1185.48,
+            "highpass": 200
+          },
+          "pulseHz": 80
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 1481.85,
+          "gain": 0.1923076923076923,
+          "endFrequency": 2864.91,
+          "vibrato": 0.018,
+          "vibratoHz": 30,
+          "pulseHz": 12
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "noise",
+          "gain": 0.061538461538461535,
+          "filter": {
+            "lowpass": 3457.65,
+            "highpass": 1500
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.081,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

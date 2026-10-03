@@ -1,0 +1,88 @@
+{
+  "id": "radiant-beacon",
+  "owner": "ally:saintess",
+  "kind": "active",
+  "brief": "Bell and rising shimmer.",
+  "sounds": {
+    "cast": {
+      "duration": 0.86,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3575992913,
+      "layers": [
+        {
+          "duration": 0.86,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 880.264,
+          "gain": 0.35,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          }
+        },
+        {
+          "duration": 0.86,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1765.529,
+          "gain": 0.12
+        },
+        {
+          "duration": 0.86,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1150.345,
+          "gain": 0.1846153846153846,
+          "endFrequency": 2200.66,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.86,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.12,
+            "decay": 0.08,
+            "sustain": 0.85,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.07692307692307693,
+          "filter": {
+            "lowpass": 5201.56,
+            "highpass": 1800
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.075,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

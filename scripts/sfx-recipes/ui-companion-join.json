@@ -1,0 +1,120 @@
+{
+  "id": "ui-companion-join",
+  "owner": "ui",
+  "brief": "friendly clay horn call with shimmer",
+  "sounds": {
+    "ui": {
+      "duration": 1,
+      "loop": false,
+      "peakDb": -6,
+      "seed": 4036152572,
+      "layers": [
+        {
+          "duration": 0.7,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 880,
+          "gain": 0.22749999999999998,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0
+        },
+        {
+          "duration": 0.7,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1765,
+          "gain": 0.078,
+          "start": 0
+        },
+        {
+          "duration": 0.7,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.12,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1320,
+          "gain": 0.22749999999999998,
+          "fm": {
+            "ratio": 2.01,
+            "index": 0.45
+          },
+          "start": 0.3333333333333333
+        },
+        {
+          "duration": 0.7,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2647.5,
+          "gain": 0.078,
+          "start": 0.3333333333333333
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.025,
+            "decay": 0.08,
+            "sustain": 0.5,
+            "release": 0.18
+          },
+          "type": "saw",
+          "frequency": 294,
+          "gain": 0.11200000000000002,
+          "filter": {
+            "postLowpass": 1550
+          },
+          "vibrato": 0.004
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 440,
+          "gain": 0.064
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.038,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.079,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

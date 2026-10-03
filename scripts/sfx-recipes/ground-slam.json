@@ -1,0 +1,176 @@
+{
+  "id": "ground-slam",
+  "owner": "ally:tank",
+  "kind": "active",
+  "brief": "Heavy ground boom.",
+  "sounds": {
+    "cast": {
+      "duration": 0.45,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2499648344,
+      "layers": [
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 112.447,
+          "gain": 0.65,
+          "endFrequency": 41.068
+        },
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.26,
+          "filter": {
+            "lowpass": 704.02,
+            "highpass": 35
+          }
+        },
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.3076923076923077,
+          "filter": {
+            "lowpass": 1857.82,
+            "highpass": 140
+          },
+          "distortion": 1.6,
+          "pulseHz": 39
+        },
+        {
+          "duration": 0.45,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 190.671,
+          "gain": 0.1846153846153846,
+          "endFrequency": 88.98,
+          "fm": {
+            "ratio": 2.79,
+            "index": 2
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.076,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.3,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 349710134,
+      "layers": [
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 116.725,
+          "gain": 0.65,
+          "endFrequency": 42.63
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.26,
+          "filter": {
+            "lowpass": 730.8,
+            "highpass": 35
+          }
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 258.825,
+          "gain": 0.3076923076923077,
+          "endFrequency": 162.4,
+          "fm": {
+            "ratio": 1.71,
+            "index": 0.8
+          }
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.13846153846153844,
+          "filter": {
+            "lowpass": 2842,
+            "highpass": 350
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.028,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.077,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

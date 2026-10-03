@@ -1,0 +1,240 @@
+{
+  "id": "heart-of-balam",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Heartbeat loop under the ward; roar plus glass shatter on break.",
+  "sounds": {
+    "cast": {
+      "duration": 0.62,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 1023424829,
+      "layers": [
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 64.005,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 106.348,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.14,
+            "sustain": 0.08,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 315.104,
+          "gain": 0.2,
+          "fm": {
+            "ratio": 1.414,
+            "index": 1.4
+          }
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 676.489,
+          "gain": 0.14615384615384616,
+          "fm": {
+            "ratio": 2.76,
+            "index": 0.6
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.069,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "loop": {
+      "duration": 2,
+      "loop": true,
+      "peakDb": -12,
+      "seed": 2639683468,
+      "layers": [
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 66.183,
+          "gain": 0.48,
+          "pulseHz": 2,
+          "pulseSharpness": 9
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 109.966,
+          "gain": 0.18,
+          "pulseHz": 4,
+          "pulseSharpness": 12
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "sine",
+          "frequency": 183.276,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 2,
+          "continuous": true,
+          "type": "triangle",
+          "frequency": 274.914,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.068,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.4,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2661857237,
+      "layers": [
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "saw",
+          "frequency": 82.459,
+          "gain": 0.4,
+          "endFrequency": 46.565,
+          "distortion": 2,
+          "fm": {
+            "ratio": 3,
+            "index": 1.7
+          },
+          "filter": {
+            "postLowpass": 700
+          },
+          "pulseHz": 23
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 824.58,
+            "highpass": 80
+          },
+          "pulseHz": 27
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.06,
+            "sustain": 0.08,
+            "release": 0.16
+          },
+          "type": "sine",
+          "frequency": 1503.655,
+          "gain": 0.23076923076923075,
+          "fm": {
+            "ratio": 2.76,
+            "index": 1.2
+          }
+        },
+        {
+          "duration": 0.4,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 2677.476,
+          "gain": 0.1076923076923077,
+          "fm": {
+            "ratio": 1.43,
+            "index": 0.45
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.036,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.074,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

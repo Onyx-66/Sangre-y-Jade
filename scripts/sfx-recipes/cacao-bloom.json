@@ -1,0 +1,176 @@
+{
+  "id": "cacao-bloom",
+  "owner": "ixchel",
+  "kind": "active",
+  "brief": "Soft pluck pop with a squelch.",
+  "sounds": {
+    "cast": {
+      "duration": 0.38,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2240533888,
+      "layers": [
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.12,
+            "sustain": 0.03,
+            "release": 0.14
+          },
+          "type": "triangle",
+          "frequency": 510.378,
+          "gain": 0.32
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 1020.756,
+          "gain": 0.12,
+          "fm": {
+            "ratio": 2,
+            "index": 0.18
+          }
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2692307692307692,
+          "filter": {
+            "lowpass": 1268.02,
+            "highpass": 240
+          },
+          "distortion": 0.6
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 263.358,
+          "gain": 0.23076923076923075,
+          "endFrequency": 68.278,
+          "fm": {
+            "ratio": 1.2,
+            "index": 1.1
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.043,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.07100000000000001,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.2,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3619008622,
+      "layers": [
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 439.83,
+          "gain": 0.35,
+          "endFrequency": 127.062
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16,
+          "filter": {
+            "lowpass": 1466.1,
+            "highpass": 200
+          }
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2692307692307692,
+          "filter": {
+            "lowpass": 1270.62,
+            "highpass": 240
+          },
+          "distortion": 0.6
+        },
+        {
+          "duration": 0.2,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 263.898,
+          "gain": 0.23076923076923075,
+          "endFrequency": 68.418,
+          "fm": {
+            "ratio": 1.2,
+            "index": 1.1
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.043,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.073,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

@@ -31,11 +31,13 @@ export class AudioDirector {
     this.unlocked = false;
     this.sfxPools = new Map();
     this.lastSound = new Map();
-    this.base = `${import.meta.env.BASE_URL}assets/audio/`;
+    this.effectClients = new Set();
+    this.base = `${import.meta.env?.BASE_URL||'/'}assets/audio/`;
   }
 
   unlock() {
     this.unlocked = true;
+    for (const client of this.effectClients) client.unlock();
     if (this.current) this.current.play().catch(() => {});
     if(this.narration)this.narration.play().catch(()=>{});
   }
@@ -47,6 +49,8 @@ export class AudioDirector {
   }
 
   applySettings() {
+    for (const client of this.effectClients) client.applySettings();
+    for (const pool of this.sfxPools.values()) for (const voice of pool) voice.volume = this.volumes().sfx;
     if (this.current) this.current.volume = this.volumes().music*(this.currentName==='prologue'?.3:1);
     if(this.narration)this.narration.volume=Math.max(0,Math.min(1,this.save.data.settings.master*.95));
   }

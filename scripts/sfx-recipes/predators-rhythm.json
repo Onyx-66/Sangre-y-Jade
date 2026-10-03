@@ -1,0 +1,92 @@
+{
+  "id": "predators-rhythm",
+  "owner": "balam",
+  "kind": "passive",
+  "brief": "Short soft gong.",
+  "sounds": {
+    "proc": {
+      "duration": 0.3,
+      "loop": false,
+      "peakDb": -15,
+      "seed": 2381690725,
+      "layers": [
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.002,
+            "decay": 0.14,
+            "sustain": 0.08,
+            "release": 0.2
+          },
+          "type": "sine",
+          "frequency": 315.104,
+          "gain": 0.26,
+          "fm": {
+            "ratio": 1.414,
+            "index": 1.4
+          }
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 676.489,
+          "gain": 0.19,
+          "fm": {
+            "ratio": 2.76,
+            "index": 0.6
+          }
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 177.246,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.3,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 265.869,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.041999999999999996,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.072,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

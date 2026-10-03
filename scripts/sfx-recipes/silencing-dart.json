@@ -1,0 +1,169 @@
+{
+  "id": "silencing-dart",
+  "owner": "ally:assassin",
+  "kind": "active",
+  "brief": "Quick pff and a muted pop.",
+  "sounds": {
+    "cast": {
+      "duration": 0.23,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2856862549,
+      "layers": [
+        {
+          "duration": 0.23,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.32,
+          "filter": {
+            "lowpass": 4434.75,
+            "highpass": 1100
+          }
+        },
+        {
+          "duration": 0.23,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.03,
+            "sustain": 0.04,
+            "release": 0.04
+          },
+          "type": "sine",
+          "frequency": 1084.05,
+          "gain": 0.16,
+          "endFrequency": 177.39
+        },
+        {
+          "duration": 0.23,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.14615384615384616,
+          "filter": {
+            "lowpass": 3252.15,
+            "highpass": 650
+          },
+          "pulseHz": 17
+        },
+        {
+          "duration": 0.23,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 453.33,
+          "gain": 0.0923076923076923,
+          "endFrequency": 256.23,
+          "vibrato": 0.012
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.039,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.076,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.13,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 3754925373,
+      "layers": [
+        {
+          "duration": 0.13,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.025,
+            "sustain": 0.03,
+            "release": 0.035
+          },
+          "type": "sine",
+          "frequency": 456.705,
+          "gain": 0.35,
+          "endFrequency": 131.937
+        },
+        {
+          "duration": 0.13,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.16,
+          "filter": {
+            "lowpass": 1522.35,
+            "highpass": 200
+          }
+        },
+        {
+          "duration": 0.13,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 182.682,
+          "gain": 0.1923076923076923,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.13,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "triangle",
+          "frequency": 274.023,
+          "gain": 0.1,
+          "filter": {
+            "postLowpass": 1000
+          },
+          "vibrato": 0.003
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.039,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.075,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}

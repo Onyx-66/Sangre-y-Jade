@@ -1,0 +1,102 @@
+{
+  "id": "vanish",
+  "owner": "ally:assassin",
+  "kind": "active",
+  "brief": "Soft whoosh and a fading echo.",
+  "sounds": {
+    "cast": {
+      "duration": 0.62,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 4234870654,
+      "layers": [
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2255.44,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 922.68,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.14615384615384616,
+          "filter": {
+            "lowpass": 3383.16,
+            "highpass": 650
+          },
+          "pulseHz": 17
+        },
+        {
+          "duration": 0.62,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "sine",
+          "frequency": 471.592,
+          "gain": 0.0923076923076923,
+          "endFrequency": 266.552,
+          "vibrato": 0.012
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.027,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.063,
+          "gain": 0.05
+        }
+      ],
+      "delay": [
+        {
+          "seconds": 0.14,
+          "gain": 0.2
+        },
+        {
+          "seconds": 0.28,
+          "gain": 0.1
+        }
+      ]
+    }
+  }
+}

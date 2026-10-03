@@ -1,0 +1,175 @@
+{
+  "id": "prowlers-leap",
+  "owner": "balam",
+  "kind": "active",
+  "brief": "Rising whoosh, heavy thud with paw scrape.",
+  "sounds": {
+    "cast": {
+      "duration": 0.38,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 4148936818,
+      "layers": [
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.28,
+          "filter": {
+            "lowpass": 2236.96,
+            "highpass": 350
+          },
+          "pulseHz": 6
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.21,
+          "filter": {
+            "lowpass": 915.12,
+            "highpass": 40
+          },
+          "pulseHz": 11
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.012,
+            "decay": 0.08,
+            "sustain": 0.25,
+            "release": 0.06
+          },
+          "type": "sine",
+          "frequency": 1169.32,
+          "gain": 0.1846153846153846,
+          "endFrequency": 2236.96,
+          "vibrato": 0.008
+        },
+        {
+          "duration": 0.38,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.07692307692307693,
+          "filter": {
+            "lowpass": 5287.36,
+            "highpass": 1800
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.075,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    },
+    "hit": {
+      "duration": 0.32,
+      "loop": false,
+      "peakDb": -3,
+      "seed": 2625413132,
+      "layers": [
+        {
+          "duration": 0.32,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.001,
+            "decay": 0.14,
+            "sustain": 0.04,
+            "release": 0.18
+          },
+          "type": "sine",
+          "frequency": 115.828,
+          "gain": 0.65,
+          "endFrequency": 42.302
+        },
+        {
+          "duration": 0.32,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.26,
+          "filter": {
+            "lowpass": 725.18,
+            "highpass": 35
+          }
+        },
+        {
+          "duration": 0.32,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.2153846153846154,
+          "filter": {
+            "lowpass": 5539.6,
+            "highpass": 1600
+          },
+          "pulseHz": 55,
+          "pulseSharpness": 3
+        },
+        {
+          "duration": 0.32,
+          "continuous": false,
+          "envelope": {
+            "attack": 0.003,
+            "decay": 0.08,
+            "sustain": 0.15,
+            "release": 0.1
+          },
+          "type": "noise",
+          "gain": 0.0923076923076923,
+          "filter": {
+            "lowpass": 1107.92,
+            "highpass": 110
+          }
+        }
+      ],
+      "reverb": [
+        {
+          "seconds": 0.037,
+          "gain": 0.1
+        },
+        {
+          "seconds": 0.074,
+          "gain": 0.05
+        }
+      ],
+      "delay": []
+    }
+  }
+}
