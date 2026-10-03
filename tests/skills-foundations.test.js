@@ -73,13 +73,13 @@ test('burn deals time-based damage, shows orange tint, and stops at expiry', () 
   assert.equal(enemy.tint, undefined);
 });
 
-test('blind randomizes hero-aimed shots, but preserves non-hero shots and expires', () => {
+test('blind sends hero-aimed ranged shots away, preserves non-hero shots and expires', () => {
   const scene = makeScene(), enemy = addEnemy(scene, { ranged: true });
   applyStatus(scene, enemy, 'blind', 1);
   updateEnemy(scene, enemy, .1, () => .25);
   const shot = scene.enemyProjectiles.getChildren()[0];
-  assert.ok(Math.abs(shot.body.velocity.x) < 1e-10);
-  assert.equal(shot.body.velocity.y, 210);
+  assert.ok(shot.body.velocity.x > 200);
+  assert.ok(Math.abs(shot.body.velocity.y) < 40);
   assert.equal(enemyShotAngle(scene, enemy, .7, false, () => 0), .7);
   scene.elapsed = 3;
   assert.equal(enemyShotAngle(scene, enemy, .7, true, () => 0), .7);

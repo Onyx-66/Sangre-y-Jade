@@ -74,6 +74,26 @@ export class PassiveSystem {
     return result;
   }
 
+  redirectDamage(damage, context = {}) {
+    let remaining = damage;
+    for (const { passive, level, state } of this.equipped.values()) {
+      const redirected = passive.redirectDamage?.({ scene: this.scene, stats: this.scene.stats, player: this.scene.player,
+        state, damage: remaining, ...context }, level);
+      if (Number.isFinite(redirected)) remaining = Math.max(0, redirected);
+    }
+    return remaining;
+  }
+
+  preventFatal(damage, context = {}) {
+    let remaining = damage;
+    for (const { passive, level, state } of this.equipped.values()) {
+      const prevented = passive.preventFatal?.({ scene: this.scene, stats: this.scene.stats, player: this.scene.player,
+        state, damage: remaining, ...context }, level);
+      if (Number.isFinite(prevented)) remaining = Math.max(0, prevented);
+    }
+    return remaining;
+  }
+
   destroy() {
     for (const id of this.equipped.keys()) this.unequip(id);
     this.bus.clear();

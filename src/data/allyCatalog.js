@@ -37,8 +37,12 @@ export const ALLY_CATALOG = {
       "priority": 1,
       "failsafe": false,
       "signature": true,
-      "legacyId": "renew",
-      "duration": 5
+      "duration": 5,
+      "params": {
+        "radius": 150,
+        "duration": 5,
+        "healingPerSecond": 8
+      }
     },
     {
       "id": "jade-ward",
@@ -56,8 +60,12 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": false,
-      "legacyId": "blessing",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "interval": 10,
+        "shield": 30,
+        "shieldCapPct": 50
+      }
     },
     {
       "id": "cleansing-light",
@@ -75,8 +83,11 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": false,
       "signature": false,
-      "legacyId": "purify",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "radius": 210,
+        "slowImmunityDuration": 2
+      }
     },
     {
       "id": "sanctuary-dome",
@@ -94,8 +105,12 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": true,
       "signature": false,
-      "legacyId": "sanctuary",
-      "duration": 5
+      "duration": 5,
+      "params": {
+        "radius": 130,
+        "duration": 5,
+        "damageReductionPct": 30
+      }
     },
     {
       "id": "radiant-beacon",
@@ -113,8 +128,13 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": true,
       "signature": false,
-      "legacyId": null,
-      "duration": 8
+      "duration": 8,
+      "params": {
+        "duration": 8,
+        "radius": 150,
+        "attackSpeedPct": 20,
+        "moveSpeedPct": 10
+      }
     },
     {
       "id": "lifebond",
@@ -132,8 +152,11 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": false,
       "signature": false,
-      "legacyId": null,
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "duration": 6,
+        "lifestealPct": 5
+      }
     },
     {
       "id": "saving-grace",
@@ -151,8 +174,12 @@ export const ALLY_CATALOG = {
       "priority": null,
       "failsafe": false,
       "signature": false,
-      "legacyId": "rescue",
       "duration": 0,
+      "params": {
+        "healPct": 40,
+        "invulnerabilityDuration": 2,
+        "cooldown": 60
+      },
       "values": [
         40
       ]
@@ -173,8 +200,8 @@ export const ALLY_CATALOG = {
       "priority": null,
       "failsafe": false,
       "signature": false,
-      "legacyId": "valor",
       "duration": 0,
+      "params": {},
       "values": [
         12,
         14,
@@ -201,8 +228,11 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": false,
       "signature": false,
-      "legacyId": "intercept",
-      "duration": 5
+      "duration": 5,
+      "params": {
+        "width": 200,
+        "duration": 5
+      }
     },
     {
       "id": "war-cry",
@@ -220,8 +250,12 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": true,
       "signature": true,
-      "legacyId": "taunt",
-      "duration": 3
+      "duration": 3,
+      "params": {
+        "radius": 330,
+        "duration": 3,
+        "damageReductionPct": 50
+      }
     },
     {
       "id": "shield-bash",
@@ -239,8 +273,11 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": false,
-      "legacyId": "bash",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "damage": 16,
+        "stunDuration": 0.7
+      }
     },
     {
       "id": "ground-slam",
@@ -258,8 +295,12 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": true,
       "signature": false,
-      "legacyId": "shockwave",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "radius": 155,
+        "damage": 30,
+        "stunDuration": 0.8
+      }
     },
     {
       "id": "clay-bomb",
@@ -277,8 +318,13 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": false,
-      "legacyId": "bomb",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "blastRadius": 135,
+        "triggerRadius": 60,
+        "fuseDuration": 3,
+        "damage": 32
+      }
     },
     {
       "id": "shield-throw",
@@ -296,8 +342,12 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": false,
-      "legacyId": null,
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "range": 300,
+        "maxTargets": 4,
+        "damage": 24
+      }
     },
     {
       "id": "bodyguard",
@@ -315,8 +365,10 @@ export const ALLY_CATALOG = {
       "priority": null,
       "failsafe": false,
       "signature": false,
-      "legacyId": "guard",
       "duration": 0,
+      "params": {
+        "radius": 220
+      },
       "values": [
         18,
         20,
@@ -341,8 +393,10 @@ export const ALLY_CATALOG = {
       "priority": null,
       "failsafe": false,
       "signature": false,
-      "legacyId": null,
       "duration": 0,
+      "params": {
+        "radius": 300
+      },
       "values": [
         20,
         25,
@@ -369,8 +423,11 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": true,
-      "legacyId": "ambush",
       "duration": 0,
+      "params": {
+        "damage": 34,
+        "stealthWindow": 3
+      },
       "art": 12
     },
     {
@@ -389,8 +446,13 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": false,
-      "legacyId": "execute",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "normalDamage": 22,
+        "executeDamage": 65,
+        "executeHpPct": 35,
+        "cooldownRefund": 2
+      }
     },
     {
       "id": "venom-blade",
@@ -408,8 +470,12 @@ export const ALLY_CATALOG = {
       "priority": 3,
       "failsafe": false,
       "signature": false,
-      "legacyId": "venom",
-      "duration": 5
+      "duration": 5,
+      "params": {
+        "damagePerSecond": 5,
+        "duration": 5,
+        "maxStacks": 3
+      }
     },
     {
       "id": "silencing-dart",
@@ -427,8 +493,11 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": false,
       "signature": false,
-      "legacyId": "silence",
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "damage": 8,
+        "silenceDuration": 3
+      }
     },
     {
       "id": "smoke-bomb",
@@ -446,8 +515,12 @@ export const ALLY_CATALOG = {
       "priority": 2,
       "failsafe": true,
       "signature": false,
-      "legacyId": "smoke",
-      "duration": 4
+      "duration": 4,
+      "params": {
+        "radius": 140,
+        "duration": 4,
+        "slowPct": 25
+      }
     },
     {
       "id": "vanish",
@@ -465,8 +538,11 @@ export const ALLY_CATALOG = {
       "priority": 1,
       "failsafe": false,
       "signature": false,
-      "legacyId": null,
-      "duration": 0
+      "duration": 0,
+      "params": {
+        "duration": 2.5,
+        "nextAttackBonusPct": 40
+      }
     },
     {
       "id": "relentless-pursuit",
@@ -484,8 +560,8 @@ export const ALLY_CATALOG = {
       "priority": null,
       "failsafe": false,
       "signature": false,
-      "legacyId": "pursuit",
       "duration": 0,
+      "params": {},
       "values": [
         35,
         40,
@@ -510,8 +586,10 @@ export const ALLY_CATALOG = {
       "priority": null,
       "failsafe": false,
       "signature": false,
-      "legacyId": null,
       "duration": 0,
+      "params": {
+        "bonusCacao": 3
+      },
       "values": [
         50,
         60,

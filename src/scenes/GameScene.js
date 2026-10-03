@@ -7,7 +7,7 @@ import { Hud } from '../systems/Hud.js';
 import { ALLY_LEVEL, enemyPool, canSpawnEnemy, bossForHero, spawnOutsideView, facingFor } from '../systems/CombatRules.js';
 import { SLOT_RULES, slotCount, draftSkills, draftMilestoneSkills } from '../systems/SkillDraft.js';
 import { SupportSystem } from '../systems/SupportSystem.js';
-import { allyLevelEvent } from '../data/supports.js';
+import { allyLevelEvent, dangerousEnemy } from '../data/supports.js';
 import { applyProjectileTint, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
 import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../skills/index.js';
 import { PassiveSystem } from '../skills/PassiveSystem.js';
@@ -240,6 +240,9 @@ export class GameScene extends Phaser.Scene {
   updateMovement(dt) {
     if(this.eagleFocus&&wantsToMove(this))cancelFocus(this);
     if(this.skillMotion?.effect.active){this.player.setVelocity(0,0);return;}
+    const slowUntil=this.player.getData('slowUntil')||0;
+    const slowPct=this.player.getData('slowPct')??.5;
+    const moveSlow=slowUntil>this.elapsed&&(this.stats.slowImmunityUntil||0)<=this.elapsed?1-clamp(slowPct,0,1):1;
     const keyboardX = (this.cursors.left.isDown || this.keys.left.isDown ? -1 : 0) + (this.cursors.right.isDown || this.keys.right.isDown ? 1 : 0);
     const keyboardY = (this.cursors.up.isDown || this.keys.up.isDown ? -1 : 0) + (this.cursors.down.isDown || this.keys.down.isDown ? 1 : 0);
     let x = keyboardX || this.hud.move.x;
@@ -250,12 +253,12 @@ export class GameScene extends Phaser.Scene {
 
     if (this.dash.remaining > 0) {
       this.dash.remaining -= dt;
-      const speed = this.stats.speed * this.passives.modifiers().speedMult * skillModifiers(this).speedMult;
+      const speed = this.stats.speed * moveSlow * this.passives.modifiers().speedMult * skillModifiers(this).speedMult;
       this.player.setVelocity(this.dash.x * speed * 3.65, this.dash.y * speed * 3.65);
       this.player.setAlpha(.72 + Math.sin(this.elapsed * 50) * .16);
     } else {
       this.player.setAlpha(1);
-      const speed=this.stats.speed*this.support.modifiers().speed*this.passives.modifiers().speedMult*skillModifiers(this).speedMult;
+      const speed=this.stats.speed*moveSlow*this.support.modifiers().speed*this.passives.modifiers().speedMult*skillModifiers(this).speedMult;
       this.player.setVelocity(x * speed, y * speed);
     }
     this.facing=facingFor(this.player.body.velocity.x,this.player.body.velocity.y,this.facing);
@@ -385,6 +388,9 @@ export class GameScene extends Phaser.Scene {
     });
     this.enemyProjectiles.children.each((projectile) => {
       if (!projectile?.active) return;
+      const previous={x:projectile.getData('previousX')??projectile.x,y:projectile.getData('previousY')??projectile.y};
+      if(this.support.blocksProjectile?.(projectile,previous))return;
+      projectile.setData({previousX:projectile.x,previousY:projectile.y});
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
       if (life <= 0) projectile.destroy();
@@ -554,7 +560,7 @@ export class GameScene extends Phaser.Scene {
     projectile.setDisplaySize(42,42).setRotation(angle).play('bolt-5');
     projectile.body.setCircle(21,43,43);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
-    projectile.setData({ damage, life: 4, source });
+    projectile.setData({ damage, life: 4, source, previousX:x, previousY:y });
     return projectile;
   }
 
@@ -567,6 +573,7 @@ export class GameScene extends Phaser.Scene {
       // Retain the enemy shot if the player projectile pool cannot accept the reflection.
       if (!reflected) return;
     } else {
+      if(this.support.blocksProjectile?.(projectile,{x:projectile.getData('previousX')??projectile.x,y:projectile.getData('previousY')??projectile.y}))return;
       this.damagePlayer(projectile.getData('damage') || 8, projectile.x, projectile.y, projectile.getData('source') || projectile);
     }
     projectile.destroy();
@@ -660,11 +667,12 @@ export class GameScene extends Phaser.Scene {
     const heroOwned=!byAlly||options.heroSkill;
     const modifiers=heroOwned?this.passives.modifiers({enemy,dot:options.dot,byAlly}):{};
     const crit = !options.dot && options.canCrit!==false && Math.random() < this.stats.crit + critBonus + (modifiers.crit??0) + (heroOwned?(skillModifiers(this).crit??0):0);
-    const damage = rawDamage * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1);
+    const stealthMult=heroOwned&&!options.dot&&origin===this.player?(this.support.consumeStealthStrike?.()??1):1;
+    const damage = rawDamage * stealthMult * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1);
     const hp = enemy.getData('hp') - damage;
     enemy.setData('hp', hp);
     this.stats.damageDone += damage;
-    const lifesteal=this.stats.lifestealPct+(modifiers.lifestealPct??0);
+    const lifesteal=this.stats.lifestealPct+(modifiers.lifestealPct??0)+(this.support.modifiers().lifestealPct??0);
     if (heroOwned && lifesteal > 0) this.stats.hp = Math.min(this.stats.maxHp,
       this.stats.hp + Math.min(damage, Math.max(0, hp + damage)) * lifesteal * this.stats.healing);
     const event = { enemy, damage, source: origin, byAlly, dot: Boolean(options.dot),basicAttack:Boolean(options.basicAttack),skillId:options.skillId||null };
@@ -689,17 +697,18 @@ export class GameScene extends Phaser.Scene {
     if (!enemy.active) return;
     const x = enemy.x; const y = enemy.y;
     const isBoss = enemy.getData('isBoss');
+    const wasTopThreat=dangerousEnemy(this.enemies.getChildren(),this.player)===enemy;
     this.playEffect(2,x,y,isBoss?190:68);
     const bossId = enemy.getData('bossId');
     const xp = enemy.getData('xp') || 5;
     if(enemy.getData('markUntil')>this.elapsed&&enemy.getData('markSource')===this.player)this.stats.hp=Math.min(this.stats.maxHp,this.stats.hp+enemy.getData('markHeal')*this.stats.healing);
     enemy.disableBody(true, true);
     this.stats.kills += 1;
-    this.passives.emit('kill', { enemy, byAlly });
+    this.passives.emit('kill', { enemy, byAlly, wasTopThreat });
     if (isBoss) {
       this.activeBoss = null;
       this.hud.clearBoss();
-      for (let i = 0; i < 8; i += 1) this.spawnPickup('cacao', x + Phaser.Math.Between(-55, 55), y + Phaser.Math.Between(-55, 55), 3);
+      for (let i = 0; i < 8; i += 1) this.spawnPickup('cacao', x + Phaser.Math.Between(-55, 55), y + Phaser.Math.Between(-55, 55), this.support.cacaoValue?.(3)??3);
       if (bossId === 'ahpuch') {
         this.audio.sfx('victory');
         this.time.delayedCall(900, () => this.finishRun(true));
@@ -709,7 +718,7 @@ export class GameScene extends Phaser.Scene {
     } else {
       this.spawnPickup('xp', x, y, xp);
       const cacaoChance = .055 * (1 + this.stats.fortune);
-      if (Math.random() < cacaoChance) this.spawnPickup('cacao', x + 5, y - 3, 1);
+      if (Math.random() < cacaoChance) this.spawnPickup('cacao', x + 5, y - 3, this.support.cacaoValue?.(1)??1);
       if (Math.random() < .007) this.spawnPickup('potion', x - 4, y + 4, 16);
     }
   }

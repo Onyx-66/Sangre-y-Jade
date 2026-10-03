@@ -2,27 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { ALLY_CATALOG, ALLY_RULES } from '../src/data/allyCatalog.js';
 import { allyLevelEvent } from '../src/data/supports.js';
-import { AllyBrain } from '../src/systems/AllyBrain.js';
-import { LegacyAllyAdapter } from '../src/systems/LegacyAllyAdapter.js';
 import { SupportSystem } from '../src/systems/SupportSystem.js';
-import { addEnemy, makeScene, sprite } from './helpers/scene-fixture.js';
+import { ALLY_ACTIVE_HANDLERS } from '../src/skills/allies/index.js';
+import { addEnemy, makeScene } from './helpers/scene-fixture.js';
 
-function attachBrain(role, skillIds, adapter = {}) {
+function attachBrain(role, skillIds) {
   const scene=makeScene();scene.elapsed=0;scene.pausedForChoice=false;scene.ended=false;
   scene.hud={setAlly(){},toast(){}};scene.skillAudio={play(){}};
   const support=new SupportSystem(scene);
   scene.support=support;
-  const skills=skillIds.map(id=>{
+  support.summon(role,5);
+  scene.companion.skills=[];
+  for(const id of skillIds){
     const definition=ALLY_CATALOG[role].find(skill=>skill.id===id);
     assert.ok(definition,`missing ${id} in ${role} catalog`);
-    return {...definition,kind:'ally',skillKind:definition.kind,level:1,baseCooldown:definition.cooldown,
-      remaining:0,cooldown:definition.cooldown||0};
-  });
-  scene.companion={id:role,sprite:sprite(),skills,rank:1,level:5};
-  const calls=[];
-  const bridge={canCast:()=>true,cast(skill,target){calls.push({skill,target});return true;},...adapter};
-  const brain=new AllyBrain(scene,support,bridge);
-  return {scene,support,brain,calls};
+    assert.ok(support.equip(definition),`failed to equip ${id}`);
+  }
+  return {scene,support,brain:support.brain,calls:scene.allyCasts};
 }
 
 test('level-five companion cards show role, signature and two passives; chosen ally arrives with signature only',()=>{
@@ -74,33 +70,47 @@ test('ally brain checks available skills in priority order and enforces the 0.8 
   const [emergency,opportunistic]=scene.companion.skills;
   emergency.auto='always';emergency.priority=1;emergency.cooldown=12;
   opportunistic.auto='always';opportunistic.priority=3;opportunistic.cooldown=10;
-  brain.evaluate();assert.equal(calls[0].skill.id,'healing-circle');
-  assert.equal(calls.length,1);
+  scene.stats.hp=80;
+  brain.evaluate();assert.equal(calls['healing-circle'],1);
+  assert.equal(Object.keys(calls).length,1);
   emergency.remaining=12;
   for(const elapsed of [.2,.4,.6]){scene.elapsed=elapsed;brain.evaluate();}
-  assert.equal(calls.length,1,'the second skill must wait until the ally-wide gap expires');
-  scene.elapsed=.8;brain.evaluate();assert.equal(calls.length,2);
-  assert.equal(calls[1].skill.id,'jade-ward');
+  assert.equal(Object.keys(calls).length,1,'the second skill must wait until the ally-wide gap expires');
+  scene.elapsed=.8;brain.evaluate();assert.equal(calls['jade-ward'],1);
   assert.deepEqual({...scene.allyCasts},{'healing-circle':1,'jade-ward':1},'the per-run debug counter records casts by skill id');
 });
 
 test('heals, shields and active zones obey no-waste checks',()=>{
   const {scene,support}=attachBrain('saintess',['healing-circle','jade-ward']);
-  const adapter=new LegacyAllyAdapter(support),[heal,shield]=scene.companion.skills;
-  assert.equal(adapter.canCast(heal,null),false,'the Saintess should not heal a full-health hero');
-  scene.stats.hp=84;assert.equal(adapter.canCast(heal,null),true,'healing is permitted under the JSON HP threshold');
-  scene.stats.shield=scene.stats.maxHp*.5;assert.equal(adapter.canCast(shield,null),false,'do not overfill the Jade Ward shield cap');
+  const [heal,shield]=scene.companion.skills;
+  assert.equal(ALLY_ACTIVE_HANDLERS[heal.id].canCast(scene,support,heal),false,'the Saintess should not heal a full-health hero');
+  scene.stats.hp=84;assert.equal(ALLY_ACTIVE_HANDLERS[heal.id].canCast(scene,support,heal),true,'healing is permitted under the JSON HP threshold');
+  scene.stats.shield=scene.stats.maxHp*.5;assert.equal(ALLY_ACTIVE_HANDLERS[shield.id].canCast(scene,support,shield),false,'do not overfill the Jade Ward shield cap');
   scene.stats.shield=0;support.effects[shield.id]=scene.elapsed+3;
-  assert.equal(adapter.canCast(shield,null),false,'do not recast while the same buff is active');
+  assert.equal(ALLY_ACTIVE_HANDLERS[shield.id].canCast(scene,support,shield),false,'do not recast while the same buff is active');
 });
 
 test('failsafe casts an eligible ready skill after eight seconds but not a reactive-only skill',()=>{
   const tank=attachBrain('tank',['war-cry']);addEnemy(tank.scene,{},80,0);
   tank.brain.evaluate();tank.scene.elapsed=ALLY_RULES.failsafe_seconds;tank.brain.evaluate();
-  assert.deepEqual(tank.calls.map(call=>call.skill.id),['war-cry']);
+  assert.equal(tank.calls['war-cry'],1);
   const assassin=attachBrain('assassin',['silencing-dart']);addEnemy(assassin.scene,{},80,0);
   assassin.brain.evaluate();assassin.scene.elapsed=ALLY_RULES.failsafe_seconds;assassin.brain.evaluate();
-  assert.equal(assassin.calls.length,0);
+  assert.equal(Object.keys(assassin.calls).length,0);
+});
+
+test('failsafe bypasses multi-enemy triggers only when Ground Slam or Smoke Bomb can still hit a target',()=>{
+  const tank=attachBrain('tank',['ground-slam']);
+  addEnemy(tank.scene,{},tank.scene.companion.sprite.x+30,tank.scene.companion.sprite.y);
+  tank.brain.evaluate();tank.scene.elapsed=ALLY_RULES.failsafe_seconds+1;tank.brain.evaluate();
+  assert.equal(tank.calls['ground-slam'],1);
+
+  const assassin=attachBrain('assassin',['smoke-bomb']);addEnemy(assassin.scene,{},20,0);
+  assassin.brain.evaluate();assassin.scene.elapsed=ALLY_RULES.failsafe_seconds+1;assassin.brain.evaluate();
+  assert.equal(assassin.calls['smoke-bomb'],1);
+  const idle=attachBrain('assassin',['smoke-bomb']);addEnemy(idle.scene,{},260,0);
+  idle.brain.evaluate();idle.scene.elapsed=ALLY_RULES.failsafe_seconds+1;idle.brain.evaluate();
+  assert.equal(idle.calls['smoke-bomb'],undefined,'failsafe does not cast an empty out-of-radius effect');
 });
 
 test('ally brain does not cast during a choice or after the run ends, and never treats passives as casts',()=>{
@@ -109,5 +119,5 @@ test('ally brain does not cast during a choice or after the run ends, and never 
   scene.pausedForChoice=true;assert.equal(brain.evaluate(),false);
   scene.pausedForChoice=false;scene.ended=true;assert.equal(brain.evaluate(),false);
   scene.ended=false;scene.companion.skills=scene.companion.skills.slice(1);
-  assert.equal(brain.evaluate(),false);assert.equal(calls.length,0);
+  assert.equal(brain.evaluate(),false);assert.equal(Object.keys(calls).length,0);
 });

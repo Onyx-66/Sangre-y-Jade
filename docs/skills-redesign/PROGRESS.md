@@ -15,7 +15,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - [ ] 09 — Ixchel actives and passives
 - [ ] 10 — Kukul actives, passives and final hero cleanup
 - [x] 11 — Companion acquisition, rank and AI
-- [ ] 12 — Name not supplied
+- [x] 12 — Ally skill definitions, handlers, passive hooks and dead-skill audit
 - [ ] 13 — Name not supplied
 - [ ] 14 — Name not supplied
 - [ ] 15 — Name not supplied
@@ -91,3 +91,10 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Tests:** `npm run check` — **213/213 unit tests passed** and production build succeeded (102 modules; existing >500 kB chunk warning). `npm run test:hud` — **72/72 browser assertions passed**, including the 8 EN/AR portrait/landscape screenshots plus the new passive-ring/rank-badge/panel-tap checks; report and screenshots are in `previews/step11/hud/`. Inspected the Arabic portrait and English landscape renders. `git diff --check` passed.
 - **Open issues:** the temporary legacy adapter deliberately approximates redesigned active skills for which no shipped equivalent exists; step 12 must replace those stand-ins and complete the ally skill mechanics. Dedicated ally art/audio and FR/AR skill-description translation remain their later steps. Existing bundle-size warning remains. No dependencies, downloaded assets, music, narration, branding, save data or protected paths changed; unrelated untracked `public/assets/ui/menu/` remains untouched.
 - **Commit/version:** one commit labelled `[v0.5.0-skills-step11]`, annotated tag `v0.5.0-skills-step11`, on `feature/skills-overhaul`; application version remains 0.5.0. No push or later-step work included.
+
+## Step 12 — Ally skills and passive hooks — 2026-10-03
+
+- **Changed:** generated all 24 ally definitions, skill names/descriptions, EN/FR/AR messages, numeric parameters, auto-cast rules, priorities, failsafe flags, signatures and passive values from the authoritative JSON. Added 18 individual active handlers and six passive hooks; implemented the specified healing/shield/cleanse/zone/buff, wall/taunt/bash/slam/trap/ricochet, and stealth/execute/poison/silence/blind behaviors. Wired Lifebond healing, zone-limited Beacon/Dome, top-threat cacao and the Tank-only War Cry damage modifier. Removed old runtime ally skill data and deleted `LegacyAllyAdapter`; preserved all PNG/WAV files. Added an exact-600-second-per-role audit rotating the six active skills through legal 3-slot builds and verifying all passive hooks; dead-skill report shows all 18 actives cast and all six passives observed.
+- **Tests:** `npm run check` — **242/242 tests passed**, production build succeeded (128 modules; existing >500 kB bundle warning). `node scripts/ally-skills-playtest.mjs` — three 600-second simulated role runs; all 18 active skills cast and all six passive hooks were observed. `node docs/skills-redesign/validate_skills.mjs docs/skills-redesign/skills_redesign.json --assets public/assets/pixel --allow-new` — **108 entries checked**, uniqueness/ownership passed; expected not-yet-generated skill-icon warnings remain. `git diff --check` passed.
+- **Open issues:** allies do not yet have a general incoming-damage/HP combat pipeline; War Cry publishes its JSON Tank damage multiplier for that pipeline but does not invent ally collision/survivability rules here. Passive skills are validated by trigger/active-state observations rather than being counted as casts. Skill art/audio still use the later-step assets or existing placeholders; FR/AR descriptions intentionally remain English until step 19. Existing bundle-size warning remains.
+- **Commit/version:** one commit labelled `[v0.5.0-skills-step12]`, annotated tag `v0.5.0-skills-step12`, on `feature/skills-overhaul`; application version remains 0.5.0. No push or later-step work included.

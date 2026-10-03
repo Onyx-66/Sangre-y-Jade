@@ -1,18 +1,32 @@
 import { SUPPORTS, allyRank, allyNumberMultiplier, allyCooldownMultiplier, dangerousEnemy } from '../data/supports.js';
 import { ALLY_CATALOG, ALLY_RULES } from '../data/allyCatalog.js';
+import { ALLY_PASSIVE_HANDLERS } from '../skills/allies/index.js';
 import { t } from '../i18n/index.js';
-import { updateDamageOverTime } from '../skills/StatusEffects.js';
 import { AllyBrain } from './AllyBrain.js';
-import { LegacyAllyAdapter, legacyPassiveAlias } from './LegacyAllyAdapter.js';
+
+const pointSegmentDistance=(p,a,b)=>{
+ const dx=b.x-a.x,dy=b.y-a.y,length=dx*dx+dy*dy;
+ const along=length?Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/length)):0;
+ return Math.hypot(p.x-a.x-along*dx,p.y-a.y-along*dy);
+};
+const orientation=(a,b,c)=>(b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);
+function onSegment(a,b,p){return p.x>=Math.min(a.x,b.x)-1e-9&&p.x<=Math.max(a.x,b.x)+1e-9&&p.y>=Math.min(a.y,b.y)-1e-9&&p.y<=Math.max(a.y,b.y)+1e-9;}
+function segmentsWithin(a,b,c,d,radius){
+ a=a||b;
+ const o1=orientation(a,b,c),o2=orientation(a,b,d),o3=orientation(c,d,a),o4=orientation(c,d,b);
+ const intersects=(o1*o2<0&&o3*o4<0)||(Math.abs(o1)<1e-9&&onSegment(a,b,c))||(Math.abs(o2)<1e-9&&onSegment(a,b,d))||(Math.abs(o3)<1e-9&&onSegment(c,d,a))||(Math.abs(o4)<1e-9&&onSegment(c,d,b));
+ if(intersects)return true;
+ return Math.min(pointSegmentDistance(a,c,d),pointSegmentDistance(b,c,d),pointSegmentDistance(c,a,b),pointSegmentDistance(d,a,b))<=radius;
+}
 
 export class SupportSystem {
- constructor(scene){this.scene=scene;this.traps=[];this.effects={};this.legacy=new LegacyAllyAdapter(this);this.brain=new AllyBrain(scene,this,this.legacy);}
+ constructor(scene){this.scene=scene;this.traps=[];this.effects={};this.origins={};this.wall=null;this.lastStealthAt=-Infinity;this.stealthDamageUntil=0;this.brain=new AllyBrain(scene,this);}
  summon(id,heroLevel=ALLY_RULES.join_level){
   const s=this.scene,data=SUPPORTS[id];if(s.companion||!data)return null;
   const sprite=s.add.sprite(s.player.x-75,s.player.y+40,`support-${id}`).setScale(.62).setDepth(19);
   sprite.setData('animLock',0);
   sprite.setData('byAlly',true);
-  s.companion={id,sprite,skills:[],level:heroLevel,rank:allyRank(heroLevel),shot:.5};
+  s.companion={id,sprite,skills:[],level:heroLevel,rank:allyRank(heroLevel),shot:.5,hp:100};
   s.playEffect(4,sprite.x,sprite.y,125);s.audio.sfx('level');
   this.equip(data.signature);this.refresh();return s.companion;
  }
@@ -20,24 +34,59 @@ export class SupportSystem {
  syncLevel(level){
   const a=this.scene.companion;if(!a)return;
   const previous=a.rank;a.level=level;a.rank=allyRank(level);
-  for(const skill of a.skills){skill.level=a.rank;const fraction=skill.cooldown?skill.remaining/skill.cooldown:0;skill.cooldown=skill.baseCooldown*allyCooldownMultiplier(a.rank);skill.remaining=fraction*skill.cooldown;}
+  for(const skill of a.skills){skill.level=a.rank;this.scene.passives?.setLevel(skill.id,a.rank);const fraction=skill.cooldown?skill.remaining/skill.cooldown:0;skill.cooldown=skill.baseCooldown*allyCooldownMultiplier(a.rank);skill.remaining=fraction*skill.cooldown;}
   if(a.rank>previous)this.scene.hud.toast(t('Companion rank {n}',{n:a.rank}));
   this.refresh();
  }
  equip(skill){
   const a=this.scene.companion;if(!a||!skill||a.skills.length>=ALLY_RULES.slots||a.skills.some(entry=>entry.id===skill.id))return false;
-  const rank=a.rank||1,baseCooldown=skill.cooldown||0,skillKind=skill.skillKind||skill.kind;
-  a.skills.push({...skill,kind:'ally',skillKind,level:rank,baseCooldown,cooldown:baseCooldown*allyCooldownMultiplier(rank),remaining:0});
-  this.effects={};this.refresh();return true;
+  const catalogSkill=ALLY_CATALOG[a.id].find(entry=>entry.id===skill.id);
+  if(!catalogSkill||catalogSkill.owner!==`ally:${a.id}`)return false;
+  const rank=a.rank||1,baseCooldown=catalogSkill.cooldown||0,skillKind=catalogSkill.kind;
+  const entry={...catalogSkill,kind:'ally',skillKind,level:rank,baseCooldown,cooldown:baseCooldown*allyCooldownMultiplier(rank),remaining:0};
+  a.skills.push(entry);
+  if(skillKind==='passive'){
+   const logic=ALLY_PASSIVE_HANDLERS[entry.id];
+   if(logic)this.scene.passives?.equip({...logic,...entry,on:logic.on||entry.on,stat:logic.stat||entry.stat,
+    preventFatal:logic.preventFatal,redirectDamage:logic.redirectDamage},rank);
+  }
+  this.refresh();return true;
  }
- has(id){const alias=legacyPassiveAlias(id);return Boolean(this.scene.companion?.skills.some(skill=>skill.id===id||skill.legacyId===id||skill.id===alias));}
+ has(id){return Boolean(this.scene.companion?.skills.some(skill=>skill.id===id));}
  numberMultiplier(){return allyNumberMultiplier(this.scene.companion?.rank||1);}
  cooldownMultiplier(){return allyCooldownMultiplier(this.scene.companion?.rank||1);}
  effectActive(id){return (this.effects[id]||0)>this.scene.elapsed;}
- modifiers(){return this.legacy.modifiers();}
- preventFatal(damage){return this.legacy.preventFatal(damage);}
- canCast(skill,target){return this.legacy.canCast(skill,target);}
- cast(skill,target){return this.legacy.cast(skill,target);}
+ insideEffect(id,radius){
+  const origin=this.origins[id];
+  return this.effectActive(id)&&(!origin||Math.hypot(this.scene.player.x-origin.x,this.scene.player.y-origin.y)<=radius);
+ }
+ modifiers(){
+  const s=this.scene,a=s.companion;
+  const beaconSkill=ALLY_CATALOG.saintess.find(skill=>skill.id==='radiant-beacon');
+  const sanctuarySkill=ALLY_CATALOG.saintess.find(skill=>skill.id==='sanctuary-dome');
+  const beacon=this.insideEffect('radiant-beacon',beaconSkill.params.radius);
+  const tankClose=a?.id==='tank'&&this.has('bodyguard')&&Math.hypot(s.player.x-a.sprite.x,s.player.y-a.sprite.y)<=ALLY_CATALOG.tank.find(skill=>skill.id==='bodyguard').params.radius;
+  const bodyguard=tankClose?this.value('bodyguard')/100:0;
+  const warCry=this.effectActive('war-cry')?1-ALLY_CATALOG.tank.find(skill=>skill.id==='war-cry').params.damageReductionPct/100:1;
+  const sanctuary=this.insideEffect('sanctuary-dome',sanctuarySkill.params.radius)?1-sanctuarySkill.params.damageReductionPct/100:1;
+  const reduction=Math.min(.8,bodyguard+(sanctuary<1?1-sanctuary:0));
+  return {damage:1,haste:beacon?beaconSkill.params.attackSpeedPct/100:0,
+   speed:beacon?1+beaconSkill.params.moveSpeedPct/100:1,regen:0,armor:0,reduction,
+   lifestealPct:this.effectActive('lifebond')?ALLY_CATALOG.saintess.find(skill=>skill.id==='lifebond').params.lifestealPct/100*this.numberMultiplier():0,
+   tankDamageTakenMult:this.effectActive('war-cry')?warCry:1};
+ }
+ preventFatal(damage){
+  const redirected=this.scene.passives?.redirectDamage(damage,{support:this})??damage;
+  return this.scene.passives?.preventFatal(redirected,{support:this})??redirected;
+ }
+ value(id){const skill=this.scene.companion?.skills.find(entry=>entry.id===id);if(!skill)return 0;return skill.values?.[Math.min(skill.values.length-1,(skill.level||1)-1)]||0;}
+ consumeStealthStrike(){if(this.stealthDamageUntil<=this.scene.elapsed)return 1;this.stealthDamageUntil=0;return 1+ALLY_CATALOG.assassin.find(skill=>skill.id==='vanish').params.nextAttackBonusPct/100;}
+ cacaoValue(base){
+  const pct=this.scene.companion?.id==='assassin'&&this.has('bounty-contract')?this.value('bounty-contract'):0;
+  const amount=base*(1+pct/100),whole=Math.floor(amount);
+  const fraction=amount-whole;
+  return whole+(fraction>0&&Math.random()<fraction?1:0);
+ }
  chooseSkill(done){
   const s=this.scene,a=s.companion;if(!a||a.skills.length>=ALLY_RULES.slots){done?.();return;}
   const cards=this.choices();if(!cards.length){done?.();return;}
@@ -60,69 +109,52 @@ export class SupportSystem {
   if(a.id!=='saintess'&&target&&a.shot<=0&&Math.hypot(target.x-a.sprite.x,target.y-a.sprite.y)<160){
    s.damageEnemy(target,(a.id==='assassin'?12:7)*p,0,0,a.sprite,{byAlly:true});s.playEffect(0,target.x,target.y,55);
    s.animateCharacter(a.sprite,`support-${a.id}`,'attack',.28);
-   const pursuit=a.skills.find(skill=>skill.id==='relentless-pursuit');
-   const speed=pursuit?1+(pursuit.values?.[pursuit.level-1]||0)/100:1;
+   const speed=s.passives?.modifiers({ally:a}).allyAttackSpeedMult||1;
    a.shot=1.2/speed;
   }
   if(s.pausedForChoice||s.ended)return;
-  if(this.has('intercept')||this.has('bulwark-wall'))this.clearShots(a.sprite,70+10*p);
   this.brain.update(dt);
   if(!s.pausedForChoice&&!s.ended)this.updateTraps(dt);
  }
  clearShots(origin,radius){const s=this.scene;for(const shot of [...s.enemyProjectiles.getChildren()])if(shot.active&&Math.hypot(shot.x-origin.x,shot.y-origin.y)<radius){s.playEffect(4,shot.x,shot.y,30);shot.destroy();}}
- cast(k,target,p){
-  const s=this.scene,a=s.companion;
-  const needsTarget=['taunt','bash','shockwave','ambush','mark','execute','venom','silence','disarm','rupture','volley','smoke'];
-  if(needsTarget.includes(k.id)&&!target?.active)return false;
-  const hit=damage=>{if(target?.active)s.damageEnemy(target,damage*p,0,0,a.sprite);};
-  const heal=amount=>{s.stats.hp=Math.min(s.stats.maxHp,s.stats.hp+amount*p*s.stats.healing);s.healEffect();};
-  const shield=amount=>{s.stats.shield=Math.min(s.stats.maxHp,s.stats.shield+amount*p);s.shieldEffect();};
-  switch(k.id){
-   case 'renew':if(s.stats.hp>=s.stats.maxHp)return false;heal(12);break;
-   case 'blessing':shield(18);break;
-   case 'well':if(s.stats.maxMana)s.stats.mana=Math.min(s.stats.maxMana,s.stats.mana+30*p);else heal(9);s.playEffect(4,s.player.x,s.player.y,80);break;
-   case 'purify':this.clearShots(s.player,210);s.playEffect(4,s.player.x,s.player.y,180);break;
-   case 'bomb':case 'snare':this.placeTrap(k.id,p);break;
-   case 'taunt':for(const e of s.enemies.getChildren())if(e.active&&!e.getData('isBoss')&&Math.hypot(e.x-s.player.x,e.y-s.player.y)<330)e.setData('tauntUntil',s.elapsed+3);s.playEffect(4,a.sprite.x,a.sprite.y,180);break;
-   case 'bash':hit(16);if(target.active)target.setData('stunUntil',s.elapsed+.7);s.playEffect(0,target.x,target.y,90);break;
-   case 'barrier':shield(30);break;
-   case 'shockwave':for(const e of [...s.enemies.getChildren()])if(e.active&&Math.hypot(e.x-a.sprite.x,e.y-a.sprite.y)<155){s.damageEnemy(e,14*p,0,0,a.sprite);if(e.active)e.setData('stunUntil',s.elapsed+.45);}s.playEffect(5,a.sprite.x,a.sprite.y,210);break;
-   case 'ambush':hit(27);s.playEffect(0,target.x,target.y,80);break;
-   case 'mark':if(s.heroData.id!=='balam'){target.setData({markUntil:s.elapsed+5,markBonus:Math.min(.65,.2*p)});s.playEffect(4,target.x,target.y,65);}break;
-   case 'execute':hit(target.getData('hp')/target.getData('maxHp')<.35?65:22);s.playEffect(0,target.x,target.y,105);break;
-   case 'venom':target.setData({poisonUntil:s.elapsed+5,poisonDps:5*p,poisonSource:a.sprite,poisonByAlly:true});s.playEffect(1,target.x,target.y,70);break;
-   case 'silence':target.setData('silenceUntil',s.elapsed+3);hit(8);break;
-   case 'disarm':target.setData('disarmUntil',s.elapsed+4);hit(10);break;
-   case 'rupture':target.setData({bleedUntil:s.elapsed+4,bleedDps:8*p,bleedSource:a.sprite,bleedByAlly:true});s.playEffect(3,target.x,target.y,65);break;
-   case 'volley':hit(36);s.playEffect(0,target.x,target.y,70);s.playEffect(2,target.x+16,target.y-12,45);break;
-   case 'smoke':target.setData({slowUntil:s.elapsed+4,slowPct:.5});this.effects.smoke=s.elapsed+3;s.playEffect(5,s.player.x,s.player.y,145);break;
-   default:return false;
-  }
-  return true;
+ raiseWall(skill,target){
+  const s=this.scene,threat=target?.active?target:dangerousEnemy(s.enemies.getChildren(),s.player);
+  const end=threat?{x:threat.x,y:threat.y}:{x:s.player.x+1,y:s.player.y};
+  const dx=end.x-s.player.x,dy=end.y-s.player.y,length=Math.hypot(dx,dy)||1;
+  const mid={x:(s.player.x+end.x)/2,y:(s.player.y+end.y)/2},half=skill.params.width/2;
+  const normal={x:-dy/length,y:dx/length};
+  this.wall={id:skill.id,a:{x:mid.x-normal.x*half,y:mid.y-normal.y*half},b:{x:mid.x+normal.x*half,y:mid.y+normal.y*half},until:s.elapsed+skill.params.duration};
+  this.effects[skill.id]=this.wall.until;
+  s.fx?.play(skill.id,'ground',{x:mid.x,y:mid.y,duration:skill.params.duration,angle:Math.atan2(dy,dx)});
  }
- placeTrap(kind,p){
+ blocksProjectile(projectile,previous){
+  const wall=this.wall,s=this.scene;
+  if(!wall||wall.until<=s.elapsed)return false;
+  if(!segmentsWithin(previous,{x:projectile.x,y:projectile.y},wall.a,wall.b,18))return false;
+  s.fx?.play(wall.id,'impact',{x:projectile.x,y:projectile.y});
+  projectile.destroy();return true;
+ }
+ placeBomb(skill){
   const s=this.scene;if(this.traps.length>=6){const old=this.traps.shift();old.sprite.destroy();}
-  const sprite=s.add.image(s.player.x-s.lastMove.x*45,s.player.y-s.lastMove.y*45,`support-${kind}`).setDisplaySize(kind==='snare'?54:42,kind==='snare'?54:42).setDepth(8);
+  const sprite=s.add.image(s.player.x-s.lastMove.x*45,s.player.y-s.lastMove.y*45,'support-bomb').setDisplaySize(42,42).setDepth(8);
   sprite.setData('byAlly',true);
-  this.traps.push({kind,sprite,life:12,power:p,armed:.45});
+  this.traps.push({id:skill.id,skill,sprite,life:skill.params.fuseDuration,armed:true});
+  s.fx?.play(skill.id,'ground',{x:sprite.x,y:sprite.y,duration:skill.params.fuseDuration});
  }
  updateTraps(dt){
   const s=this.scene;
   this.traps=this.traps.filter(trap=>{
-   trap.life-=dt;trap.armed-=dt;
-   const target=trap.armed<=0?s.closestEnemy(trap.sprite.x,trap.sprite.y,85):null;
-   if(target){
-    s.playEffect(trap.kind==='bomb'?5:4,trap.sprite.x,trap.sprite.y,160);
-    for(const e of [...s.enemies.getChildren()])if(e.active&&Math.hypot(e.x-trap.sprite.x,e.y-trap.sprite.y)<135){
-     if(trap.kind==='bomb')s.damageEnemy(e,32*trap.power,0,0,trap.sprite);
-     else e.setData({slowUntil:s.elapsed+4,slowPct:.5});
-    }
+   trap.life-=dt;
+   const triggered=s.enemies.getChildren().some(enemy=>enemy.active&&Math.hypot(enemy.x-trap.sprite.x,enemy.y-trap.sprite.y)<=trap.skill.params.triggerRadius);
+   if(triggered||trap.life<=0){
+    const power=this.numberMultiplier();
+    for(const enemy of [...s.enemies.getChildren()])if(enemy.active&&Math.hypot(enemy.x-trap.sprite.x,enemy.y-trap.sprite.y)<=trap.skill.params.blastRadius)
+     s.damageEnemy(enemy,trap.skill.params.damage*power,0,0,s.companion.sprite,{byAlly:true});
+    s.fx?.play(trap.id,'impact',{x:trap.sprite.x,y:trap.sprite.y,scale:trap.skill.params.blastRadius/100});
+    trap.sprite.destroy();return false;
    }
-   if(target||trap.life<=0){trap.sprite.destroy();return false;}return true;
+   return true;
   });
- }
- updateEnemy(enemy,dt){
-  updateDamageOverTime(this.scene,enemy,dt);
  }
  chooseClass(done){
   const s=this.scene;

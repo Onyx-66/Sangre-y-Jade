@@ -1,13 +1,54 @@
 import fs from 'node:fs/promises';
 
 const source = JSON.parse(await fs.readFile('docs/skills-redesign/skills_redesign.json', 'utf8'));
+// Ally mechanics are authored as prose in the source JSON. These ordered field
+// names bind the prose's numeric tokens to runtime parameters without copying
+// balance numbers into code.
+const parameterFields = {
+  'healing-circle': ['radius', 'duration', 'healingPerSecond'],
+  'jade-ward': ['interval', 'shield', 'shieldCapPct'],
+  'cleansing-light': ['radius', 'slowImmunityDuration'],
+  'sanctuary-dome': ['radius', 'duration', 'damageReductionPct'],
+  'radiant-beacon': ['duration', 'radius', 'attackSpeedPct', 'moveSpeedPct'],
+  lifebond: ['duration', 'lifestealPct'],
+  'saving-grace': ['healPct', 'invulnerabilityDuration', 'cooldown'],
+  'sacred-fervor': [],
+  'bulwark-wall': ['width', 'duration'],
+  'war-cry': ['radius', 'duration', 'damageReductionPct'],
+  'shield-bash': ['damage', 'stunDuration'],
+  'ground-slam': ['radius', 'damage', 'stunDuration'],
+  'clay-bomb': ['blastRadius', 'triggerRadius', 'fuseDuration', 'damage'],
+  'shield-throw': ['range', 'maxTargets', 'damage'],
+  bodyguard: ['radius'],
+  'guardian-link': ['radius'],
+  ambush: ['damage', 'stealthWindow'],
+  execute: ['normalDamage', 'executeDamage', 'executeHpPct', 'cooldownRefund'],
+  'venom-blade': ['damagePerSecond', 'duration', 'maxStacks'],
+  'silencing-dart': ['damage', 'silenceDuration'],
+  'smoke-bomb': ['radius', 'duration', 'slowPct'],
+  vanish: ['duration', 'nextAttackBonusPct'],
+  'relentless-pursuit': [],
+  'bounty-contract': ['bonusCacao'],
+};
+
+function extractParameters(skill) {
+  const names = parameterFields[skill.id];
+  if (!names?.length) return {};
+  const values = (skill.mech.match(/(?:\d+(?:\.\d+)?|\.\d+)/g) || []).map(Number);
+  if (values.length < names.length || values.slice(0, names.length).some((value) => !Number.isFinite(value))) {
+    throw new Error(`Could not extract all runtime parameters for ${skill.id} from its JSON mechanic: ${skill.mech}`);
+  }
+  return Object.fromEntries(names.map((name, index) => [name, values[index]]));
+}
+
 const definitions = Object.fromEntries(Object.entries(source.allies).map(([role, skills]) => [role, skills.map((skill) => {
   const definition = {
     id: skill.id, owner: skill.owner, kind: skill.kind, name: skill.name, fr: skill.fr, ar: skill.ar,
     description: skill.desc, iconFile: skill.icon_file, cooldown: skill.cd || 0, mana: skill.mana || 0,
     mechanics: skill.mech, auto: skill.auto || '', priority: skill.priority, failsafe: Boolean(skill.failsafe),
-    signature: Boolean(skill.signature), legacyId: skill.old && !skill.old.startsWith('(') ? skill.old : null,
+    signature: Boolean(skill.signature),
     duration: Number(skill.mech.match(/(?:for|lasts) ([\d.]+)s/)?.[1] || 0),
+    params: extractParameters(skill),
   };
   // The JSON's +/- marks describe prose direction (e.g. -18% damage taken);
   // runtime values are effect magnitudes consumed by the corresponding hook.

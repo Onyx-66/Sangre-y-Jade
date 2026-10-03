@@ -27,7 +27,7 @@ export function canEnemyAttack(scene, enemy, againstHero = false) {
 
 export const enemyDamageMult = (scene, enemy) => active(enemy, 'disarmUntil', scene.elapsed) ? .55 : 1;
 export const enemyShotAngle = (scene, enemy, angle, targetsHero = true, random = Math.random) =>
-  targetsHero && active(enemy, 'blindUntil', scene.elapsed) ? random() * Math.PI * 2 : angle;
+  targetsHero && active(enemy, 'blindUntil', scene.elapsed) ? angle + Math.PI + (random() - .5) * .34 : angle;
 
 export function updateDamageOverTime(scene, enemy, dt) {
   const stacks=enemy.getData('basicPoisonStacks')||[];

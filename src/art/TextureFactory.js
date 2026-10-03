@@ -2,7 +2,7 @@ const root=`${import.meta.env.BASE_URL}assets/pixel/`;
 export const CHARACTER_ROWS={hero:['balam','ixchel','kukul'],enemy:['shade','bat','jaguar','serpent','priest'],boss:['camazotz','zipacna','vucub','ahpuch'],support:['saintess','tank','assassin']};
 export function preloadTextures(scene) {
   scene.load.image('pickup-bubble',`${import.meta.env.BASE_URL}assets/ui/pickup-bubble.svg`);
-  for(const name of ['bomb','snare'])scene.load.image(`support-${name}`,`${root}support-${name}.png`);
+  scene.load.image('support-bomb',`${root}support-bomb.png`);
   const actorKeys=[...Object.entries(CHARACTER_ROWS).flatMap(([kind,names])=>names.map(name=>`${kind}-${name}`)),...CHARACTER_ROWS.hero.flatMap(name=>['up','down'].map(dir=>`hero-${name}-${dir}`)),...Array.from({length:6},(_,i)=>`fx-${i}`)];
   for(const key of actorKeys){scene.load.image(key,`${root}frames/${key}-0.png`);for(let i=0;i<4;i++)scene.load.image(`${key}-frame-${i}`,`${root}frames/${key}-${i}.png`);}
   for(const name of ['temple','palm','tree','rocks','ruin','stela','foliage','roots','crystal'])scene.load.image(`top-${name}`,`${root}top-${name}.png`);

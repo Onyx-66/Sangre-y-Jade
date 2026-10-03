@@ -1,5 +1,6 @@
 import { ALLY_RULES } from '../data/allyCatalog.js';
 import { dangerousEnemy } from '../data/supports.js';
+import { ALLY_ACTIVE_HANDLERS } from '../skills/allies/index.js';
 
 const HOSTILE = ['slow', 'poison', 'bleed', 'burn', 'confuse'];
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
@@ -9,7 +10,9 @@ const projectilesNear=(scene,origin,radius)=>scene.enemyProjectiles?.getChildren
 function rangeFor(skill) {
   const explicit=skill.auto.match(/(?:within|in range)\s+(\d+)/i)?.[1];
   const mechanic=skill.mechanics.match(/r(\d+)|range\s+(\d+)|within\s+(\d+)/i);
-  return Number(explicit||mechanic?.[1]||mechanic?.[2]||mechanic?.[3]||750);
+  const params=skill.params||{};
+  const authored=params.range??params.radius??params.blastRadius??params.triggerRadius;
+  return Number(explicit||mechanic?.[1]||mechanic?.[2]||mechanic?.[3]||authored||750);
 }
 
 function primaryTarget(scene,skill,origin=scene.player) {
@@ -32,11 +35,12 @@ function projectileThreatensPlayer(shot,player) {
   return dot>0&&cross<70;
 }
 
-function trigger(scene,skill,target) {
+function trigger(scene,skill,target,origin=scene.player) {
   const auto=skill.auto.toLowerCase(),radius=rangeFor(skill);
   const explicitGroupRadius=auto.match(/(?:within|in range)\s+(\d+)/i)?.[1];
   const mechanicsRadius=skill.mechanics.match(/r(\d+)/i)?.[1];
-  const groupRadius=Number(explicitGroupRadius||mechanicsRadius||radius||200);
+  const authoredRadius=skill.params?.radius??skill.params?.range??skill.params?.blastRadius??skill.params?.triggerRadius;
+  const groupRadius=Number(explicitGroupRadius||mechanicsRadius||authoredRadius||radius||200);
   if(auto.includes('always'))return true;
   const hp=auto.match(/hero hp below (\d+)%/);
   if(hp&&scene.stats.hp/scene.stats.maxHp<Number(hp[1])/100)return true;
@@ -44,18 +48,19 @@ function trigger(scene,skill,target) {
   if(auto.includes('debuff')||auto.includes('projectiles near'))return hasHeroDebuff(scene)||projectilesNear(scene,scene.player,radius).length>=Number(auto.match(/(\d+)\+ enemy projectiles/)?.[1]||3);
   if(auto.includes('projectiles heading'))return (scene.enemyProjectiles?.getChildren()||[]).some(shot=>shot.active&&projectileThreatensPlayer(shot,scene.player));
   const count=Number(auto.match(/(\d+)\+ enemies/)?.[1]||0);
-  if(count&&enemiesNear(scene,scene.player,groupRadius).length>=count)return true;
+  if(count&&enemiesNear(scene,auto.includes('hero')?scene.player:origin,groupRadius).length>=count)return true;
   const weakened=auto.match(/enemy below (\d+)% hp/);
   if(weakened)return Boolean(target&&target.getData('hp')/target.getData('maxHp')<Number(weakened[1])/100);
   if(auto.includes('ranged enemy'))return Boolean(target);
+  if(auto.includes('enemies near'))return enemiesNear(scene,scene.player,groupRadius).length>0;
   if(auto.includes('enemies present'))return enemiesNear(scene,scene.player,750).length>0;
   if(auto.includes('enemy within')||auto.includes('top threat within'))return Boolean(target);
   return false;
 }
 
 export class AllyBrain {
-  constructor(scene,support,adapter) {
-    this.scene=scene;this.support=support;this.adapter=adapter;this.accumulator=0;this.lastCast=-Infinity;
+  constructor(scene,support) {
+    this.scene=scene;this.support=support;this.accumulator=0;this.lastCast=-Infinity;
     this.readySince=new Map();this.casts=Object.create(null);scene.allyCasts=this.casts;
     if(typeof window!=='undefined')window.__allyCasts=this.casts;
   }
@@ -72,29 +77,32 @@ export class AllyBrain {
     if(!ally||scene.pausedForChoice||scene.ended||scene.scene?.isPaused?.()||scene.elapsed-this.lastCast<ALLY_RULES.global_gap_seconds)return false;
     const active=ally.skills.filter(skill=>skill.skillKind!=='passive').sort((a,b)=>(a.priority??3)-(b.priority??3));
     for(const skill of active){
+      const handler=ALLY_ACTIVE_HANDLERS[skill.id];
+      if(!handler)continue;
       if(skill.remaining>0){this.readySince.delete(skill.id);continue;}
       if(!this.readySince.has(skill.id))this.readySince.set(skill.id,scene.elapsed);
-      const target=primaryTarget(scene,skill,skill.auto.toLowerCase().includes('tank')?ally.sprite:scene.player);
-      const normal=trigger(scene,skill,target);
+      const origin=handler.origin?.(scene,this.support,skill)||scene.player;
+      const target=primaryTarget(scene,skill,origin);
+      const normal=trigger(scene,skill,target,origin);
       const failsafe=skill.failsafe&&scene.elapsed-this.readySince.get(skill.id)>=ALLY_RULES.failsafe_seconds
         &&Boolean(dangerousEnemy(scene.enemies.getChildren(),scene.player,ALLY_RULES.failsafe_enemy_range));
-      if((!normal&&!failsafe)||!this.adapter.canCast(skill,target))continue;
-      if(this.cast(skill,target))return true;
+      if((!normal&&!failsafe)||handler.canCast?.(scene,this.support,skill,target,{failsafe})===false)continue;
+      if(this.cast(skill,target,handler))return true;
     }
     scene.hud?.setAlly?.(ally);
     return false;
   }
 
-  cast(skill,target) {
+  cast(skill,target,handler=ALLY_ACTIVE_HANDLERS[skill.id]) {
     const scene=this.scene,ally=scene.companion;
-    if(scene.pausedForChoice||scene.ended||scene.elapsed-this.lastCast<ALLY_RULES.global_gap_seconds)return false;
-    if(!this.adapter.cast(skill,target))return false;
-    skill.remaining=skill.cooldown;
+    if(scene.pausedForChoice||scene.ended||scene.elapsed-this.lastCast<ALLY_RULES.global_gap_seconds||!handler)return false;
+    if(handler.cast(scene,this.support,skill,target)!==true)return false;
+    skill.remaining=Math.max(0,skill.cooldown-Math.max(0,skill.cooldownRefund||0));
+    skill.cooldownRefund=0;
     this.readySince.delete(skill.id);this.lastCast=scene.elapsed;
     this.casts[skill.id]=(this.casts[skill.id]||0)+1;
     if(typeof window!=='undefined')window.__allyCasts=this.casts;
     scene.animateCharacter?.(ally.sprite,`support-${ally.id}`,'attack',.32);
-    scene.skillAudio?.play(skill.id,'cast');
     this.popIcon(skill,ally);
     scene.hud?.setAlly?.(ally);
     return true;
