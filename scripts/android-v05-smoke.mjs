@@ -14,7 +14,7 @@ try{
  check(await page.evaluate(()=>!document.querySelector('.setup-progress')&&document.querySelector('.wizard-panel').scrollHeight<=document.querySelector('.wizard-panel').clientHeight+2),'APK setup has no step numbers or scroll');
  check(await page.evaluate(()=>getComputedStyle(document.querySelector('.wizard-panel h2')).fontFamily.includes('LatinDigits')&&!/[٠-٩۰-۹]/.test(document.querySelector('.screen').textContent)),'APK Arabic uses Western numeral glyphs and text');
  for(let i=0;i<3;i++)await page.locator('[data-next]').click();await page.locator('[data-start]').click();await page.locator('.hud').waitFor();
- check(await page.locator('.skill-btn').count()===4,'APK has four active hero buttons');
+ check(await page.locator('[data-skill]').count()===4,'APK has four reserved active hero slots');
  await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');s.invulnerable=1000;s.spawnTimer=1000;s.stats.level=5;s.pendingLevelUps=1;s.showLevelChoice();});await page.locator('.choice-card').first().click();
  await page.locator('[data-choice=tank]').click();for(let i=0;i<3;i++)await page.locator('.choice-card').first().click();
  check(await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');return s.companion.id==='tank'&&s.companion.skills.length===3&&s.companion.sprite.texture.key.startsWith('support-tank')&&!s.pausedForChoice;}),'APK recruits distinct Tank with three support skills');

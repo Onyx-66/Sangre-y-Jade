@@ -10,7 +10,7 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - [ ] 04 — Name not supplied
 - [x] 05 — Hero slots, level milestones, HUD and draft (section 3.6)
 - [x] 06 — UI kit assets and sheet-slicing tool
-- [ ] 07 — Name not supplied
+- [x] 07 — HUD, skill cards and responsive screenshot checks
 - [ ] 08 — Name not supplied
 - [ ] 09 — Name not supplied
 - [ ] 10 — Name not supplied
@@ -63,3 +63,10 @@ Names for prompts 2-23 were not supplied; see DECISIONS.md. Placeholder names do
 - **Tests:** `npm run check` — **67/67 tests passed** and production build passed (38 modules; existing >500 kB chunk-size warning). Added a cross-platform metadata test for exact dimensions and alpha on all 18 PNGs; visually inspected both generated contact sheets and the regenerated milestone banner. `git diff --check` passed.
 - **Open issues:** the image service returned smaller source sheets than the requested 2048×2048/1024×512, so cell detection uses each actual sheet's grid and the final output dimensions are exact. `sharp` was already installed; no dependency was added. UI kit assets are not wired into the HUD in this asset-generation step.
 - **Commit/version:** one step-6 commit tagged `v0.5.0-skills-step6`; application package version remains 0.5.0.
+
+## Step 7 — 2026-10-03 — Complete
+
+- **Changed:** wired the step-6 gold active plates, jade passive/locked rings, silver innate rings and sky-blue ally panel into the HUD; added Q/E/R/T labels, conic cooldown sweeps, ready glow, passive level pips and generic counter/timer/stack presentation. Passive/trait/ally-skill tooltips support hover, focus and tap without casting. Both future slots are reserved, with localised unlock labels and a 1.5-second banner/burst plus the existing click sound at once-only milestones. Level-up and support cards use their kind-coloured borders and labelled ribbon images. Added localised EN/FR/AR presentation text and Arabic mirrored layouts with Western digit ordering. Added display-only passive/ally fixtures and a local Playwright screenshot script; updated existing active-slot selectors. Kept existing skill/support gameplay rules.
+- **Tests:** `npm run check` — **70/70 tests passed** and production build succeeded (41 modules, existing >500 kB warning). `npm run test:hud` — **70/70 browser assertions passed**, including real level-up/equip/casting and zero runtime/missing-asset errors; eight required locked/unlocked EN/AR screenshots and an Arabic four-kind card preview are in `docs/skills-redesign/previews/step7/`. The images were visually inspected; ribbon contrast and Arabic ratio order were corrected. `git diff --check` passed.
+- **Open issues:** hero passives and the new ally logic are future steps; state examples stay test-only. Dedicated Survivor's Will art and UI sounds are future work. Previously documented authored skill-description translation coverage and the build chunk-size warning remain. No dependencies, branding, music, narration, existing images or save data changed.
+- **Commit/version:** one step-7 commit tagged `v0.5.0-skills-step7`; application package version remains 0.5.0.

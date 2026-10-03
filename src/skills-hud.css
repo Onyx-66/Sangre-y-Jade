@@ -1,0 +1,75 @@
+:root{--skill-active:#ffcf4a;--skill-passive:#3de0b0;--skill-ally:#8ec5ff;--skill-locked:#6b6478;--skill-innate:#c9c3d6}
+.hud .skill-dock{position:absolute;inset-inline-end:18px;bottom:18px;display:flex;flex-direction:column;gap:14px;pointer-events:none}
+.hud .skill-dock .skills{position:static;display:flex;gap:8px;direction:ltr;align-items:center;pointer-events:none}
+.hud .skill-btn{width:64px;height:64px;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent url('../public/assets/pixel/ui/slot-active-plate.png') center/100% 100% no-repeat;overflow:visible;pointer-events:auto;opacity:1;isolation:isolate}
+.hud .skill-btn .skill-icon{position:absolute;inset:11%;width:auto;height:auto;padding:0;z-index:-1;overflow:hidden;font-size:24px;color:var(--skill-active)}
+.hud .skill-btn .skill-icon .pixel-icon{width:100%;height:100%}
+.hud .skills .key{position:absolute;inset:2px auto auto 3px;font:700 10px/1 Pixelify!important;background:#201922e8;color:#ffe7aa;padding:2px 3px;border:1px solid #9e824f;border-radius:0;z-index:5;display:block}
+.hud .skill-btn.empty:not(.locked){filter:saturate(.5);opacity:.8}
+.hud .skill-btn.locked{background-image:url('../public/assets/pixel/ui/slot-locked-plate.png');filter:none;cursor:default}
+.hud .skill-btn.locked .skill-icon,.hud .skill-btn.locked .cooldown{display:none}
+.slot-level{position:absolute;bottom:7%;left:0;width:100%;text-align:center;color:#eee0d0;font-size:10px;line-height:1.2;text-shadow:1px 1px #000;z-index:4;white-space:nowrap}
+.hud .cooldown{inset:11%;z-index:3;transform:none;background:conic-gradient(#0b091cd9 0deg var(--remaining,0deg),transparent var(--remaining,0deg) 360deg);pointer-events:none}
+.hud .cooldown[hidden]{display:none}
+.hud .skill-btn.is-ready{filter:drop-shadow(0 0 4px #ffcf4a70)}
+.hud .skill-btn.ready{animation:skill-ready .5s ease-out}
+@keyframes skill-ready{50%{filter:drop-shadow(0 0 12px var(--skill-active));transform:scale(1.06)}}
+.hud .dash-btn,.hud .attack-btn{width:64px;height:64px!important;margin:0;pointer-events:auto}
+.hud .dash-btn .key{inset:2px auto auto 2px;font-size:8px!important}
+.hud .dash-btn .skill-icon{padding:6px}.hud .dash-btn .cooldown{inset:3px;border-radius:2px}
+.hud .attack-btn .pixel-icon{width:100%;height:100%;padding:6px}
+.passive-row,.passive-slots,.innate-traits{display:flex;align-items:center;justify-content:flex-end;gap:8px;pointer-events:none}
+.passive-row{gap:12px}.passive-slot,.innate-slot{position:relative;display:grid;place-items:center;flex-shrink:0;pointer-events:auto;outline:none;cursor:help}
+.passive-content{display:contents}
+.passive-slot{width:54px;height:54px;background:url('../public/assets/pixel/ui/slot-passive-ring.png') center/100% 100% no-repeat;color:var(--skill-passive)}
+.passive-slot.locked{background-image:url('../public/assets/pixel/ui/slot-locked-ring.png');color:var(--skill-locked)}
+.passive-slot.empty:not(.locked){opacity:.8}.passive-slot .slot-empty{font-size:22px;color:var(--skill-passive)}
+.passive-icon{position:absolute;inset:18%;border-radius:50%;overflow:hidden;z-index:-1;background:#161720}
+.passive-icon .pixel-icon{width:100%;height:100%;object-fit:cover}.passive-slot,.innate-slot{isolation:isolate}
+.innate-slot{width:28px;height:28px;background:url('../public/assets/pixel/ui/slot-trait-ring.png') center/100% 100% no-repeat;color:var(--skill-innate)}
+.level-pips,.passive-stacks{position:absolute;display:flex;justify-content:center;gap:2px;left:0;right:0;bottom:-5px}
+.level-pips i,.passive-stacks i{display:block;width:4px;height:4px;background:#18291f;border:1px solid #528c77}
+.level-pips i.filled,.passive-stacks i.filled{background:var(--skill-passive);box-shadow:0 0 2px #3de0b055}
+.passive-stacks{bottom:10px;z-index:3;gap:1px}.passive-stacks i{width:5px;height:5px}
+.passive-counter{position:absolute;bottom:9px;left:17%;right:17%;height:3px;background:#090e10;border:1px solid #183f32;z-index:3}.passive-counter>span{display:block;height:100%;background:var(--skill-passive)}
+.passive-counter-label{position:absolute;bottom:13px;font:700 10px/1 Pixelify!important;color:#fff;text-shadow:1px 1px #000;z-index:3}
+.passive-timer,.ally-cooldown{position:absolute;inset:8%;border-radius:50%;background:conic-gradient(#101425cc 0deg var(--remaining,0deg),var(--skill-passive) var(--remaining,0deg) 360deg);mask:radial-gradient(circle,transparent 62%,#000 65%);pointer-events:none}
+.passive-timer.is-ready{filter:drop-shadow(0 0 3px var(--skill-passive))}
+.passive-slot:focus-visible,.innate-slot:focus-visible,.ally-skill:focus-visible{filter:drop-shadow(0 0 4px white)}
+.skill-tooltip{position:fixed;z-index:130;width:max-content;max-width:min(260px,calc(100vw - 12px));padding:8px 10px;background:#211823fa;border:1px solid var(--skill-passive);box-shadow:2px 3px #0008;font-size:12px;line-height:1.4;text-align:start;white-space:pre-line;pointer-events:none}
+.skill-tooltip[hidden]{display:none}
+.hud .ally-panel{position:absolute;top:105px;inset-inline-start:18px;width:224px;height:65px;background:url('../public/assets/pixel/ui/ally-panel-bg.png') center/100% 100% no-repeat;display:flex;align-items:center;gap:7px;padding:9px 12px 18px;pointer-events:none}
+.ally-portrait{width:32px;height:32px;padding:0;background:#18202b;border:1px solid #7d9faf;pointer-events:auto;cursor:pointer;flex-shrink:0}.ally-portrait:disabled{cursor:default;color:#7190ab}.ally-portrait .pixel-icon{width:100%;height:100%}
+.ally-skills{display:flex;gap:5px}.ally-skill{position:relative;width:34px;height:34px;background:url('../public/assets/pixel/ui/slot-ally-plate.png') center/100% 100% no-repeat;isolation:isolate;pointer-events:auto;cursor:help}
+.ally-skill .skill-icon{position:absolute;inset:13%;z-index:-1}.ally-skill .pixel-icon{width:100%;height:100%}.ally-skill.empty{opacity:.6}.ally-cooldown{background:conic-gradient(#14192dcc 0deg var(--remaining,0deg),var(--skill-ally) var(--remaining,0deg) 360deg)}
+.ally-name{position:absolute;bottom:6px;inset-inline:10px;text-align:center;font-size:9px;line-height:1;color:#c7e3ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slot-unlock-burst{position:absolute;inset:-50%;width:200%;height:200%;z-index:20;pointer-events:none;animation:unlock-burst 1.5s ease-out forwards}
+@keyframes unlock-burst{0%{opacity:0;transform:scale(.3) rotate(-30deg)}20%{opacity:1}100%{opacity:0;transform:scale(1.3) rotate(30deg)}}
+.milestone-banner{position:absolute;top:32%;left:50%;transform:translateX(-50%);width:min(440px,94vw);height:110px;background:url('../public/assets/pixel/ui/milestone-banner.png') center/100% 100% no-repeat;display:grid;place-items:center;padding:20px 44px;z-index:120;font-size:clamp(13px,2.6vw,23px);color:#ffe8ad;text-align:center;text-shadow:2px 2px #19101b;pointer-events:none;animation:milestone-in 1.5s ease-out forwards}
+@keyframes milestone-in{0%,100%{opacity:0}15%,85%{opacity:1}}
+.modal .choice-card[data-kind]{border-color:var(--kind-color);position:relative}
+.choice-card[data-kind=active]{--kind-color:var(--skill-active)}.choice-card[data-kind=passive]{--kind-color:var(--skill-passive)}.choice-card[data-kind=ally]{--kind-color:var(--skill-ally)}.choice-card[data-kind=stat]{--kind-color:#bfb4a3}
+.skill-ribbon{display:grid;place-items:center;width:min(150px,100%);min-height:27px;background-size:100% 100%;background-repeat:no-repeat;font-size:12px;color:#fff4d2;text-shadow:1px 1px #181218;line-height:1;padding:4px 12px;font-weight:700;flex-shrink:0}
+html[lang=ar] .hud{direction:rtl}html[lang=ar] .hud .key{font-family:Pixelify!important}html[lang=ar] .hud-clock{direction:ltr}
+html[lang=ar] .hud .bar label{direction:ltr;unicode-bidi:isolate}
+html[lang=ar] .hud .ally-name{font-size:10px}
+.hud .joystick{left:auto;right:auto;inset-inline-start:18px}
+@media(max-width:900px),(max-height:520px){
+ .hud .skill-dock{inset-inline-end:8px;bottom:12px;gap:10px}.hud .skill-dock .skills{gap:4px}
+ .hud .skill-btn,.hud .dash-btn,.hud .attack-btn{width:44px!important;height:44px!important}.hud .skills .key{font-size:9px!important;padding:1px 2px}.hud .dash-btn .key{font-size:7px!important}
+ .passive-slot{width:44px;height:44px}.innate-slot{width:26px;height:26px}.passive-row{gap:9px}.passive-slots,.innate-traits{gap:5px}.slot-level{font-size:9px;bottom:5px}
+ .hud .ally-panel{top:86px;inset-inline-start:10px;width:188px;height:57px;padding:7px 10px 17px;gap:5px}.ally-portrait{width:28px;height:28px}.ally-skill{width:28px;height:28px}.ally-skills{gap:4px}.ally-name{font-size:8px}
+ .hud .joystick{width:88px;inset-inline-start:8px;bottom:12px}.hud .xp-dock{left:34%;bottom:17px;width:145px}.hud .combat-status{left:34%;bottom:60px;max-width:145px}
+ html[lang=ar] .hud .xp-dock,html[lang=ar] .hud .combat-status{left:66%}
+ .hud-top{grid-template-columns:160px 1fr auto!important;gap:6px!important}.hud-clock{position:static;font-size:18px;padding:4px 6px}.hud-currency .hud-counter{display:flex!important}.hud-currency .hud-counter>span{display:flex!important}.hud-counter small{display:none}
+ .modal .skill-ribbon{min-height:24px;font-size:11px}
+}
+@media(max-width:540px) and (orientation:portrait){
+ .hud .skill-dock{bottom:10px;gap:13px}.hud .skill-dock .skills{display:grid;grid-template-columns:repeat(3,48px);gap:6px}.hud .skill-btn,.hud .dash-btn,.hud .attack-btn{width:48px!important;height:48px!important}
+ .hud-top{grid-template-columns:140px 1fr!important;gap:5px!important}.hud-clock{position:absolute;top:65px;inset-inline-end:0;font-size:17px}.hud-currency{justify-self:end}.hud-counter b{font-size:13px}.hud-counter>.interface-icon{width:13px;height:13px}.hud-currency{gap:4px;padding:3px}.pause-btn{min-width:29px;width:29px;height:29px;padding:5px}
+ .hud .ally-panel{top:98px;inset-inline-start:8px;width:186px}.hud .joystick{width:88px}
+ .hud .xp-dock,html[lang=ar] .hud .xp-dock{bottom:177px;left:50%;width:144px}.hud .combat-status,html[lang=ar] .hud .combat-status{bottom:220px;left:50%;max-width:230px}
+ .modal .choice-card[data-kind]{grid-template-columns:44px minmax(0,1fr);grid-template-rows:auto auto auto;gap:3px 8px}.modal .choice-card[data-kind] .card-icon{grid-row:1/4}.modal .choice-card[data-kind] .skill-ribbon{grid-column:2;justify-self:start;width:115px;min-height:23px}.modal .choice-card[data-kind] h3,.modal .choice-card[data-kind] p{grid-column:2}.modal .choice-card[data-kind] h3{font-size:16px}.modal .choice-card[data-kind] p{font-size:12px}
+ .milestone-banner{height:80px;padding:15px 32px;font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.slot-unlock-burst,.milestone-banner,.hud .skill-btn.ready{animation:none}.slot-unlock-burst{opacity:.6}}

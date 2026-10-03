@@ -122,9 +122,9 @@ export class SupportSystem {
   updateDamageOverTime(this.scene,enemy,dt);
  }
  chooseClass(done){
-  const s=this.scene;s.hud.showChoice('Choose Your Support',Object.values(SUPPORTS),card=>{this.summon(card.id);this.chooseInitial(done);},'One support per run. Choose 3 skills; they activate automatically.');
+  const s=this.scene;s.hud.showChoice('Choose Your Support',Object.values(SUPPORTS).map(ally=>({...ally,kind:'ally'})),card=>{this.summon(card.id);this.chooseInitial(done);},'One support per run. Choose 3 skills; they activate automatically.');
  }
- choices(){const a=this.scene.companion;return [...SUPPORTS[a.id].skills].filter(k=>!a.skills.some(o=>o.id===k.id)).sort(()=>Math.random()-.5).slice(0,3).map(k=>({...k,meta:'New support skill'}));}
+ choices(){const a=this.scene.companion;return [...SUPPORTS[a.id].skills].filter(k=>!a.skills.some(o=>o.id===k.id)).sort(()=>Math.random()-.5).slice(0,3).map(k=>({...k,kind:'ally',meta:'New support skill'}));}
  chooseInitial(done){
   const s=this.scene,a=s.companion;
   if(a.skills.length>=3){done();return;}
@@ -133,7 +133,7 @@ export class SupportSystem {
  offerChange(done,cards=this.choices()){
   const s=this.scene,a=s.companion;
   s.hud.showChoice('Support Skills',cards,card=>{
-   s.hud.showChoice('Choose a skill to replace',a.skills,(_,index)=>{this.equip(card,index);done();},'Support skills level up automatically with your hero.',{label:'Cancel',action:()=>this.offerChange(done,cards)});
+   s.hud.showChoice('Choose a skill to replace',a.skills.map(skill=>({...skill,kind:'ally'})),(_,index)=>{this.equip(card,index);done();},'Support skills level up automatically with your hero.',{label:'Cancel',action:()=>this.offerChange(done,cards)});
   },'Support skills level up automatically with your hero.',{label:'Keep current skills',action:done});
  }
 }

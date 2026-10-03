@@ -117,6 +117,7 @@ export class GameScene extends Phaser.Scene {
     });
     this.hud.setHero(hero);
     this.hud.setSkills(this.skillSlots, slotCount('active', this.loadoutLevel));
+    this.refreshPassiveHud();
     this.hud.toast(`${map.name} · ${mode.name}`);
     this.audio.music(map.music);
     this.events.once('shutdown', () => this.cleanup());
@@ -409,7 +410,14 @@ export class GameScene extends Phaser.Scene {
 
   updateHud() {
     this.hud.setStats({ ...this.stats, elapsed: this.elapsed,stamina:1-this.dash.cooldown/3.1 });
+    this.refreshPassiveHud();
+    this.hud.setAlly?.(this.companion);
     if (this.activeBoss?.active) this.hud.setBoss(this.activeBoss.getData('displayName'), this.activeBoss.getData('hp') / this.activeBoss.getData('maxHp'));
+  }
+
+  refreshPassiveHud() {
+    const slots=(this.passiveSlots||[]).map(skill=>({...skill,hudState:this.passives?.equipped.get(skill.id)?.state.hudState||skill.hudState}));
+    this.hud.setPassives?.(slots,slotCount('passive',this.loadoutLevel||1));
   }
 
   autoAttack() {
@@ -905,6 +913,7 @@ export class GameScene extends Phaser.Scene {
     this.pendingLevelUps -= 1;
     this.loadoutLevel=earnedLevel;
     this.hud.setSkills(this.skillSlots,slotCount('active',earnedLevel));
+    this.refreshPassiveHud();
     this.pauseForSelection();
     this.audio.sfx('level');
     const cards = this.getSkillChoices(false,earnedLevel);
@@ -922,6 +931,8 @@ export class GameScene extends Phaser.Scene {
     const kind=earnedLevel===10?'passive':earnedLevel===20?'active':null;
     if(!kind||this.completedSkillMilestones.has(earnedLevel)){onDone();return;}
     this.completedSkillMilestones.add(earnedLevel);
+    this.hud.showUnlock?.(kind);
+    this.audio.sfx('click'); // Existing placeholder; dedicated unlock sound arrives in step 18.
     const cards=this.getMilestoneChoices(kind,earnedLevel);
     if(!cards.length){
       // Hero-only passives arrive in later conversion steps; do not invent placeholder skills.
@@ -944,7 +955,7 @@ export class GameScene extends Phaser.Scene {
     if(!this.companion||this.pausedForChoice||this.ended)return;
     this.pauseForSelection();
     // Review the active loadout; changes are earned at level-up, not free rerolls.
-    this.hud.showChoice('Support Loadout',this.companion.skills.map(k=>({...k,name:t('{name} · Lv {n}',{name:t(k.name),n:k.level})})),()=>this.finishSelection(),'Support skills level up automatically with your hero.',{label:'Resume',action:()=>this.finishSelection()});
+    this.hud.showChoice('Support Loadout',this.companion.skills.map(k=>({...k,kind:'ally',name:t('{name} · Lv {n}',{name:t(k.name),n:k.level})})),()=>this.finishSelection(),'Support skills level up automatically with your hero.',{label:'Resume',action:()=>this.finishSelection()});
   }
 
   getSkillChoices(bossReward,heroLevel=this.stats.level) {
@@ -974,7 +985,7 @@ export class GameScene extends Phaser.Scene {
           slots[slotIndex]={...pool.find(skill=>skill.id===card.id)||card,kind,level:1,remaining:0};
           if(kind==='passive')this.passives.equip(slots[slotIndex],1);
         }
-        this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));onDone();
+        this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));this.refreshPassiveHud();onDone();
       },`The new ${kind} skill starts at level 1.`,{label:'Cancel',action:onCancel});return;
     }
     if (card.choiceType === 'new-active'||card.choiceType==='new-passive') {
@@ -991,6 +1002,7 @@ export class GameScene extends Phaser.Scene {
       this.applyModifier(card);
     }
     this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));
+    this.refreshPassiveHud();
     onDone();
   }
 

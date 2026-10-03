@@ -29,7 +29,7 @@ try{
   await state(()=>window.__SANGRE_Y_JADE__.showTitle());
  }
  await page.setViewportSize({width:1280,height:720});await page.selectOption('[data-language]','en');await run();
- check(await page.locator('.skill-btn').count()===4,'Four hero active slots');
+ check(await page.locator('[data-skill]').count()===4,'Four reserved hero active slots');
  await state(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');s.skillSlots=s.heroData.skills.slice(0,4).map(k=>({...k,level:1,remaining:0}));s.hud.setSkills(s.skillSlots);s.stats.level=4;s.pendingLevelUps=1;s.showLevelChoice();});
  const draft=await state(()=>window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').getSkillChoices(false));
  check(draft.filter(c=>c.choiceType==='skill-upgrade').length===2&&draft.filter(c=>c.choiceType==='replace-skill').length===1,'Full loadout draft: two upgrades and one replacement');

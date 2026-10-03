@@ -103,11 +103,13 @@ function choiceHarness(level, pendingLevels, ownedCount = 0) {
   };
   const screens = [];
   const toasts = [];
+  const unlocks = [];
   scene.hud = {
     move: { x: 0, y: 0 }, toast: (text) => toasts.push(text), setSkills() {}, setCooldown() {},
+    showUnlock: (kind) => unlocks.push(kind),
     showChoice(title, cards, choose) { screens.push({ title, cards, choose }); },
   };
-  return { scene, screens, toasts };
+  return { scene, screens, toasts, unlocks };
 }
 
 function chooseFirst(scene, screen) {
@@ -116,7 +118,7 @@ function chooseFirst(scene, screen) {
 }
 
 test('level jump 9→11 resolves level 10 normally, consumes its passive milestone once, then resolves 11', () => {
-  const { scene, screens, toasts } = choiceHarness(11, 2, 0);
+  const { scene, screens, toasts, unlocks } = choiceHarness(11, 2, 0);
   scene.showLevelChoice();
   assert.equal(screens[0].title, 'Level 10');
   chooseFirst(scene, screens[0]);
@@ -128,11 +130,12 @@ test('level jump 9→11 resolves level 10 normally, consumes its passive milesto
   chooseFirst(scene, screens[1]);
   assert.equal(screens.filter(({ title }) => title === 'Level 10').length, 1);
   assert.equal(scene.completedSkillMilestones.size, 1);
+  assert.deepEqual(unlocks,['passive']);
   assert.equal(scene.pausedForChoice, false);
 });
 
 test('level jump 19→21 resolves the level-20 normal pick and one extra active milestone pick', () => {
-  const { scene, screens } = choiceHarness(21, 2, 3);
+  const { scene, screens, unlocks } = choiceHarness(21, 2, 3);
   scene.showLevelChoice();
   assert.equal(screens[0].title, 'Level 20');
   chooseFirst(scene, screens[0]);
@@ -145,6 +148,7 @@ test('level jump 19→21 resolves the level-20 normal pick and one extra active 
   chooseFirst(scene, screens[2]);
   assert.equal(screens.filter(({ title }) => title === 'Fourth Active Slot Unlocked').length, 1);
   assert.equal(scene.completedSkillMilestones.size, 1);
+  assert.deepEqual(unlocks,['active']);
   assert.equal(scene.pausedForChoice, false);
 });
 

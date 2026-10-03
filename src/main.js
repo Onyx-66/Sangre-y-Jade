@@ -12,6 +12,7 @@ import { portraitMarkup, artUrl, iconMarkup } from './art/uiArt.js';
 import './pixel.css';
 import './v04.css';
 import './v05.css';
+import './skills-hud.css';
 import { t, setLanguage, translateDOM, languageMarkup } from './i18n/index.js';
 
 const $ = (selector, root = document) => root.querySelector(selector);

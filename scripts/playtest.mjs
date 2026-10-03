@@ -56,7 +56,7 @@ try {
   await page.waitForTimeout(1000);
   check(await page.evaluate(()=>window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').textures.exists('hero-ixchel-frame-3')),'Hero uses individually loaded animation frames');
   check(await page.locator('.mana').isVisible(), 'Shaman mana bar is visible');
-  check(await page.locator('.skill-btn').count() === 4, 'Four active-skill buttons render');
+  check(await page.locator('[data-skill]').count() === 4, 'Four reserved active slots render');
 
   const before = await page.evaluate(() => {
     const scene = window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');
@@ -78,11 +78,11 @@ try {
     scene.checkLevelUp();
   });
   await page.getByRole('heading', { name: 'Level 2' }).waitFor();
-  const skillChoice = page.locator('.choice-card').filter({ hasText: 'New skill' }).first();
+  const skillChoice = page.locator('.choice-card[data-kind="active"]').filter({ hasText: 'New active skill' }).first();
   check(await skillChoice.count() === 1, 'Level-up guarantees a new skill while a slot is empty');
   await skillChoice.click();
   await page.waitForTimeout(150);
-  check(!(await page.locator('.skill-btn').first().getAttribute('class')).includes('empty'), 'Chosen skill enters the first slot');
+  check(!(await page.locator('[data-skill="0"]').getAttribute('class')).includes('empty'), 'Chosen skill enters the first slot');
   await page.keyboard.press('KeyQ');
   await page.waitForTimeout(80);
   const cooldown = await page.evaluate(() => window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').skillSlots[0].remaining);
