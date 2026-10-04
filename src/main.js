@@ -14,6 +14,9 @@ import './v04.css';
 import './v05.css';
 import './skills-hud.css';
 import './v06.css';
+import './ui/settings.css';
+import { renderSettingsPanel } from './ui/SettingsPanel.js';
+import { applySettingChange } from './systems/RuntimeSettings.js';
 import { t, setLanguage, translateDOM, languageMarkup } from './i18n/index.js';
 
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -136,7 +139,11 @@ class SangreYJadeApp {
       settings: { ...this.save.data.settings },
       audio: this.audio,
       uiRoot: this.uiRoot,
-      onEnd: (summary) => this.showSummary(summary),
+      onSettingsChange: (key,value) => applySettingChange({save:this.save,audio:this.audio,scene},key,value),
+      onEnd: (summary) => {
+        if(summary.abandoned){this.save.recordRun(summary);this.showTitle();}
+        else this.showSummary(summary);
+      },
     });
     this.game = new Phaser.Game({
       type: Phaser.AUTO,
@@ -148,7 +155,7 @@ class SangreYJadeApp {
       antialias: false,
       roundPixels: true,
       render: { powerPreference: 'high-performance', antialias: false, pixelArt: true },
-      fps: { target: this.save.data.settings.fps, forceSetTimeOut: this.save.data.settings.fps === 30 },
+      fps: { target: this.save.data.settings.fps, limit: this.save.data.settings.fps, forceSetTimeOut: this.save.data.settings.fps === 30 },
       scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH, width: 1280, height: 720 },
       physics: { default: 'arcade', arcade: { gravity: { x: 0, y: 0 }, debug: false } },
       scene: [scene],
@@ -212,38 +219,11 @@ class SangreYJadeApp {
 
   showSettings() {
     this.currentPage='showSettings';
-    const settings = this.save.data.settings;
-    const screen = this.setScreen(`
-      <section class="panel"><h2>Settings</h2><p class="panel-subtitle">Optimized for both touch and keyboard. Changes save immediately.</p>
-        <div class="settings-grid">
-          <label for="attack-mode">Attack mode</label><select id="attack-mode"><option value="auto" ${settings.attackMode!=='manual'?'selected':''}>Auto-attack</option><option value="manual" ${settings.attackMode==='manual'?'selected':''}>Manual attack</option></select>
-          <label for="master">Master volume</label><input id="master" type="range" min="0" max="1" step=".01" value="${settings.master}">
-          <label for="music">Music volume</label><input id="music" type="range" min="0" max="1" step=".01" value="${settings.music}">
-          <label for="sfx">Sound effects</label><input id="sfx" type="range" min="0" max="1" step=".01" value="${settings.sfx}">
-          <label for="fps">Frame-rate cap</label><select id="fps"><option value="60" ${settings.fps === 60 ? 'selected' : ''}>60 FPS</option><option value="30" ${settings.fps === 30 ? 'selected' : ''}>30 FPS · Battery saver</option></select>
-          <label for="particles">Effect density</label><select id="particles"><option value="high" ${settings.particles === 'high' ? 'selected' : ''}>High</option><option value="low" ${settings.particles === 'low' ? 'selected' : ''}>Low</option></select>
-          <label for="aim">Aim mode</label><select id="aim"><option value="auto" ${settings.autoAim ? 'selected' : ''}>Auto-aim nearest target</option><option value="direction" ${!settings.autoAim ? 'selected' : ''}>Aim in movement direction</option></select>
-          <label>Screen shake</label><button class="toggle ${settings.screenShake ? 'on' : ''}" data-toggle="screenShake" aria-pressed="${settings.screenShake}"></button>
-          <label>Damage numbers</label><button class="toggle ${settings.damageNumbers ? 'on' : ''}" data-toggle="damageNumbers" aria-pressed="${settings.damageNumbers}"></button>
-          <label>Reduced motion</label><button class="toggle ${settings.reducedMotion ? 'on' : ''}" data-toggle="reducedMotion" aria-pressed="${settings.reducedMotion}"></button>
-        </div>
-        <div class="premium-note"><b>Controls:</b> Move with WASD/arrow keys or the left joystick. Cast with Q/E/R/T. Dash with Space. In manual mode, hold F, click the arena, or hold Attack. Esc pauses.</div>
-        <div class="panel-actions"><button class="btn primary" data-back>Done</button></div>
-      </section>`);
-    ['master', 'music', 'sfx'].forEach((key) => $(`#${key}`, screen).addEventListener('input', (event) => {
-      this.save.setSetting(key, Number(event.target.value)); this.audio.applySettings();
-    }));
-    $('#fps', screen).addEventListener('change', (event) => this.save.setSetting('fps', Number(event.target.value)));
-    $('#particles', screen).addEventListener('change', (event) => this.save.setSetting('particles', event.target.value));
-    $('#aim', screen).addEventListener('change', (event) => this.save.setSetting('autoAim', event.target.value === 'auto'));
-    $('#attack-mode',screen).addEventListener('change',event=>this.save.setSetting('attackMode',event.target.value));
-    $$('[data-toggle]', screen).forEach((toggle) => toggle.addEventListener('click', () => {
-      const key = toggle.dataset.toggle; const value = !this.save.data.settings[key];
-      this.save.setSetting(key, value); toggle.classList.toggle('on', value); toggle.setAttribute('aria-pressed', String(value));
-      if (key === 'reducedMotion') document.documentElement.classList.toggle('reduce-motion', value);
-      this.clickSound();
-    }));
-    $('[data-back]', screen).addEventListener('click', () => { this.clickSound(); this.showTitle(); });
+    const screen=this.setScreen('<section class="panel settings-panel"></section>');
+    renderSettingsPanel($('.settings-panel',screen),this.save.data.settings,{
+      onChange:(key,value)=>applySettingChange({save:this.save,audio:this.audio},key,value),
+      onClose:()=>this.showTitle(),onSound:()=>this.clickSound(),
+    });
   }
 
   showStore() {
@@ -310,6 +290,7 @@ class SangreYJadeApp {
 }
 
 const app = new SangreYJadeApp();
-// Test access is available in development and in the explicit FX diagnostic mode.
-if (import.meta.env.DEV || new URLSearchParams(location.search).get('fxdebug') === '1') window.__SANGRE_Y_JADE__ = app;
+// The existing native Android Back/audio bridge also needs this in packaged builds.
+// Ordinary web releases still expose it only in the explicit FX diagnostic mode.
+if (import.meta.env.DEV || location.hostname === 'appassets.androidplatform.net' || new URLSearchParams(location.search).get('fxdebug') === '1') window.__SANGRE_Y_JADE__ = app;
 

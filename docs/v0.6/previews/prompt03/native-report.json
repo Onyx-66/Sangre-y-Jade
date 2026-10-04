@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "label": "production native bridge is available without a debug query",
+      "passed": true
+    },
+    {
+      "label": "production Settings opens over a paused run",
+      "passed": true
+    },
+    {
+      "label": "actual native Back closes production Settings without resuming",
+      "passed": true
+    },
+    {
+      "label": "native Back from production pause resumes",
+      "passed": true
+    },
+    {
+      "label": "ordinary production web page remains debug-gated",
+      "passed": true
+    },
+    {
+      "label": "no browser/HTTP errors: ",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "layouts": []
+}

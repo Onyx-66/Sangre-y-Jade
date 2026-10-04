@@ -137,6 +137,7 @@ export class GameScene extends Phaser.Scene {
       pause: () => this.togglePause(),
       support:()=>this.showSupportLoadout(),
       uiSound:name=>this.skillAudio.ui(name),
+      settingsSound:()=>{this.audio.unlock?.();this.audio.sfx('click',.04);},
       attack:()=>{if(this.settings.attackMode==='manual' && this.autoTimer<=0 && !this.pausedForChoice)this.autoAttack();},
     });
     this.hud.setHero(hero);
@@ -1230,22 +1231,31 @@ export class GameScene extends Phaser.Scene {
   }
 
   togglePause() {
-    if (this.ended || this.pausedForChoice) return;
-    this.pausedForChoice = true;
-    this.skillAudio?.pause?.();
-    this.physics.pause();
-    this.tweens.pauseAll();
-    this.time.paused=true;
+    if(this.ended)return;
+    // Escape and the native Android Back hook route to the current pause panel.
+    if(this.pauseSession){this.pauseSession.back();return;}
+    if(this.pausedForChoice)return;
+    this.pauseForSelection();
+    const session={overlay:null,back:null};this.pauseSession=session;
+    const current=()=>!this.ended&&this.pauseSession===session;
+    const close=()=>{session.overlay?.remove();session.overlay=null;};
     const resume=() => {
-      if(this.ended)return;
+      if(!current())return;
+      close();this.pauseSession=null;
       this.pausedForChoice = false;
       this.physics.resume();
       this.tweens.resumeAll();
       this.time.paused=false;
       this.skillAudio?.resume?.();
     };
-    const showPause=()=>{if(!this.ended)this.hud.showPause(resume,()=>this.finishRun(false,true),
-      ()=>this.hud.showSkills(this.getSkillLoadout(),showPause));};
+    const navigate=(render,back)=>{
+      if(!current())return;
+      close();session.back=back;session.overlay=render();
+    };
+    const showPause=()=>navigate(()=>this.hud.showPause(resume,()=>{if(current()){close();this.pauseSession=null;this.finishRun(false,true);}},
+      ()=>navigate(()=>this.hud.showSkills(this.getSkillLoadout(),showPause),showPause),
+      ()=>navigate(()=>this.hud.showSettings((key,value)=>{if(current())this.options.onSettingsChange?.(key,value);},showPause),showPause),
+      ()=>navigate(()=>this.hud.showHelp(showPause),showPause)),resume);
     showPause();
   }
 
@@ -1280,6 +1290,7 @@ export class GameScene extends Phaser.Scene {
     if (this.cleaned) return;
     this.cleaned = true;
     this.ended = true; // Destroying a ward/movement effect must not deal shutdown damage.
+    this.pauseSession?.overlay?.remove();this.pauseSession=null;
     window.removeEventListener('pointerup',this.releaseAttack);
     window.removeEventListener('blur',this.releaseAttack);
     this.passives?.destroy();

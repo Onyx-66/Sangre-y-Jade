@@ -13,4 +13,7 @@ export const v06Messages = [
  ['Equipped skills and innate traits.','Compétences équipées et traits innés.','المهارات المجهزة والسمات الفطرية.'], // TODO native review
  ['Auto-attack is on. Basic attacks fire automatically.','Attaque automatique activée. Les attaques de base partent seules.','الهجوم التلقائي مفعل. تنطلق الهجمات الأساسية تلقائيا.'], // TODO native review
  ['Manual attack is on. Hold F or Attack to fire.','Attaque manuelle activée. Maintenez F ou Attaquer.','الهجوم اليدوي مفعل. اضغط مطولا على F أو زر الهجوم.'], // TODO native review
+ ['On','Activé','مفعل'], // TODO native review
+ ['Off','Désactivé','متوقف'], // TODO native review
+ ['Quit to Menu','Quitter vers le menu','العودة إلى القائمة'], // TODO native review
 ];

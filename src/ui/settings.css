@@ -1,0 +1,42 @@
+/* Shared settings content; the close action never scrolls with the controls. */
+.settings-panel{display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:10px;min-height:0}
+.screen>.settings-panel{width:min(1000px,100%);min-width:0;height:min(680px,calc(100dvh - 72px))}
+.modal.settings-panel{height:min(680px,calc(100dvh - 20px))}
+.settings-panel .settings-content{min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;touch-action:pan-y;padding:2px 4px 8px}
+.settings-panel .settings-grid{display:grid;grid-template-columns:1fr;gap:8px;max-width:680px;margin:6px auto 0;width:100%}
+.settings-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;min-height:44px}
+.settings-row label{min-width:0;text-align:start;overflow-wrap:anywhere}
+.settings-panel .panel-actions{position:static;margin:0;padding:0;background:none}
+.settings-panel .premium-note{margin:14px auto 0;max-width:680px;font-size:13px;line-height:1.4}
+.settings-panel input[type=range]{width:min(280px,40vw);direction:ltr}
+.settings-panel select{max-width:min(300px,45vw);min-width:0}
+.settings-toggle{appearance:none;display:flex;align-items:center;gap:8px;direction:ltr;isolation:isolate;flex-shrink:0;width:136px;height:44px;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
+.settings-toggle:focus-visible{outline:2px solid #ffcf4a;outline-offset:2px}
+.settings-toggle .toggle-track{position:relative;display:block;flex:0 0 60px;width:60px;height:32px;border:2px solid #a6a0b0;border-radius:16px;background:#625f6b;box-sizing:border-box;direction:ltr}
+.settings-toggle .toggle-knob{position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff0cf;box-shadow:0 1px 2px #0006;transition:left .16s ease}
+.settings-toggle .toggle-symbol{position:absolute;top:4px;right:6px;width:16px;height:20px;line-height:20px;font:700 17px/20px system-ui,sans-serif;color:white;text-align:center}
+.settings-toggle[data-state=on] .toggle-track{background:#168067;border-color:#64e5b2}
+.settings-toggle[data-state=on] .toggle-knob{left:31px}
+.settings-toggle[data-state=on] .toggle-symbol{left:6px;right:auto}
+.settings-toggle .toggle-word{display:block;flex:0 0 68px;width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:start;font-size:13px;line-height:1.3}
+.pause-menu .modal{width:min(480px,calc(100vw - 20px));grid-template-rows:auto auto auto;gap:8px}
+.pause-actions{display:grid;gap:6px;width:100%}
+.pause-first-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pause-actions .btn{width:100%;min-width:0;min-height:44px;padding:7px 12px;font-size:16px;line-height:1.2}
+.pause-actions .btn.danger{color:#fff1ce}
+.pause-help .modal{grid-template-rows:auto minmax(0,1fr) auto}
+.pause-help .help-content{min-height:0;overflow-y:auto;touch-action:pan-y}
+.pause-help .panel-actions{position:static;margin:0;padding:0;background:none}
+@media(max-height:520px){
+ .settings-panel{gap:6px;padding:12px}
+ .settings-panel h2{font-size:24px;line-height:1.2}
+ .settings-panel>.panel-subtitle{margin:0;font-size:11px;line-height:1.3!important}
+ .settings-row label,.settings-panel select{font-size:13px}
+ .settings-panel .panel-actions .btn{min-height:40px;padding:6px 18px;font-size:14px}
+ .pause-menu .modal{padding:10px;gap:6px}
+ .pause-menu .modal h2{font-size:24px;line-height:1.2}
+ .pause-menu .modal>.panel-subtitle{font-size:11px}
+ .pause-actions .btn{font-size:14px}
+}
+.reduce-motion .settings-toggle .toggle-knob{transition:none}
+@media(prefers-reduced-motion:reduce){.settings-toggle .toggle-knob{transition:none}}

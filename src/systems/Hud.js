@@ -5,6 +5,7 @@ import { SUPPORTS } from '../data/supports.js';
 import { skillDescription } from '../data/heroes.js';
 import { SLOT_RULES } from './SkillDraft.js';
 import { passiveStateMarkup, passiveStateText, levelPips, cardKind, escapeHtml, INNATE_HUD } from './PassiveState.js';
+import { renderSettingsPanel, controlsMarkup } from '../ui/SettingsPanel.js';
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
 export class Hud {
@@ -354,22 +355,45 @@ export class Hud {
       {label:'Back',id:'skills-back',action:onBack},{className:'skills-readonly',readOnly:true});
   }
 
-  showPause(onResume, onExit, onSkills) {
+  showPause(onResume, onExit, onSkills, onSettings, onHelp) {
     if (this.el.querySelector('.modal-backdrop')) return;
     const overlay = document.createElement('div');
-    overlay.className = 'modal-backdrop';
+    overlay.className = 'modal-backdrop pause-menu';
+    overlay.dir=getLanguage()==='ar'?'rtl':'ltr';
     overlay.innerHTML = `
       <section class="modal" role="dialog" aria-modal="true">
         <h2>Paused</h2>
         <p class="panel-subtitle">The game is paused.</p>
-        <div class="panel-actions"><button class="btn primary" data-resume>Resume</button>${onSkills?'<button class="btn ghost" data-skills>Skills</button>':''}<button class="btn danger" data-exit>End Run</button></div>
+        <div class="pause-actions"><div class="pause-first-row"><button class="btn primary" data-resume>Resume</button><button class="btn ghost" data-settings>Settings</button></div>${onSkills?'<button class="btn ghost" data-skills>Skills</button>':''}<button class="btn ghost" data-help>How to Play</button><button class="btn danger" data-exit>Quit to Menu</button></div>
       </section>`;
     overlay.querySelector('[data-resume]').addEventListener('click', () => { overlay.remove(); onResume(); });
     overlay.querySelector('[data-exit]').addEventListener('click', () => { overlay.remove(); onExit(); });
     overlay.querySelector('[data-skills]')?.addEventListener('click',()=>{overlay.remove();onSkills();});
+    overlay.querySelector('[data-settings]').addEventListener('click',()=>{overlay.remove();onSettings?.();});
+    overlay.querySelector('[data-help]').addEventListener('click',()=>{overlay.remove();onHelp?.();});
     this.el.append(overlay);
     overlay.querySelector('[data-resume]').focus();
     translateDOM(overlay);
+    return overlay;
+  }
+
+  showSettings(onChange,onBack) {
+    const overlay=document.createElement('div');overlay.className='modal-backdrop pause-settings';
+    overlay.innerHTML='<section class="modal settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title"></section>';
+    renderSettingsPanel(overlay.querySelector('.settings-panel'),this.settings,{
+      onChange,onClose:()=>{overlay.remove();onBack();},closeLabel:'Back',onSound:()=>this.callbacks.settingsSound?.(),
+    });
+    this.el.append(overlay);overlay.querySelector('[data-back]').focus();
+    return overlay;
+  }
+
+  showHelp(onBack) {
+    const overlay=document.createElement('div');overlay.className='modal-backdrop pause-help';
+    overlay.dir=getLanguage()==='ar'?'rtl':'ltr';
+    overlay.innerHTML=`<section class="modal" role="dialog" aria-modal="true"><h2>${t('How to Play')}</h2><div class="help-content">${controlsMarkup()}</div><div class="panel-actions"><button class="btn primary" data-back>${t('Back')}</button></div></section>`;
+    overlay.querySelector('[data-back]').addEventListener('click',()=>{overlay.remove();onBack();});
+    this.el.append(overlay);overlay.querySelector('[data-back]').focus();
+    return overlay;
   }
 
   destroy() {

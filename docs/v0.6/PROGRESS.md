@@ -4,6 +4,7 @@
 
 - [x] 01 — Replacing skills
 - [x] 02 — HUD clarity and fixed EN/AR positions
+- [x] 03 — Shared toggles and paused settings
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -71,3 +72,37 @@ The matrix covers EN/AR at 568×320, 800×360 and 1280×720, plus 320×568 portr
 - `V06_SPEC.md` and `references/ref-markup-hud.jpeg` are absent; the seven explicit Prompt 02 requirements are the available specification. Conservative choices are recorded in `DECISIONS.md`.
 - The unrelated unfinished localization audit still flags French `MANA` and `Cacao`; no new suite failures were introduced. Earlier uncommitted localization and asset changes are preserved and excluded from this commit.
 - New FR/AR tooltips are marked `TODO native review`. Mobile checks use desktop Chromium at phone viewport sizes, not physical Android devices.
+
+## Prompt 03 — Shared toggles and paused settings — 2026-10-04
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-step03`.
+
+### Changed
+
+- Added one accessible, reusable switch with fixed 136×44 control / 60×32 track geometry, a contained knob, green check / grey cross and localized On/Off text. The surrounding settings row follows RTL; the internal control geometry never mirrors. All three existing toggles use it, including keyboard activation while Phaser captures Space.
+- Extracted the existing ten settings controls and bindings into one renderer used by main-menu settings and the paused overlay. Changes persist and update the current run, audio gains, attack indicator, effect budgets, reduced-motion class and FPS limit immediately without recreating or resuming the game.
+- Placed Resume and Settings side by side, with Skills, How to Play and Quit to Menu below. Settings/Skills/help Back returns to pause; Resume returns to the same run. Quit records the abandoned run and opens the menu. Kept the existing settings content and How to Play controls text; no new HUD tab or broader restyling.
+- Routed Escape and the actual native Android Back hook through the active pause subpanel. Enabled the existing native bridge on the private Android app-assets host in production; ordinary web releases remain debug-gated. Guarded ended runs and preserved level-up choices.
+- Browser checks exposed a portrait panel-width overflow; constrained it to the available parent width. Visual review also caught the inherited dark Quit label on its red button; corrected only that label contrast.
+- No game images, audio files, dependencies, branding, save-format or version-number changes. Earlier uncommitted localization/artwork remains excluded.
+
+### Test results
+
+| Command | Result |
+| --- | --- |
+| Initial three-test reproduction | 3 expected failures before implementation |
+| `node --test tests/v06-settings.test.js tests/v06-replacement.test.js tests/v06-hud.test.js tests/skill-hud.test.js` | 38/38 pass, including 12 new settings/navigation tests |
+| `npm run test:settings` | 211 browser checks; 18 settings screenshots and 6 pause/overlay screenshots; EN/FR/AR, both switch states, phone landscape/portrait and desktop |
+| `npm run test:settings -- --native` | 6 checks pass using locally served production files at the private Android origin; actual native Back source, no debug query; ordinary web exposure stays gated |
+| `SYJ_HUD_OUTPUT=docs/v0.6/previews/prompt03/hud-regression npm run test:hud` (PowerShell environment assignment) | 497 checks; 32 layouts plus card screenshot; no regressions |
+| `npm run check` | 324/325 pass; the sole failure is the same pre-existing French `MANA`/`Cacao` audit; build skipped by the existing `&&` script |
+| `npm run build` | Pass, 257 modules, 18.12 s Vite; existing large-chunk warning |
+| `git diff --check` | Pass |
+
+Evidence: `previews/prompt03/report.json`, `native-report.json`, and `hud-regression/report.json`. Representative EN/FR/AR screenshots in both toggle states were visually inspected. Tests check exact knob containment and locale-invariant internal geometry, all ten live settings, paused player/timer/game identity, 30/60 FPS reconfiguration, Back/Resume/reopen behavior, read-only Skills/help and direct Quit to Menu.
+
+### Open issues
+
+- `V06_SPEC.md` and the specifically named toggle reference are absent; the explicit Prompt 03 requirements and supplied WhatsApp image were used. See `DECISIONS.md`.
+- The unrelated localization audit still flags legitimate French spellings `MANA` and `Cacao`; no new failures. FR/AR additions are marked for native review.
+- Native bridge behavior was verified in Chromium against the production build, not on a physical Android device. Prompt 04 arrived after these checks; seal this completed prompt in its own commit before its independent resize work.
