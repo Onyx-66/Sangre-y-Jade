@@ -1,10 +1,9 @@
-:root{--skill-active:#ffcf4a;--skill-passive:#3de0b0;--skill-ally:#8ec5ff;--skill-locked:#6b6478;--skill-innate:#c9c3d6}
 .hud .skill-dock{position:absolute;right:18px;bottom:18px;display:flex;flex-direction:column;gap:14px;pointer-events:none}
 .hud .skill-dock .skills{position:static;display:flex;gap:8px;direction:ltr;align-items:center;pointer-events:none}
 .hud .skill-btn,.hud .dash-btn{width:64px;height:64px;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent url('../public/assets/pixel/ui/slot-active-plate.png') center/100% 100% no-repeat;overflow:visible;pointer-events:auto;opacity:1;isolation:isolate}
 .hud .skill-btn .skill-icon{position:absolute;inset:11%;width:auto;height:auto;padding:0;z-index:-1;overflow:hidden;font-size:24px;color:var(--skill-active)}
 .hud .skill-btn .skill-icon .pixel-icon{width:100%;height:100%}
-.hud .skills .key{position:absolute;inset:2px auto auto 3px;font:700 10px/1 Pixelify!important;background:#201922e8;color:#ffe7aa;padding:2px 3px;border:1px solid #9e824f;border-radius:0;z-index:5;display:block}
+.hud .skills .key{position:absolute;inset:2px auto auto 3px;font:400 10px/1 var(--font-display)!important;background:#201922e8;color:#ffe7aa;padding:2px 3px;border:1px solid #9e824f;border-radius:0;z-index:5;display:block}
 .hud .skill-btn.empty:not(.locked){filter:saturate(.5);opacity:.8}
 .hud .skill-btn.locked{background-image:url('../public/assets/pixel/ui/slot-locked-plate.png');filter:none;cursor:default}
 .hud .skill-btn.locked .skill-icon,.hud .skill-btn.locked .cooldown{display:none}
@@ -34,11 +33,11 @@
 .level-pips i.filled,.passive-stacks i.filled{background:var(--skill-passive);box-shadow:0 0 2px #3de0b055}
 .passive-stacks{bottom:10px;z-index:3;gap:1px}.passive-stacks i{width:5px;height:5px}
 .passive-counter{position:absolute;bottom:9px;left:17%;right:17%;height:3px;background:#090e10;border:1px solid #183f32;z-index:3}.passive-counter>span{display:block;height:100%;background:var(--skill-passive)}
-.passive-counter-label{position:absolute;bottom:13px;font:700 10px/1 Pixelify!important;color:#fff;text-shadow:1px 1px #000;z-index:3}
+.passive-counter-label{position:absolute;bottom:13px;font:400 10px/1 var(--font-display)!important;color:#fff;text-shadow:1px 1px #000;z-index:3}
 .passive-timer,.ally-cooldown{position:absolute;inset:8%;border-radius:50%;background:conic-gradient(#101425cc 0deg var(--remaining,0deg),var(--skill-passive) var(--remaining,0deg) 360deg);mask:radial-gradient(circle,transparent 62%,#000 65%);pointer-events:none}
 .passive-timer.is-ready{filter:drop-shadow(0 0 3px var(--skill-passive))}
 .passive-slot:focus-visible,.innate-slot:focus-visible,.ally-skill:focus-visible{filter:drop-shadow(0 0 4px white)}
-.skill-tooltip{position:fixed;z-index:130;width:max-content;max-width:min(260px,calc(100vw - 12px));padding:8px 10px;background:#211823fa;border:1px solid var(--skill-passive);box-shadow:2px 3px #0008;font-size:12px;line-height:1.4;text-align:start;white-space:pre-line;pointer-events:none}
+.skill-tooltip{position:fixed;z-index:var(--z-tooltip);width:max-content;max-width:min(260px,calc(100vw - 12px));padding:8px 10px;background:#211823fa;border:1px solid var(--skill-passive);box-shadow:2px 3px #0008;font-size:12px;line-height:1.4;text-align:start;white-space:pre-line;pointer-events:none}
 .skill-tooltip[hidden]{display:none}
 .hud .ally-panel{position:absolute;top:105px;left:18px;width:224px;height:65px;background:url('../public/assets/pixel/ui/ally-panel-bg.png') center/100% 100% no-repeat;display:flex;align-items:center;gap:7px;padding:9px 12px 18px;pointer-events:auto;cursor:pointer}
 .hud .ally-panel.locked{padding:8px 12px;cursor:default}
@@ -54,20 +53,20 @@
 .ally-card-details{display:grid;gap:2px;width:100%;font-size:11px;line-height:1.2;color:#d2c4a6;text-align:center}.ally-card-details span{overflow-wrap:anywhere}
 .slot-unlock-burst{position:absolute;inset:-50%;width:200%;height:200%;z-index:20;pointer-events:none;animation:unlock-burst 1.5s ease-out forwards}
 @keyframes unlock-burst{0%{opacity:0;transform:scale(.3) rotate(-30deg)}20%{opacity:1}100%{opacity:0;transform:scale(1.3) rotate(30deg)}}
-.milestone-banner{position:absolute;top:32%;left:50%;transform:translateX(-50%);width:min(440px,94vw);height:110px;background:url('../public/assets/pixel/ui/milestone-banner.png') center/100% 100% no-repeat;display:grid;place-items:center;padding:20px 44px;z-index:120;font-size:clamp(13px,2.6vw,23px);color:#ffe8ad;text-align:center;text-shadow:2px 2px #19101b;pointer-events:none;animation:milestone-in 1.5s ease-out forwards}
+.milestone-banner{position:absolute;top:32%;left:50%;transform:translateX(-50%);width:min(440px,94vw);height:110px;background:url('../public/assets/pixel/ui/milestone-banner.png') center/100% 100% no-repeat;display:grid;place-items:center;padding:20px 44px;z-index:var(--z-milestone);font-size:clamp(13px,2.6vw,23px);color:#ffe8ad;text-align:center;text-shadow:2px 2px #19101b;pointer-events:none;animation:milestone-in 1.5s ease-out forwards}
 @keyframes milestone-in{0%,100%{opacity:0}15%,85%{opacity:1}}
 .modal .choice-card[data-kind]{border-color:var(--kind-color);position:relative}
-.choice-card[data-kind=active]{--kind-color:var(--skill-active)}.choice-card[data-kind=passive]{--kind-color:var(--skill-passive)}.choice-card[data-kind=ally]{--kind-color:var(--skill-ally)}.choice-card[data-kind=stat]{--kind-color:#bfb4a3}
+.choice-card[data-kind=active]{--kind-color:var(--skill-active)}.choice-card[data-kind=passive]{--kind-color:var(--skill-passive)}.choice-card[data-kind=ally]{--kind-color:var(--skill-ally)}.choice-card[data-kind=stat]{--kind-color:var(--color-stat)}
 .skill-ribbon{display:grid;place-items:center;width:min(150px,100%);min-height:27px;background-size:100% 100%;background-repeat:no-repeat;font-size:12px;color:#fff4d2;text-shadow:1px 1px #181218;line-height:1;padding:4px 12px;font-weight:700;flex-shrink:0}
 .hud{direction:ltr}.hud .key,.hud .bar,.hud .bar label,.hud .hud-clock,.hud .hud-counter b{direction:ltr;unicode-bidi:isolate}
-html[lang=ar] .hud .key{font-family:Pixelify!important}
+html[lang=ar] .hud .key{font-family:var(--font-display)!important}
 .hud .xp-dock .xp-heading{direction:ltr;height:15px;line-height:15px}
 .hud .joystick{left:18px;right:auto}
 .hud .hud-clock{width:96px;height:44px;line-height:1}
 .hud .boss-wrap{height:44px}.hud .boss-name{height:24px;line-height:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:clamp(11px,2vw,22px)}
-.hud .hud-currency{height:60px}.hud .hud-counter{width:70px;height:44px;cursor:help}.hud .hud-counter>span{width:36px;flex-shrink:0}.hud .hud-counter b{font-family:Pixelify!important;width:36px;height:22px;line-height:22px;font-size:min(20px,calc(56px / var(--digit-count,1)));text-align:center;white-space:nowrap}.hud .hud-counter small{height:12px;line-height:12px}
-.hud #auto-indicator{position:absolute;left:calc(50% - 35px);bottom:65px;transform:translateX(-50%);width:44px;height:44px;padding:10px;border:1px solid #bda36c;border-radius:2px;background:#211a20e8;color:#ffcf4a;pointer-events:auto;cursor:help}
-.hud #auto-indicator .interface-icon{width:100%;height:100%}.hud #auto-indicator[data-mode=manual]{color:#c9c3d6;border-color:#6b6478}
+.hud .hud-currency{height:60px}.hud .hud-counter{width:70px;height:44px;cursor:help}.hud .hud-counter>span{width:36px;flex-shrink:0}.hud .hud-counter b{font-family:var(--font-display)!important;width:36px;height:22px;line-height:22px;font-size:min(20px,calc(56px / var(--digit-count,1)));text-align:center;white-space:nowrap}.hud .hud-counter small{height:12px;line-height:12px}
+.hud #auto-indicator{position:absolute;left:calc(50% - 35px);bottom:65px;transform:translateX(-50%);width:44px;height:44px;padding:10px;border:1px solid #bda36c;border-radius:2px;background:#211a20e8;color:var(--color-gold);pointer-events:auto;cursor:help}
+.hud #auto-indicator .interface-icon{width:100%;height:100%}.hud #auto-indicator[data-mode=manual]{color:var(--color-innate);border-color:var(--color-locked)}
 @media(max-width:900px),(max-height:520px){
  .hud .skill-dock{right:8px;bottom:12px;gap:10px}.hud .skill-dock .skills{gap:4px}
  .hud .skill-btn,.hud .dash-btn,.hud .attack-btn{width:44px!important;height:44px!important}.hud .skills .key{font-size:9px!important;padding:1px 2px}.hud .dash-btn .key{font-size:7px!important}

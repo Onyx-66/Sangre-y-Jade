@@ -5,7 +5,7 @@ import sharp from 'sharp';
 import { createServer } from 'vite';
 import { chromium } from 'playwright-core';
 
-const started=performance.now(),output=path.resolve('docs/v0.6/previews/prompt04');
+const started=performance.now(),output=path.resolve(process.env.SYJ_VIEWPORT_OUTPUT||'docs/v0.6/previews/prompt04');
 await fs.mkdir(output,{recursive:true});
 const server=await createServer({server:{host:'127.0.0.1',port:0},logLevel:'error'});await server.listen();
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--autoplay-policy=no-user-gesture-required']});

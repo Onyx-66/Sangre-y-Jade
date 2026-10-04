@@ -16,6 +16,10 @@ import './skills-hud.css';
 import './v06.css';
 import './ui/settings.css';
 import './viewport.css';
+import './ui/tokens.css';
+import './fonts-v06.css';
+import './ui/typography.css';
+import { waitForGameFonts } from './ui/Typography.js';
 import { renderSettingsPanel } from './ui/SettingsPanel.js';
 import { applySettingChange } from './systems/RuntimeSettings.js';
 import { t, setLanguage, translateDOM, languageMarkup } from './i18n/index.js';
@@ -129,7 +133,7 @@ class SangreYJadeApp {
 
   async startRun() {
     this.clearGame();
-    await document.fonts.ready;
+    await waitForGameFonts();
     this.uiRoot.replaceChildren();
     const hero = heroList().find((entry) => entry.id === this.lastSelection.heroId) || heroList()[0];
     const map = MAPS.find((entry) => entry.id === this.lastSelection.mapId) || MAPS[0];
@@ -285,13 +289,27 @@ class SangreYJadeApp {
 
   registerServiceWorker() {
     if (import.meta.env.PROD && 'serviceWorker' in navigator && location.protocol.startsWith('http') && location.hostname !== 'appassets.androidplatform.net') {
-      window.addEventListener('load', () => navigator.serviceWorker.register(`${base}sw.js`).catch(() => {}));
+      const register = () => navigator.serviceWorker.register(`${base}sw.js`).catch(() => {});
+      if (document.readyState === 'complete') register();
+      else window.addEventListener('load', register, { once: true });
     }
   }
 }
 
-const app = new SangreYJadeApp();
+// Only include real local files: no font download, guessed URL or 404 request.
+const fontAssets = import.meta.glob([
+  '../public/assets/fonts/Jersey15-*.woff2',
+  '../public/assets/fonts/AtkinsonHyperlegible-*.woff2',
+  '../public/assets/fonts/NotoSansArabic.ttf',
+], { eager: true, query: '?url', import: 'default' });
+const fontUrls = Object.fromEntries(Object.entries(fontAssets).map(([path, url]) => [path.split('/').at(-1), url]));
+async function boot() {
+  const typography = await waitForGameFonts(fontUrls);
+  const app = new SangreYJadeApp();
+  app.typography = typography;
 // The existing native Android Back/audio bridge also needs this in packaged builds.
 // Ordinary web releases still expose it only in the explicit FX diagnostic mode.
-if (import.meta.env.DEV || location.hostname === 'appassets.androidplatform.net' || new URLSearchParams(location.search).get('fxdebug') === '1') window.__SANGRE_Y_JADE__ = app;
+  if (import.meta.env.DEV || location.hostname === 'appassets.androidplatform.net' || new URLSearchParams(location.search).get('fxdebug') === '1') window.__SANGRE_Y_JADE__ = app;
+}
+boot();
 

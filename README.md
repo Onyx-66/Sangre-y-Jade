@@ -13,7 +13,7 @@ A Maya-inspired fantasy survivor roguelite built with Phaser 3.90 and Vite. Play
 Retained from v0.4:
 
 - Sequential setup: hero → map → mode → attack settings and run summary.
-- Mirrored Arabic menu artwork, a bundled Unixel Arabic pixel font, and SVG settings/language icons.
+- Mirrored Arabic menu artwork and SVG settings/language icons (the old Arabic font is superseded by the v0.6 typography below).
 - Six independently generated high-resolution prologue illustrations and an English synthetic male narrator. French/Arabic subtitles remain available. A first tap enables browser audio.
 - Standalone animation-frame files and repaired square skill icons; original atlases remain recoverable in `art-source/runtime-atlases/`.
 - Obsidian-and-gold health, dash-stamina, and magic meters; a short lower XP bar clear of touch controls.
@@ -31,7 +31,7 @@ Retained from earlier releases:
 - Automatic first-launch, 27-second prologue: six illustrated scenes, progressive subtitles, skip, replay, and a dedicated score. Completion is saved. Browsers require a first tap to enable sound.
 - Original generated pixel-art heroes, five enemies, four bosses, scenery, weapons, pickups, 66 ability/upgrade icons, and six four-frame effect families.
 - Character idle/walk/attack/hurt states. Raster combat effects rendered by Phaser; DOM overlays provide menus and touch controls.
-- Pixelify Sans font, amber/jade/violet palette, beveled menus, illustrated hero/map selection, and compact combat HUD.
+- Amber/jade/violet palette, beveled menus, illustrated hero/map selection, and compact combat HUD (the old Latin font is superseded by the v0.6 typography below).
 - Thirteen layered stereo effects, five re-orchestrated music loops and the prologue score.
 - Three heroes with 20 abilities each, three map variants, 10/20-minute runs, automatic/manual weapons, four hero skill slots, dash, level choices, bosses, relics, cacao, and persistent shrine progression.
 
@@ -82,4 +82,21 @@ WASD/arrows move; Q/E/R/T cast; Space dashes; Esc pauses. Touch uses the left jo
 Reports/screenshots in `artifacts/` and `artifacts/v0.5/` cover 23 unit/asset tests, 23 baseline browser checks, 8 extended checks (including all 60 abilities), 124 setup/loadout/pickup checks, and 26 support-combat/modal checks. Android results are recorded in `artifacts/android-smoke-report.json` and `artifacts/v0.5/android.json`. Android tests use an emulator, not physical phones. These are functional checks, not a full balance study, native-speaker translation review, or hardware certification. Android lint has zero errors; warnings concern SDK recency, landscape preference, local WebView JavaScript, the retained old icon resource, and legacy launcher-icon shape.
 
 See `licenses/ASSET-PROVENANCE.md`, `docs/V0.5-RELEASE-NOTES.md`, and `docs/RELEASE-v0.2.md` for attribution and publishing notes.
+
+## v0.6 typography credits
+
+The locally bundled fonts are **Jersey 15** (The Soft Type Project Authors;
+headings/buttons/numbers), **Atkinson Hyperlegible** (Braille Institute of
+America; body copy, genuine regular/bold), and **Noto Sans Arabic** (Noto
+Project Authors; Arabic). All use SIL OFL 1.1. Their original notices are in
+`public/assets/fonts/` and `licenses/`; see `licenses/V06-FONTS.md`.
+
+No font CDN or download is required. Fonts finish loading before the first
+menu and Phaser text; failures are reported by `app.typography`. Jersey never
+uses synthetic bold. Western digits and key letters remain Jersey/LTR in
+Arabic. Exact local files: `public/assets/fonts/README-v06.md`.
+
+`npm run test:typography` checks EN/FR/AR menu, hero selection, settings and
+level-up text bounds at 568×320, every hero/stat card, and a deliberately
+delayed font request. Required binaries and OFL notices have a mandatory test.
 

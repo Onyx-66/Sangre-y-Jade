@@ -12,7 +12,7 @@ try{
  await page.evaluate(()=>{const a=window.__SANGRE_Y_JADE__;a.cancelPrologue?.();a.showTitle();});
  await page.selectOption('[data-language]','ar');await page.locator('[data-action=play]').click();await page.evaluate(()=>document.fonts.ready);
  check(await page.evaluate(()=>!document.querySelector('.setup-progress')&&document.querySelector('.wizard-panel').scrollHeight<=document.querySelector('.wizard-panel').clientHeight+2),'APK setup has no step numbers or scroll');
- check(await page.evaluate(()=>getComputedStyle(document.querySelector('.wizard-panel h2')).fontFamily.includes('LatinDigits')&&!/[٠-٩۰-۹]/.test(document.querySelector('.screen').textContent)),'APK Arabic uses Western numeral glyphs and text');
+ check(await page.evaluate(()=>getComputedStyle(document.querySelector('.wizard-panel h2')).fontFamily.includes('Noto Sans Arabic')&&!/[٠-٩۰-۹]/.test(document.querySelector('.screen').textContent)),'APK Arabic uses Western numeral glyphs and text');
  for(let i=0;i<3;i++)await page.locator('[data-next]').click();await page.locator('[data-start]').click();await page.locator('.hud').waitFor();
  check(await page.locator('[data-skill]').count()===4,'APK has four reserved active hero slots');
  await page.evaluate(()=>{const s=window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual');s.invulnerable=1000;s.spawnTimer=1000;s.stats.level=5;s.pendingLevelUps=1;s.showLevelChoice();});await page.locator('.choice-card').first().click();

@@ -42,7 +42,7 @@ export class Hud {
       <div class="skills">
         <button class="attack-btn" data-attack aria-label="Attack" ${this.settings.attackMode==='manual'?'':'hidden'}><span class="key">F</span>${iconMarkup({id:'ui-hud-attack'})}</button>
         ${Array.from({length:SLOT_RULES.active.keys.length},(_,i) => `<button class="skill-btn active-slot empty" data-skill="${i}" aria-label="Empty skill slot ${i + 1}"><span class="key" dir="ltr">${SLOT_RULES.active.keys[i]}</span><span class="skill-icon">＋</span><span class="cooldown"></span><span class="slot-level"></span></button>`).join('')}
-        <button class="dash-btn" data-dash aria-label="Dash"><span class="key">SPACE</span><span class="skill-icon">${iconMarkup({id:'ui-hud-dash'})}</span><span class="cooldown"></span></button>
+        <button class="dash-btn" data-dash aria-label="Dash"><span class="key" dir="ltr" data-no-translate>Space</span><span class="skill-icon">${iconMarkup({id:'ui-hud-dash'})}</span><span class="cooldown"></span></button>
       </div></div><div class="skill-tooltip" id="hud-tooltip" role="tooltip" hidden></div>`;
     this.root.replaceChildren(this.el);
     this.hpFill = this.el.querySelector('.hp span');

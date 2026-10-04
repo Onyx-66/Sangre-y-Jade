@@ -17,7 +17,7 @@ try{
   check(await page.locator('[data-action=settings] svg').count()===1&&await page.locator('.language-switch svg').count()===1,`${locale}: real settings and language icons`);
   if(locale==='ar'){
    check(await page.evaluate(()=>getComputedStyle(document.querySelector('.cinematic-bg'),'::before').transform.startsWith('matrix(-1')),'Arabic menu artwork is mirrored');
-   check(await page.evaluate(()=>document.fonts.check('16px Unixel')&&getComputedStyle(document.querySelector('[data-action=play]')).fontFamily.includes('Unixel')),'Arabic uses the bundled pixel font');
+   check(await page.evaluate(()=>[...document.fonts].some(f=>f.family==='Noto Sans Arabic'&&f.status==='loaded')&&getComputedStyle(document.querySelector('[data-action=play]')).fontFamily.includes('Noto Sans Arabic')),'Arabic uses the bundled v0.6 font');
   }
   await page.locator('[data-action=play]').click();
   for(let step=0;step<4;step++){

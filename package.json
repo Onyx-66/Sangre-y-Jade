@@ -16,6 +16,7 @@
     "test:hud": "node scripts/skills-hud-playtest.mjs",
     "test:settings": "node scripts/v06-settings-playtest.mjs",
     "test:viewport": "node scripts/v06-viewport-playtest.mjs",
+    "test:typography": "node scripts/v06-typography-playtest.mjs",
     "check": "npm run test && npm run build",
     "playtest": "node scripts/playtest.mjs",
     "marketing": "node scripts/capture-marketing.mjs",

@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
-import { t, getLanguage } from '../i18n/index.js';
+import { t } from '../i18n/index.js';
+import { gameTextStyle } from '../ui/Typography.js';
 import { buildTextures, preloadTextures } from '../art/TextureFactory.js';
 import { ENEMIES, BOSSES, GEAR } from '../data/world.js';
 import { MODIFIERS } from '../data/heroes.js';
@@ -1204,7 +1205,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   floatText(x, y, text, color) {
-    const label = this.add.text(x, y, t(text), { fontFamily: getLanguage()==='ar'?'LatinDigits, Unixel':'Pixelify', fontSize: '20px', fontStyle: 'bold', color, stroke: '#201019', strokeThickness: 4 }).setOrigin(.5).setDepth(50);
+    const label = this.add.text(x, y, t(text), { ...gameTextStyle(t(text)), color, stroke: '#201019', strokeThickness: 4 }).setOrigin(.5).setDepth(50);
     this.tweens.add({ targets: label, y: y - 34, alpha: 0, duration: 680, onComplete: () => label.destroy() });
   }
 

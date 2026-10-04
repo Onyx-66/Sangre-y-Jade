@@ -47,6 +47,7 @@ function measureHud(){
   }),
   dashCoverage:i.width*i.height/(d.width*d.height),dashPlate:getComputedStyle(dash).backgroundImage===getComputedStyle(document.querySelector('[data-skill="0"]')).backgroundImage,
   cornerKey:k.top>=d.top&&k.top<=d.top+4&&k.left>=d.left&&k.left<=d.left+4&&k.width<d.width*.8,
+  dashKey:k,dashButton:d,dashFont:{size:getComputedStyle(key).fontSize,family:getComputedStyle(key).fontFamily,spacing:getComputedStyle(key).letterSpacing},
   keyLabels:select('[data-skill] .key').map(el=>el.textContent),
   ltr:[...select('.hud,.hud .bar,.hud .bar label,.hud .key,.hud-counter b')].every(el=>getComputedStyle(el).direction==='ltr'),
   barsLtr:select('.hud .bar,.boss-bar').every(el=>Math.abs(rect(el.querySelector('span')).left-(rect(el).left+parseFloat(getComputedStyle(el).borderLeftWidth)))<.5),

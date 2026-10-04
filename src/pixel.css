@@ -1,6 +1,4 @@
-@font-face{font-family:Pixelify;src:url('../public/assets/fonts/PixelifySans.ttf') format('truetype');font-weight:400 700;font-display:swap}
-:root{--ink:#231820;--ink-2:#302024;--panel:#291d21f2;--gold:#ffd879;--cream:#fff0c4;--jade:#67e5ba;--muted:#dbc79d}
-body,button,input,select,h1,h2,h3,.display,.narration p{font-family:Pixelify,monospace}
+body,button,input,select,h1,h2,h3,.display,.narration p{font-family:var(--font-display)}
 body{font-size:17px}
 .screen{background-image:linear-gradient(#1912248c,#21140dbb),var(--menu-art);background-size:cover;background-position:center}
 .screen.cinematic-bg{background-color:#211a27;justify-items:start;padding-left:6vw}
@@ -26,16 +24,16 @@ body{font-size:17px}
 .selector-section{margin-top:14px}.selector-section h3{margin-bottom:8px}.panel-actions{margin-top:18px}
 .modal-backdrop{backdrop-filter:none;background:#150d1cb8}.modal .card-grid{max-width:850px;margin:auto}.modal .choice-card{min-height:205px}
 .settings-grid select{background:#332129;border-radius:2px;color:#ffe5a5}.settings-grid input{accent-color:#edbd59}
-.hud-top{grid-template-columns:260px 1fr auto;top:25px}.bars{gap:4px}.bar{height:16px;border-radius:2px;border:2px solid #604529}.bar label{font:700 12px Pixelify}.bar.hp>span{background:linear-gradient(#ff9a84,#cd4051)}.bar.mana>span{background:linear-gradient(#8bd1ff,#4769bc)}
+.hud-top{grid-template-columns:260px 1fr auto;top:25px}.bars{gap:4px}.bar{height:16px;border-radius:2px;border:2px solid #604529}.bar label{font:400 12px var(--font-display)}.bar.hp>span{background:linear-gradient(#ff9a84,#cd4051)}.bar.mana>span{background:linear-gradient(#8bd1ff,#4769bc)}
 .bar.xp{position:fixed;top:3px;left:3px;right:3px;height:12px;border:2px solid #67543c}.bar.xp>span{background:linear-gradient(#9df3d1,#36b5a1)}.bar.xp label{justify-items:end;padding-right:6px;font-size:10px}
-.hud-clock{background:#291b27b0;border-color:#ac884d;border-radius:2px;font:700 25px Pixelify;color:#fff5d7;padding:3px 18px;text-shadow:2px 2px #3d211d}
+.hud-clock{background:#291b27b0;border-color:#ac884d;border-radius:2px;font:400 25px var(--font-display);color:#fff5d7;padding:3px 18px;text-shadow:2px 2px #3d211d}
 .hud-currency{background:#291b27bb;border:1px solid #ae8955;border-radius:3px;font-size:14px}.pause-btn{background:#3d2d25;border:1px solid #c8a86b}
 .skills{gap:9px;right:20px;bottom:20px}.skill-btn,.dash-btn{width:64px;height:64px;border-radius:4px;border:2px solid #ddba79;background:#281c23;box-shadow:3px 3px #28120c;overflow:visible}
-.skill-btn .skill-icon{width:100%;height:100%;padding:1px;display:grid;place-items:center}.skill-btn .key,.dash-btn .key{top:-18px;left:0;right:0;text-align:center;color:#352314;background:#dec487;font:700 11px Pixelify;border-radius:2px}
+.skill-btn .skill-icon{width:100%;height:100%;padding:1px;display:grid;place-items:center}.skill-btn .key,.dash-btn .key{top:-18px;left:0;right:0;text-align:center;color:#352314;background:#dec487;font:400 11px var(--font-display);border-radius:2px}
 .skill-btn .cooldown,.dash-btn .cooldown{pointer-events:none;z-index:4}.dash-btn{border-color:#75d0d4;background:#214b5f;color:#cef1eb;font-size:2rem;width:70px;height:70px}
 .joystick{width:130px;border:3px solid #f0cf8055;background:#21101c42}.joystick-knob{background:#e3b55f70;border-color:#ffe3a487}
-.boss-name{font:700 22px Pixelify;color:#ffe69b}.boss-bar{border-color:#bd9647}.boss-bar span{background:linear-gradient(#c986ef,#8646b8)}
-.toast{font:700 18px Pixelify;border-radius:3px;background:#342226ed;border:2px solid #ccaa63;top:24%}
+.boss-name{font:400 22px var(--font-display);color:#ffe69b}.boss-bar{border-color:#bd9647}.boss-bar span{background:linear-gradient(#c986ef,#8646b8)}
+.toast{font:400 18px var(--font-display);border-radius:3px;background:#342226ed;border:2px solid #ccaa63;top:24%}
 .pixel-cinema{background:#07050d;padding:0;align-items:center;overflow:hidden}
 .cinema-stage{position:absolute;inset:7% 0 17%;overflow:hidden;background:#090a0f}
 .cinema-image{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;image-rendering:pixelated;transition:opacity .5s linear;transform:scale(1)}
@@ -57,16 +55,15 @@ body{font-size:17px}
 html[lang=ar] .screen.cinematic-bg{direction:ltr}html[lang=ar] .brand-lockup,html[lang=ar] .language-switch{direction:rtl}
 html[lang=ar] .bar label{font-size:10px;line-height:1;display:flex;align-items:center;justify-content:center}html[lang=ar] .bar.xp label{font-size:8px;justify-content:flex-end}html[lang=ar] .pause-btn{line-height:1}
 @media(max-height:520px){html[lang=ar] .setup-panel h2{font-size:1.5rem;line-height:1.3}html[lang=ar] .setup-panel .hero-portrait{width:44px;height:44px}html[lang=ar] .setup-panel .btn{font-size:.85rem;line-height:1.4;padding:8px 14px}html[lang=ar] .setup-panel .hero-grid h3{font-size:1rem;line-height:1.3}html[lang=ar] .setup-panel .hero-grid p{font-size:.7rem;line-height:1.45}}
-@font-face{font-family:NotoArabic;src:url('../public/assets/fonts/NotoSansArabic.ttf') format('truetype');font-weight:100 900;font-display:swap}
 .language-switch{position:absolute;z-index:40;top:10px;right:14px;display:flex;align-items:center;gap:8px;background:#231b24ee;border:1px solid #bfa46b;font-size:14px;padding:5px 8px;color:#ffe4a0}
 .language-switch select,.run-controls select{background:#332129;color:#ffe5a5;border:1px solid #ac884d;padding:4px;font:inherit}
 .screen:not(.cinematic-bg):not(.pixel-cinema){padding-top:52px}.screen:not(.cinematic-bg):not(.pixel-cinema)>.panel{max-height:calc(100dvh - 72px)}
 .pixel-cinema .language-switch{left:50%;right:auto;transform:translateX(-50%)}
 .run-controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;font-size:14px;margin:10px 0}.run-controls small{color:#a7dfbf}
 .combat-status{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:grid;gap:3px;text-align:center;background:#201920b0;border:1px solid #79653f;padding:5px 9px;font-size:12px;pointer-events:none}
-.hud{direction:ltr}.attack-btn{position:relative;width:70px;height:70px;border:3px solid #f9cc6e;border-radius:4px;background:#553129;pointer-events:auto;box-shadow:3px 3px #28120c;padding:0}.attack-btn[hidden]{display:none}.attack-btn .key{position:absolute;top:-18px;left:0;right:0;text-align:center;background:#dec487;color:#352314;font:700 11px Pixelify}
-html[lang=ar] body,html[lang=ar] button,html[lang=ar] input,html[lang=ar] select,html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .subtitle,html[lang=ar] .boss-name,html[lang=ar] .toast,html[lang=ar] .bar label{font-family:NotoArabic,sans-serif;letter-spacing:0}
-html[lang=ar] .brand-lockup h1{font-family:Pixelify;direction:ltr}html[lang=ar] .panel-subtitle,html[lang=ar] .choice-card p{line-height:1.6}html[lang=ar] .settings-grid,html[lang=ar] .combat-status{direction:rtl}html[lang=ar] .subtitle{line-height:1.8}html[lang=ar] .era{letter-spacing:0}
+.hud{direction:ltr}.attack-btn{position:relative;width:70px;height:70px;border:3px solid #f9cc6e;border-radius:4px;background:#553129;pointer-events:auto;box-shadow:3px 3px #28120c;padding:0}.attack-btn[hidden]{display:none}.attack-btn .key{position:absolute;top:-18px;left:0;right:0;text-align:center;background:#dec487;color:#352314;font:400 11px var(--font-display)}
+html[lang=ar] body,html[lang=ar] button,html[lang=ar] input,html[lang=ar] select,html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .subtitle,html[lang=ar] .boss-name,html[lang=ar] .toast,html[lang=ar] .bar label{font-family:var(--font-arabic);letter-spacing:0}
+html[lang=ar] .brand-lockup h1{font-family:var(--font-display);direction:ltr}html[lang=ar] .panel-subtitle,html[lang=ar] .choice-card p{line-height:1.6}html[lang=ar] .settings-grid,html[lang=ar] .combat-status{direction:rtl}html[lang=ar] .subtitle{line-height:1.8}html[lang=ar] .era{letter-spacing:0}
 @media(max-height:650px){.brand-logo{width:66px;height:66px;margin-bottom:8px}}
 @media(max-width:760px),(max-height:520px){.brand-logo{width:54px;height:54px}.language-switch{font-size:12px;padding:3px}.language-switch>span{display:none}.attack-btn{width:50px;height:50px}.combat-status{left:43%;max-width:150px;font-size:9px;bottom:8px}.run-controls{font-size:12px;gap:6px}}
 @media(max-width:540px) and (orientation:portrait){.attack-btn{width:43px;height:43px}.combat-status{left:50%;bottom:115px;max-width:250px}.brand-logo{width:80px;height:80px}}

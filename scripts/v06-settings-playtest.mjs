@@ -6,7 +6,7 @@ import { chromium } from 'playwright-core';
 
 // All requests stay local, including the production Android-origin test.
 const native=process.argv.includes('--native');
-const output=path.resolve('docs/v0.6/previews/prompt03');
+const output=path.resolve(process.env.SYJ_SETTINGS_OUTPUT||'docs/v0.6/previews/prompt03');
 await fs.mkdir(output,{recursive:true});
 const server=native?await preview({preview:{host:'127.0.0.1',port:0},logLevel:'error'})
  :await createServer({server:{host:'127.0.0.1',port:0},logLevel:'error'});

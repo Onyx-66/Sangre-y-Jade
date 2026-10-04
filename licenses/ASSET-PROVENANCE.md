@@ -30,7 +30,7 @@ The art is intentionally presented as an original fantasy inspired by Maya visua
 - v0.3 uses an original generated jaguar-and-jade emblem for menu/PWA/Android. The old SVG remains as historical source. Built-in image generation also supplied overhead scenery and front/back hero atlases. Reviewed originals are in `art-source/v0.3/`; exact prompts and returned paths are in `scripts/art-v03-sources.json`. `scripts/prepare-v03.mjs` slices/resizes them without redrawing their artwork.
 - Play Store listing PNG: 512×512, full-square, 32-bit RGBA, sRGB, below 1,024 KB. Specification: https://developer.android.com/distribute/google-play/resources/icon-design-specifications . Store acceptance and production app signing are separate release tasks.
 - Noto Sans Arabic is bundled in `public/assets/fonts/NotoSansArabic.ttf`; license: `public/assets/fonts/OFL-NotoSansArabic.txt`. Source: https://github.com/google/fonts/tree/main/ofl/notosansarabic . No runtime font CDN is needed.
-- Pixelify Sans is bundled in `public/assets/fonts/PixelifySans.ttf`; its full SIL OFL license is `public/assets/fonts/OFL.txt`. Source: https://github.com/google/fonts/tree/main/ofl/pixelifysans . No runtime font CDN is needed.
+- Earlier releases bundled Pixelify Sans. Its full SIL OFL notice remains at `public/assets/fonts/OFL.txt`; the unused binary is retired in v0.6 after the replacement is verified. Source: https://github.com/google/fonts/tree/main/ofl/pixelifysans . Current fonts are credited in `V06-FONTS.md`.
 
 ## Music and sound
 
@@ -46,7 +46,7 @@ Tank ground props use two additional standalone generated sprites, not inventory
 
 - Six independent prologue illustrations were created using built-in `image_gen` mode. Original PNGs: `art-source/v0.4/`. Shipped WebP panels: `public/assets/pixel/story-0.webp` through `story-5.webp`, at their native 1672×941 output resolution. Exact prompts and returned paths: `scripts/art-v04-sources.json`.
 - `scripts/prepare-v04.mjs` splits actor/effect atlases into 96 standalone transparent frame PNGs and repairs 66 square 128×128 skill icons with transparent padding. Its manifest inventories the runtime pixel assets. Source atlases are retained in `art-source/runtime-atlases/`; no source artwork was destroyed.
-- Unixel Arabic pixel font: `public/assets/fonts/Unixel.woff2`, SIL OFL 1.1, full license in `OFL-Unixel.txt`. Source: https://github.com/MDarvishi5124/Unixel . Previously bundled Noto Sans Arabic remains as a historical resource, but Arabic UI now uses Unixel.
+- v0.4 used the Unixel Arabic pixel font, SIL OFL 1.1 (original notice retained in `public/assets/fonts/OFL-Unixel.txt`). Source: https://github.com/MDarvishi5124/Unixel . In v0.6 its unused binary is retired after verification; Arabic UI uses the existing Noto Sans Arabic again.
 - Interface symbols and the pickup bubble are original project SVG assets/code, not icon-font characters.
 
 ### v0.4 narrator

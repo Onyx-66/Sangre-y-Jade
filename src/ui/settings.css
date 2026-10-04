@@ -11,11 +11,11 @@
 .settings-panel input[type=range]{width:min(280px,40vw);direction:ltr}
 .settings-panel select{max-width:min(300px,45vw);min-width:0}
 .settings-toggle{appearance:none;display:flex;align-items:center;gap:8px;direction:ltr;isolation:isolate;flex-shrink:0;width:136px;height:44px;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
-.settings-toggle:focus-visible{outline:2px solid #ffcf4a;outline-offset:2px}
+.settings-toggle:focus-visible{outline:2px solid var(--color-gold);outline-offset:2px}
 .settings-toggle .toggle-track{position:relative;display:block;flex:0 0 60px;width:60px;height:32px;border:2px solid #a6a0b0;border-radius:16px;background:#625f6b;box-sizing:border-box;direction:ltr}
 .settings-toggle .toggle-knob{position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff0cf;box-shadow:0 1px 2px #0006;transition:left .16s ease}
 .settings-toggle .toggle-symbol{position:absolute;top:4px;right:6px;width:16px;height:20px;line-height:20px;font:700 17px/20px system-ui,sans-serif;color:white;text-align:center}
-.settings-toggle[data-state=on] .toggle-track{background:#168067;border-color:#64e5b2}
+.settings-toggle[data-state=on] .toggle-track{background:var(--color-jade-dark);border-color:#64e5b2}
 .settings-toggle[data-state=on] .toggle-knob{left:31px}
 .settings-toggle[data-state=on] .toggle-symbol{left:6px;right:auto}
 .settings-toggle .toggle-word{display:block;flex:0 0 68px;width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:start;font-size:13px;line-height:1.3}

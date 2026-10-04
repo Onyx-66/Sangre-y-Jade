@@ -1,0 +1,131 @@
+/* Final typography cascade: minimum readable sizes also apply in compact/RTL
+   layouts; none of the older art styles may shrink copy to make it fit. */
+body { font-size: var(--font-body); line-height: var(--line-height); }
+.currency { font-weight: 400; }
+.hero-heading { display: contents; }
+.hero-role { font-family: var(--font-body-family); font-size: var(--font-body); font-weight: 400; line-height: var(--line-height); }
+html[lang=ar] .hero-role { font-family: var(--font-arabic); }
+.btn, .btn.small, .menu-stack .btn, .panel-actions .btn,
+.wizard-panel .panel-actions .btn, .pause-actions .btn,
+html[lang=ar] .wizard-panel .panel-actions .btn {
+  font-size: var(--font-label) !important; font-weight: 400; line-height: var(--line-height);
+}
+.tag, .eyebrow, .version, .language-switch, .run-controls, .run-controls small,
+.wizard-panel .tag, .wizard-panel .wizard-hint, .wizard-panel .run-summary p,
+.mode-segments small, .settings-row label, .settings-panel select,
+.settings-panel .premium-note, .settings-toggle .toggle-word,
+.panel-subtitle, .wizard-panel .panel-subtitle, .modal > .panel-subtitle, .settings-panel > .panel-subtitle,
+.pause-menu .modal > .panel-subtitle, .choice-card p,
+.wizard-panel .choice-card p, .wizard-panel .hero-grid p,
+.replacement-choice .choice-card p, .skills-readonly .choice-card p,
+.replacement-choice .modal > .panel-subtitle, .skill-tooltip,
+.ally-card-details, .modal .choice-card[data-kind] p {
+  font-size: var(--font-body) !important; line-height: var(--line-height) !important;
+}
+.skill-ribbon, .modal .skill-ribbon, .skills-readonly .modal .skill-ribbon {
+  font-family: var(--font-body-family); font-size: var(--font-body);
+  font-weight: 400; line-height: var(--line-height); min-height: 27px;
+}
+html[lang=ar] .skill-ribbon { font-family: var(--font-arabic); }
+.panel h2, .modal h2, .wizard-panel h2,
+.choice-card h3, .wizard-panel .choice-card h3, .wizard-panel .hero-grid h3 {
+  font-weight: 400; line-height: var(--line-height) !important;
+}
+.choice-card h3 { overflow-wrap: anywhere; min-width: 0; }
+.choice-card p, .panel-subtitle, .tagline, .wizard-hint { overflow-wrap: break-word; }
+.tagline { font-size: var(--font-body); line-height: var(--line-height); }
+.narration .era, .cinema-caption .era, .narration-note {
+  font-family: var(--font-body-family); font-size: var(--font-body); line-height: var(--line-height);
+}
+html[lang=ar] .era, html[lang=ar] .narration-note { font-family: var(--font-arabic); }
+.hud .skills .key, .hud .dash-btn .key, .hud .attack-btn .key {
+  font-size: var(--font-micro) !important; line-height: var(--line-height) !important;
+  font-weight: 400 !important; padding: 0 2px;
+}
+.hud .dash-btn .key { padding: 0 1px; }
+.hud .bar label, html[lang=ar] .hud .bar label,
+.slot-level, .ally-name, .passive-counter-label, .hud .xp-heading,
+.hud .hud-counter small, .combat-status, .support-loadout small {
+  font-family: var(--font-body-family); font-size: var(--font-micro) !important;
+  font-weight: 400; line-height: var(--line-height) !important;
+}
+html[lang=ar] .hud .bar label, html[lang=ar] .slot-level,
+html[lang=ar] .ally-name, html[lang=ar] .hud .xp-heading {
+  font-family: var(--font-arabic);
+}
+.hud .passive-counter-label { font-family: var(--font-numbers); line-height: var(--line-height) !important; }
+.hud .hud-counter { width: 76px; }
+.hud .hud-counter > span, .hud .hud-counter b { width: 42px; }
+.hud .hud-counter b { font-size: clamp(12px,calc(72px / var(--digit-count,1)),20px); }
+.hud .hud-counter b { height: 28px; line-height: var(--line-height); }
+.hud .hud-counter small { height: 17px; }
+.hud .ally-lock b { font-family: var(--font-body-family); font-size: var(--font-micro); height: 18px; line-height: var(--line-height); font-weight: 400; }
+html[lang=ar] .hud .ally-lock b { font-family: var(--font-arabic); }
+.wizard-panel .mode-time { line-height: var(--line-height); }
+.wizard-panel .mode-time small { font-family: var(--font-body-family); font-size: var(--font-body); line-height: var(--line-height); }
+html[lang=ar] .wizard-panel .mode-time small { font-family: var(--font-arabic); }
+.hud .xp-heading { height: 18px; line-height: 18px !important; }
+.hud .xp-dock .bar.xp { height: 20px; }
+.vital-row .bar { height: 20px; }
+.hud .hud-clock { display: grid; place-items: center; line-height: var(--line-height); }
+.hud .boss-name { font-size: clamp(12px,2vw,22px); }
+.hud .ally-name { bottom: 3px; height: 17px; }
+.settings-toggle .toggle-symbol { font-family: var(--font-body-family); font-weight: 400; line-height: var(--line-height); top: 1px; height: 24px; }
+.settings-toggle .toggle-word { overflow: visible; }
+.settings-panel select { font-family: var(--font-body-family); }
+html[lang=ar] .settings-panel select { font-family: var(--font-arabic); }
+.choice-card { min-width: 0; }
+/* Jersey's small display labels need slight tracking; Arabic joining stays
+   untouched and genuine Noto bold is used only for Arabic headings/buttons. */
+.btn, .choice-card h3, .hud .key, .hud .hud-counter b,
+.font-numbers, .mode-time { letter-spacing: .02em; }
+html[lang=ar] .btn, html[lang=ar] .choice-card h3 { letter-spacing: 0; }
+html[lang=ar] h1, html[lang=ar] .panel h2, html[lang=ar] .modal h2,
+html[lang=ar] .wizard-panel h2, html[lang=ar] .choice-card h3,
+html[lang=ar] .wizard-panel .choice-card h3, html[lang=ar] .wizard-panel .hero-grid h3,
+html[lang=ar] .btn, html[lang=ar] .wizard-panel .panel-actions .btn { font-weight: 700; }
+/* The Latin game title does not become Arabic or gain a bold face. */
+html[lang=ar] .brand-lockup h1 { font-weight: 400; }
+@media (max-height: 520px) {
+  .screen.cinematic-bg .brand-lockup { width: min(285px,50vw); }
+  .brand-lockup .brand-logo { width: 32px; height: 32px; margin-bottom: 4px; }
+  .brand-lockup h1 { font-size: 24px; line-height: var(--line-height); margin: 0; }
+  .brand-lockup h1 span { font-size: 16px; line-height: var(--line-height); margin: 0; }
+  .tagline { margin: 6px 0 8px; }
+  .menu-stack { gap: 6px; }
+  .menu-stack .btn { padding: 5px 8px; min-width: 0; letter-spacing: 0; }
+  .menu-row .btn { padding: 5px; }
+  .menu-row .icon-button { flex: 0 0 44px; min-width: 44px; }
+  .wizard-panel h2 { font-size: 18px !important; }
+  .modal h2 { font-size: 22px !important; }
+  .wizard-panel .choice-card h3, .wizard-panel .hero-grid h3,
+  .modal .choice-card h3 { font-size: 16px !important; }
+  .wizard-panel .choice-card { gap: 3px; padding: 5px !important; }
+  .wizard-panel .hero-portrait { width: 32px !important; height: 32px !important; flex-shrink: 0; }
+  .wizard-panel .card-grid { gap: 6px; }
+  .screen.setup-screen > .wizard-panel { padding: 6px !important; }
+  .wizard-panel .hero-grid .hero-heading { display: flex; gap: 3px; align-items: center; justify-content: center; width: 100%; flex-shrink: 0; }
+  .wizard-panel .hero-grid .hero-portrait { width: 24px !important; height: 24px !important; }
+  .wizard-panel .panel-actions .btn { padding: 4px 12px; }
+  .modal .choice-card { padding: 6px; gap: 3px; }
+  .modal .card-icon { width: 32px; height: 32px; }
+  .skill-pick .modal { padding: 10px; gap: 6px; }
+  .skill-pick .choice-actions { position: static; margin: 0; padding: 0; background: none; }
+  .skill-pick .choice-card[data-kind] { display: grid; grid-template-columns: 32px minmax(0,1fr); grid-template-rows: auto auto 1fr; align-content: start; justify-items: center; }
+  .skill-pick .choice-card .card-icon { grid-column: 1; grid-row: 1; }
+  .skill-pick .choice-card .skill-ribbon { grid-column: 2; grid-row: 1; width: 100%; padding: 4px 8px; }
+  .skill-pick .choice-card h3, .skill-pick .choice-card p,
+  .skill-pick .choice-card .ally-card-details, .skill-pick .choice-card .card-tags { grid-column: 1 / -1; }
+  .choice-secondary { font-size: 16px; padding: 4px 12px; }
+  .hud .ally-panel { top: 94px; }
+  .hud .hud-counter b { font-size: clamp(12px,calc(72px / var(--digit-count,1)),16px); }
+  .hud .hud-counter b { height: 22px; }
+  .settings-panel h2 { font-size: 22px; }
+  .settings-panel .panel-actions .btn { font-size: 16px; }
+}
+@media (max-width:540px) and (orientation:portrait) {
+  .wizard-panel .hero-grid .choice-card { grid-template-columns: 44px minmax(0,1fr); }
+  .wizard-panel .hero-portrait { width: 42px !important; height: 42px !important; }
+  .hud .ally-panel { top: 98px; }
+  .hud .hud-counter { width: 44px; }
+}

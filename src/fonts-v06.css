@@ -1,0 +1,45 @@
+/* v0.6 typography. Jersey 15 (pixel look, UI/headings/numbers) + Atkinson Hyperlegible (body text) + Noto Sans Arabic.
+   All three are SIL Open Font License 1.1 (licenses in public/assets/fonts). Jersey 15 has a single weight: never synthesize bold. */
+@font-face{font-family:"Jersey 15";src:url('../public/assets/fonts/Jersey15-latin-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Jersey 15";src:url('../public/assets/fonts/Jersey15-latin-ext-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible";src:url('../public/assets/fonts/AtkinsonHyperlegible-latin-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible";src:url('../public/assets/fonts/AtkinsonHyperlegible-latin-700.woff2') format('woff2');font-weight:700;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("../public/assets/fonts/AtkinsonHyperlegible-latin-ext-400.woff2") format("woff2");font-weight:400;font-display:block;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("../public/assets/fonts/AtkinsonHyperlegible-latin-ext-700.woff2") format("woff2");font-weight:700;font-display:block;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Noto Sans Arabic";src:url("../public/assets/fonts/NotoSansArabic.ttf") format("truetype");font-weight:100 900;font-display:block;unicode-range:U+0600-06FF,U+0750-077F,U+0870-089F,U+08A0-08FF,U+200C-200F,U+FB50-FDFF,U+FE70-FEFF}
+
+body, input, select, textarea, pre {
+  font-family: var(--font-body-family); font-size: var(--font-body); line-height: var(--line-height);
+}
+*, *::before, *::after { font-synthesis: none; }
+button, h1, h2, h3, .display, .hud-clock, .boss-name, .toast,
+.milestone-banner, .mode-time, .summary-stat strong {
+  font-family: var(--font-display); font-weight: 400; line-height: var(--line-height);
+}
+button { font-size: var(--font-label); }
+.choice-card p, .choice-card .tag, .panel-subtitle, .subtitle, .tagline,
+.premium-note, .wizard-hint, .run-controls, .ally-card-details, .skill-tooltip {
+  font-family: var(--font-body-family); font-size: var(--font-body); line-height: var(--line-height);
+}
+html[lang=ar] body, html[lang=ar] button, html[lang=ar] input,
+html[lang=ar] select, html[lang=ar] textarea, html[lang=ar] h1,
+html[lang=ar] h2, html[lang=ar] h3, html[lang=ar] p,
+html[lang=ar] .boss-name, html[lang=ar] .toast,
+html[lang=ar] .milestone-banner, html[lang=ar] .skill-tooltip {
+  font-family: var(--font-arabic); letter-spacing: 0;
+}
+html[lang=ar] h1, html[lang=ar] h2, html[lang=ar] h3, html[lang=ar] button { font-weight: 700; }
+html[lang=ar] .skill-tooltip { direction: rtl; }
+.hud .key, .hud .hud-clock, .hud .hud-counter b,
+.passive-counter-label, .mode-time, .summary-stat strong,
+.font-numbers, html[lang=ar] .font-numbers {
+  font-family: var(--font-numbers) !important; font-weight: 400 !important;
+  direction: ltr; unicode-bidi: isolate; font-variant-numeric: tabular-nums;
+}
+.choice-card p, .choice-card .ally-card-details { font-weight: 400; }
+html[lang=ar] .choice-card p, html[lang=ar] .choice-card .ally-card-details,
+html[lang=ar] .panel-subtitle, html[lang=ar] .subtitle,
+html[lang=ar] .tagline, html[lang=ar] .premium-note,
+html[lang=ar] .wizard-hint, html[lang=ar] .run-controls {
+  font-family: var(--font-arabic);
+}

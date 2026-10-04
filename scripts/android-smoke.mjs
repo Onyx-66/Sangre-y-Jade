@@ -26,7 +26,7 @@ try{
   await page.getByRole('button',{name:'Skip Intro'}).click();
   await page.selectOption('[data-language]','ar');
   await page.evaluate(()=>document.fonts.ready);
-  check(await page.evaluate(()=>document.fonts.check('16px Unixel')&&getComputedStyle(document.querySelector('.cinematic-bg'),'::before').transform.startsWith('matrix(-1')),'APK Arabic pixel font and mirrored title');
+  check(await page.evaluate(()=>[...document.fonts].some(f=>f.family==='Noto Sans Arabic'&&f.status==='loaded')&&getComputedStyle(document.querySelector('.cinematic-bg'),'::before').transform.startsWith('matrix(-1')),'APK bundled Arabic font and mirrored title');
   call('shell','screencap','-p','/sdcard/syj-qa.png');
   call('pull','/sdcard/syj-qa.png',resolve('artifacts/v0.4/android-ar-title.png'));
   await page.selectOption('[data-language]','en');

@@ -1,7 +1,6 @@
 /* Force recognizable 0–9 glyphs even when the surrounding script is Arabic. */
-@font-face{font-family:LatinDigits;src:url('../public/assets/fonts/PixelifySans.ttf') format('truetype');unicode-range:U+0030-0039;font-weight:100 900;font-display:swap}
-html[lang=ar] body,html[lang=ar] button,html[lang=ar] input,html[lang=ar] select,html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .subtitle,html[lang=ar] .boss-name,html[lang=ar] .toast,html[lang=ar] .bar label{font-family:LatinDigits,Unixel,monospace}
-.hud-counter b,.hud-clock{font-family:Pixelify!important;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+html[lang=ar] body,html[lang=ar] button,html[lang=ar] input,html[lang=ar] select,html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .subtitle,html[lang=ar] .boss-name,html[lang=ar] .toast,html[lang=ar] .bar label{font-family:var(--font-arabic)}
+.hud-counter b,.hud-clock{font-family:var(--font-display)!important;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
 /* The footer is an explicit grid row, never below an overflowing card list. */
 .screen.setup-screen{overflow:hidden!important;min-height:0;padding:54px 12px 12px!important;align-items:center}
 .screen.setup-screen>.wizard-panel{height:min(710px,calc(100dvh - 72px));max-height:100%!important;min-height:0;width:min(1000px,100%);overflow:hidden;padding:clamp(10px,2vh,22px)!important;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:8px}

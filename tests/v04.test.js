@@ -11,5 +11,5 @@ test('six male narration files fit their 4.5-second cinematic beats',()=>{
 });
 test('new cinematic panels retain independent high-resolution artwork',async()=>{
  for(let i=0;i<6;i++){const m=await sharp(`public/assets/pixel/story-${i}.webp`).metadata();assert.ok(m.width>=1600&&m.height>=900);}
- assert.ok(existsSync('public/assets/fonts/Unixel.woff2'));assert.match(readFileSync('public/assets/fonts/OFL-Unixel.txt','utf8'),/SIL OPEN FONT LICENSE/);
+ assert.ok(existsSync('public/assets/fonts/NotoSansArabic.ttf'));assert.match(readFileSync('public/assets/fonts/OFL-NotoSansArabic.txt','utf8'),/SIL OPEN FONT LICENSE/);
 });

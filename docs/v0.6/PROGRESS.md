@@ -6,6 +6,7 @@
 - [x] 02 — HUD clarity and fixed EN/AR positions
 - [x] 03 — Shared toggles and paused settings
 - [x] 04 — Fullscreen viewport and safe areas
+- [x] V1 — Typography and shared design tokens
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -141,3 +142,36 @@ Evidence, investigation and Android manual steps: `VIEWPORT.md`, `previews/promp
 - `V06_SPEC.md` remains absent; the explicit Prompt 04 rules are followed and conservative choices are in `DECISIONS.md`.
 - The unrelated unfinished French untranslated-key audit is still the sole full-suite failure; no new failures and no edits to that work.
 - No connected Android device or running emulator; native compile/resource/lint checks pass, but physical cutout/system-bar and signed APK execution remain unverified. Manual steps are supplied. The >2.4:1 fallback uses horizontal scaling only; all requested sizes use uniform zoom.
+
+## V1 — Typography and shared design tokens — 2026-10-04
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v1`.
+
+### Changed
+
+- Bundled the supplied Jersey 15 and Atkinson Hyperlegible regular/bold Latin/extended subsets, retained Noto Sans Arabic, and copied all three original OFL notices into `licenses/`. Updated README and historical font credits. No network downloads or new dependencies.
+- Imported `fonts-v06.css`, consolidated colors/spacing/radii/shadows/layers/font tokens, replaced every runtime old-family reference, and added a shared Phaser/canvas text style. Async startup and run creation wait for real font files and `document.fonts`; a digit-only Jersey face preserves Western digits in Arabic body copy. Jersey remains regular with synthesis disabled; Arabic headings use genuine Noto bold.
+- Enforced 14 px body, 12 px HUD micro-labels and 1.35 line height. Adjusted compact hero headers, reward icon/ribbon rows, key tags and numeric boxes to fit full descriptions and visible actions. Fixed a caught card/Replace-button overlap and Latin-title bold inheritance in Arabic.
+- Removed only the unused Pixelify Sans and Unixel binaries after browser verification with the replacements; both are recoverable from Git. Kept their historical license notices. Updated historical font checks and added eight unit tests plus font-gate/bounds browser verification.
+- Preserved earlier uncommitted translations/artwork and the unrelated newly supplied release documents/audio generator. No audio, branding, gameplay, package-version or APK changes.
+
+### Test results
+
+| Command | Result |
+| --- | --- |
+| Initial startup/typeface regression | Three expected failures before implementation |
+| `node --test tests/v06-typography.test.js` | 8/8 pass, no skips; required real binaries/licenses checked |
+| `npm run test:typography` | 100 checks pass, 23.35 s; EN/FR/AR at 568×320, all 78 hero/stat cards, 15 screenshots, no browser/HTTP errors; actual three font families loaded |
+| `SYJ_HUD_OUTPUT=docs/v0.6/previews/v1/hud-regression` then `npm run test:hud` | 497 checks pass; 32 HUD layouts plus cards |
+| `SYJ_SETTINGS_OUTPUT=docs/v0.6/previews/v1/settings-regression` then `npm run test:settings` | 211 checks pass; EN/FR/AR toggles and pause/settings navigation |
+| `SYJ_VIEWPORT_OUTPUT=docs/v0.6/previews/v1/viewport-regression` then `npm run test:viewport` | 518 checks pass; requested sizes, insets and localized setup |
+| `npm run check` | 340/341 pass, no skips; sole pre-existing French `MANA`/`Cacao` audit failure; build skipped by `&&` |
+| `npm run build` | Pass; 270 modules, 55.29 s Vite during parallel checks; existing large-chunk warning |
+| `git diff --check` (excluding the verbatim Noto license copy) | Pass; upstream notice retains one historical trailing space |
+
+Evidence: `previews/v1/report.json`, its contact sheet and regression reports. All fifteen requested screen captures were visually inspected. Font-gate verification deliberately delays a real font request, and bounds verification rejects deliberately oversized controls. Parallel cold-start checks competed with the build and timed out; their isolated reruns passed without weakening assertions.
+
+### Open issues
+
+- The unrelated unfinished localization audit still flags legitimate French `MANA` / `Cacao`; no new failures. No edits to that prior work.
+- Native font rendering was not checked on an Android device; browser tests use the real bundled fonts, not mocks or fallback claims. Broader visual restyling belongs to the later prompts.
