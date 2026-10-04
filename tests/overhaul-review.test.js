@@ -26,19 +26,18 @@ function choiceScene() {
   return { scene, screens };
 }
 
-test('maxed boss reward cannot trap the run in an empty choice screen', () => {
+test('maxed boss reward provides a deterministic replacement instead of an empty softlock', () => {
   const { scene, screens } = choiceScene();
   scene.skillSlots = HEROES.balam.skills.slice(0, 4).map(skill => ({ ...skill, level: 6 }));
   scene.passiveSlots = HEROES.balam.passives.slice(0, 2).map(skill => ({ ...skill, level: 5 }));
   for (const id of ['survivors-will', 'jade-bounty']) scene.passives.setLevel(id, 5);
   const random = Math.random;
   try {
-    Math.random = () => .99; // Deliberately exercise the no-swap branch.
+    Math.random = () => .99; // Replacement must not depend on the random roll.
     assert.deepEqual(scene.getSkillChoices(true), []);
     scene.grantBossReward('review-boss');
-    assert.equal(screens.length, 0);
-    assert.equal(scene.pausedForChoice, false);
-    assert.equal(scene.time.paused, false);
+    assert.equal(screens.length, 1);
+    assert.equal(screens[0][4].label, 'Replace a skill');
   } finally { Math.random = random; }
 });
 
@@ -100,15 +99,16 @@ test('ended runs reject pending new, upgrade, stat and replacement callbacks', (
   const first = { ...HEROES.balam.skills[0], level: 1, remaining: 0 };
   scene.skillSlots = [first];
   let completed = 0;
-  const replacement = { ...HEROES.balam.skills[1], kind: 'active', choiceType: 'swap' };
-  scene.applyChoice(replacement, () => completed++);
+  scene.skillSlots=HEROES.balam.skills.slice(0,4).map(skill=>({...skill,level:1,remaining:0}));
+  const replacement = { ...HEROES.balam.skills[4], kind: 'active' };
+  scene.showReplacement(() => completed++,()=>{});
   assert.equal(screens.length, 1);
   scene.ended = true;
   screens[0][2](first, 0);
   scene.applyChoice({ ...replacement, choiceType: 'new-active' }, () => completed++);
   scene.applyChoice({ ...first, choiceType: 'upgrade-active' }, () => completed++);
   scene.applyChoice({ kind: 'stat', stat: 'damage', amount: 99 }, () => completed++);
-  assert.deepEqual(scene.skillSlots, [first]);
+  assert.deepEqual(scene.skillSlots.map(skill=>skill.id),HEROES.balam.skills.slice(0,4).map(skill=>skill.id));
   assert.equal(first.level, 1);
   assert.equal(scene.stats.damage, 1);
   assert.equal(completed, 0);

@@ -16,8 +16,8 @@ test('generic passive state renders the specified counter, timer and stack fixtu
  assert.match(passiveStateMarkup({type:'counter',value:-1,max:0}),/0\/1/);
 });
 
-test('card kind keeps upgrades and swaps in their skill colour and legacy ally cards are classified',()=>{
- for(const kind of ['active','passive','ally','stat'])assert.equal(cardKind({kind,choiceType:'swap'}),kind);
+test('card kind keeps upgrades in their skill colour and legacy ally cards are classified',()=>{
+ for(const kind of ['active','passive','ally','stat'])assert.equal(cardKind({kind,choiceType:'upgrade-active'}),kind);
  assert.equal(cardKind({supportPortrait:'saintess'}),'ally');
  assert.equal(cardKind({meta:'New support skill'}),'ally');
  assert.equal(cardKind({stat:'maxHp'}),'stat');

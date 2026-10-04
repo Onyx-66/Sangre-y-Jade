@@ -283,38 +283,58 @@ export class Hud {
     setTimeout(() => node.remove(), 2450);
   }
 
-  showChoice(title, cards, onChoose, subtitle = 'Choose an upgrade.', secondary=null) {
+  showChoice(title, cards, onChoose, subtitle = 'Choose an upgrade.', secondary=null, presentation={}) {
     const overlay = document.createElement('div');
     overlay.className = 'modal-backdrop';
+    if(presentation.className)overlay.classList.add(presentation.className);
+    if(presentation.stage)overlay.dataset.stage=presentation.stage;
     overlay.innerHTML = `
       <section class="modal" role="dialog" aria-modal="true" aria-labelledby="choice-title">
-        <h2 id="choice-title">${title}</h2>
-        <p class="panel-subtitle">${subtitle}</p>
+        <h2 id="choice-title">${escapeHtml(title)}</h2>
+        <p class="panel-subtitle">${escapeHtml(subtitle)}</p>
         <div class="card-grid"></div>
       </section>`;
     const grid = overlay.querySelector('.card-grid');
     cards.forEach((card, index) => {
-      const button = document.createElement('button');
+      const button = document.createElement(presentation.readOnly?'article':'button');
       button.className = 'choice-card';
       const kind=cardKind(card);
       button.dataset.kind=kind;
       button.dataset.choice=card.id || String(index);
+      if(card.innate)button.dataset.innateTrait='';
       const allyDetails=card.signature?`<div class="ally-card-details"><span>${escapeHtml(t('Role: {role}',{role:t(card.role)}))}</span><span>${escapeHtml(t('Signature: {name}',{name:t(card.signature.name)}))}</span><span>${escapeHtml(t('Passives: {passives}',{passives:card.passives.map(skill=>t(skill.name)).join(', ')}))}</span></div>`:'';
-      button.innerHTML = `<span class="skill-ribbon" style="background-image:url('${artUrl(`ui/ribbon-${kind}.png`)}')">${t(kind.toUpperCase())}</span><span class="card-icon">${iconMarkup(card)}</span><h3>${escapeHtml(t(card.name))}</h3><p>${escapeHtml(t(skillDescription(card)))}</p>${allyDetails}${card.meta ? `<div class="card-tags"><span class="tag">${escapeHtml(t(card.meta))}</span></div>` : ''}`;
-      button.addEventListener('click', () => {
+      button.innerHTML = `<span class="skill-ribbon" style="background-image:url('${artUrl(`ui/ribbon-${kind}.png`)}')">${t(card.innate?'Basic trait':kind.toUpperCase())}</span><span class="card-icon">${iconMarkup(card)}</span><h3>${escapeHtml(t(card.name))}</h3><p>${escapeHtml(t(skillDescription(card)))}</p>${allyDetails}${card.meta ? `<div class="card-tags"><span class="tag">${escapeHtml(t(card.meta))}</span></div>` : ''}`;
+      button.title=t(skillDescription(card));
+      if(!presentation.readOnly)button.addEventListener('click', () => {
         overlay.remove();
         onChoose(card, index);
       }, { once: true });
       grid.append(button);
     });
-    if(secondary){const button=document.createElement('button');button.className='btn ghost choice-secondary';button.dataset.choiceCancel='';button.textContent=t(secondary.label);button.onclick=()=>{overlay.remove();secondary.action();};overlay.querySelector('.modal').append(button);}
+    const actions=document.createElement('div');actions.className='panel-actions choice-actions';
+    for(const [action,primary] of [[secondary,false],[presentation.primary,true]]){
+      if(!action)continue;
+      const button=document.createElement('button');button.className=`btn ${primary?'primary':'ghost'} choice-secondary`;
+      if(!primary)button.dataset.choiceCancel='';
+      if(action.id)button.dataset.action=action.id;
+      button.textContent=t(action.label);button.onclick=()=>{overlay.remove();action.action();};actions.append(button);
+    }
+    if(actions.childElementCount)overlay.querySelector('.modal').append(actions);
     this.el.append(overlay);
-    requestAnimationFrame(() => grid.querySelector('button')?.focus());
+    requestAnimationFrame(() => (grid.querySelector('button')||actions.querySelector('button'))?.focus());
     translateDOM(overlay);
     return overlay;
   }
 
-  showPause(onResume, onExit) {
+  showSkills(loadout,onBack) {
+    const cards=['active','passive','innate'].flatMap(kind=>(loadout[kind]||[])
+      .map(skill=>({...skill,kind:kind==='innate'?'passive':kind,innate:kind==='innate',
+        name:`${skill.name} · Lv ${skill.level}`})));
+    return this.showChoice('Skills',cards,()=>{},'Equipped skills and innate traits.',
+      {label:'Back',id:'skills-back',action:onBack},{className:'skills-readonly',readOnly:true});
+  }
+
+  showPause(onResume, onExit, onSkills) {
     if (this.el.querySelector('.modal-backdrop')) return;
     const overlay = document.createElement('div');
     overlay.className = 'modal-backdrop';
@@ -322,10 +342,11 @@ export class Hud {
       <section class="modal" role="dialog" aria-modal="true">
         <h2>Paused</h2>
         <p class="panel-subtitle">The game is paused.</p>
-        <div class="panel-actions"><button class="btn primary" data-resume>Resume</button><button class="btn danger" data-exit>End Run</button></div>
+        <div class="panel-actions"><button class="btn primary" data-resume>Resume</button>${onSkills?'<button class="btn ghost" data-skills>Skills</button>':''}<button class="btn danger" data-exit>End Run</button></div>
       </section>`;
     overlay.querySelector('[data-resume]').addEventListener('click', () => { overlay.remove(); onResume(); });
     overlay.querySelector('[data-exit]').addEventListener('click', () => { overlay.remove(); onExit(); });
+    overlay.querySelector('[data-skills]')?.addEventListener('click',()=>{overlay.remove();onSkills();});
     this.el.append(overlay);
     overlay.querySelector('[data-resume]').focus();
     translateDOM(overlay);

@@ -1,0 +1,35 @@
+/* Replacement steps keep their actions visible at phone landscape sizes. */
+.skill-pick .choice-actions,.replacement-choice .choice-actions,.skills-readonly .choice-actions{position:static;margin:0;padding:0;background:none;gap:8px}
+.replacement-choice .modal,.skills-readonly .modal{width:min(950px,calc(100vw - 20px));min-height:0}
+.replacement-choice .modal .card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;align-self:stretch;grid-auto-rows:minmax(0,1fr)}
+.replacement-choice[data-stage=remove] .modal .card-grid:has(>:nth-child(4)){grid-template-columns:repeat(3,minmax(0,1fr))}
+.replacement-choice[data-stage=confirm] .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.replacement-choice[data-stage=confirm] .modal .card-tags{display:flex;margin:0}
+.replacement-choice article.choice-card,.skills-readonly article.choice-card{cursor:default;transform:none}
+.replacement-choice .choice-card,.skills-readonly .choice-card{min-width:0;overflow-wrap:anywhere}
+.replacement-choice[data-stage=remove] .choice-card p{display:none}
+.skills-readonly .modal .card-grid{max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:max-content;align-self:stretch;padding:3px;margin:0}
+.skills-readonly .modal .card-grid:has(>:nth-child(4)){grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-height:520px){
+ .replacement-choice .modal{gap:5px;padding:10px}
+ .replacement-choice .modal h2{font-size:22px}
+ .replacement-choice .modal>.panel-subtitle{font-size:11px;line-height:1.25!important}
+ .replacement-choice .choice-card{padding:6px;gap:2px}
+ .replacement-choice .choice-card h3{font-size:14px;line-height:1.15}
+ .replacement-choice .choice-card p{font-size:11px;line-height:1.25!important}
+ .replacement-choice .skill-ribbon{min-height:19px;font-size:10px;padding:2px 7px}
+ .replacement-choice .card-icon{width:30px;height:30px}
+ .replacement-choice .choice-secondary,.skill-pick .choice-secondary{min-height:36px;padding:5px 12px;font-size:13px}
+ .skills-readonly .modal .card-grid{max-height:58dvh}
+ .skills-readonly .modal .choice-card{padding:6px;gap:2px}
+ .skills-readonly .modal .choice-card h3{font-size:14px;line-height:1.15}
+ .skills-readonly .modal .choice-card p{font-size:11px;line-height:1.25!important}
+ .skills-readonly .modal .card-icon{width:26px;height:26px}
+ .skills-readonly .modal .skill-ribbon{min-height:19px;font-size:10px;padding:2px 7px}
+}
+@media(max-width:540px) and (orientation:portrait){
+ .replacement-choice .modal .card-grid,.skills-readonly .modal .card-grid,.skills-readonly .modal .card-grid:has(>:nth-child(4)){grid-template-columns:1fr}
+ .replacement-choice[data-stage=confirm] .modal .card-grid{grid-template-columns:1fr}
+ .replacement-choice[data-stage=remove] .modal .card-grid:has(>:nth-child(4)){grid-template-columns:repeat(2,minmax(0,1fr))}
+ .replacement-choice[data-stage=remove] .choice-card{display:flex;text-align:center}
+}

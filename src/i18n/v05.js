@@ -1,7 +1,7 @@
 export const v05Messages=[
  ['VERSION 0.5','VERSION 0.5','الإصدار 0.5'],
  ['Move with WASD/arrow keys or the left joystick. Cast with Q/E/R/T. Dash with Space. In manual mode, hold F, click the arena, or hold Attack. Esc pauses.','Déplacez-vous avec WASD, les flèches ou le joystick. Compétences : Q/E/R/T. Esquive : Espace. En mode manuel, maintenez F, le clic ou Attaquer. Échap : pause.','تحرك بأزرار WASD أو الأسهم أو عصا التحكم. المهارات: Q/E/R/T. الاندفاع: المسافة. للهجوم اليدوي اضغط مطولا على F أو الساحة أو زر الهجوم. Esc للإيقاف المؤقت.'],
- ['Choose a hero, then press Continue. Equip up to 4 active skills.','Choisissez un héros, puis Continuer. Jusqu’à 4 compétences actives.','اختر بطلا ثم اضغط متابعة. جهز حتى 4 مهارات نشطة.'],
+ ['Start with 3 active skills and 1 passive. More slots unlock at levels 10 and 20.','Commencez avec 3 compétences actives et 1 passive. Autres emplacements aux niveaux 10 et 20.','ابدأ بـ3 مهارات نشطة و1 سلبية. تفتح خانات إضافية في المستويين 10 و20.'], // TODO native review
  ['Continue →','Continuer →','← متابعة'],
  ['Choose Your Support','Choisissez votre soutien','اختر المساند'],
  ['One support per run. Choose 3 skills; they activate automatically.','Un soutien par partie. Choisissez 3 compétences automatiques.','مساند واحد في الجولة. اختر 3 مهارات تعمل تلقائيا.'],

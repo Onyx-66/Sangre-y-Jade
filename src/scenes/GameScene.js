@@ -5,7 +5,7 @@ import { ENEMIES, BOSSES, GEAR } from '../data/world.js';
 import { MODIFIERS } from '../data/heroes.js';
 import { Hud } from '../systems/Hud.js';
 import { ALLY_LEVEL, enemyPool, canSpawnEnemy, bossForHero, spawnOutsideView, facingFor } from '../systems/CombatRules.js';
-import { SLOT_RULES, slotCount, draftSkills, draftMilestoneSkills } from '../systems/SkillDraft.js';
+import { SLOT_RULES, slotCount, draftSkills, draftMilestoneSkills, replacementKinds, draftReplacements } from '../systems/SkillDraft.js';
 import { SupportSystem } from '../systems/SupportSystem.js';
 import { allyLevelEvent, dangerousEnemy } from '../data/supports.js';
 import { applyProjectileTint, chainAttack as performChainAttack, restoreSkillMana, ringEffect as performRingEffect } from '../systems/SkillCombat.js';
@@ -860,11 +860,8 @@ export class GameScene extends Phaser.Scene {
     }
     this.pauseForSelection();
     const cards = this.getSkillChoices(true);
-    // Maxed loadouts can have no legal skill card when the rare swap is absent.
-    // Keep the gear reward; never strand the player in an empty modal.
-    if(!cards.length){this.audio.music(this.mapData.music);this.finishSelection();return;}
-    const show=()=>this.hud.showChoice('Boss Defeated',cards,card=>this.applyChoice(card,()=>{this.audio.music(this.mapData.music);this.finishSelection();},show),'Boss reward: choose a skill upgrade.');
-    show();
+    if(!cards.length&&!this.getReplaceableSkills().length){this.audio.music(this.mapData.music);this.finishSelection();return;}
+    this.showSkillPick('Boss Defeated',cards,()=>{this.audio.music(this.mapData.music);this.finishSelection();},'Boss reward: choose a skill upgrade.');
   }
 
   applyGear(gear) {
@@ -952,8 +949,7 @@ export class GameScene extends Phaser.Scene {
         else afterSupport();
       }else afterSupport();
     };
-    const show=()=>this.hud.showChoice(`Level ${earnedLevel}`,cards,card=>this.applyChoice(card,afterPick,show));
-    show();
+    this.showSkillPick(`Level ${earnedLevel}`,cards,afterPick);
   }
 
   showSkillMilestone(earnedLevel,onDone) {
@@ -963,14 +959,14 @@ export class GameScene extends Phaser.Scene {
     this.completedSkillMilestones.add(earnedLevel);
     this.hud.showUnlock?.(kind);
     const cards=this.getMilestoneChoices(kind,earnedLevel);
-    if(!cards.length){
+    if(!cards.length&&!this.getReplaceableSkills().length){
       // Hero-only passives arrive in later conversion steps; do not invent placeholder skills.
       this.hud.toast(kind==='passive'?'Passive slot 2 unlocked; passive skills arrive in a later update.':'Skill slot unlocked.');
       onDone();
       return;
     }
     const title=kind==='passive'?'Passive Slot Unlocked':'Fourth Active Slot Unlocked';
-    this.hud.showChoice(title,cards,card=>this.applyChoice(card,()=>{this.skillAudio?.ui?.('milestone-pick');onDone();},()=>this.finishSelection()),`Choose one ${kind} skill.`);
+    this.showSkillPick(title,cards,()=>{this.skillAudio?.ui?.('milestone-pick');onDone();},`Choose one ${kind} skill.`);
   }
 
   pauseForSelection(){this.pausedForChoice=true;this.skillAudio?.pause?.();this.physics.pause();this.tweens.pauseAll();this.time.paused=true;this.releaseAttack();this.hud.move={x:0,y:0};}
@@ -994,34 +990,101 @@ export class GameScene extends Phaser.Scene {
     return draftSkills({activeSkills:this.heroData.skills,passiveSkills:this.heroData.passives||[],activeSlots:this.skillSlots,passiveSlots:this.passiveSlots,
       innateSkills:[...this.passives.equipped.values()].filter(entry=>entry.innate).map(entry=>({...entry.passive,level:entry.level})),
       activeCount,passiveCount,modifiers:MODIFIERS,boss:bossReward,shuffle,
-      random:Math.random,guaranteePassive:heroLevel%2===0});
+      guaranteePassive:heroLevel%2===0});
   }
 
   getMilestoneChoices(kind,heroLevel=this.stats.level) {
     return draftMilestoneSkills(kind,{activeSkills:this.heroData.skills,passiveSkills:this.heroData.passives||[],activeSlots:this.skillSlots,passiveSlots:this.passiveSlots,
-      activeCount:slotCount('active',heroLevel),passiveCount:slotCount('passive',heroLevel),shuffle,random:Math.random});
+      activeCount:slotCount('active',heroLevel),passiveCount:slotCount('passive',heroLevel),shuffle});
   }
 
-  applyChoice(card,onDone=()=>{},onCancel=()=>this.finishSelection()) {
+  replacementOptions() {
+    const level=this.loadoutLevel||this.stats.level;
+    return {activeSkills:this.heroData.skills,passiveSkills:this.heroData.passives||[],
+      activeSlots:this.skillSlots,passiveSlots:this.passiveSlots,
+      activeCount:slotCount('active',level),passiveCount:slotCount('passive',level),shuffle};
+  }
+
+  getReplaceableSkills() {
+    const kinds=replacementKinds(this.replacementOptions());
+    return kinds.flatMap(kind=>(kind==='passive'?this.passiveSlots:this.skillSlots)
+      .filter(skill=>!SLOT_RULES.innate.includes(skill.id))
+      .map(skill=>({...skill,kind,name:`${skill.name} · Lv ${skill.level}`})));
+  }
+
+  showSkillPick(title,cards,onDone,subtitle='Choose an upgrade.') {
+    let completed=false;
+    const current=()=>!completed&&!this.ended;
+    // Keep each kind's draw stable when Back returns to the same reward.
+    const draws=new Map();
+    const show=()=>{
+      if(!current())return;
+      const secondary=this.getReplaceableSkills().length?{label:'Replace a skill',id:'replace-skill',action:()=>{
+        if(!current())return;
+        this.showReplacement((kind,oldId,newId)=>{
+          if(!current())return;
+          if(!this.replaceSkill(kind,oldId,newId)){show();return;}
+          completed=true;onDone();
+        },show,current,draws);
+      }}:null;
+      this.hud.showChoice(title,cards,card=>{
+        if(!current())return;
+        completed=true;this.applyChoice(card,onDone);
+      },cards.length?subtitle:'No upgrades available. Replace a skill to use this pick.',secondary,{className:'skill-pick'});
+    };
+    show();
+  }
+
+  showReplacement(onConfirm,onBack,current=()=>!this.ended,draws=new Map()) {
+    if(!current())return;
+    const back={label:'Back',id:'replacement-back',action:()=>{if(current())onBack();}};
+    const equipped=this.getReplaceableSkills();
+    if(!equipped.length){onBack();return;}
+    this.hud.showChoice('Choose a skill to remove',equipped,removed=>{
+      if(!current())return;
+      const kind=removed.kind;
+      if(!draws.has(kind))draws.set(kind,draftReplacements(kind,this.replacementOptions()));
+      const candidates=draws.get(kind);
+      if(!candidates.length){onBack();return;}
+      this.hud.showChoice('Choose a replacement',candidates,selected=>{
+        if(!current())return;
+        const added={...selected,level:1,name:`${selected.name} · Lv 1`,meta:'New skill'};
+        this.hud.showChoice('Confirm replacement',[{...removed,meta:'Remove'},added],()=>{},
+          'The new skill starts at level 1. This uses your current pick.',back,
+          {className:'replacement-choice',stage:'confirm',readOnly:true,primary:{label:'Confirm replacement',id:'replacement-confirm',
+            action:()=>{if(current())onConfirm(kind,removed.id,selected.id);}}});
+      },'Choose one unowned skill of the same kind.',back,{className:'replacement-choice',stage:'new'});
+    },'Only full slot kinds can be replaced. Innate traits stay equipped.',back,{className:'replacement-choice',stage:'remove'});
+  }
+
+  replaceSkill(kind,oldId,newId) {
+    if(this.ended||!this.getReplaceableSkills().some(skill=>skill.kind===kind&&skill.id===oldId))return false;
+    const slots=kind==='passive'?this.passiveSlots:this.skillSlots;
+    const pool=kind==='passive'?this.heroData.passives||[]:this.heroData.skills;
+    const definition=pool.find(skill=>skill.id===newId);
+    if(!definition||SLOT_RULES.innate.includes(newId)||[...this.skillSlots,...this.passiveSlots].some(skill=>skill.id===newId))return false;
+    const index=slots.findIndex(skill=>skill.id===oldId);
+    if(kind==='passive')this.passives.unequip(oldId);
+    slots[index]={...definition,kind,level:1,remaining:0};
+    if(kind==='passive')this.passives.equip(slots[index],1);
+    this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel||this.stats.level));
+    if(kind==='active')this.hud.setCooldown(index,0);
+    this.refreshPassiveHud();
+    this.skillAudio?.ui?.(kind==='passive'?'pick-passive':'pick-active');
+    return true;
+  }
+
+  getSkillLoadout() {
+    return {active:this.skillSlots,passive:this.passiveSlots,
+      innate:[...this.passives.equipped.values()].filter(entry=>entry.innate)
+        .map(entry=>({...entry.passive,level:entry.level,kind:'passive',innate:true}))};
+  }
+
+  applyChoice(card,onDone=()=>{}) {
     if(this.ended)return;
     const kind=card.kind||'active';
     const slots=kind==='passive'?this.passiveSlots:this.skillSlots;
     const pool=kind==='passive'?(this.heroData.passives||[]):this.heroData.skills;
-    if(card.choiceType==='swap'){
-      this.hud.showChoice('Choose a skill to replace',slots.filter(skill=>(skill.kind||kind)===kind),(_,index)=>{
-        if(this.ended)return;
-        const replaceable=slots.map((skill,slotIndex)=>({skill,slotIndex})).filter(({skill})=>(skill.kind||kind)===kind);
-        const target=replaceable[index]?.skill;
-        const slotIndex=replaceable[index]?.slotIndex;
-        if(target&&slotIndex!==undefined){
-          if(kind==='passive')this.passives.unequip(target.id);
-          slots[slotIndex]={...pool.find(skill=>skill.id===card.id)||card,kind,level:1,remaining:0};
-          if(kind==='passive')this.passives.equip(slots[slotIndex],1);
-          this.skillAudio?.ui?.(kind==='passive'?'pick-passive':'pick-active');
-        }
-        this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));this.refreshPassiveHud();onDone();
-      },`The new ${kind} skill starts at level 1.`,{label:'Cancel',action:onCancel});return;
-    }
     if(card.choiceType==='upgrade-passive'&&card.innate){
       const entry=this.passives.equipped.get(card.id);
       if(entry?.innate)this.passives.setLevel(card.id,entry.level+1);
@@ -1035,9 +1098,9 @@ export class GameScene extends Phaser.Scene {
       const existing = slots.find((entry) => entry.id === card.id);
       const maxLevel=kind==='passive'?SLOT_RULES.passive.maxLevel:SLOT_RULES.active.maxLevel;
       if (existing){existing.level=Math.min(maxLevel,existing.level+1);if(kind==='passive')this.passives.setLevel(existing.id,existing.level);}
-    } else {
+    } else if(kind==='stat'||card.stat) {
       this.applyModifier(card);
-    }
+    } else return;
     this.hud.setSkills(this.skillSlots,slotCount('active',this.loadoutLevel));
     this.refreshPassiveHud();
     if(kind==='active'||kind==='passive')this.skillAudio?.ui?.(`pick-${kind}`);
@@ -1173,13 +1236,17 @@ export class GameScene extends Phaser.Scene {
     this.physics.pause();
     this.tweens.pauseAll();
     this.time.paused=true;
-    this.hud.showPause(() => {
+    const resume=() => {
+      if(this.ended)return;
       this.pausedForChoice = false;
       this.physics.resume();
       this.tweens.resumeAll();
       this.time.paused=false;
       this.skillAudio?.resume?.();
-    }, () => this.finishRun(false, true));
+    };
+    const showPause=()=>{if(!this.ended)this.hud.showPause(resume,()=>this.finishRun(false,true),
+      ()=>this.hud.showSkills(this.getSkillLoadout(),showPause));};
+    showPause();
   }
 
   finishRun(victory, abandoned = false) {

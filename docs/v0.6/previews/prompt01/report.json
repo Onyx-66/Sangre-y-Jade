@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-04",
+  "checks": [
+    {
+      "label": "ar-reward-568x320: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-reward-568x320: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-reward-568x320: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-reward-568x320: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-reward-568x320: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "all six full-kind slots are replaceable, without innates",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-568x320: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-568x320: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-568x320: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-568x320: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-568x320: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "Back from remove restores the same three reward cards",
+      "passed": true
+    },
+    {
+      "label": "Back from remove preserves the pick/loadout",
+      "passed": true
+    },
+    {
+      "label": "all six full-kind slots are replaceable, without innates",
+      "passed": true
+    },
+    {
+      "label": "ar-new-568x320: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-new-568x320: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-new-568x320: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-new-568x320: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-new-568x320: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "Back from new restores the same three reward cards",
+      "passed": true
+    },
+    {
+      "label": "Back from new preserves the pick/loadout",
+      "passed": true
+    },
+    {
+      "label": "all six full-kind slots are replaceable, without innates",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-568x320: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-568x320: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-568x320: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-568x320: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-568x320: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "Back from confirm restores the same three reward cards",
+      "passed": true
+    },
+    {
+      "label": "Back from confirm preserves the pick/loadout",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-320x568: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-320x568: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-320x568: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-320x568: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-remove-320x568: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "ar-new-320x568: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-new-320x568: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-new-320x568: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-new-320x568: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-new-320x568: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-320x568: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-320x568: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-320x568: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-320x568: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-confirm-320x568: all controls and cards visible without scrolling",
+      "passed": true
+    },
+    {
+      "label": "confirmation preview is read-only",
+      "passed": true
+    },
+    {
+      "label": "active confirmation updates the slot and ready cooldown then spends one pick",
+      "passed": true
+    },
+    {
+      "label": "new active cooldown sweep resets immediately",
+      "passed": true
+    },
+    {
+      "label": "passive milestone replacement updates PassiveSystem and spends its bonus pick",
+      "passed": true
+    },
+    {
+      "label": "Skills shows all actives/passives plus two innate traits",
+      "passed": true
+    },
+    {
+      "label": "Skills has no selectable card",
+      "passed": true
+    },
+    {
+      "label": "two innate traits listed",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-568x320: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-568x320: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-568x320: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-568x320: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "the read-only list scrolls to reveal both innate traits [{\"id\":\"survivors-will\",\"top\":125.359375,\"bottom\":239.953125,\"clipTop\":84.984375,\"clipBottom\":243},{\"id\":\"jade-bounty\",\"top\":125.359375,\"bottom\":239.953125,\"clipTop\":84.984375,\"clipBottom\":243}]",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-innates-568x320: Arabic RTL",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-innates-568x320: viewport/width fit {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-innates-568x320: footer never overlaps cards {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "ar-skills-innates-568x320: card contents stay within their borders {\"direction\":\"rtl\",\"outside\":[],\"wide\":[],\"footerOverlap\":[],\"cardContentOverflow\":[],\"clipped\":false,\"pageOverflow\":false}",
+      "passed": true
+    },
+    {
+      "label": "Skills Back returns to pause without resuming",
+      "passed": true
+    },
+    {
+      "label": "no runtime/HTTP errors: ",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "ar-reward-568x320.png",
+    "ar-remove-568x320.png",
+    "ar-new-568x320.png",
+    "ar-confirm-568x320.png",
+    "ar-remove-320x568.png",
+    "ar-new-320x568.png",
+    "ar-confirm-320x568.png",
+    "ar-skills-568x320.png",
+    "ar-skills-innates-568x320.png"
+  ]
+}

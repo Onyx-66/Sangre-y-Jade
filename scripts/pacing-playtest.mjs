@@ -79,7 +79,6 @@ try{
    const score=card=>{
     if(card.supportPortrait)return card.id===preferredAlly?100:0;
     if(card.kind==='ally')return ({'saving-grace':100,'jade-ward':90,'sanctuary-dome':80,'lifebond':70,'sacred-fervor':60})[card.id]||20;
-    if(card.choiceType==='swap')return -100;
     let value=priority.includes(card.id)?100-priority.indexOf(card.id)*3:30;
     if(card.choiceType?.startsWith('new-'))value+=8;
     if(card.id==='jade-bounty')value=60;

@@ -125,7 +125,7 @@ test('Balam level 10 offers three owned-hero passives, then consumes its milesto
 });
 test('replacing a Balam passive removes its old listener and modifiers without removing traits',()=>{
  const s=scene();s.applyChoice({...def('bloodlust'),choiceType:'new-passive'});s.passives.emit('kill');assert.ok(s.passives.modifiers().attackSpeedMult>1);
- s.hud.showChoice=(_title,cards,choose)=>choose(cards[0],0);s.applyChoice({...def('stonehide'),choiceType:'swap'});assert.equal(s.passives.equipped.has('bloodlust'),false);assert.equal(s.passiveSlots[0].id,'stonehide');assert.equal(s.passives.modifiers().attackSpeedMult,undefined);assert.ok(s.passives.equipped.has('survivors-will'));assert.ok(s.passives.equipped.has('jade-bounty'));
+ assert.equal(s.replaceSkill('passive','bloodlust','stonehide'),true);assert.equal(s.passives.equipped.has('bloodlust'),false);assert.equal(s.passiveSlots[0].id,'stonehide');assert.equal(s.passives.modifiers().attackSpeedMult,undefined);assert.ok(s.passives.equipped.has('survivors-will'));assert.ok(s.passives.equipped.has('jade-bounty'));
 });
 test('Stone Maw empty trap waits 2.5 armed seconds, and ward recast cannot stack or burst early',()=>{
  const s=scene();cast(s,'stone-maw');const a=addEnemy(s,{},490);advance(s,2.85);assert.equal(a.getData('hp'),1000);advance(s,.05);assert.equal(a.getData('hp'),918);

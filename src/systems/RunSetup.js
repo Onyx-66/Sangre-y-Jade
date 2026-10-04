@@ -5,7 +5,7 @@ import { t } from '../i18n/index.js';
 export function renderRunSetup(app){
  app.currentPage='showRunSetup';const step=Math.max(0,Math.min(3,app.setupStep||0));app.setupStep=step;
  const titles=['Choose Your Hero','Choose a Map','Game Mode','Ready to Play'];
- const subtitles=['Choose a hero, then press Continue. Equip up to 4 active skills.','Choose where you will fight.','Choose how long you want to survive.','Choose your attack controls, then start your run.'];
+ const subtitles=['Start with 3 active skills and 1 passive. More slots unlock at levels 10 and 20.','Choose where you will fight.','Choose how long you want to survive.','Choose your attack controls, then start your run.'];
  let content='';
  if(step===0)content=`<div class="card-grid hero-grid">${heroList().map(hero=>`<button class="choice-card ${hero.id===app.lastSelection.heroId?'selected':''}" data-hero="${hero.id}">${portraitMarkup(hero.id)}<h3>${hero.name}</h3><p><b>${hero.epithet}</b><br>${hero.description}</p><div class="card-tags"><span class="tag">${hero.role}</span><span class="tag">${hero.weapon}</span></div></button>`).join('')}</div>`;
  if(step===1)content=`<div class="card-grid wizard-maps">${MAPS.map((map,i)=>`<button class="choice-card ${map.id===app.lastSelection.mapId?'selected':''}" data-map="${map.id}"><img class="map-thumb" src="${artUrl(`story-${[0,3,2][i]}.webp`)}" alt=""><h3>${map.name}</h3><p>${map.subtitle}</p></button>`).join('')}</div>`;

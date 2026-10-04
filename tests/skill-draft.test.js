@@ -51,15 +51,13 @@ test('normal draft guarantees a free active and an every-second-level passive, w
   assert.ok(evenLevel.every((choice) => ['active', 'passive', 'stat', 'ally'].includes(choice.kind)));
 });
 
-test('swap offers are rare, limited to one, and replace skills only within their kind', () => {
+test('full kinds never receive random swap cards; replacements are a separate action', () => {
   const activeSlots = HEROES.balam.skills.slice(0, 3).map((skill) => ({ ...skill, kind: 'active', level: 1 }));
   const passiveSlots = [{ id: 'owned-passive', name: 'Owned passive', level: 1, kind: 'passive' }];
   const passiveSkills = [1, 2, 3].map((n) => ({ id: `passive-${n}`, name: `Passive ${n}` }));
   const choices = draftSkills({ activeSkills: HEROES.balam.skills, passiveSkills, activeSlots, passiveSlots,
     activeCount: 3, passiveCount: 1, modifiers: MODIFIERS, shuffle: keepOrder, random: () => 0 });
-  const swaps = choices.filter((choice) => choice.choiceType === 'swap');
-  assert.equal(swaps.length, 1);
-  assert.ok(['active', 'passive'].includes(swaps[0].kind));
+  assert.ok(choices.every(choice => choice.choiceType !== 'swap'));
   assert.equal(new Set(choices.map((choice) => choice.id)).size, choices.length);
   const noSwap = draftSkills({ activeSkills: HEROES.balam.skills, activeSlots, activeCount: 3,
     modifiers: MODIFIERS, shuffle: keepOrder, random: () => .99 });
@@ -107,7 +105,7 @@ function choiceHarness(level, pendingLevels, ownedCount = 0) {
   scene.hud = {
     move: { x: 0, y: 0 }, toast: (text) => toasts.push(text), setSkills() {}, setCooldown() {},
     showUnlock: (kind) => unlocks.push(kind),
-    showChoice(title, cards, choose) { screens.push({ title, cards, choose }); },
+    showChoice(title, cards, choose, subtitle, secondary, presentation) { screens.push({ title, cards, choose, subtitle, secondary, presentation }); },
   };
   return { scene, screens, toasts, unlocks };
 }
@@ -127,11 +125,13 @@ test('companion screens occur only at level 5 recruitment and levels 8 and 14 pi
  assert.deepEqual(recruitLevels,[5]);
  assert.deepEqual(pickLevels,[8,14]);
  assert.deepEqual(screens.map(screen=>screen.title).filter(title=>/^Level \d+$/.test(title)),Array.from({length:10},(_,i)=>`Level ${i+5}`));
- assert.ok(screens.every(screen=>/^Level \d+$/.test(screen.title)||screen.title==='Choose a skill to replace'));
+ assert.ok(screens.every(screen=>/^Level \d+$/.test(screen.title)||['Passive Slot Unlocked','Choose a skill to remove','Choose a replacement','Confirm replacement'].includes(screen.title)));
  assert.ok(!('offerChange' in scene.support));
 });
 
 function chooseFirst(scene, screen) {
+  if(screen.presentation?.primary){screen.presentation.primary.action();return;}
+  if(!screen.cards.length&&screen.secondary?.label==='Replace a skill'){screen.secondary.action();return;}
   assert.ok(screen.cards.length, `${screen.title} should offer at least one pick`);
   screen.choose(screen.cards[0]);
 }

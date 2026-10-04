@@ -17,13 +17,13 @@ const uniqueById = (items) => [...new Map(items.map((item) => [item.id, item])).
 
 /**
  * Drafts three distinct choices from the active/passive loadout pools.
- * New skills only appear while that kind has a free slot; full loadouts can
- * receive one 15% same-kind swap offer instead.
+ * New cards only appear while that kind has a free slot. Full loadouts use
+ * the separate deterministic replacement action, never a random swap card.
  */
 export function draftSkills({
   activeSkills = [], passiveSkills = [], activeSlots = [], passiveSlots = [], innateSkills = [],
   activeCount = 3, passiveCount = 1, modifiers = [], boss = false,
-  shuffle = (items) => [...items], random = Math.random, guaranteePassive = false,
+  shuffle = (items) => [...items], guaranteePassive = false,
 } = {}) {
   const activeOwned = activeSlots;
   const passiveOwned = passiveSlots;
@@ -42,15 +42,6 @@ export function draftSkills({
   const statCards = modifiers.map((modifier) => card(modifier, 'stat', 'stat', 'Stat upgrade'));
   const freeActive = activeOwned.length < activeCount;
   const freePassive = passiveOwned.length < passiveCount;
-  const canSwapActive = !freeActive && activeNew.length > 0;
-  const canSwapPassive = !freePassive && passiveNew.length > 0;
-  let swap = null;
-  if ((canSwapActive || canSwapPassive) && random() < 0.15) {
-    const kind = canSwapActive && canSwapPassive ? (random() < 0.5 ? 'active' : 'passive') : canSwapActive ? 'active' : 'passive';
-    const replacement = shuffle(kind === 'active' ? activeNew : passiveNew)[0];
-    if (replacement) swap = { ...replacement, choiceType: 'swap', meta: `Swap ${kind} skill` };
-  }
-
   const skillsOnly = [
     ...shuffle([...activeUpgrades, ...passiveUpgrades,...innateUpgrades]),
     ...(boss ? shuffle([...(freeActive ? activeNew : []), ...(freePassive ? passiveNew : [])]) : []),
@@ -66,21 +57,11 @@ export function draftSkills({
 
   // Boss rewards prioritize skill upgrades, but free slots still get their required new skill.
   for (const candidate of skillsOnly) add(candidate);
-  if (swap && !picks.some((picked) => picked.id === swap.id)) {
-    if (picks.length >= 3) {
-      let removable = -1;
-      for (let index = picks.length - 1; index >= 0; index -= 1) {
-        if (!required.some((entry) => entry.id === picks[index].id)) { removable = index; break; }
-      }
-      if (removable >= 0) picks.splice(removable, 1);
-    }
-    add(swap);
-  }
   if (!boss) {
     for (const candidate of shuffle(statCards)) add(candidate);
     const allOwnedSkillsMaxed=activeUpgrades.length===0&&passiveUpgrades.length===0&&innateUpgrades.length===0
       &&activeOwned.length+passiveOwned.length>0&&(!freeActive||activeNew.length===0)&&(!freePassive||passiveNew.length===0);
-    if (allOwnedSkillsMaxed&&!swap) {
+    if (allOwnedSkillsMaxed) {
       const heal=card({ id: 'draft-heal', name: 'Cacao Remedy', icon: '♥', description: 'Restore 30 health.' }, 'stat', 'stat', 'Restore health', { stat: 'heal', amount: 30 });
       if(picks.length>=3)picks.pop();
       add(heal);
@@ -108,12 +89,28 @@ export function draftMilestoneSkills(kind, options = {}) {
   if(options.boss!==false&&free){
     for(const candidate of shuffle(newCards))if(picks.length<3&&!picks.some(item=>item.id===candidate.id))picks.push(candidate);
   }
-  if(!free&&newCards.length&&(options.random||Math.random)()<.15){
-    const replacement=shuffle(newCards)[0];
-    if(replacement&&!picks.some(item=>item.id===replacement.id)){
-      if(picks.length>=3)picks.pop();
-      picks.push({...replacement,choiceType:'swap',meta:`Swap ${kind} skill`});
-    }
-  }
   return uniqueById(picks).slice(0,3);
+}
+
+function unownedSkills(kind, options) {
+  const owned = new Set([...(options.activeSlots || []), ...(options.passiveSlots || [])]
+    .map(skill => skill.id));
+  const pool = kind === 'passive' ? options.passiveSkills || [] : options.activeSkills || [];
+  return uniqueById(pool).filter(skill => !owned.has(skill.id) && !SLOT_RULES.innate.includes(skill.id));
+}
+
+/** Only full kinds with a genuinely unowned skill permit replacement. */
+export function replacementKinds(options = {}) {
+  return ['active', 'passive'].filter(kind => {
+    const slots = kind === 'passive' ? options.passiveSlots || [] : options.activeSlots || [];
+    const count = kind === 'passive' ? options.passiveCount ?? 1 : options.activeCount ?? 3;
+    return count > 0 && slots.length >= count && unownedSkills(kind, options).length > 0;
+  });
+}
+
+export function draftReplacements(kind, options = {}) {
+  if (!replacementKinds(options).includes(kind)) return [];
+  const shuffle = options.shuffle || (items => [...items]);
+  return shuffle(unownedSkills(kind, options)).slice(0, 3)
+    .map(skill => card(skill, kind, `new-${kind}`, `New ${kind} skill`));
 }
