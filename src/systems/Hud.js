@@ -1,5 +1,5 @@
 import { iconMarkup, artUrl } from '../art/uiArt.js';
-import { t, translateDOM } from '../i18n/index.js';
+import { t, translateDOM, getLanguage } from '../i18n/index.js';
 import { interfaceIcon } from '../art/interfaceIcons.js';
 import { SUPPORTS } from '../data/supports.js';
 import { skillDescription } from '../data/heroes.js';
@@ -29,20 +29,20 @@ export class Hud {
           <div class="vital-row vital-mana">${interfaceIcon('magic')}<div class="bar mana"><span></span><label>MANA</label></div></div>
         </div>
         <div class="hud-clock">00:00</div>
-        <div class="hud-currency"><span class="hud-counter" title="Cacao">${interfaceIcon('cacao')}<span><small>Cacao</small><b data-cacao>0</b></span></span><span class="hud-counter" title="Kills">${interfaceIcon('kills')}<span><small>Kills</small><b data-kills>0</b></span></span><button class="pause-btn" aria-label="Pause">${interfaceIcon('pause')}</button></div>
+        <div class="hud-currency"><span class="hud-counter" data-hud-tip data-tooltip="${t('Cacao')}" tabindex="0" title="Cacao">${interfaceIcon('cacao')}<span><small>Cacao</small><b data-cacao>0</b></span></span><span class="hud-counter" data-hud-tip data-tooltip="${t('Kills')}" tabindex="0" title="Kills">${interfaceIcon('kills')}<span><small>Kills</small><b data-kills>0</b></span></span><button class="pause-btn" aria-label="Pause">${interfaceIcon('pause')}</button></div>
       </div>
       <div class="boss-wrap" hidden><div class="boss-name"></div><div class="boss-bar"><span></span></div></div>
       <div class="joystick" aria-label="Movement joystick"><div class="joystick-knob"></div></div>
       <div class="xp-dock"><div class="xp-heading">${interfaceIcon('xp')}<b data-level>Level 1</b></div><div class="bar xp"><span></span><label>0 / 20 XP</label></div></div>
-      <div class="combat-status"><span data-attack-mode>${this.settings.attackMode==='manual'?'Manual attack':'Auto-attack'}</span><span data-ally>Ally unlocks at level 5</span></div>
-      <div class="ally-panel" aria-label="${t('Ally')}"><button class="ally-portrait" data-support disabled aria-label="Support Loadout"></button><div class="ally-skills">${Array.from({length:3},(_,i)=>`<span class="ally-skill empty" data-ally-skill="${i}"><span class="skill-icon"></span><span class="ally-cooldown"></span></span>`).join('')}</div><img class="ally-rank-badge" data-ally-rank hidden alt=""><small class="ally-name">${t('Ally unlocks at level 5')}</small></div>
+      <button id="auto-indicator" type="button" data-hud-tip></button>
+      <div class="ally-panel" aria-label="${t('Ally')}"><div class="ally-lock" data-ally-lock>${interfaceIcon('lock')}<b data-ally-level></b></div><button class="ally-portrait" data-support disabled aria-label="Support Loadout"></button><div class="ally-skills">${Array.from({length:3},(_,i)=>`<span class="ally-skill empty" data-ally-skill="${i}"><span class="skill-icon"></span><span class="ally-cooldown"></span></span>`).join('')}</div><img class="ally-rank-badge" data-ally-rank hidden alt=""><small class="ally-name"></small></div>
       <div class="skill-dock">
       <div class="passive-row"><div class="innate-traits">${SLOT_RULES.innate.map(id=>`<span class="innate-slot" data-innate="${id}" tabindex="0"></span>`).join('')}</div><div class="passive-slots">${Array.from({length:2},(_,i)=>`<div class="passive-slot" data-passive="${i}" tabindex="0"><span class="passive-content"></span></div>`).join('')}</div></div>
       <div class="skills">
         <button class="attack-btn" data-attack aria-label="Attack" ${this.settings.attackMode==='manual'?'':'hidden'}><span class="key">F</span>${iconMarkup({id:'ui-hud-attack'})}</button>
         ${Array.from({length:SLOT_RULES.active.keys.length},(_,i) => `<button class="skill-btn active-slot empty" data-skill="${i}" aria-label="Empty skill slot ${i + 1}"><span class="key" dir="ltr">${SLOT_RULES.active.keys[i]}</span><span class="skill-icon">＋</span><span class="cooldown"></span><span class="slot-level"></span></button>`).join('')}
         <button class="dash-btn" data-dash aria-label="Dash"><span class="key">SPACE</span><span class="skill-icon">${iconMarkup({id:'ui-hud-dash'})}</span><span class="cooldown"></span></button>
-      </div></div><div class="skill-tooltip" role="tooltip" hidden></div>`;
+      </div></div><div class="skill-tooltip" id="hud-tooltip" role="tooltip" hidden></div>`;
     this.root.replaceChildren(this.el);
     this.hpFill = this.el.querySelector('.hp span');
     this.hpLabel = this.el.querySelector('.hp label');
@@ -79,7 +79,7 @@ export class Hud {
       if(event.target.closest('[data-ally-skill]')||this.el.querySelector('[data-support]').disabled)return;
       this.callbacks.support?.();
     });
-    for (const slot of this.el.querySelectorAll('[data-passive],[data-innate],[data-ally-skill]')) {
+    for (const slot of this.el.querySelectorAll('[data-passive],[data-innate],[data-ally-skill],[data-hud-tip]')) {
       const show = (event) => { event.stopPropagation(); this.showTooltip(slot); };
       slot.addEventListener('pointerdown', show);
       slot.addEventListener('pointerenter', show);
@@ -88,7 +88,8 @@ export class Hud {
       slot.addEventListener('blur', () => this.hideTooltip());
       slot.addEventListener('keydown', event => { if (event.key === 'Escape') this.hideTooltip(); });
     }
-    this.el.addEventListener('pointerdown', event => { if (!event.target.closest('[data-passive],[data-innate],[data-ally-skill]')) this.hideTooltip(); });
+    this.el.addEventListener('pointerdown', event => { if (!event.target.closest('[data-passive],[data-innate],[data-ally-skill],[data-hud-tip]')) this.hideTooltip(); });
+    this.setAttackMode(this.settings.attackMode);
     this.setPassives([], SLOT_RULES.passive.start);
     this.setInnates(INNATE_HUD);
     this.setAlly(null);
@@ -143,13 +144,16 @@ export class Hud {
   }
 
   setAlly(ally){
+    const panel=this.el.querySelector('.ally-panel');
+    panel.classList.toggle('locked',!ally);
+    this.el.querySelector('[data-ally-lock]').hidden=!!ally;
+    this.el.querySelector('[data-ally-level]').textContent=t('Lv {n}',{n:5});
     const button=this.el.querySelector('[data-support]');
     button.disabled=!ally;
-    const name=ally?t(ally.name || SUPPORTS[ally.id]?.name || ally.id):t('Ally unlocks at level 5');
-    const portrait=ally?iconMarkup({supportPortrait:ally.id}):'<span aria-hidden="true">?</span>';
+    const name=ally?t(ally.name || SUPPORTS[ally.id]?.name || ally.id):'';
+    const portrait=ally?iconMarkup({supportPortrait:ally.id}):'';
     if(button.innerHTML!==portrait)button.innerHTML=portrait;
     this.el.querySelector('.ally-name').textContent=ally?t('{name} · Lv {n}',{name,n:ally.level}):name;
-    if(ally)this.el.querySelector('[data-ally]').textContent=t('Support: {name} · Lv {n}',{name,n:ally.level});
     const badge=this.el.querySelector('[data-ally-rank]');
     badge.hidden=!ally;
     if(ally){badge.src=artUrl(`ui/rank-badge-${clamp(ally.rank||1,1,5)}.png`);badge.alt=t('Companion rank {n}',{n:ally.rank||1});badge.title=badge.alt;}
@@ -164,6 +168,17 @@ export class Hud {
       slot.setAttribute('aria-label',slot.dataset.tooltip);
       slot.tabIndex=skill?0:-1;
     });
+  }
+
+  setAttackMode(mode) {
+    const indicator=this.el.querySelector('#auto-indicator');
+    const manual=mode==='manual';
+    if(indicator.dataset.mode!==(manual?'manual':'auto'))indicator.innerHTML=interfaceIcon(manual?'manual':'auto');
+    indicator.dataset.mode=manual?'manual':'auto';
+    indicator.dataset.tooltip=t(manual?'Manual attack is on. Hold F or Attack to fire.':'Auto-attack is on. Basic attacks fire automatically.');
+    indicator.setAttribute('aria-label',indicator.dataset.tooltip);
+    indicator.title=indicator.dataset.tooltip;
+    this.el.querySelector('[data-attack]').hidden=!manual;
   }
 
   setPassives(slots, count = SLOT_RULES.passive.start) {
@@ -190,6 +205,8 @@ export class Hud {
 
   showTooltip(slot) {
     if(!slot.dataset.tooltip)return;
+    this.tooltip.dir=getLanguage()==='ar'?'rtl':'ltr';
+    slot.setAttribute('aria-describedby','hud-tooltip');
     this.tooltip.textContent=slot.dataset.tooltip;this.tooltip.hidden=false;
     const bounds=slot.getBoundingClientRect(),rect=this.tooltip.getBoundingClientRect();
     this.tooltip.style.left=`${clamp(bounds.left+bounds.width/2-rect.width/2,6,innerWidth-rect.width-6)}px`;
@@ -213,6 +230,7 @@ export class Hud {
   }
 
   setStats(state) {
+    this.setAttackMode(this.settings.attackMode);
     const hp = clamp(state.hp / state.maxHp, 0, 1);
     const mana = state.maxMana ? clamp(state.mana / state.maxMana, 0, 1) : 0;
     const xp = clamp(state.xp / state.nextXp, 0, 1);
@@ -229,6 +247,8 @@ export class Hud {
     this.clock.textContent = `${String(Math.floor(left / 60)).padStart(2, '0')}:${String(left % 60).padStart(2, '0')}`;
     this.cacao.textContent = state.cacao;
     this.kills.textContent = state.kills;
+    this.cacao.style.setProperty('--digit-count',String(state.cacao).length);
+    this.kills.style.setProperty('--digit-count',String(state.kills).length);
   }
 
   setSkills(slots, activeSlotCount = SLOT_RULES.active.keys.length) {

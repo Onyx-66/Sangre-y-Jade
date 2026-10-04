@@ -11,4 +11,6 @@ export const v06Messages = [
  ['New skill','Nouvelle compétence','مهارة جديدة'], // TODO native review
  ['Skills','Compétences','المهارات'], // TODO native review
  ['Equipped skills and innate traits.','Compétences équipées et traits innés.','المهارات المجهزة والسمات الفطرية.'], // TODO native review
+ ['Auto-attack is on. Basic attacks fire automatically.','Attaque automatique activée. Les attaques de base partent seules.','الهجوم التلقائي مفعل. تنطلق الهجمات الأساسية تلقائيا.'], // TODO native review
+ ['Manual attack is on. Hold F or Attack to fire.','Attaque manuelle activée. Maintenez F ou Attaquer.','الهجوم اليدوي مفعل. اضغط مطولا على F أو زر الهجوم.'], // TODO native review
 ];
