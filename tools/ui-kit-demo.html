@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sangre y Jade — UI kit laboratory (dev only)</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/src/fonts-v06.css">
+  <link rel="stylesheet" href="./ui-kit-demo.css">
+</head>
+<body>
+  <header>
+    <h1>UI kit laboratory</h1>
+    <p>Development preview only. These assets are not applied to the game yet. Labels below are HTML, never baked into the artwork.</p>
+    <a href="#components">41 assets · three sizes each</a>
+    <label>Scene backdrop <select id="backdrop"><option value="bg-hero-select">Hero selection</option><option value="bg-map-select">Map selection</option><option value="bg-subpage">Subpage</option></select></label>
+  </header>
+  <section id="assembly" aria-label="Assembled controls">
+    <div class="assembly-panel">
+      <h2 class="assembly-title">Sangre y Jade</h2>
+      <button id="primary-preview" class="assembly-button">Hold to preview pressed</button>
+      <button id="secondary-preview" class="assembly-button" disabled>Disabled secondary</button>
+      <label class="assembled-toggle"><input id="toggle-preview" type="checkbox" checked><span class="toggle-art"><img id="toggle-track" alt=""><img class="toggle-thumb" src="/assets/ui/kit/toggle-knob.png" alt=""></span><span id="toggle-label">On</span></label>
+      <img id="torch-preview" src="/assets/ui/kit/torch-0.png" width="49" height="96" alt="Animated torch">
+      <label class="torch-control"><input id="animate-torch" type="checkbox" checked>Animate flame (4 poses)</label>
+    </div>
+  </section>
+  <main id="components" aria-label="Every asset at three sizes"></main>
+  <p id="status" role="status">Loading local assets…</p>
+  <script type="module" src="./ui-kit-demo.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #fff0c4; background: #141719; font: 16px/22px "Atkinson Hyperlegible", sans-serif; }
+h1,h2,button { font-family: "Jersey 15", sans-serif; font-weight: 400; font-synthesis: none; }
+h1 { font-size: 36px; line-height: 40px; margin: 0; }
+h2 { margin: 0 0 8px; font-size: 24px; line-height: 32px; }
+header,main,#status { margin: auto; padding: 20px; max-width: 1300px; }
+header p { margin: 8px 0; }
+header a { color: #3de0b0; margin-right: 24px; }
+header label { display: inline-block; }
+select { font: inherit; padding: 8px; color: inherit; background: #291d21; border: 1px solid #ad762c; }
+#assembly { background-position: center; background-size: cover; min-height: 400px; display: grid; place-items: center; padding: 20px; }
+.assembly-panel { width: min(480px,100%); min-height: 350px; position: relative; text-align: center; border: 64px solid transparent; }
+.assembly-title { min-height: 70px; border: 30px solid transparent; font-size: 28px; line-height: 1; margin: 0 -45px 8px; }
+.assembly-button { display: block; color: #281e19; width: calc(100% + 80px); height: 74px; margin: 4px -40px; border: 18px solid transparent; border-left-width: 48px; border-right-width: 48px; cursor: pointer; background: transparent; font-size: 21px; touch-action: manipulation; }
+.assembly-button:disabled { cursor: default; color: #28282b; }
+.assembled-toggle { position: relative; display: inline-flex; align-items: center; gap: 12px; margin: 12px 0; padding: 4px; cursor: pointer; }
+.assembled-toggle input { position: absolute; opacity: 0; }
+.assembled-toggle:focus-within { outline: 2px solid #8ec5ff; }
+.toggle-art { position: relative; display: inline-block; width: 128px; height: 42px; pointer-events: none; }
+#toggle-track { width: 128px; height: 42px; }
+.toggle-thumb { position: absolute; width: 32px; height: 32px; left: 6px; top: 5px; transition: left .12s; }
+.assembled-toggle:has(input:checked) .toggle-thumb { left: 90px; }
+#torch-preview { position: absolute; left: -45px; bottom: -40px; image-rendering: pixelated; }
+.torch-control { display: block; font-size: 14px; }
+.asset { border-bottom: 1px solid #544234; padding: 20px 0; break-inside: avoid; }
+.asset-details { color: #c8bfa8; font-size: 14px; line-height: 20px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.previews { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+.sample { margin: 0; max-width: 100%; }
+.sample figcaption { font: 14px/20px "Atkinson Hyperlegible", sans-serif; margin-bottom: 4px; color: #c8bfa8; }
+.mat { background: repeating-conic-gradient(#303337 0% 25%,#26292d 0% 50%) 0 0/16px 16px; padding: 8px; }
+.nine-slice { border-style: solid; border-color: transparent; border-image-repeat: stretch; image-rendering: pixelated; }
+.sprite-preview { display: block; image-rendering: pixelated; object-fit: contain; }
+.background-preview { display: block; object-fit: contain; }
+.native-links { display: flex; gap: 8px; }
+.native-links a { color: #8ec5ff; }
+#status { color: #3de0b0; }
+@media (max-width: 600px) { header,main,#status { padding: 12px; } .assembly-panel { border-width: 48px; } .assembly-title { font-size: 24px; } }
+@media (prefers-reduced-motion: reduce) { .toggle-thumb { transition: none; } }

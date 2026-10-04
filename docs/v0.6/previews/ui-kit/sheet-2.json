@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/ui",
+  "contactSheet": "docs/v0.6/previews/ui-kit/sheet-2-contact.png",
+  "items": [
+    {
+      "file": "kit/button-round.png",
+      "width": 96,
+      "height": 96
+    },
+    {
+      "file": "kit/toggle-track-off.png",
+      "width": 128,
+      "height": 42
+    },
+    {
+      "file": "kit/toggle-track-on.png",
+      "width": 128,
+      "height": 42
+    },
+    {
+      "file": "kit/toggle-knob.png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "file": "kit/slider-track.png",
+      "width": 256,
+      "height": 38
+    },
+    {
+      "file": "kit/slider-fill.png",
+      "width": 256,
+      "height": 24
+    },
+    {
+      "file": "kit/slider-knob.png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "file": "kit/select-frame.png",
+      "width": 256,
+      "height": 77
+    },
+    {
+      "file": "kit/tab-active.png",
+      "width": 192,
+      "height": 70
+    },
+    {
+      "file": "kit/tab-inactive.png",
+      "width": 192,
+      "height": 70
+    },
+    {
+      "file": "kit/scroll-track.png",
+      "width": 6,
+      "height": 32
+    },
+    {
+      "file": "kit/scroll-thumb.png",
+      "width": 11,
+      "height": 32
+    },
+    {
+      "file": "kit/chip-frame.png",
+      "width": 192,
+      "height": 73
+    },
+    {
+      "file": "kit/hud-bar-frame.png",
+      "width": 384,
+      "height": 91
+    },
+    {
+      "file": "kit/hud-circle-frame.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "file": "kit/loading-bar-frame.png",
+      "width": 640,
+      "height": 129
+    }
+  ]
+}

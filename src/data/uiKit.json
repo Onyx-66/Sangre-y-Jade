@@ -1,0 +1,597 @@
+{
+  "version": "0.6.0",
+  "units": "px",
+  "items": [
+    {
+      "id": "panel-large",
+      "maxSize": 256,
+      "path": "assets/ui/kit/panel-large.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "sliceInsets": {
+        "top": 64,
+        "right": 64,
+        "bottom": 64,
+        "left": 64
+      }
+    },
+    {
+      "id": "panel-small",
+      "maxSize": 192,
+      "path": "assets/ui/kit/panel-small.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 192,
+        "height": 192
+      },
+      "sliceInsets": {
+        "top": 48,
+        "right": 48,
+        "bottom": 48,
+        "left": 48
+      }
+    },
+    {
+      "id": "modal-frame",
+      "maxSize": 256,
+      "path": "assets/ui/kit/modal-frame.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "sliceInsets": {
+        "top": 64,
+        "right": 64,
+        "bottom": 64,
+        "left": 64
+      }
+    },
+    {
+      "id": "card-normal",
+      "maxSize": 256,
+      "path": "assets/ui/kit/card-normal.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "sliceInsets": {
+        "top": 64,
+        "right": 64,
+        "bottom": 64,
+        "left": 64
+      },
+      "stateFamily": "card-normal"
+    },
+    {
+      "id": "card-selected",
+      "maxSize": 256,
+      "path": "assets/ui/kit/card-selected.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "sliceInsets": {
+        "top": 64,
+        "right": 64,
+        "bottom": 64,
+        "left": 64
+      },
+      "stateFamily": "card-normal"
+    },
+    {
+      "id": "card-locked",
+      "maxSize": 256,
+      "path": "assets/ui/kit/card-locked.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "sliceInsets": {
+        "top": 64,
+        "right": 64,
+        "bottom": 64,
+        "left": 64
+      },
+      "stateFamily": "card-normal"
+    },
+    {
+      "id": "banner-title",
+      "maxSize": 512,
+      "path": "assets/ui/kit/banner-title.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 512,
+        "height": 144
+      },
+      "sliceInsets": {
+        "top": 36,
+        "right": 158,
+        "bottom": 36,
+        "left": 158
+      }
+    },
+    {
+      "id": "divider-ornament",
+      "maxSize": 320,
+      "path": "assets/ui/kit/divider-ornament.png",
+      "type": "sprite",
+      "size": {
+        "width": 320,
+        "height": 54
+      }
+    },
+    {
+      "id": "button-primary",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-primary.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      },
+      "stateFamily": "button-primary"
+    },
+    {
+      "id": "button-primary-pressed",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-primary-pressed.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      },
+      "stateFamily": "button-primary"
+    },
+    {
+      "id": "button-primary-disabled",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-primary-disabled.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      },
+      "stateFamily": "button-primary"
+    },
+    {
+      "id": "button-secondary",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-secondary.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      },
+      "stateFamily": "button-secondary"
+    },
+    {
+      "id": "button-secondary-pressed",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-secondary-pressed.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      },
+      "stateFamily": "button-secondary"
+    },
+    {
+      "id": "button-secondary-disabled",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-secondary-disabled.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      },
+      "stateFamily": "button-secondary"
+    },
+    {
+      "id": "button-danger",
+      "maxSize": 256,
+      "path": "assets/ui/kit/button-danger.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 86
+      },
+      "sliceInsets": {
+        "top": 22,
+        "right": 56,
+        "bottom": 22,
+        "left": 56
+      }
+    },
+    {
+      "id": "button-small",
+      "maxSize": 160,
+      "path": "assets/ui/kit/button-small.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "sliceInsets": {
+        "top": 40,
+        "right": 40,
+        "bottom": 40,
+        "left": 40
+      }
+    },
+    {
+      "id": "button-round",
+      "maxSize": 96,
+      "path": "assets/ui/kit/button-round.png",
+      "type": "sprite",
+      "size": {
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "toggle-track-off",
+      "maxSize": 128,
+      "path": "assets/ui/kit/toggle-track-off.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 128,
+        "height": 42
+      },
+      "sliceInsets": {
+        "top": 11,
+        "right": 27,
+        "bottom": 11,
+        "left": 27
+      },
+      "stateFamily": "toggle-track-off"
+    },
+    {
+      "id": "toggle-track-on",
+      "maxSize": 128,
+      "path": "assets/ui/kit/toggle-track-on.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 128,
+        "height": 42
+      },
+      "sliceInsets": {
+        "top": 11,
+        "right": 27,
+        "bottom": 11,
+        "left": 27
+      },
+      "stateFamily": "toggle-track-off"
+    },
+    {
+      "id": "toggle-knob",
+      "maxSize": 64,
+      "path": "assets/ui/kit/toggle-knob.png",
+      "type": "sprite",
+      "size": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "id": "slider-track",
+      "maxSize": 256,
+      "path": "assets/ui/kit/slider-track.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 38
+      },
+      "sliceInsets": {
+        "top": 10,
+        "right": 25,
+        "bottom": 10,
+        "left": 25
+      }
+    },
+    {
+      "id": "slider-fill",
+      "maxSize": 256,
+      "path": "assets/ui/kit/slider-fill.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 24
+      },
+      "sliceInsets": {
+        "top": 6,
+        "right": 16,
+        "bottom": 6,
+        "left": 16
+      }
+    },
+    {
+      "id": "slider-knob",
+      "maxSize": 64,
+      "path": "assets/ui/kit/slider-knob.png",
+      "type": "sprite",
+      "size": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "id": "select-frame",
+      "maxSize": 256,
+      "path": "assets/ui/kit/select-frame.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 256,
+        "height": 77
+      },
+      "sliceInsets": {
+        "top": 19,
+        "right": 82,
+        "bottom": 19,
+        "left": 50
+      }
+    },
+    {
+      "id": "tab-active",
+      "maxSize": 192,
+      "path": "assets/ui/kit/tab-active.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 192,
+        "height": 70
+      },
+      "sliceInsets": {
+        "top": 18,
+        "right": 46,
+        "bottom": 18,
+        "left": 46
+      },
+      "stateFamily": "tab-active"
+    },
+    {
+      "id": "tab-inactive",
+      "maxSize": 192,
+      "path": "assets/ui/kit/tab-inactive.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 192,
+        "height": 70
+      },
+      "sliceInsets": {
+        "top": 18,
+        "right": 46,
+        "bottom": 18,
+        "left": 46
+      },
+      "stateFamily": "tab-active"
+    },
+    {
+      "id": "scroll-track",
+      "maxSize": 32,
+      "path": "assets/ui/kit/scroll-track.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 6,
+        "height": 32
+      },
+      "sliceInsets": {
+        "top": 7,
+        "right": 1,
+        "bottom": 7,
+        "left": 1
+      }
+    },
+    {
+      "id": "scroll-thumb",
+      "maxSize": 32,
+      "path": "assets/ui/kit/scroll-thumb.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 11,
+        "height": 32
+      },
+      "sliceInsets": {
+        "top": 7,
+        "right": 3,
+        "bottom": 7,
+        "left": 3
+      }
+    },
+    {
+      "id": "chip-frame",
+      "maxSize": 192,
+      "path": "assets/ui/kit/chip-frame.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 192,
+        "height": 73
+      },
+      "sliceInsets": {
+        "top": 18,
+        "right": 47,
+        "bottom": 18,
+        "left": 47
+      }
+    },
+    {
+      "id": "hud-bar-frame",
+      "maxSize": 384,
+      "path": "assets/ui/kit/hud-bar-frame.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 384,
+        "height": 91
+      },
+      "sliceInsets": {
+        "top": 23,
+        "right": 59,
+        "bottom": 23,
+        "left": 59
+      }
+    },
+    {
+      "id": "hud-circle-frame",
+      "maxSize": 128,
+      "path": "assets/ui/kit/hud-circle-frame.png",
+      "type": "sprite",
+      "size": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "loading-bar-frame",
+      "maxSize": 640,
+      "path": "assets/ui/kit/loading-bar-frame.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 640,
+        "height": 129
+      },
+      "sliceInsets": {
+        "top": 32,
+        "right": 84,
+        "bottom": 32,
+        "left": 84
+      }
+    },
+    {
+      "id": "loading-bar-fill",
+      "maxSize": 640,
+      "path": "assets/ui/kit/loading-bar-fill.png",
+      "type": "nine-slice",
+      "size": {
+        "width": 640,
+        "height": 81
+      },
+      "sliceInsets": {
+        "top": 20,
+        "right": 53,
+        "bottom": 20,
+        "left": 53
+      }
+    },
+    {
+      "id": "vine-corner-tl",
+      "maxSize": 160,
+      "path": "assets/ui/kit/vine-corner-tl.png",
+      "type": "sprite",
+      "size": {
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "torch-0",
+      "maxSize": 96,
+      "path": "assets/ui/kit/torch-0.png",
+      "type": "sprite",
+      "size": {
+        "width": 49,
+        "height": 96
+      }
+    },
+    {
+      "id": "torch-1",
+      "maxSize": 96,
+      "path": "assets/ui/kit/torch-1.png",
+      "type": "sprite",
+      "size": {
+        "width": 49,
+        "height": 96
+      }
+    },
+    {
+      "id": "torch-2",
+      "maxSize": 96,
+      "path": "assets/ui/kit/torch-2.png",
+      "type": "sprite",
+      "size": {
+        "width": 49,
+        "height": 96
+      }
+    },
+    {
+      "id": "torch-3",
+      "maxSize": 96,
+      "path": "assets/ui/kit/torch-3.png",
+      "type": "sprite",
+      "size": {
+        "width": 49,
+        "height": 96
+      }
+    },
+    {
+      "id": "bg-hero-select",
+      "path": "assets/ui/bg/bg-hero-select.webp",
+      "type": "background",
+      "maxSize": 1920,
+      "size": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "id": "bg-map-select",
+      "path": "assets/ui/bg/bg-map-select.webp",
+      "type": "background",
+      "maxSize": 1920,
+      "size": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "id": "bg-subpage",
+      "path": "assets/ui/bg/bg-subpage.webp",
+      "type": "background",
+      "maxSize": 1920,
+      "size": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 - [x] 03 — Shared toggles and paused settings
 - [x] 04 — Fullscreen viewport and safe areas
 - [x] V1 — Typography and shared design tokens
+- [x] V2 — Generated UI kit and nine-slice preview
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -175,3 +176,35 @@ Evidence: `previews/v1/report.json`, its contact sheet and regression reports. A
 
 - The unrelated unfinished localization audit still flags legitimate French `MANA` / `Cacao`; no new failures. No edits to that prior work.
 - Native font rendering was not checked on an Android device; browser tests use the real bundled fonts, not mocks or fallback claims. Broader visual restyling belongs to the later prompts.
+
+## V2 — Generated UI kit and nine-slice preview — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v2`.
+
+### Changed
+
+- Generated 38 pixel-art kit components in three sheets (16 / 16 / 6), plus three independent sunset-jungle backgrounds. Used the two TARGET references for charcoal carved stone, stepped gold fret ornament, teal-jade gems and torch/vine framing. Delivered exact longest-side PNG sizes and 1920×1080 WebP backgrounds at quality 90, without applying them to game screens.
+- Added `src/data/uiKit.json` with all 41 files, exact dimensions, state families and source insets for 28 nine-slice components. Built a dev-only catalog showing every piece at three sizes, and assembled press/release, toggle and torch examples.
+- Added the offline Sharp preparation script and optional validated shared-scale/bottom anchoring to the existing slicer. Rejected/regenerated a bad sheet layout; corrected keyed pink edges, tiny alpha discrepancies between button states and torch baselines. Retained every state's own generated RGB; all 41 file and decoded-pixel hashes are unique. Old art/slicer defaults remain intact.
+- Retained full image prompts/native sources and per-image provenance. Created the final contact sheet, 41 individual multi-size screenshots, assembled example, six review sheets and machine-readable preparation/browser reports. Visually inspected every finished item and all review sheets; checked actual opaque corner pixels at three widths, not just metadata.
+- No gameplay, screen imports, audio-file changes, branding edits, dependency installs, downloads, package-version bump, APK or push. Earlier unfinished localization/artwork and supplied release references/audio scripts remain outside this commit.
+
+### Test results
+
+| Command | Result |
+| --- | --- |
+| Initial kit acceptance checks | Caught state-alpha edge discrepancies and two torch baseline positions; both fixed |
+| `node scripts/prepare-ui-kit.mjs --overwrite` | 41 unique final assets; exact 16 / 16 / 6 cell counts; 28 nine-slice sources |
+| `node --test tests/v06-ui-kit.test.js tests/slice-sheet.test.js` | 16/16 pass; 11 new acceptance tests, 1.39 s runner |
+| `npm run test:ui-kit` | 121 checks pass; 123 rendered samples; 48 screenshots; no browser/HTTP errors; 33.98 s |
+| `npm run check` | 351/352 pass, no skips; sole pre-existing French `MANA` / `Cacao` audit failure; 3.01 s runner / 4.30 s command; build skipped by `&&` |
+| `npm run build` | Pass; 270 modules, 17.42 s Vite; existing large-chunk warning; dev demo is not in `dist/tools/` |
+| `git diff --check` | Pass for V2 changes |
+
+Evidence and usage: `UI_KIT.md`, `ASSET_LOG.md`, `UI_KIT_SOURCES.json`, `previews/ui-kit.png`, `previews/ui-kit/preparation.json` and `previews/ui-kit/demo/report.json`. Pixel-geometry checks also caught fractional caption layout affecting thin scrollbar screenshot alignment; fixed the dev gallery to integer-width cells. Removed the implicit favicon 404 instead of suppressing the strict error assertion.
+
+### Open issues
+
+- Built-in image generation does not expose model/variant selection or routing metadata. **gpt-image-2.5 Flare was requested, actual routing cannot be verified.** Returned sources are 1254×1254 sheets / 1672×941 backgrounds; normalization and exact final sizes are documented, without claiming native 2048/1920 detail.
+- The prior unfinished localization audit is still the sole full-suite failure; no new failures and no edits to that unrelated work.
+- This prompt intentionally does not wire new art into player screens; that is the following UI implementation work. Mobile/Android application of the kit remains for that work, not this asset-only step.

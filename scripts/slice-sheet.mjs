@@ -18,7 +18,9 @@ Manifest format:
   "items": [{ "file": "ui/example.png", "width": 96, "height": 96 }]
 }
 
-The manifest item order is reading order (left-to-right, top-to-bottom).`;
+The manifest item order is reading order (left-to-right, top-to-bottom).
+Optional spriteScale (positive number) and anchor: "bottom" preserve a shared
+pixel scale and baseline for individually drawn flame/animation poses.`;
 
 function isBackground(rgba, offset, mode) {
   const r = rgba[offset], g = rgba[offset + 1], b = rgba[offset + 2], a = rgba[offset + 3];
@@ -152,6 +154,12 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
     if (!item.file || !Number.isInteger(item.width) || !Number.isInteger(item.height) || item.width < 1 || item.height < 1) {
       throw new Error('Each item needs a relative file path and positive integer width/height.');
     }
+    if (item.spriteScale !== undefined && (!Number.isFinite(item.spriteScale) || item.spriteScale <= 0)) {
+      throw new Error(`spriteScale must be positive and finite for ${item.file}`);
+    }
+    if (item.anchor !== undefined && !['center', 'bottom'].includes(item.anchor)) {
+      throw new Error(`Unknown anchor for ${item.file}; use center or bottom.`);
+    }
   }
 
   const outputRoot = resolveInside(root, manifest.outputDir || 'public/assets/pixel', 'outputDir');
@@ -172,8 +180,11 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
       width: bounds.right - bounds.left + 1, height: bounds.bottom - bounds.top + 1,
     }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     const cleaned = defringeCrop(crop, mode);
+    const fitWidth=item.spriteScale?Math.max(1,Math.round(crop.info.width*item.spriteScale)):Math.max(1,Math.round(item.width*.94));
+    const fitHeight=item.spriteScale?Math.max(1,Math.round(crop.info.height*item.spriteScale)):Math.max(1,Math.round(item.height*.94));
+    if(fitWidth>item.width||fitHeight>item.height)throw new Error(`spriteScale exceeds final canvas for ${item.file}`);
     const fitted = await sharp(cleaned.data, { raw: { width: crop.info.width, height: crop.info.height, channels: 4 } })
-      .resize(Math.max(1, Math.round(item.width * 0.94)), Math.max(1, Math.round(item.height * 0.94)), { fit: 'inside', kernel: sharp.kernel.lanczos3 })
+      .resize(fitWidth,fitHeight, { fit: 'inside', kernel: sharp.kernel.lanczos3 })
       .png().toBuffer();
     const metadata = await sharp(fitted).metadata();
     const targetPath = resolveInside(outputRoot, item.file, 'output file');
@@ -182,9 +193,10 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
       try { await fs.access(targetPath); throw new Error(`Refusing to overwrite existing output ${item.file}; pass --overwrite to replace it.`); }
       catch (error) { if (error.code !== 'ENOENT') throw error; }
     }
+    const bottom=item.anchor==='bottom'?Math.min(3,item.height-metadata.height):Math.ceil((item.height-metadata.height)/2);
     const image = await sharp(fitted).extend({
-      top: Math.floor((item.height - metadata.height) / 2),
-      bottom: Math.ceil((item.height - metadata.height) / 2),
+      top: item.height-metadata.height-bottom,
+      bottom,
       left: Math.floor((item.width - metadata.width) / 2),
       right: Math.ceil((item.width - metadata.width) / 2),
       background: { r: 0, g: 0, b: 0, alpha: 0 },

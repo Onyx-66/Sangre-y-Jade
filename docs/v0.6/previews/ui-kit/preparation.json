@@ -1,0 +1,175 @@
+{
+  "entries": 41,
+  "manifestFiles": [
+    "docs/v0.6/previews/ui-kit/sheet-1.json",
+    "docs/v0.6/previews/ui-kit/sheet-2.json",
+    "docs/v0.6/previews/ui-kit/sheet-3.json"
+  ],
+  "hashes": [
+    {
+      "id": "panel-large",
+      "sha256": "06902c0c40fcf5d8e10738a57c407de49f6e48f487f1d67f3297c20fd41532a8"
+    },
+    {
+      "id": "panel-small",
+      "sha256": "98683a72ef2b890f4b57f1b0771f0e3508456b9bd1356a627c8031f18716c32a"
+    },
+    {
+      "id": "modal-frame",
+      "sha256": "9ed74ed3de742c0d5b3174ece4660899446444a227ff78bbe6ba693a1cb83e3c"
+    },
+    {
+      "id": "card-normal",
+      "sha256": "303086396d06379c6585f1691c52e5cfedf52cd1717977da326382e7f9a1ac98"
+    },
+    {
+      "id": "card-selected",
+      "sha256": "2f176a32cd62fec3be45c9b1dcb3f050eb1855a0a1a8e55f43c7769db490c514"
+    },
+    {
+      "id": "card-locked",
+      "sha256": "3cb8ad40efe3120fe61cbd1fa39c96726b5c94714dd37fe3b80b61ba392d3ca7"
+    },
+    {
+      "id": "banner-title",
+      "sha256": "4c7c69dbf448d584a6cc9fd97166e90378e3d3645c89e12d88fa61b14ed43b67"
+    },
+    {
+      "id": "divider-ornament",
+      "sha256": "45f10409fd7143f8cc4fdc762b87f08998c3fb6038de634d5348f836014692c5"
+    },
+    {
+      "id": "button-primary",
+      "sha256": "16328b1bda31bf9a4e4b46ce3c02dc8fd62476a96611b6f09a2aa998c934fd4a"
+    },
+    {
+      "id": "button-primary-pressed",
+      "sha256": "7f8c911a7cc177a0de88d28e6dcd85abb2de9f5cf3162394d869406ac192c552"
+    },
+    {
+      "id": "button-primary-disabled",
+      "sha256": "5f0153d9d9078742613e21c489f955bae3c41770836bb3baa59d580db804a866"
+    },
+    {
+      "id": "button-secondary",
+      "sha256": "0c7137642d229ae7d377964f690069e53a293a9262b136ca36b29286ce343083"
+    },
+    {
+      "id": "button-secondary-pressed",
+      "sha256": "d074cb0d4b35d5731d8347ac07400b9e8984beb941f097ab463eb6c98de552b9"
+    },
+    {
+      "id": "button-secondary-disabled",
+      "sha256": "d8b322824df2bbde72cd75f9022b4f73a19c20a19018e6f36288199beeab96f3"
+    },
+    {
+      "id": "button-danger",
+      "sha256": "a08bd91d4c82c1def6c58bb1f7d961eb636b815748a4caa65eb8c7c7e3265cbd"
+    },
+    {
+      "id": "button-small",
+      "sha256": "c4ab4d2acef0b6bc23a60d50f200085bf51c55cb566ee45100c93906a26135c0"
+    },
+    {
+      "id": "button-round",
+      "sha256": "5a573d6c49c9ab1ce6d0296b2886bfa77b53d08467d03faec45610d358953f14"
+    },
+    {
+      "id": "toggle-track-off",
+      "sha256": "f3cd3611409dcdaa50bc00ec75ee01660314e48e333fe402b197f7a8058773a3"
+    },
+    {
+      "id": "toggle-track-on",
+      "sha256": "351290af38b25720ad491b1a35bfac42e47cd8648d2dfcc78f027d0cdecd085e"
+    },
+    {
+      "id": "toggle-knob",
+      "sha256": "232a4309ca21b50db85afdd6f532f67ee7841639a2fb6ae0b525480d8faa0972"
+    },
+    {
+      "id": "slider-track",
+      "sha256": "cbdeb46920bc8077b59eff8924de0889cc1d9ee56df6563d21e29213f1c28877"
+    },
+    {
+      "id": "slider-fill",
+      "sha256": "bcebe876997001af3c93afabbd78b48d0bca342b5a60da5b5e7b716aeb0c5b24"
+    },
+    {
+      "id": "slider-knob",
+      "sha256": "46c2b2239e3e789929c69960bd07f9dedc120291576552eb8a670f5c59776117"
+    },
+    {
+      "id": "select-frame",
+      "sha256": "c8c7a86f59d1e61f948b43227a59e2cdb82687e841174251ce6d8aa31f00baa6"
+    },
+    {
+      "id": "tab-active",
+      "sha256": "fa4e1d13e406cc12ff0cd3ac08364ee9ab4136b836209ef4fb20e7f4d8221678"
+    },
+    {
+      "id": "tab-inactive",
+      "sha256": "00df51ba815f32e6e951c41dd8adba796d819330689511504261e8714f34beb8"
+    },
+    {
+      "id": "scroll-track",
+      "sha256": "955597325552d6a0a7cda895ad787125d75ec8cac86c69171fb4f675de913150"
+    },
+    {
+      "id": "scroll-thumb",
+      "sha256": "ef6ad420c98afa203dc0b52e3cba59c623daee08cf96d546378daadd2f53752f"
+    },
+    {
+      "id": "chip-frame",
+      "sha256": "2d8d194435c9a7d092725b283edae178716b8c3af5b830b82f4614c52504ffb0"
+    },
+    {
+      "id": "hud-bar-frame",
+      "sha256": "454476927f2340110289c9227743a21622b2dc36d8a85ceecae7d92c68f5cfa1"
+    },
+    {
+      "id": "hud-circle-frame",
+      "sha256": "c066a89395a648bb4d64d9c5613d420c3c87c3e903c0f1b68c45b4da2a3a5e9e"
+    },
+    {
+      "id": "loading-bar-frame",
+      "sha256": "452de573104412e0fb2cccd59097495d71a8785455619c7f50279c695342353d"
+    },
+    {
+      "id": "loading-bar-fill",
+      "sha256": "b040b49e3de18b9b1fc647af6aaf0f16ddbe77e90964b75a3d6998560f36d59a"
+    },
+    {
+      "id": "vine-corner-tl",
+      "sha256": "577b54d48a0953d11be69892e54d74af312169c8b6b6933811013887a6de0323"
+    },
+    {
+      "id": "torch-0",
+      "sha256": "6511d19812cb4a5be740234041d819f20c87c6e3010d18125c4b5e254c1fb38a"
+    },
+    {
+      "id": "torch-1",
+      "sha256": "84dd676da558390c9dbc17e9d7016db5a5b049060c45e323ce28c2d94efefbc9"
+    },
+    {
+      "id": "torch-2",
+      "sha256": "10acd2d56e16c3ad6579df98d685c9db79c35f765de9e559cb1d2865079b5a72"
+    },
+    {
+      "id": "torch-3",
+      "sha256": "7cae7c5c28c7476f1dc81d899ff626f3089c59a019447bec39b33adbb2e5a370"
+    },
+    {
+      "id": "bg-hero-select",
+      "sha256": "4b9d11101831894ee6820743ae0c308e7bcd06fd398937ff665b3978a1b51a01"
+    },
+    {
+      "id": "bg-map-select",
+      "sha256": "ac67075facfc3237cc38b098a8c0561a7db8ca567b60b096bf6e4098a64bd1f5"
+    },
+    {
+      "id": "bg-subpage",
+      "sha256": "d1b58b57fa09044aea4cbe7a88daa1cb74af9b65a9ff0209349d3176e536a0cd"
+    }
+  ],
+  "sourceCanvasNote": "Tool supplied 1254x1254 sheets, normalized to 2048x2048 by nearest-neighbor before slicing; native originals retained."
+}

@@ -1,0 +1,48 @@
+{
+  "expectedCount": 6,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/ui",
+  "contactSheet": "docs/v0.6/previews/ui-kit/sheet-3-contact.png",
+  "items": [
+    {
+      "file": "kit/loading-bar-fill.png",
+      "width": 640,
+      "height": 81
+    },
+    {
+      "file": "kit/vine-corner-tl.png",
+      "width": 160,
+      "height": 160
+    },
+    {
+      "file": "kit/torch-0.png",
+      "width": 49,
+      "height": 96,
+      "spriteScale": 0.19736842105263158,
+      "anchor": "bottom"
+    },
+    {
+      "file": "kit/torch-1.png",
+      "width": 49,
+      "height": 96,
+      "spriteScale": 0.19736842105263158,
+      "anchor": "bottom"
+    },
+    {
+      "file": "kit/torch-2.png",
+      "width": 49,
+      "height": 96,
+      "spriteScale": 0.19736842105263158,
+      "anchor": "bottom"
+    },
+    {
+      "file": "kit/torch-3.png",
+      "width": 49,
+      "height": 96,
+      "spriteScale": 0.19736842105263158,
+      "anchor": "bottom"
+    }
+  ]
+}

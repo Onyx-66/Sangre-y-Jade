@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/ui",
+  "contactSheet": "docs/v0.6/previews/ui-kit/sheet-1-contact.png",
+  "items": [
+    {
+      "file": "kit/panel-large.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "kit/panel-small.png",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "file": "kit/modal-frame.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "kit/card-normal.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "kit/card-selected.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "kit/card-locked.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "kit/banner-title.png",
+      "width": 512,
+      "height": 144
+    },
+    {
+      "file": "kit/divider-ornament.png",
+      "width": 320,
+      "height": 54
+    },
+    {
+      "file": "kit/button-primary.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-primary-pressed.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-primary-disabled.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-secondary.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-secondary-pressed.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-secondary-disabled.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-danger.png",
+      "width": 256,
+      "height": 86
+    },
+    {
+      "file": "kit/button-small.png",
+      "width": 160,
+      "height": 160
+    }
+  ]
+}

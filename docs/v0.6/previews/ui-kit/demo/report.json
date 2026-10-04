@@ -1,0 +1,1280 @@
+{
+  "checks": [
+    {
+      "label": "41 components × three real rendered sizes",
+      "passed": true
+    },
+    {
+      "label": "render geometry: ",
+      "passed": true
+    },
+    {
+      "label": "panel-large tl: unchanged visible corner pixels across three widths (2912 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-large tr: unchanged visible corner pixels across three widths (2814 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-large bl: unchanged visible corner pixels across three widths (2843 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-large br: unchanged visible corner pixels across three widths (2769 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-small tl: unchanged visible corner pixels across three widths (1622 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-small tr: unchanged visible corner pixels across three widths (1625 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-small bl: unchanged visible corner pixels across three widths (1586 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "panel-small br: unchanged visible corner pixels across three widths (1586 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "modal-frame tl: unchanged visible corner pixels across three widths (2511 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "modal-frame tr: unchanged visible corner pixels across three widths (2436 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "modal-frame bl: unchanged visible corner pixels across three widths (2509 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "modal-frame br: unchanged visible corner pixels across three widths (2406 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-normal tl: unchanged visible corner pixels across three widths (2270 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-normal tr: unchanged visible corner pixels across three widths (2230 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-normal bl: unchanged visible corner pixels across three widths (2269 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-normal br: unchanged visible corner pixels across three widths (2228 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-selected tl: unchanged visible corner pixels across three widths (2270 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-selected tr: unchanged visible corner pixels across three widths (2230 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-selected bl: unchanged visible corner pixels across three widths (2269 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-selected br: unchanged visible corner pixels across three widths (2228 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-locked tl: unchanged visible corner pixels across three widths (2270 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-locked tr: unchanged visible corner pixels across three widths (2230 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-locked bl: unchanged visible corner pixels across three widths (2269 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "card-locked br: unchanged visible corner pixels across three widths (2228 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "banner-title tl: unchanged visible corner pixels across three widths (2671 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "banner-title tr: unchanged visible corner pixels across three widths (2611 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "banner-title bl: unchanged visible corner pixels across three widths (2554 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "banner-title br: unchanged visible corner pixels across three widths (2505 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary tl: unchanged visible corner pixels across three widths (774 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary tr: unchanged visible corner pixels across three widths (767 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary bl: unchanged visible corner pixels across three widths (770 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary br: unchanged visible corner pixels across three widths (756 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-pressed tl: unchanged visible corner pixels across three widths (774 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-pressed tr: unchanged visible corner pixels across three widths (767 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-pressed bl: unchanged visible corner pixels across three widths (770 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-pressed br: unchanged visible corner pixels across three widths (756 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-disabled tl: unchanged visible corner pixels across three widths (774 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-disabled tr: unchanged visible corner pixels across three widths (767 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-disabled bl: unchanged visible corner pixels across three widths (770 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-primary-disabled br: unchanged visible corner pixels across three widths (756 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary tl: unchanged visible corner pixels across three widths (817 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary tr: unchanged visible corner pixels across three widths (785 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary bl: unchanged visible corner pixels across three widths (770 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary br: unchanged visible corner pixels across three widths (745 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-pressed tl: unchanged visible corner pixels across three widths (817 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-pressed tr: unchanged visible corner pixels across three widths (785 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-pressed bl: unchanged visible corner pixels across three widths (770 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-pressed br: unchanged visible corner pixels across three widths (745 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-disabled tl: unchanged visible corner pixels across three widths (817 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-disabled tr: unchanged visible corner pixels across three widths (785 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-disabled bl: unchanged visible corner pixels across three widths (770 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-secondary-disabled br: unchanged visible corner pixels across three widths (745 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-danger tl: unchanged visible corner pixels across three widths (777 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-danger tr: unchanged visible corner pixels across three widths (763 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-danger bl: unchanged visible corner pixels across three widths (815 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-danger br: unchanged visible corner pixels across three widths (783 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-small tl: unchanged visible corner pixels across three widths (809 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-small tr: unchanged visible corner pixels across three widths (799 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-small bl: unchanged visible corner pixels across three widths (800 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "button-small br: unchanged visible corner pixels across three widths (799 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-off tl: unchanged visible corner pixels across three widths (126 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-off tr: unchanged visible corner pixels across three widths (128 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-off bl: unchanged visible corner pixels across three widths (103 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-off br: unchanged visible corner pixels across three widths (104 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-on tl: unchanged visible corner pixels across three widths (126 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-on tr: unchanged visible corner pixels across three widths (128 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-on bl: unchanged visible corner pixels across three widths (103 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "toggle-track-on br: unchanged visible corner pixels across three widths (104 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-track tl: unchanged visible corner pixels across three widths (44 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-track tr: unchanged visible corner pixels across three widths (48 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-track bl: unchanged visible corner pixels across three widths (39 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-track br: unchanged visible corner pixels across three widths (40 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-fill tl: unchanged visible corner pixels across three widths (16 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-fill tr: unchanged visible corner pixels across three widths (16 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-fill bl: unchanged visible corner pixels across three widths (15 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "slider-fill br: unchanged visible corner pixels across three widths (14 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "select-frame tl: unchanged visible corner pixels across three widths (465 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "select-frame tr: unchanged visible corner pixels across three widths (993 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "select-frame bl: unchanged visible corner pixels across three widths (416 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "select-frame br: unchanged visible corner pixels across three widths (879 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-active tl: unchanged visible corner pixels across three widths (438 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-active tr: unchanged visible corner pixels across three widths (437 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-active bl: unchanged visible corner pixels across three widths (446 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-active br: unchanged visible corner pixels across three widths (447 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-inactive tl: unchanged visible corner pixels across three widths (438 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-inactive tr: unchanged visible corner pixels across three widths (437 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-inactive bl: unchanged visible corner pixels across three widths (446 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "tab-inactive br: unchanged visible corner pixels across three widths (447 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-track tl: unchanged visible corner pixels across three widths (2 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-track tr: unchanged visible corner pixels across three widths (2 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-track bl: unchanged visible corner pixels across three widths (2 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-track br: unchanged visible corner pixels across three widths (2 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-thumb tl: unchanged visible corner pixels across three widths (8 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-thumb tr: unchanged visible corner pixels across three widths (4 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-thumb bl: unchanged visible corner pixels across three widths (8 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "scroll-thumb br: unchanged visible corner pixels across three widths (4 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "chip-frame tl: unchanged visible corner pixels across three widths (373 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "chip-frame tr: unchanged visible corner pixels across three widths (370 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "chip-frame bl: unchanged visible corner pixels across three widths (395 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "chip-frame br: unchanged visible corner pixels across three widths (394 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "hud-bar-frame tl: unchanged visible corner pixels across three widths (625 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "hud-bar-frame tr: unchanged visible corner pixels across three widths (617 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "hud-bar-frame bl: unchanged visible corner pixels across three widths (524 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "hud-bar-frame br: unchanged visible corner pixels across three widths (513 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-frame tl: unchanged visible corner pixels across three widths (875 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-frame tr: unchanged visible corner pixels across three widths (943 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-frame bl: unchanged visible corner pixels across three widths (1054 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-frame br: unchanged visible corner pixels across three widths (1119 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-fill tl: unchanged visible corner pixels across three widths (271 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-fill tr: unchanged visible corner pixels across three widths (314 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-fill bl: unchanged visible corner pixels across three widths (334 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "loading-bar-fill br: unchanged visible corner pixels across three widths (370 pixels, 0 differences)",
+      "passed": true
+    },
+    {
+      "label": "pressed image is shown on press",
+      "passed": true
+    },
+    {
+      "label": "button geometry unchanged on press",
+      "passed": true
+    },
+    {
+      "label": "released image returns to normal",
+      "passed": true
+    },
+    {
+      "label": "toggle shows its off asset",
+      "passed": true
+    },
+    {
+      "label": "toggle shows its on asset",
+      "passed": true
+    },
+    {
+      "label": "dev preview does not start or change a game screen",
+      "passed": true
+    },
+    {
+      "label": "no browser errors or missing files: ",
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "id": "panel-large",
+      "index": 0,
+      "width": 192,
+      "height": 163
+    },
+    {
+      "id": "panel-large",
+      "index": 1,
+      "width": 256,
+      "height": 218
+    },
+    {
+      "id": "panel-large",
+      "index": 2,
+      "width": 384,
+      "height": 326
+    },
+    {
+      "id": "panel-small",
+      "index": 0,
+      "width": 144,
+      "height": 122
+    },
+    {
+      "id": "panel-small",
+      "index": 1,
+      "width": 192,
+      "height": 163
+    },
+    {
+      "id": "panel-small",
+      "index": 2,
+      "width": 288,
+      "height": 245
+    },
+    {
+      "id": "modal-frame",
+      "index": 0,
+      "width": 192,
+      "height": 163
+    },
+    {
+      "id": "modal-frame",
+      "index": 1,
+      "width": 256,
+      "height": 218
+    },
+    {
+      "id": "modal-frame",
+      "index": 2,
+      "width": 384,
+      "height": 326
+    },
+    {
+      "id": "card-normal",
+      "index": 0,
+      "width": 192,
+      "height": 163
+    },
+    {
+      "id": "card-normal",
+      "index": 1,
+      "width": 256,
+      "height": 218
+    },
+    {
+      "id": "card-normal",
+      "index": 2,
+      "width": 384,
+      "height": 326
+    },
+    {
+      "id": "card-selected",
+      "index": 0,
+      "width": 192,
+      "height": 163
+    },
+    {
+      "id": "card-selected",
+      "index": 1,
+      "width": 256,
+      "height": 218
+    },
+    {
+      "id": "card-selected",
+      "index": 2,
+      "width": 384,
+      "height": 326
+    },
+    {
+      "id": "card-locked",
+      "index": 0,
+      "width": 192,
+      "height": 163
+    },
+    {
+      "id": "card-locked",
+      "index": 1,
+      "width": 256,
+      "height": 218
+    },
+    {
+      "id": "card-locked",
+      "index": 2,
+      "width": 384,
+      "height": 326
+    },
+    {
+      "id": "banner-title",
+      "index": 0,
+      "width": 384,
+      "height": 144
+    },
+    {
+      "id": "banner-title",
+      "index": 1,
+      "width": 512,
+      "height": 144
+    },
+    {
+      "id": "banner-title",
+      "index": 2,
+      "width": 768,
+      "height": 144
+    },
+    {
+      "id": "divider-ornament",
+      "index": 0,
+      "width": 240,
+      "height": 41
+    },
+    {
+      "id": "divider-ornament",
+      "index": 1,
+      "width": 320,
+      "height": 54
+    },
+    {
+      "id": "divider-ornament",
+      "index": 2,
+      "width": 480,
+      "height": 81
+    },
+    {
+      "id": "button-primary",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-primary",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-primary",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-primary-pressed",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-primary-pressed",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-primary-pressed",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-primary-disabled",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-primary-disabled",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-primary-disabled",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-secondary",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-secondary",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-secondary",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-secondary-pressed",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-secondary-pressed",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-secondary-pressed",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-secondary-disabled",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-secondary-disabled",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-secondary-disabled",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-danger",
+      "index": 0,
+      "width": 192,
+      "height": 86
+    },
+    {
+      "id": "button-danger",
+      "index": 1,
+      "width": 256,
+      "height": 86
+    },
+    {
+      "id": "button-danger",
+      "index": 2,
+      "width": 384,
+      "height": 86
+    },
+    {
+      "id": "button-small",
+      "index": 0,
+      "width": 120,
+      "height": 102
+    },
+    {
+      "id": "button-small",
+      "index": 1,
+      "width": 160,
+      "height": 136
+    },
+    {
+      "id": "button-small",
+      "index": 2,
+      "width": 240,
+      "height": 204
+    },
+    {
+      "id": "button-round",
+      "index": 0,
+      "width": 72,
+      "height": 72
+    },
+    {
+      "id": "button-round",
+      "index": 1,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "id": "button-round",
+      "index": 2,
+      "width": 144,
+      "height": 144
+    },
+    {
+      "id": "toggle-track-off",
+      "index": 0,
+      "width": 96,
+      "height": 42
+    },
+    {
+      "id": "toggle-track-off",
+      "index": 1,
+      "width": 128,
+      "height": 42
+    },
+    {
+      "id": "toggle-track-off",
+      "index": 2,
+      "width": 192,
+      "height": 42
+    },
+    {
+      "id": "toggle-track-on",
+      "index": 0,
+      "width": 96,
+      "height": 42
+    },
+    {
+      "id": "toggle-track-on",
+      "index": 1,
+      "width": 128,
+      "height": 42
+    },
+    {
+      "id": "toggle-track-on",
+      "index": 2,
+      "width": 192,
+      "height": 42
+    },
+    {
+      "id": "toggle-knob",
+      "index": 0,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "id": "toggle-knob",
+      "index": 1,
+      "width": 64,
+      "height": 64
+    },
+    {
+      "id": "toggle-knob",
+      "index": 2,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "id": "slider-track",
+      "index": 0,
+      "width": 192,
+      "height": 38
+    },
+    {
+      "id": "slider-track",
+      "index": 1,
+      "width": 256,
+      "height": 38
+    },
+    {
+      "id": "slider-track",
+      "index": 2,
+      "width": 384,
+      "height": 38
+    },
+    {
+      "id": "slider-fill",
+      "index": 0,
+      "width": 192,
+      "height": 24
+    },
+    {
+      "id": "slider-fill",
+      "index": 1,
+      "width": 256,
+      "height": 24
+    },
+    {
+      "id": "slider-fill",
+      "index": 2,
+      "width": 384,
+      "height": 24
+    },
+    {
+      "id": "slider-knob",
+      "index": 0,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "id": "slider-knob",
+      "index": 1,
+      "width": 64,
+      "height": 64
+    },
+    {
+      "id": "slider-knob",
+      "index": 2,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "id": "select-frame",
+      "index": 0,
+      "width": 192,
+      "height": 77
+    },
+    {
+      "id": "select-frame",
+      "index": 1,
+      "width": 256,
+      "height": 77
+    },
+    {
+      "id": "select-frame",
+      "index": 2,
+      "width": 384,
+      "height": 77
+    },
+    {
+      "id": "tab-active",
+      "index": 0,
+      "width": 144,
+      "height": 70
+    },
+    {
+      "id": "tab-active",
+      "index": 1,
+      "width": 192,
+      "height": 70
+    },
+    {
+      "id": "tab-active",
+      "index": 2,
+      "width": 288,
+      "height": 70
+    },
+    {
+      "id": "tab-inactive",
+      "index": 0,
+      "width": 144,
+      "height": 70
+    },
+    {
+      "id": "tab-inactive",
+      "index": 1,
+      "width": 192,
+      "height": 70
+    },
+    {
+      "id": "tab-inactive",
+      "index": 2,
+      "width": 288,
+      "height": 70
+    },
+    {
+      "id": "scroll-track",
+      "index": 0,
+      "width": 5,
+      "height": 24
+    },
+    {
+      "id": "scroll-track",
+      "index": 1,
+      "width": 6,
+      "height": 32
+    },
+    {
+      "id": "scroll-track",
+      "index": 2,
+      "width": 9,
+      "height": 48
+    },
+    {
+      "id": "scroll-thumb",
+      "index": 0,
+      "width": 8,
+      "height": 24
+    },
+    {
+      "id": "scroll-thumb",
+      "index": 1,
+      "width": 11,
+      "height": 32
+    },
+    {
+      "id": "scroll-thumb",
+      "index": 2,
+      "width": 17,
+      "height": 48
+    },
+    {
+      "id": "chip-frame",
+      "index": 0,
+      "width": 144,
+      "height": 73
+    },
+    {
+      "id": "chip-frame",
+      "index": 1,
+      "width": 192,
+      "height": 73
+    },
+    {
+      "id": "chip-frame",
+      "index": 2,
+      "width": 288,
+      "height": 73
+    },
+    {
+      "id": "hud-bar-frame",
+      "index": 0,
+      "width": 288,
+      "height": 91
+    },
+    {
+      "id": "hud-bar-frame",
+      "index": 1,
+      "width": 384,
+      "height": 91
+    },
+    {
+      "id": "hud-bar-frame",
+      "index": 2,
+      "width": 576,
+      "height": 91
+    },
+    {
+      "id": "hud-circle-frame",
+      "index": 0,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "id": "hud-circle-frame",
+      "index": 1,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "id": "hud-circle-frame",
+      "index": 2,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "loading-bar-frame",
+      "index": 0,
+      "width": 480,
+      "height": 129
+    },
+    {
+      "id": "loading-bar-frame",
+      "index": 1,
+      "width": 640,
+      "height": 129
+    },
+    {
+      "id": "loading-bar-frame",
+      "index": 2,
+      "width": 960,
+      "height": 129
+    },
+    {
+      "id": "loading-bar-fill",
+      "index": 0,
+      "width": 480,
+      "height": 81
+    },
+    {
+      "id": "loading-bar-fill",
+      "index": 1,
+      "width": 640,
+      "height": 81
+    },
+    {
+      "id": "loading-bar-fill",
+      "index": 2,
+      "width": 960,
+      "height": 81
+    },
+    {
+      "id": "vine-corner-tl",
+      "index": 0,
+      "width": 120,
+      "height": 120
+    },
+    {
+      "id": "vine-corner-tl",
+      "index": 1,
+      "width": 160,
+      "height": 160
+    },
+    {
+      "id": "vine-corner-tl",
+      "index": 2,
+      "width": 240,
+      "height": 240
+    },
+    {
+      "id": "torch-0",
+      "index": 0,
+      "width": 37,
+      "height": 72
+    },
+    {
+      "id": "torch-0",
+      "index": 1,
+      "width": 49,
+      "height": 96
+    },
+    {
+      "id": "torch-0",
+      "index": 2,
+      "width": 74,
+      "height": 144
+    },
+    {
+      "id": "torch-1",
+      "index": 0,
+      "width": 37,
+      "height": 72
+    },
+    {
+      "id": "torch-1",
+      "index": 1,
+      "width": 49,
+      "height": 96
+    },
+    {
+      "id": "torch-1",
+      "index": 2,
+      "width": 74,
+      "height": 144
+    },
+    {
+      "id": "torch-2",
+      "index": 0,
+      "width": 37,
+      "height": 72
+    },
+    {
+      "id": "torch-2",
+      "index": 1,
+      "width": 49,
+      "height": 96
+    },
+    {
+      "id": "torch-2",
+      "index": 2,
+      "width": 74,
+      "height": 144
+    },
+    {
+      "id": "torch-3",
+      "index": 0,
+      "width": 37,
+      "height": 72
+    },
+    {
+      "id": "torch-3",
+      "index": 1,
+      "width": 49,
+      "height": 96
+    },
+    {
+      "id": "torch-3",
+      "index": 2,
+      "width": 74,
+      "height": 144
+    },
+    {
+      "id": "bg-hero-select",
+      "index": 0,
+      "width": 240,
+      "height": 135
+    },
+    {
+      "id": "bg-hero-select",
+      "index": 1,
+      "width": 480,
+      "height": 270
+    },
+    {
+      "id": "bg-hero-select",
+      "index": 2,
+      "width": 720,
+      "height": 405
+    },
+    {
+      "id": "bg-map-select",
+      "index": 0,
+      "width": 240,
+      "height": 135
+    },
+    {
+      "id": "bg-map-select",
+      "index": 1,
+      "width": 480,
+      "height": 270
+    },
+    {
+      "id": "bg-map-select",
+      "index": 2,
+      "width": 720,
+      "height": 405
+    },
+    {
+      "id": "bg-subpage",
+      "index": 0,
+      "width": 240,
+      "height": 135
+    },
+    {
+      "id": "bg-subpage",
+      "index": 1,
+      "width": 480,
+      "height": 270
+    },
+    {
+      "id": "bg-subpage",
+      "index": 2,
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "errors": [],
+  "screens": [
+    "panel-large.png",
+    "panel-small.png",
+    "modal-frame.png",
+    "card-normal.png",
+    "card-selected.png",
+    "card-locked.png",
+    "banner-title.png",
+    "button-primary.png",
+    "button-primary-pressed.png",
+    "button-primary-disabled.png",
+    "button-secondary.png",
+    "button-secondary-pressed.png",
+    "button-secondary-disabled.png",
+    "button-danger.png",
+    "button-small.png",
+    "toggle-track-off.png",
+    "toggle-track-on.png",
+    "slider-track.png",
+    "slider-fill.png",
+    "select-frame.png",
+    "tab-active.png",
+    "tab-inactive.png",
+    "scroll-track.png",
+    "scroll-thumb.png",
+    "chip-frame.png",
+    "hud-bar-frame.png",
+    "loading-bar-frame.png",
+    "loading-bar-fill.png",
+    "divider-ornament.png",
+    "button-round.png",
+    "toggle-knob.png",
+    "slider-knob.png",
+    "hud-circle-frame.png",
+    "vine-corner-tl.png",
+    "torch-0.png",
+    "torch-1.png",
+    "torch-2.png",
+    "torch-3.png",
+    "bg-hero-select.png",
+    "bg-map-select.png",
+    "bg-subpage.png",
+    "assembly.png",
+    "review-1.png",
+    "review-2.png",
+    "review-3.png",
+    "review-4.png",
+    "review-5.png",
+    "review-6.png"
+  ],
+  "seconds": 33.97687820000001
+}
