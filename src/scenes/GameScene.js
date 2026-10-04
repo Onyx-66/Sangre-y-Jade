@@ -22,6 +22,7 @@ import { SkillAudio } from '../systems/SkillAudio.js';
 import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';
 import { configureProjectile } from '../skills/kukul/projectiles.js';
 import { wantsToMove, cancelFocus, consumePlume, fullQuiverCount } from '../skills/kukul/runtime.js';
+import { worldView,resizeCamera,retentionRadius,shakePixels,resizeScreenOverlay,PICKUP_MAGNET_RANGE,GROUND_OVERSCAN } from '../systems/Viewport.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -129,6 +130,9 @@ export class GameScene extends Phaser.Scene {
     this.createWorld();
     this.createGroups();
     this.createPlayer();
+    this.resizeViewport(this.scale.gameSize);
+    this.onViewportResize=size=>this.resizeViewport(size);
+    this.scale.on('resize',this.onViewportResize);
     this.createInput();
     this.createCollisions();
     this.hud = new Hud(uiRoot, settings, {
@@ -150,16 +154,27 @@ export class GameScene extends Phaser.Scene {
   }
 
   createWorld() {
-    this.floor = this.add.tileSprite(0, 0, 1280, 720, 'ground')
-      .setOrigin(0).setScrollFactor(0).setDepth(-100);
+    this.floor = this.add.tileSprite(0, 0, 1, 1, 'ground')
+      .setOrigin(.5).setScrollFactor(0).setDepth(-100);
     if(this.mapData.id === 'bloodmoon') this.floor.setTint(0x956789);
     if(this.mapData.id === 'cenote') this.floor.setTint(0x568eaf);
     this.fog = this.add.graphics().setScrollFactor(0).setDepth(80);
-    if (this.mapData.id !== 'overgrown') {
-      const alpha = this.mapData.id === 'bloodmoon' ? .14 : .18;
-      this.fog.fillStyle(this.mapData.colors.fog, alpha).fillRect(0, 0, 1280, 720);
-    }
     this.decorGroup = this.add.group();
+  }
+
+  resizeViewport(size) {
+    if(this.ended)return;
+    const camera=this.cameras.main;
+    this.viewport=resizeCamera(camera,size.width,size.height,this.viewport);
+    const view=worldView(this);
+    this.floor.setPosition(camera.width/2,camera.height/2).setSize(view.width+2*GROUND_OVERSCAN,view.height+2*GROUND_OVERSCAN);
+    this.fog.clear().setPosition(camera.width/2,camera.height/2);
+    if(this.mapData.id!=='overgrown')this.fog.fillStyle(this.mapData.colors.fog,this.mapData.id==='bloodmoon'?.14:.18)
+      .fillRect(-view.width/2-GROUND_OVERSCAN,-view.height/2-GROUND_OVERSCAN,view.width+2*GROUND_OVERSCAN,view.height+2*GROUND_OVERSCAN);
+    for(const {object}of this.fx?.live||[])if(object.active&&object.getData?.('viewportOverlay'))resizeScreenOverlay(this,object);
+    this.decorTimer=0;
+    if(this.player&&this.decorGroup&&this.props)this.generateChunks();
+    this.hud?.hideTooltip();
   }
 
   createGroups() {
@@ -180,7 +195,6 @@ export class GameScene extends Phaser.Scene {
     this.player.setData('animLock',0);
     this.player.hiddenUntil = 0;
     this.cameras.main.startFollow(this.player, true, .09, .09);
-    this.cameras.main.setZoom(1);
     this.invulnerable = 0;
     this.generateChunks();
   }
@@ -397,7 +411,7 @@ export class GameScene extends Phaser.Scene {
       }
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
-      if (life <= 0 || Phaser.Math.Distance.Between(projectile.x, projectile.y, this.player.x, this.player.y) > 1450) projectile.destroy();
+      if (life <= 0 || Phaser.Math.Distance.Between(projectile.x, projectile.y, this.player.x, this.player.y) > retentionRadius(this,700)) projectile.destroy();
     });
     this.enemyProjectiles.children.each((projectile) => {
       if (!projectile?.active) return;
@@ -411,18 +425,18 @@ export class GameScene extends Phaser.Scene {
   }
 
   updatePickups() {
-    const xpPickupRange = 170 * this.passives.modifiers().pickupRangeMult;
+    const xpPickupRange = PICKUP_MAGNET_RANGE * this.passives.modifiers().pickupRangeMult;
     // Containers open on contact too; collecting loot never requires an attack.
     for(const prop of [...this.props.getChildren()])if(prop.active&&Phaser.Math.Distance.Between(prop.x,prop.y,this.player.x,this.player.y)<50)this.damageProp(prop,Infinity);
     this.pickups.children.each((pickup) => {
       if (!pickup?.active||this.pausedForChoice||this.ended) return;
       const distance = Phaser.Math.Distance.Between(pickup.x, pickup.y, this.player.x, this.player.y);
-      const pickupRange = pickup.getData('kind') === 'xp' ? xpPickupRange : 170;
+      const pickupRange = pickup.getData('kind') === 'xp' ? xpPickupRange : PICKUP_MAGNET_RANGE;
       if(distance<30){this.collectPickup(pickup);return;}
       if (distance < pickupRange) this.physics.moveToObject(pickup, this.player, 190 + (pickupRange - distance) * 2.2);
       else pickup.setVelocity(0, 0);
       const bubble=pickup.getData('bubble');if(bubble?.active){const pulse=1+Math.sin(this.elapsed*3+pickup.getData('phase'))*.07;bubble.setPosition(pickup.x,pickup.y).setDisplaySize(pickup.getData('bubbleSize')*pulse,pickup.getData('bubbleSize')*pulse);}
-      if (distance > 1900) pickup.destroy();
+      if (distance > retentionRadius(this,1150)) pickup.destroy();
     });
   }
 
@@ -451,12 +465,13 @@ export class GameScene extends Phaser.Scene {
   updateCompanion(dt){this.support.update(dt);}
 
   updateWorld() {
-    this.floor.tilePositionX = this.cameras.main.scrollX;
-    this.floor.tilePositionY = this.cameras.main.scrollY;
+    const view=worldView(this);
+    this.floor.tilePositionX = view.x-GROUND_OVERSCAN;
+    this.floor.tilePositionY = view.y-GROUND_OVERSCAN;
     if (this.decorTimer <= 0) {
       this.generateChunks();
       this.decorGroup.children.each((item) => {
-        if (item?.active && Phaser.Math.Distance.Between(item.x, item.y, this.player.x, this.player.y) > 1800) item.destroy();
+        if (item?.active && Phaser.Math.Distance.Between(item.x, item.y, this.player.x, this.player.y) > retentionRadius(this,1000)) item.destroy();
       });
       this.decorTimer = 2;
     }
@@ -519,7 +534,11 @@ export class GameScene extends Phaser.Scene {
   }
 
   getAimAngle(target) {
-    if(this.settings.attackMode==='manual'&&this.manualPointer){const p=this.input.activePointer;return Phaser.Math.Angle.Between(this.player.x,this.player.y,p.worldX,p.worldY);}
+    if(this.settings.attackMode==='manual'&&this.manualPointer){
+      const p=this.input.activePointer;
+      if(this.cameras?.main)p.updateWorldPoint?.(this.cameras.main);
+      return Phaser.Math.Angle.Between(this.player.x,this.player.y,p.worldX,p.worldY);
+    }
     if (this.settings.autoAim !== false && target) return Phaser.Math.Angle.Between(this.player.x, this.player.y, target.x, target.y);
     if (this.lastMove.lengthSq() > .1) return Math.atan2(this.lastMove.y, this.lastMove.x);
     return target ? Phaser.Math.Angle.Between(this.player.x, this.player.y, target.x, target.y) : 0;
@@ -787,7 +806,7 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(3,this.player.x,this.player.y,94);
     this.player.setTint(0xff7b7d);
     this.time.delayedCall(110, () => this.player?.active && this.player.clearTint());
-    if (this.settings.screenShake) this.cameras.main.shake(90, .004);
+    shakePixels(this,90,5);
     this.audio.sfx('hurt', .08);
     if (this.stats.hp <= 0) this.finishRun(false);
   }
@@ -804,7 +823,7 @@ export class GameScene extends Phaser.Scene {
     const weighted = available.flatMap((id) => Array(ENEMIES[id].weight).fill(id));
     const type = forcedType || Phaser.Utils.Array.GetRandom(weighted);
     const data = ENEMIES[type];
-    const position=spawnOutsideView(this.cameras.main.worldView);
+    const position=spawnOutsideView(worldView(this));
     // Explicit radii are reserved for summons/boss abilities and automated QA.
     if(forcedRadius){const angle=Math.random()*TAU;position.x=this.player.x+Math.cos(angle)*forcedRadius;position.y=this.player.y+Math.sin(angle)*forcedRadius;}
     const {x,y}=position;
@@ -827,7 +846,7 @@ export class GameScene extends Phaser.Scene {
   spawnBoss(data) {
     if (this.activeBoss || this.ended) return;
     data=bossForHero(this.heroData,data);
-    const {x,y}=spawnOutsideView(this.cameras.main.worldView,Math.random,120);
+    const {x,y}=spawnOutsideView(worldView(this),Math.random,120);
     const artKey=data.artKey||`boss-${data.id}`;
     const boss = this.enemies.get(x, y, artKey);
     if (!boss) return;
@@ -1125,10 +1144,10 @@ export class GameScene extends Phaser.Scene {
 
   generateChunks() {
     const size = 620;
-    const cx = Math.floor(this.player.x / size);
-    const cy = Math.floor(this.player.y / size);
-    for (let oy = -2; oy <= 2; oy += 1) for (let ox = -2; ox <= 2; ox += 1) {
-      const x = cx + ox; const y = cy + oy; const key = `${x},${y}`;
+    const view=worldView(this),margin=size/2;
+    for (let y=Math.floor((view.y-margin)/size);y<=Math.floor((view.bottom+margin)/size);y++)
+    for (let x=Math.floor((view.x-margin)/size);x<=Math.floor((view.right+margin)/size);x++) {
+      const key = `${x},${y}`;
       if (this.chunks.has(key)) continue;
       this.chunks.add(key);
       const seed = Math.abs((x * 73856093) ^ (y * 19349663) ^ 83492791);
@@ -1291,6 +1310,7 @@ export class GameScene extends Phaser.Scene {
     this.cleaned = true;
     this.ended = true; // Destroying a ward/movement effect must not deal shutdown damage.
     this.pauseSession?.overlay?.remove();this.pauseSession=null;
+    if(this.onViewportResize)this.scale.off('resize',this.onViewportResize);
     window.removeEventListener('pointerup',this.releaseAttack);
     window.removeEventListener('blur',this.releaseAttack);
     this.passives?.destroy();

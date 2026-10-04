@@ -5,6 +5,7 @@
 - [x] 01 — Replacing skills
 - [x] 02 — HUD clarity and fixed EN/AR positions
 - [x] 03 — Shared toggles and paused settings
+- [x] 04 — Fullscreen viewport and safe areas
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -106,3 +107,37 @@ Evidence: `previews/prompt03/report.json`, `native-report.json`, and `hud-regres
 - `V06_SPEC.md` and the specifically named toggle reference are absent; the explicit Prompt 03 requirements and supplied WhatsApp image were used. See `DECISIONS.md`.
 - The unrelated localization audit still flags legitimate French spellings `MANA` and `Cacao`; no new failures. FR/AR additions are marked for native review.
 - Native bridge behavior was verified in Chromium against the production build, not on a physical Android device. Prompt 04 arrived after these checks; seal this completed prompt in its own commit before its independent resize work.
+
+## Prompt 04 — Fullscreen viewport and safe areas — 2026-10-04
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-step04`.
+
+### Changed
+
+- Traced letterboxing to the fixed FIT canvas / contain CSS and native window inset handling. Changed to RESIZE, whole-screen canvas and a live 720-world-unit camera height with a 2.4:1 effective aspect cap; resize preserves the viewed center even while gameplay is paused.
+- Replaced fixed terrain/fog/screen-shading dimensions and stale spawn bounds with viewport helpers. Terrain coverage and culling follow the real view; ordinary enemy/boss spawns are wholly off-screen. Kept pickup/skill distances in world units, normalized camera shake by actual pixel displacement, and fixed stale manual-pointer aiming after camera changes.
+- Inset the HUD once using browser/native safe-area variables, clamped tooltips, and kept menus/overlays usable in the reduced rectangle. Added failing overlap checks then corrected XP/manual-attack spacing at cutout phone/960×540 sizes and ally/boss spacing at 4:3. EN/AR anchors remain physically identical.
+- Added an Android theme, edge-to-edge WebView/cutout handling, guarded modern/legacy immersive behavior, safe-inset publication and focus/resume/configuration reapplication. Removed an incompatible API 27 theme item caught by lint; kept API 26 support.
+- No image/audio assets, dependencies, branding, save format or package-version changes. Earlier unfinished translations/artwork remain excluded; no APK signing or keystore access.
+
+### Test results
+
+| Command | Result |
+| --- | --- |
+| Initial fixed-canvas regression | Expected failure before RESIZE changes |
+| Safe-area overlap and stale pointer reproductions | Expected failures before their focused fixes |
+| `node --test tests/v06-viewport.test.js tests/v06-hud.test.js tests/v06-settings.test.js tests/v06-replacement.test.js tests/skill-hud.test.js` | 46/46 pass; 8 new viewport tests |
+| `npm run test:viewport` | 518 checks pass; 7 resolutions × EN/AR × two inset states; 14 screenshots; EN/FR/AR settings/setup checks; 41.18 s |
+| PowerShell `SYJ_HUD_OUTPUT=docs/v0.6/previews/prompt04/hud-regression` then `npm run test:hud` | 497 checks pass; 32 HUD layouts plus card screenshot |
+| `npm run check` | 332/333 pass; sole pre-existing French `MANA` / `Cacao` audit failure; 6.84 s test runner; build skipped by `&&` |
+| `npm run build` | Pass; 259 modules, 9.80 s Vite; existing large-chunk warning |
+| Offline Gradle debug/release Java compile, resources and lint | Pass, 30 s; each lint report has 0 errors / 5 existing warnings |
+| `git diff --check` | Pass |
+
+Evidence, investigation and Android manual steps: `VIEWPORT.md`, `previews/prompt04/report.json` and `hud-regression/report.json`. Representative phone/4:3/ultrawide and Arabic screenshots were visually inspected. Browser assertions use actual canvas pixels, live Phaser camera state, real spawn sprite bounds and pickup velocities rather than only source-text checks.
+
+### Open issues
+
+- `V06_SPEC.md` remains absent; the explicit Prompt 04 rules are followed and conservative choices are in `DECISIONS.md`.
+- The unrelated unfinished French untranslated-key audit is still the sole full-suite failure; no new failures and no edits to that work.
+- No connected Android device or running emulator; native compile/resource/lint checks pass, but physical cutout/system-bar and signed APK execution remain unverified. Manual steps are supplied. The >2.4:1 fallback uses horizontal scaling only; all requested sizes use uniform zoom.

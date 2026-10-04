@@ -1,4 +1,5 @@
 import { FxDirector } from '../FxDirector.js';
+import { resizeScreenOverlay } from '../../systems/Viewport.js';
 import { KUKUL_DEFINITIONS } from '../../skills/generated/kukul.js';
 
 const definitions=new Map(KUKUL_DEFINITIONS.map(skill=>[skill.id,skill]));
@@ -128,7 +129,8 @@ export const KUKUL_FX_RECIPES={
  }),
  skyfall:recipe('skyfall','red-target-circle-and-smoky-falling-dart','JSON 0.6-second telegraph then twelve impacts across 1.5 seconds, r50 dust','NORMAL',['#d9413a','#3b2a1a'],{
   cast(s,c,t){const p=params('skyfall');if(s.add.rectangle&&s.fx?.track){
-    const shade=s.add.rectangle(s.scale.width/2,s.scale.height/2,s.scale.width,s.scale.height,0x000000,.16).setScrollFactor(0).setDepth(21);
+    const shade=s.add.rectangle(0,0,1,1,0x000000,.16).setScrollFactor(0).setDepth(21).setData('viewportOverlay',true);
+    resizeScreenOverlay(s,shade);
     s.fx.track(shade);hold(s,shade,(c.duration??p.telegraphSeconds)+p.duration);
    }return puff(s,t,'accent',s.player,40,.18);},
   ground(s,c,t){const marker=image(t,'accent',point(s,c),(c.radius??params('skyfall').radius)*2,{depth:8,alpha:.65});

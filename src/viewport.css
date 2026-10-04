@@ -1,0 +1,33 @@
+/* Canvas covers the full display. Only interactive UI is inset for cutouts. */
+:root{--usable-height:calc(100dvh - var(--safe-top) - var(--safe-bottom));--usable-width:calc(100vw - var(--safe-left) - var(--safe-right))}
+.hud .modal-backdrop{padding:10px;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+.modal-backdrop .modal{max-width:100%;max-height:calc(var(--usable-height) - 20px);min-width:0;min-height:0}
+.modal.settings-panel{height:min(680px,calc(var(--usable-height) - 20px))}
+.skill-tooltip{max-width:min(260px,calc(var(--usable-width) - 12px))}
+.screen:not(.cinematic-bg):not(.pixel-cinema){padding:calc(52px + var(--safe-top)) calc(22px + var(--safe-right)) calc(22px + var(--safe-bottom)) calc(22px + var(--safe-left))}
+.screen:not(.cinematic-bg):not(.pixel-cinema)>.panel{max-height:calc(var(--usable-height) - 72px)}
+.screen>.settings-panel{height:min(680px,calc(var(--usable-height) - 72px))}
+.screen.setup-screen{padding:calc(54px + var(--safe-top)) calc(12px + var(--safe-right)) calc(12px + var(--safe-bottom)) calc(12px + var(--safe-left))!important}
+.screen.setup-screen>.wizard-panel{height:min(710px,calc(var(--usable-height) - 72px))}
+.screen>.language-switch{top:calc(10px + var(--safe-top));right:calc(14px + var(--safe-right))}
+.screen.cinematic-bg{padding-top:calc(22px + var(--safe-top));padding-bottom:calc(22px + var(--safe-bottom));padding-left:max(6vw,calc(22px + var(--safe-left)));padding-right:calc(22px + var(--safe-right))}
+html[lang=ar] .screen.cinematic-bg{padding-left:calc(22px + var(--safe-left));padding-right:max(6vw,calc(22px + var(--safe-right)))}
+/* Leave a real gap between the inset joystick, XP and six compact action plates. */
+@media(orientation:landscape) and (max-width:900px),(orientation:landscape) and (max-height:520px){
+ .hud{--xp-half:min(72.5px,calc(50% - 206px));--xp-center:clamp(calc(108px + var(--xp-half)),34%,calc(100% - 304px - var(--xp-half)))}
+ .hud .xp-dock{width:min(145px,calc(100% - 412px));left:var(--xp-center)}
+ .hud #auto-indicator{left:var(--xp-center)}
+}
+@media(min-width:901px) and (min-height:521px){
+ .hud{--xp-half:clamp(70px,12%,150px);--xp-center:clamp(calc(164px + var(--xp-half)),calc(50% - 35px),calc(100% - 458px - var(--xp-half)))}
+ .hud .xp-dock{width:clamp(140px,24%,300px);left:var(--xp-center)}
+ .hud #auto-indicator{left:var(--xp-center)}
+ .hud .boss-wrap{left:max(254px,calc(50% - 280px));right:auto;width:min(560px,calc(100% - 266px));transform:none}
+}
+@media(max-width:540px) and (orientation:portrait){
+ .screen.cinematic-bg,html[lang=ar] .screen.cinematic-bg{padding-left:max(5vw,calc(22px + var(--safe-left)));padding-right:max(5vw,calc(22px + var(--safe-right)))}
+}
+@media(max-height:520px){
+ .screen.setup-screen{padding-top:calc(40px + var(--safe-top))!important;padding-bottom:calc(6px + var(--safe-bottom))!important}
+ .screen.setup-screen>.wizard-panel{height:calc(var(--usable-height) - 50px)}
+}

@@ -15,6 +15,7 @@ import './v05.css';
 import './skills-hud.css';
 import './v06.css';
 import './ui/settings.css';
+import './viewport.css';
 import { renderSettingsPanel } from './ui/SettingsPanel.js';
 import { applySettingChange } from './systems/RuntimeSettings.js';
 import { t, setLanguage, translateDOM, languageMarkup } from './i18n/index.js';
@@ -148,15 +149,15 @@ class SangreYJadeApp {
     this.game = new Phaser.Game({
       type: Phaser.AUTO,
       parent: this.gameRoot,
-      width: 1280,
-      height: 720,
+      width: this.gameRoot.clientWidth,
+      height: this.gameRoot.clientHeight,
       backgroundColor: map.colors.ground,
       pixelArt: true,
       antialias: false,
       roundPixels: true,
       render: { powerPreference: 'high-performance', antialias: false, pixelArt: true },
       fps: { target: this.save.data.settings.fps, limit: this.save.data.settings.fps, forceSetTimeOut: this.save.data.settings.fps === 30 },
-      scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH, width: 1280, height: 720 },
+      scale: { mode: Phaser.Scale.RESIZE, autoCenter: Phaser.Scale.NO_CENTER },
       physics: { default: 'arcade', arcade: { gravity: { x: 0, y: 0 }, debug: false } },
       scene: [scene],
       audio: { noAudio: true },

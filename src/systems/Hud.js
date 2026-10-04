@@ -210,8 +210,9 @@ export class Hud {
     slot.setAttribute('aria-describedby','hud-tooltip');
     this.tooltip.textContent=slot.dataset.tooltip;this.tooltip.hidden=false;
     const bounds=slot.getBoundingClientRect(),rect=this.tooltip.getBoundingClientRect();
-    this.tooltip.style.left=`${clamp(bounds.left+bounds.width/2-rect.width/2,6,innerWidth-rect.width-6)}px`;
-    this.tooltip.style.top=`${Math.max(6,bounds.top-rect.height-8)}px`;
+    const safe=this.el.getBoundingClientRect();
+    this.tooltip.style.left=`${clamp(bounds.left+bounds.width/2-rect.width/2,safe.left+6,safe.right-rect.width-6)}px`;
+    this.tooltip.style.top=`${clamp(bounds.top-rect.height-8,safe.top+6,safe.bottom-rect.height-6)}px`;
     clearTimeout(this.tooltipTimer);this.tooltipTimer=setTimeout(()=>this.hideTooltip(),3500);
   }
 

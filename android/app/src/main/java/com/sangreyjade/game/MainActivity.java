@@ -3,10 +3,16 @@ package com.sangreyjade.game;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Build;
+import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.Insets;
 import android.annotation.SuppressLint;
 import android.window.OnBackInvokedDispatcher;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.DisplayCutout;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebResourceRequest;
@@ -17,15 +23,35 @@ import java.util.HashMap;
 
 public class MainActivity extends Activity {
     private WebView web;
+    private int safeLeft,safeTop,safeRight,safeBottom;
     private static final String ORIGIN = "appassets.androidplatform.net";
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         if(Build.VERSION.SDK_INT>=33)getOnBackInvokedDispatcher().registerOnBackInvokedCallback(OnBackInvokedDispatcher.PRIORITY_DEFAULT,this::handleBack);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        applyImmersiveMode();
         web=new WebView(this);
         if((getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE)!=0)WebView.setWebContentsDebuggingEnabled(true);
         web.setBackgroundColor(0xff251828);
+        web.setFitsSystemWindows(false);
+        web.setOnApplyWindowInsetsListener((view,insets)->{
+            safeLeft=safeTop=safeRight=safeBottom=0;
+            if(Build.VERSION.SDK_INT>=30){
+                Insets safe=insets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+                safeLeft=safe.left;safeTop=safe.top;safeRight=safe.right;safeBottom=safe.bottom;
+            }else{
+                safeLeft=insets.getSystemWindowInsetLeft();safeTop=insets.getSystemWindowInsetTop();
+                safeRight=insets.getSystemWindowInsetRight();safeBottom=insets.getSystemWindowInsetBottom();
+                if(Build.VERSION.SDK_INT>=28){
+                    DisplayCutout cutout=insets.getDisplayCutout();
+                    if(cutout!=null){safeLeft=Math.max(safeLeft,cutout.getSafeInsetLeft());safeTop=Math.max(safeTop,cutout.getSafeInsetTop());safeRight=Math.max(safeRight,cutout.getSafeInsetRight());safeBottom=Math.max(safeBottom,cutout.getSafeInsetBottom());}
+                }
+            }
+            publishSafeInsets();
+            if(Build.VERSION.SDK_INT>=30)return WindowInsets.CONSUMED;
+            if(Build.VERSION.SDK_INT>=28)return insets.consumeDisplayCutout().consumeSystemWindowInsets();
+            return insets.consumeSystemWindowInsets();
+        });
         web.getSettings().setJavaScriptEnabled(true);
         web.getSettings().setDomStorageEnabled(true);
         web.getSettings().setMediaPlaybackRequiresUserGesture(false);
@@ -53,17 +79,42 @@ public class MainActivity extends Activity {
                     return new WebResourceResponse(mime,"UTF-8",200,"OK",headers,getAssets().open("game"+path));
                 } catch(Exception e){return missing();}
             }
-            @Override public void onPageFinished(WebView v,String url) { v.evaluateJavascript("window.__SANGRE_Y_JADE__?.audio.unlock()",null); }
+            @Override public void onPageFinished(WebView v,String url) { v.evaluateJavascript("window.__SANGRE_Y_JADE__?.audio.unlock()",null);publishSafeInsets();v.requestApplyInsets(); }
         });
         setContentView(web);
         web.loadUrl("https://"+ORIGIN+"/index.html");
     }
+    private void applyImmersiveMode(){
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);getWindow().setNavigationBarColor(Color.TRANSPARENT);
+        if(Build.VERSION.SDK_INT>=28){
+            WindowManager.LayoutParams attributes=getWindow().getAttributes();
+            attributes.layoutInDisplayCutoutMode=Build.VERSION.SDK_INT>=30?WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS:WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+            getWindow().setAttributes(attributes);
+        }
+        if(Build.VERSION.SDK_INT>=29){getWindow().setStatusBarContrastEnforced(false);getWindow().setNavigationBarContrastEnforced(false);}
+        if(Build.VERSION.SDK_INT>=30){
+            getWindow().setDecorFitsSystemWindows(false);
+            WindowInsetsController controller=getWindow().getInsetsController();
+            if(controller!=null){controller.setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);controller.hide(WindowInsets.Type.systemBars());}
+        }
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        if(web!=null)web.requestApplyInsets();
+    }
+    private void publishSafeInsets(){
+        if(web==null)return;
+        // Native insets are physical pixels; the viewport/HUD uses CSS pixels.
+        String values="["+safeLeft+","+safeTop+","+safeRight+","+safeBottom+"]";
+        web.evaluateJavascript("(()=>{const p=window.devicePixelRatio||1;const v="+values+";['left','top','right','bottom'].forEach((s,i)=>document.documentElement.style.setProperty('--native-safe-'+s,v[i]/p+'px'))})()",null);
+    }
+    @Override public void onWindowFocusChanged(boolean focused){super.onWindowFocusChanged(focused);if(focused)applyImmersiveMode();}
+    @Override public void onConfigurationChanged(Configuration config){super.onConfigurationChanged(config);applyImmersiveMode();}
     private WebResourceResponse missing(){return new WebResourceResponse("text/plain","UTF-8",404,"Not found",null,new ByteArrayInputStream(new byte[0]));}
     private void handleBack(){web.evaluateJavascript("(()=>{const a=window.__SANGRE_Y_JADE__;if(a?.game){a.game.scene.getScene('Ritual').togglePause()}else{a?.cancelPrologue?.();a?.showTitle()}})()",null);}
     // API 26–32 use the legacy callback; API 33+ registers predictive back above.
     @SuppressLint("GestureBackNavigation")
     @Override public void onBackPressed(){handleBack();}
     @Override protected void onPause(){super.onPause();if(web!=null){web.evaluateJavascript("(()=>{const a=window.__SANGRE_Y_JADE__;a?.audio.current?.pause();const s=a?.game?.scene.getScene('Ritual');if(s&&!s.pausedForChoice&&!s.ended)s.togglePause()})()",null);web.onPause();}}
-    @Override protected void onResume(){super.onResume();if(web!=null){web.onResume();web.evaluateJavascript("window.__SANGRE_Y_JADE__?.audio.unlock()",null);}}
+    @Override protected void onResume(){super.onResume();applyImmersiveMode();if(web!=null){web.onResume();web.evaluateJavascript("window.__SANGRE_Y_JADE__?.audio.unlock()",null);}}
     @Override protected void onDestroy(){if(web!=null)web.destroy();super.onDestroy();}
 }

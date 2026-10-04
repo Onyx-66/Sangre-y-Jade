@@ -1,4 +1,5 @@
 import { applySlow } from '../systems/SkillCombat.js';
+import { retentionRadius } from '../systems/Viewport.js';
 
 const active = (enemy, key, elapsed) => (enemy.getData(key) || 0) > elapsed;
 
@@ -107,7 +108,7 @@ export function updateEnemy(scene, enemy, dt, random = Math.random) {
   }
   if (active(enemy, 'rootUntil', scene.elapsed)) enemy.setVelocity(0, 0);
   applySlow(enemy, scene.elapsed);
-  if (Math.hypot(scene.player.x - enemy.x, scene.player.y - enemy.y) > 1900 && !enemy.getData('isBoss')) enemy.destroy();
+  if (Math.hypot(scene.player.x - enemy.x, scene.player.y - enemy.y) > retentionRadius(scene,1150) && !enemy.getData('isBoss')) enemy.destroy();
   if (!enemy.active) return;
   enemy.setFlipX(enemy.body.velocity.x < 0);
   scene.animateCharacter(enemy, enemy.getData('artKey'), Math.hypot(enemy.body.velocity.x, enemy.body.velocity.y) > 0 ? 'walk' : 'idle');

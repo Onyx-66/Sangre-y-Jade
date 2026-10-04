@@ -1,4 +1,5 @@
 import { FxDirector } from '../FxDirector.js';
+import { shakePixels } from '../../systems/Viewport.js';
 import { BALAM_DEFINITIONS, SHARED_DEFINITIONS } from '../../skills/generated/balam.js';
 
 const definitions = new Map([...BALAM_DEFINITIONS, ...SHARED_DEFINITIONS].map(skill => [skill.id, skill]));
@@ -40,7 +41,7 @@ export const BALAM_FX_RECIPES = {
       ring.setScale(.36);fade(scene, ring, .48, { scale: 1.08 });
       const head = add(scene, stills, 'accent', { x: at.x, y: at.y - Math.min(52, diameter * .18) }, Math.min(96, diameter * .5), 0, { alpha: .95 });
       head.setScale(.5);fade(scene, head, .26, { scale: 1.15 });
-      if (scene.settings?.screenShake) scene.cameras?.main?.shake?.(150, 4 / 1280);
+      shakePixels(scene,150,4);
       return [ring, head];
     },
   }),
@@ -92,7 +93,7 @@ export const BALAM_FX_RECIPES = {
     impact(scene, ctx, stills) {
       const at = pointOf(scene, ctx), crater = add(scene, stills, 'accent', at, 130, 0, { alpha: .92 });crater.setScale(.45);fade(scene, crater, .42, { scale: 1.25 });
       const leaves = stills.burst('accent', at.x, at.y, { count: 7, lifespan: 380, size: 22, speed: 175 });
-      if (scene.settings?.screenShake) scene.cameras?.main?.shake?.(180, 6 / 1280);return [crater, leaves];
+      shakePixels(scene,180,6);return [crater, leaves];
     },
     ground(scene, ctx, stills) {
       const p = params('ceiba-breaker'), at = pointOf(scene, ctx), decal = add(scene, stills, 'accent', at, 118, 0, { alpha: .42, depth: 8 });
