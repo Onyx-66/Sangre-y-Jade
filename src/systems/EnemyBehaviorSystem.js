@@ -32,6 +32,7 @@ export class EnemyBehaviorSystem {
     const type=enemy.getData('type'),behavior=ENEMY_BEHAVIORS[type];if(!behavior)return;
     enemy.setData({...enemyBehaviorDefaults(),behaviorState:{serial:enemy.getData('serial'),cooldowns:{},busy:null,motion:null,after:null}});
     behavior.init?.(this.context(enemy));
+    this.scene.audio?.play?.(`enemy-${type}-spawn`,{x:enemy.x,y:enemy.y});
   }
   update(enemy,dt,target) {
     const behavior=ENEMY_BEHAVIORS[enemy.getData('type')];if(!behavior||enemy.getData('isBoss')||this.destroyed)return false;

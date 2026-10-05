@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { attachRunAudio } from '../audio/runAudio.js';
 import { t } from '../i18n/index.js';
 import { gameTextStyle } from '../ui/Typography.js';
 import { buildTextures, preloadTextures } from '../art/TextureFactory.js';
@@ -75,6 +76,7 @@ export class GameScene extends Phaser.Scene {
     this.modeData = mode;
     this.settings = settings;
     this.audio = audio;
+    attachRunAudio(this);
     this.meta = meta;
     this.ended = false;
     this.pausedForChoice = false;
@@ -174,7 +176,7 @@ export class GameScene extends Phaser.Scene {
       pause: () => this.togglePause(),
       support:()=>this.showSupportLoadout(),
       uiSound:name=>this.skillAudio.ui(name),
-      settingsSound:()=>{this.audio.unlock?.();this.audio.sfx('click',.04);},
+      settingsSound:id=>{this.audio.unlock?.();if(this.audio.ui)this.audio.ui(id||'button-primary');else this.audio.sfx('click',.04);},
       attack:()=>{if(this.settings.attackMode==='manual' && this.autoTimer<=0 && !this.pausedForChoice)this.autoAttack();},
     });
     this.hud.setHero(hero);
@@ -735,6 +737,7 @@ export class GameScene extends Phaser.Scene {
     const beforeHp=enemy.getData('hp'),hpDamage=absorbEnemyShield(enemy,damage,this.elapsed);
     const hp = beforeHp - hpDamage;
     enemy.setData('hp', hp);
+    if(!options.dot){const type=enemy.getData('type')||'';this.audio.play?.(`sfx/core/enemy-hit-${/stone|golem/.test(type)?'stone':/bone|serpent/.test(type)?'bone':'flesh'}`,{x:enemy.x,y:enemy.y});}
     if(enemy.getData('isBoss'))this.bossController?.phaseChanged();
     this.enemyBars?.damage(enemy,beforeHp);
     this.stats.damageDone += damage;
@@ -770,6 +773,7 @@ export class GameScene extends Phaser.Scene {
     const bossId = enemy.getData('bossId');
     const xp = enemy.getData('xp') || 5;
     this.enemyVisuals?.die(enemy);
+    if(!enemy.getData('isBoss'))this.audio.play?.(`enemy-${enemy.getData('type')}-death`,{x:enemy.x,y:enemy.y});
     this.enemySystem?.interrupt(enemy);this.enemySystem?.removeOwned(enemy);
     this.telegraphs?.cancelOwner(enemy);
     if(enemy.getData('affix')==='explosive')this.telegraphs?.play({shape:'circle',x,y,radius:90,windup:.6,tag:'death-burst',
@@ -819,6 +823,7 @@ export class GameScene extends Phaser.Scene {
     if (this.stats.shield > 0) {
       const blocked = Math.min(this.stats.shield, damage);
       this.stats.shield -= blocked;
+      if(blocked>0)this.audio.play?.(this.stats.shield>0?'shield-hit':'shield-break');
       if(this.balamWard){this.balamWard.remaining=Math.max(0,this.balamWard.remaining-blocked);if(this.balamWard.remaining<=0)this.balamWard.effect.destroy();}
       damage -= blocked;
       if (damage <= 0) this.floatText(this.player.x, this.player.y - 28, 'WARD', '#78e4c0');
@@ -985,7 +990,7 @@ export class GameScene extends Phaser.Scene {
     const value = pickup.getData('value') || 1;
     if (kind === 'xp') {
       this.stats.xp += value * this.stats.xpGain;
-      if(!this.passives.equipped.has('jade-bounty'))this.audio.sfx('pickup', .09);
+      if(!this.passives.equipped.has('jade-bounty')){if(this.audio.play)this.audio.play('xp-gem');else this.audio.sfx('pickup', .09);}
       pickup.destroy();
     } else if (kind === 'cacao') {
       this.stats.cacao += Math.max(1, Math.round(value * (1 + this.stats.fortune)));
@@ -1277,6 +1282,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   healEffect() {
+    this.audio?.play?.('heal');
     this.playEffect(2,this.player.x,this.player.y,100);
   }
 
@@ -1310,11 +1316,13 @@ export class GameScene extends Phaser.Scene {
     if(this.pausedForChoice)return;
     this.pauseForSelection();
     const session={overlay:null,back:null};this.pauseSession=session;
+    this.audio.ui?.('pause-open');
     const current=()=>!this.ended&&this.pauseSession===session;
     const close=()=>{session.overlay?.remove();session.overlay=null;};
     const resume=() => {
       if(!current())return;
       close();this.pauseSession=null;
+      this.audio.ui?.('pause-close');
       this.pausedForChoice = false;
       this.physics.resume();
       this.tweens.resumeAll();
@@ -1335,6 +1343,7 @@ export class GameScene extends Phaser.Scene {
   finishRun(victory, abandoned = false) {
     if (this.ended) return;
     this.ended = true;
+    if(!victory&&!abandoned)this.audio.play?.('hero-death');
     this.cutscenes?.destroy();this.bossController?.destroy();this.bossPresentation?.destroy();
     this.telegraphs?.cancelAll();
     this.skillAudio?.stopAll?.();

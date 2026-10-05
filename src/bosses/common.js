@@ -31,6 +31,7 @@ export function cue(ctx,id,kind='cast',extra={}){
   safeCircles:ctx.safeCircles,kind,isAlive:()=>ctx.runtime.alive()&&(kind!=='warn'||ctx.state.busy?.ability.id===id),...extra});
  const audioId=`${base}-${kind}`;
  if(ctx.scene.options?.bossHooks?.audio)ctx.scene.options.bossHooks.audio(audioId);
+ else if(ctx.scene.audio?.play)ctx.scene.audio.play(audioId,point(ctx.boss));
  else ctx.scene.skillAudio?.play?.(audioId,'cast');
 }
 export function hitArea(ctx,shape,damage,options={}){

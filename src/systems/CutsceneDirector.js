@@ -19,6 +19,7 @@ export class CutsceneDirector {
    lerpX:camera?.lerp?.x??.09,lerpY:camera?.lerp?.y??.09,zoomX:camera?.zoomX||camera?.zoom||1,zoomY:camera?.zoomY||camera?.zoom||1,
    center:{x:(camera?.scrollX||0)+(camera?.width||0)/2,y:(camera?.scrollY||0)+(camera?.height||0)/2}};
   this.current={boss,serial:boss.getData('serial'),definition,shortened,duration,steps:entranceSteps(duration),age:0,entry,onComplete,snapshot,named:false};
+  s.audio?.v2?.duck('cinematic',true);
   s.bossCinematic=true;s.pausedForChoice=true;s.invulnerable=Infinity;s.physics?.pause();s.tweens?.pauseAll();if(s.time)s.time.paused=true;
   s.skillAudio?.pause?.();s.releaseAttack?.();s.hud?.releaseJoystick?.();if(s.hud){s.hud.move={x:0,y:0};s.hud.hideTooltip?.();s.hud.el?.classList.add('boss-cinematic-hidden');}
   s.player?.setVelocity?.(0,0);camera?.stopFollow?.();this.presentation?.clearWarning();
@@ -30,7 +31,8 @@ export class CutsceneDirector {
   const hooks=this.scene.options?.bossHooks;
   if(hooks?.stinger)hooks.stinger(c.definition);else this.scene.audio?.sfx?.('boss');
   hooks?.voice?.({id:c.definition.id,kind:'entry',definition:c.definition});
-  if(hooks?.music)hooks.music(c.definition,1200);else this.scene.audio?.music?.('boss',1200);
+  if(!hooks?.voice)this.scene.audio?.voice?.(`boss-${c.definition.id}-entry`,{owner:'run'});
+  if(hooks?.music)hooks.music(c.definition,1200);else this.scene.audio?.music?.(`boss-${c.definition.id}`,1200);
  }
  update(dt){
   const c=this.current;if(!c)return;
@@ -55,6 +57,7 @@ export class CutsceneDirector {
  resize(viewport){const c=this.current;if(!c)return;c.snapshot.zoomX=viewport.zoomX;c.snapshot.zoomY=viewport.zoom;this.update(0);}
  finish({abort=false,keepName=false}={}){
   const c=this.current;if(!c)return;this.current=null;const s=this.scene,{snapshot}=c,camera=s.cameras?.main;
+  s.audio?.v2?.duck('cinematic',false);
   // Entry scripts guard actor mutation themselves; drawing must always release,
   // including an aborted cinematic whose physics body has already been reused.
   c.entry?.finish?.();

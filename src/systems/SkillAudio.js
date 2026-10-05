@@ -14,12 +14,14 @@ export class SkillAudio {
   }
   unlock(){
     if(this.destroyed)return;
+    if(this.audio.v2){this.audio.v2.unlock();for(const loop of this.loops.values())if(!loop.voice&&!loop.loading&&!this.paused)this.startLoop(loop);return;}
     this.ensureContext();
     this.context?.resume?.().catch(()=>{});
     for(const loop of this.loops.values())if(!loop.voice&&!loop.loading&&!this.paused)this.startLoop(loop);
   }
   ensureContext(){if(!this.context){this.context=this.createContext();if(this.context){this.gain=this.context.createGain();this.gain.connect(this.context.destination);this.applySettings();}}return this.context;}
   async prepareFile(file,{signal,timeout=20000}={}){
+    if(this.audio.v2){const id=this.v2Id(file);if(this.audio.v2.catalog[id])return this.audio.v2.buffer(id);}
     if(this.destroyed||signal?.aborted)throw new DOMException('Loading cancelled','AbortError');
     if(!this.ensureContext())throw new Error(`Audio decoder unavailable: ${file}`);
     const controller=new AbortController();let rejectStopped;
@@ -47,6 +49,7 @@ export class SkillAudio {
     return this.buffers.get(file);
   }
   play(id,kind='cast') {
+    if(this.audio.v2){if(this.destroyed||(this.paused&&kind!=='ui'))return false;const key=kind==='ui'?`sfx/ui/${id}`:`sfx/skills/${id}-${kind}`;if(!this.audio.v2.catalog[key])return false;return this.audio.v2.play(key,{owner:kind==='ui'?'ui':this});}
     if(this.destroyed||this.audio.unlocked===false||(this.paused&&kind!=='ui')||this.volume()===0)return false;
     const known=kind==='ui'?manifest.ui[id]:manifest.skills[id];
     // Absent optional hit/proc files and explicitly silent traits are not errors.
@@ -62,7 +65,7 @@ export class SkillAudio {
       this.startVoice(key,buffer,false,0,file);
     }).catch(()=>{if(!this.destroyed&&epoch===this.epoch)this.fallback(id,kind);});return true;
   }
-  ui(name){return this.play(name,'ui');}
+  ui(name){if(name==='slot-unlock')this.audio.voice?.('announcer-slot-unlocked',{owner:'run'});return this.play(name,'ui');}
   startVoice(id,buffer,loop,offset,file){
     this.voices=this.voices.filter(v=>!v.stopped);
     const same=this.voices.filter(v=>v.id===id);
@@ -76,6 +79,7 @@ export class SkillAudio {
     this.plays.set(file,(this.plays.get(file)||0)+1);return voice;
   }
   stopVoice(voice,fade=false){
+    if(this.audio.v2&&voice?.v2){this.audio.v2.stopVoice(voice,fade?.02:0);return;}
     if(!voice||voice.stopped)return;voice.stopped=true;
     if(fade&&this.context?.state==='running'){
       const now=this.context.currentTime;
@@ -89,9 +93,13 @@ export class SkillAudio {
     let record=this.loops.get(id);
     if(record){if(options.duration!==undefined)record.remaining=options.duration;if(options.isAlive)record.isAlive=options.isAlive;return true;}
     record={id,remaining:options.duration??manifest.skills[id].effectSeconds??6,isAlive:options.isAlive,offset:0,loading:false};
-    this.loops.set(id,record);if(this.audio.unlocked!==false&&!this.paused){this.unlock();if(!this.context)this.fallback(id,'loop');else this.startLoop(record);}return true;
+    this.loops.set(id,record);if(this.audio.unlocked!==false&&!this.paused){this.unlock();if(this.audio.v2)this.startLoop(record);else if(!this.context)this.fallback(id,'loop');else this.startLoop(record);}return true;
   }
   startLoop(record){
+    if(this.audio.v2){
+      if(record.loading||record.voice||this.destroyed||this.paused)return;
+      record.loading=true;this.audio.v2.play(`sfx/skills/${record.id}-loop`,{loop:true,owner:this}).then(voice=>{record.loading=false;if(!voice)return;if(this.destroyed||this.paused||this.loops.get(record.id)!==record)this.audio.v2.stopVoice(voice);else {voice.v2=true;record.voice=voice;}});return;
+    }
     if(record.loading||record.voice||this.destroyed||this.paused||!this.context)return;
     record.loading=true;const file=this.file(record.id,'loop');
     if(this.unavailable.has(file)){this.stop(record.id);this.fallback(record.id,'loop');return;}
@@ -113,12 +121,15 @@ export class SkillAudio {
   }
   pause(){
     if(this.paused)return;this.paused=true;this.epoch++;
+    if(this.audio.v2){this.audio.v2.pauseOwner(this);for(const record of this.loops.values())record.voice=null;return;}
     for(const loop of this.loops.values())if(loop.voice){const v=loop.voice;loop.offset=(v.offset+(this.context.currentTime-v.started)*v.rate)%v.buffer.duration;this.stopVoice(v,true);loop.voice=null;}
     this.voices.forEach(v=>this.stopVoice(v,true));
   }
-  resume(){if(!this.paused||this.destroyed)return;this.paused=false;this.unlock();}
-  stopAll(){this.epoch++;for(const id of [...this.loops.keys()])this.stop(id);this.voices.forEach(v=>this.stopVoice(v));}
+  resume(){if(!this.paused||this.destroyed)return;this.paused=false;this.audio.v2?.resumeOwner(this);this.unlock();}
+  stopAll(){this.epoch++;this.audio.v2?.stopOwner(this);for(const id of [...this.loops.keys()])this.stop(id);this.voices.forEach(v=>this.stopVoice(v));}
+  v2Id(file){return `sfx/${file.replace(/(^|\/)sfx-(ui-)?/,'$1').replace(/\.wav$/,'')}`;}
   destroy(){
+    this.audio.v2?.resumeOwner(this);
     if(this.destroyed)return;this.stopAll();this.destroyed=true;this.last.clear();this.buffers.clear();this.audio.effectClients?.delete(this);
     this.context?.close?.().catch(()=>{});
   }

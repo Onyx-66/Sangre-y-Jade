@@ -67,6 +67,7 @@ class SangreYJadeApp {
   }
 
   setScreen(html, className = '') {
+    this.audio.ui?.('panel-open');
     const menuArt=new URL(artUrl('title.webp'),document.baseURI).href;
     this.uiRoot.innerHTML = `<section class="screen ${className}" style="--menu-art:url('${menuArt}')">${html}</section>`;
     translateDOM(this.uiRoot.firstElementChild);
@@ -218,6 +219,7 @@ class SangreYJadeApp {
   }
 
   showShrine() {
+    this.audio.music('shop-upgrades');
     this.currentPage='showShrine';
     const upgrades = [
       { id: 'damage', name: 'Obsidian Edge', effect: '+3.5% starting damage per rank' },
@@ -250,11 +252,12 @@ class SangreYJadeApp {
     const screen=this.setScreen('<section class="panel settings-panel"></section>');
     renderSettingsPanel($('.settings-panel',screen),this.save.data.settings,{
       onChange:(key,value)=>applySettingChange({save:this.save,audio:this.audio},key,value),
-      onClose:()=>this.showTitle(),onSound:()=>this.clickSound(),
+      onClose:()=>this.showTitle(),onSound:id=>this.audio.ui?this.audio.ui(id||'button-primary'):this.clickSound(),
     });
   }
 
   showStore() {
+    this.audio.music('shop-upgrades');
     this.currentPage='showStore';
     const screen = this.setScreen(`
       <section class="panel"><h2>Shop</h2><p class="panel-subtitle">Cosmetics and downloadable extras. No paid stat boosts.</p>

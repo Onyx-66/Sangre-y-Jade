@@ -1,4 +1,5 @@
 import definitions from '../data/bosses-v06.json' with {type:'json'};
+import { bossAudioIds } from '../audio/runAudio.js';
 import {BOSS_BEHAVIORS} from '../bosses/index.js';
 import {BOSS_FAIRNESS,bossDamage,fairAbility,phaseForHp,arenaSafeCircles,insideSafeCircle,segmentDistance} from '../bosses/rules.js';
 import {canEnemyAttack,enemyDamageMult,enemyShotAngle} from '../skills/StatusEffects.js';
@@ -59,6 +60,8 @@ export class BossController {
    state.phase=next;state.phaseStartedAt=this.scene.elapsed;const phase=definition.phases[next];this.protect(phase.invulnerability||0);
    if(!state.behavior.temporary)cue(this.context(),'phase');
    state.behavior.onPhase?.(this.context());this.scene.options?.bossHooks?.phase?.({definition,phase,index:next});
+   this.scene.audio?.voice?.(`boss-${definition.id}-phase`,{owner:'run'});
+   if(definition.id==='ahpuch')this.scene.audio?.v2?.music('boss-ahpuch',1.2,next+1);
   }
   this.refreshBar();
  }
@@ -76,6 +79,7 @@ export class BossController {
    if(state.death.remaining<=1e-9){const done=state.death.done;state.death.sprite?.destroy();state.death=null;this.state=null;this.graphics?.clear();done?.();}return;}
   if(!state.boss.active){this.cancel(state);state.runtime?.destroy();this.state=null;this.graphics?.clear();return;}
   this.phaseChanged();
+  if(this.scene.elapsed-(state.lastTaunt??state.startedAt)>=30){state.lastTaunt=this.scene.elapsed;this.scene.audio?.voice?.(`boss-${state.definition.id}-taunt`,{owner:'run'});}
   if(!canEnemyAttack(this.scene,state.boss))this.cancel(state);
   if(state.boss.getData('rootUntil')>this.scene.elapsed)
    for(const task of [...state.runtime.tasks])if(task.movement)state.runtime.finish(task,true);
@@ -160,6 +164,7 @@ export class BossController {
  die(boss,done){
   const state=this.state;if(!this.valid(state)||state.boss!==boss||state.dead)return false;
   this.cancel(state);state.runtime?.destroy();state.dead=true;
+  this.scene.audio?.voice?.(`boss-${state.definition.id}-death`,{owner:'run'});
   if(!state.behavior.temporary)cue(this.context(),'death');
   const sprite=this.scene.bossVisuals?.die(boss)||this.scene.add?.sprite?.(boss.x,boss.y,boss.texture?.key||boss.getData('artKey'));
   sprite?.setDepth?.(24).setScale(boss.scaleX||1,boss.scaleY||1);
@@ -169,13 +174,16 @@ export class BossController {
   state.death={remaining:.9,sprite,done};this.scene.options?.bossHooks?.death?.({definition:state.definition,boss});return true;
  }
  updateArrival(){
-  if(!this.running()||this.scene.activeBoss||this.state)return;
+  if(!this.running())return;
   const s=this.scene,index=s.nextBossIndex<3?s.nextBossIndex:s.finalSpawned?null:3;
   if(index===null)return;const definition=this.definitions[index];if(!definition)return;
   const due=definition.arrival[s.modeData.id]??s.modeData.duration*(index+1)/4;
+  if(s.audio?.v2&&s.elapsed>=due-60&&this.preloadedAudio!==definition.id){this.preloadedAudio=definition.id;s.audio.prepareManifest?.(bossAudioIds(s.audio.v2,definition.id));}
+  if(s.activeBoss||this.state)return;
   if(!this.warning&&s.elapsed>=due-BOSS_FAIRNESS.warningLead){
    const point=s.mapWorld?.spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35))||spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35));
    this.warning={definition,point,spawnAt:Math.max(due,s.elapsed+BOSS_FAIRNESS.warningLead)};
+   s.audio?.voice?.(index===3?'announcer-final-boss':'announcer-boss-approaching',{owner:'run'});
    if(s.options?.bossHooks?.horn)s.options.bossHooks.horn(definition);else s.audio?.sfx?.('boss');
   }
   if(!this.warning)return;

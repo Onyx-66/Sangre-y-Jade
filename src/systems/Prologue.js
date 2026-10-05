@@ -10,8 +10,8 @@ const beats = [
 export async function runPrologue(app,onDone) {
   app.cancelPrologue?.();
   const screen=app.setScreen('<div class="cinema-loading">Loading intro…</div>','cutscene pixel-cinema');
-  let canceled=false,raf=0;
-  const visibility=()=>{if(document.hidden)app.audio.narration?.pause();else if(app.audio.unlocked)app.audio.narration?.play().catch(()=>{});};
+  let canceled=false,raf=0,elapsed=0,last=performance.now(),current=-1;
+  const visibility=()=>{if(app.audio.v2){if(document.hidden)app.audio.stopNarration();else if(current>=0)app.audio.narrate(current,(elapsed-current*4500)/1000);}else if(document.hidden)app.audio.narration?.pause();else if(app.audio.unlocked)app.audio.narration?.play().catch(()=>{});};
   document.addEventListener('visibilitychange',visibility);
   app.cancelPrologue=()=>{canceled=true;cancelAnimationFrame(raf);app.audio.stopNarration();document.removeEventListener('visibilitychange',visibility);};
   const images=await Promise.all(beats.map((_,i)=>new Promise(resolve=>{
@@ -21,9 +21,8 @@ export async function runPrologue(app,onDone) {
   screen.innerHTML=`<div class="cinema-stage"></div><div class="cinema-caption"><div class="era"></div><p class="subtitle" aria-live="off"></p></div><div class="cutscene-controls"><button class="btn ghost small" data-sound>Enable sound</button><button class="btn ghost small" data-skip>Skip Intro</button></div><div class="cinema-chapters">${beats.map((_,i)=>`<span data-chapter="${i}"></span>`).join('')}</div>`;
   const stage=screen.querySelector('.cinema-stage'),subtitle=screen.querySelector('.subtitle'),era=screen.querySelector('.era');
   translateDOM(screen);app.addLanguageSelector(screen);
-  const note=document.createElement('span');note.className='narration-note';note.textContent=t('Narration: English male voice');screen.append(note);
+  const note=document.createElement('span');note.className='narration-note';note.textContent=t('Localized narration; English fallback when unavailable.');screen.append(note);
   images.forEach((img,i)=>{img.className='cinema-image';img.alt=beats[i][0];stage.append(img);});
-  let elapsed=0,last=performance.now(),current=-1;
   const finish=()=>{
     if(canceled)return;app.cancelPrologue();app.save.data.prologueRevision=2;app.save.markIntroSeen();onDone();
   };

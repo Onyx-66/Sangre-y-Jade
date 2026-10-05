@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { runAudioIds } from '../audio/runAudio.js';
 import { textureManifest } from '../art/textureManifest.js';
 import { FxDirector } from '../fx/FxDirector.js';
 import { IXCHEL_FX_IDS } from '../fx/recipes/ixchel.js';
@@ -30,8 +31,10 @@ export class LoadingScene extends Phaser.Scene {
     const recover=(files,load)=>loadWithRecovery(files,load,failures=>screen.failure(failures),{signal});
     await recover([{key:`map:${map.id}`,critical:true}],async files=>{try{progress.set('map',0);o.mapData=prepareMapData(map,hero,o.seed);await o.prepareMap?.(o.mapData,value=>progress.set('map',value),signal);progress.set('map',1);return [];}catch(error){if(error.name==='AbortError')throw error;return files;}});
     await recover(textureManifest({hero,map,base}),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('textures',value)}));
+    o.audio.ui?.('loading-tick');
     const ids=runSkillIds(hero,{extraIds:hero.id==='ixchel'?IXCHEL_FX_IDS:[],allies:o.allies||[]});
-    await recover(runAudioManifest(ids,map,{base,audioKeys:o.audioKeys||RUN_AUDIO_KEYS}),files=>loadAudioBatch(o.audio,skillAudio,files,{signal,onProgress:value=>progress.set('audio',value)}));
+    if(o.audio.v2){o.audio.music('loading');await o.audio.prepareManifest(runAudioIds(o.audio.v2,hero.id,map.id,o.allies?.[0]),value=>progress.set('audio',value),signal);}
+    else await recover(runAudioManifest(ids,map,{base,audioKeys:o.audioKeys||RUN_AUDIO_KEYS}),files=>loadAudioBatch(o.audio,skillAudio,files,{signal,onProgress:value=>progress.set('audio',value)}));
     await recover(fxManifest([...ids,...ENEMY_EFFECT_IDS,...BOSS_FX_IDS],FxDirector.recipes,base).map(file=>({...file,critical:ENEMY_EFFECT_IDS.some(id=>file.key===`fx-still-${id}-main`)||BOSS_FX_IDS.some(id=>file.key.startsWith(`fx-still-${id}-`))})),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('skills',value)}));
     progress.set('skills',1);
     progress.set('world',0);
@@ -48,6 +51,6 @@ export class LoadingScene extends Phaser.Scene {
     await renderedFrames(this.game,2,signal,value=>progress.set('warmup',value));
     await minimumDisplay(o.started,{signal});
     if(signal.aborted)throw abortError();
-    progress.finish();await renderedFrames(this.game,1,signal);o.complete(scene);
+    progress.finish();o.audio.ui?.('loading-complete');await renderedFrames(this.game,1,signal);o.complete(scene);
   }
 }

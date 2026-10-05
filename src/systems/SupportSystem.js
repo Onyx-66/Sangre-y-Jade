@@ -30,12 +30,15 @@ export class SupportSystem {
   sprite.setData('byAlly',true);
   s.companion={id,sprite,skills:[],level:heroLevel,rank:allyRank(heroLevel),shot:.5,hp:100};
   s.playEffect(4,sprite.x,sprite.y,125);s.skillAudio?.ui?.('companion-join');
+  s.audio?.voice?.(`${id}-join`,{owner:'run'});
+  if(s.audio?.v2)s.audio.prepareManifest?.(s.audio.v2.group('skills',key=>ALLY_CATALOG[id].some(skill=>key.startsWith(`sfx/skills/${skill.id}-`))));
   this.equip(data.signature,{silent:true});this.refresh();return s.companion;
  }
  refresh(){const a=this.scene.companion;if(a)this.scene.hud.setAlly(a);}
  syncLevel(level){
   const a=this.scene.companion;if(!a)return;
   const previous=a.rank;a.level=level;a.rank=allyRank(level);
+  if(a.rank>previous)this.scene.audio?.voice?.(`${a.id}-rank`,{owner:'run'});
   for(const skill of a.skills){skill.level=a.rank;this.scene.passives?.setLevel(skill.id,a.rank);const fraction=skill.cooldown?skill.remaining/skill.cooldown:0;skill.cooldown=skill.baseCooldown*allyCooldownMultiplier(a.rank);skill.remaining=fraction*skill.cooldown;}
   if(a.rank>previous){this.scene.hud.toast(t('Companion rank {n}',{n:a.rank}));this.scene.skillAudio?.ui?.('ally-rank');}
   this.refresh();

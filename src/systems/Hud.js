@@ -383,7 +383,7 @@ export class Hud {
     const overlay=document.createElement('div');overlay.className='modal-backdrop pause-settings';
     overlay.innerHTML='<section class="modal settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title"></section>';
     renderSettingsPanel(overlay.querySelector('.settings-panel'),this.settings,{
-      onChange,onClose:()=>{overlay.remove();onBack();},closeLabel:'Back',onSound:()=>this.callbacks.settingsSound?.(),
+      onChange,onClose:()=>{overlay.remove();onBack();},closeLabel:'Back',onSound:id=>this.callbacks.settingsSound?.(id),
     });
     this.el.append(overlay);overlay.querySelector('[data-back]').focus();
     return overlay;

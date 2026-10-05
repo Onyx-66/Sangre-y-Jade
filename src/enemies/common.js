@@ -24,7 +24,7 @@ export function cue(ctx,phase,position=ctx.enemy,extra={}) {
   const id=`enemy-${ctx.data.id}-${phase}`;
   const isAlive=phase==='windup'?()=>ctx.enemy.active&&ctx.enemy.getData('serial')===ctx.state.serial&&ctx.state.busy===extra.ability&&!ctx.scene.ended:undefined;
   ctx.scene.fx?.play(id,phase==='windup'?'cast':'impact',{...point(position),duration:.3,sound:false,isAlive,...extra});
-  ctx.scene.skillAudio?.play(id,'cast');
+  if(ctx.scene.audio?.play)ctx.scene.audio.play(id,point(ctx.enemy));else ctx.scene.skillAudio?.play(id,'cast');
 }
 export function cast(ctx,name,shape,onResolve) {
   if(ctx.state.busy||ctx.state.motion||ctx.state.after||!ready(ctx,name)||!eligible(ctx))return false;

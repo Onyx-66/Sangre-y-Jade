@@ -1,3 +1,5 @@
+import { installManifestAudio } from '../audio/installAudio.js';
+
 const TRACKS = {
   prologue: 'music-prologue.wav',
   menu: 'music-menu.wav',
@@ -63,6 +65,7 @@ export class AudioDirector {
     this.ambiencePools = new Map();
     this.base = `${import.meta.env?.BASE_URL||'/'}assets/audio/`;
     this.v06Base = `${import.meta.env?.BASE_URL||'/'}assets/audio-v06/`;
+    installManifestAudio(this);
   }
 
   unlock() {
