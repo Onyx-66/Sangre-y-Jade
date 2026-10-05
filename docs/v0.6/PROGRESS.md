@@ -9,6 +9,7 @@
 - [x] V1 — Typography and shared design tokens
 - [x] V2 — Generated UI kit and nine-slice preview
 - [x] V6 — Real weighted run loading and recovery
+- [x] V8 — Complete enemy roster and behaviours
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -245,3 +246,41 @@ Evidence: `previews/v6/report.json`, eight loading/error screenshots, `contact.p
 - New FR/AR loading text is marked `TODO native review`.
 - New finite-map generation/prop pools, new ambience and `audio-v06/` wiring remain for their respective later steps. V6 provides the hooks/list support and uses current data/sounds now.
 - No Android device/emulator was used. Browser testing verifies the actual Back-hook source; native WebView rendering and APK execution remain unverified.
+
+## V8 — Complete enemy roster and behaviours — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v8`.
+
+### Changed
+
+- Compiled all 15 enemy rows and every attack's numeric parameters from the supplied JSON into standalone runtime data. Added one registered behaviour per enemy, with shared steering/kiting, swept dashes, leaps, burrow/teleport, shields/reflection, summoning, puddles and fuses. Preserved specified HP, speed, damage, XP, radius, triggers, wind-ups and cooldowns.
+- Continued only the required V7 foundations: pooled/batched warnings and enemy bars, live display/high-contrast settings, capped map packs and five elite affixes. Enforced map exclusivity, two-tank limits, ground-only flier filtering and serial-safe Cultist ownership. Extended tough-enemy targeting/Trophy Hunter without changing hero skill values.
+- Added precise player root/knock-up/poison/bleed handling, Grasp's pull-before-hit, source-serial guards and reset of pooled enemy/boss state. Stun/death/choice/end guards cancel or freeze attacks appropriately; early Wisp death cancels its fuse. Shields, dodge and fatal-hit prevention still work.
+- Hooked enemy wind-up/attack FX and audio through existing placeholder/legacy fallback systems. New sprites/stills/sounds belong to later prompts: no image/audio files, downloads, dependencies, branding, APK or package-version changes. XP and cacao trial changes were restored to the committed formulas; V7 pacing work remains unfinished.
+- Added headline and edge-case unit tests, deterministic full-duration roster bots, EN/AR visual checks and new-settings browser checks. Recorded decisions, every attack's cast counts, spawn coverage and outliers in `ENEMY_ROSTER.md`. Only V8/required-foundation hunks are committed; prior unfinished menu/editor/localization/artwork remains preserved.
+
+### Test results
+
+| Command | Result |
+| --- | --- |
+| `node --test tests/enemy-roster.test.js tests/enemies-v06.test.js` | 50/50 pass, including a headline test for every enemy; 0.27 s runner |
+| `npm run check` in the V8-only staged snapshot | 411/411 pass, no skips; 2.45 s runner; build passes, 303 modules, 13.25 s Vite |
+| `npm run check` in the full worktree | 441/442 pass, no skips; 2.44 s runner / 3.74 s command; sole pre-existing French `MANA`/`Cacao` audit failure; its `&&` build is skipped |
+| `npm run build` in the full worktree | Pass, 314 modules, 13.78 s Vite; existing large-chunk warning |
+| `node scripts/v06-roster-playtest.mjs --label=final-roster` | Three full 10-minute map runs, every eligible enemy/attack; no exceptions, HTTP failures or stuck actors; 30.65 s wall |
+| Same bot with `--label=staged-roster` in the staged snapshot | Same kills/levels/cacao and cast counts on all three maps; all checks pass; 21.76 s wall |
+| `node scripts/v06-roster-visual.mjs` in worktree and staged snapshot | 67 checks pass in each, 12 screenshots each; exact body radii/off-screen footprints; identical EN/AR bar geometry; no browser/HTTP errors |
+| `npm run test:settings` in staged snapshot | 226 checks pass: EN/FR/AR geometry, shared controls, live health-bar/high-contrast settings, persistence and paused Back/navigation |
+| `npm run test:loading` in staged snapshot | 62 checks pass, 8 captures, no unexpected errors; actual lazy loading/retry/Continue/Back still work |
+| `git diff --cached --check` | Pass; staged scope audit excludes game assets, native code and protected paths |
+
+The scoped snapshot in `.tools/v8-staged-check` uses staged source, not earlier uncommitted menu/editor code. Its initially incomplete asset-junction setup was fixed before rerunning; a stale settings assertion expecting 10 controls/3 toggles was updated to explicitly verify the new 12 controls/4 toggles, including save/live changes. No acceptance checks were removed. Loading rerun output is retained under V8, with original V6 evidence recovered unchanged.
+
+Evidence: `previews/v8/roster/final-roster.json`, `staged-roster.json`, `previews/v8/staged/readability/` (12 reviewed captures/contact/report), and the staged settings/loading reports. The map runs reach level 10 at 5:58.27 / 5:24.43 / 5:49.07 and finish at levels 14 / 16 / 14; no level 20. These coverage-biased quick runs miss pacing targets; no tuning is hidden in this step. FX/warning/puddle peaks remain within 24 / 64 / 128.
+
+### Open issues
+
+- Temporary existing-actor/FX/audio fallbacks are deliberate until the respective asset prompts. No manual audible or Android/emulator test; no native performance claim.
+- Water remains the documented placeholder query and Spirit puddles until finite cenote geometry exists. Conservative pack tables fill a missing JSON field; all assumptions are in `DECISIONS.md`.
+- The interrupted V7 XP/cacao before/after study is not completed by V8; pacing/currency outliers are reported, not rebalanced.
+- The unrelated French audit remains the only worktree test failure; the isolated commit's tests/build pass. FR/AR additions need native review. Prior dirty work is not discarded, completed, pushed or included here.

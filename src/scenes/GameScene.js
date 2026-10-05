@@ -24,6 +24,11 @@ import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';
 import { configureProjectile } from '../skills/kukul/projectiles.js';
 import { wantsToMove, cancelFocus, consumePlume, fullQuiverCount } from '../skills/kukul/runtime.js';
 import { worldView,resizeCamera,retentionRadius,shakePixels,resizeScreenOverlay,PICKUP_MAGNET_RANGE,GROUND_OVERSCAN } from '../systems/Viewport.js';
+import { EnemyHealthBars } from '../systems/EnemyHealthBars.js';
+import { Telegraph } from '../systems/Telegraph.js';
+import { SpawnDirector } from '../systems/SpawnDirector.js';
+import { enemyAffixDefaults, rollAffix, applyAffix, frontalDamageMult, absorbEnemyShield, updateEnemyShield, healVampiric } from '../systems/EnemyAffixes.js';
+import { EnemyBehaviorSystem, ENEMY_ART_FALLBACK, rosterDamageMult, PRIORITY_ENEMIES, enemyBehaviorDefaults } from '../systems/EnemyBehaviorSystem.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -133,6 +138,10 @@ export class GameScene extends Phaser.Scene {
     this.cameras.main.roundPixels = true;
     this.createWorld();
     this.createGroups();
+    this.telegraphs=new Telegraph(this);
+    this.enemyBars=new EnemyHealthBars(this);
+    this.spawnDirector=new SpawnDirector(this);
+    this.enemySystem=new EnemyBehaviorSystem(this);
     this.options.loading?.progress.set('world',.35);
     this.createPlayer();
     this.options.loading?.progress.set('world',.7);
@@ -253,9 +262,13 @@ export class GameScene extends Phaser.Scene {
     this.decorTimer -= dt;
     this.invulnerable = Math.max(0, this.invulnerable - dt);
     this.dash.cooldown = Math.max(0, this.dash.cooldown - dt);
+    this.enemySystem?.updateWorld(dt);
+    if(this.pausedForChoice||this.ended)return;
     this.updateMovement(dt);
     this.updateCooldowns(dt);
     this.updateEnemies(dt);
+    if(this.pausedForChoice||this.ended)return;
+    this.telegraphs?.update(dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateProjectiles(dt);
     this.updatePickups(dt);
@@ -269,9 +282,11 @@ export class GameScene extends Phaser.Scene {
     this.updateDirector(dt);
     this.updateWorld();
     this.updateHud();
+    this.enemyBars?.draw();
   }
 
   updateMovement(dt) {
+    if(this.player.getData('rootUntil')>this.elapsed||this.player.getData('knockupUntil')>this.elapsed){this.player.setVelocity(0,0);return;}
     if(this.eagleFocus&&wantsToMove(this))cancelFocus(this);
     if(this.skillMotion?.effect.active){this.player.setVelocity(0,0);return;}
     const slowUntil=this.player.getData('slowUntil')||0;
@@ -323,7 +338,7 @@ export class GameScene extends Phaser.Scene {
     if (this.autoTimer <= 0 && attacking) this.autoAttack();
   }
 
-  updateDirector() {
+  updateDirector(dt) {
     if (!this.finalSpawned && this.elapsed >= this.modeData.duration && !this.activeBoss) {
       this.finalSpawned = true;
       this.spawnBoss(BOSSES[3]);
@@ -333,21 +348,13 @@ export class GameScene extends Phaser.Scene {
       this.spawnBoss(BOSSES[this.nextBossIndex]);
       this.nextBossIndex += 1;
     }
-    if (this.spawnTimer <= 0 && !this.ended) {
-      const progress = Math.min(1.4, this.elapsed / this.modeData.duration);
-      const levelPressure=Math.min(12,Math.max(0,this.stats.level-ALLY_LEVEL)*1.2);
-      const targetCount = Math.floor(16 + progress * (this.settings.particles === 'low' ? 45 : 85) + levelPressure);
-      if (this.enemies.countActive() < targetCount) {
-        const batch = Math.min(5, 1 + Math.floor(progress * 4));
-        for (let i = 0; i < batch; i += 1) this.spawnEnemy();
-      }
-      this.spawnTimer = Math.max(.22, .8 - progress * .36 - Math.min(.12,this.stats.level*.008));
-    }
+    this.spawnDirector?.update(dt);
   }
 
   updateEnemies(dt) {
     this.enemies.children.each((enemy) => {
       if (!enemy?.active||this.pausedForChoice||this.ended) return;
+      updateEnemyShield(enemy,this.elapsed);
       updateEnemy(this, enemy, dt);
     });
   }
@@ -365,32 +372,34 @@ export class GameScene extends Phaser.Scene {
     }
     if (timer > 0 || boss.getData('silenceUntil')>this.elapsed) return;
     this.animateCharacter(boss,boss.getData('artKey'),'attack',.4);
+    const angle=enemyShotAngle(this,boss,Math.atan2(dy,dx));
+    const warning=(shape,extra,resolve)=>this.telegraphs?.play({shape,x:boss.x,y:boss.y,angle,windup:.62,owner:boss,tag:'boss',...extra,
+      onResolve:()=>{if(boss.active&&canEnemyAttack(this,boss)&&!(boss.getData('silenceUntil')>this.elapsed))resolve();}});
     if (pattern === 'dash') {
-      boss.setData('dashing', .6);
-      boss.setVelocity(dx / distance * 390, dy / distance * 390);
-      this.bossTelegraph(boss.x, boss.y, 90, 0x9c70b7);
+      const dash=()=>{boss.setData('dashing',.6);boss.setVelocity(Math.cos(angle)*390,Math.sin(angle)*390);};
+      if(this.telegraphs)warning('line',{length:234,width:60},dash);else dash();
       boss.setData('patternTimer', 3.2);
-      this.audio.sfx('boss');
     } else if (pattern === 'quake') {
-      this.bossTelegraph(this.player.x, this.player.y, 150, 0xe39c59, () => {
+      const quakeX=this.player.x,quakeY=this.player.y;
+      this.bossTelegraph(quakeX, quakeY, 155, 0xe39c59, () => {
         if (!boss.active || !canEnemyAttack(this, boss)) return;
-        if (Phaser.Math.Distance.Between(this.player.x, this.player.y, this.quakeX, this.quakeY) < 155) this.damagePlayer(22 * enemyDamageMult(this, boss), this.quakeX, this.quakeY, boss);
-        this.damageArea({ x: this.quakeX, y: this.quakeY }, 155, 0, 0, false);
-      });
-      this.quakeX = this.player.x; this.quakeY = this.player.y;
+        if (Phaser.Math.Distance.Between(this.player.x, this.player.y, quakeX, quakeY) < 155) this.damagePlayer(22 * enemyDamageMult(this, boss), quakeX, quakeY, boss);
+        this.damageArea({ x: quakeX, y: quakeY }, 155, 0, 0, false);
+      },boss);
       boss.setData('patternTimer', 4.1);
     } else if (pattern === 'sun') {
-      const base = enemyShotAngle(this, boss, Math.atan2(dy, dx));
-      for (let i = -2; i <= 2; i += 1) this.spawnEnemyProjectile(boss.x, boss.y, base + i * .18, 235, 13 * enemyDamageMult(this, boss), boss);
+      const shoot=()=>{for(let i=-2;i<=2;i++)this.spawnEnemyProjectile(boss.x,boss.y,angle+i*.18,235,13*enemyDamageMult(this,boss),boss);};
+      if(this.telegraphs)warning('cone',{radius:410,arc:.9},shoot);else shoot();
       boss.setData('patternTimer', 2.05);
-      this.audio.sfx('spell');
     } else {
       const hpRatio = boss.getData('hp') / boss.getData('maxHp');
       const count = hpRatio > .6 ? 7 : hpRatio > .3 ? 10 : 14;
-      for (let i = 0; i < count; i += 1) this.spawnEnemyProjectile(boss.x, boss.y, (i / count) * TAU + this.elapsed, 185 + (i % 2) * 55, 14 * enemyDamageMult(this, boss), boss);
-      if (hpRatio < .65) for (let i = 0; i < (hpRatio < .3 ? 3 : 1); i += 1) this.spawnEnemy('shade', 260 + i * 35);
+      const shoot=()=>{
+        for(let i=0;i<count;i++)this.spawnEnemyProjectile(boss.x,boss.y,(i/count)*TAU+angle,185+(i%2)*55,14*enemyDamageMult(this,boss),boss);
+        if(hpRatio<.65)for(let i=0;i<(hpRatio<.3?3:1);i++)this.spawnEnemy('shade',null,{emerge:true});
+      };
+      if(this.telegraphs)warning('ring',{radius:100,innerRadius:75},shoot);else shoot();
       boss.setData('patternTimer', hpRatio < .3 ? 1.35 : 2.15);
-      this.audio.sfx('boss');
     }
     this.hud.setBoss(boss.getData('displayName'), boss.getData('hp') / boss.getData('maxHp'));
   }
@@ -502,6 +511,7 @@ export class GameScene extends Phaser.Scene {
     const weapon = this.heroData.automatic;
     const cost = manaCost(this.stats, weapon.mana);
     const target = this.closestEnemy(this.player.x, this.player.y, weapon.range * this.stats.range);
+    if(target)target.setData('targetedUntil',this.elapsed+.3);
     if (!target && this.settings.attackMode!=='manual') { this.autoTimer = .12; return; }
     if (this.stats.mana < cost) { this.autoTimer = .18; return; }
     this.stats.mana -= cost;
@@ -553,6 +563,7 @@ export class GameScene extends Phaser.Scene {
 
   tryDash() {
     if (this.ended || this.pausedForChoice || this.dash.cooldown > 0) return;
+    if(this.player.getData('rootUntil')>this.elapsed||this.player.getData('knockupUntil')>this.elapsed)return;
     let vector = this.lastMove.clone();
     if (vector.lengthSq() < .1) {
       const target = this.closestEnemy(this.player.x, this.player.y, 500);
@@ -597,15 +608,16 @@ export class GameScene extends Phaser.Scene {
     const projectile = this.enemyProjectiles.get(x, y, 'fx-5');
     if (!projectile) return;
     projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(15);
-    projectile.setDisplaySize(42,42).setRotation(angle).play('bolt-5');
+    projectile.clearTint().setAlpha(1).setDisplaySize(42,42).setRotation(angle).play('bolt-5');
     projectile.body.setCircle(21,43,43);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
-    projectile.setData({ damage, life: 4, source, previousX:x, previousY:y });
+    projectile.setData({ damage, life: 4, source,sourceSerial:source?.getData?.('serial'), previousX:x, previousY:y,
+      poison:null,bleed:null,piercing:false,hitHero:false,reflected:false,enemyId:null });
     return projectile;
   }
 
   onEnemyProjectileHit(projectile) {
-    if (this.ended || !projectile.active || this.stats.intangibleUntil > this.elapsed) return;
+    if (this.ended || !projectile.active || projectile.getData('hitHero') || this.stats.intangibleUntil > this.elapsed) return;
     if (this.stats.reflectUntil > this.elapsed && inMirrorArc(this,projectile)) {
       const velocity = projectile.body.velocity;
       const reflected = this.fireProjectile(projectile.x, projectile.y, Math.atan2(-velocity.y, -velocity.x),
@@ -615,13 +627,18 @@ export class GameScene extends Phaser.Scene {
       this.fx?.play('black-mirror','impact',{x:projectile.x,y:projectile.y,angle:Math.atan2(-velocity.y,-velocity.x)});
     } else {
       if(this.support.blocksProjectile?.(projectile,{x:projectile.getData('previousX')??projectile.x,y:projectile.getData('previousY')??projectile.y}))return;
-      this.damagePlayer(projectile.getData('damage') || 8, projectile.x, projectile.y, projectile.getData('source') || projectile);
+      const source=projectile.getData('source'),valid=source?.active&&source.getData?.('serial')===projectile.getData('sourceSerial');
+      this.damagePlayer(projectile.getData('damage') || 8, projectile.x, projectile.y, valid?source:projectile,false,
+        {poison:projectile.getData('poison'),bleed:projectile.getData('bleed')});
+      if(projectile.getData('piercing')){projectile.setData('hitHero',true);return;}
     }
     projectile.destroy();
   }
 
   onProjectileHit(projectile, enemy) {
     if (this.ended || !projectile.active || !enemy.active || projectile.getData('pendingSplit')) return;
+    if(enemy.getData('buried')||enemy.getData('invulnerableEnemy'))return;
+    if(this.enemySystem?.reflectProjectile(projectile,enemy))return;
     const hit = projectile.getData('hit');
     if (hit?.has(enemy.getData('serial'))) return;
     hit?.add(enemy.getData('serial'));
@@ -709,18 +726,21 @@ export class GameScene extends Phaser.Scene {
 
   damageEnemy(enemy, rawDamage, critBonus = 0, knockback = 0, origin = this.player, options = {}) {
     if (this.ended || !enemy?.active || rawDamage <= 0) return;
+    const rosterMult=rosterDamageMult(enemy,origin,this.elapsed,options.dot);if(!rosterMult)return;
     const byAlly = options.byAlly ?? Boolean(origin?.getData?.('byAlly'));
     const heroOwned=!byAlly||options.heroSkill;
     const modifiers=heroOwned?this.passives.modifiers({enemy,dot:options.dot,byAlly}):{};
     const crit = !options.dot && options.canCrit!==false && Math.random() < this.stats.crit + critBonus + (modifiers.crit??0) + (heroOwned?(skillModifiers(this).crit??0):0);
     const stealthMult=heroOwned&&!options.dot&&origin===this.player?(this.support.consumeStealthStrike?.()??1):1;
-    const damage = rawDamage * stealthMult * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1);
-    const hp = enemy.getData('hp') - damage;
+    const damage = rawDamage * stealthMult * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1) * frontalDamageMult(enemy,origin,options.dot) * rosterMult;
+    const beforeHp=enemy.getData('hp'),hpDamage=absorbEnemyShield(enemy,damage,this.elapsed);
+    const hp = beforeHp - hpDamage;
     enemy.setData('hp', hp);
+    this.enemyBars?.damage(enemy,beforeHp);
     this.stats.damageDone += damage;
     const lifesteal=this.stats.lifestealPct+(modifiers.lifestealPct??0)+(this.support.modifiers().lifestealPct??0);
     if (heroOwned && lifesteal > 0) this.stats.hp = Math.min(this.stats.maxHp,
-      this.stats.hp + Math.min(damage, Math.max(0, hp + damage)) * lifesteal * this.stats.healing);
+      this.stats.hp + Math.min(hpDamage, Math.max(0, beforeHp)) * lifesteal * this.stats.healing);
     const event = { enemy, damage, source: origin, byAlly, dot: Boolean(options.dot),basicAttack:Boolean(options.basicAttack),skillId:options.skillId||null };
     this.passives.emit('hit', event);
     if (crit) this.passives.emit('crit', event);
@@ -747,6 +767,11 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(2,x,y,isBoss?190:68);
     const bossId = enemy.getData('bossId');
     const xp = enemy.getData('xp') || 5;
+    this.enemySystem?.interrupt(enemy);this.enemySystem?.removeOwned(enemy);
+    this.telegraphs?.cancelOwner(enemy);
+    if(enemy.getData('affix')==='explosive')this.telegraphs?.play({shape:'circle',x,y,radius:90,windup:.6,tag:'death-burst',
+      // Intentionally detached: this affix warns AFTER death, unlike live attacks.
+      onResolve:()=>{if(Math.hypot(this.player.x-x,this.player.y-y)<=90)this.damagePlayer(18,x,y,{x,y});}});
     if(enemy.getData('markUntil')>this.elapsed&&enemy.getData('markSource')===this.player){
       this.stats.hp=Math.min(this.stats.maxHp,this.stats.hp+enemy.getData('markHeal')*this.stats.healing);
       this.fx?.play('hunters-mark','impact',{x,y,target:{x,y}});
@@ -772,22 +797,23 @@ export class GameScene extends Phaser.Scene {
     }
   }
 
-  damagePlayer(rawDamage, sourceX, sourceY, source = null, melee = false) {
-    if (this.invulnerable > 0 || this.stats.intangibleUntil > this.elapsed || this.ended || this.pausedForChoice) return;
-    if (this.stats.dodgeCharges > 0) {
+  damagePlayer(rawDamage, sourceX, sourceY, source = null, melee = false, options = {}) {
+    if (rawDamage<=0||(!options.dot&&this.invulnerable > 0) || this.stats.intangibleUntil > this.elapsed || this.ended || this.pausedForChoice) return false;
+    if (!options.dot&&this.stats.dodgeCharges > 0) {
       if(!consumePlume(this))this.stats.dodgeCharges -= 1;
       this.invulnerable = .58;
       this.playEffect(4, this.player.x, this.player.y, 60);
       return;
     }
-    if(this.passives.avoidDamage({source:source||{x:sourceX,y:sourceY},melee,amount:rawDamage})){
+    if(!options.dot&&this.passives.avoidDamage({source:source||{x:sourceX,y:sourceY},melee,amount:rawDamage})){
       this.invulnerable=.58;return;
     }
+    options.beforeHit?.();
     if (melee && source?.active && this.stats.reflectUntil > this.elapsed) this.damageEnemy(source, this.blackMirror?.thorns??15,0,0,this.player,{canCrit:false});
-    this.hitCount += 1;
+    if(!options.dot)this.hitCount += 1;
     const buffs=this.support.modifiers();
-    let damage = Math.max(1, rawDamage - (this.stats.armor+buffs.armor+(this.passives.modifiers().armor??0)) * .72)*(1-buffs.reduction);
-    if (this.hasGear('jaguar-vest') && this.hitCount % 7 === 0) damage = 1;
+    let damage = (options.dot?rawDamage:Math.max(1, rawDamage - (this.stats.armor+buffs.armor+(this.passives.modifiers().armor??0)) * .72))*(1-buffs.reduction);
+    if (!options.dot&&this.hasGear('jaguar-vest') && this.hitCount % 7 === 0) damage = 1;
     damage *= this.stats.damageTakenMult;
     if (this.stats.shield > 0) {
       const blocked = Math.min(this.stats.shield, damage);
@@ -798,16 +824,20 @@ export class GameScene extends Phaser.Scene {
     }
     if (damage > 0) {
       damage=this.support.preventFatal(damage);
+      healVampiric(source,Math.min(damage,Math.max(0,this.stats.hp)));
       this.stats.hp -= damage;
       this.stats.damageTaken += damage;
       if (damage > 0) this.passives.emit('damageTaken', { amount: damage, source: source || { x: sourceX, y: sourceY }, melee });
-      this.floatText(this.player.x, this.player.y - 25, `-${Math.ceil(damage)}`, '#ff7077');
+      if(!options.dot)this.floatText(this.player.x, this.player.y - 25, `-${Math.ceil(damage)}`, '#ff7077');
     }
+    for(const kind of ['root','knockup','poison','bleed'])if(options[kind])this.enemySystem?.applyPlayerStatus(kind,options[kind],source);
+    if(options.dot){if(this.stats.hp<=0)this.finishRun(false);return true;}
     this.invulnerable = .58;
     const angle = Phaser.Math.Angle.Between(sourceX, sourceY, this.player.x, this.player.y);
     if(!(this.knockbackImmuneUntil>this.elapsed)){
-      this.player.body.velocity.x += Math.cos(angle) * 260;
-      this.player.body.velocity.y += Math.sin(angle) * 260;
+      if(options.knockback!==undefined){const x=this.player.x+Math.cos(angle)*options.knockback,y=this.player.y+Math.sin(angle)*options.knockback;
+        if(this.player.body.reset)this.player.body.reset(x,y);else this.player.setPosition(x,y);
+      }else{this.player.body.velocity.x += Math.cos(angle) * 260;this.player.body.velocity.y += Math.sin(angle) * 260;}
     }
     this.animateCharacter(this.player,this.playerArtKey(),'hurt',.22);
     this.playEffect(3,this.player.x,this.player.y,94);
@@ -816,44 +846,69 @@ export class GameScene extends Phaser.Scene {
     shakePixels(this,90,5);
     this.audio.sfx('hurt', .08);
     if (this.stats.hp <= 0) this.finishRun(false);
+    return true;
   }
 
   touchEnemy(enemy) {
     if (!enemy?.active || !canEnemyAttack(this, enemy, true)) return;
+    if(this.enemySystem?.touch(enemy))return;
+    if(this.telegraphs&&!(enemy.getData('contactReadyUntil')>this.elapsed)){
+      if(!(enemy.getData('nextContact')>this.elapsed)&&!this.telegraphs.has(enemy,'contact')){
+        const radius=(enemy.getData('radius')||20)+24;
+        this.telegraphs.play({shape:'circle',x:enemy.x,y:enemy.y,radius,windup:.35,owner:enemy,tag:'contact',sound:'click',
+          onResolve:()=>{enemy.setData({contactReadyUntil:this.elapsed+.25,nextContact:this.elapsed+1});},
+          onCancel:()=>enemy.setData('contactReadyUntil',0)});
+      }return;
+    }
     this.damagePlayer((enemy.getData('damage') || 8) * enemyDamageMult(this, enemy), enemy.x, enemy.y, enemy, true);
   }
 
-  spawnEnemy(forcedType, forcedRadius) {
+  spawnEnemy(forcedType, forcedRadius, spawnOptions={}) {
+    if(this.spawnDirector&&!forcedRadius&&!this.spawnDirector.hasSpace())return null;
     const progress = this.elapsed / this.modeData.duration;
     if(forcedType&&!canSpawnEnemy(this.heroData,forcedType))return null;
     const available = enemyPool(this.heroData,this.stats.level,progress);
     const weighted = available.flatMap((id) => Array(ENEMIES[id].weight).fill(id));
     const type = forcedType || Phaser.Utils.Array.GetRandom(weighted);
     const data = ENEMIES[type];
-    const position=spawnOutsideView(worldView(this));
+    if(!data||(!data.maps.includes('all')&&this.mapData.id&&!data.maps.includes(this.mapData.id)))return null;
+    if(data.aliveLimit&&this.enemies.getChildren().filter(e=>e.active&&!e.getData('isBoss')&&e.getData('type')===type).length>=data.aliveLimit)return null;
+    const position=spawnOptions.position||spawnOutsideView(worldView(this),Math.random,160);
     // Explicit radii are reserved for summons/boss abilities and automated QA.
     if(forcedRadius){const angle=Math.random()*TAU;position.x=this.player.x+Math.cos(angle)*forcedRadius;position.y=this.player.y+Math.sin(angle)*forcedRadius;}
     const {x,y}=position;
-    const enemy = this.enemies.get(x, y, `enemy-${type}`);
+    const artKey=`enemy-${ENEMY_ART_FALLBACK[type]||type}`;
+    const enemy = this.enemies.get(x, y, artKey);
     if (!enemy) return;
-    const scale = this.mapData.difficulty * (1 + progress * .95);
-    enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(12).setScale(type==='bat'?.48:.56);
+    enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setAlpha(1).setDepth(12).setScale(data.flier?.48:.56);
     enemy.anims.stop();
-    enemy.setTexture(`enemy-${type}`).clearTint();
-    enemy.body.setCircle(25,39,48);
+    enemy.setTexture(artKey).clearTint();
+    const radius=data.radius/(enemy.scaleX||(data.flier?.48:.56));
+    enemy.body.setCircle(radius,64-radius,72-radius);
     enemy.setData({
-      type, artKey:`enemy-${type}`,animLock:0, serial: ++this.enemySerial, seed: Math.random() * 20,
-      hp: data.hp * scale, maxHp: data.hp * scale,
-      speed: data.speed * (1 + progress * .16), damage: data.damage * this.mapData.difficulty * (1 + progress * .38), xp: data.xp,
+      type, artKey,animLock:0, serial: ++this.enemySerial, seed: Math.random() * 20,
+      hp: data.hp, maxHp: data.hp, radius:data.radius,
+      speed: data.speed, damage: data.damage, xp: data.xp,
       ranged: data.ranged || false, nextShot: 1 + Math.random(), isBoss: false,
-      ...enemyStatusDefaults(),
+      tough:data.tough,priorityTarget:PRIORITY_ENEMIES.has(type),summoner:spawnOptions.summoner||null,summonerSerial:spawnOptions.summoner?.getData('serial'),
+      ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),heading:0,
     });
+    applyAffix(enemy,spawnOptions.affix===undefined?rollAffix(this.elapsed):spawnOptions.affix);
+    this.enemySystem?.init(enemy);
+    if(spawnOptions.emerge){enemy.setData('spawningUntil',this.elapsed+.55);enemy.setAlpha(0);}
+    return enemy;
   }
 
   spawnBoss(data) {
     if (this.activeBoss || this.ended) return;
+    if(this.spawnDirector&&!this.spawnDirector.hasSpace()){
+      // A scheduled boss owns one slot in the same cap, never a cap+1 exception.
+      const distant=this.enemies.getChildren().filter(e=>e.active&&!e.getData('isBoss')).sort((a,b)=>
+        Math.hypot(b.x-this.player.x,b.y-this.player.y)-Math.hypot(a.x-this.player.x,a.y-this.player.y))[0];
+      if(distant){this.enemySystem?.removeOwned(distant);this.telegraphs?.cancelOwner(distant);distant.disableBody(true,true);}
+    }
     data=bossForHero(this.heroData,data);
-    const {x,y}=spawnOutsideView(worldView(this),Math.random,120);
+    const {x,y}=spawnOutsideView(worldView(this),Math.random,120+96*(data.id==='ahpuch'?1.65:1.35));
     const artKey=data.artKey||`boss-${data.id}`;
     const boss = this.enemies.get(x, y, artKey);
     if (!boss) return;
@@ -866,7 +921,8 @@ export class GameScene extends Phaser.Scene {
       artKey,animLock:0,serial: ++this.enemySerial, isBoss: true, bossId: data.id, displayName: data.name,
       hp: data.hp * hpScale, maxHp: data.hp * hpScale, speed: data.speed, damage: data.damage * this.mapData.difficulty,
       xp: 100, pattern: data.pattern, patternTimer: 1.5, seed: Math.random() * 20,
-      ...enemyStatusDefaults(), dashing: 0,
+      ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),heading:0,dashing: 0,
+      type:null,tough:true,priorityTarget:false,summoner:null,summonerSerial:null,
     });
     this.activeBoss = boss;
     this.hud.setBoss(data.name, 1);
@@ -1203,7 +1259,7 @@ export class GameScene extends Phaser.Scene {
   closestEnemy(x, y, range) {
     let best = null; let bestDistance = range;
     this.enemies.children.each((enemy) => {
-      if (!enemy?.active) return;
+      if (!enemy?.active||enemy.getData('buried')||enemy.getData('invulnerableEnemy')) return;
       const distance = Phaser.Math.Distance.Between(x, y, enemy.x, enemy.y);
       if (distance < bestDistance) { best = enemy; bestDistance = distance; }
     });
@@ -1248,7 +1304,8 @@ export class GameScene extends Phaser.Scene {
     sprite.play(`${key}-${state}`,true);
   }
 
-  bossTelegraph(x, y, radius, color, callback) {
+  bossTelegraph(x, y, radius, color, callback,owner=this.activeBoss) {
+    if(this.telegraphs)return this.telegraphs.play({shape:'circle',x,y,radius,windup:.62,owner,onResolve:callback});
     const marker = this.add.circle(x, y, radius, color, .1).setStrokeStyle(4, color, .8).setDepth(5).setScale(.25);
     this.tweens.add({ targets: marker, scale: 1, alpha: .58, duration: 620, onComplete: () => {
       callback?.();
@@ -1288,6 +1345,7 @@ export class GameScene extends Phaser.Scene {
   finishRun(victory, abandoned = false) {
     if (this.ended) return;
     this.ended = true;
+    this.telegraphs?.cancelAll();
     this.skillAudio?.stopAll?.();
     this.tweens.pauseAll();
     this.time.paused=false;
@@ -1323,6 +1381,8 @@ export class GameScene extends Phaser.Scene {
     this.passives?.destroy();
     this.skillEffects?.forEach((effect) => effect.destroy());
     this.fx?.destroy();this.skillAudio?.destroy();this.skillBuffs?.clear();
+    this.telegraphs?.destroy();this.enemyBars?.destroy();this.spawnDirector?.destroy();
+    this.enemySystem?.destroy();
     this.hud?.destroy();
   }
 }

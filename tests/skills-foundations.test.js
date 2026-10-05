@@ -143,7 +143,7 @@ test('disarm retains the existing 45 percent reduction on melee and ranged damag
   const scene = makeScene(), enemy = addEnemy(scene, { ranged: true });
   applyStatus(scene, enemy, 'disarm', 1);
   updateEnemy(scene, enemy, .1);
-  assert.ok(Math.abs(scene.enemyProjectiles.getChildren()[0].getData('damage') - (8 + 1 / 150) * .55) < 1e-10);
+  assert.ok(Math.abs(scene.enemyProjectiles.getChildren()[0].getData('damage') - enemy.getData('damage') * .55) < 1e-10);
   scene.touchEnemy(enemy);
   assert.equal(scene.stats.hp, 89);
 });

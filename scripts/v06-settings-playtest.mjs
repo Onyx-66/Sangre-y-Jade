@@ -102,12 +102,12 @@ try{
    await page.evaluate(async({locale,on})=>{
     const app=window.__SANGRE_Y_JADE__,{setLanguage}=await import('/src/i18n/index.js');
     app.save.setSetting('language',locale);setLanguage(locale);
-    for(const key of ['screenShake','damageNumbers','reducedMotion'])app.save.setSetting(key,on);
+    for(const key of ['screenShake','damageNumbers','reducedMotion','telegraphHighContrast'])app.save.setSetting(key,on);
     document.documentElement.classList.toggle('reduce-motion',on);app.showSettings();await document.fonts.ready;
    },{locale,on});
    const name=`${locale}-settings-${width}x${height}-${on?'on':'off'}`,layout=await page.evaluate(settingsGeometry);
    layouts.push({name,...layout});
-   check(layout.rows.length===3&&layout.controls.length===10,`${name}: all settings use the shared content`);
+   check(layout.rows.length===4&&layout.controls.length===12,`${name}: all settings use the shared content`);
    check(layout.rows.every(row=>row.knobInside&&row.fixed&&row.internalDirection==='ltr'),`${name}: every knob inside its fixed track`);
    check(layout.rows.every(row=>row.rowOrder&&row.wordFits),`${name}: row label/control order and unclipped localized word`);
    check(layout.rows.every(row=>row.checked===String(on)&&row.mark===(on?'✓':'×')&&row.word===words[locale][Number(on)]&&row.color===(on?'rgb(22, 128, 103)':'rgb(98, 95, 107)')),`${name}: readable on/off state with mark, word and color`);
@@ -115,15 +115,15 @@ try{
    const key=`${width}x${height}-${on}`,relative=layout.rows.map(row=>row.relative);
    if(locale==='en')geometry.set(key,relative);
    else check(JSON.stringify(relative)===JSON.stringify(geometry.get(key)),`${name}: internal geometry identical to English`);
-   // Scroll only the controls region, so all three switches can be reviewed.
-   await page.locator('[data-toggle="reducedMotion"]').scrollIntoViewIfNeeded();
+   // Scroll only the controls region, including the new warning toggle.
+   await page.locator('[data-toggle="telegraphHighContrast"]').scrollIntoViewIfNeeded();
    await screenshot(name);
   }
   for(const locale of ['en','fr','ar']){
    await page.setViewportSize({width:568,height:320});
    await page.evaluate(async locale=>{
     const app=window.__SANGRE_Y_JADE__,{setLanguage}=await import('/src/i18n/index.js');setLanguage(locale);
-    const values={language:locale,attackMode:'auto',fps:60,particles:'high',screenShake:true,damageNumbers:true,reducedMotion:false,autoAim:true,master:.82,music:.58,sfx:.78};
+    const values={language:locale,attackMode:'auto',fps:60,particles:'high',screenShake:true,damageNumbers:true,reducedMotion:false,autoAim:true,master:.82,music:.58,sfx:.78,enemyHealthBars:'damaged',telegraphHighContrast:false};
     for(const [key,value]of Object.entries(values))app.save.setSetting(key,value);
     document.documentElement.classList.remove('reduce-motion');app.showSettings();await document.fonts.ready;
    },locale);
@@ -148,6 +148,8 @@ try{
    await page.locator('#attack-mode').selectOption('manual');
    await page.locator('#aim').selectOption('direction');
    await page.locator('#particles').selectOption('low');
+   await page.locator('#enemy-health-bars').selectOption('always');
+   await page.locator('[data-toggle="telegraphHighContrast"]').click();
    for(const [id,value]of [['master',.3],['music',.4],['sfx',.5]])await page.locator(`#${id}`).evaluate((input,value)=>{input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));},value);
    await page.locator('#fps').selectOption('30');
    check(await frozen(),`${locale}: changing the frame cap does not unpause`);
@@ -161,7 +163,7 @@ try{
      reduced:document.documentElement.classList.contains('reduce-motion'),enemies:scene.enemies.maxSize,projectiles:scene.projectiles.maxSize,
      fps:loop.targetFps,limit:loop.fpsLimit,mode:document.querySelector('#auto-indicator').dataset.mode};
    });
-   for(const [key,value]of Object.entries({attackMode:'manual',autoAim:false,particles:'low',master:.3,music:.4,sfx:.5,fps:60,screenShake:false,damageNumbers:false,reducedMotion:true})){
+   for(const [key,value]of Object.entries({attackMode:'manual',autoAim:false,particles:'low',master:.3,music:.4,sfx:.5,fps:60,screenShake:false,damageNumbers:false,reducedMotion:true,enemyHealthBars:'always',telegraphHighContrast:true})){
     check(changed.save[key]===value&&changed.run[key]===value,`${locale}: ${key} saves and updates the run immediately`);
    }
    check(changed.reduced&&changed.mode==='manual'&&changed.enemies===90&&changed.projectiles===100&&changed.fps===60&&changed.limit===60,`${locale}: live HUD, effect budget, reduced motion and render cap`);
@@ -173,6 +175,11 @@ try{
    await page.keyboard.press('Enter');check(await toggle.getAttribute('aria-checked')==='false',`${locale}: Enter activates the switch once`);
    await page.locator('.pause-settings [data-back]').click();check(await page.locator('.pause-menu').isVisible()&&await frozen(),`${locale}: settings Back returns to pause`);
    await page.locator('[data-settings]').click();check(await toggle.getAttribute('aria-checked')==='false',`${locale}: saved switch value survives reopening`);
+   check(await page.locator('#enemy-health-bars').inputValue()==='always'&&await page.locator('[data-toggle="telegraphHighContrast"]').getAttribute('aria-checked')==='true',`${locale}: saved health bar/warning settings survive reopening`);
+   for(const value of ['off','damaged']){
+    await page.locator('#enemy-health-bars').selectOption(value);
+    check(await page.evaluate(value=>{const app=window.__SANGRE_Y_JADE__;return app.save.data.settings.enemyHealthBars===value&&app.game.scene.getScene('Ritual').settings.enemyHealthBars===value;},value),`${locale}: health bar mode ${value} updates the paused run`);
+   }
    await back();check(await page.locator('.pause-menu').isVisible()&&await frozen(),`${locale}: actual Android hook closes settings to pause`);
    await page.locator('[data-help]').click();check(await page.locator('.pause-help').isVisible()&&await frozen(),`${locale}: How to Play opens over the paused run`);
    await back();check(await page.locator('.pause-menu').isVisible()&&await frozen(),`${locale}: Back from How to Play returns to pause`);

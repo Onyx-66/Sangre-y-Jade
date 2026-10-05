@@ -1,0 +1,16 @@
+import shade from './shade.js';
+import bat from './bat.js';
+import jaguar from './jaguar.js';
+import serpent from './serpent.js';
+import priest from './priest.js';
+import vineLurker from './vine_lurker.js';
+import stoneGuardian from './stone_guardian.js';
+import jungleWasp from './jungle_wasp.js';
+import bloodWraith from './blood_wraith.js';
+import boneArcher from './bone_archer.js';
+import moonCultist from './moon_cultist.js';
+import drownedSpirit from './drowned_spirit.js';
+import abyssalEel from './abyssal_eel.js';
+import crystalGolem from './crystal_golem.js';
+import glowWisp from './glow_wisp.js';
+export const ENEMY_BEHAVIORS=Object.freeze(Object.fromEntries([shade,bat,jaguar,serpent,priest,vineLurker,stoneGuardian,jungleWasp,bloodWraith,boneArcher,moonCultist,drownedSpirit,abyssalEel,crystalGolem,glowWisp].map(behavior=>[behavior.id,behavior])));

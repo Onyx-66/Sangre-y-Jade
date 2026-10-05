@@ -14,6 +14,8 @@ export const SETTINGS_CONTROLS=[
  {key:'screenShake',label:'Screen shake',type:'toggle'},
  {key:'damageNumbers',label:'Damage numbers',type:'toggle'},
  {key:'reducedMotion',label:'Reduced motion',type:'toggle'},
+ {key:'enemyHealthBars',id:'enemy-health-bars',label:'Enemy health bars',options:[['always','Always'],['damaged','When damaged'],['off','Off']]},
+ {key:'telegraphHighContrast',label:'High-contrast telegraphs',type:'toggle'},
 ];
 
 export const controlsMarkup=()=>`<div class="premium-note"><b>${escapeHtml(t('Controls:'))}</b> ${escapeHtml(t(CONTROLS_TEXT))}</div>`;

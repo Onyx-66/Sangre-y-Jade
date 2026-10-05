@@ -1,0 +1,4613 @@
+{
+  "checks": [
+    {
+      "label": "en-settings-568x320-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "en-settings-568x320-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "en-settings-320x568-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "en-settings-1280x720-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-off: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-568x320-on: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-off: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-320x568-on: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-off: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "fr-settings-1280x720-on: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-off: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-568x320-on: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-off: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-320x568-on: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-off: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-off: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-off: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-off: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-off: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-off: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-on: all settings use the shared content",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-on: every knob inside its fixed track",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-on: row label/control order and unclipped localized word",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-on: readable on/off state with mark, word and color",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-on: panel and close button remain on screen",
+      "passed": true
+    },
+    {
+      "label": "ar-settings-1280x720-on: internal geometry identical to English",
+      "passed": true
+    },
+    {
+      "label": "en: pause includes the requested five entries",
+      "passed": true
+    },
+    {
+      "label": "en: Resume/Settings first row, other entries below",
+      "passed": true
+    },
+    {
+      "label": "en: pause fits 568x320 with separate 44 px touch targets",
+      "passed": true
+    },
+    {
+      "label": "en: Quit label is readable on its dark red button",
+      "passed": true
+    },
+    {
+      "label": "en: pause menu direction follows the locale",
+      "passed": true
+    },
+    {
+      "label": "en: settings does not resume the paused game",
+      "passed": true
+    },
+    {
+      "label": "en: run identity, timer and player remain frozen",
+      "passed": true
+    },
+    {
+      "label": "en: menu/pause settings controls are identical",
+      "passed": true
+    },
+    {
+      "label": "en: changing the frame cap does not unpause",
+      "passed": true
+    },
+    {
+      "label": "en: live 30 FPS limit changes the existing render loop",
+      "passed": true
+    },
+    {
+      "label": "en: attackMode saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: autoAim saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: particles saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: master saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: music saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: sfx saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: fps saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: screenShake saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: damageNumbers saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: reducedMotion saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: enemyHealthBars saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: telegraphHighContrast saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "en: live HUD, effect budget, reduced motion and render cap",
+      "passed": true
+    },
+    {
+      "label": "en: existing music/SFX volume controls apply live",
+      "passed": true
+    },
+    {
+      "label": "en: toggled knobs remain inside their tracks",
+      "passed": true
+    },
+    {
+      "label": "en: Space activates the switch once despite game key capture",
+      "passed": true
+    },
+    {
+      "label": "en: Enter activates the switch once",
+      "passed": true
+    },
+    {
+      "label": "en: settings Back returns to pause",
+      "passed": true
+    },
+    {
+      "label": "en: saved switch value survives reopening",
+      "passed": true
+    },
+    {
+      "label": "en: saved health bar/warning settings survive reopening",
+      "passed": true
+    },
+    {
+      "label": "en: health bar mode off updates the paused run",
+      "passed": true
+    },
+    {
+      "label": "en: health bar mode damaged updates the paused run",
+      "passed": true
+    },
+    {
+      "label": "en: actual Android hook closes settings to pause",
+      "passed": true
+    },
+    {
+      "label": "en: How to Play opens over the paused run",
+      "passed": true
+    },
+    {
+      "label": "en: Back from How to Play returns to pause",
+      "passed": true
+    },
+    {
+      "label": "en: Skills stays read-only and paused",
+      "passed": true
+    },
+    {
+      "label": "en: Back from Skills returns to pause",
+      "passed": true
+    },
+    {
+      "label": "en: Resume restarts the same run correctly",
+      "passed": true
+    },
+    {
+      "label": "en: native Back while running opens pause",
+      "passed": true
+    },
+    {
+      "label": "en: native Back from pause resumes",
+      "passed": true
+    },
+    {
+      "label": "en: Quit to Menu records the abandoned run and returns to the main menu",
+      "passed": true
+    },
+    {
+      "label": "fr: pause includes the requested five entries",
+      "passed": true
+    },
+    {
+      "label": "fr: Resume/Settings first row, other entries below",
+      "passed": true
+    },
+    {
+      "label": "fr: pause fits 568x320 with separate 44 px touch targets",
+      "passed": true
+    },
+    {
+      "label": "fr: Quit label is readable on its dark red button",
+      "passed": true
+    },
+    {
+      "label": "fr: pause menu direction follows the locale",
+      "passed": true
+    },
+    {
+      "label": "fr: settings does not resume the paused game",
+      "passed": true
+    },
+    {
+      "label": "fr: run identity, timer and player remain frozen",
+      "passed": true
+    },
+    {
+      "label": "fr: menu/pause settings controls are identical",
+      "passed": true
+    },
+    {
+      "label": "fr: changing the frame cap does not unpause",
+      "passed": true
+    },
+    {
+      "label": "fr: live 30 FPS limit changes the existing render loop",
+      "passed": true
+    },
+    {
+      "label": "fr: attackMode saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: autoAim saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: particles saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: master saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: music saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: sfx saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: fps saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: screenShake saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: damageNumbers saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: reducedMotion saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: enemyHealthBars saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: telegraphHighContrast saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "fr: live HUD, effect budget, reduced motion and render cap",
+      "passed": true
+    },
+    {
+      "label": "fr: existing music/SFX volume controls apply live",
+      "passed": true
+    },
+    {
+      "label": "fr: toggled knobs remain inside their tracks",
+      "passed": true
+    },
+    {
+      "label": "fr: Space activates the switch once despite game key capture",
+      "passed": true
+    },
+    {
+      "label": "fr: Enter activates the switch once",
+      "passed": true
+    },
+    {
+      "label": "fr: settings Back returns to pause",
+      "passed": true
+    },
+    {
+      "label": "fr: saved switch value survives reopening",
+      "passed": true
+    },
+    {
+      "label": "fr: saved health bar/warning settings survive reopening",
+      "passed": true
+    },
+    {
+      "label": "fr: health bar mode off updates the paused run",
+      "passed": true
+    },
+    {
+      "label": "fr: health bar mode damaged updates the paused run",
+      "passed": true
+    },
+    {
+      "label": "fr: actual Android hook closes settings to pause",
+      "passed": true
+    },
+    {
+      "label": "fr: How to Play opens over the paused run",
+      "passed": true
+    },
+    {
+      "label": "fr: Back from How to Play returns to pause",
+      "passed": true
+    },
+    {
+      "label": "fr: Skills stays read-only and paused",
+      "passed": true
+    },
+    {
+      "label": "fr: Back from Skills returns to pause",
+      "passed": true
+    },
+    {
+      "label": "fr: Resume restarts the same run correctly",
+      "passed": true
+    },
+    {
+      "label": "fr: native Back while running opens pause",
+      "passed": true
+    },
+    {
+      "label": "fr: native Back from pause resumes",
+      "passed": true
+    },
+    {
+      "label": "fr: Quit to Menu records the abandoned run and returns to the main menu",
+      "passed": true
+    },
+    {
+      "label": "ar: pause includes the requested five entries",
+      "passed": true
+    },
+    {
+      "label": "ar: Resume/Settings first row, other entries below",
+      "passed": true
+    },
+    {
+      "label": "ar: pause fits 568x320 with separate 44 px touch targets",
+      "passed": true
+    },
+    {
+      "label": "ar: Quit label is readable on its dark red button",
+      "passed": true
+    },
+    {
+      "label": "ar: pause menu direction follows the locale",
+      "passed": true
+    },
+    {
+      "label": "ar: settings does not resume the paused game",
+      "passed": true
+    },
+    {
+      "label": "ar: run identity, timer and player remain frozen",
+      "passed": true
+    },
+    {
+      "label": "ar: menu/pause settings controls are identical",
+      "passed": true
+    },
+    {
+      "label": "ar: changing the frame cap does not unpause",
+      "passed": true
+    },
+    {
+      "label": "ar: live 30 FPS limit changes the existing render loop",
+      "passed": true
+    },
+    {
+      "label": "ar: attackMode saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: autoAim saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: particles saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: master saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: music saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: sfx saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: fps saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: screenShake saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: damageNumbers saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: reducedMotion saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: enemyHealthBars saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: telegraphHighContrast saves and updates the run immediately",
+      "passed": true
+    },
+    {
+      "label": "ar: live HUD, effect budget, reduced motion and render cap",
+      "passed": true
+    },
+    {
+      "label": "ar: existing music/SFX volume controls apply live",
+      "passed": true
+    },
+    {
+      "label": "ar: toggled knobs remain inside their tracks",
+      "passed": true
+    },
+    {
+      "label": "ar: Space activates the switch once despite game key capture",
+      "passed": true
+    },
+    {
+      "label": "ar: Enter activates the switch once",
+      "passed": true
+    },
+    {
+      "label": "ar: settings Back returns to pause",
+      "passed": true
+    },
+    {
+      "label": "ar: saved switch value survives reopening",
+      "passed": true
+    },
+    {
+      "label": "ar: saved health bar/warning settings survive reopening",
+      "passed": true
+    },
+    {
+      "label": "ar: health bar mode off updates the paused run",
+      "passed": true
+    },
+    {
+      "label": "ar: health bar mode damaged updates the paused run",
+      "passed": true
+    },
+    {
+      "label": "ar: actual Android hook closes settings to pause",
+      "passed": true
+    },
+    {
+      "label": "ar: How to Play opens over the paused run",
+      "passed": true
+    },
+    {
+      "label": "ar: Back from How to Play returns to pause",
+      "passed": true
+    },
+    {
+      "label": "ar: Skills stays read-only and paused",
+      "passed": true
+    },
+    {
+      "label": "ar: Back from Skills returns to pause",
+      "passed": true
+    },
+    {
+      "label": "ar: Resume restarts the same run correctly",
+      "passed": true
+    },
+    {
+      "label": "ar: native Back while running opens pause",
+      "passed": true
+    },
+    {
+      "label": "ar: native Back from pause resumes",
+      "passed": true
+    },
+    {
+      "label": "ar: Quit to Menu records the abandoned run and returns to the main menu",
+      "passed": true
+    },
+    {
+      "label": "no browser/HTTP errors: ",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "layouts": [
+    {
+      "name": "en-settings-568x320-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 524,
+        "height": 248,
+        "right": 546,
+        "bottom": 300
+      },
+      "close": {
+        "x": 249.125,
+        "y": 245,
+        "width": 69.734375,
+        "height": 40,
+        "right": 318.859375,
+        "bottom": 285
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "en-settings-568x320-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 524,
+        "height": 248,
+        "right": 546,
+        "bottom": 300
+      },
+      "close": {
+        "x": 249.125,
+        "y": 245,
+        "width": 69.734375,
+        "height": 40,
+        "right": 318.859375,
+        "bottom": 285
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "en-settings-320x568-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 276,
+        "height": 496,
+        "right": 298,
+        "bottom": 548
+      },
+      "close": {
+        "x": 119.125,
+        "y": 473.40625,
+        "width": 81.734375,
+        "height": 55.59375,
+        "right": 200.859375,
+        "bottom": 529
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "en-settings-320x568-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 276,
+        "height": 496,
+        "right": 298,
+        "bottom": 548
+      },
+      "close": {
+        "x": 119.125,
+        "y": 473.40625,
+        "width": 81.734375,
+        "height": 55.59375,
+        "right": 200.859375,
+        "bottom": 529
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "en-settings-1280x720-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "Off",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 140,
+        "y": 52,
+        "width": 1000,
+        "height": 648,
+        "right": 1140,
+        "bottom": 700
+      },
+      "close": {
+        "x": 599.125,
+        "y": 617.40625,
+        "width": 81.734375,
+        "height": 55.59375,
+        "right": 680.859375,
+        "bottom": 673
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "en-settings-1280x720-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "On",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 140,
+        "y": 52,
+        "width": 1000,
+        "height": 648,
+        "right": 1140,
+        "bottom": 700
+      },
+      "close": {
+        "x": 599.125,
+        "y": 617.40625,
+        "width": 81.734375,
+        "height": 55.59375,
+        "right": 680.859375,
+        "bottom": 673
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "fr-settings-568x320-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 524,
+        "height": 248,
+        "right": 546,
+        "bottom": 300
+      },
+      "close": {
+        "x": 242.71875,
+        "y": 245,
+        "width": 82.546875,
+        "height": 40,
+        "right": 325.265625,
+        "bottom": 285
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "fr-settings-568x320-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 524,
+        "height": 248,
+        "right": 546,
+        "bottom": 300
+      },
+      "close": {
+        "x": 242.71875,
+        "y": 245,
+        "width": 82.546875,
+        "height": 40,
+        "right": 325.265625,
+        "bottom": 285
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "fr-settings-320x568-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 276,
+        "height": 496,
+        "right": 298,
+        "bottom": 548
+      },
+      "close": {
+        "x": 112.71875,
+        "y": 473.40625,
+        "width": 94.546875,
+        "height": 55.59375,
+        "right": 207.265625,
+        "bottom": 529
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "fr-settings-320x568-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 276,
+        "height": 496,
+        "right": 298,
+        "bottom": 548
+      },
+      "close": {
+        "x": 112.71875,
+        "y": 473.40625,
+        "width": 94.546875,
+        "height": 55.59375,
+        "right": 207.265625,
+        "bottom": 529
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "fr-settings-1280x720-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "Désactivé",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 140,
+        "y": 52,
+        "width": 1000,
+        "height": 648,
+        "right": 1140,
+        "bottom": 700
+      },
+      "close": {
+        "x": 592.71875,
+        "y": 617.40625,
+        "width": 94.546875,
+        "height": 55.59375,
+        "right": 687.265625,
+        "bottom": 673
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "fr-settings-1280x720-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "Activé",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 140,
+        "y": 52,
+        "width": 1000,
+        "height": 648,
+        "right": 1140,
+        "bottom": 700
+      },
+      "close": {
+        "x": 592.71875,
+        "y": 617.40625,
+        "width": 94.546875,
+        "height": 55.59375,
+        "right": 687.265625,
+        "bottom": 673
+      },
+      "dir": "ltr",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "ar-settings-568x320-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 524,
+        "height": 248,
+        "right": 546,
+        "bottom": 300
+      },
+      "close": {
+        "x": 255.84375,
+        "y": 245,
+        "width": 56.328125,
+        "height": 40,
+        "right": 312.171875,
+        "bottom": 285
+      },
+      "dir": "rtl",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "ar-settings-568x320-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 524,
+        "height": 248,
+        "right": 546,
+        "bottom": 300
+      },
+      "close": {
+        "x": 255.84375,
+        "y": 245,
+        "width": 56.328125,
+        "height": 40,
+        "right": 312.171875,
+        "bottom": 285
+      },
+      "dir": "rtl",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "ar-settings-320x568-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 276,
+        "height": 496,
+        "right": 298,
+        "bottom": 548
+      },
+      "close": {
+        "x": 125.84375,
+        "y": 473.40625,
+        "width": 68.328125,
+        "height": 55.59375,
+        "right": 194.171875,
+        "bottom": 529
+      },
+      "dir": "rtl",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "ar-settings-320x568-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 22,
+        "y": 52,
+        "width": 276,
+        "height": 496,
+        "right": 298,
+        "bottom": 548
+      },
+      "close": {
+        "x": 125.84375,
+        "y": 473.40625,
+        "width": 68.328125,
+        "height": 55.59375,
+        "right": 194.171875,
+        "bottom": 529
+      },
+      "dir": "rtl",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "ar-settings-1280x720-off",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "off",
+          "checked": "false",
+          "word": "متوقف",
+          "mark": "×",
+          "color": "rgb(98, 95, 107)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            5,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 140,
+        "y": 52,
+        "width": 1000,
+        "height": 648,
+        "right": 1140,
+        "bottom": 700
+      },
+      "close": {
+        "x": 605.84375,
+        "y": 617.40625,
+        "width": 68.328125,
+        "height": 55.59375,
+        "right": 674.171875,
+        "bottom": 673
+      },
+      "dir": "rtl",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "ar-settings-1280x720-on",
+      "rows": [
+        {
+          "id": "screenShake",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "damageNumbers",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "reducedMotion",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        },
+        {
+          "id": "telegraphHighContrast",
+          "state": "on",
+          "checked": "true",
+          "word": "مفعل",
+          "mark": "✓",
+          "color": "rgb(22, 128, 103)",
+          "knobInside": true,
+          "wordFits": true,
+          "rowOrder": true,
+          "fixed": true,
+          "internalDirection": "ltr",
+          "relative": [
+            0,
+            6,
+            60,
+            32,
+            33,
+            5,
+            22,
+            22,
+            68,
+            12.546875,
+            68,
+            18.890625
+          ]
+        }
+      ],
+      "panel": {
+        "x": 140,
+        "y": 52,
+        "width": 1000,
+        "height": 648,
+        "right": 1140,
+        "bottom": 700
+      },
+      "close": {
+        "x": 605.84375,
+        "y": 617.40625,
+        "width": 68.328125,
+        "height": 55.59375,
+        "right": 674.171875,
+        "bottom": 673
+      },
+      "dir": "rtl",
+      "closeVisible": true,
+      "inside": true,
+      "controls": [
+        {
+          "key": "attackMode",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "master",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "music",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "sfx",
+          "type": "range",
+          "tag": "INPUT"
+        },
+        {
+          "key": "fps",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "particles",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "autoAim",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "screenShake",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "damageNumbers",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "reducedMotion",
+          "type": "button",
+          "tag": "BUTTON"
+        },
+        {
+          "key": "enemyHealthBars",
+          "type": "select-one",
+          "tag": "SELECT"
+        },
+        {
+          "key": "telegraphHighContrast",
+          "type": "button",
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "name": "en-pause",
+      "buttons": [
+        {
+          "key": "resume",
+          "text": "Resume",
+          "r": {
+            "x": 57,
+            "y": 93.28125,
+            "width": 223,
+            "height": 44,
+            "right": 280,
+            "bottom": 137.28125
+          }
+        },
+        {
+          "key": "settings",
+          "text": "Settings",
+          "r": {
+            "x": 288,
+            "y": 93.28125,
+            "width": 223,
+            "height": 44,
+            "right": 511,
+            "bottom": 137.28125
+          }
+        },
+        {
+          "key": "skills",
+          "text": "Skills",
+          "r": {
+            "x": 57,
+            "y": 143.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 187.28125
+          }
+        },
+        {
+          "key": "help",
+          "text": "How to Play",
+          "r": {
+            "x": 57,
+            "y": 193.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 237.28125
+          }
+        },
+        {
+          "key": "exit",
+          "text": "Quit to Menu",
+          "r": {
+            "x": 57,
+            "y": 243.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 287.28125
+          }
+        }
+      ],
+      "overlaps": [],
+      "dir": "ltr",
+      "quitColor": "rgb(255, 241, 206)",
+      "inside": true,
+      "touch": true
+    },
+    {
+      "name": "fr-pause",
+      "buttons": [
+        {
+          "key": "resume",
+          "text": "Reprendre",
+          "r": {
+            "x": 57,
+            "y": 93.28125,
+            "width": 223,
+            "height": 44,
+            "right": 280,
+            "bottom": 137.28125
+          }
+        },
+        {
+          "key": "settings",
+          "text": "Options",
+          "r": {
+            "x": 288,
+            "y": 93.28125,
+            "width": 223,
+            "height": 44,
+            "right": 511,
+            "bottom": 137.28125
+          }
+        },
+        {
+          "key": "skills",
+          "text": "Compétences",
+          "r": {
+            "x": 57,
+            "y": 143.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 187.28125
+          }
+        },
+        {
+          "key": "help",
+          "text": "Comment jouer",
+          "r": {
+            "x": 57,
+            "y": 193.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 237.28125
+          }
+        },
+        {
+          "key": "exit",
+          "text": "Quitter vers le menu",
+          "r": {
+            "x": 57,
+            "y": 243.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 287.28125
+          }
+        }
+      ],
+      "overlaps": [],
+      "dir": "ltr",
+      "quitColor": "rgb(255, 241, 206)",
+      "inside": true,
+      "touch": true
+    },
+    {
+      "name": "ar-pause",
+      "buttons": [
+        {
+          "key": "resume",
+          "text": "متابعة",
+          "r": {
+            "x": 288,
+            "y": 93.28125,
+            "width": 223,
+            "height": 44,
+            "right": 511,
+            "bottom": 137.28125
+          }
+        },
+        {
+          "key": "settings",
+          "text": "الإعدادات",
+          "r": {
+            "x": 57,
+            "y": 93.28125,
+            "width": 223,
+            "height": 44,
+            "right": 280,
+            "bottom": 137.28125
+          }
+        },
+        {
+          "key": "skills",
+          "text": "المهارات",
+          "r": {
+            "x": 57,
+            "y": 143.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 187.28125
+          }
+        },
+        {
+          "key": "help",
+          "text": "طريقة اللعب",
+          "r": {
+            "x": 57,
+            "y": 193.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 237.28125
+          }
+        },
+        {
+          "key": "exit",
+          "text": "العودة إلى القائمة",
+          "r": {
+            "x": 57,
+            "y": 243.28125,
+            "width": 454,
+            "height": 44,
+            "right": 511,
+            "bottom": 287.28125
+          }
+        }
+      ],
+      "overlaps": [],
+      "dir": "rtl",
+      "quitColor": "rgb(255, 241, 206)",
+      "inside": true,
+      "touch": true
+    }
+  ]
+}

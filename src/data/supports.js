@@ -23,8 +23,8 @@ for(const [id,support]of Object.entries(SUPPORTS)){
 export function threatScore(enemy,player){
  const d=enemy.getData.bind(enemy),distance=Math.hypot(enemy.x-player.x,enemy.y-player.y);
  // Potential damage is primary, then boss/ranged pressure and proximity.
- return (d('damage')||0)*(d('ranged')?1.5:1)+(d('isBoss')?25:0)+Math.max(0,1-distance/750)*10;
+ return (d('damage')||0)*(d('ranged')?1.5:1)+(d('priorityTarget')?15:0)+(d('isBoss')?25:0)+Math.max(0,1-distance/750)*10;
 }
 export function dangerousEnemy(enemies,player,range=750){
- return enemies.filter(e=>e?.active&&Math.hypot(e.x-player.x,e.y-player.y)<=range).sort((a,b)=>threatScore(b,player)-threatScore(a,player))[0]||null;
+ return enemies.filter(e=>e?.active&&!e.getData('buried')&&!e.getData('invulnerableEnemy')&&Math.hypot(e.x-player.x,e.y-player.y)<=range).sort((a,b)=>threatScore(b,player)-threatScore(a,player))[0]||null;
 }

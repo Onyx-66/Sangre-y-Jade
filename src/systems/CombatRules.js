@@ -1,6 +1,6 @@
 export const ALLY_LEVEL = 5;
 export const isGroundOnly = hero => hero.automatic.type === 'melee';
-export const canSpawnEnemy = (hero,type) => !(isGroundOnly(hero) && type === 'bat');
+export const canSpawnEnemy = (hero,type) => !(isGroundOnly(hero) && ['bat','jungle_wasp'].includes(type));
 export function enemyPool(hero,level,progress) {
   const pool=['shade'];
   if(canSpawnEnemy(hero,'bat'))pool.push('bat');

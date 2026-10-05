@@ -1,3 +1,5 @@
+import baseEnemies from './enemies-v06.json' with { type: 'json' };
+
 export const MAPS = [
   {
     id: 'overgrown',
@@ -36,13 +38,12 @@ export const RUN_MODES = [
   { id: 'full', name: 'Survival · 20 min', duration: 1200, description: '20-minute survival. Bosses arrive every 5 minutes.' },
 ];
 
-export const ENEMIES = {
-  shade: { name: 'Lost Shade', hp: 28, speed: 78, damage: 8, xp: 4, radius: 14, color: 0x4d8c75, weight: 6 },
-  bat: { name: 'Cave Bat', hp: 19, speed: 125, damage: 6, xp: 3, radius: 11, color: 0x7c638e, weight: 4 },
-  jaguar: { name: 'Jaguar Revenant', hp: 72, speed: 92, damage: 13, xp: 9, radius: 18, color: 0xc78b42, weight: 2 },
-  serpent: { name: 'Bone Serpent', hp: 48, speed: 105, damage: 10, xp: 7, radius: 16, color: 0x55b79a, weight: 3 },
-  priest: { name: 'Hollow Priest', hp: 54, speed: 62, damage: 11, xp: 8, radius: 17, color: 0x7aa8a1, weight: 2, ranged: true },
-};
+const enemyColors={shade:0x4d8c75,bat:0x7c638e,jaguar:0xc78b42,serpent:0x55b79a,priest:0x7aa8a1,
+  vine_lurker:0x3de0b0,stone_guardian:0xc9c3d6,jungle_wasp:0xe6bd42,blood_wraith:0xd4484f,
+  bone_archer:0xe4d6b5,moon_cultist:0xb58cff,drowned_spirit:0x8ec5ff,abyssal_eel:0x55e5c0,crystal_golem:0xa8caff,glow_wisp:0x86f5ea};
+export const ENEMIES=Object.fromEntries(Object.entries(baseEnemies).map(([id,data])=>[id,{...data,color:enemyColors[id],
+  weight:({shade:6,bat:4,jaguar:2,serpent:3,priest:2})[id]||1,
+  ranged:['priest','jungle_wasp','bone_archer','moon_cultist'].includes(id)}]));
 
 export const BOSSES = [
   { id: 'camazotz', name: 'Camazotz, the Death Bat', icon: '🦇', hp: 850, speed: 112, damage: 16, color: 0x755982, pattern: 'dash' },

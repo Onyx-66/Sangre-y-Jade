@@ -1,0 +1,5936 @@
+{
+  "label": "final-roster",
+  "createdAt": "2026-10-05T10:01:37.090Z",
+  "policy": "roster-bot-v8-coverage-packs",
+  "maps": [
+    "overgrown",
+    "bloodmoon",
+    "cenote"
+  ],
+  "viewport": [
+    1280,
+    720
+  ],
+  "stepHz": 30,
+  "seeds": [
+    1701
+  ],
+  "seconds": null,
+  "meta": "fresh save; no shrine upgrades",
+  "settings": "auto attack/aim, high detail, muted presentation audio (no wall-clock RNG)",
+  "targets": {
+    "quick": {
+      "10": [
+        210,
+        270
+      ],
+      "20": [
+        480,
+        570
+      ]
+    },
+    "full": {
+      "10": [
+        240,
+        330
+      ],
+      "20": [
+        540,
+        720
+      ]
+    }
+  },
+  "runs": [
+    {
+      "map": "overgrown",
+      "hero": "kukul",
+      "mode": "quick",
+      "seed": 1701,
+      "spawnCounts": {
+        "shade": 120,
+        "bat": 26,
+        "vine_lurker": 12,
+        "serpent": 27,
+        "jungle_wasp": 69,
+        "jaguar": 11,
+        "priest": 15,
+        "stone_guardian": 5
+      },
+      "stuck": [],
+      "enemyCasts": {
+        "shade:Lunge": 68,
+        "bat:Swoop Dive": 9,
+        "serpent:Burrow": 27,
+        "serpent:Tail Whip": 22,
+        "vine_lurker:Root Snare": 15,
+        "jungle_wasp:Venom Spit": 122,
+        "jaguar:Pounce": 26,
+        "jaguar:Pack Roar": 11,
+        "priest:Ward": 22,
+        "priest:Soul Volley": 34,
+        "stone_guardian:Ground Slam": 8
+      },
+      "peakFxUnits": 24,
+      "peakTelegraphs": 6,
+      "peakPuddles": 0,
+      "seconds": 600.0000000001116,
+      "level10": 358.26666666673606,
+      "level20": null,
+      "endLevel": 14,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 118,
+      "kills": 280,
+      "damageTaken": 33.12,
+      "cacao": 102,
+      "peakAlive": 12,
+      "baseKills": {
+        "shade": 117,
+        "bat": 24,
+        "serpent": 27,
+        "jungle_wasp": 69,
+        "vine_lurker": 9,
+        "jaguar": 11,
+        "priest": 15,
+        "stone_guardian": 5
+      },
+      "bossKills": [
+        {
+          "type": null,
+          "seconds": 173.9999999999927
+        },
+        {
+          "type": null,
+          "seconds": 355.8000000000674
+        },
+        {
+          "type": null,
+          "seconds": 490.7666666668415
+        }
+      ],
+      "ttk": [
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999996
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666666615
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.5666666666666575
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6999999999999975
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.7333333333333272
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.9666666666666597
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.1000000000001044
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0666666666667695
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.066666666666919
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8000000000000895
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.9000000000001442
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7333333333334693
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333334345
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6000000000000796
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.26666666666663
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9999999999999432
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6666666666666288
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.966666666666498
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.8666666666665037
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.4333333333332519
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6666666666666288
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6999999999999602
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 8.399999999999523
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.39999999999997726
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.899999999999899
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5999999999999162
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3999999999998707
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.39999999999997726
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.9333333333332803
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.8999999999999488
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4333333333332519
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9999999999998863
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.8333333333331723
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1666666666666003
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.199999999999875
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 3.499999999999801
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666665833
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7666666666665662
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8666666666665606
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.6333333333331836
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.5666666666665208
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.733333333333178
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 5.56666666666635
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.799999999999841
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 5.399999999999693
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.1666666666666003
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.199999999999875
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 4.466666666666413
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.4666666666664696
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.799999999999855
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 6.033333333333005
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1666666666666003
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8999999999999488
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.033333333333161
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.666666666666572
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2333333333332632
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333332462
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5666666666665776
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333332405
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8999999999999488
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.6999999999998465
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333332462
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.133333333333269
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333332405
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.433333333333138
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.2333333333331495
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.2333333333332632
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.7999999999999545
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.2666666666666515
+        },
+        {
+          "type": "stone_guardian",
+          "elite": false,
+          "seconds": 18.199999999998965
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.866666666666447
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 2.799999999999841
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6333333333332973
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 11.999999999999318
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 12.2999999999993
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 18.73333333333227
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.03333333333333144
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7999999999999545
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.2333333333332064
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 4.699999999999733
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3999999999999204
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.599999999999909
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 5.6666666666663446
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6999999999999602
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 3.6666666666664582
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.599999999999852
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6333333333332973
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.366666666666589
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.1666666666666572
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.3999999999999204
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.8666666666665037
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.266666666666538
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9999999999999432
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.1666666666664867
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 7.766666666666225
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 6.466666666666299
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.5999999999999659
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 1.0999999999999375
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6999999999999602
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.666666666668391
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 5.300000000004218
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 5.033333333337339
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 5.666666666671176
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 0.4333333333336782
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.36666666666695846
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6333333333338373
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 3.5000000000027853
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8333333333339965
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3666666666677543
+        },
+        {
+          "type": "stone_guardian",
+          "elite": false,
+          "seconds": 11.76666666667603
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.0000000000007958
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.3000000000010346
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 10.200000000008117
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9000000000007162
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9000000000007162
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.5000000000019895
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.133333333335827
+        },
+        {
+          "type": "priest",
+          "elite": true,
+          "seconds": 10.466666666674996
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.4666666666678339
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 0
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.10000000000007958
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.033333333337339
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.100000000004059
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 3.4333333333360656
+        },
+        {
+          "type": "vine_lurker",
+          "elite": true,
+          "seconds": 16.066666666679453
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5000000000003979
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6000000000004775
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.8000000000006366
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.8000000000006366
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.9000000000007162
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 6.966666666672211
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 6.433333333338453
+        },
+        {
+          "type": "serpent",
+          "elite": true,
+          "seconds": 7.366666666672529
+        },
+        {
+          "type": "stone_guardian",
+          "elite": true,
+          "seconds": 42.066666666700144
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666682318
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.5666666666679134
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 18.166666666681124
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6000000000004775
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.36666666666855
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.7666666666680726
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.8666666666681522
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.9666666666690276
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 2.7333333333355085
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 14.3666666666781
+        },
+        {
+          "type": "jaguar",
+          "elite": true,
+          "seconds": 44.433333333368694
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.1333333333342352
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333343944
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.200000000000955
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.0000000000015916
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 11.066666666675474
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 9.40000000000748
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0000000000015916
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0000000000015916
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 5.300000000004218
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.2000000000017508
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7666666666672768
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.3333333333335986
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666678339
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1333333333342352
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.3666666666677543
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.0333333333341557
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666678339
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.33333333333519
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333343944
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.7000000000005571
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.433333333334474
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.3333333333343944
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 4.966666666670619
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 1.8333333333347923
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 0.36666666666695846
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.6000000000012733
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 2.166666666668391
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 4.233333333336702
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.1666666666667993
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.9666666666690276
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.933333333334872
+        },
+        {
+          "type": "stone_guardian",
+          "elite": false,
+          "seconds": 11.233333333342273
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 8.200000000006526
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.1333333333342352
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.933333333334872
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.3666666666677543
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 0
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.9666666666682318
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.6000000000004775
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7666666666680726
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8000000000014325
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 0.4333333333336782
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 9.40000000000748
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.833333333336384
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 4.366666666670142
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.7000000000005571
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 1.3666666666677543
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.966666666667436
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.966666666667436
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.4333333333336782
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1000000000008754
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.2666666666668789
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.23333333333351902
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 2.7666666666688684
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8666666666662195
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0999999999989996
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999986358
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4333333333320297
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.833333333329847
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.133333333331393
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 5.533333333328301
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.1999999999989086
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2666666666655146
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2999999999988177
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.866666666664969
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0999999999989996
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.6333333333318478
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 3.2999999999969987
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 1.3333333333321207
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.3999999999996362
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.7333333333326664
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9333333333324845
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4333333333320297
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5999999999985448
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7999999999992724
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.066666666664787
+        },
+        {
+          "type": "priest",
+          "elite": true,
+          "seconds": 5.499999999994998
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 2.366666666664514
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9666666666657875
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7999999999992724
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 2.066666666664787
+        },
+        {
+          "type": "stone_guardian",
+          "elite": false,
+          "seconds": 8.699999999992087
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": true,
+          "seconds": 3.833333333329847
+        },
+        {
+          "type": "jungle_wasp",
+          "elite": false,
+          "seconds": 0.5999999999994543
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.199999999997999
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.09999999999809
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.1999999999970896
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.166666666664696
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.4333333333329392
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "vine_lurker",
+          "elite": false,
+          "seconds": 2.09999999999809
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 3.53333333333012
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999986358
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1999999999989086
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 3.2333333333303926
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 2.5333333333310293
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.3666666666636047
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.26666666666642413
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4333333333320297
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3666666666654237
+        }
+      ],
+      "averageBaseTtk": 2.446963562753561,
+      "xpTotal": 4082,
+      "collected": 277,
+      "spawned": 285,
+      "frames": 18012,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 5.199999999999991,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 27.900000000000546,
+          "xpTotal": 126
+        },
+        {
+          "level": 4,
+          "seconds": 61.59999999999906,
+          "xpTotal": 256
+        },
+        {
+          "level": 5,
+          "seconds": 96.26666666666377,
+          "xpTotal": 430
+        },
+        {
+          "level": 6,
+          "seconds": 136.73333333332815,
+          "xpTotal": 644
+        },
+        {
+          "level": 7,
+          "seconds": 191.33333333332504,
+          "xpTotal": 898
+        },
+        {
+          "level": 8,
+          "seconds": 247.9999999999885,
+          "xpTotal": 1194
+        },
+        {
+          "level": 9,
+          "seconds": 301.0000000000238,
+          "xpTotal": 1530
+        },
+        {
+          "level": 10,
+          "seconds": 358.26666666673606,
+          "xpTotal": 1906
+        },
+        {
+          "level": 11,
+          "seconds": 381.20000000008764,
+          "xpTotal": 2310
+        },
+        {
+          "level": 12,
+          "seconds": 427.6333333334579,
+          "xpTotal": 2746
+        },
+        {
+          "level": 13,
+          "seconds": 498.93333333351467,
+          "xpTotal": 3210
+        },
+        {
+          "level": 14,
+          "seconds": 546.2333333334939,
+          "xpTotal": 3718
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 5.199999999999991,
+          "level": 2,
+          "title": "Level 2",
+          "id": "windstep",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 27.900000000000546,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 61.59999999999906,
+          "level": 4,
+          "title": "Level 4",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 96.26666666666377,
+          "level": 5,
+          "title": "Level 5",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 96.26666666666377,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "saintess",
+          "kind": "ally"
+        },
+        {
+          "seconds": 136.73333333332815,
+          "level": 6,
+          "title": "Level 6",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 173.9999999999927,
+          "level": 6,
+          "title": "Boss Defeated",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 191.33333333332504,
+          "level": 7,
+          "title": "Level 7",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 247.9999999999885,
+          "level": 8,
+          "title": "Level 8",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 247.9999999999885,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "jade-ward",
+          "kind": "ally"
+        },
+        {
+          "seconds": 301.0000000000238,
+          "level": 9,
+          "title": "Level 9",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 355.8000000000674,
+          "level": 9,
+          "title": "Boss Defeated",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 358.26666666673606,
+          "level": 10,
+          "title": "Level 10",
+          "id": "fleet-hunter",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 358.26666666673606,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 381.20000000008764,
+          "level": 11,
+          "title": "Level 11",
+          "id": "plume-guard",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 427.6333333334579,
+          "level": 12,
+          "title": "Level 12",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 490.7666666668415,
+          "level": 12,
+          "title": "Boss Defeated",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 498.93333333351467,
+          "level": 13,
+          "title": "Level 13",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 546.2333333334939,
+          "level": 14,
+          "title": "Level 14",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 546.2333333334939,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "saving-grace",
+          "kind": "ally"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 136,
+          "kills": 14,
+          "hp": 118,
+          "alive": 0,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 3,
+          "xpTotal": 234,
+          "kills": 24,
+          "hp": 118,
+          "alive": 5,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 4,
+          "xpTotal": 378,
+          "kills": 37,
+          "hp": 118,
+          "alive": 5,
+          "drops": 3
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 5,
+          "xpTotal": 538,
+          "kills": 49,
+          "hp": 118,
+          "alive": 2,
+          "drops": 2
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 6,
+          "xpTotal": 714,
+          "kills": 63,
+          "hp": 118,
+          "alive": 3,
+          "drops": 0
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 6,
+          "xpTotal": 788,
+          "kills": 71,
+          "hp": 118,
+          "alive": 7,
+          "drops": 0
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 7,
+          "xpTotal": 1002,
+          "kills": 87,
+          "hp": 111.0399999999999,
+          "alive": 3,
+          "drops": 1
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 7,
+          "xpTotal": 1128,
+          "kills": 99,
+          "hp": 101.67999999999984,
+          "alive": 4,
+          "drops": 0
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 8,
+          "xpTotal": 1290,
+          "kills": 109,
+          "hp": 107.67999999999978,
+          "alive": 6,
+          "drops": 1
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 8,
+          "xpTotal": 1500,
+          "kills": 122,
+          "hp": 115.4799999999997,
+          "alive": 6,
+          "drops": 0
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 9,
+          "xpTotal": 1792,
+          "kills": 136,
+          "hp": 118,
+          "alive": 5,
+          "drops": 0
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 10,
+          "xpTotal": 1906,
+          "kills": 145,
+          "hp": 118,
+          "alive": 12,
+          "drops": 0
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 11,
+          "xpTotal": 2384,
+          "kills": 165,
+          "hp": 118,
+          "alive": 6,
+          "drops": 0
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 11,
+          "xpTotal": 2668,
+          "kills": 183,
+          "hp": 118,
+          "alive": 5,
+          "drops": 0
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 12,
+          "xpTotal": 2862,
+          "kills": 195,
+          "hp": 118,
+          "alive": 7,
+          "drops": 0
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 12,
+          "xpTotal": 3056,
+          "kills": 210,
+          "hp": 118,
+          "alive": 6,
+          "drops": 0
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 13,
+          "xpTotal": 3266,
+          "kills": 230,
+          "hp": 118,
+          "alive": 3,
+          "drops": 1
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 13,
+          "xpTotal": 3616,
+          "kills": 251,
+          "hp": 118,
+          "alive": 4,
+          "drops": 0
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 14,
+          "xpTotal": 3862,
+          "kills": 264,
+          "hp": 118,
+          "alive": 5,
+          "drops": 1
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 14,
+          "xpTotal": 4082,
+          "kills": 280,
+          "hp": 118,
+          "alive": 8,
+          "drops": 1
+        }
+      ],
+      "skills": [
+        {
+          "id": "windstep",
+          "level": 1
+        },
+        {
+          "id": "skyfall",
+          "level": 6
+        },
+        {
+          "id": "plume-guard",
+          "level": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "venomous-darts",
+          "level": 5
+        },
+        {
+          "id": "fleet-hunter",
+          "level": 1
+        }
+      ],
+      "ally": "saintess",
+      "summary": null,
+      "warnings": [
+        "[skills] Placeholder: fx/enemy-shade-windup/main.png",
+        "[skills] Placeholder: fx/enemy-shade-attack/main.png",
+        "[skills] Placeholder: fx/enemy-bat-windup/main.png",
+        "[skills] Placeholder: fx/enemy-bat-attack/main.png",
+        "[skills] Placeholder: fx/enemy-serpent-windup/main.png",
+        "[skills] Placeholder: fx/enemy-serpent-attack/main.png",
+        "[skills] Placeholder: fx/enemy-vine_lurker-windup/main.png",
+        "[skills] Placeholder: fx/enemy-jungle_wasp-windup/main.png",
+        "[skills] Placeholder: fx/enemy-vine_lurker-attack/main.png",
+        "[skills] Placeholder: fx/enemy-jungle_wasp-attack/main.png",
+        "[skills] Placeholder: fx/enemy-jaguar-windup/main.png",
+        "[skills] Placeholder: fx/enemy-jaguar-attack/main.png",
+        "[skills] Placeholder: fx/enemy-priest-windup/main.png",
+        "[skills] Placeholder: fx/enemy-priest-attack/main.png",
+        "[skills] Placeholder: fx/enemy-stone_guardian-windup/main.png",
+        "[skills] Placeholder: fx/enemy-stone_guardian-attack/main.png",
+        "[skills] Placeholder: fx/jade-ward/main.png"
+      ],
+      "httpErrors": [],
+      "errors": []
+    },
+    {
+      "map": "bloodmoon",
+      "hero": "kukul",
+      "mode": "quick",
+      "seed": 1701,
+      "spawnCounts": {
+        "shade": 208,
+        "bat": 22,
+        "bone_archer": 13,
+        "serpent": 22,
+        "blood_wraith": 6,
+        "jaguar": 15,
+        "priest": 9,
+        "moon_cultist": 12
+      },
+      "stuck": [],
+      "enemyCasts": {
+        "shade:Lunge": 116,
+        "bat:Swoop Dive": 4,
+        "bone_archer:Aimed Shot": 26,
+        "serpent:Burrow": 24,
+        "serpent:Tail Whip": 21,
+        "blood_wraith:Blink Strike": 11,
+        "jaguar:Pounce": 24,
+        "jaguar:Pack Roar": 15,
+        "priest:Ward": 15,
+        "priest:Soul Volley": 22,
+        "moon_cultist:Blood Pulse": 8,
+        "moon_cultist:Summon": 7
+      },
+      "peakFxUnits": 24,
+      "peakTelegraphs": 5,
+      "peakPuddles": 0,
+      "seconds": 600.0000000001116,
+      "level10": 324.4333333333758,
+      "level20": null,
+      "endLevel": 16,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 118,
+      "kills": 306,
+      "damageTaken": 267.352,
+      "cacao": 96,
+      "peakAlive": 14,
+      "baseKills": {
+        "shade": 204,
+        "bat": 22,
+        "serpent": 22,
+        "bone_archer": 13,
+        "blood_wraith": 6,
+        "jaguar": 15,
+        "priest": 9,
+        "moon_cultist": 12
+      },
+      "bossKills": [
+        {
+          "type": null,
+          "seconds": 189.96666666665845
+        },
+        {
+          "type": null,
+          "seconds": 352.2333333333979
+        },
+        {
+          "type": null,
+          "seconds": 507.83333333352175
+        }
+      ],
+      "ttk": [
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999996
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666666615
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.5666666666666575
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6999999999999975
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.7333333333333272
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.9666666666666597
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.1000000000001044
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0666666666667695
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.066666666666919
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8000000000000895
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.9000000000001442
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7333333333334693
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333334345
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6000000000000796
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.26666666666663
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9999999999999432
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6666666666666288
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.966666666666498
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.3666666666664753
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 6.2666666666663104
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.1666666666665435
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 4.033333333333104
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999147
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6333333333332973
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9666666666666117
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333332646
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.066666666666606
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.966666666666498
+        },
+        {
+          "type": "blood_wraith",
+          "elite": false,
+          "seconds": 4.999999999999716
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333332462
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.066666666666549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.499999999999858
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.066666666666549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.066666666666606
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.366666666666589
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2666666666665947
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.46666666666664014
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0333333333332746
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999147
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7333333333332348
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333332575
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 7.999999999999545
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 2.6333333333331836
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 5.599999999999682
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.599999999999909
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 2.5666666666665208
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7999999999998977
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 2.2333333333332064
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 1.966666666666569
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.5333333333331893
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999147
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 1.4999999999999147
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 4.8999999999997215
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 6.966666666666271
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999147
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.6999999999998465
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.1666666666665435
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.133333333333212
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.133333333333212
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 7.066666666666265
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 7.0333333333329335
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333332575
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.5999999999997954
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.5999999999997954
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 3.7666666666664526
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333332405
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6999999999999034
+        },
+        {
+          "type": "blood_wraith",
+          "elite": false,
+          "seconds": 11.699999999999335
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6999999999999602
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.066666666666606
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.39999999999997726
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3999999999999204
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6999999999999034
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 36.86666666666457
+        },
+        {
+          "type": "blood_wraith",
+          "elite": false,
+          "seconds": 10.933333333332712
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8333333333332291
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8333333333332291
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.033333333333047
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.366666666666532
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333332575
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 10.799999999999386
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7999999999999545
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5666666666665776
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0999999999999375
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.199999999999875
+        },
+        {
+          "type": "blood_wraith",
+          "elite": false,
+          "seconds": 14.099999999999199
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.066666666666606
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 17.13333333333236
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 1.3999999999999204
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.299999999999926
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5999999999999659
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.299999999999926
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.299999999999926
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9999999999998863
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 3.799999999999784
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8999999999999488
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5666666666666345
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7999999999999545
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2666666666665947
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.4666666666664696
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 5.033333333333047
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999147
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 4.133333333333098
+        },
+        {
+          "type": "blood_wraith",
+          "elite": false,
+          "seconds": 2.166666666667311
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3666666666684364
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.4000000000017963
+        },
+        {
+          "type": "serpent",
+          "elite": true,
+          "seconds": 11.566666666675872
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 12.966666666676986
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333346332
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 3.5000000000027853
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0333333333341557
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.666666666667993
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0000000000007958
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 5.733333333337896
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 9.933333333341238
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.133333333335031
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0666666666675155
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1333333333342352
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "bone_archer",
+          "elite": true,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333346332
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333346332
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8333333333339965
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5666666666671176
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8333333333339965
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.2666666666692663
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 1.666666666667993
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 0.8000000000006366
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7666666666688684
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 11.533333333342512
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 0.6333333333338373
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.433333333334474
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.33333333333519
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 3.5000000000027853
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8333333333347923
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8333333333347923
+        },
+        {
+          "type": "serpent",
+          "elite": true,
+          "seconds": 1.933333333334872
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.166666666668391
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.2333333333351106
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.2666666666684705
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 11.233333333342273
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 5.700000000004536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.4666666666694255
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.100000000003263
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.066666666669903
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 4.76666666667046
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 12.10000000000963
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.366666666670142
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7333333333347127
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 7.966666666673007
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8333333333339965
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 2.5000000000019895
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0333333333341557
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1000000000008754
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0666666666683113
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5666666666679134
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.133333333335031
+        },
+        {
+          "type": "jaguar",
+          "elite": true,
+          "seconds": 4.966666666670619
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.933333333334872
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 3.4333333333360656
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.166666666667595
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 2.7000000000021487
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 0.1666666666667993
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.666666666668789
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.2666666666692663
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.100000000001671
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 5.966666666671415
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 2.9333333333356677
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.6333333333362248
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 0.7333333333339169
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7666666666688684
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.4666666666678339
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 4.366666666670142
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3000000000010346
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333345536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.100000000001671
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.600000000002069
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.1333333333342352
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3666666666677543
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 4.433333333336861
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 6.733333333338692
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6000000000004775
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 2.33333333333519
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.30000000000023874
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 0.13333333333343944
+        },
+        {
+          "type": "bone_archer",
+          "elite": true,
+          "seconds": 2.666666666668789
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.166666666668391
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.3333333333335986
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.8000000000006366
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.5333333333337578
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.6000000000012733
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333346332
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.4333333333360656
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666678339
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.9333333333364635
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 4.933333333337259
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3000000000018304
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 4.76666666667046
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 3.766666666669664
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 7.500000000005969
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 4.066666666669903
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.80000000000382
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 10.400000000008276
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.7666666666688684
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 4.83333333333718
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0666666666675155
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.666666666667993
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.666666666667993
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.633333333335429
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 12.733333333343467
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 14.000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 15.900000000012653
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5666666666679134
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5666666666679134
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.0000000000015916
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5666666666679134
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5666666666679134
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7666666666680726
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.000000000003183
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.733333333337896
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.4000000000003183
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.4000000000003183
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 7.766666666672847
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3000000000010346
+        },
+        {
+          "type": "moon_cultist",
+          "elite": false,
+          "seconds": 11.100000000008833
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7333333333326664
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.2666666666655146
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.33333333333303017
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.0666666666656965
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 8.166666666659864
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2999999999988177
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.7333333333317569
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.4666666666644232
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.133333333331393
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5666666666652418
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.999999999998181
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3999999999987267
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5999999999985448
+        },
+        {
+          "type": "serpent",
+          "elite": true,
+          "seconds": 2.9333333333306655
+        },
+        {
+          "type": "priest",
+          "elite": true,
+          "seconds": 5.066666666662059
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5666666666652418
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5999999999985448
+        },
+        {
+          "type": "jaguar",
+          "elite": true,
+          "seconds": 5.366666666661786
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.3333333333321207
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.3999999999996362
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.33333333333303017
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.3999999999996362
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4333333333320297
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.3999999999987267
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 2.8999999999973625
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.5333333333310293
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 0.7333333333326664
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 3.3333333333303017
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.799999999998363
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 3.4333333333302107
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7666666666641504
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.3999999999969077
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5666666666652418
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 0.6666666666660603
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6333333333318478
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.2999999999988177
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 3.2999999999969987
+        },
+        {
+          "type": "bone_archer",
+          "elite": false,
+          "seconds": 1.0333333333323935
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 4.399999999995998
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.933333333331575
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 2.299999999997908
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.5999999999994543
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 0.7999999999992724
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.06666666666660603
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.09999999999809
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 4.833333333328937
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 0.9999999999990905
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 2.09999999999809
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 0.8333333333325754
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.49999999999954525
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 1.966666666664878
+        },
+        {
+          "type": "blood_wraith",
+          "elite": false,
+          "seconds": 2.133333333331393
+        }
+      ],
+      "averageBaseTtk": 2.920261437909334,
+      "xpTotal": 4890,
+      "collected": 303,
+      "spawned": 307,
+      "frames": 18013,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 5.199999999999991,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 27.900000000000546,
+          "xpTotal": 126
+        },
+        {
+          "level": 4,
+          "seconds": 59.36666666666586,
+          "xpTotal": 264
+        },
+        {
+          "level": 5,
+          "seconds": 90.9999999999974,
+          "xpTotal": 438
+        },
+        {
+          "level": 6,
+          "seconds": 132.26666666666173,
+          "xpTotal": 650
+        },
+        {
+          "level": 7,
+          "seconds": 187.19999999999195,
+          "xpTotal": 918
+        },
+        {
+          "level": 8,
+          "seconds": 221.53333333332333,
+          "xpTotal": 1206
+        },
+        {
+          "level": 9,
+          "seconds": 272.50000000000114,
+          "xpTotal": 1536
+        },
+        {
+          "level": 10,
+          "seconds": 324.4333333333758,
+          "xpTotal": 1912
+        },
+        {
+          "level": 11,
+          "seconds": 361.5666666667387,
+          "xpTotal": 2314
+        },
+        {
+          "level": 12,
+          "seconds": 405.966666666774,
+          "xpTotal": 2748
+        },
+        {
+          "level": 13,
+          "seconds": 471.9333333334932,
+          "xpTotal": 3212
+        },
+        {
+          "level": 14,
+          "seconds": 510.06666666685686,
+          "xpTotal": 3708
+        },
+        {
+          "level": 15,
+          "seconds": 543.9666666668293,
+          "xpTotal": 4236
+        },
+        {
+          "level": 16,
+          "seconds": 592.8000000001182,
+          "xpTotal": 4812
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 5.199999999999991,
+          "level": 2,
+          "title": "Level 2",
+          "id": "windstep",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 27.900000000000546,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 59.36666666666586,
+          "level": 4,
+          "title": "Level 4",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 90.9999999999974,
+          "level": 5,
+          "title": "Level 5",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 90.9999999999974,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "saintess",
+          "kind": "ally"
+        },
+        {
+          "seconds": 132.26666666666173,
+          "level": 6,
+          "title": "Level 6",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 187.19999999999195,
+          "level": 7,
+          "title": "Level 7",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 189.96666666665845,
+          "level": 7,
+          "title": "Boss Defeated",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 221.53333333332333,
+          "level": 8,
+          "title": "Level 8",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 221.53333333332333,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "sanctuary-dome",
+          "kind": "ally"
+        },
+        {
+          "seconds": 272.50000000000114,
+          "level": 9,
+          "title": "Level 9",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 324.4333333333758,
+          "level": 10,
+          "title": "Level 10",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 324.4333333333758,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 352.2333333333979,
+          "level": 10,
+          "title": "Boss Defeated",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 361.5666666667387,
+          "level": 11,
+          "title": "Level 11",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 405.966666666774,
+          "level": 12,
+          "title": "Level 12",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 471.9333333334932,
+          "level": 13,
+          "title": "Level 13",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 507.83333333352175,
+          "level": 13,
+          "title": "Boss Defeated",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 510.06666666685686,
+          "level": 14,
+          "title": "Level 14",
+          "id": "fleet-hunter",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 510.06666666685686,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "jade-ward",
+          "kind": "ally"
+        },
+        {
+          "seconds": 543.9666666668293,
+          "level": 15,
+          "title": "Level 15",
+          "id": "skyfall",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 592.8000000001182,
+          "level": 16,
+          "title": "Level 16",
+          "id": "venomous-darts",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 136,
+          "kills": 14,
+          "hp": 118,
+          "alive": 0,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 4,
+          "xpTotal": 264,
+          "kills": 24,
+          "hp": 118,
+          "alive": 4,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 4,
+          "xpTotal": 428,
+          "kills": 39,
+          "hp": 118,
+          "alive": 4,
+          "drops": 2
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 5,
+          "xpTotal": 582,
+          "kills": 50,
+          "hp": 118,
+          "alive": 2,
+          "drops": 2
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 6,
+          "xpTotal": 720,
+          "kills": 58,
+          "hp": 89.31999999999998,
+          "alive": 5,
+          "drops": 2
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 6,
+          "xpTotal": 884,
+          "kills": 71,
+          "hp": 116.65333333333324,
+          "alive": 5,
+          "drops": 3
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 7,
+          "xpTotal": 1102,
+          "kills": 88,
+          "hp": 111.44,
+          "alive": 4,
+          "drops": 2
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 8,
+          "xpTotal": 1338,
+          "kills": 104,
+          "hp": 118,
+          "alive": 2,
+          "drops": 5
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 8,
+          "xpTotal": 1462,
+          "kills": 112,
+          "hp": 118,
+          "alive": 7,
+          "drops": 2
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 9,
+          "xpTotal": 1816,
+          "kills": 134,
+          "hp": 116.40666666666662,
+          "alive": 1,
+          "drops": 3
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 10,
+          "xpTotal": 2012,
+          "kills": 144,
+          "hp": 105.94,
+          "alive": 4,
+          "drops": 2
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 10,
+          "xpTotal": 2290,
+          "kills": 162,
+          "hp": 118,
+          "alive": 7,
+          "drops": 2
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 11,
+          "xpTotal": 2618,
+          "kills": 179,
+          "hp": 115.03466666666714,
+          "alive": 3,
+          "drops": 0
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 12,
+          "xpTotal": 2846,
+          "kills": 194,
+          "hp": 115.90133333333426,
+          "alive": 4,
+          "drops": 1
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 12,
+          "xpTotal": 3126,
+          "kills": 208,
+          "hp": 118,
+          "alive": 3,
+          "drops": 0
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 13,
+          "xpTotal": 3304,
+          "kills": 219,
+          "hp": 110.94,
+          "alive": 11,
+          "drops": 0
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 13,
+          "xpTotal": 3698,
+          "kills": 246,
+          "hp": 104.43999999999997,
+          "alive": 5,
+          "drops": 1
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 14,
+          "xpTotal": 4114,
+          "kills": 266,
+          "hp": 118,
+          "alive": 8,
+          "drops": 3
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 15,
+          "xpTotal": 4582,
+          "kills": 289,
+          "hp": 118,
+          "alive": 3,
+          "drops": 2
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 16,
+          "xpTotal": 4890,
+          "kills": 306,
+          "hp": 118,
+          "alive": 3,
+          "drops": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "windstep",
+          "level": 1
+        },
+        {
+          "id": "featherstorm",
+          "level": 6
+        },
+        {
+          "id": "skyfall",
+          "level": 6
+        }
+      ],
+      "passives": [
+        {
+          "id": "venomous-darts",
+          "level": 3
+        },
+        {
+          "id": "fleet-hunter",
+          "level": 1
+        }
+      ],
+      "ally": "saintess",
+      "summary": null,
+      "warnings": [
+        "[skills] Placeholder: fx/enemy-shade-windup/main.png",
+        "[skills] Placeholder: fx/enemy-shade-attack/main.png",
+        "[skills] Placeholder: fx/enemy-bat-windup/main.png",
+        "[skills] Placeholder: fx/enemy-bat-attack/main.png",
+        "[skills] Placeholder: fx/enemy-bone_archer-windup/main.png",
+        "[skills] Placeholder: fx/enemy-bone_archer-attack/main.png",
+        "[skills] Placeholder: fx/enemy-serpent-windup/main.png",
+        "[skills] Placeholder: fx/enemy-serpent-attack/main.png",
+        "[skills] Placeholder: fx/enemy-blood_wraith-windup/main.png",
+        "[skills] Placeholder: fx/enemy-blood_wraith-attack/main.png",
+        "[skills] Placeholder: fx/enemy-jaguar-windup/main.png",
+        "[skills] Placeholder: fx/enemy-jaguar-attack/main.png",
+        "[skills] Placeholder: fx/enemy-priest-windup/main.png",
+        "[skills] Placeholder: fx/enemy-priest-attack/main.png",
+        "[skills] Placeholder: fx/enemy-moon_cultist-windup/main.png",
+        "[skills] Placeholder: fx/enemy-moon_cultist-attack/main.png",
+        "[skills] Placeholder: fx/healing-circle/main.png",
+        "[skills] Placeholder: fx/sanctuary-dome/main.png",
+        "[skills] Placeholder: fx/jade-ward/main.png"
+      ],
+      "httpErrors": [],
+      "errors": []
+    },
+    {
+      "map": "cenote",
+      "hero": "kukul",
+      "mode": "quick",
+      "seed": 1701,
+      "spawnCounts": {
+        "shade": 146,
+        "bat": 36,
+        "drowned_spirit": 10,
+        "serpent": 20,
+        "glow_wisp": 44,
+        "abyssal_eel": 9,
+        "jaguar": 10,
+        "priest": 10,
+        "crystal_golem": 5
+      },
+      "stuck": [],
+      "enemyCasts": {
+        "shade:Lunge": 96,
+        "bat:Swoop Dive": 26,
+        "serpent:Burrow": 23,
+        "serpent:Tail Whip": 18,
+        "drowned_spirit:Grasp": 12,
+        "abyssal_eel:Dash Zap": 15,
+        "jaguar:Pounce": 38,
+        "jaguar:Pack Roar": 8,
+        "priest:Ward": 29,
+        "priest:Soul Volley": 45,
+        "crystal_golem:Prism Shield": 23,
+        "crystal_golem:Shard Burst": 20,
+        "glow_wisp:Detonate": 10
+      },
+      "peakFxUnits": 24,
+      "peakTelegraphs": 12,
+      "peakPuddles": 19,
+      "seconds": 600.0000000001116,
+      "level10": 349.06666666672874,
+      "level20": null,
+      "endLevel": 14,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 118,
+      "kills": 274,
+      "damageTaken": 300.44,
+      "cacao": 70,
+      "peakAlive": 16,
+      "baseKills": {
+        "shade": 142,
+        "bat": 36,
+        "serpent": 20,
+        "drowned_spirit": 10,
+        "glow_wisp": 34,
+        "abyssal_eel": 9,
+        "jaguar": 7,
+        "priest": 10,
+        "crystal_golem": 4
+      },
+      "bossKills": [
+        {
+          "type": null,
+          "seconds": 184.76666666665875
+        },
+        {
+          "type": null,
+          "seconds": 361.4000000000719
+        }
+      ],
+      "ttk": [
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999996
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666666615
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.5666666666666575
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6999999999999975
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.7333333333333272
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.9666666666666597
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.1000000000001044
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0666666666667695
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.066666666666919
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8000000000000895
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.9000000000001442
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7333333333334693
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333334345
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6000000000000796
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.26666666666663
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9999999999999432
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.6666666666666288
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.966666666666498
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.3999999999998067
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 8.299999999999528
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.39999999999997726
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.5666666666666345
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 2.199999999999875
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.8666666666666174
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6999999999999602
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.566666666666528
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.4333333333331453
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.699999999999797
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 3.0666666666664923
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3999999999998636
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.366666666666589
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.433333333333195
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9333333333332803
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.366666666666589
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.4666666666664696
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.09999999999999432
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333332462
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.066666666666606
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.366666666666589
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7999999999999545
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9666666666665549
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 7.066666666666265
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 5.1333333333330415
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 5.56666666666635
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 2.9333333333331666
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.9999999999997726
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0333333333332746
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0333333333332746
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9333333333332234
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3333333333332007
+        },
+        {
+          "type": "glow_wisp",
+          "elite": true,
+          "seconds": 0.46666666666664014
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.8999999999999488
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.366666666666589
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.46666666666664014
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.666666666666572
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4333333333332519
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 4.533333333333076
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 6.4999999999996305
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 2.966666666666498
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.099999999999767
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0999999999998806
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 4.199999999999761
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.333333333333144
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 25.433333333331888
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 21.399999999998784
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 21.399999999998784
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 21.866666666665424
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 2.6333333333331836
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.299999999999926
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3333333333332007
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333332178
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9333333333332803
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.733333333333178
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.733333333333178
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.5333333333332462
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 4.133333333333098
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 6.133333333332985
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7666666666666231
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.9999999999998863
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 8.266666666666197
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 8.299999999999528
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 14.033333333332536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.1666666666665435
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.599999999999909
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.733333333333178
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7666666666665094
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.9333333333331666
+        },
+        {
+          "type": "crystal_golem",
+          "elite": false,
+          "seconds": 70.26666666666267
+        },
+        {
+          "type": "crystal_golem",
+          "elite": true,
+          "seconds": 21.699999999998766
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 8.466666666666185
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.6999999999998465
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.6999999999998465
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.5666666666666345
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 8.533333333332848
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.6999999999998465
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.9333333333332803
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.6999999999999602
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.5999999999999659
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.6666666666666288
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.533333333333303
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.29999999999998295
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.2333333333351106
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.133333333335827
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 7.466666666672609
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333345536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0666666666675155
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8666666666681522
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6000000000012733
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.46666666666703804
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.200000000000955
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.3000000000018304
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.0000000000015916
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 4.633333333337021
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.4000000000003183
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.06666666666671972
+        },
+        {
+          "type": "glow_wisp",
+          "elite": true,
+          "seconds": 0.8333333333339965
+        },
+        {
+          "type": "glow_wisp",
+          "elite": true,
+          "seconds": 0.3333333333335986
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.7333333333339169
+        },
+        {
+          "type": "glow_wisp",
+          "elite": true,
+          "seconds": 0.9000000000007162
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.2666666666668789
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8666666666681522
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 4.133333333336623
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 9.36666666667412
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 1.6000000000012733
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.86666666667054
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 6.3333333333383734
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.03333333333335986
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 11.500000000009152
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 18.9333333333484
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 9.50000000000756
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 11.233333333342273
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 10.300000000008197
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.700000000004536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 6.366666666671733
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 19.966666666682556
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 0.8333333333339965
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.966666666667436
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1333333333342352
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.3333333333343944
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 21.66666666668391
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.4333333333360656
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5333333333337578
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 16.66666666667993
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 4.4000000000035016
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.4000000000003183
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 1.900000000001512
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.9666666666682318
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 19.533333333348878
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.0333333333341557
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333345536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6000000000012733
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 7.600000000006048
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 9.100000000007242
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 7.433333333339249
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.7333333333339169
+        },
+        {
+          "type": "priest",
+          "elite": true,
+          "seconds": 19.4333333333488
+        },
+        {
+          "type": "glow_wisp",
+          "elite": true,
+          "seconds": 4.200000000003342
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5666666666671176
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.03333333333335986
+        },
+        {
+          "type": "jaguar",
+          "elite": false,
+          "seconds": 14.866666666678498
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 6.866666666672131
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8666666666681522
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.5333333333337578
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 3.2333333333359064
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.533333333336145
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 6.700000000005332
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 2.166666666668391
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6666666666671972
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 5.400000000004297
+        },
+        {
+          "type": "crystal_golem",
+          "elite": false,
+          "seconds": 10.466666666674996
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.4000000000011141
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 0.5666666666671176
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.76666666667046
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.0000000000023874
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.2666666666692663
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.700000000004536
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.5000000000003979
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7333333333355085
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.366666666669346
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 12.06666666667627
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.400000000004297
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5000000000011937
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.5333333333345536
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.5333333333345536
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 1.200000000000955
+        },
+        {
+          "type": "priest",
+          "elite": true,
+          "seconds": 1.200000000000955
+        },
+        {
+          "type": "jaguar",
+          "elite": true,
+          "seconds": 22.066666666684227
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.9333333333356677
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 6.133333333338214
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.7333333333339169
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.36666666666695846
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.36666666666695846
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.36666666666695846
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.766666666669664
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 5.066666666670699
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.0666666666675155
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 3.2333333333359064
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 3.4000000000027057
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 4.9000000000038995
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 6.733333333338692
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 7.300000000005809
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 8.233333333339885
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 2.40000000000191
+        },
+        {
+          "type": "glow_wisp",
+          "elite": true,
+          "seconds": 0.6000000000004775
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 0.5000000000003979
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 1.666666666667993
+        },
+        {
+          "type": "glow_wisp",
+          "elite": false,
+          "seconds": 1.7333333333347127
+        },
+        {
+          "type": "jaguar",
+          "elite": true,
+          "seconds": 21.06666666668343
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 11.86666666667611
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": false,
+          "seconds": 0.7000000000005571
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333349515
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 14.633333333344979
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 10.033333333341318
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 10.466666666674996
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 10.833333333341955
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": true,
+          "seconds": 3.133333333335031
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.899999999999693
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 17.43333333334448
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 7.799999999999727
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.53333333333012
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 14.2333333333209
+        },
+        {
+          "type": "serpent",
+          "elite": true,
+          "seconds": 4.066666666662968
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 3.899999999996453
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 12.233333333322207
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 8.433333333325663
+        },
+        {
+          "type": "abyssal_eel",
+          "elite": true,
+          "seconds": 11.466666666656238
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 19.933333333315204
+        },
+        {
+          "type": "serpent",
+          "elite": false,
+          "seconds": 3.999999999996362
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 15.733333333319024
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.9999999999990905
+        },
+        {
+          "type": "drowned_spirit",
+          "elite": false,
+          "seconds": 7.899999999992815
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 9.233333333324936
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 8.73333333332539
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.5666666666661513
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.5666666666661513
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.49999999999954525
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 0.49999999999954525
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 12.466666666655328
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 2.033333333331484
+        },
+        {
+          "type": "bat",
+          "elite": true,
+          "seconds": 6.29999999999427
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8333333333325754
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.8333333333325754
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 5.699999999994816
+        },
+        {
+          "type": "priest",
+          "elite": false,
+          "seconds": 34.59999999996853
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.76666666666506
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.76666666666506
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.2666666666655146
+        },
+        {
+          "type": "priest",
+          "elite": true,
+          "seconds": 53.299999999951524
+        },
+        {
+          "type": "crystal_golem",
+          "elite": false,
+          "seconds": 35.3333333333012
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 6.099999999994452
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 8.8333333333253
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7666666666641504
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7666666666641504
+        },
+        {
+          "type": "shade",
+          "elite": true,
+          "seconds": 1.3999999999987267
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.7666666666659694
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.1999999999989086
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 4.033333333329665
+        }
+      ],
+      "averageBaseTtk": 4.574358974359781,
+      "xpTotal": 4200,
+      "collected": 272,
+      "spawned": 290,
+      "frames": 18010,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 5.199999999999991,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 27.900000000000546,
+          "xpTotal": 126
+        },
+        {
+          "level": 4,
+          "seconds": 58.5666666666659,
+          "xpTotal": 262
+        },
+        {
+          "level": 5,
+          "seconds": 101.13333333333016,
+          "xpTotal": 438
+        },
+        {
+          "level": 6,
+          "seconds": 134.63333333332827,
+          "xpTotal": 646
+        },
+        {
+          "level": 7,
+          "seconds": 196.43333333332475,
+          "xpTotal": 898
+        },
+        {
+          "level": 8,
+          "seconds": 232.03333333332273,
+          "xpTotal": 1272
+        },
+        {
+          "level": 9,
+          "seconds": 288.83333333334747,
+          "xpTotal": 1532
+        },
+        {
+          "level": 10,
+          "seconds": 349.06666666672874,
+          "xpTotal": 1902
+        },
+        {
+          "level": 11,
+          "seconds": 397.56666666676733,
+          "xpTotal": 2308
+        },
+        {
+          "level": 12,
+          "seconds": 447.833333333474,
+          "xpTotal": 2756
+        },
+        {
+          "level": 13,
+          "seconds": 498.26666666684747,
+          "xpTotal": 3230
+        },
+        {
+          "level": 14,
+          "seconds": 554.500000000153,
+          "xpTotal": 3704
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 5.199999999999991,
+          "level": 2,
+          "title": "Level 2",
+          "id": "windstep",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 27.900000000000546,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 58.5666666666659,
+          "level": 4,
+          "title": "Level 4",
+          "id": "quetzal-flip",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 101.13333333333016,
+          "level": 5,
+          "title": "Level 5",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 101.13333333333016,
+          "level": 5,
+          "title": "Choose Your Companion",
+          "id": "saintess",
+          "kind": "ally"
+        },
+        {
+          "seconds": 134.63333333332827,
+          "level": 6,
+          "title": "Level 6",
+          "id": "steady-aim",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 184.76666666665875,
+          "level": 6,
+          "title": "Boss Defeated",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 196.43333333332475,
+          "level": 7,
+          "title": "Level 7",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 232.03333333332273,
+          "level": 8,
+          "title": "Level 8",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 232.03333333332273,
+          "level": 8,
+          "title": "Companion Pick",
+          "id": "saving-grace",
+          "kind": "ally"
+        },
+        {
+          "seconds": 288.83333333334747,
+          "level": 9,
+          "title": "Level 9",
+          "id": "featherstorm",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 349.06666666672874,
+          "level": 10,
+          "title": "Level 10",
+          "id": "sharpened-flint",
+          "kind": "passive",
+          "choice": "new-passive"
+        },
+        {
+          "seconds": 349.06666666672874,
+          "level": 10,
+          "title": "Passive Slot Unlocked",
+          "id": "sharpened-flint",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 361.4000000000719,
+          "level": 10,
+          "title": "Boss Defeated",
+          "id": "survivors-will",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 397.56666666676733,
+          "level": 11,
+          "title": "Level 11",
+          "id": "survivors-will",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 447.833333333474,
+          "level": 12,
+          "title": "Level 12",
+          "id": "survivors-will",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 498.26666666684747,
+          "level": 13,
+          "title": "Level 13",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        },
+        {
+          "seconds": 554.500000000153,
+          "level": 14,
+          "title": "Level 14",
+          "id": "quetzal-flip",
+          "kind": "active",
+          "choice": "upgrade-active"
+        },
+        {
+          "seconds": 554.500000000153,
+          "level": 14,
+          "title": "Companion Pick",
+          "id": "jade-ward",
+          "kind": "ally"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 136,
+          "kills": 14,
+          "hp": 118,
+          "alive": 0,
+          "drops": 0
+        },
+        {
+          "seconds": 60.033333333332486,
+          "level": 4,
+          "xpTotal": 262,
+          "kills": 26,
+          "hp": 118,
+          "alive": 4,
+          "drops": 0
+        },
+        {
+          "seconds": 90.03333333333079,
+          "level": 4,
+          "xpTotal": 378,
+          "kills": 38,
+          "hp": 118,
+          "alive": 4,
+          "drops": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "level": 5,
+          "xpTotal": 530,
+          "kills": 48,
+          "hp": 109.44,
+          "alive": 5,
+          "drops": 0
+        },
+        {
+          "seconds": 150.0333333333274,
+          "level": 6,
+          "xpTotal": 714,
+          "kills": 63,
+          "hp": 90.88666666666664,
+          "alive": 3,
+          "drops": 0
+        },
+        {
+          "seconds": 180.0333333333257,
+          "level": 6,
+          "xpTotal": 754,
+          "kills": 66,
+          "hp": 118,
+          "alive": 13,
+          "drops": 0
+        },
+        {
+          "seconds": 210.03333333332398,
+          "level": 7,
+          "xpTotal": 974,
+          "kills": 84,
+          "hp": 104.44,
+          "alive": 7,
+          "drops": 2
+        },
+        {
+          "seconds": 240.03333333332228,
+          "level": 8,
+          "xpTotal": 1316,
+          "kills": 100,
+          "hp": 102.71999999999994,
+          "alive": 3,
+          "drops": 0
+        },
+        {
+          "seconds": 270.0333333333325,
+          "level": 8,
+          "xpTotal": 1396,
+          "kills": 111,
+          "hp": 108.71999999999989,
+          "alive": 5,
+          "drops": 2
+        },
+        {
+          "seconds": 300.000000000023,
+          "level": 9,
+          "xpTotal": 1656,
+          "kills": 129,
+          "hp": 118,
+          "alive": 1,
+          "drops": 2
+        },
+        {
+          "seconds": 330.0000000000469,
+          "level": 9,
+          "xpTotal": 1750,
+          "kills": 134,
+          "hp": 118,
+          "alive": 9,
+          "drops": 0
+        },
+        {
+          "seconds": 360.00000000007077,
+          "level": 10,
+          "xpTotal": 1966,
+          "kills": 156,
+          "hp": 110.99999999999991,
+          "alive": 6,
+          "drops": 1
+        },
+        {
+          "seconds": 390.00000000009464,
+          "level": 10,
+          "xpTotal": 2090,
+          "kills": 167,
+          "hp": 112.4459999999999,
+          "alive": 10,
+          "drops": 1
+        },
+        {
+          "seconds": 420.0000000001185,
+          "level": 11,
+          "xpTotal": 2448,
+          "kills": 184,
+          "hp": 105.63999999999996,
+          "alive": 3,
+          "drops": 0
+        },
+        {
+          "seconds": 450.0000000001424,
+          "level": 12,
+          "xpTotal": 2756,
+          "kills": 202,
+          "hp": 118,
+          "alive": 5,
+          "drops": 0
+        },
+        {
+          "seconds": 480.00000000016627,
+          "level": 12,
+          "xpTotal": 3072,
+          "kills": 217,
+          "hp": 108.83999999999997,
+          "alive": 5,
+          "drops": 0
+        },
+        {
+          "seconds": 510.00000000019014,
+          "level": 13,
+          "xpTotal": 3320,
+          "kills": 232,
+          "hp": 70.16,
+          "alive": 6,
+          "drops": 2
+        },
+        {
+          "seconds": 540.0000000001662,
+          "level": 13,
+          "xpTotal": 3558,
+          "kills": 241,
+          "hp": 118,
+          "alive": 12,
+          "drops": 1
+        },
+        {
+          "seconds": 570.0000000001389,
+          "level": 14,
+          "xpTotal": 3786,
+          "kills": 254,
+          "hp": 118,
+          "alive": 13,
+          "drops": 2
+        },
+        {
+          "seconds": 600.0000000001116,
+          "level": 14,
+          "xpTotal": 4200,
+          "kills": 274,
+          "hp": 118,
+          "alive": 9,
+          "drops": 3
+        }
+      ],
+      "skills": [
+        {
+          "id": "windstep",
+          "level": 1
+        },
+        {
+          "id": "quetzal-flip",
+          "level": 2
+        },
+        {
+          "id": "featherstorm",
+          "level": 4
+        }
+      ],
+      "passives": [
+        {
+          "id": "steady-aim",
+          "level": 1
+        },
+        {
+          "id": "sharpened-flint",
+          "level": 2
+        }
+      ],
+      "ally": "saintess",
+      "summary": null,
+      "warnings": [
+        "[skills] Placeholder: fx/enemy-shade-windup/main.png",
+        "[skills] Placeholder: fx/enemy-shade-attack/main.png",
+        "[skills] Placeholder: fx/enemy-bat-windup/main.png",
+        "[skills] Placeholder: fx/enemy-bat-attack/main.png",
+        "[skills] Placeholder: fx/enemy-drowned_spirit-attack/main.png",
+        "[skills] Placeholder: fx/enemy-serpent-windup/main.png",
+        "[skills] Placeholder: fx/enemy-serpent-attack/main.png",
+        "[skills] Placeholder: fx/enemy-drowned_spirit-windup/main.png",
+        "[skills] Placeholder: fx/enemy-glow_wisp-windup/main.png",
+        "[skills] Placeholder: fx/enemy-abyssal_eel-windup/main.png",
+        "[skills] Placeholder: fx/enemy-abyssal_eel-attack/main.png",
+        "[skills] Placeholder: fx/enemy-jaguar-windup/main.png",
+        "[skills] Placeholder: fx/enemy-jaguar-attack/main.png",
+        "[skills] Placeholder: fx/enemy-priest-windup/main.png",
+        "[skills] Placeholder: fx/enemy-priest-attack/main.png",
+        "[skills] Placeholder: fx/healing-circle/main.png",
+        "[skills] Placeholder: fx/enemy-crystal_golem-windup/main.png",
+        "[skills] Placeholder: fx/enemy-crystal_golem-attack/main.png",
+        "[skills] Placeholder: fx/enemy-glow_wisp-attack/main.png",
+        "[skills] Placeholder: fx/jade-ward/main.png"
+      ],
+      "httpErrors": [],
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "wallSeconds": 30.653201399999997
+}

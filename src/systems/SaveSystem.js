@@ -23,6 +23,8 @@ const DEFAULT_SAVE = {
     autoAim: true,
     joystick: 'fixed',
     reducedMotion: false,
+    enemyHealthBars: 'damaged',
+    telegraphHighContrast: false,
   },
 };
 

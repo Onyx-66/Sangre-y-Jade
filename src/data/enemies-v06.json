@@ -1,0 +1,579 @@
+{
+  "shade": {
+    "id": "shade",
+    "name": "Lost Shade",
+    "role": "Swarmer (melee)",
+    "maps": [
+      "all"
+    ],
+    "hp": 72,
+    "old_hp": 28,
+    "speed": 70,
+    "damage": 14,
+    "xp": 10,
+    "radius": 16,
+    "attacks": {
+      "Lunge": {
+        "name": "Lunge",
+        "trigger": "player within 130 px",
+        "telegraph": "line 0.35 s (red, 170 px long)",
+        "effect": "dash 170 px at speed 420, 14 dmg on contact; 0.5 s recovery during which it takes +20% damage",
+        "cooldown": 3.2,
+        "range": 130,
+        "windup": 0.35,
+        "length": 170,
+        "speed": 420,
+        "damage": 14,
+        "recovery": 0.5,
+        "vulnerability": 0.2
+      }
+    },
+    "notes": "Basic fodder, now with a readable attack. Packs of 3-5.",
+    "sheet": "enemy-shade",
+    "tough": false,
+    "flier": false
+  },
+  "bat": {
+    "id": "bat",
+    "name": "Cave Bat",
+    "role": "Skirmisher (flier)",
+    "maps": [
+      "all"
+    ],
+    "hp": 44,
+    "old_hp": 19,
+    "speed": 128,
+    "damage": 10,
+    "xp": 8,
+    "radius": 12,
+    "attacks": {
+      "Swoop Dive": {
+        "name": "Swoop Dive",
+        "trigger": "after circling 1.5-2.5 s at radius 210",
+        "telegraph": "shadow marker on the ground 0.4 s",
+        "effect": "dive straight through the marker, 10 dmg; then retreats for 1.0 s",
+        "cooldown": 4,
+        "circleMin": 1.5,
+        "circleMax": 2.5,
+        "orbitRadius": 210,
+        "windup": 0.4,
+        "damage": 10,
+        "retreat": 1
+      }
+    },
+    "notes": "Always spawns in pairs. Ignores obstacles.",
+    "sheet": "enemy-bat",
+    "tough": false,
+    "flier": true
+  },
+  "jaguar": {
+    "id": "jaguar",
+    "name": "Jaguar Revenant",
+    "role": "Bruiser (elite tier)",
+    "maps": [
+      "all"
+    ],
+    "hp": 210,
+    "old_hp": 72,
+    "speed": 90,
+    "damage": 22,
+    "xp": 24,
+    "radius": 20,
+    "attacks": {
+      "Pounce": {
+        "name": "Pounce",
+        "trigger": "player 240-320 px away",
+        "telegraph": "ground circle at the landing point 0.55 s (r 80)",
+        "effect": "leap 0.4 s; landing shockwave r 80, 22 dmg",
+        "cooldown": 5,
+        "min": 240,
+        "max": 320,
+        "windup": 0.55,
+        "radius": 80,
+        "leap": 0.4,
+        "damage": 22
+      },
+      "Pack Roar": {
+        "name": "Pack Roar",
+        "trigger": "once, at 50% HP",
+        "telegraph": "pulsing ring r 220 around it, 0.6 s",
+        "effect": "nearby enemies gain +15% speed for 6 s",
+        "cooldown": 0,
+        "threshold": 0.5,
+        "radius": 220,
+        "windup": 0.6,
+        "speedMult": 1.15,
+        "duration": 6
+      }
+    },
+    "notes": "Appears from minute 1:30. Counts as a tough enemy for the Trophy Hunter passive.",
+    "sheet": "enemy-jaguar",
+    "tough": true,
+    "flier": false
+  },
+  "serpent": {
+    "id": "serpent",
+    "name": "Bone Serpent",
+    "role": "Controller (melee)",
+    "maps": [
+      "all"
+    ],
+    "hp": 120,
+    "old_hp": 48,
+    "speed": 100,
+    "damage": 16,
+    "xp": 18,
+    "radius": 17,
+    "attacks": {
+      "Tail Whip": {
+        "name": "Tail Whip",
+        "trigger": "player within 120 px",
+        "telegraph": "cone 110 degrees, r 120, 0.45 s",
+        "effect": "16 dmg, knockback 120",
+        "cooldown": 3.5,
+        "range": 120,
+        "arc": 1.9198621771937625,
+        "radius": 120,
+        "windup": 0.45,
+        "damage": 16,
+        "knockback": 120
+      },
+      "Burrow": {
+        "name": "Burrow",
+        "trigger": "player 200-420 px away",
+        "telegraph": "after 1.1 s underground (invulnerable, speed 160) a ring r 70 at the player 0.5 s",
+        "effect": "emerges: 18 dmg and knock-up 0.4 s",
+        "cooldown": 8,
+        "min": 200,
+        "max": 420,
+        "underground": 1.1,
+        "speed": 160,
+        "radius": 70,
+        "windup": 0.5,
+        "damage": 18,
+        "knockup": 0.4
+      }
+    },
+    "notes": "Moves in a sine wave when approaching.",
+    "sheet": "enemy-serpent",
+    "tough": false,
+    "flier": false
+  },
+  "priest": {
+    "id": "priest",
+    "name": "Hollow Priest",
+    "role": "Support / caster (ranged)",
+    "maps": [
+      "all"
+    ],
+    "hp": 130,
+    "old_hp": 54,
+    "speed": 62,
+    "damage": 14,
+    "xp": 20,
+    "radius": 17,
+    "attacks": {
+      "Soul Volley": {
+        "name": "Soul Volley",
+        "trigger": "player 200-380 px away",
+        "telegraph": "glowing hands 0.5 s",
+        "effect": "3 bolts, spread 0.2 rad, speed 210, 11 dmg each",
+        "cooldown": 3.8,
+        "min": 200,
+        "max": 380,
+        "windup": 0.5,
+        "count": 3,
+        "spread": 0.2,
+        "speed": 210,
+        "damage": 11
+      },
+      "Ward": {
+        "name": "Ward",
+        "trigger": "an ally within 300 px",
+        "telegraph": "blue rune ring on the ally 0.4 s",
+        "effect": "40 HP shield for 6 s on the nearest ally",
+        "cooldown": 9,
+        "range": 300,
+        "windup": 0.4,
+        "shield": 40,
+        "duration": 6
+      }
+    },
+    "notes": "Kites: keeps 260-340 px away from the player. Priority target.",
+    "sheet": "enemy-priest",
+    "kiteMin": 260,
+    "kiteMax": 340,
+    "tough": false,
+    "flier": false
+  },
+  "vine_lurker": {
+    "id": "vine_lurker",
+    "name": "Vine Lurker",
+    "role": "Ambusher",
+    "maps": [
+      "overgrown"
+    ],
+    "hp": 160,
+    "old_hp": null,
+    "speed": 40,
+    "damage": 16,
+    "xp": 22,
+    "radius": 18,
+    "attacks": {
+      "Root Snare": {
+        "name": "Root Snare",
+        "trigger": "player within 260 px",
+        "telegraph": "vine circle r 90 at the player position 0.7 s",
+        "effect": "roots the player 0.8 s and deals 12 dmg",
+        "cooldown": 7,
+        "range": 260,
+        "radius": 90,
+        "windup": 0.7,
+        "root": 0.8,
+        "damage": 12
+      }
+    },
+    "notes": "Spawns buried and invisible; surfaces when the player is within 200 px.",
+    "sheet": "enemy-vine_lurker",
+    "surfaceRange": 200,
+    "tough": false,
+    "flier": false
+  },
+  "stone_guardian": {
+    "id": "stone_guardian",
+    "name": "Stone Guardian",
+    "role": "Elite tank",
+    "maps": [
+      "overgrown"
+    ],
+    "hp": 340,
+    "old_hp": null,
+    "speed": 48,
+    "damage": 26,
+    "xp": 40,
+    "radius": 24,
+    "attacks": {
+      "Ground Slam": {
+        "name": "Ground Slam",
+        "trigger": "player within 150 px",
+        "telegraph": "circle r 100, 0.8 s",
+        "effect": "26 dmg, knockback 160",
+        "cooldown": 6,
+        "range": 150,
+        "radius": 100,
+        "windup": 0.8,
+        "damage": 26,
+        "knockback": 160
+      },
+      "Stone Guard": {
+        "name": "Stone Guard",
+        "trigger": "always",
+        "telegraph": "faint shield arc drawn in front (90 degrees)",
+        "effect": "takes 70% less damage from the front arc: flank it",
+        "cooldown": 0,
+        "arc": 1.5707963267948966,
+        "reduction": 0.7
+      }
+    },
+    "notes": "At most 2 alive at once. Counts as a tough enemy.",
+    "sheet": "enemy-stone_guardian",
+    "aliveLimit": 2,
+    "tough": true,
+    "flier": false
+  },
+  "jungle_wasp": {
+    "id": "jungle_wasp",
+    "name": "Jungle Wasp",
+    "role": "Harasser (ranged flier)",
+    "maps": [
+      "overgrown"
+    ],
+    "hp": 36,
+    "old_hp": null,
+    "speed": 150,
+    "damage": 8,
+    "xp": 8,
+    "radius": 11,
+    "attacks": {
+      "Venom Spit": {
+        "name": "Venom Spit",
+        "trigger": "player 200-300 px away",
+        "telegraph": "green glow at the mouth 0.35 s",
+        "effect": "bolt speed 240, 8 dmg + 3 poison dps for 3 s",
+        "cooldown": 2.8,
+        "min": 200,
+        "max": 300,
+        "windup": 0.35,
+        "speed": 240,
+        "damage": 8,
+        "poisonDps": 3,
+        "duration": 3
+      }
+    },
+    "notes": "Groups of 3. Erratic flight.",
+    "sheet": "enemy-jungle_wasp",
+    "tough": false,
+    "flier": true
+  },
+  "blood_wraith": {
+    "id": "blood_wraith",
+    "name": "Blood Wraith",
+    "role": "Assassin",
+    "maps": [
+      "bloodmoon"
+    ],
+    "hp": 150,
+    "old_hp": null,
+    "speed": 96,
+    "damage": 20,
+    "xp": 24,
+    "radius": 16,
+    "attacks": {
+      "Blink Strike": {
+        "name": "Blink Strike",
+        "trigger": "player 160-320 px away",
+        "telegraph": "red marker behind the player 0.5 s",
+        "effect": "teleports to the marker, slashes 0.3 s later: 20 dmg + bleed 5 dps for 3 s",
+        "cooldown": 6,
+        "min": 160,
+        "max": 320,
+        "windup": 0.5,
+        "delay": 0.3,
+        "damage": 20,
+        "bleedDps": 5,
+        "duration": 3
+      }
+    },
+    "notes": "Fades in and out. Counts as a tough enemy.",
+    "sheet": "enemy-blood_wraith",
+    "tough": true,
+    "flier": false
+  },
+  "bone_archer": {
+    "id": "bone_archer",
+    "name": "Bone Archer",
+    "role": "Sniper (ranged)",
+    "maps": [
+      "bloodmoon"
+    ],
+    "hp": 90,
+    "old_hp": null,
+    "speed": 70,
+    "damage": 15,
+    "xp": 18,
+    "radius": 15,
+    "attacks": {
+      "Aimed Shot": {
+        "name": "Aimed Shot",
+        "trigger": "player 300-380 px away",
+        "telegraph": "red line 0.6 s",
+        "effect": "arrow speed 380, 15 dmg, pierces; below 50% HP fires 3 arrows in a fan",
+        "cooldown": 3.4,
+        "min": 300,
+        "max": 380,
+        "windup": 0.6,
+        "speed": 380,
+        "damage": 15,
+        "threshold": 0.5,
+        "fan": 3
+      }
+    },
+    "notes": "Keeps 300-380 px away.",
+    "sheet": "enemy-bone_archer",
+    "tough": false,
+    "flier": false
+  },
+  "moon_cultist": {
+    "id": "moon_cultist",
+    "name": "Moon Cultist",
+    "role": "Summoner",
+    "maps": [
+      "bloodmoon"
+    ],
+    "hp": 120,
+    "old_hp": null,
+    "speed": 58,
+    "damage": 12,
+    "xp": 22,
+    "radius": 16,
+    "attacks": {
+      "Summon": {
+        "name": "Summon",
+        "trigger": "every 10 s while fewer than 4 summons alive",
+        "telegraph": "red rune circle on the ground 0.8 s",
+        "effect": "spawns 2 Lost Shades",
+        "cooldown": 10,
+        "interval": 10,
+        "cap": 4,
+        "windup": 0.8,
+        "count": 2
+      },
+      "Blood Pulse": {
+        "name": "Blood Pulse",
+        "trigger": "player within 140 px",
+        "telegraph": "ring r 140, 0.8 s",
+        "effect": "18 dmg",
+        "cooldown": 6,
+        "range": 140,
+        "radius": 140,
+        "windup": 0.8,
+        "damage": 18
+      }
+    },
+    "notes": "Priority target; summons die with it.",
+    "sheet": "enemy-moon_cultist",
+    "tough": false,
+    "flier": false
+  },
+  "drowned_spirit": {
+    "id": "drowned_spirit",
+    "name": "Drowned Spirit",
+    "role": "Controller",
+    "maps": [
+      "cenote"
+    ],
+    "hp": 140,
+    "old_hp": null,
+    "speed": 66,
+    "damage": 16,
+    "xp": 20,
+    "radius": 17,
+    "attacks": {
+      "Grasp": {
+        "name": "Grasp",
+        "trigger": "player within 160 px",
+        "telegraph": "blue hand marker 0.4 s",
+        "effect": "pulls the player 120 px toward it then hits: 16 dmg",
+        "cooldown": 5.5,
+        "range": 160,
+        "windup": 0.4,
+        "pull": 120,
+        "damage": 16
+      },
+      "Puddle Trail": {
+        "name": "Puddle Trail",
+        "trigger": "always while moving",
+        "telegraph": "none (visible puddles)",
+        "effect": "leaves puddles r 50 for 6 s that slow the player by 35%",
+        "cooldown": 0,
+        "radius": 50,
+        "duration": 6,
+        "slowPct": 0.35
+      }
+    },
+    "notes": "Slow but zones the arena.",
+    "sheet": "enemy-drowned_spirit",
+    "tough": false,
+    "flier": false
+  },
+  "abyssal_eel": {
+    "id": "abyssal_eel",
+    "name": "Abyssal Eel",
+    "role": "Charger",
+    "maps": [
+      "cenote"
+    ],
+    "hp": 110,
+    "old_hp": null,
+    "speed": 85,
+    "damage": 18,
+    "xp": 20,
+    "radius": 16,
+    "attacks": {
+      "Dash Zap": {
+        "name": "Dash Zap",
+        "trigger": "player 160-300 px away",
+        "telegraph": "line 0.45 s",
+        "effect": "dash 260 px at speed 440, 18 dmg; if the player stands within 120 px of water it chains for 8 extra dmg",
+        "cooldown": 4.2,
+        "min": 160,
+        "max": 300,
+        "windup": 0.45,
+        "length": 260,
+        "speed": 440,
+        "damage": 18,
+        "waterRange": 120,
+        "chain": 8
+      }
+    },
+    "notes": "Speed 150 inside water zones.",
+    "sheet": "enemy-abyssal_eel",
+    "waterSpeed": 150,
+    "tough": false,
+    "flier": false
+  },
+  "crystal_golem": {
+    "id": "crystal_golem",
+    "name": "Crystal Golem",
+    "role": "Elite reflector",
+    "maps": [
+      "cenote"
+    ],
+    "hp": 360,
+    "old_hp": null,
+    "speed": 46,
+    "damage": 24,
+    "xp": 40,
+    "radius": 24,
+    "attacks": {
+      "Prism Shield": {
+        "name": "Prism Shield",
+        "trigger": "every 8 s for 3 s",
+        "telegraph": "bright crystal glow 0.5 s before",
+        "effect": "reflects projectiles back at 100% damage while active",
+        "cooldown": 8,
+        "interval": 8,
+        "duration": 3,
+        "windup": 0.5,
+        "reflectPct": 1
+      },
+      "Shard Burst": {
+        "name": "Shard Burst",
+        "trigger": "player within 260 px",
+        "telegraph": "8 radial lines 0.7 s",
+        "effect": "8 shards, 14 dmg each",
+        "cooldown": 6.5,
+        "range": 260,
+        "count": 8,
+        "windup": 0.7,
+        "damage": 14
+      }
+    },
+    "notes": "At most 2 alive at once. Counts as a tough enemy.",
+    "sheet": "enemy-crystal_golem",
+    "aliveLimit": 2,
+    "tough": true,
+    "flier": false
+  },
+  "glow_wisp": {
+    "id": "glow_wisp",
+    "name": "Glow Wisp",
+    "role": "Kamikaze",
+    "maps": [
+      "cenote"
+    ],
+    "hp": 38,
+    "old_hp": null,
+    "speed": 120,
+    "damage": 20,
+    "xp": 8,
+    "radius": 11,
+    "attacks": {
+      "Detonate": {
+        "name": "Detonate",
+        "trigger": "within 90 px of the player",
+        "telegraph": "pulsing glow, fuse 1.2 s",
+        "effect": "explodes r 90, 20 dmg, dies",
+        "cooldown": 0,
+        "range": 90,
+        "windup": 1.2,
+        "radius": 90,
+        "damage": 20
+      }
+    },
+    "notes": "Groups of 4. Dies harmlessly if killed before the fuse ends.",
+    "sheet": "enemy-glow_wisp",
+    "tough": false,
+    "flier": false
+  }
+}

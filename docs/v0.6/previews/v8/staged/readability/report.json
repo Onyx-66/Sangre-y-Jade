@@ -1,0 +1,1736 @@
+{
+  "checks": [
+    {
+      "label": "overgrown/en/568: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/568: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/568: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/568: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/568: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -339.6,
+          "y": -196.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -181.5,
+          "y": -190.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -49.5,
+          "y": -196.09,
+          "width": 99,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 107.92499999999998,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 257.925,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -344.55,
+          "y": -51.09,
+          "width": 89.10000000000001,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -209.4,
+          "y": -51.09,
+          "width": 118.80000000000001,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -31.5,
+          "y": -45.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "vine_lurker",
+          "key": "enemy-serpent",
+          "hp": 160,
+          "radius": 18
+        },
+        {
+          "id": "stone_guardian",
+          "key": "enemy-jaguar",
+          "hp": 340,
+          "radius": 24
+        },
+        {
+          "id": "jungle_wasp",
+          "key": "enemy-bat",
+          "hp": 36,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "overgrown/en/1280: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/1280: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/1280: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/1280: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "overgrown/en/1280: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -317.6,
+          "y": -184.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -164,
+          "y": -179.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -22,
+          "y": -184.84,
+          "width": 44,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 131.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 281.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -319.8,
+          "y": -39.84,
+          "width": 39.6,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -176.4,
+          "y": -39.84,
+          "width": 52.800000000000004,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -14,
+          "y": -34.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "vine_lurker",
+          "key": "enemy-serpent",
+          "hp": 160,
+          "radius": 18
+        },
+        {
+          "id": "stone_guardian",
+          "key": "enemy-jaguar",
+          "hp": 340,
+          "radius": 24
+        },
+        {
+          "id": "jungle_wasp",
+          "key": "enemy-bat",
+          "hp": 36,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "overgrown/ar/568: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/568: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/568: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/568: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/568: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -339.6,
+          "y": -196.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -181.5,
+          "y": -190.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -49.5,
+          "y": -196.09,
+          "width": 99,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 107.92499999999998,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 257.925,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -344.55,
+          "y": -51.09,
+          "width": 89.10000000000001,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -209.4,
+          "y": -51.09,
+          "width": 118.80000000000001,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -31.5,
+          "y": -45.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "vine_lurker",
+          "key": "enemy-serpent",
+          "hp": 160,
+          "radius": 18
+        },
+        {
+          "id": "stone_guardian",
+          "key": "enemy-jaguar",
+          "hp": 340,
+          "radius": 24
+        },
+        {
+          "id": "jungle_wasp",
+          "key": "enemy-bat",
+          "hp": 36,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "overgrown/ar/1280: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/1280: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/1280: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/1280: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "overgrown/ar/1280: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -317.6,
+          "y": -184.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -164,
+          "y": -179.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -22,
+          "y": -184.84,
+          "width": 44,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 131.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 281.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -319.8,
+          "y": -39.84,
+          "width": 39.6,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -176.4,
+          "y": -39.84,
+          "width": 52.800000000000004,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -14,
+          "y": -34.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "vine_lurker",
+          "key": "enemy-serpent",
+          "hp": 160,
+          "radius": 18
+        },
+        {
+          "id": "stone_guardian",
+          "key": "enemy-jaguar",
+          "hp": 340,
+          "radius": 24
+        },
+        {
+          "id": "jungle_wasp",
+          "key": "enemy-bat",
+          "hp": 36,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "bloodmoon/en/568: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/568: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/568: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/568: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/568: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -339.6,
+          "y": -196.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -181.5,
+          "y": -190.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -49.5,
+          "y": -196.09,
+          "width": 99,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 107.92499999999998,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 257.925,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -339.6,
+          "y": -51.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -187.125,
+          "y": -51.09,
+          "width": 74.25,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -39.60000000000001,
+          "y": -51.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "blood_wraith",
+          "key": "enemy-shade",
+          "hp": 150,
+          "radius": 16
+        },
+        {
+          "id": "bone_archer",
+          "key": "enemy-priest",
+          "hp": 90,
+          "radius": 15
+        },
+        {
+          "id": "moon_cultist",
+          "key": "enemy-priest",
+          "hp": 120,
+          "radius": 16
+        }
+      ]
+    },
+    {
+      "label": "bloodmoon/en/1280: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/1280: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/1280: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/1280: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/en/1280: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -317.6,
+          "y": -184.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -164,
+          "y": -179.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -22,
+          "y": -184.84,
+          "width": 44,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 131.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 281.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -317.6,
+          "y": -39.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -166.5,
+          "y": -39.84,
+          "width": 33,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -17.6,
+          "y": -39.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "blood_wraith",
+          "key": "enemy-shade",
+          "hp": 150,
+          "radius": 16
+        },
+        {
+          "id": "bone_archer",
+          "key": "enemy-priest",
+          "hp": 90,
+          "radius": 15
+        },
+        {
+          "id": "moon_cultist",
+          "key": "enemy-priest",
+          "hp": 120,
+          "radius": 16
+        }
+      ]
+    },
+    {
+      "label": "bloodmoon/ar/568: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/568: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/568: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/568: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/568: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -339.6,
+          "y": -196.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -181.5,
+          "y": -190.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -49.5,
+          "y": -196.09,
+          "width": 99,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 107.92499999999998,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 257.925,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -339.6,
+          "y": -51.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -187.125,
+          "y": -51.09,
+          "width": 74.25,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -39.60000000000001,
+          "y": -51.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "blood_wraith",
+          "key": "enemy-shade",
+          "hp": 150,
+          "radius": 16
+        },
+        {
+          "id": "bone_archer",
+          "key": "enemy-priest",
+          "hp": 90,
+          "radius": 15
+        },
+        {
+          "id": "moon_cultist",
+          "key": "enemy-priest",
+          "hp": 120,
+          "radius": 16
+        }
+      ]
+    },
+    {
+      "label": "bloodmoon/ar/1280: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/1280: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/1280: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/1280: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/ar/1280: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -317.6,
+          "y": -184.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -164,
+          "y": -179.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -22,
+          "y": -184.84,
+          "width": 44,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 131.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 281.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -317.6,
+          "y": -39.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -166.5,
+          "y": -39.84,
+          "width": 33,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -17.6,
+          "y": -39.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "blood_wraith",
+          "key": "enemy-shade",
+          "hp": 150,
+          "radius": 16
+        },
+        {
+          "id": "bone_archer",
+          "key": "enemy-priest",
+          "hp": 90,
+          "radius": 15
+        },
+        {
+          "id": "moon_cultist",
+          "key": "enemy-priest",
+          "hp": 120,
+          "radius": 16
+        }
+      ]
+    },
+    {
+      "label": "cenote/en/568: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/568: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/568: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/568: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/568: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -339.6,
+          "y": -196.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -181.5,
+          "y": -190.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -49.5,
+          "y": -196.09,
+          "width": 99,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 107.92499999999998,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 257.925,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -342.075,
+          "y": -51.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -189.60000000000002,
+          "y": -51.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -59.400000000000006,
+          "y": -51.09,
+          "width": 118.80000000000001,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 118.5,
+          "y": -51.09,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "drowned_spirit",
+          "key": "enemy-shade",
+          "hp": 140,
+          "radius": 17
+        },
+        {
+          "id": "abyssal_eel",
+          "key": "enemy-serpent",
+          "hp": 110,
+          "radius": 16
+        },
+        {
+          "id": "crystal_golem",
+          "key": "enemy-jaguar",
+          "hp": 360,
+          "radius": 24
+        },
+        {
+          "id": "glow_wisp",
+          "key": "enemy-bat",
+          "hp": 38,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "cenote/en/1280: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/1280: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/1280: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/1280: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "cenote/en/1280: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -317.6,
+          "y": -184.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -164,
+          "y": -179.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -22,
+          "y": -184.84,
+          "width": 44,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 131.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 281.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -318.7,
+          "y": -39.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -167.6,
+          "y": -39.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -26.400000000000002,
+          "y": -39.84,
+          "width": 52.800000000000004,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 136,
+          "y": -39.84,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "drowned_spirit",
+          "key": "enemy-shade",
+          "hp": 140,
+          "radius": 17
+        },
+        {
+          "id": "abyssal_eel",
+          "key": "enemy-serpent",
+          "hp": 110,
+          "radius": 16
+        },
+        {
+          "id": "crystal_golem",
+          "key": "enemy-jaguar",
+          "hp": 360,
+          "radius": 24
+        },
+        {
+          "id": "glow_wisp",
+          "key": "enemy-bat",
+          "hp": 38,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "cenote/ar/568: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/568: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/568: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/568: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/568: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -339.6,
+          "y": -196.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -181.5,
+          "y": -190.97,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -49.5,
+          "y": -196.09,
+          "width": 99,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 107.92499999999998,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 257.925,
+          "y": -196.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -342.075,
+          "y": -51.09,
+          "width": 84.15000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -189.60000000000002,
+          "y": -51.09,
+          "width": 79.20000000000002,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -59.400000000000006,
+          "y": -51.09,
+          "width": 118.80000000000001,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 118.5,
+          "y": -51.09,
+          "width": 63,
+          "height": 9,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "drowned_spirit",
+          "key": "enemy-shade",
+          "hp": 140,
+          "radius": 17
+        },
+        {
+          "id": "abyssal_eel",
+          "key": "enemy-serpent",
+          "hp": 110,
+          "radius": 16
+        },
+        {
+          "id": "crystal_golem",
+          "key": "enemy-jaguar",
+          "hp": 360,
+          "radius": 24
+        },
+        {
+          "id": "glow_wisp",
+          "key": "enemy-bat",
+          "hp": 38,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "cenote/ar/1280: all spawn footprints >=120 outside view",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/1280: every map enemy rendered with a bar",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/1280: collision radius exact",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/1280: visual pool budgets",
+      "passed": true
+    },
+    {
+      "label": "cenote/ar/1280: geometry",
+      "passed": true,
+      "models": [
+        {
+          "x": -317.6,
+          "y": -184.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -164,
+          "y": -179.72,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -22,
+          "y": -184.84,
+          "width": 44,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 131.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 281.3,
+          "y": -184.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 1
+        },
+        {
+          "x": -318.7,
+          "y": -39.84,
+          "width": 37.400000000000006,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -167.6,
+          "y": -39.84,
+          "width": 35.2,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": -26.400000000000002,
+          "y": -39.84,
+          "width": 52.800000000000004,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        },
+        {
+          "x": 136,
+          "y": -39.84,
+          "width": 28,
+          "height": 4,
+          "hp": 0.65,
+          "shield": 0
+        }
+      ],
+      "actors": [
+        {
+          "id": "shade",
+          "key": "enemy-shade",
+          "hp": 115.2,
+          "radius": 16
+        },
+        {
+          "id": "bat",
+          "key": "enemy-bat",
+          "hp": 44,
+          "radius": 12
+        },
+        {
+          "id": "jaguar",
+          "key": "enemy-jaguar",
+          "hp": 210,
+          "radius": 20
+        },
+        {
+          "id": "serpent",
+          "key": "enemy-serpent",
+          "hp": 120,
+          "radius": 17
+        },
+        {
+          "id": "priest",
+          "key": "enemy-priest",
+          "hp": 130,
+          "radius": 17
+        },
+        {
+          "id": "drowned_spirit",
+          "key": "enemy-shade",
+          "hp": 140,
+          "radius": 17
+        },
+        {
+          "id": "abyssal_eel",
+          "key": "enemy-serpent",
+          "hp": 110,
+          "radius": 16
+        },
+        {
+          "id": "crystal_golem",
+          "key": "enemy-jaguar",
+          "hp": 360,
+          "radius": 24
+        },
+        {
+          "id": "glow_wisp",
+          "key": "enemy-bat",
+          "hp": 38,
+          "radius": 11
+        }
+      ]
+    },
+    {
+      "label": "overgrown/568: identical EN/AR enemy bar geometry",
+      "passed": true
+    },
+    {
+      "label": "overgrown/1280: identical EN/AR enemy bar geometry",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/568: identical EN/AR enemy bar geometry",
+      "passed": true
+    },
+    {
+      "label": "bloodmoon/1280: identical EN/AR enemy bar geometry",
+      "passed": true
+    },
+    {
+      "label": "cenote/568: identical EN/AR enemy bar geometry",
+      "passed": true
+    },
+    {
+      "label": "cenote/1280: identical EN/AR enemy bar geometry",
+      "passed": true
+    },
+    {
+      "label": "no exceptions or HTTP asset failures",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "overgrown-en-568x320.png",
+    "overgrown-en-1280x720.png",
+    "overgrown-ar-568x320.png",
+    "overgrown-ar-1280x720.png",
+    "bloodmoon-en-568x320.png",
+    "bloodmoon-en-1280x720.png",
+    "bloodmoon-ar-568x320.png",
+    "bloodmoon-ar-1280x720.png",
+    "cenote-en-568x320.png",
+    "cenote-en-1280x720.png",
+    "cenote-ar-568x320.png",
+    "cenote-ar-1280x720.png"
+  ],
+  "wallSeconds": 35.569299400000006
+}

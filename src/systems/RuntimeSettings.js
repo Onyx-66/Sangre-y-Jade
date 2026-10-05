@@ -16,6 +16,8 @@ export function applySettingChange({save,audio,scene},key,value) {
  if(key==='reducedMotion'&&typeof document!=='undefined')document.documentElement.classList.toggle('reduce-motion',value);
  if(!scene||scene.ended)return;
  scene.settings[key]=value;
+ if(key==='enemyHealthBars')scene.enemyBars?.draw();
+ if(key==='telegraphHighContrast')scene.telegraphs?.draw();
  if(key==='attackMode'){
   scene.releaseAttack?.();scene.hud?.setAttackMode(value);
  }

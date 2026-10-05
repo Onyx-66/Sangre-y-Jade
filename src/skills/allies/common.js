@@ -3,7 +3,7 @@ import { present } from '../balam/runtime.js';
 
 export const scale = (support, amount) => amount * support.numberMultiplier();
 export const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
-export const activeEnemies = (scene) => scene.enemies.getChildren().filter((enemy) => enemy.active);
+export const activeEnemies = (scene) => scene.enemies.getChildren().filter((enemy) => enemy.active&&!enemy.getData('buried')&&!enemy.getData('invulnerableEnemy'));
 export const enemiesWithin = (scene, origin, radius) => activeEnemies(scene)
   .filter((enemy) => distance(enemy, origin) <= radius);
 

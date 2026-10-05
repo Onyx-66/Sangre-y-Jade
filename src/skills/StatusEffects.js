@@ -21,6 +21,7 @@ export const enemyStatusDefaults = () => ({
 });
 
 export function canEnemyAttack(scene, enemy, againstHero = false) {
+  if(active(enemy,'spawningUntil',scene.elapsed))return false;
   if (['stunUntil', 'fearUntil', 'confuseUntil'].some((key) => active(enemy, key, scene.elapsed))) return false;
   if (againstHero && !enemy.getData('isBoss') && scene.player.hiddenUntil > scene.elapsed) return false;
   return true;
@@ -65,34 +66,46 @@ function wander(enemy, elapsed, prefix, random) {
 
 export function updateEnemy(scene, enemy, dt, random = Math.random) {
   if (!enemy.active || scene.pausedForChoice || scene.ended) return;
+  if(active(enemy,'spawningUntil',scene.elapsed)){enemy.setVelocity(0,0);return;}
   updateDamageOverTime(scene, enemy, dt);
   if (!enemy.active || scene.pausedForChoice || scene.ended) return;
-  if (active(enemy, 'stunUntil', scene.elapsed)) { enemy.setVelocity(0, 0); return; }
+  if (active(enemy, 'stunUntil', scene.elapsed)) { scene.enemySystem?.interrupt(enemy);enemy.setVelocity(0, 0); return; }
+  const aggroDropped=!enemy.getData('isBoss')&&scene.player.hiddenUntil>scene.elapsed;
+  if(scene.telegraphs?.has(enemy)&&!active(enemy,'fearUntil',scene.elapsed)&&!active(enemy,'confuseUntil',scene.elapsed)&&!aggroDropped){enemy.setVelocity(0,0);return;}
 
   const tauntTarget = enemy.getData('tauntTarget') || scene.companion?.sprite;
   const taunted = active(enemy, 'tauntUntil', scene.elapsed) && tauntTarget?.active;
   const target = taunted ? tauntTarget : scene.player;
   const dx = target.x - enemy.x, dy = target.y - enemy.y;
   const distance = Math.hypot(dx, dy) || 1;
+  enemy.setData('heading',Math.atan2(dy,dx));
   const speed = enemy.getData('speed');
   const hidden = !taunted && !enemy.getData('isBoss') && scene.player.hiddenUntil > scene.elapsed;
   if (active(enemy, 'fearUntil', scene.elapsed)) {
+    scene.enemySystem?.interrupt(enemy);
     const source = enemy.getData('fearSource') || scene.player;
     const fx = enemy.x - source.x, fy = enemy.y - source.y;
     const length = Math.hypot(fx, fy) || 1;
     enemy.setVelocity((fx || (!fy ? 1 : 0)) / length * speed, fy / length * speed);
   } else if (active(enemy, 'confuseUntil', scene.elapsed) || hidden) {
+    scene.enemySystem?.interrupt(enemy);
     const heading = wander(enemy, scene.elapsed, hidden ? 'wander' : 'confuse', random);
     enemy.setVelocity(heading.x * speed, heading.y * speed);
   } else if (enemy.getData('isBoss')) {
     scene.updateBoss(enemy, dt, dx, dy, distance);
+  } else if (scene.enemySystem?.update(enemy,dt,target)) {
+    // Every registered roster enemy owns its movement/attacks. Status overrides
+    // above and root/pull/slow below remain common to heroes and allies.
   } else if (enemy.getData('ranged') && distance < 410) {
     enemy.setVelocity(-dy / distance * 16, dx / distance * 16);
     const nextShot = (enemy.getData('nextShot') || 0) - dt;
     enemy.setData('nextShot', nextShot);
     if (nextShot <= 0 && !active(enemy, 'silenceUntil', scene.elapsed)) {
-      scene.spawnEnemyProjectile(enemy.x, enemy.y, enemyShotAngle(scene, enemy, Math.atan2(dy, dx), !taunted, random),
-        210, (8 + scene.elapsed / 150) * enemyDamageMult(scene, enemy), enemy);
+      const angle=enemyShotAngle(scene,enemy,Math.atan2(dy,dx),!taunted,random);
+      const shoot=()=>{if(enemy.active&&canEnemyAttack(scene,enemy,!taunted)&&!active(enemy,'silenceUntil',scene.elapsed))
+        scene.spawnEnemyProjectile(enemy.x,enemy.y,angle,210,(enemy.getData('damage')||8)*enemyDamageMult(scene,enemy),enemy);};
+      if(scene.telegraphs)scene.telegraphs.play({shape:'line',x:enemy.x,y:enemy.y,angle,length:410,width:24,windup:.5,owner:enemy,tag:'shot',sound:'spell',onResolve:shoot});
+      else shoot();
       enemy.setData('nextShot', 2.2 + random() * .8);
     }
   } else {
@@ -108,7 +121,9 @@ export function updateEnemy(scene, enemy, dt, random = Math.random) {
   }
   if (active(enemy, 'rootUntil', scene.elapsed)) enemy.setVelocity(0, 0);
   applySlow(enemy, scene.elapsed);
-  if (Math.hypot(scene.player.x - enemy.x, scene.player.y - enemy.y) > retentionRadius(scene,1150) && !enemy.getData('isBoss')) enemy.destroy();
+  if (Math.hypot(scene.player.x - enemy.x, scene.player.y - enemy.y) > retentionRadius(scene,1150) && !enemy.getData('isBoss')) {
+    if(scene.enemySystem)scene.enemySystem.despawn(enemy);else enemy.destroy();
+  }
   if (!enemy.active) return;
   enemy.setFlipX(enemy.body.velocity.x < 0);
   scene.animateCharacter(enemy, enemy.getData('artKey'), Math.hypot(enemy.body.velocity.x, enemy.body.velocity.y) > 0 ? 'walk' : 'idle');
