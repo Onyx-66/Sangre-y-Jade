@@ -1,0 +1,379 @@
+{
+  "candidate": false,
+  "errors": [],
+  "warnings": [],
+  "effects": [
+    {
+      "id": "boss-camazotz-sonic-screech",
+      "peak": 4,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-camazotz-bat-swarm",
+      "peak": 7,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-camazotz-blood-dive",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-camazotz-eclipse",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-camazotz-twin-dive",
+      "peak": 3,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-zipacna-stone-slam",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-zipacna-rock-rain",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-zipacna-fissure-line",
+      "peak": 7,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-zipacna-stone-armor",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-zipacna-avalanche",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-vucub-sunbeam-sweep",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-vucub-feather-barrage",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-vucub-solar-flare-rings",
+      "peak": 3,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-vucub-second-sun",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-vucub-zenith",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-death-gaze",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-bone-spear-ring",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-soul-drain",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-summon-lords",
+      "peak": 2,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-xibalba-shift",
+      "peak": 5,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-final-rite",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-camazotz-entry",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-zipacna-entry",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-vucub-entry",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "boss-ahpuch-entry",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    }
+  ],
+  "checks": [
+    {
+      "label": "all 64 frames decode and all seven states render",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-sonic-screech: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-sonic-screech: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-bat-swarm: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-bat-swarm: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-blood-dive: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-blood-dive: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-eclipse: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-eclipse: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-twin-dive: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-twin-dive: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-stone-slam: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-stone-slam: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-rock-rain: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-rock-rain: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-fissure-line: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-fissure-line: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-stone-armor: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-stone-armor: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-avalanche: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-avalanche: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-sunbeam-sweep: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-sunbeam-sweep: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-feather-barrage: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-feather-barrage: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-solar-flare-rings: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-solar-flare-rings: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-second-sun: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-second-sun: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-zenith: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-zenith: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-death-gaze: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-death-gaze: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-bone-spear-ring: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-bone-spear-ring: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-soul-drain: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-soul-drain: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-summon-lords: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-summon-lords: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-xibalba-shift: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-xibalba-shift: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-final-rite: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-final-rite: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-entry: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-camazotz-entry: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-entry: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-zipacna-entry: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-entry: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-vucub-entry: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-entry: real stills within cap",
+      "passed": true
+    },
+    {
+      "label": "boss-ahpuch-entry: all effects expire without missing art",
+      "passed": true
+    },
+    {
+      "label": "zero browser exceptions, errors and HTTP failures",
+      "passed": true
+    },
+    {
+      "label": "zero console or missing-asset warnings",
+      "passed": true
+    }
+  ],
+  "captures": [
+    "states.png",
+    "boss-camazotz-sonic-screech.png",
+    "boss-zipacna-rock-rain.png",
+    "boss-vucub-sunbeam-sweep.png",
+    "boss-ahpuch-soul-drain.png"
+  ],
+  "passed": true
+}

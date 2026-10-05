@@ -8,9 +8,10 @@ import {createServer} from 'vite';
 import {chromium} from 'playwright-core';
 import sharp from 'sharp';
 
-const output=path.resolve(process.env.SYJ_BOSS_OUTPUT||'docs/v0.6/previews/v11');
+const visuals=process.env.SYJ_BOSS_VISUALS==='1';
+const output=path.resolve(process.env.SYJ_BOSS_OUTPUT||(visuals?'docs/v0.6/previews/v12/fights':'docs/v0.6/previews/v11'));
 await fs.mkdir(output,{recursive:true});
-const report={createdAt:new Date().toISOString(),policy:'V11 boss coverage stress audit; not balance or FPS measurement',
+const report={createdAt:new Date().toISOString(),policy:`${visuals?'V12 visual':'V11 boss'} coverage stress audit; not balance or FPS measurement`,
  secondsPerBoss:180,stepHz:30,runs:[],checks:[],errors:[],warnings:[],captures:[]},started=performance.now();
 const server=await createServer({server:{host:'127.0.0.1',port:0,watch:{ignored:['**/docs/**','**/.tools/**']}},logLevel:'error'});await server.listen();
 const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
@@ -40,7 +41,7 @@ try{
   const context=await browser.newContext({viewport:{width:1280,height:720},serviceWorkers:'block'}),page=await context.newPage();
   const loaded=await start(page,id);check(loaded.active,`${id}: cinematic started`);
   const file=`${id}-entry.png`;await page.screenshot({path:path.join(output,file)});report.captures.push(file);
-  const run=await page.evaluate(async id=>{
+  const run=await page.evaluate(async({id,visuals})=>{
    const q=window.__bossV11,{scene:s,boss:b,app,GameScene}=q,{telegraphContains}=await import('/src/systems/Telegraph.js');
    s.cutscenes.update(20);app.game.loop.stop();s.sys.sceneUpdate=GameScene.prototype.update;
    const delta=1000/30,start=s.elapsed;let clock=s.time.now,frames=0,nextDecision=0;
@@ -101,12 +102,23 @@ try{
    const casts={...s.bossController.casts},seconds=s.elapsed-start,hp=s.stats.hp,missing=[...s.fx.missing];
    const uncast=d.phases.flatMap(p=>p.abilities).filter(a=>!casts[`${id}:${a.id}`]).map(a=>a.id);
    const early=warnings.filter(w=>!w.cancelled&&w.end!==null&&w.end-w.start<w.windup-1e-6);
+   let visualAudit=null;
+   if(visuals){
+    const keys=['idle','walk','windup','attack','recover','hurt','death'].map(state=>`${b.getData('artKey')}-${state}`),clone=s.bossVisuals.render(b);
+    const registered=keys.every(key=>s.anims.exists(key)),clonePresent=!!clone?.active&&b.alpha===0;
+    let deathDone=0;s.bossController.die(b,()=>deathDone++);const death=s.bossController.state.death.sprite;
+    const deathState=death.anims.currentAnim?.key===keys.at(-1);b.disableBody(true,true);
+    const seen=new Set();for(let n=0;n<30;n++){if(death.active)seen.add(death.anims.currentFrame?.textureKey);clock+=delta;app.game.headlessStep(clock,delta);}
+    s.fx.prune();visualAudit={registered,clonePresent,deathState,deathFrames:[...seen],deathDone,deathCleaned:!death.active,bossFxRemaining:s.fx.live.filter(e=>e.object.active&&e.object.texture?.key?.startsWith('fx-still-boss-')).length};
+   }
    s.bossController.destroy();const cleanup=s.telegraphs.live.size===0&&s.enemies.getChildren().every(e=>!e.active||!e.getData('bossObject'));
    return {id,seconds,frames,hp,casts,uncast,phaseTimes,damageTaken:20000-hp,targetKills,peakFx,peakWarnings,peakTasks,peakTargets,early,cleanup,samples,missing,
-    instrumentation:'hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions'};
-  },id);
+    visualAudit,instrumentation:'hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions'};
+  },{id,visuals});
   report.runs.push(run);check(Math.abs(run.seconds-180)<.04,`${id}: complete180s fight`);check(run.uncast.length===0,`${id}: every roster ability executed`);
   check(run.early.length===0,`${id}: no warning resolved early`);check(run.cleanup,`${id}: all boss objects/warnings cleaned up`);
+  if(visuals)check(run.missing.length===0,`${id}: no missing boss/skill stills`);
+  if(visuals)check(run.visualAudit?.registered&&run.visualAudit.clonePresent&&run.visualAudit.deathState&&run.visualAudit.deathFrames.length===4&&run.visualAudit.deathDone===1&&run.visualAudit.deathCleaned&&run.visualAudit.bossFxRemaining===0,`${id}: all states, four death frames and zero leaked boss FX`);
   console.log(`${id}: ${run.seconds.toFixed(2)}s, casts=${JSON.stringify(run.casts)}, targets=${JSON.stringify(run.targetKills)}, peaks FX${run.peakFx}/warnings${run.peakWarnings}/tasks${run.peakTasks}`);
   await context.close();
  }
@@ -124,11 +136,11 @@ try{
   const file=`${locale}-${skill}-568x320.png`;await page.screenshot({path:path.join(output,file)});report.captures.push(file);await context.close();
  }
  check(report.errors.length===0,'zero browser exceptions, console errors or HTTP failures');
- check(report.warnings.every(w=>/\[skills\] (Placeholder: fx\/boss-|Sound fallback: skills\/sfx-boss-)/.test(w)),'only documented future boss-art/audio warnings');
+ check(visuals?report.warnings.length===0:report.warnings.every(w=>/\[skills\] (Placeholder: fx\/boss-|Sound fallback: skills\/sfx-boss-)/.test(w)),visuals?'zero console or missing-asset warnings':'only documented future boss-art/audio warnings');
  const tiles=[];for(const [i,file]of report.captures.entries())tiles.push({input:await sharp(path.join(output,file)).resize(568,320).toBuffer(),left:i%3*568,top:Math.floor(i/3)*320});
  await sharp({create:{width:1704,height:Math.ceil(tiles.length/3)*320,channels:4,background:'#15121c'}}).composite(tiles).png().toFile(path.join(output,'bosses-contact.png'));
 }finally{
- report.wallSeconds=(performance.now()-started)/1000;report.passed=report.runs.length===4&&report.checks.length===30&&report.checks.every(c=>c.passed)&&report.errors.length===0;
+ report.wallSeconds=(performance.now()-started)/1000;report.passed=report.runs.length===4&&report.checks.length===(visuals?38:30)&&report.checks.every(c=>c.passed)&&report.errors.length===0;
  await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');await browser.close();await server.close();
  console.log(JSON.stringify({passed:report.passed,runs:report.runs.length,checks:report.checks.length,errors:report.errors.length,wallSeconds:report.wallSeconds,output}));
 }

@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v12-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v12\\vucub-contact.png",
+  "items": [
+    {
+      "file": "frames/boss-vucub-0.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-1.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-2.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-3.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-4.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-5.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-6.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-7.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-8.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-9.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-10.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-11.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-12.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-13.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-14.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-vucub-15.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    }
+  ]
+}

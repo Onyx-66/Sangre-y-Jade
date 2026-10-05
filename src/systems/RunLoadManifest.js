@@ -5,7 +5,7 @@ export function runSkillIds(hero,{extraIds=[],allies=[]}={}){
   return [...new Set([...(hero.skills||[]),...(hero.passives||[])].map(skill=>skill.id).concat(['survivors-will','jade-bounty'],extraIds,allies.flatMap(ally=>[...(ally.skills||[]),...(ally.passives||[])].map(skill=>skill.id))))];
 }
 export function fxManifest(ids,recipes,base='/'){
-  return [...new Set(ids)].flatMap(id=>(recipes.get(id)?.stills||[]).map(still=>({key:`fx-still-${id}-${still}`,url:`${base}assets/pixel/fx/${id}/${still}.png`,type:'image',critical:false})));
+  return [...new Set(ids)].flatMap(id=>(recipes.get(id)?.stills||[]).map(still=>({key:`fx-still-${id}-${still}`,url:`${base}assets/pixel/fx/${recipes.get(id).files?.[still]||`${id}/${still}.png`}`,type:'image',critical:false})));
 }
 export function runAudioManifest(ids,map,{base='/',audioKeys=[]}={}){
   const core=[...new Set([`music:${map.music}`,...audioKeys])].map(key=>({key,file:audioFileFor(key),url:audioFileFor(key)?`${base}assets/audio/${audioFileFor(key)}`:key,type:'audio',critical:false}));

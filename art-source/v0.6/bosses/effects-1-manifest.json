@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": ".tools\\v12-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v12\\effects-1-contact.png",
+  "items": [
+    {
+      "file": "fx/boss-entry/camazotz-entry.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "file": "fx/boss-entry/zipacna-entry.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "file": "fx/boss-entry/vucub-entry.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "file": "fx/boss-entry/ahpuch-entry.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "file": "fx/boss-camazotz-sonic-screech/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-sonic-screech/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-bat-swarm/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-bat-swarm/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-blood-dive/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-blood-dive/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-eclipse/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-eclipse/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-twin-dive/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-camazotz-twin-dive/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-stone-slam/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-stone-slam/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

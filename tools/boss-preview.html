@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>V12 boss preview (development only)</title>
+<style>body{margin:16px;background:#29251f;color:#fff0ce;font:16px system-ui}h1{font-size:24px}button,select{min-height:44px;padding:10px;background:#26363b;color:#ffcf4a;border:1px solid #ffcf4a}section{margin:18px 0;border-top:1px solid #776147;padding-top:12px}.states{display:flex;gap:8px;flex-wrap:wrap}figure{margin:0;background:#191c20;border:1px solid #51534d;text-align:center;padding:4px}img{width:192px;height:192px;image-rendering:pixelated;object-fit:contain}figcaption{font-size:14px}#effect{width:min(960px,100%)}canvas{max-width:100%}small{color:#bcb1a0}</style></head>
+<body><h1>Boss states and ability effects</h1><p>Development only. Loops every state; previews use the production FxDirector and JSON geometry. <small>?candidate=1 inspects art before promotion. Audio is deliberately absent.</small></p><button id="motion">Pause / play states</button><div id="actors"></div><h2>Ability / entry effect</h2><select id="ability" aria-label="Preview effect"></select> <button id="replay">Replay</button><p id="description"></p><div id="effect"></div>
+<script type="module">
+import Phaser from 'phaser';
+import {BOSS_IDS,BOSS_ANIMATIONS,BOSS_FX_IDS} from '../src/art/bossVisuals.js';
+import definitions from '../src/data/bosses-v06.json';
+import {FxDirector} from '../src/fx/FxDirector.js';
+import '../src/fx/recipes/bosses.js';
+const candidate=new URLSearchParams(location.search).has('candidate'),base=candidate?'../.tools/v12-candidate/pixel/':'../assets/pixel/';
+const loaded=new Map(),elements=[];let paused=false;
+await Promise.all(BOSS_IDS.flatMap(id=>Array.from({length:16},async(_,n)=>{const image=new Image();image.src=`${base}frames/boss-${id}-${n}.png`;await image.decode();loaded.set(`${id}-${n}`,image.src);} )));
+for(const id of BOSS_IDS){const section=document.createElement('section'),title=document.createElement('h2');title.textContent=id;section.append(title);const row=document.createElement('div');row.className='states';section.append(row);
+ for(const [state,animation]of Object.entries(BOSS_ANIMATIONS)){const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');image.alt=`${id} ${state}`;image.src=loaded.get(`${id}-${animation.frames[0]}`);caption.textContent=state;figure.append(image,caption);row.append(figure);elements.push({id,state,animation,image});}document.querySelector('#actors').append(section);}
+await Promise.all(elements.map(({image})=>image.decode()));document.querySelector('#motion').onclick=()=>paused=!paused;
+let time=0,last=performance.now();function animate(now){if(!paused)time+=(now-last)/1000;last=now;for(const {id,animation,image}of elements){const source=loaded.get(`${id}-${animation.frames[Math.floor(time*animation.rate)%animation.frames.length]}`);if(image.src!==source)image.src=source;}requestAnimationFrame(animate);}requestAnimationFrame(animate);
+const select=document.querySelector('#ability');for(const id of BOSS_FX_IDS){const option=document.createElement('option');option.value=id;option.textContent=id;select.append(option);}
+class Preview extends Phaser.Scene{
+ constructor(){super('preview');this.elapsed=0;this.settings={reducedMotion:false,reduceFlashing:false};}
+ preload(){for(const id of BOSS_FX_IDS){const r=FxDirector.recipes.get(id);for(const name of r.stills)this.load.image(`fx-still-${id}-${name}`,`${base}fx/${r.files?.[name]||`${id}/${name}.png`}`);}}
+ create(){this.fx=new FxDirector(this);this.cameras.main.setZoom(.5);this.cameras.main.centerOn(0,0);this.entry=null;this.replay();document.querySelector('#replay').onclick=()=>this.replay();select.onchange=()=>this.replay();window.__bossPreview={ready:true,frames:loaded.size,ids:BOSS_IDS,states:Object.keys(BOSS_ANIMATIONS),effects:BOSS_FX_IDS,scene:this};}
+ replay(){this.pending?.remove();this.pending=null;this.entry?.finish();this.fx.destroy();this.elapsed=0;this.entry=null;const id=select.value,boss=definitions.find(b=>id.startsWith(`boss-${b.id}-`)),row=boss.phases.flatMap(p=>p.abilities).find(a=>`boss-${boss.id}-${a.id}`===id);
+  document.querySelector('#description').textContent=row?`${row.telegraph}; ${row.effect}`:boss.entry;const ctx={x:0,y:0,angle:0,target:{x:220,y:0},arena:{x:0,y:0,radius:600},sound:false};
+  if(!row)this.entry=this.fx.play(id,'cast',ctx);else{this.fx.play(id,'cast',ctx);const timer=this.time.delayedCall(row.parameters.windup*1000,()=>this.fx.play(id,'impact',ctx));this.pending=timer;}
+ }
+ update(_t,ms){this.elapsed+=ms/1000;this.entry?.update(Math.min(1,this.elapsed/3));if(this.elapsed>12)this.replay();}
+}
+new Phaser.Game({type:Phaser.AUTO,width:960,height:540,parent:'effect',backgroundColor:'#191c20',pixelArt:true,audio:{noAudio:true},scene:Preview});
+</script></body></html>

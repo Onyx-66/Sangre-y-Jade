@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v12-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v12\\zipacna-contact.png",
+  "items": [
+    {
+      "file": "frames/boss-zipacna-0.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-1.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-2.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-3.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-4.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-5.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-6.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-7.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-8.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-9.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-10.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-11.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-12.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-13.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-14.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-zipacna-15.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    }
+  ]
+}

@@ -51,6 +51,8 @@ export function zenith(ctx){const p=parameters(ctx,'zenith');
     if(task.age+1e-9>=next){trail.push(point(c.scene.player));next+=.5;}
     for(const q of trail)c.runtime.graphics?.lineStyle(2,0xffcf4a,.55).strokeCircle(q.x,q.y,24);
    },()=>begin(),()=>{restore(c);cancel();});
+   c.scene.fx?.play('boss-vucub-zenith','aura',{...point(c.boss),state:c.state,boss:c.boss,duration:p.trail,sound:false,
+    isAlive:()=>c.runtime.alive()&&!!c.state.channel});
   },cancel:restore});
 }
 const handlers={'sunbeam-sweep':sunbeamSweep,'feather-barrage':featherBarrage,'solar-flare-rings':solarFlareRings,'second-sun':secondSun,zenith};

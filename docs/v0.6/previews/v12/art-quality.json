@@ -1,0 +1,7796 @@
+{
+  "createdAt": "2026-10-05T14:34:47.454Z",
+  "files": 110,
+  "uniqueHashes": 110,
+  "images": [
+    {
+      "id": "camazotz-0",
+      "file": "frames/boss-camazotz-0.png",
+      "size": 192,
+      "hash": "0b543fbf08c4753cf996c250c9560b5713d4d93505e2e160cdb05c4f7ff9983d",
+      "opaquePixels": 13750,
+      "pink": 0,
+      "bounds": [
+        16,
+        39,
+        175,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-1",
+      "file": "frames/boss-camazotz-1.png",
+      "size": 192,
+      "hash": "ffcccf16ab4e26ff2509399cdd8a8a20820229ac2655b65674fbc705d22f2548",
+      "opaquePixels": 11996,
+      "pink": 0,
+      "bounds": [
+        22,
+        42,
+        168,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-2",
+      "file": "frames/boss-camazotz-2.png",
+      "size": 192,
+      "hash": "00bd57c6f72d0bcc89559160ad4f58d34460f61d43f7222ae1951161944bc2f9",
+      "opaquePixels": 12019,
+      "pink": 0,
+      "bounds": [
+        21,
+        39,
+        170,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-3",
+      "file": "frames/boss-camazotz-3.png",
+      "size": 192,
+      "hash": "48b2428ad7bc9de54751a6b1d9a1750a4602387b1ef0ff6c4ed8edb97bf38fd6",
+      "opaquePixels": 10805,
+      "pink": 0,
+      "bounds": [
+        20,
+        41,
+        171,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-4",
+      "file": "frames/boss-camazotz-4.png",
+      "size": 192,
+      "hash": "bfb9d65e11df86ceec532f8d75590ee6be229a714283224f5bd0233caccd919f",
+      "opaquePixels": 11564,
+      "pink": 0,
+      "bounds": [
+        15,
+        48,
+        176,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-5",
+      "file": "frames/boss-camazotz-5.png",
+      "size": 192,
+      "hash": "0ab54ec366b8605c9ef76fb4cc286cdb23401a137e462270174abfa899d53cf9",
+      "opaquePixels": 10810,
+      "pink": 0,
+      "bounds": [
+        26,
+        45,
+        165,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-6",
+      "file": "frames/boss-camazotz-6.png",
+      "size": 192,
+      "hash": "dd49d360fd410ef85f4ed35bc39b6ff23d38205f51c86abf385a415b8c02612f",
+      "opaquePixels": 13303,
+      "pink": 0,
+      "bounds": [
+        17,
+        43,
+        174,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-7",
+      "file": "frames/boss-camazotz-7.png",
+      "size": 192,
+      "hash": "52367a67ce7c0857134743ecbd4364d38e07b795b5a1637ab4576d30e4a3e960",
+      "opaquePixels": 14280,
+      "pink": 0,
+      "bounds": [
+        18,
+        32,
+        173,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-8",
+      "file": "frames/boss-camazotz-8.png",
+      "size": 192,
+      "hash": "1fa3c538792308f86dada0869f1113b49938a4149b5132d318a6ed2cd0a7f5da",
+      "opaquePixels": 11652,
+      "pink": 0,
+      "bounds": [
+        16,
+        44,
+        175,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-9",
+      "file": "frames/boss-camazotz-9.png",
+      "size": 192,
+      "hash": "d76b3ccb00e66b73e0aea0e842c1d1f49a1acb3d91d823968fd7ad5b142fd560",
+      "opaquePixels": 11908,
+      "pink": 0,
+      "bounds": [
+        6,
+        54,
+        184,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-10",
+      "file": "frames/boss-camazotz-10.png",
+      "size": 192,
+      "hash": "ad739c3cda5a1a74db2d8b24ac47da2a5ac0128e2bb22fedbc5d03fd6de06c59",
+      "opaquePixels": 10965,
+      "pink": 0,
+      "bounds": [
+        20,
+        49,
+        171,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-11",
+      "file": "frames/boss-camazotz-11.png",
+      "size": 192,
+      "hash": "f01e3fd7727f8b89045c47290d5851fd5cf99a15d1511c9f7b1bc1581197c789",
+      "opaquePixels": 11492,
+      "pink": 0,
+      "bounds": [
+        20,
+        44,
+        171,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-12",
+      "file": "frames/boss-camazotz-12.png",
+      "size": 192,
+      "hash": "25ee4bb753bef15bf653d338ca55947020bee7880b85551ab13c46d4c38dc74a",
+      "opaquePixels": 12635,
+      "pink": 0,
+      "bounds": [
+        21,
+        57,
+        170,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-13",
+      "file": "frames/boss-camazotz-13.png",
+      "size": 192,
+      "hash": "6707abead7c2b6a682323e62ba6a28e66e71fcb0b6a9c8c3a36efa4e42b18579",
+      "opaquePixels": 10512,
+      "pink": 0,
+      "bounds": [
+        15,
+        81,
+        176,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-14",
+      "file": "frames/boss-camazotz-14.png",
+      "size": 192,
+      "hash": "4ce794590b9cb2ec01c72243ba1feebb87892682a355c7a377defa54065999d4",
+      "opaquePixels": 11421,
+      "pink": 0,
+      "bounds": [
+        18,
+        38,
+        173,
+        188
+      ]
+    },
+    {
+      "id": "camazotz-15",
+      "file": "frames/boss-camazotz-15.png",
+      "size": 192,
+      "hash": "de79658e46598497593c3174fa9701f5b676e680047f3ce536a2d63b5a596297",
+      "opaquePixels": 5914,
+      "pink": 0,
+      "bounds": [
+        22,
+        52,
+        169,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-0",
+      "file": "frames/boss-zipacna-0.png",
+      "size": 192,
+      "hash": "bcf04bf0ed21d3ec883cab25d7ce438044355acc85b0fc75315bad97cc73eb52",
+      "opaquePixels": 15435,
+      "pink": 0,
+      "bounds": [
+        14,
+        42,
+        176,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-1",
+      "file": "frames/boss-zipacna-1.png",
+      "size": 192,
+      "hash": "bff16f99ad11879ab4397b28bb7a5694b9d32c02beea001b24f22ca05a21d0dd",
+      "opaquePixels": 15607,
+      "pink": 0,
+      "bounds": [
+        16,
+        39,
+        174,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-2",
+      "file": "frames/boss-zipacna-2.png",
+      "size": 192,
+      "hash": "5c6fa4080aedb41a32e9ef1addb09d5a4f931ae01d0f32a7fcc281731fa6f792",
+      "opaquePixels": 14534,
+      "pink": 0,
+      "bounds": [
+        11,
+        42,
+        179,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-3",
+      "file": "frames/boss-zipacna-3.png",
+      "size": 192,
+      "hash": "c4cda48b0a5b91ab789ca7d4cb2a7413151d3feeb7d35aeed3e0ba1ae688810e",
+      "opaquePixels": 14109,
+      "pink": 0,
+      "bounds": [
+        15,
+        44,
+        175,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-4",
+      "file": "frames/boss-zipacna-4.png",
+      "size": 192,
+      "hash": "1daf03327ccc1ab45cbf9a76140bc6eec1a88b42e108f1025d1af3a82942c097",
+      "opaquePixels": 14760,
+      "pink": 0,
+      "bounds": [
+        10,
+        44,
+        180,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-5",
+      "file": "frames/boss-zipacna-5.png",
+      "size": 192,
+      "hash": "a6922ebfc5888b3764620a9e4dc56373e0001b2bf44db016858b3b8bd39a23b5",
+      "opaquePixels": 15045,
+      "pink": 0,
+      "bounds": [
+        11,
+        41,
+        180,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-6",
+      "file": "frames/boss-zipacna-6.png",
+      "size": 192,
+      "hash": "6c5e96190e0d1529b748555b6ec59bf5d52c980ddd4bd97a776fd4aa4443c05b",
+      "opaquePixels": 16222,
+      "pink": 0,
+      "bounds": [
+        11,
+        27,
+        180,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-7",
+      "file": "frames/boss-zipacna-7.png",
+      "size": 192,
+      "hash": "0e0b3b5c34e28e4f6c0a7a2447e629fa1f94bc95389dd3ddfb97b2f90ec30a0b",
+      "opaquePixels": 17518,
+      "pink": 0,
+      "bounds": [
+        13,
+        9,
+        177,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-8",
+      "file": "frames/boss-zipacna-8.png",
+      "size": 192,
+      "hash": "508224fd853adc5265500c34bdbc662c0deb475402969ffa07c79c7ae2db7052",
+      "opaquePixels": 18046,
+      "pink": 0,
+      "bounds": [
+        9,
+        42,
+        182,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-9",
+      "file": "frames/boss-zipacna-9.png",
+      "size": 192,
+      "hash": "02b99ae8c8e8ec11ad2034ddbdbea961d7348133f7d09f2409078219939b4840",
+      "opaquePixels": 17371,
+      "pink": 0,
+      "bounds": [
+        11,
+        47,
+        180,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-10",
+      "file": "frames/boss-zipacna-10.png",
+      "size": 192,
+      "hash": "b25df481a2a715607cfc2def30642794339663c5eca1635bad8e0566739e083a",
+      "opaquePixels": 15679,
+      "pink": 0,
+      "bounds": [
+        8,
+        49,
+        183,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-11",
+      "file": "frames/boss-zipacna-11.png",
+      "size": 192,
+      "hash": "9df21b8494c8fb9f05cdf86c14a735737eac09d14081e035d41db7092106b74c",
+      "opaquePixels": 15857,
+      "pink": 0,
+      "bounds": [
+        14,
+        32,
+        177,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-12",
+      "file": "frames/boss-zipacna-12.png",
+      "size": 192,
+      "hash": "e47cd474bdd924252db5457bbfcec3f9082d5af2b4b3ce5084a1ee273c970616",
+      "opaquePixels": 15465,
+      "pink": 0,
+      "bounds": [
+        10,
+        67,
+        181,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-13",
+      "file": "frames/boss-zipacna-13.png",
+      "size": 192,
+      "hash": "b17a85fda4f58aa939f3b000cdc0864c95ac7bfb2ba86f3a24f53ea5568445a8",
+      "opaquePixels": 13298,
+      "pink": 0,
+      "bounds": [
+        9,
+        79,
+        182,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-14",
+      "file": "frames/boss-zipacna-14.png",
+      "size": 192,
+      "hash": "c63df98e09af80f8bce645819c8ec8e2b2af8d7238051965e2b26ba54a32f6c9",
+      "opaquePixels": 13131,
+      "pink": 0,
+      "bounds": [
+        8,
+        50,
+        183,
+        188
+      ]
+    },
+    {
+      "id": "zipacna-15",
+      "file": "frames/boss-zipacna-15.png",
+      "size": 192,
+      "hash": "cfcd929a04228ec506c7d7d713c85436ca84232f1c1d83e8e9043ad1e628191c",
+      "opaquePixels": 6592,
+      "pink": 0,
+      "bounds": [
+        12,
+        114,
+        178,
+        188
+      ]
+    },
+    {
+      "id": "vucub-0",
+      "file": "frames/boss-vucub-0.png",
+      "size": 192,
+      "hash": "6e5707c689cc4531768bdb4a82cbb4ad9a021c4fa64160455c2afb9b3585d795",
+      "opaquePixels": 14745,
+      "pink": 0,
+      "bounds": [
+        26,
+        22,
+        164,
+        188
+      ]
+    },
+    {
+      "id": "vucub-1",
+      "file": "frames/boss-vucub-1.png",
+      "size": 192,
+      "hash": "ee075d652e871ce0e654dd2b3fe90cd3852edc63f1965f6ee7030a866b688434",
+      "opaquePixels": 14988,
+      "pink": 0,
+      "bounds": [
+        24,
+        22,
+        167,
+        188
+      ]
+    },
+    {
+      "id": "vucub-2",
+      "file": "frames/boss-vucub-2.png",
+      "size": 192,
+      "hash": "db24ae58ea880e068586912bea9568144dc335844c282a296fdbf81a6e16e55e",
+      "opaquePixels": 15205,
+      "pink": 0,
+      "bounds": [
+        21,
+        24,
+        169,
+        188
+      ]
+    },
+    {
+      "id": "vucub-3",
+      "file": "frames/boss-vucub-3.png",
+      "size": 192,
+      "hash": "4feec263ed802a670f31b6dbe5a4d432bbaefcd6cdcf513941a3208c968ddf0d",
+      "opaquePixels": 14632,
+      "pink": 0,
+      "bounds": [
+        14,
+        28,
+        177,
+        188
+      ]
+    },
+    {
+      "id": "vucub-4",
+      "file": "frames/boss-vucub-4.png",
+      "size": 192,
+      "hash": "09355150549b43885d4b753c75e41ad7e31a1cb7ea459eb5a00d024370f9646f",
+      "opaquePixels": 16458,
+      "pink": 0,
+      "bounds": [
+        10,
+        23,
+        180,
+        188
+      ]
+    },
+    {
+      "id": "vucub-5",
+      "file": "frames/boss-vucub-5.png",
+      "size": 192,
+      "hash": "981ee25926ca2a48e251fc6a421087da1856cd1649cb8ba8f57e947c881ebee2",
+      "opaquePixels": 16249,
+      "pink": 0,
+      "bounds": [
+        13,
+        23,
+        178,
+        188
+      ]
+    },
+    {
+      "id": "vucub-6",
+      "file": "frames/boss-vucub-6.png",
+      "size": 192,
+      "hash": "0bb7721454eeed346f3d4e1aa9495102514db029d468ec2278b44966bafe3828",
+      "opaquePixels": 19085,
+      "pink": 0,
+      "bounds": [
+        6,
+        17,
+        185,
+        188
+      ]
+    },
+    {
+      "id": "vucub-7",
+      "file": "frames/boss-vucub-7.png",
+      "size": 192,
+      "hash": "e7d372c3f3bb472e18806b97995eb2f94a57f7f8e3966627d7e72fdc1de62d61",
+      "opaquePixels": 20794,
+      "pink": 0,
+      "bounds": [
+        7,
+        11,
+        184,
+        188
+      ]
+    },
+    {
+      "id": "vucub-8",
+      "file": "frames/boss-vucub-8.png",
+      "size": 192,
+      "hash": "3b2b86630062ca080e55eac920c6fe4d020078b6960148ba2aef07970073342a",
+      "opaquePixels": 18290,
+      "pink": 0,
+      "bounds": [
+        11,
+        14,
+        179,
+        188
+      ]
+    },
+    {
+      "id": "vucub-9",
+      "file": "frames/boss-vucub-9.png",
+      "size": 192,
+      "hash": "2fdd473f21ea44cd1fbd1220bc684b2b57808ec12f79bcc61f181cd08f4a58cb",
+      "opaquePixels": 17749,
+      "pink": 0,
+      "bounds": [
+        9,
+        18,
+        182,
+        188
+      ]
+    },
+    {
+      "id": "vucub-10",
+      "file": "frames/boss-vucub-10.png",
+      "size": 192,
+      "hash": "3fbe27e56c18056c10313629e9831ad960f65bb326e184e09b5528de87cfe852",
+      "opaquePixels": 16944,
+      "pink": 0,
+      "bounds": [
+        12,
+        27,
+        178,
+        188
+      ]
+    },
+    {
+      "id": "vucub-11",
+      "file": "frames/boss-vucub-11.png",
+      "size": 192,
+      "hash": "a5517759a7bac5cbe5d90715998953435bb1e4cf6cf24fc11075baf58716d737",
+      "opaquePixels": 16200,
+      "pink": 0,
+      "bounds": [
+        10,
+        25,
+        181,
+        188
+      ]
+    },
+    {
+      "id": "vucub-12",
+      "file": "frames/boss-vucub-12.png",
+      "size": 192,
+      "hash": "5132b1fc6dfb0918d1b41b1248ec49f96dc847569e2739ae47d9ad6a57a2558c",
+      "opaquePixels": 14488,
+      "pink": 0,
+      "bounds": [
+        7,
+        47,
+        183,
+        188
+      ]
+    },
+    {
+      "id": "vucub-13",
+      "file": "frames/boss-vucub-13.png",
+      "size": 192,
+      "hash": "6660a8ce3447654dcce65ce26ed1fe23b6d3a1985903261ff33abbd70d3600b0",
+      "opaquePixels": 13728,
+      "pink": 0,
+      "bounds": [
+        7,
+        65,
+        184,
+        188
+      ]
+    },
+    {
+      "id": "vucub-14",
+      "file": "frames/boss-vucub-14.png",
+      "size": 192,
+      "hash": "4e1ad72a48fe2ce96c2015e4684a2f35c246091b645e11ff11b26ff4c81162ab",
+      "opaquePixels": 13468,
+      "pink": 0,
+      "bounds": [
+        12,
+        24,
+        178,
+        188
+      ]
+    },
+    {
+      "id": "vucub-15",
+      "file": "frames/boss-vucub-15.png",
+      "size": 192,
+      "hash": "f32022b3831795d7a0f5695c4ef311fa5f28d7b4fc88f3267937d349e520f1a4",
+      "opaquePixels": 8922,
+      "pink": 0,
+      "bounds": [
+        11,
+        36,
+        180,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-0",
+      "file": "frames/boss-ahpuch-0.png",
+      "size": 192,
+      "hash": "39017b48c96c91e5433264f68e8c4c02c4c409325ca5568e1a3418dcb0a2a05a",
+      "opaquePixels": 9204,
+      "pink": 0,
+      "bounds": [
+        40,
+        50,
+        150,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-1",
+      "file": "frames/boss-ahpuch-1.png",
+      "size": 192,
+      "hash": "175a7663d59c48d3f726d12d9119c8330e9a74038cdb99b4f3db7ff2d6fd6562",
+      "opaquePixels": 9050,
+      "pink": 0,
+      "bounds": [
+        40,
+        52,
+        150,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-2",
+      "file": "frames/boss-ahpuch-2.png",
+      "size": 192,
+      "hash": "cf94a390ac6b8bc2783613cc8dc710b3fcd5b6a78038dafbb583b7be79d4929b",
+      "opaquePixels": 8264,
+      "pink": 0,
+      "bounds": [
+        37,
+        52,
+        154,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-3",
+      "file": "frames/boss-ahpuch-3.png",
+      "size": 192,
+      "hash": "f2bab49c3c84174795633fd17e2ffef9848f7a2265ccc7526a19340b4c170a0c",
+      "opaquePixels": 8770,
+      "pink": 0,
+      "bounds": [
+        35,
+        53,
+        156,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-4",
+      "file": "frames/boss-ahpuch-4.png",
+      "size": 192,
+      "hash": "5581b0897af7b3ea38bb09dc97697c5e44de73a7b5bceb1a7246b67d6b3cd75b",
+      "opaquePixels": 9346,
+      "pink": 0,
+      "bounds": [
+        33,
+        52,
+        158,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-5",
+      "file": "frames/boss-ahpuch-5.png",
+      "size": 192,
+      "hash": "88b9aeb280718460fab5641003f8e5612e3fc2073c9cb882bec05f5760e20c99",
+      "opaquePixels": 8905,
+      "pink": 0,
+      "bounds": [
+        32,
+        51,
+        159,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-6",
+      "file": "frames/boss-ahpuch-6.png",
+      "size": 192,
+      "hash": "0d2d9d366fd91a57cc269d450fde28cd627d8a2bad5d9731e6b636e131f56bd7",
+      "opaquePixels": 10455,
+      "pink": 0,
+      "bounds": [
+        27,
+        40,
+        163,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-7",
+      "file": "frames/boss-ahpuch-7.png",
+      "size": 192,
+      "hash": "c0eee335dddfa6b14bef6195a6b920e15c6595ca14c60ccfea79643b44d9f172",
+      "opaquePixels": 12395,
+      "pink": 0,
+      "bounds": [
+        25,
+        41,
+        165,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-8",
+      "file": "frames/boss-ahpuch-8.png",
+      "size": 192,
+      "hash": "2943d9d0b14b651a463099dee469be65cad0d394e1a92990bbea90206d77a8df",
+      "opaquePixels": 10794,
+      "pink": 0,
+      "bounds": [
+        6,
+        66,
+        185,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-9",
+      "file": "frames/boss-ahpuch-9.png",
+      "size": 192,
+      "hash": "1385ec1c932a5be1d7108c9350ab3b5a702f27abd762d1089a370b303f71c542",
+      "opaquePixels": 11957,
+      "pink": 0,
+      "bounds": [
+        19,
+        60,
+        171,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-10",
+      "file": "frames/boss-ahpuch-10.png",
+      "size": 192,
+      "hash": "97db79b63a56a6b7acfc2a3236931198572a6acae691bb1fbc6e15e8666d7b94",
+      "opaquePixels": 9222,
+      "pink": 0,
+      "bounds": [
+        39,
+        61,
+        152,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-11",
+      "file": "frames/boss-ahpuch-11.png",
+      "size": 192,
+      "hash": "b1f09b4471554909cc939c8c0e70d7f6915578cb8754ac53936abef6dbd3c60a",
+      "opaquePixels": 9094,
+      "pink": 0,
+      "bounds": [
+        33,
+        59,
+        158,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-12",
+      "file": "frames/boss-ahpuch-12.png",
+      "size": 192,
+      "hash": "3f188028c1ade5fe3157978b70c888d8910a2c5578c6e1a75086358889831c80",
+      "opaquePixels": 8554,
+      "pink": 0,
+      "bounds": [
+        28,
+        60,
+        162,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-13",
+      "file": "frames/boss-ahpuch-13.png",
+      "size": 192,
+      "hash": "b8beeb11ae89300a041d3c98d2a7310f20d921aa8dc883c01d5d93898a3d50d1",
+      "opaquePixels": 8471,
+      "pink": 0,
+      "bounds": [
+        26,
+        92,
+        164,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-14",
+      "file": "frames/boss-ahpuch-14.png",
+      "size": 192,
+      "hash": "f764e16e83bfa1ff6b906bc64f378218b4e44fd45ea5c9946032d1add9e04f39",
+      "opaquePixels": 9162,
+      "pink": 0,
+      "bounds": [
+        24,
+        57,
+        166,
+        188
+      ]
+    },
+    {
+      "id": "ahpuch-15",
+      "file": "frames/boss-ahpuch-15.png",
+      "size": 192,
+      "hash": "1a5da350e82c0b749fc4c8f0a68bde566a1a80faf3f2696acafd4768f87cc2eb",
+      "opaquePixels": 5653,
+      "pink": 0,
+      "bounds": [
+        25,
+        81,
+        165,
+        188
+      ]
+    },
+    {
+      "id": "boss-camazotz-sonic-screech/main",
+      "file": "fx/boss-camazotz-sonic-screech/main.png",
+      "size": 256,
+      "hash": "069a75f6d9dc9f92651585d247cd631c1e0b6895ca83d64ff6f7bfe2d52fb280",
+      "opaquePixels": 23163,
+      "pink": 0,
+      "bounds": [
+        7,
+        12,
+        247,
+        243
+      ]
+    },
+    {
+      "id": "boss-camazotz-sonic-screech/accent",
+      "file": "fx/boss-camazotz-sonic-screech/accent.png",
+      "size": 256,
+      "hash": "61476cfef76f6dbe9208e4cf49a81743385043bf3998710415227ba9050e7657",
+      "opaquePixels": 32829,
+      "pink": 0,
+      "bounds": [
+        7,
+        15,
+        247,
+        240
+      ]
+    },
+    {
+      "id": "boss-camazotz-bat-swarm/main",
+      "file": "fx/boss-camazotz-bat-swarm/main.png",
+      "size": 256,
+      "hash": "02f943ee0e938f4c43761086c5d87f21a59af82541feb19a1304a78d2abf38d6",
+      "opaquePixels": 8860,
+      "pink": 0,
+      "bounds": [
+        7,
+        56,
+        247,
+        200
+      ]
+    },
+    {
+      "id": "boss-camazotz-bat-swarm/accent",
+      "file": "fx/boss-camazotz-bat-swarm/accent.png",
+      "size": 256,
+      "hash": "5e81636faca5620854722975e0ddba9768f8c2aab65a9119f0fbb52b30fe8648",
+      "opaquePixels": 19547,
+      "pink": 0,
+      "bounds": [
+        7,
+        36,
+        247,
+        218
+      ]
+    },
+    {
+      "id": "boss-camazotz-blood-dive/main",
+      "file": "fx/boss-camazotz-blood-dive/main.png",
+      "size": 256,
+      "hash": "1207db7e5ac55cc6e434793aaf3e23273b627705ee5cad4bbb0cca63efbb081c",
+      "opaquePixels": 13940,
+      "pink": 0,
+      "bounds": [
+        18,
+        7,
+        236,
+        247
+      ]
+    },
+    {
+      "id": "boss-camazotz-blood-dive/accent",
+      "file": "fx/boss-camazotz-blood-dive/accent.png",
+      "size": 256,
+      "hash": "13c5d11d348c2e05e6f445d2a726298b47e233db8747d9c7985af2fad9d5dd34",
+      "opaquePixels": 15852,
+      "pink": 0,
+      "bounds": [
+        7,
+        29,
+        247,
+        226
+      ]
+    },
+    {
+      "id": "boss-camazotz-eclipse/main",
+      "file": "fx/boss-camazotz-eclipse/main.png",
+      "size": 256,
+      "hash": "cdc0b1bd107724943033ba761ecfb9175d4746648961720f6e44cd87b9becdfc",
+      "opaquePixels": 28841,
+      "pink": 0,
+      "bounds": [
+        7,
+        10,
+        247,
+        244
+      ]
+    },
+    {
+      "id": "boss-camazotz-eclipse/accent",
+      "file": "fx/boss-camazotz-eclipse/accent.png",
+      "size": 256,
+      "hash": "5e7afe3690a6d91d765ddcc10cfc466a722ef3eb1bd3a54f2a2eb18893d6abef",
+      "opaquePixels": 28229,
+      "pink": 0,
+      "bounds": [
+        8,
+        13,
+        247,
+        242
+      ]
+    },
+    {
+      "id": "boss-camazotz-twin-dive/main",
+      "file": "fx/boss-camazotz-twin-dive/main.png",
+      "size": 256,
+      "hash": "72223067de8f790f5e849ea3e87e44fe07eea33e6500e34e33a7d80488441ae4",
+      "opaquePixels": 25905,
+      "pink": 0,
+      "bounds": [
+        7,
+        12,
+        247,
+        243
+      ]
+    },
+    {
+      "id": "boss-camazotz-twin-dive/accent",
+      "file": "fx/boss-camazotz-twin-dive/accent.png",
+      "size": 256,
+      "hash": "e8c557f4f2eed8272a156dc8f0f32f4db155136d7e03e3312b2ec9d259e5a80b",
+      "opaquePixels": 23366,
+      "pink": 0,
+      "bounds": [
+        8,
+        7,
+        246,
+        247
+      ]
+    },
+    {
+      "id": "boss-zipacna-stone-slam/main",
+      "file": "fx/boss-zipacna-stone-slam/main.png",
+      "size": 256,
+      "hash": "1bda346c0e62796872c5b3a26157b39b556eee2e3db80e2d620690deee2d7f55",
+      "opaquePixels": 42290,
+      "pink": 0,
+      "bounds": [
+        7,
+        10,
+        247,
+        244
+      ]
+    },
+    {
+      "id": "boss-zipacna-stone-slam/accent",
+      "file": "fx/boss-zipacna-stone-slam/accent.png",
+      "size": 256,
+      "hash": "ea710b51c8d7f38d3ec96a1512936af0afc9f79214316520c94bc2b660108ac6",
+      "opaquePixels": 17855,
+      "pink": 0,
+      "bounds": [
+        7,
+        48,
+        247,
+        206
+      ]
+    },
+    {
+      "id": "boss-zipacna-rock-rain/main",
+      "file": "fx/boss-zipacna-rock-rain/main.png",
+      "size": 256,
+      "hash": "d57abc4785fadbad3fb4c35544768777a4f9452bf983ef2468d16d4f997b3b67",
+      "opaquePixels": 21207,
+      "pink": 0,
+      "bounds": [
+        48,
+        7,
+        205,
+        247
+      ]
+    },
+    {
+      "id": "boss-zipacna-rock-rain/accent",
+      "file": "fx/boss-zipacna-rock-rain/accent.png",
+      "size": 256,
+      "hash": "fb5821869f0cc05befa7babb68d92f4194dcdf4d6530f9baa4cfeb2fa45e27a6",
+      "opaquePixels": 29857,
+      "pink": 0,
+      "bounds": [
+        7,
+        23,
+        247,
+        232
+      ]
+    },
+    {
+      "id": "boss-zipacna-fissure-line/main",
+      "file": "fx/boss-zipacna-fissure-line/main.png",
+      "size": 256,
+      "hash": "53337af8ec36c8f70720c5db454e072ccb0d2639e66172882ea645ad6b769f44",
+      "opaquePixels": 16955,
+      "pink": 0,
+      "bounds": [
+        7,
+        53,
+        245,
+        202
+      ]
+    },
+    {
+      "id": "boss-zipacna-fissure-line/accent",
+      "file": "fx/boss-zipacna-fissure-line/accent.png",
+      "size": 256,
+      "hash": "809aff51d7a4cfe80889bfc5076679fe096e39c3eaae39d99801bb6ac8850259",
+      "opaquePixels": 23489,
+      "pink": 0,
+      "bounds": [
+        11,
+        7,
+        243,
+        247
+      ]
+    },
+    {
+      "id": "boss-zipacna-stone-armor/main",
+      "file": "fx/boss-zipacna-stone-armor/main.png",
+      "size": 256,
+      "hash": "3139a27b825a38ee77f1f329a4bdefe319c631d61c1247b28d546e722e1dcc41",
+      "opaquePixels": 48047,
+      "pink": 0,
+      "bounds": [
+        9,
+        8,
+        246,
+        247
+      ]
+    },
+    {
+      "id": "boss-zipacna-stone-armor/accent",
+      "file": "fx/boss-zipacna-stone-armor/accent.png",
+      "size": 256,
+      "hash": "a17c81e2c4a3946a4884bff627e5c8ae1c8016d80abc0dc241fedcd5527f7f56",
+      "opaquePixels": 24808,
+      "pink": 0,
+      "bounds": [
+        24,
+        8,
+        230,
+        246
+      ]
+    },
+    {
+      "id": "boss-zipacna-avalanche/main",
+      "file": "fx/boss-zipacna-avalanche/main.png",
+      "size": 256,
+      "hash": "76e5a008fce47c3af3df1d8dbfaa56a84d47b73cbb86d408690db2841d3878bd",
+      "opaquePixels": 26137,
+      "pink": 0,
+      "bounds": [
+        24,
+        8,
+        231,
+        247
+      ]
+    },
+    {
+      "id": "boss-zipacna-avalanche/accent",
+      "file": "fx/boss-zipacna-avalanche/accent.png",
+      "size": 256,
+      "hash": "3d8255b8b087be5e83178434edc5aee4e8fd25b5a3f7923001ee00f0d7f82e40",
+      "opaquePixels": 27225,
+      "pink": 0,
+      "bounds": [
+        7,
+        34,
+        247,
+        220
+      ]
+    },
+    {
+      "id": "boss-vucub-sunbeam-sweep/main",
+      "file": "fx/boss-vucub-sunbeam-sweep/main.png",
+      "size": 256,
+      "hash": "9dc60866e35d3ac22494114c79fe212eb18df026d4a7cd4518de860225bbf480",
+      "opaquePixels": 9928,
+      "pink": 0,
+      "bounds": [
+        7,
+        80,
+        247,
+        175
+      ]
+    },
+    {
+      "id": "boss-vucub-sunbeam-sweep/accent",
+      "file": "fx/boss-vucub-sunbeam-sweep/accent.png",
+      "size": 256,
+      "hash": "16e0e976606c287e2093ef3c18a3d85acca26c7fb6e3b1f5b17060820fe0a34d",
+      "opaquePixels": 18872,
+      "pink": 0,
+      "bounds": [
+        7,
+        11,
+        246,
+        241
+      ]
+    },
+    {
+      "id": "boss-vucub-feather-barrage/main",
+      "file": "fx/boss-vucub-feather-barrage/main.png",
+      "size": 256,
+      "hash": "aeb7226b15fd8b9d46b342745c82536cd83d3bb3f62d03c8269395908ad96605",
+      "opaquePixels": 12331,
+      "pink": 0,
+      "bounds": [
+        9,
+        39,
+        246,
+        216
+      ]
+    },
+    {
+      "id": "boss-vucub-feather-barrage/accent",
+      "file": "fx/boss-vucub-feather-barrage/accent.png",
+      "size": 256,
+      "hash": "9999ce7f0fefeb351d7d1675f928ac4e5a956a1006d5394cab7e21a65eb42644",
+      "opaquePixels": 16011,
+      "pink": 0,
+      "bounds": [
+        16,
+        7,
+        239,
+        247
+      ]
+    },
+    {
+      "id": "boss-vucub-solar-flare-rings/main",
+      "file": "fx/boss-vucub-solar-flare-rings/main.png",
+      "size": 256,
+      "hash": "b30ec8a2bd508fb57a5758c45f57666482d37d039a2bf13ca8331831e45ca85f",
+      "opaquePixels": 14163,
+      "pink": 0,
+      "bounds": [
+        24,
+        7,
+        230,
+        247
+      ]
+    },
+    {
+      "id": "boss-vucub-solar-flare-rings/accent",
+      "file": "fx/boss-vucub-solar-flare-rings/accent.png",
+      "size": 256,
+      "hash": "98a7c2ca37e553b7d9216b2212d94db685bc8ef5599cf8875b2ba260f7c3fc42",
+      "opaquePixels": 11158,
+      "pink": 0,
+      "bounds": [
+        44,
+        9,
+        211,
+        242
+      ]
+    },
+    {
+      "id": "boss-vucub-second-sun/main",
+      "file": "fx/boss-vucub-second-sun/main.png",
+      "size": 256,
+      "hash": "0ee0830039ff6f8309092f5cf56cc00dbe85c15a6390bd6072880229c1b74e6f",
+      "opaquePixels": 21998,
+      "pink": 0,
+      "bounds": [
+        13,
+        10,
+        240,
+        247
+      ]
+    },
+    {
+      "id": "boss-vucub-second-sun/accent",
+      "file": "fx/boss-vucub-second-sun/accent.png",
+      "size": 256,
+      "hash": "dcc068ac58defd7ca1d635544d916f5d74b7ea6043a240590c65060cbfe53319",
+      "opaquePixels": 27333,
+      "pink": 0,
+      "bounds": [
+        11,
+        9,
+        247,
+        245
+      ]
+    },
+    {
+      "id": "boss-vucub-zenith/main",
+      "file": "fx/boss-vucub-zenith/main.png",
+      "size": 256,
+      "hash": "5afafc0b776fd9eb684bd51c1a3d4b1b1d639ad99940a4cefa28124845947939",
+      "opaquePixels": 13318,
+      "pink": 0,
+      "bounds": [
+        68,
+        7,
+        187,
+        247
+      ]
+    },
+    {
+      "id": "boss-vucub-zenith/accent",
+      "file": "fx/boss-vucub-zenith/accent.png",
+      "size": 256,
+      "hash": "59716289daeb41af1b4461005fa13931607c8be7cd745990913210e82f06233d",
+      "opaquePixels": 29904,
+      "pink": 0,
+      "bounds": [
+        7,
+        15,
+        246,
+        238
+      ]
+    },
+    {
+      "id": "boss-ahpuch-death-gaze/main",
+      "file": "fx/boss-ahpuch-death-gaze/main.png",
+      "size": 256,
+      "hash": "3d72168f352307116bf55d7827bbaf3e0de2e52e7bc3eeae2a60a833dfef3f9f",
+      "opaquePixels": 6215,
+      "pink": 0,
+      "bounds": [
+        7,
+        93,
+        247,
+        161
+      ]
+    },
+    {
+      "id": "boss-ahpuch-death-gaze/accent",
+      "file": "fx/boss-ahpuch-death-gaze/accent.png",
+      "size": 256,
+      "hash": "077524632394cc122a292f8b9c6182cb0c49893ca3caff1db98fb694959ce9bb",
+      "opaquePixels": 21263,
+      "pink": 0,
+      "bounds": [
+        7,
+        35,
+        247,
+        219
+      ]
+    },
+    {
+      "id": "boss-ahpuch-bone-spear-ring/main",
+      "file": "fx/boss-ahpuch-bone-spear-ring/main.png",
+      "size": 256,
+      "hash": "d0fcf7534a4967c78f23ce3a6785d63dd6e11209428e3487d224bdebc7dbc2bf",
+      "opaquePixels": 18230,
+      "pink": 0,
+      "bounds": [
+        33,
+        7,
+        222,
+        247
+      ]
+    },
+    {
+      "id": "boss-ahpuch-bone-spear-ring/accent",
+      "file": "fx/boss-ahpuch-bone-spear-ring/accent.png",
+      "size": 256,
+      "hash": "390dee2a019f6ebfafba0d8483e954c1f4841fac0e86f5ede26c3e2c40db1680",
+      "opaquePixels": 27666,
+      "pink": 0,
+      "bounds": [
+        7,
+        13,
+        247,
+        241
+      ]
+    },
+    {
+      "id": "boss-ahpuch-soul-drain/main",
+      "file": "fx/boss-ahpuch-soul-drain/main.png",
+      "size": 256,
+      "hash": "6c52d53b35618d4ae0cbd25e0e3d67b2c6227327be88cd457662c6c3d38d3558",
+      "opaquePixels": 36103,
+      "pink": 0,
+      "bounds": [
+        7,
+        12,
+        247,
+        242
+      ]
+    },
+    {
+      "id": "boss-ahpuch-soul-drain/accent",
+      "file": "fx/boss-ahpuch-soul-drain/accent.png",
+      "size": 256,
+      "hash": "f167cbe2fac4669bf7726cd67714a312237cc45ae2b59b2b0cad200a143ddac4",
+      "opaquePixels": 24369,
+      "pink": 0,
+      "bounds": [
+        22,
+        7,
+        233,
+        247
+      ]
+    },
+    {
+      "id": "boss-ahpuch-summon-lords/main",
+      "file": "fx/boss-ahpuch-summon-lords/main.png",
+      "size": 256,
+      "hash": "45fcd081c44f4fb41aa3c5242c50c647c7accd8af3ecbbaefcf08ed12de6219a",
+      "opaquePixels": 28130,
+      "pink": 0,
+      "bounds": [
+        7,
+        8,
+        247,
+        246
+      ]
+    },
+    {
+      "id": "boss-ahpuch-summon-lords/accent",
+      "file": "fx/boss-ahpuch-summon-lords/accent.png",
+      "size": 256,
+      "hash": "52bddbd602fbf054015216ea9a4e51e8a7ecf73b502d7b65336490d99283be09",
+      "opaquePixels": 28967,
+      "pink": 0,
+      "bounds": [
+        7,
+        12,
+        246,
+        242
+      ]
+    },
+    {
+      "id": "boss-ahpuch-xibalba-shift/main",
+      "file": "fx/boss-ahpuch-xibalba-shift/main.png",
+      "size": 256,
+      "hash": "e17488ee0a26e7c2dc5e36230d2eaccb5a66fbb17cb67d51c21ce1749a01e4a3",
+      "opaquePixels": 57176,
+      "pink": 0,
+      "bounds": [
+        7,
+        9,
+        247,
+        246
+      ]
+    },
+    {
+      "id": "boss-ahpuch-xibalba-shift/accent",
+      "file": "fx/boss-ahpuch-xibalba-shift/accent.png",
+      "size": 256,
+      "hash": "7879e19b62094e0f767c35515c45044518c4c39e0a1ba0a20ea6b93304a636fd",
+      "opaquePixels": 25524,
+      "pink": 0,
+      "bounds": [
+        9,
+        28,
+        246,
+        227
+      ]
+    },
+    {
+      "id": "boss-ahpuch-final-rite/main",
+      "file": "fx/boss-ahpuch-final-rite/main.png",
+      "size": 256,
+      "hash": "e7a9d015559cf1e8139dfbbef32836ec0f2d324c7035524c88bdc57391a4abe2",
+      "opaquePixels": 32248,
+      "pink": 0,
+      "bounds": [
+        12,
+        7,
+        243,
+        247
+      ]
+    },
+    {
+      "id": "boss-ahpuch-final-rite/accent",
+      "file": "fx/boss-ahpuch-final-rite/accent.png",
+      "size": 256,
+      "hash": "28a574d58f7e607fa9e56a9a069b39b58a74697cbeb6486d5bd5d41f5e7c1684",
+      "opaquePixels": 36299,
+      "pink": 0,
+      "bounds": [
+        8,
+        7,
+        246,
+        247
+      ]
+    },
+    {
+      "id": "camazotz-entry",
+      "file": "fx/boss-entry/camazotz-entry.png",
+      "size": 512,
+      "hash": "1a933872ffb0ed43fcc536c4ba0bbc1bb118c322c58f7b646aaeaf3c92bab649",
+      "opaquePixels": 142192,
+      "pink": 0,
+      "bounds": [
+        15,
+        20,
+        495,
+        490
+      ]
+    },
+    {
+      "id": "zipacna-entry",
+      "file": "fx/boss-entry/zipacna-entry.png",
+      "size": 512,
+      "hash": "bb650d406ea3e14b499988c4949f7b73824279ba7cfcbdbc0ff88b3f3b3b23f1",
+      "opaquePixels": 113314,
+      "pink": 0,
+      "bounds": [
+        15,
+        15,
+        495,
+        495
+      ]
+    },
+    {
+      "id": "vucub-entry",
+      "file": "fx/boss-entry/vucub-entry.png",
+      "size": 512,
+      "hash": "2df3f02a699aa82d46e42c3fa86c89728dc67928ad0c210dee21fe08a2c65c93",
+      "opaquePixels": 115312,
+      "pink": 0,
+      "bounds": [
+        19,
+        15,
+        492,
+        495
+      ]
+    },
+    {
+      "id": "ahpuch-entry",
+      "file": "fx/boss-entry/ahpuch-entry.png",
+      "size": 512,
+      "hash": "2446fecd577b3fed59cb1f496e4deaa99b0161ac1d5a9fbaedfa6c341a57b2e4",
+      "opaquePixels": 146894,
+      "pink": 0,
+      "bounds": [
+        25,
+        15,
+        484,
+        495
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "vucub-entry",
+      "hamming": 10,
+      "difference": 24.052
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 11,
+      "difference": 24.021
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 11,
+      "difference": 17.211
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "vucub-entry",
+      "hamming": 11,
+      "difference": 42.506
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "ahpuch-entry",
+      "hamming": 13,
+      "difference": 38.977
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "vucub-entry",
+      "hamming": 13,
+      "difference": 29.289
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "ahpuch-entry",
+      "hamming": 14,
+      "difference": 33.262
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "ahpuch-entry",
+      "hamming": 14,
+      "difference": 37.416
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 14,
+      "difference": 41.555
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "vucub-entry",
+      "hamming": 15,
+      "difference": 24.117
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 15,
+      "difference": 35.081
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 16,
+      "difference": 41.75
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 16,
+      "difference": 27.839
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 16,
+      "difference": 26.166
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "ahpuch-entry",
+      "hamming": 16,
+      "difference": 36.099
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 17,
+      "difference": 28.505
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 17,
+      "difference": 32.887
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "vucub-entry",
+      "hamming": 17,
+      "difference": 37.25
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 17,
+      "difference": 22.924
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 17,
+      "difference": 31.475
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 17,
+      "difference": 28.306
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 17,
+      "difference": 43.032
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "vucub-entry",
+      "hamming": 18,
+      "difference": 54.913
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 18,
+      "difference": 45.509
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 18,
+      "difference": 24.535
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 18,
+      "difference": 33.941
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 18,
+      "difference": 36.371
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "ahpuch-entry",
+      "hamming": 18,
+      "difference": 30.206
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "vucub-entry",
+      "hamming": 18,
+      "difference": 33.131
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 18,
+      "difference": 26.87
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 18,
+      "difference": 33.634
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 18,
+      "difference": 41.398
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 18,
+      "difference": 35.876
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "zipacna-entry",
+      "hamming": 18,
+      "difference": 34.041
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 19,
+      "difference": 40.547
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 19,
+      "difference": 48.749
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "ahpuch-entry",
+      "hamming": 19,
+      "difference": 44.946
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 19,
+      "difference": 34.344
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "vucub-entry",
+      "hamming": 19,
+      "difference": 36.573
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 19,
+      "difference": 29.931
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 19,
+      "difference": 36.527
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 19,
+      "difference": 34.834
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 19,
+      "difference": 36.182
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 19,
+      "difference": 27.577
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "zipacna-entry",
+      "hamming": 19,
+      "difference": 25.805
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "ahpuch-entry",
+      "hamming": 19,
+      "difference": 30.57
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 19,
+      "difference": 33.05
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 19,
+      "difference": 30.217
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 19,
+      "difference": 29.948
+    },
+    {
+      "a": "vucub-entry",
+      "b": "ahpuch-entry",
+      "hamming": 19,
+      "difference": 45.273
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 20,
+      "difference": 23.502
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 20,
+      "difference": 15.597
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 20,
+      "difference": 50.959
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 20,
+      "difference": 34.2
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 20,
+      "difference": 32.173
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 20,
+      "difference": 27.89
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 20,
+      "difference": 30.736
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 20,
+      "difference": 33.996
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 20,
+      "difference": 30.763
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 20,
+      "difference": 25.42
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 20,
+      "difference": 32.481
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 20,
+      "difference": 23.663
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 20,
+      "difference": 20.603
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 20,
+      "difference": 46.098
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 20,
+      "difference": 26.066
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 20,
+      "difference": 31.093
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 20,
+      "difference": 31.413
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 20,
+      "difference": 37.676
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 20,
+      "difference": 35.667
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 20,
+      "difference": 31.461
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 20,
+      "difference": 33.338
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 20,
+      "difference": 27.448
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 20,
+      "difference": 43.856
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 20,
+      "difference": 35.219
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 20,
+      "difference": 34.105
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 20,
+      "difference": 34.029
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "zipacna-entry",
+      "hamming": 20,
+      "difference": 30.551
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 20,
+      "difference": 32.917
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 20,
+      "difference": 32.387
+    },
+    {
+      "a": "boss-ahpuch-final-rite/accent",
+      "b": "vucub-entry",
+      "hamming": 20,
+      "difference": 42.602
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 21,
+      "difference": 54.037
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 21,
+      "difference": 42.902
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 21,
+      "difference": 29.179
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 21,
+      "difference": 29.263
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 21,
+      "difference": 34.844
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 21,
+      "difference": 50.732
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "vucub-entry",
+      "hamming": 21,
+      "difference": 35.184
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 21,
+      "difference": 26.937
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "ahpuch-entry",
+      "hamming": 21,
+      "difference": 31.599
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 21,
+      "difference": 26.448
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 21,
+      "difference": 28.194
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 21,
+      "difference": 33.029
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "vucub-entry",
+      "hamming": 21,
+      "difference": 37.54
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 21,
+      "difference": 30.214
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 21,
+      "difference": 27.298
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 21,
+      "difference": 32.473
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 21,
+      "difference": 30.551
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 21,
+      "difference": 33.468
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 21,
+      "difference": 34.467
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 21,
+      "difference": 35.558
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "vucub-entry",
+      "hamming": 21,
+      "difference": 35.905
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 21,
+      "difference": 37.895
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 21,
+      "difference": 40.19
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 21,
+      "difference": 47.178
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 21,
+      "difference": 36.722
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 21,
+      "difference": 42.85
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "vucub-entry",
+      "hamming": 21,
+      "difference": 40.415
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 21,
+      "difference": 39.257
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "vucub-entry",
+      "hamming": 21,
+      "difference": 40.611
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 21,
+      "difference": 29.908
+    },
+    {
+      "a": "zipacna-entry",
+      "b": "vucub-entry",
+      "hamming": 21,
+      "difference": 36.427
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 22,
+      "difference": 44.954
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "vucub-entry",
+      "hamming": 22,
+      "difference": 57.078
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 22,
+      "difference": 51.492
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 22,
+      "difference": 16.865
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 22,
+      "difference": 23.114
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 22,
+      "difference": 27.763
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 22,
+      "difference": 49.008
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 22,
+      "difference": 48.2
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 22,
+      "difference": 32.483
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "zipacna-entry",
+      "hamming": 22,
+      "difference": 29.661
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 22,
+      "difference": 32.693
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 22,
+      "difference": 28.655
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 22,
+      "difference": 38.677
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 22,
+      "difference": 29.708
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 22,
+      "difference": 34.004
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 22,
+      "difference": 14.105
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 22,
+      "difference": 36.012
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 22,
+      "difference": 32.326
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 22,
+      "difference": 36.649
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "ahpuch-entry",
+      "hamming": 22,
+      "difference": 33.634
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 22,
+      "difference": 47.668
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 22,
+      "difference": 27.923
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 22,
+      "difference": 35.046
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "ahpuch-entry",
+      "hamming": 22,
+      "difference": 34.689
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 22,
+      "difference": 35
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "zipacna-entry",
+      "hamming": 22,
+      "difference": 30.108
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 22,
+      "difference": 32.56
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 22,
+      "difference": 27.49
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 22,
+      "difference": 28.152
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 22,
+      "difference": 32.136
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 22,
+      "difference": 27.066
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 22,
+      "difference": 54.516
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 22,
+      "difference": 57.598
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 22,
+      "difference": 33.178
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 22,
+      "difference": 21.375
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 22,
+      "difference": 37.642
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 22,
+      "difference": 49.988
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 22,
+      "difference": 33.457
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 22,
+      "difference": 34.823
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 22,
+      "difference": 46.799
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "ahpuch-entry",
+      "hamming": 22,
+      "difference": 32.966
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/accent",
+      "b": "ahpuch-entry",
+      "hamming": 22,
+      "difference": 40.995
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 23,
+      "difference": 47.768
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 23,
+      "difference": 45.381
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 23,
+      "difference": 54.604
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 23,
+      "difference": 38.689
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 23,
+      "difference": 45.813
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "ahpuch-entry",
+      "hamming": 23,
+      "difference": 41.793
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 23,
+      "difference": 17.321
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 23,
+      "difference": 22.51
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 23,
+      "difference": 31.152
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 23,
+      "difference": 36.778
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 23,
+      "difference": 17.523
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 23,
+      "difference": 32.619
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 23,
+      "difference": 36.748
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 23,
+      "difference": 30.401
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 23,
+      "difference": 60.994
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "vucub-entry",
+      "hamming": 23,
+      "difference": 36.01
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 23,
+      "difference": 34.838
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 23,
+      "difference": 25.843
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 23,
+      "difference": 27.749
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 23,
+      "difference": 24.127
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 23,
+      "difference": 26.5
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 23,
+      "difference": 23.053
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "vucub-entry",
+      "hamming": 23,
+      "difference": 40.141
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 23,
+      "difference": 45.517
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 23,
+      "difference": 32.26
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 23,
+      "difference": 27.947
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 23,
+      "difference": 28.49
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 23,
+      "difference": 53.972
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "ahpuch-entry",
+      "hamming": 23,
+      "difference": 36.207
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 23,
+      "difference": 43.643
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 23,
+      "difference": 55.317
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 23,
+      "difference": 44.509
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 23,
+      "difference": 31.716
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 23,
+      "difference": 20.947
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 23,
+      "difference": 42.881
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 23,
+      "difference": 41.096
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 23,
+      "difference": 46.679
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "vucub-entry",
+      "hamming": 23,
+      "difference": 33.183
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 23,
+      "difference": 38.059
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 23,
+      "difference": 53.458
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 23,
+      "difference": 55.088
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 23,
+      "difference": 62.806
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 23,
+      "difference": 38.058
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 23,
+      "difference": 60.975
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "zipacna-entry",
+      "hamming": 23,
+      "difference": 49.394
+    },
+    {
+      "a": "boss-ahpuch-final-rite/accent",
+      "b": "camazotz-entry",
+      "hamming": 23,
+      "difference": 44.783
+    },
+    {
+      "a": "zipacna",
+      "b": "vucub",
+      "hamming": 24,
+      "difference": 27.569
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 24,
+      "difference": 43.277
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 24,
+      "difference": 54.536
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 24,
+      "difference": 48.982
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 24,
+      "difference": 26.004
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 24,
+      "difference": 43.061
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 24,
+      "difference": 14.686
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 24,
+      "difference": 35.592
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 24,
+      "difference": 30.158
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 24,
+      "difference": 27.097
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 24,
+      "difference": 32.057
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 24,
+      "difference": 33.347
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 24,
+      "difference": 40.008
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 24,
+      "difference": 36.262
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 24,
+      "difference": 36.537
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 24,
+      "difference": 29.658
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 24,
+      "difference": 37.722
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 24,
+      "difference": 28.708
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 24,
+      "difference": 52.216
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "camazotz-entry",
+      "hamming": 24,
+      "difference": 38.298
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "ahpuch-entry",
+      "hamming": 24,
+      "difference": 44.162
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 24,
+      "difference": 41.942
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 24,
+      "difference": 32.026
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 24,
+      "difference": 51.559
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 24,
+      "difference": 42.952
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "zipacna-entry",
+      "hamming": 24,
+      "difference": 30.188
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 24,
+      "difference": 27.555
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 24,
+      "difference": 28.228
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 24,
+      "difference": 29.879
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 24,
+      "difference": 46.33
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "ahpuch-entry",
+      "hamming": 24,
+      "difference": 35.713
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 24,
+      "difference": 24.232
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 24,
+      "difference": 25.196
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 24,
+      "difference": 22.332
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 24,
+      "difference": 33.314
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 24,
+      "difference": 33.083
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 24,
+      "difference": 31.33
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 24,
+      "difference": 30.714
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 24,
+      "difference": 30.85
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "vucub-entry",
+      "hamming": 24,
+      "difference": 37.026
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 24,
+      "difference": 34.215
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "zipacna-entry",
+      "hamming": 24,
+      "difference": 23.954
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 24,
+      "difference": 38.162
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "ahpuch-entry",
+      "hamming": 24,
+      "difference": 37.044
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 24,
+      "difference": 29.671
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 24,
+      "difference": 35.809
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 24,
+      "difference": 33.661
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 24,
+      "difference": 33.521
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 24,
+      "difference": 37.367
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 24,
+      "difference": 36.93
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 24,
+      "difference": 12.418
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "vucub-entry",
+      "hamming": 24,
+      "difference": 38.723
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 24,
+      "difference": 33.412
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 24,
+      "difference": 47.795
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "camazotz-entry",
+      "hamming": 24,
+      "difference": 47.732
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 24,
+      "difference": 38.747
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 24,
+      "difference": 40.131
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 24,
+      "difference": 40.991
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "ahpuch-entry",
+      "hamming": 24,
+      "difference": 44.499
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "ahpuch-entry",
+      "hamming": 24,
+      "difference": 35.849
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 24,
+      "difference": 37.461
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 24,
+      "difference": 42.227
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "ahpuch-entry",
+      "hamming": 24,
+      "difference": 32.138
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 24,
+      "difference": 54.283
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "vucub-entry",
+      "hamming": 24,
+      "difference": 67.106
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 25,
+      "difference": 47.943
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 25,
+      "difference": 51.046
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 25,
+      "difference": 47.904
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 25,
+      "difference": 49.903
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 25,
+      "difference": 53.03
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "zipacna-entry",
+      "hamming": 25,
+      "difference": 44.469
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 25,
+      "difference": 41.421
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 25,
+      "difference": 47.403
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 25,
+      "difference": 47.745
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "zipacna-entry",
+      "hamming": 25,
+      "difference": 40.141
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-blood-dive/accent",
+      "hamming": 25,
+      "difference": 13.925
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 25,
+      "difference": 21.846
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "zipacna-entry",
+      "hamming": 25,
+      "difference": 27.408
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 25,
+      "difference": 25.745
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 25,
+      "difference": 26.851
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 25,
+      "difference": 45.264
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 25,
+      "difference": 51.739
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 25,
+      "difference": 18.095
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 25,
+      "difference": 25.874
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 25,
+      "difference": 42.268
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 25,
+      "difference": 26.73
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 25,
+      "difference": 31.5
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 25,
+      "difference": 49.414
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 25,
+      "difference": 27.992
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 25,
+      "difference": 33.947
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 25,
+      "difference": 40.112
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 25,
+      "difference": 29.057
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 25,
+      "difference": 38.399
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 25,
+      "difference": 45.489
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 25,
+      "difference": 29.184
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 25,
+      "difference": 38.796
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 25,
+      "difference": 40.016
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 25,
+      "difference": 21.406
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 25,
+      "difference": 21.2
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 25,
+      "difference": 21.653
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 25,
+      "difference": 30.785
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 25,
+      "difference": 32.35
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 25,
+      "difference": 43.135
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 25,
+      "difference": 30.087
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "camazotz-entry",
+      "hamming": 25,
+      "difference": 36.231
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 25,
+      "difference": 23.215
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 25,
+      "difference": 36.654
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 25,
+      "difference": 50.035
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "ahpuch-entry",
+      "hamming": 25,
+      "difference": 32.549
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 25,
+      "difference": 26.49
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 25,
+      "difference": 27.157
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 25,
+      "difference": 37.623
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 25,
+      "difference": 38.741
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 25,
+      "difference": 33.397
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 25,
+      "difference": 35.79
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "vucub-entry",
+      "hamming": 25,
+      "difference": 47.934
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 25,
+      "difference": 27.61
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 25,
+      "difference": 32.893
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 25,
+      "difference": 29.312
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 25,
+      "difference": 40.853
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 25,
+      "difference": 26.007
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 25,
+      "difference": 43.797
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 25,
+      "difference": 33.702
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 25,
+      "difference": 44.769
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "camazotz-entry",
+      "hamming": 25,
+      "difference": 35.622
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 25,
+      "difference": 24.319
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 25,
+      "difference": 29.819
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "ahpuch-entry",
+      "hamming": 25,
+      "difference": 42.699
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 25,
+      "difference": 35.913
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "zipacna-entry",
+      "hamming": 25,
+      "difference": 31.56
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 25,
+      "difference": 61.587
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 25,
+      "difference": 39.405
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 25,
+      "difference": 38.654
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 25,
+      "difference": 50.225
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 25,
+      "difference": 47.734
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 25,
+      "difference": 50.327
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "zipacna-entry",
+      "hamming": 25,
+      "difference": 33.132
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 25,
+      "difference": 50.499
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "vucub-entry",
+      "hamming": 25,
+      "difference": 54.601
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 25,
+      "difference": 43.493
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 25,
+      "difference": 45.231
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "ahpuch-entry",
+      "hamming": 25,
+      "difference": 43.643
+    },
+    {
+      "a": "boss-ahpuch-final-rite/accent",
+      "b": "ahpuch-entry",
+      "hamming": 25,
+      "difference": 37.534
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-sonic-screech/accent",
+      "hamming": 26,
+      "difference": 42.338
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 26,
+      "difference": 45.418
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-blood-dive/main",
+      "hamming": 26,
+      "difference": 34.267
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 26,
+      "difference": 38.676
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 26,
+      "difference": 22.058
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-camazotz-eclipse/main",
+      "hamming": 26,
+      "difference": 18.328
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 26,
+      "difference": 20.292
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 26,
+      "difference": 47.073
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-camazotz-eclipse/main",
+      "hamming": 26,
+      "difference": 23.675
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 26,
+      "difference": 39.033
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "vucub-entry",
+      "hamming": 26,
+      "difference": 40.797
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 55.665
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "ahpuch-entry",
+      "hamming": 26,
+      "difference": 37.617
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 26,
+      "difference": 31.203
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 26,
+      "difference": 20.307
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 26,
+      "difference": 47.932
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 26,
+      "difference": 43.081
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 26,
+      "difference": 40.171
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 55.861
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "zipacna-entry",
+      "hamming": 26,
+      "difference": 32.754
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 26,
+      "difference": 30.812
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 26,
+      "difference": 40.564
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 26,
+      "difference": 34.922
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 26,
+      "difference": 31.704
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 26,
+      "difference": 29.882
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 26,
+      "difference": 34.504
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "ahpuch-entry",
+      "hamming": 26,
+      "difference": 42.919
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 26,
+      "difference": 26.674
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 26,
+      "difference": 31.909
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 26,
+      "difference": 32.948
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 26,
+      "difference": 31.55
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 26,
+      "difference": 47.704
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 26,
+      "difference": 35.711
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 26,
+      "difference": 26.947
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 26,
+      "difference": 31.175
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "camazotz-entry",
+      "hamming": 26,
+      "difference": 38.723
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 26,
+      "difference": 44.127
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 26,
+      "difference": 26.928
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 26,
+      "difference": 28.393
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 41.691
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 26,
+      "difference": 24.313
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 26,
+      "difference": 41.248
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 26,
+      "difference": 33.087
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 26,
+      "difference": 32.185
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 26,
+      "difference": 44.069
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 26,
+      "difference": 39.341
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 26,
+      "difference": 40.547
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 26,
+      "difference": 26.899
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 26,
+      "difference": 46.373
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "vucub-entry",
+      "hamming": 26,
+      "difference": 34.634
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 26,
+      "difference": 33.39
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 26,
+      "difference": 28.809
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 26,
+      "difference": 30.771
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 26,
+      "difference": 38.046
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "zipacna-entry",
+      "hamming": 26,
+      "difference": 29.793
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 26,
+      "difference": 23.905
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 26,
+      "difference": 33.456
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 26,
+      "difference": 30.41
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 26,
+      "difference": 39.788
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "vucub-entry",
+      "hamming": 26,
+      "difference": 37.115
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 26,
+      "difference": 29.412
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 52.869
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 26,
+      "difference": 36.505
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 54.842
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 26,
+      "difference": 35.948
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "ahpuch-entry",
+      "hamming": 26,
+      "difference": 39.61
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 26,
+      "difference": 25.521
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 26,
+      "difference": 38.705
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 26,
+      "difference": 30.408
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "camazotz-entry",
+      "hamming": 26,
+      "difference": 36.258
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 26,
+      "difference": 45.016
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 51.327
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "vucub-entry",
+      "hamming": 26,
+      "difference": 54.304
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 26,
+      "difference": 37.837
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "zipacna-entry",
+      "hamming": 26,
+      "difference": 34.436
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/accent",
+      "b": "camazotz-entry",
+      "hamming": 26,
+      "difference": 54.55
+    },
+    {
+      "a": "zipacna-entry",
+      "b": "ahpuch-entry",
+      "hamming": 26,
+      "difference": 33.294
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 27,
+      "difference": 41.734
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 27,
+      "difference": 45.906
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 27,
+      "difference": 44.51
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 27,
+      "difference": 42.532
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 27,
+      "difference": 39.239
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 27,
+      "difference": 45.522
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 27,
+      "difference": 48.419
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 27,
+      "difference": 40.43
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "camazotz-entry",
+      "hamming": 27,
+      "difference": 25.008
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 27,
+      "difference": 38.601
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 27,
+      "difference": 46.38
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-camazotz-blood-dive/accent",
+      "hamming": 27,
+      "difference": 14.326
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 27,
+      "difference": 23.758
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 27,
+      "difference": 27.905
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 27,
+      "difference": 22.654
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 27,
+      "difference": 37.458
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 27,
+      "difference": 30.946
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 27,
+      "difference": 38.635
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 27,
+      "difference": 32.071
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "zipacna-entry",
+      "hamming": 27,
+      "difference": 23.41
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 27,
+      "difference": 21.462
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 27,
+      "difference": 23.126
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 27,
+      "difference": 39.901
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 27,
+      "difference": 33.404
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "vucub-entry",
+      "hamming": 27,
+      "difference": 42.464
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 27,
+      "difference": 44.357
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 27,
+      "difference": 27.671
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 27,
+      "difference": 30.114
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 27,
+      "difference": 30.522
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 27,
+      "difference": 30.628
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 27,
+      "difference": 33.536
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "vucub-entry",
+      "hamming": 27,
+      "difference": 50.756
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 27,
+      "difference": 26.627
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 27,
+      "difference": 27.923
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 27,
+      "difference": 25.012
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 27,
+      "difference": 29.619
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 27,
+      "difference": 37.411
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 27,
+      "difference": 31.096
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 27,
+      "difference": 35.102
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 27,
+      "difference": 24.883
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 27,
+      "difference": 23.684
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 27,
+      "difference": 25.79
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 27,
+      "difference": 43.001
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "zipacna-entry",
+      "hamming": 27,
+      "difference": 22.488
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 27,
+      "difference": 31.576
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 27,
+      "difference": 37.775
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 27,
+      "difference": 21.865
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 27,
+      "difference": 45.116
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "zipacna-entry",
+      "hamming": 27,
+      "difference": 20.948
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 27,
+      "difference": 21.025
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 27,
+      "difference": 28.746
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 27,
+      "difference": 34.406
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 27,
+      "difference": 37.06
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 27,
+      "difference": 39.595
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 27,
+      "difference": 27.597
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 27,
+      "difference": 36.265
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 27,
+      "difference": 28.315
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 27,
+      "difference": 34.992
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 27,
+      "difference": 49.742
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "vucub-entry",
+      "hamming": 27,
+      "difference": 40.545
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 27,
+      "difference": 42.283
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 27,
+      "difference": 28.28
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 27,
+      "difference": 36.042
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 27,
+      "difference": 36.17
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "zipacna-entry",
+      "hamming": 27,
+      "difference": 25.79
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 27,
+      "difference": 33.322
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 27,
+      "difference": 31.718
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 27,
+      "difference": 51.986
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 27,
+      "difference": 24.16
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 27,
+      "difference": 35.92
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 27,
+      "difference": 32.212
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 27,
+      "difference": 31.486
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 27,
+      "difference": 54.051
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 27,
+      "difference": 27.201
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 27,
+      "difference": 50.922
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "camazotz-entry",
+      "hamming": 27,
+      "difference": 52.125
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 27,
+      "difference": 49.875
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 27,
+      "difference": 53.133
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 27,
+      "difference": 41.841
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 27,
+      "difference": 33.049
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 27,
+      "difference": 55.732
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "ahpuch-entry",
+      "hamming": 27,
+      "difference": 31.304
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 27,
+      "difference": 47.963
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "ahpuch-entry",
+      "hamming": 27,
+      "difference": 35.852
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "camazotz-entry",
+      "hamming": 27,
+      "difference": 32.113
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "ahpuch-entry",
+      "hamming": 27,
+      "difference": 45.732
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 27,
+      "difference": 51.954
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "zipacna-entry",
+      "hamming": 27,
+      "difference": 35.614
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "ahpuch-entry",
+      "hamming": 27,
+      "difference": 37.685
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/accent",
+      "b": "vucub-entry",
+      "hamming": 27,
+      "difference": 49.091
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-blood-dive/main",
+      "hamming": 28,
+      "difference": 41.503
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 28,
+      "difference": 43.472
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 28,
+      "difference": 48.554
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 28,
+      "difference": 42.91
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 28,
+      "difference": 39.806
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 28,
+      "difference": 33.997
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 28,
+      "difference": 44.305
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 28,
+      "difference": 47.454
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 28,
+      "difference": 18.615
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-camazotz-blood-dive/main",
+      "hamming": 28,
+      "difference": 17.202
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 28,
+      "difference": 25.787
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 28,
+      "difference": 34.478
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 28,
+      "difference": 35.141
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 28,
+      "difference": 24.376
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 28,
+      "difference": 28.837
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 28,
+      "difference": 22.609
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 28,
+      "difference": 36.463
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 28,
+      "difference": 35.252
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 28,
+      "difference": 23.856
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 28,
+      "difference": 25.417
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "vucub-entry",
+      "hamming": 28,
+      "difference": 52.902
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 28,
+      "difference": 34.044
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 28,
+      "difference": 33.984
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 28,
+      "difference": 41.696
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 28,
+      "difference": 29.514
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 28,
+      "difference": 33.221
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 28,
+      "difference": 41.114
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 28,
+      "difference": 33.337
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 28,
+      "difference": 43.783
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 28,
+      "difference": 56.691
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 28,
+      "difference": 38.52
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 28,
+      "difference": 31.898
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "zipacna-entry",
+      "hamming": 28,
+      "difference": 27.002
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 28,
+      "difference": 28.607
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 28,
+      "difference": 34.15
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 28,
+      "difference": 19.32
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 28,
+      "difference": 24.755
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 28,
+      "difference": 23.754
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 28,
+      "difference": 29.985
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 28,
+      "difference": 35.341
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 28,
+      "difference": 30.333
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "zipacna-entry",
+      "hamming": 28,
+      "difference": 24.506
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 28,
+      "difference": 14.211
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 28,
+      "difference": 26.456
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 28,
+      "difference": 46.226
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 28,
+      "difference": 34.125
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 28,
+      "difference": 46.544
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 28,
+      "difference": 51.009
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 28,
+      "difference": 41.295
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 28,
+      "difference": 34.229
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "zipacna-entry",
+      "hamming": 28,
+      "difference": 31.401
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 28,
+      "difference": 38.948
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 28,
+      "difference": 50.194
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 28,
+      "difference": 47.859
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "camazotz-entry",
+      "hamming": 28,
+      "difference": 50.045
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 28,
+      "difference": 27.157
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 28,
+      "difference": 32.884
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 28,
+      "difference": 20.708
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 28,
+      "difference": 40.758
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 28,
+      "difference": 45.609
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 28,
+      "difference": 53.086
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "vucub-entry",
+      "hamming": 28,
+      "difference": 53.261
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 28,
+      "difference": 35.531
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "zipacna-entry",
+      "hamming": 28,
+      "difference": 26.702
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 28,
+      "difference": 47.23
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 28,
+      "difference": 48.309
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "camazotz-entry",
+      "hamming": 28,
+      "difference": 47.55
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 28,
+      "difference": 21.715
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 28,
+      "difference": 30.903
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 28,
+      "difference": 34.632
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 28,
+      "difference": 62.445
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "zipacna-entry",
+      "hamming": 28,
+      "difference": 46.561
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 28,
+      "difference": 43.477
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 28,
+      "difference": 32.803
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 28,
+      "difference": 46.044
+    },
+    {
+      "a": "camazotz",
+      "b": "vucub",
+      "hamming": 29,
+      "difference": 31.445
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-blood-dive/accent",
+      "hamming": 29,
+      "difference": 43.647
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 29,
+      "difference": 50.095
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 29,
+      "difference": 52.971
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-blood-dive/accent",
+      "hamming": 29,
+      "difference": 36.014
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 29,
+      "difference": 28.739
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 29,
+      "difference": 42.194
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 29,
+      "difference": 47.283
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 29,
+      "difference": 30.522
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 29,
+      "difference": 18.702
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 29,
+      "difference": 27.347
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 29,
+      "difference": 54.419
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-camazotz-blood-dive/accent",
+      "hamming": 29,
+      "difference": 17.818
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 29,
+      "difference": 30.998
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 29,
+      "difference": 32.965
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 29,
+      "difference": 28.529
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 29,
+      "difference": 23.821
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 29,
+      "difference": 38.007
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 29,
+      "difference": 26.51
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 29,
+      "difference": 31.08
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 29,
+      "difference": 38.438
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 29,
+      "difference": 41.761
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 29,
+      "difference": 32.545
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 29,
+      "difference": 37.927
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 29,
+      "difference": 46.831
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 29,
+      "difference": 35.484
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 29,
+      "difference": 28.583
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 29,
+      "difference": 29.786
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 29,
+      "difference": 61.923
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 29,
+      "difference": 25.013
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 29,
+      "difference": 29.492
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 29,
+      "difference": 47.923
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 29,
+      "difference": 25.49
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 29,
+      "difference": 20.343
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 29,
+      "difference": 24.721
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 29,
+      "difference": 32.931
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 29,
+      "difference": 45.403
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 29,
+      "difference": 35.451
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 29,
+      "difference": 50.075
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 29,
+      "difference": 26.46
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 29,
+      "difference": 38.346
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 29,
+      "difference": 31.145
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 29,
+      "difference": 34.088
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 29,
+      "difference": 25.75
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "camazotz-entry",
+      "hamming": 29,
+      "difference": 32.782
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 29,
+      "difference": 23.577
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 29,
+      "difference": 34.106
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 29,
+      "difference": 35.45
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 29,
+      "difference": 37.431
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 29,
+      "difference": 43.502
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 29,
+      "difference": 32.83
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 29,
+      "difference": 31.095
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 29,
+      "difference": 47.961
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 29,
+      "difference": 42.118
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 29,
+      "difference": 52.548
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 29,
+      "difference": 43.612
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 29,
+      "difference": 45.571
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 29,
+      "difference": 35.276
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 29,
+      "difference": 49.801
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 29,
+      "difference": 47.335
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 29,
+      "difference": 50.773
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 29,
+      "difference": 48.047
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 29,
+      "difference": 49.492
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 29,
+      "difference": 62.01
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 29,
+      "difference": 34.001
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 29,
+      "difference": 31.672
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 29,
+      "difference": 34.335
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 29,
+      "difference": 27.355
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 29,
+      "difference": 52.478
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 29,
+      "difference": 40.967
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 29,
+      "difference": 42.923
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "camazotz-entry",
+      "hamming": 29,
+      "difference": 29.469
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "ahpuch-entry",
+      "hamming": 29,
+      "difference": 38.834
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 29,
+      "difference": 49.63
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "camazotz-entry",
+      "hamming": 29,
+      "difference": 38.238
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "zipacna-entry",
+      "hamming": 29,
+      "difference": 44.287
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 29,
+      "difference": 52.643
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 29,
+      "difference": 53.554
+    },
+    {
+      "a": "boss-ahpuch-final-rite/main",
+      "b": "zipacna-entry",
+      "hamming": 29,
+      "difference": 36.667
+    },
+    {
+      "a": "boss-ahpuch-final-rite/main",
+      "b": "ahpuch-entry",
+      "hamming": 29,
+      "difference": 39.964
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-bat-swarm/accent",
+      "hamming": 30,
+      "difference": 40.708
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 30,
+      "difference": 54.029
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-bat-swarm/main",
+      "hamming": 30,
+      "difference": 30.971
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-eclipse/main",
+      "hamming": 30,
+      "difference": 30.97
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 30,
+      "difference": 35.585
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 30,
+      "difference": 41.798
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 30,
+      "difference": 41.569
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 30,
+      "difference": 59.303
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 30,
+      "difference": 46.514
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 30,
+      "difference": 16.042
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 30,
+      "difference": 19.707
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 30,
+      "difference": 24.374
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 30,
+      "difference": 29.615
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 30,
+      "difference": 28.641
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "vucub-entry",
+      "hamming": 30,
+      "difference": 48.462
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 30,
+      "difference": 22.819
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 30,
+      "difference": 15.296
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 30,
+      "difference": 39.439
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 30,
+      "difference": 39.838
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 30,
+      "difference": 29.209
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 30,
+      "difference": 32.565
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 30,
+      "difference": 43.796
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 30,
+      "difference": 34.611
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 30,
+      "difference": 36.023
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 30,
+      "difference": 48.177
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "ahpuch-entry",
+      "hamming": 30,
+      "difference": 37.988
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 30,
+      "difference": 31.758
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 30,
+      "difference": 34.463
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 30,
+      "difference": 30.5
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 30,
+      "difference": 35.476
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 30,
+      "difference": 32.51
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 30,
+      "difference": 28.2
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 30,
+      "difference": 46.899
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 30,
+      "difference": 24.352
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 30,
+      "difference": 36.757
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 30,
+      "difference": 22.234
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 30,
+      "difference": 48.139
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 30,
+      "difference": 23.02
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 30,
+      "difference": 28.4
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 30,
+      "difference": 52.992
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 30,
+      "difference": 33.813
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 30,
+      "difference": 31.626
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 30,
+      "difference": 34.842
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 30,
+      "difference": 31.277
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 30,
+      "difference": 42.885
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 30,
+      "difference": 38.206
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 30,
+      "difference": 37.985
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 30,
+      "difference": 49.787
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 30,
+      "difference": 35.589
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 30,
+      "difference": 34.925
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 30,
+      "difference": 33.653
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 30,
+      "difference": 23.706
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 30,
+      "difference": 36.443
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 30,
+      "difference": 52.079
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 30,
+      "difference": 37.155
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 30,
+      "difference": 40.348
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 30,
+      "difference": 50.06
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "ahpuch-entry",
+      "hamming": 30,
+      "difference": 35.25
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 30,
+      "difference": 54.829
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 30,
+      "difference": 39.061
+    },
+    {
+      "a": "boss-vucub-zenith/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 30,
+      "difference": 45.24
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 30,
+      "difference": 34.11
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 30,
+      "difference": 45.781
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 30,
+      "difference": 48.452
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 30,
+      "difference": 50.259
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 30,
+      "difference": 51.101
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "camazotz-entry",
+      "hamming": 30,
+      "difference": 48.049
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/accent",
+      "b": "ahpuch-entry",
+      "hamming": 30,
+      "difference": 47.928
+    },
+    {
+      "a": "camazotz-entry",
+      "b": "ahpuch-entry",
+      "hamming": 30,
+      "difference": 40.727
+    },
+    {
+      "a": "camazotz",
+      "b": "zipacna",
+      "hamming": 31,
+      "difference": 23.546
+    },
+    {
+      "a": "zipacna",
+      "b": "ahpuch",
+      "hamming": 31,
+      "difference": 18.212
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 31,
+      "difference": 44.647
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "camazotz-entry",
+      "hamming": 31,
+      "difference": 44.602
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 31,
+      "difference": 43.73
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 31,
+      "difference": 43.805
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 31,
+      "difference": 49.619
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 31,
+      "difference": 24.975
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 31,
+      "difference": 40.111
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-sunbeam-sweep/accent",
+      "hamming": 31,
+      "difference": 35.043
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 31,
+      "difference": 34.464
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 31,
+      "difference": 16.618
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 31,
+      "difference": 23.906
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 31,
+      "difference": 32.827
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 31,
+      "difference": 26.693
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 31,
+      "difference": 36.672
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "camazotz-entry",
+      "hamming": 31,
+      "difference": 26.332
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "ahpuch-entry",
+      "hamming": 31,
+      "difference": 34.806
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 31,
+      "difference": 24.921
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "ahpuch-entry",
+      "hamming": 31,
+      "difference": 37.395
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-camazotz-eclipse/main",
+      "hamming": 31,
+      "difference": 22.558
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 31,
+      "difference": 24.797
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 31,
+      "difference": 20.606
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 31,
+      "difference": 52.5
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-fissure-line/accent",
+      "hamming": 31,
+      "difference": 27.296
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 31,
+      "difference": 50.043
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 31,
+      "difference": 58.362
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "ahpuch-entry",
+      "hamming": 31,
+      "difference": 37.849
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 31,
+      "difference": 35.017
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 31,
+      "difference": 21.745
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 31,
+      "difference": 48.898
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 31,
+      "difference": 42.555
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 31,
+      "difference": 26.723
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 31,
+      "difference": 35.394
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 31,
+      "difference": 42.2
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 31,
+      "difference": 28.765
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 31,
+      "difference": 40.206
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 31,
+      "difference": 38.339
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 31,
+      "difference": 31.74
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 31,
+      "difference": 26.44
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 31,
+      "difference": 26.76
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 31,
+      "difference": 47.406
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 31,
+      "difference": 43.108
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 31,
+      "difference": 31.588
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 31,
+      "difference": 33.368
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 31,
+      "difference": 43.357
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 31,
+      "difference": 33.401
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 31,
+      "difference": 47.047
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 31,
+      "difference": 49.3
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 31,
+      "difference": 48.487
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "camazotz-entry",
+      "hamming": 31,
+      "difference": 40.562
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 31,
+      "difference": 28.455
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 31,
+      "difference": 28.474
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 31,
+      "difference": 36.517
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 31,
+      "difference": 38.101
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 31,
+      "difference": 30.059
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 31,
+      "difference": 31.71
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 31,
+      "difference": 30.703
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 31,
+      "difference": 44.119
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 31,
+      "difference": 31.622
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 31,
+      "difference": 25.477
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "ahpuch-entry",
+      "hamming": 31,
+      "difference": 35.036
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "zipacna-entry",
+      "hamming": 31,
+      "difference": 26.629
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "ahpuch-entry",
+      "hamming": 31,
+      "difference": 36.492
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 31,
+      "difference": 47.851
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 31,
+      "difference": 41.44
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 31,
+      "difference": 39.407
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 31,
+      "difference": 49.876
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 31,
+      "difference": 29.586
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 31,
+      "difference": 39.003
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 31,
+      "difference": 32.695
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "camazotz-entry",
+      "hamming": 31,
+      "difference": 37.951
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 31,
+      "difference": 53.55
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "camazotz-entry",
+      "hamming": 31,
+      "difference": 54.564
+    },
+    {
+      "a": "boss-ahpuch-final-rite/accent",
+      "b": "zipacna-entry",
+      "hamming": 31,
+      "difference": 38.537
+    },
+    {
+      "a": "camazotz-entry",
+      "b": "vucub-entry",
+      "hamming": 31,
+      "difference": 55.264
+    },
+    {
+      "a": "camazotz",
+      "b": "ahpuch",
+      "hamming": 32,
+      "difference": 20.453
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-fissure-line/main",
+      "hamming": 32,
+      "difference": 40.852
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 32,
+      "difference": 47.555
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 32,
+      "difference": 43.318
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 32,
+      "difference": 39.473
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 32,
+      "difference": 49.705
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 32,
+      "difference": 64.323
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-camazotz-bat-swarm/accent",
+      "hamming": 32,
+      "difference": 29.626
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 32,
+      "difference": 38.833
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 32,
+      "difference": 49.573
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 32,
+      "difference": 21.826
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 32,
+      "difference": 26.795
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 32,
+      "difference": 10.752
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 32,
+      "difference": 36.656
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 32,
+      "difference": 30.093
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 32,
+      "difference": 23.381
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 32,
+      "difference": 31.026
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 32,
+      "difference": 32.918
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 32,
+      "difference": 38.526
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 32,
+      "difference": 27.228
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 32,
+      "difference": 21.393
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 32,
+      "difference": 28.388
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 32,
+      "difference": 33.083
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 32,
+      "difference": 26.882
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 32,
+      "difference": 39.437
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "camazotz-entry",
+      "hamming": 32,
+      "difference": 29.982
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 32,
+      "difference": 35.458
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 32,
+      "difference": 30.717
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 32,
+      "difference": 48.381
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 32,
+      "difference": 38.475
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 32,
+      "difference": 32.766
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "camazotz-entry",
+      "hamming": 32,
+      "difference": 25.476
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 32,
+      "difference": 35.349
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 32,
+      "difference": 34.474
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "zipacna-entry",
+      "hamming": 32,
+      "difference": 23.734
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 32,
+      "difference": 32.585
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 32,
+      "difference": 49.166
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 32,
+      "difference": 34.571
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 32,
+      "difference": 27.244
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 32,
+      "difference": 34.217
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 32,
+      "difference": 20.712
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "camazotz-entry",
+      "hamming": 32,
+      "difference": 34.522
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-vucub-sunbeam-sweep/main",
+      "hamming": 32,
+      "difference": 27.643
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 32,
+      "difference": 25.122
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 32,
+      "difference": 38.758
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "zipacna-entry",
+      "hamming": 32,
+      "difference": 27.037
+    },
+    {
+      "a": "boss-zipacna-avalanche/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 32,
+      "difference": 50.595
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 32,
+      "difference": 25.179
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 32,
+      "difference": 44.475
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 32,
+      "difference": 35.248
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 32,
+      "difference": 34.713
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 32,
+      "difference": 51.495
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 32,
+      "difference": 34.686
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 32,
+      "difference": 30.026
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 32,
+      "difference": 54.858
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "camazotz-entry",
+      "hamming": 32,
+      "difference": 35.486
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 32,
+      "difference": 51.159
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "zipacna-entry",
+      "hamming": 32,
+      "difference": 33.344
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 32,
+      "difference": 28.163
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 32,
+      "difference": 43.7
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "zipacna-entry",
+      "hamming": 32,
+      "difference": 27.518
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 32,
+      "difference": 47.527
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "vucub-entry",
+      "hamming": 32,
+      "difference": 57.894
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 32,
+      "difference": 45.057
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/accent",
+      "b": "zipacna-entry",
+      "hamming": 32,
+      "difference": 45.505
+    },
+    {
+      "a": "boss-ahpuch-final-rite/main",
+      "b": "vucub-entry",
+      "hamming": 32,
+      "difference": 57.401
+    },
+    {
+      "a": "vucub",
+      "b": "ahpuch",
+      "hamming": 33,
+      "difference": 25.757
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 33,
+      "difference": 44.059
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 33,
+      "difference": 47.321
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 33,
+      "difference": 48.104
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 33,
+      "difference": 39.709
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 33,
+      "difference": 27.712
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 33,
+      "difference": 26.408
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 33,
+      "difference": 18.455
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "ahpuch-entry",
+      "hamming": 33,
+      "difference": 32.619
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 33,
+      "difference": 30.589
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-avalanche/main",
+      "hamming": 33,
+      "difference": 29.994
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 33,
+      "difference": 45.135
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 33,
+      "difference": 54.367
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 33,
+      "difference": 26.008
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 33,
+      "difference": 35.235
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-stone-slam/main",
+      "hamming": 33,
+      "difference": 35.078
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 33,
+      "difference": 35.357
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 33,
+      "difference": 46.119
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 33,
+      "difference": 48.029
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "zipacna-entry",
+      "hamming": 33,
+      "difference": 31.649
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 33,
+      "difference": 33.463
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 33,
+      "difference": 40.127
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 33,
+      "difference": 28.718
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 33,
+      "difference": 35.77
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 33,
+      "difference": 43.707
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 33,
+      "difference": 29.074
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 33,
+      "difference": 35.857
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 33,
+      "difference": 45.29
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 33,
+      "difference": 40.308
+    },
+    {
+      "a": "boss-zipacna-stone-slam/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 33,
+      "difference": 40.318
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 33,
+      "difference": 32.228
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 33,
+      "difference": 25.229
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 33,
+      "difference": 30.995
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 33,
+      "difference": 24.493
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 33,
+      "difference": 32.204
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 33,
+      "difference": 28.455
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 33,
+      "difference": 43.01
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 33,
+      "difference": 42.179
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "zipacna-entry",
+      "hamming": 33,
+      "difference": 23.58
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 33,
+      "difference": 26.824
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 33,
+      "difference": 50.662
+    },
+    {
+      "a": "boss-vucub-feather-barrage/accent",
+      "b": "camazotz-entry",
+      "hamming": 33,
+      "difference": 37.625
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 33,
+      "difference": 31.983
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "zipacna-entry",
+      "hamming": 33,
+      "difference": 36.469
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "vucub-entry",
+      "hamming": 33,
+      "difference": 41.383
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 33,
+      "difference": 58.763
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 33,
+      "difference": 37.095
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 33,
+      "difference": 24.605
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "zipacna-entry",
+      "hamming": 33,
+      "difference": 23.715
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 33,
+      "difference": 38.652
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 33,
+      "difference": 44.009
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 33,
+      "difference": 49.276
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 33,
+      "difference": 43.691
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "zipacna-entry",
+      "hamming": 33,
+      "difference": 29.385
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 33,
+      "difference": 51.619
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-bat-swarm/main",
+      "hamming": 34,
+      "difference": 38.885
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-death-gaze/main",
+      "hamming": 34,
+      "difference": 33.839
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 34,
+      "difference": 42.182
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-bat-swarm/accent",
+      "hamming": 34,
+      "difference": 11.295
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-blood-dive/main",
+      "hamming": 34,
+      "difference": 13.844
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-eclipse/main",
+      "hamming": 34,
+      "difference": 16.593
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-second-sun/main",
+      "hamming": 34,
+      "difference": 39.711
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 34,
+      "difference": 22.464
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 34,
+      "difference": 36.018
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 34,
+      "difference": 26.719
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "vucub-entry",
+      "hamming": 34,
+      "difference": 45.656
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 34,
+      "difference": 33.052
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 34,
+      "difference": 27.799
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 34,
+      "difference": 26.274
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "zipacna-entry",
+      "hamming": 34,
+      "difference": 24.734
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 34,
+      "difference": 33.973
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 34,
+      "difference": 37.884
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "camazotz-entry",
+      "hamming": 34,
+      "difference": 40.719
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "camazotz-entry",
+      "hamming": 34,
+      "difference": 41.655
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 34,
+      "difference": 30.423
+    },
+    {
+      "a": "boss-zipacna-fissure-line/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 34,
+      "difference": 20.001
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 34,
+      "difference": 40.828
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 34,
+      "difference": 37.224
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "camazotz-entry",
+      "hamming": 34,
+      "difference": 43.626
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 34,
+      "difference": 36.457
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 34,
+      "difference": 23.842
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 34,
+      "difference": 42.564
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/main",
+      "b": "vucub-entry",
+      "hamming": 34,
+      "difference": 43.473
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "vucub-entry",
+      "hamming": 34,
+      "difference": 55.319
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 34,
+      "difference": 43.589
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-rock-rain/accent",
+      "hamming": 35,
+      "difference": 28.246
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 35,
+      "difference": 41.264
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 35,
+      "difference": 35.113
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-soul-drain/accent",
+      "hamming": 35,
+      "difference": 45.638
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 35,
+      "difference": 36.435
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-zipacna-avalanche/accent",
+      "hamming": 35,
+      "difference": 42.886
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 35,
+      "difference": 28.706
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-camazotz-eclipse/accent",
+      "hamming": 35,
+      "difference": 21.268
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 35,
+      "difference": 33.756
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-camazotz-twin-dive/accent",
+      "hamming": 35,
+      "difference": 35.658
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-stone-slam/accent",
+      "hamming": 35,
+      "difference": 33.585
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 35,
+      "difference": 36.341
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-zenith/accent",
+      "hamming": 35,
+      "difference": 42.877
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "camazotz-entry",
+      "hamming": 35,
+      "difference": 25.135
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-zipacna-rock-rain/main",
+      "hamming": 35,
+      "difference": 31.848
+    },
+    {
+      "a": "boss-camazotz-eclipse/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 35,
+      "difference": 42.168
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 35,
+      "difference": 45.352
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 35,
+      "difference": 43.058
+    },
+    {
+      "a": "boss-zipacna-stone-slam/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 35,
+      "difference": 29.726
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 35,
+      "difference": 35.674
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 35,
+      "difference": 43.293
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/main",
+      "b": "camazotz-entry",
+      "hamming": 35,
+      "difference": 36.912
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-second-sun/accent",
+      "hamming": 35,
+      "difference": 37.6
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 35,
+      "difference": 33.539
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "boss-ahpuch-summon-lords/accent",
+      "hamming": 35,
+      "difference": 36.289
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 35,
+      "difference": 43.441
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 35,
+      "difference": 30.627
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-summon-lords/main",
+      "hamming": 35,
+      "difference": 34.565
+    },
+    {
+      "a": "boss-ahpuch-xibalba-shift/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 35,
+      "difference": 58.745
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 36,
+      "difference": 26.6
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-bone-spear-ring/accent",
+      "hamming": 36,
+      "difference": 29.551
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 36,
+      "difference": 31.346
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 36,
+      "difference": 33.621
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-xibalba-shift/accent",
+      "hamming": 36,
+      "difference": 55.536
+    },
+    {
+      "a": "boss-zipacna-rock-rain/accent",
+      "b": "camazotz-entry",
+      "hamming": 36,
+      "difference": 40.674
+    },
+    {
+      "a": "boss-zipacna-fissure-line/accent",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 36,
+      "difference": 33.599
+    },
+    {
+      "a": "boss-zipacna-stone-armor/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 36,
+      "difference": 39.514
+    },
+    {
+      "a": "boss-zipacna-avalanche/main",
+      "b": "camazotz-entry",
+      "hamming": 36,
+      "difference": 40.01
+    },
+    {
+      "a": "boss-vucub-feather-barrage/main",
+      "b": "vucub-entry",
+      "hamming": 36,
+      "difference": 40.626
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 36,
+      "difference": 53.188
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 36,
+      "difference": 53.916
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/accent",
+      "b": "boss-vucub-zenith/main",
+      "hamming": 36,
+      "difference": 27.257
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 36,
+      "difference": 46.855
+    },
+    {
+      "a": "boss-vucub-second-sun/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 36,
+      "difference": 51.91
+    },
+    {
+      "a": "boss-vucub-second-sun/accent",
+      "b": "camazotz-entry",
+      "hamming": 36,
+      "difference": 53.937
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 36,
+      "difference": 42.123
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "vucub-entry",
+      "hamming": 36,
+      "difference": 46.693
+    },
+    {
+      "a": "boss-ahpuch-soul-drain/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 36,
+      "difference": 49.766
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/accent",
+      "b": "camazotz-entry",
+      "hamming": 37,
+      "difference": 31.158
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 37,
+      "difference": 26.338
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 37,
+      "difference": 34.345
+    },
+    {
+      "a": "boss-camazotz-blood-dive/main",
+      "b": "camazotz-entry",
+      "hamming": 37,
+      "difference": 29.905
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-zipacna-stone-armor/main",
+      "hamming": 37,
+      "difference": 37.387
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-feather-barrage/accent",
+      "hamming": 37,
+      "difference": 29.071
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 37,
+      "difference": 28.915
+    },
+    {
+      "a": "boss-zipacna-stone-armor/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 37,
+      "difference": 46.02
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 37,
+      "difference": 44.112
+    },
+    {
+      "a": "boss-ahpuch-death-gaze/accent",
+      "b": "boss-ahpuch-bone-spear-ring/main",
+      "hamming": 37,
+      "difference": 36.829
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 37,
+      "difference": 36.672
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-zipacna-stone-armor/accent",
+      "hamming": 38,
+      "difference": 26.368
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 38,
+      "difference": 43.363
+    },
+    {
+      "a": "boss-camazotz-blood-dive/accent",
+      "b": "boss-camazotz-twin-dive/main",
+      "hamming": 38,
+      "difference": 24.863
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-vucub-feather-barrage/main",
+      "hamming": 38,
+      "difference": 27.761
+    },
+    {
+      "a": "boss-camazotz-twin-dive/main",
+      "b": "boss-vucub-solar-flare-rings/accent",
+      "hamming": 38,
+      "difference": 32.177
+    },
+    {
+      "a": "boss-zipacna-rock-rain/main",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 38,
+      "difference": 37.832
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "camazotz-entry",
+      "hamming": 38,
+      "difference": 42.561
+    },
+    {
+      "a": "boss-ahpuch-bone-spear-ring/accent",
+      "b": "boss-ahpuch-xibalba-shift/main",
+      "hamming": 38,
+      "difference": 51.363
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/accent",
+      "b": "camazotz-entry",
+      "hamming": 38,
+      "difference": 44.049
+    },
+    {
+      "a": "camazotz-entry",
+      "b": "zipacna-entry",
+      "hamming": 38,
+      "difference": 37.984
+    },
+    {
+      "a": "boss-vucub-sunbeam-sweep/accent",
+      "b": "boss-ahpuch-final-rite/main",
+      "hamming": 39,
+      "difference": 49.043
+    },
+    {
+      "a": "boss-vucub-solar-flare-rings/main",
+      "b": "camazotz-entry",
+      "hamming": 39,
+      "difference": 43.767
+    },
+    {
+      "a": "boss-vucub-zenith/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 39,
+      "difference": 50.233
+    },
+    {
+      "a": "boss-ahpuch-summon-lords/main",
+      "b": "camazotz-entry",
+      "hamming": 39,
+      "difference": 41.034
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-camazotz-eclipse/main",
+      "hamming": 40,
+      "difference": 41.106
+    },
+    {
+      "a": "boss-camazotz-sonic-screech/main",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 40,
+      "difference": 47.351
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/accent",
+      "b": "boss-vucub-solar-flare-rings/main",
+      "hamming": 40,
+      "difference": 32.008
+    },
+    {
+      "a": "boss-camazotz-eclipse/main",
+      "b": "boss-ahpuch-death-gaze/accent",
+      "hamming": 42,
+      "difference": 29.366
+    },
+    {
+      "a": "boss-ahpuch-final-rite/main",
+      "b": "boss-ahpuch-final-rite/accent",
+      "hamming": 42,
+      "difference": 50.465
+    },
+    {
+      "a": "boss-camazotz-twin-dive/accent",
+      "b": "boss-ahpuch-soul-drain/main",
+      "hamming": 43,
+      "difference": 52.12
+    },
+    {
+      "a": "boss-ahpuch-final-rite/main",
+      "b": "camazotz-entry",
+      "hamming": 43,
+      "difference": 42.586
+    },
+    {
+      "a": "boss-camazotz-bat-swarm/main",
+      "b": "zipacna-entry",
+      "hamming": 47,
+      "difference": 23.963
+    }
+  ],
+  "errors": []
+}

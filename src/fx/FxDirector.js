@@ -20,7 +20,7 @@ export class FxDirector {
       for (const still of recipe.stills) {
         const key = textureKey(id, still);
         if (scene.textures.exists(key)) continue;
-        scene.load.image(key, `${base}assets/pixel/fx/${id}/${still}.png`);
+        scene.load.image(key, `${base}assets/pixel/fx/${recipe.files?.[still]||`${id}/${still}.png`}`);
         loaded += 1;
       }
     }

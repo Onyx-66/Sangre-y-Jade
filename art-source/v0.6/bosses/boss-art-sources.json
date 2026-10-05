@@ -1,0 +1,417 @@
+[
+  {
+    "id": "camazotz",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-7c3ee619-3c45-4fc8-b055-5e13816a88ad.png",
+    "prompt": "Create ONE production pixel-art boss animation sheet, requested gpt-image-2.5 Flare. Square 2048x2048, exactly 4 rows x 4 columns of 512px cells, EXACTLY SIXTEEN distinct poses of ONE identical character. Input image is the existing boss-design reference, NOT a layout to copy. Crisp deliberate pixel edges, rich warm Maya fantasy, gold and jade accents. Flat solid magenta #FF00FF around and between each sprite, no floor line, no text, numbers, watermark or UI frames. Every pose SIDE VIEW FACING RIGHT, same palette/clothes/equipment/proportions/pixel scale. Entire figure, wings and staff inside the cell, generous 40px gutter. Root centred x=256, same ground baseline y=448. No painted ground shadow. Do not magnify crouched/death remnants. Reading order: row1 idle-0 neutral, idle-1 breathing, walk-0, walk-1; row2 walk-2, walk-3, windup-0 preparation, windup-1 strongest anticipation; row3 attack-0, attack-1 follow through, recover settle, hurt recoil; row4 death-0 collapse, death-1 further collapse, death-2 dissolving fragments, death-3 small remaining fragments NOT another living character. Consistent identity,16 readable animation poses. This is a sprite sheet, no environment.\nCharacter: Preserve the first row reference design: muscular dark purple bat demon with an ivory skull face, long fangs, tall bat ears, broad purple/magenta membranous wings, clawed hands and feet, gold Maya jewelry and a large jade chest medallion. More detailed and menacing but SAME recognizable Death Bat, not a different monster. Windup: spreads both wings high, draws head back to screech. Attack: open fanged skull jaws screeching then swept-wing forward blood dive. Death: wings fold, collapses then violet fragments.",
+    "modelRequested": "gpt-image-2.5 Flare",
+    "mode": "built-in",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "zipacna",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-dffdcbd4-6498-41af-91e9-067fe927b7f6.png",
+    "prompt": "Create ONE production pixel-art boss animation sheet, requested gpt-image-2.5 Flare. Square 2048x2048, exactly 4 rows x 4 columns of 512px cells, EXACTLY SIXTEEN distinct poses of ONE identical character. Input image is the existing boss-design reference, NOT a layout to copy. Crisp deliberate pixel edges, rich warm Maya fantasy, gold and jade accents. Flat solid magenta #FF00FF around and between each sprite, no floor line, no text, numbers, watermark or UI frames. Every pose SIDE VIEW FACING RIGHT, same palette/clothes/equipment/proportions/pixel scale. Entire figure, wings and staff inside the cell, generous 40px gutter. Root centred x=256, same ground baseline y=448. No painted ground shadow. Do not magnify crouched/death remnants. Reading order: row1 idle-0 neutral, idle-1 breathing, walk-0, walk-1; row2 walk-2, walk-3, windup-0 preparation, windup-1 strongest anticipation; row3 attack-0, attack-1 follow through, recover settle, hurt recoil; row4 death-0 collapse, death-1 further collapse, death-2 dissolving fragments, death-3 small remaining fragments NOT another living character. Consistent identity,16 readable animation poses. This is a sprite sheet, no environment.\nCharacter: Preserve the second row reference design: massive stocky crocodilian earth giant, long toothy golden-brown reptile snout, squat clawed legs, curved armored tail, huge dark stone slab back and shoulder plates with moss, gold Maya jewelry and jade pendants. More detailed and menacing, SAME recognizable Earth-Shaker. Windup: raises giant rock fist overhead. Attack: heavy fist ground slam followed through, rock dust attached to fist. Death: falls and crumbles progressively into stone fragments.",
+    "modelRequested": "gpt-image-2.5 Flare",
+    "mode": "built-in",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "vucub",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-1172628c-1290-4b01-90eb-640d8bbf2098.png",
+    "prompt": "Create ONE production pixel-art boss animation sheet, requested gpt-image-2.5 Flare. Square 2048x2048, exactly 4 rows x 4 columns of 512px cells, EXACTLY SIXTEEN distinct poses of ONE identical character. Input image is the existing boss-design reference, NOT a layout to copy. Crisp deliberate pixel edges, rich warm Maya fantasy, gold and jade accents. Flat solid magenta #FF00FF around and between each sprite, no floor line, no text, numbers, watermark or UI frames. Every pose SIDE VIEW FACING RIGHT, same palette/clothes/equipment/proportions/pixel scale. Entire figure, wings and staff inside the cell, generous 40px gutter. Root centred x=256, same ground baseline y=448. No painted ground shadow. Do not magnify crouched/death remnants. Reading order: row1 idle-0 neutral, idle-1 breathing, walk-0, walk-1; row2 walk-2, walk-3, windup-0 preparation, windup-1 strongest anticipation; row3 attack-0, attack-1 follow through, recover settle, hurt recoil; row4 death-0 collapse, death-1 further collapse, death-2 dissolving fragments, death-3 small remaining fragments NOT another living character. Consistent identity,16 readable animation poses. This is a sprite sheet, no environment.\nCharacter: Preserve the third row reference design: towering red macaw-like Maya bird lord with black curved beak, amber/gold/red/blue feather crest, large wing arms with blue feathers, long curling teal tail plumes, claw feet, ornate gold headdress, jade chest medallion. More detailed and arrogant menacing, SAME recognizable False Sun. Windup: spreads glorious feathers and glows gold. Attack: fully spread glowing wing feathers, beak open and golden beam casting; then landing posture. Death: collapses and separates into golden red blue feather remnants.\nTARGETED CORRECTION, requested Sunburst for this near miss: preserve this same macaw character and all sixteen poses. Increase every cell's empty magenta margin to 75px, including the windup/attack rows and ALL sparkles. Each full figure including wings, tail, and beam must fit in the central 360x360px of its 512x512px cell. The beam on attack-0 and attack-1 is SHORT and contained, no longer than 70px beyond the beak, never touching an adjacent figure. There MUST be an uninterrupted solid magenta gutter separating every neighbouring sprite in all four rows. Do not draw a long beam connecting cells. Do not combine two figures in one cell. No floor line/text.",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "built-in",
+    "date": "2026-10-05",
+    "rejected": [
+      "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-fe5c818e-cddb-40e9-86fa-ea788ff8520a.png"
+    ]
+  },
+  {
+    "id": "ahpuch",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-e2a1d177-17df-4663-b602-79e0387400fd.png",
+    "prompt": "Create ONE production pixel-art boss animation sheet, requested gpt-image-2.5 Flare. Square 2048x2048, exactly 4 rows x 4 columns of 512px cells, EXACTLY SIXTEEN distinct poses of ONE identical character. Input image is the existing boss-design reference, NOT a layout to copy. Crisp deliberate pixel edges, rich warm Maya fantasy, gold and jade accents. Flat solid magenta #FF00FF around and between each sprite, no floor line, no text, numbers, watermark or UI frames. Every pose SIDE VIEW FACING RIGHT, same palette/clothes/equipment/proportions/pixel scale. Entire figure, wings and staff inside the cell, generous 40px gutter. Root centred x=256, same ground baseline y=448. No painted ground shadow. Do not magnify crouched/death remnants. Reading order: row1 idle-0 neutral, idle-1 breathing, walk-0, walk-1; row2 walk-2, walk-3, windup-0 preparation, windup-1 strongest anticipation; row3 attack-0, attack-1 follow through, recover settle, hurt recoil; row4 death-0 collapse, death-1 further collapse, death-2 dissolving fragments, death-3 small remaining fragments NOT another living character. Consistent identity,16 readable animation poses. This is a sprite sheet, no environment.\nCharacter: Preserve the fourth row reference design: tall ivory skeletal Maya underworld lord, long skull face with jade glowing eyes, bone spine/feather-like crown, ragged dark violet black robes with gold jade chest ornaments, long skull-topped staff with green ghost flame. More detailed and menacing, SAME recognizable Lord of Xibalba. Windup: raises skull staff, green eyes charging. Attack: skull staff thrusts to the right casting green death magic, then wide ritual posture. Death: collapses, robes decay and ivory bones dissolve into green wisps.",
+    "modelRequested": "gpt-image-2.5 Flare",
+    "mode": "built-in",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "effects-1",
+    "items": [
+      {
+        "file": "fx/boss-entry/camazotz-entry.png",
+        "size": 512,
+        "brief": "hundreds of small black-violet bat silhouettes forming one spiral storm cloud, hollow swirling centre, gold-free night palette"
+      },
+      {
+        "file": "fx/boss-entry/zipacna-entry.png",
+        "size": 512,
+        "brief": "top-down jagged golden-brown ground cracks spreading from one central hole, grey rocks rising around it, dust"
+      },
+      {
+        "file": "fx/boss-entry/vucub-entry.png",
+        "size": 512,
+        "brief": "blinding golden false sun with a white-hot core and long feather-shaped red-gold rays"
+      },
+      {
+        "file": "fx/boss-entry/ahpuch-entry.png",
+        "size": 512,
+        "brief": "round underworld gate seen on the ground in 3/4 top-down perspective, carved ivory skull relief rim, jade green light emerging"
+      },
+      {
+        "file": "fx/boss-camazotz-sonic-screech/main.png",
+        "size": 256,
+        "brief": "three concentric violet sound-wave arcs facing right, lavender bright cores, open curved wave silhouette"
+      },
+      {
+        "file": "fx/boss-camazotz-sonic-screech/accent.png",
+        "size": 256,
+        "brief": "single dark bat HEAD silhouette in a violet screech wave, tiny white eyes, not a full boss"
+      },
+      {
+        "file": "fx/boss-camazotz-bat-swarm/main.png",
+        "size": 256,
+        "brief": "flock of six small dark purple bats arranged in a readable V formation"
+      },
+      {
+        "file": "fx/boss-camazotz-bat-swarm/accent.png",
+        "size": 256,
+        "brief": "ONE small shadow bat silhouette with two glowing violet-white eyes, wings spread"
+      },
+      {
+        "file": "fx/boss-camazotz-blood-dive/main.png",
+        "size": 256,
+        "brief": "ONE horizontal crimson speed streak with sharp dark bat wing shapes, bright blood-red core, pointed right end"
+      },
+      {
+        "file": "fx/boss-camazotz-blood-dive/accent.png",
+        "size": 256,
+        "brief": "dark crimson blood splash connected to a short blood trail, splattered droplets, top-down"
+      },
+      {
+        "file": "fx/boss-camazotz-eclipse/main.png",
+        "size": 256,
+        "brief": "dark violet vignette RING, black-violet feathered outer rim, hollow empty magenta centre, no filled disc"
+      },
+      {
+        "file": "fx/boss-camazotz-eclipse/accent.png",
+        "size": 256,
+        "brief": "ONLY a pair of sinister glowing WHITE eyes surrounded by a small dark violet mist, no face or character"
+      },
+      {
+        "file": "fx/boss-camazotz-twin-dive/main.png",
+        "size": 256,
+        "brief": "TWO diagonal crossing crimson winged speed streaks forming one bright X, not a single straight streak"
+      },
+      {
+        "file": "fx/boss-camazotz-twin-dive/accent.png",
+        "size": 256,
+        "brief": "crimson impact star with sharp angular red shards radiating out"
+      },
+      {
+        "file": "fx/boss-zipacna-stone-slam/main.png",
+        "size": 256,
+        "brief": "top-down cracked stone circle with grey raised slabs around the rim, brown-gold glowing central crack"
+      },
+      {
+        "file": "fx/boss-zipacna-stone-slam/accent.png",
+        "size": 256,
+        "brief": "dense ochre dust and grey gravel burst, no stone circle"
+      }
+    ],
+    "prompt": "Use case: stylized-concept. Production Maya fantasy game EFFECT STILL sheet, requested gpt-image-2.5 Flare. ONE square image 2048x2048 pixels, exactly FOUR rows and FOUR columns of 512x512 cells. 16 separate effects in reading order; no empty cells. Flat solid magenta #FF00FF around and between the objects, no background gradient. Every effect has a 40px clear margin on ALL sides, entirely contained in its own cell, centred. Crisp pixel-art edges and sparse dark outlines, luminous bright cores like the supplied EFFECT STYLE reference. This is not an animation frame sheet: each cell is ONE different isolated object. NO UI frames, no full characters, no text, letters, numbers or watermark; ornamental Maya glyph shapes only where explicitly requested. Preserve clearly distinct silhouettes and palettes. Input 1 is an EFFECT style reference, not a layout.\nCells in strict left-to-right, top-to-bottom order:\n1. hundreds of small black-violet bat silhouettes forming one spiral storm cloud, hollow swirling centre, gold-free night palette.\n2. top-down jagged golden-brown ground cracks spreading from one central hole, grey rocks rising around it, dust.\n3. blinding golden false sun with a white-hot core and long feather-shaped red-gold rays.\n4. round underworld gate seen on the ground in 3/4 top-down perspective, carved ivory skull relief rim, jade green light emerging.\n5. three concentric violet sound-wave arcs facing right, lavender bright cores, open curved wave silhouette.\n6. single dark bat HEAD silhouette in a violet screech wave, tiny white eyes, not a full boss.\n7. flock of six small dark purple bats arranged in a readable V formation.\n8. ONE small shadow bat silhouette with two glowing violet-white eyes, wings spread.\n9. ONE horizontal crimson speed streak with sharp dark bat wing shapes, bright blood-red core, pointed right end.\n10. dark crimson blood splash connected to a short blood trail, splattered droplets, top-down.\n11. dark violet vignette RING, black-violet feathered outer rim, hollow empty magenta centre, no filled disc.\n12. ONLY a pair of sinister glowing WHITE eyes surrounded by a small dark violet mist, no face or character.\n13. TWO diagonal crossing crimson winged speed streaks forming one bright X, not a single straight streak.\n14. crimson impact star with sharp angular red shards radiating out.\n15. top-down cracked stone circle with grey raised slabs around the rim, brown-gold glowing central crack.\n16. dense ochre dust and grey gravel burst, no stone circle.\nQUALITY REPAIR for a near-miss sheet: preserve every existing subject and its reading-order cell. Recreate clean glowing pixel art with genuine transparent alpha and EMPTY gutters, no magenta matte fringe, no bright pink outlines, no stray pink pixels. The purple/violet palette is cool blue-violet, not magenta. Every object is fully within its cell with at least 50px clear margins. Request gpt-image-2.5 Sunburst for this single near-miss correction. Transparent alpha REPLACES the template magenta background.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-b776d8bc-da2f-4de8-8af8-4dea59c7b84c.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "built-in",
+    "date": "2026-10-05",
+    "rejected": [
+      "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-903b4786-8dd2-495c-8f77-29fe8312221e.png"
+    ],
+    "background": "transparent"
+  },
+  {
+    "id": "effects-2",
+    "items": [
+      {
+        "file": "fx/boss-zipacna-rock-rain/main.png",
+        "size": 256,
+        "brief": "ONE falling grey-brown boulder with vertical motion lines above it"
+      },
+      {
+        "file": "fx/boss-zipacna-rock-rain/accent.png",
+        "size": 256,
+        "brief": "boulder impact crater with large sharp grey rock debris bursting sideways and dust"
+      },
+      {
+        "file": "fx/boss-zipacna-fissure-line/main.png",
+        "size": 256,
+        "brief": "horizontal glowing amber ground crack line with rising spikes of grey rock along it, top-down"
+      },
+      {
+        "file": "fx/boss-zipacna-fissure-line/accent.png",
+        "size": 256,
+        "brief": "ONE triangular grey-brown rock spike close-up with gold rim light"
+      },
+      {
+        "file": "fx/boss-zipacna-stone-armor/main.png",
+        "size": 256,
+        "brief": "shimmering overlapping dark grey stone plate overlay, rectangular armored plates, pale jade seam glow"
+      },
+      {
+        "file": "fx/boss-zipacna-stone-armor/accent.png",
+        "size": 256,
+        "brief": "ONE glowing HEART STONE crystal, faceted green jade heart core inside grey rock, gold rim light"
+      },
+      {
+        "file": "fx/boss-zipacna-avalanche/main.png",
+        "size": 256,
+        "brief": "cluster of falling grey-brown rocks of different sizes with flowing ochre dust, no crater"
+      },
+      {
+        "file": "fx/boss-zipacna-avalanche/accent.png",
+        "size": 256,
+        "brief": "wide low spreading dust cloud at an arena edge, hazy ochre curls and small pebbles"
+      },
+      {
+        "file": "fx/boss-vucub-sunbeam-sweep/main.png",
+        "size": 256,
+        "brief": "straight horizontal thick golden beam with white-hot core, clean parallel edges, pointing right"
+      },
+      {
+        "file": "fx/boss-vucub-sunbeam-sweep/accent.png",
+        "size": 256,
+        "brief": "gold-white beam origin flare, concentrated bright lens-star with short gold rays"
+      },
+      {
+        "file": "fx/boss-vucub-feather-barrage/main.png",
+        "size": 256,
+        "brief": "ONE sharp golden-red feather projectile angled horizontally to the right, gold bright edge"
+      },
+      {
+        "file": "fx/boss-vucub-feather-barrage/accent.png",
+        "size": 256,
+        "brief": "gold and red feather burst on hit, small separated feather shards"
+      },
+      {
+        "file": "fx/boss-vucub-solar-flare-rings/main.png",
+        "size": 256,
+        "brief": "thin golden expanding circular ring with small flame flares on rim, hollow empty centre, TWO opposite clear gaps at left and right"
+      },
+      {
+        "file": "fx/boss-vucub-solar-flare-rings/accent.png",
+        "size": 256,
+        "brief": "small curved gold-white ring GAP sparkle, two tiny stars along a short arc, NOT a complete ring"
+      },
+      {
+        "file": "fx/boss-vucub-second-sun/main.png",
+        "size": 256,
+        "brief": "small glowing orange-gold sun ORB with white core and short sharp rays, round compact silhouette"
+      },
+      {
+        "file": "fx/boss-vucub-second-sun/accent.png",
+        "size": 256,
+        "brief": "sun orb bursting outward into orange-gold fiery fragments"
+      }
+    ],
+    "prompt": "Use case: stylized-concept. Production Maya fantasy game EFFECT STILL sheet, requested gpt-image-2.5 Flare. ONE square image 2048x2048 pixels, exactly FOUR rows and FOUR columns of 512x512 cells. 16 separate effects in reading order; no empty cells. Flat solid magenta #FF00FF around and between the objects, no background gradient. Every effect has a 40px clear margin on ALL sides, entirely contained in its own cell, centred. Crisp pixel-art edges and sparse dark outlines, luminous bright cores like the supplied EFFECT STYLE reference. This is not an animation frame sheet: each cell is ONE different isolated object. NO UI frames, no full characters, no text, letters, numbers or watermark; ornamental Maya glyph shapes only where explicitly requested. Preserve clearly distinct silhouettes and palettes. Input 1 is an EFFECT style reference, not a layout.\nCells in strict left-to-right, top-to-bottom order:\n1. ONE falling grey-brown boulder with vertical motion lines above it.\n2. boulder impact crater with large sharp grey rock debris bursting sideways and dust.\n3. horizontal glowing amber ground crack line with rising spikes of grey rock along it, top-down.\n4. ONE triangular grey-brown rock spike close-up with gold rim light.\n5. shimmering overlapping dark grey stone plate overlay, rectangular armored plates, pale jade seam glow.\n6. ONE glowing HEART STONE crystal, faceted green jade heart core inside grey rock, gold rim light.\n7. cluster of falling grey-brown rocks of different sizes with flowing ochre dust, no crater.\n8. wide low spreading dust cloud at an arena edge, hazy ochre curls and small pebbles.\n9. straight horizontal thick golden beam with white-hot core, clean parallel edges, pointing right.\n10. gold-white beam origin flare, concentrated bright lens-star with short gold rays.\n11. ONE sharp golden-red feather projectile angled horizontally to the right, gold bright edge.\n12. gold and red feather burst on hit, small separated feather shards.\n13. thin golden expanding circular ring with small flame flares on rim, hollow empty centre, TWO opposite clear gaps at left and right.\n14. small curved gold-white ring GAP sparkle, two tiny stars along a short arc, NOT a complete ring.\n15. small glowing orange-gold sun ORB with white core and short sharp rays, round compact silhouette.\n16. sun orb bursting outward into orange-gold fiery fragments.\nQUALITY REPAIR: the supplied reference is the previous near-miss sheet. Preserve its 16 subjects and reading order and their proportions, but redraw ALL effects on genuine transparent alpha with empty gutters. No magenta or pink outline, spark, halo, shadow or matte contamination anywhere. ZIPACNA only ochre/tan/gray/brown/green heart stones; VUCUB only gold/white/warm RED not pink. All subjects and both endpoints fully inside each cell, 75px clear margins. This single near-miss sheet requests gpt-image-2.5 Sunburst. Use transparent background instead of magenta for this corrected result.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-860921d9-6bc5-4087-9d38-d0d4c3c1dc67.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05",
+    "rejected": [
+      "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-a84476dd-7676-4630-be63-688bae222958.png"
+    ],
+    "background": "transparent"
+  },
+  {
+    "id": "effects-3",
+    "items": [
+      {
+        "file": "fx/boss-vucub-zenith/main.png",
+        "size": 256,
+        "brief": "vertical column of white-gold light falling from above into a ground circle, tall pillar silhouette"
+      },
+      {
+        "file": "fx/boss-vucub-zenith/accent.png",
+        "size": 256,
+        "brief": "flat top-down golden crash shockwave circle with radiating gold ground cracks"
+      },
+      {
+        "file": "fx/boss-ahpuch-death-gaze/main.png",
+        "size": 256,
+        "brief": "narrow horizontal green-white LASER beam with a tiny skull-shaped bright flare at its LEFT origin"
+      },
+      {
+        "file": "fx/boss-ahpuch-death-gaze/accent.png",
+        "size": 256,
+        "brief": "paired skull eye sockets charging with bright jade green light, only eye-socket glow object not full skull staff"
+      },
+      {
+        "file": "fx/boss-ahpuch-bone-spear-ring/main.png",
+        "size": 256,
+        "brief": "ONE ivory bone spear erupting UPWARD from a small ground hole, distinct pointed skull-bone tip"
+      },
+      {
+        "file": "fx/boss-ahpuch-bone-spear-ring/accent.png",
+        "size": 256,
+        "brief": "ring of brown dust and broken ivory bone fragments, open hollow centre"
+      },
+      {
+        "file": "fx/boss-ahpuch-soul-drain/main.png",
+        "size": 256,
+        "brief": "PURPLE swirling vortex with a deep hollow centre, spiraling lavender bright tendrils"
+      },
+      {
+        "file": "fx/boss-ahpuch-soul-drain/accent.png",
+        "size": 256,
+        "brief": "three pale violet soul wisps flowing INWARD toward one point, tapered ghost flames"
+      },
+      {
+        "file": "fx/boss-ahpuch-summon-lords/main.png",
+        "size": 256,
+        "brief": "green PORTAL RING with ivory skulls along the rim, upright round portal silhouette, hollow centre"
+      },
+      {
+        "file": "fx/boss-ahpuch-summon-lords/accent.png",
+        "size": 256,
+        "brief": "jade-green portal flash, sharp small green energy petals and pale skull spark"
+      },
+      {
+        "file": "fx/boss-ahpuch-xibalba-shift/main.png",
+        "size": 256,
+        "brief": "square seamless-ish jade GREEN FOG texture, soft turbulent opaque green mist pattern, no character, mist rectangle separated from magenta by margin"
+      },
+      {
+        "file": "fx/boss-ahpuch-xibalba-shift/accent.png",
+        "size": 256,
+        "brief": "safe LIGHT CIRCLE with white-green soft rim glow, quiet pale interior, top-down flat circle"
+      },
+      {
+        "file": "fx/boss-ahpuch-final-rite/main.png",
+        "size": 256,
+        "brief": "huge green-black RUNE CIRCLE with exactly eight abstract carved Maya warning glyphs evenly on rim, bright jade concentric lines, hollow centre; glyphs are ornamental shapes NOT letters or numerals"
+      },
+      {
+        "file": "fx/boss-ahpuch-final-rite/accent.png",
+        "size": 256,
+        "brief": "massive green-white blast burst, sharp white core surrounded by black-green angular rays"
+      }
+    ],
+    "prompt": "Use case: stylized-concept. Production Maya fantasy game EFFECT STILL sheet, requested gpt-image-2.5 Flare. ONE square image 2048x2048 pixels, exactly FOUR rows and FOUR columns of 512x512 cells. 14 separate effects in reading order; leave the last two cells solid magenta and empty. Flat solid magenta #FF00FF around and between the objects, no background gradient. Every effect has a 40px clear margin on ALL sides, entirely contained in its own cell, centred. Crisp pixel-art edges and sparse dark outlines, luminous bright cores like the supplied EFFECT STYLE reference. This is not an animation frame sheet: each cell is ONE different isolated object. NO UI frames, no full characters, no text, letters, numbers or watermark; ornamental Maya glyph shapes only where explicitly requested. Preserve clearly distinct silhouettes and palettes. Input 1 is an EFFECT style reference, not a layout.\nCells in strict left-to-right, top-to-bottom order:\n1. vertical column of white-gold light falling from above into a ground circle, tall pillar silhouette.\n2. flat top-down golden crash shockwave circle with radiating gold ground cracks.\n3. narrow horizontal green-white LASER beam with a tiny skull-shaped bright flare at its LEFT origin.\n4. paired skull eye sockets charging with bright jade green light, only eye-socket glow object not full skull staff.\n5. ONE ivory bone spear erupting UPWARD from a small ground hole, distinct pointed skull-bone tip.\n6. ring of brown dust and broken ivory bone fragments, open hollow centre.\n7. PURPLE swirling vortex with a deep hollow centre, spiraling lavender bright tendrils.\n8. three pale violet soul wisps flowing INWARD toward one point, tapered ghost flames.\n9. green PORTAL RING with ivory skulls along the rim, upright round portal silhouette, hollow centre.\n10. jade-green portal flash, sharp small green energy petals and pale skull spark.\n11. square seamless-ish jade GREEN FOG texture, soft turbulent opaque green mist pattern, no character, mist rectangle separated from magenta by margin.\n12. safe LIGHT CIRCLE with white-green soft rim glow, quiet pale interior, top-down flat circle.\n13. huge green-black RUNE CIRCLE with exactly eight abstract carved Maya warning glyphs evenly on rim, bright jade concentric lines, hollow centre; glyphs are ornamental shapes NOT letters or numerals.\n14. massive green-white blast burst, sharp white core surrounded by black-green angular rays.\nQUALITY REPAIR for a near-miss sheet: preserve every existing subject and its reading-order cell. Recreate clean glowing pixel art with genuine transparent alpha and EMPTY gutters, no magenta matte fringe, no bright pink outlines, no stray pink pixels. The purple/violet palette is cool blue-violet, not magenta. Every object is fully within its cell with at least 50px clear margins. Cells 15 and 16 must remain entirely empty alpha. Request gpt-image-2.5 Sunburst for this single near-miss correction. Transparent alpha REPLACES the template magenta background.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-875d5040-d4a7-497b-9a24-ec39aa999dc9.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05",
+    "rejected": [
+      "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-495c7fd7-7dba-4e17-9b2d-5c0b620677eb.png"
+    ],
+    "background": "transparent"
+  },
+  {
+    "id": "fix-sunbeam",
+    "items": [
+      {
+        "file": "fx/boss-vucub-sunbeam-sweep/main.png",
+        "size": 256,
+        "brief": "horizontal straight thick golden beam with a white core and a visible ROUND capped light origin on LEFT, tapered right end, FULLY CONTAINED long beam, no cropping at either endpoint"
+      }
+    ],
+    "columns": 1,
+    "rows": 1,
+    "background": "transparent",
+    "prompt": "Use case: stylized-concept. Targeted near-miss correction requested gpt-image-2.5 Sunburst. Create ONE isolated pixel-art Maya fantasy ability EFFECT STILL with genuine transparent alpha background (no coloured matte, no floor/environment, no UI border/text/letters/numbers/watermark). Subject: horizontal straight thick golden beam with a white core and a visible ROUND capped light origin on LEFT, tapered right end, FULLY CONTAINED long beam, no cropping at either endpoint. Match the supplied effect style reference, crisp intentionally pixelated edges, single object centred, bright core only where appropriate. Entire object must fit inside the central 75% of the square image, at least 12.5% transparent margin on ALL sides. Especially keep both endpoints visible. No edge of the image may cut off the subject.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-bfc98e21-b78f-42fa-891b-7c7de577dff9.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "fix-zenith",
+    "items": [
+      {
+        "file": "fx/boss-vucub-zenith/main.png",
+        "size": 256,
+        "brief": "a vertical column of white-gold light falling onto a flat ground circle, with a visible rounded glowing cap at TOP, ENTIRE column including top cap in the image, no cropping"
+      }
+    ],
+    "columns": 1,
+    "rows": 1,
+    "background": "transparent",
+    "prompt": "Use case: stylized-concept. Targeted near-miss correction requested gpt-image-2.5 Sunburst. Create ONE isolated pixel-art Maya fantasy ability EFFECT STILL with genuine transparent alpha background (no coloured matte, no floor/environment, no UI border/text/letters/numbers/watermark). Subject: a vertical column of white-gold light falling onto a flat ground circle, with a visible rounded glowing cap at TOP, ENTIRE column including top cap in the image, no cropping. Match the supplied effect style reference, crisp intentionally pixelated edges, single object centred, bright core only where appropriate. Entire object must fit inside the central 75% of the square image, at least 12.5% transparent margin on ALL sides. Especially keep both endpoints visible. No edge of the image may cut off the subject.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-69734cc9-1c87-4d09-836e-075a76e7e815.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "fix-deathgaze",
+    "items": [
+      {
+        "file": "fx/boss-ahpuch-death-gaze/main.png",
+        "size": 256,
+        "brief": "thin straight horizontal green-white laser with tiny skull-shaped green flare at LEFT origin and a visible tapered tip at RIGHT, both ends fully visible"
+      }
+    ],
+    "columns": 1,
+    "rows": 1,
+    "background": "transparent",
+    "prompt": "Use case: stylized-concept. Targeted near-miss correction requested gpt-image-2.5 Sunburst. Create ONE isolated pixel-art Maya fantasy ability EFFECT STILL with genuine transparent alpha background (no coloured matte, no floor/environment, no UI border/text/letters/numbers/watermark). Subject: thin straight horizontal green-white laser with tiny skull-shaped green flare at LEFT origin and a visible tapered tip at RIGHT, both ends fully visible. Match the supplied effect style reference, crisp intentionally pixelated edges, single object centred, bright core only where appropriate. Entire object must fit inside the central 75% of the square image, at least 12.5% transparent margin on ALL sides. Especially keep both endpoints visible. No edge of the image may cut off the subject.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-8ce20a83-4715-4244-a7d5-d69296cc5488.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "fix-dust",
+    "items": [
+      {
+        "file": "fx/boss-zipacna-stone-slam/accent.png",
+        "size": 256,
+        "brief": "opaque warm OCHRE and TAN dust/gravel burst with grey pebbles, crisp brown pixel outline, NO pink/purple/magenta in the object or around its edges, no coloured background contamination"
+      }
+    ],
+    "columns": 1,
+    "rows": 1,
+    "background": "transparent",
+    "prompt": "Use case: stylized-concept. Targeted near-miss correction requested gpt-image-2.5 Sunburst. Create ONE isolated pixel-art Maya fantasy ability EFFECT STILL with genuine transparent alpha background (no coloured matte, no floor/environment, no UI border/text/letters/numbers/watermark). Subject: opaque warm OCHRE and TAN dust/gravel burst with grey pebbles, crisp brown pixel outline, NO pink/purple/magenta in the object or around its edges, no coloured background contamination. Match the supplied effect style reference, crisp intentionally pixelated edges, single object centred, bright core only where appropriate. Entire object must fit inside the central 75% of the square image, at least 12.5% transparent margin on ALL sides. Especially keep both endpoints visible. No edge of the image may cut off the subject.",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-e0be776f-f591-4c25-b6a6-f18b838cd95b.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "fix-finalrite",
+    "items": [
+      {
+        "file": "fx/boss-ahpuch-final-rite/main.png",
+        "size": 256,
+        "brief": "huge round green-black rune circle with exactly EIGHT evenly spaced medallion glyphs"
+      }
+    ],
+    "prompt": "Quality repair of one near-miss with gpt-image-2.5 Sunburst requested. ONE isolated glowing pixel-art boss effect on genuine transparent alpha. Top-down huge circular green-black Maya rune ring, dark obsidian rim, neon-green and pale jade bright core accents. EXACTLY EIGHT distinct small round medallions bearing abstract carved glyph-pattern pictures, separated by empty ring sectors and evenly spaced 45 degrees: at 12 o'clock, 1:30, 3 o'clock, 4:30, 6 o'clock, 7:30, 9 o'clock, 10:30. Eight total, not seven, not nine. No letters, words, numbers, text or watermark. Empty central hole, glowing green flames outside the ring. Entire ring and every flame fully contained in central75% with12.5%margins, no cut off elements. 512px cell-square composition, sharp coarse pixel edges, ONE centred object, match the reference game effect style.",
+    "columns": 1,
+    "rows": 1,
+    "background": "transparent",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-e0b66b73-f656-4419-a46b-31794380d7ae.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05"
+  },
+  {
+    "id": "fix-portal",
+    "items": [
+      {
+        "file": "fx/boss-ahpuch-summon-lords/main.png",
+        "size": 256,
+        "brief": "round green portal ring with skulls, every outer flame visible"
+      }
+    ],
+    "prompt": "Quality repair with gpt-image-2.5 Sunburst requested. ONE centred round green portal ring with three small carved skulls on the obsidian stone rim, green ethereal flames, empty centre opening, Maya fantasy boss effect, glowing pixel-art crisp edges matching the reference. Genuine transparent alpha. No text, no characters, no letters, no numbers. Entire object is visible, all green flames on every side fully contained within central70% of image, wide empty15%margins around all four sides; nothing may touch or get cut by the image edge. Single 512px cell-square composition. Dark green jade, pale green/white highlights, no pink or magenta.",
+    "columns": 1,
+    "rows": 1,
+    "background": "transparent",
+    "source": "C:/Users/kossa/.codex/generated_images/01a0ecbe-a0d5-7053-9b16-a3a7f2f3f89d/exec-34552093-835b-4f26-846e-58bcdd652630.png",
+    "modelRequested": "gpt-image-2.5 Sunburst",
+    "mode": "builtin",
+    "date": "2026-10-05"
+  }
+]

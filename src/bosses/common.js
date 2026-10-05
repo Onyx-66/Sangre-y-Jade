@@ -26,7 +26,9 @@ export function phaseAbilities(ctx,handlers){
 export function cue(ctx,id,kind='cast',extra={}){
  const base=`boss-${ctx.definition.id}-${id}`;
  ctx.scene.fx?.play(`${base}-${kind==='warn'?'accent':'main'}`,kind==='warn'?'cast':'impact',{
-  ...point(ctx.boss),duration:kind==='warn'?ctx.ability?.windup??.5:.4,sound:false,...extra});
+  ...point(ctx.boss),angle:ctx.angle,duration:kind==='warn'?ctx.ability?.windup??.5:undefined,sound:false,
+  boss:ctx.boss,state:ctx.state,arena:ctx.state.arena,target:ctx.target,markers:ctx.markers,dives:ctx.dives,
+  safeCircles:ctx.safeCircles,kind,isAlive:()=>ctx.runtime.alive()&&(kind!=='warn'||ctx.state.busy?.ability.id===id),...extra});
  const audioId=`${base}-${kind}`;
  if(ctx.scene.options?.bossHooks?.audio)ctx.scene.options.bossHooks.audio(audioId);
  else ctx.scene.skillAudio?.play?.(audioId,'cast');
@@ -36,8 +38,12 @@ export function hitArea(ctx,shape,damage,options={}){
 }
 export function ringPoints(center,count,radius,angle=0){return Array.from({length:count},(_,i)=>at(center,radius,angle+i*TAU/count));}
 export function warning(ctx,shape,windup,resolve){
- return ctx.scene.telegraphs?.play({...shape,windup:Math.max(.5,windup),owner:ctx.boss,bornAt:ctx.scene.elapsed,tag:`boss:${ctx.ability.id}:followup`,sound:false,
-  onResolve:w=>{if(ctx.runtime.alive()&&!ctx.scene.pausedForChoice)resolve(w);}});
+ const record=ctx.scene.telegraphs?.play({...shape,windup:Math.max(.5,windup),owner:ctx.boss,bornAt:ctx.scene.elapsed,tag:`boss:${ctx.ability.id}:followup`,sound:false,
+  onResolve:w=>{if(ctx.runtime.alive()&&!ctx.scene.pausedForChoice){
+   if(ctx.ability.id==='avalanche')cue(ctx,ctx.ability.id,'cast',{...w,markerOnly:true});resolve(w);
+  }}});
+ if(record&&ctx.ability.id==='avalanche')cue(ctx,ctx.ability.id,'warn',{...record,markerOnly:true,isAlive:()=>ctx.runtime.alive()&&ctx.scene.telegraphs.live.has(record)});
+ return record;
 }
 export function spawnAdds(ctx,type,positions,{elite=false}={}){
  // Preserve ground-only hero compatibility of the existing boss aliases.
@@ -76,8 +82,11 @@ export class BossRuntime {
   const actor=this.scene.enemies.get(position.x,position.y,'fx-5');if(!actor)return null;
   this.scene.enemyVisuals?.remove(actor);
   actor.enableBody(true,position.x,position.y,true,true).setActive(true).setVisible(true).setAlpha(1).setDepth(17).setDisplaySize(radius*2,radius*2);
-  actor.anims.stop();actor.setTexture('fx-5').setTint(kind==='heart-stone'?0xc58a3d:0xffcf4a);
-  actor.setVelocity(0,0);actor.body.setCircle(64,0,0);
+  const art=kind==='heart-stone'?'fx-still-boss-zipacna-stone-armor-accent':'fx-still-boss-vucub-second-sun-main';
+  const hasArt=this.scene.textures?.exists(art);actor.anims.stop();actor.setTexture(hasArt?art:'fx-5').clearTint?.();
+  actor.setDisplaySize(radius*2,radius*2);if(!hasArt)actor.setTint(kind==='heart-stone'?0xc58a3d:0xffcf4a);
+  const frameSize=hasArt?256:128;
+  actor.setVelocity(0,0);actor.body.setCircle(frameSize/2,0,0);
   actor.setData({...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),...{spawningUntil:0,
    serial:++this.scene.enemySerial,type:null,artKey:null,isBoss:false,bossState:null,bossInvulnerableUntil:0,bossArmorPct:0,bossShield:0,bossShieldMax:0,bossObject:true,bossAttack:true,
    bossOwner:this.state.boss,bossOwnerSerial:this.state.serial,hp,maxHp:hp,speed:0,damage:0,xp:0,radius,tough:false,
@@ -92,8 +101,10 @@ export class BossRuntime {
   this.targets=this.targets.filter(t=>t!==target);actor.setData('bossTarget',null);}
  drawTarget({actor,kind,radius}){const g=this.graphics;if(!g)return;
   const ratio=Math.max(0,actor.getData('hp')/actor.getData('maxHp'));
-  if(kind==='heart-stone')g.fillStyle(0xc58a3d,.95).fillTriangle(actor.x,actor.y-radius,actor.x-radius,actor.y+radius,actor.x+radius,actor.y+radius);
-  else g.fillStyle(0xffcf4a,.7).fillCircle(actor.x,actor.y,radius);
+  if(!actor.texture?.key?.startsWith('fx-still-boss-')){
+   if(kind==='heart-stone')g.fillStyle(0xc58a3d,.95).fillTriangle(actor.x,actor.y-radius,actor.x-radius,actor.y+radius,actor.x+radius,actor.y+radius);
+   else g.fillStyle(0xffcf4a,.7).fillCircle(actor.x,actor.y,radius);
+  }
   g.lineStyle(2,0xffcf4a,1).strokeCircle(actor.x,actor.y,radius+3);g.fillStyle(0x3de0b0,1).fillRect(actor.x-radius,actor.y-radius-10,radius*2*ratio,4);
  }
  destroy(){if(this.destroyed)return;

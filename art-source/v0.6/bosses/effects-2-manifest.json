@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "transparent",
+  "outputDir": ".tools\\v12-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v12\\effects-2-contact.png",
+  "items": [
+    {
+      "file": "fx/boss-zipacna-rock-rain/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-rock-rain/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-fissure-line/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-fissure-line/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-stone-armor/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-stone-armor/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-avalanche/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-zipacna-avalanche/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-sunbeam-sweep/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-sunbeam-sweep/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-feather-barrage/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-feather-barrage/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-solar-flare-rings/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-solar-flare-rings/accent.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-second-sun/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/boss-vucub-second-sun/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

@@ -1,0 +1,820 @@
+
+> sangre-y-jade@0.5.0 check
+> npm run test && npm run build
+
+
+> sangre-y-jade@0.5.0 test
+> node --test tests/*.test.js
+
+✔ level-five companion cards show role, signature and two passives; chosen ally arrives with signature only (6.4473ms)
+✔ ally passive scaling values are generated from the authoritative JSON (0.5158ms)
+✔ only hero levels 8 and 14 create companion picks, and picks never replace or exceed three slots (1.6751ms)
+✔ ally brain checks available skills in priority order and enforces the 0.8 second global gap (19.3876ms)
+✔ heals, shields and active zones obey no-waste checks (0.8132ms)
+✔ failsafe casts an eligible ready skill after eight seconds but not a reactive-only skill (1.7582ms)
+✔ failsafe bypasses multi-enemy triggers only when Ground Slam or Smoke Bomb can still hit a target (3.2423ms)
+✔ ally brain does not cast during a choice or after the run ends, and never treats passives as casts (0.6803ms)
+✔ ally active healing-circle casts under its JSON condition and not otherwise (7.1017ms)
+✔ ally active jade-ward casts under its JSON condition and not otherwise (1.1032ms)
+✔ ally active cleansing-light casts under its JSON condition and not otherwise (22.6595ms)
+✔ ally active sanctuary-dome casts under its JSON condition and not otherwise (6.8939ms)
+✔ ally active radiant-beacon casts under its JSON condition and not otherwise (1.1013ms)
+✔ ally active lifebond casts under its JSON condition and not otherwise (0.6703ms)
+✔ ally active bulwark-wall casts under its JSON condition and not otherwise (0.9694ms)
+✔ ally active war-cry casts under its JSON condition and not otherwise (0.9107ms)
+✔ ally active shield-bash casts under its JSON condition and not otherwise (2.1183ms)
+✔ ally active ground-slam casts under its JSON condition and not otherwise (1.6917ms)
+✔ ally active clay-bomb casts under its JSON condition and not otherwise (0.8924ms)
+✔ ally active shield-throw casts under its JSON condition and not otherwise (0.98ms)
+✔ ally active ambush casts under its JSON condition and not otherwise (0.7651ms)
+✔ ally active execute casts under its JSON condition and not otherwise (0.6463ms)
+✔ ally active venom-blade casts under its JSON condition and not otherwise (0.6624ms)
+✔ ally active silencing-dart casts under its JSON condition and not otherwise (0.6801ms)
+✔ ally active smoke-bomb casts under its JSON condition and not otherwise (0.7294ms)
+✔ ally active vanish casts under its JSON condition and not otherwise (0.5892ms)
+✔ Saving Grace prevents a lethal hit once, waits 60 seconds, then becomes ready again (1.0166ms)
+✔ Guardian Link redirects its exact level-one share without allowing the Tank to die (0.5894ms)
+✔ Bodyguard aura, Sacred Fervor, and Relentless Pursuit read their JSON values (1.3577ms)
+✔ Radiant Beacon and Sanctuary Dome buffs apply only while the hero is inside their placed zones (0.7555ms)
+✔ Lifebond heals the hero for the JSON share of damage dealt while active (0.7714ms)
+✔ War Cry gives its reduction to the Tank without incorrectly reducing hero damage (0.5664ms)
+✔ Bounty Contract scales cacao and grants three bonus cacao for the top-threat kill (0.9009ms)
+✔ Vanish drops non-boss aggro and leaves bosses tracking the hero (1.7373ms)
+✔ Smoke Bomb blinds ranged enemies so shots are aimed away and applies a 25% slow (1.1118ms)
+✔ Bulwark Wall physically intercepts a projectile crossing its placed segment (0.7084ms)
+✔ Balam definitions, names, copy and paths come from JSON; only his 16 actives/8 passives are draftable (7.1595ms)
+✔ jaguar-roar fears regular foes but slows bosses by 35%, for two seconds (6.5043ms)
+✔ obsidian-arc cleaves only the 150-degree arc, refreshes bleed and damages props (2.311ms)
+✔ prowlers-leap selects nearest foe, is airborne-invulnerable, then lands with r110 damage (2.8093ms)
+✔ claw-cyclone delivers six 18-damage ticks, slows hero movement to 60%, and rejects knockback (3.0175ms)
+✔ ceiba-breaker selects nearest foe and gives bosses a shorter stun (1.2664ms)
+✔ bloodless-hunt targets highest current HP, caps max-HP bonus, and turns at 240 degrees/s (2.5971ms)
+✔ stone-maw chooses the densest pack, arms after 0.4s and detonates only once (1.6007ms)
+✔ war-drum pulses 20/20/45 twice in six seconds and grants 15% basic attack speed (1.8803ms)
+✔ sun-claw sweeps to 220, hits each foe once, and burns at 10 DPS for three seconds (2.0308ms)
+✔ jaguar-echo chases at 280, bites every 0.7s, and replaces the old spirit (1.547ms)
+✔ fang-path erupts eight staggered segments, hitting each foe once with 40% slow (1.5434ms)
+✔ hunters-mark chooses bosses then highest damage, boosts all sources, heals 4 on marked death (1.3981ms)
+✔ nine-lives heals 26 + 20% missing HP and grants a four-second 25% sprint (1.9196ms)
+✔ black-mirror reflects only its 120-degree front arc at 150% and returns 15 melee damage (1.4885ms)
+✔ pyramid-rush travels 300 in 0.5s, hits touched enemies once, and ends with r90 stomp (1.2052ms)
+✔ heart-of-balam breaks or expires once, clears only its ward and bursts for 150 (2.6482ms)
+✔ bloodlust Lv1: kills refresh five stacks for three seconds (1.041ms)
+✔ stonehide Lv1: missing-HP tiers apply JSON armor cap to real combat (0.7525ms)
+✔ predators-rhythm Lv1: crit reduces all cooldowns, respecting one-second ICD (0.6459ms)
+✔ feast-of-the-fallen Lv1: every 12 kills heals JSON percent with 7/12 HUD (0.6424ms)
+✔ obsidian-thorns Lv1: only melee HP damage returns flat + 15% damage (0.5903ms)
+✔ jaguars-pride Lv1: nearby enemy bonus caps at five and affects hero damage only (0.772ms)
+✔ earthshaker Lv1: fourth basic attack uses JSON weapon damage fraction (0.6258ms)
+✔ wounded-fury Lv1: strict below-50% threshold grants JSON damage and lifesteal (0.7743ms)
+✔ survivors-will Lv1: JSON speed/duration/ICD and live HUD timer (1.0121ms)
+✔ jade-bounty Lv1: XP only heals per gem with JSON attraction and HUD values (0.5258ms)
+✔ bloodlust Lv2: kills refresh five stacks for three seconds (0.6404ms)
+✔ stonehide Lv2: missing-HP tiers apply JSON armor cap to real combat (0.4706ms)
+✔ predators-rhythm Lv2: crit reduces all cooldowns, respecting one-second ICD (0.4061ms)
+✔ feast-of-the-fallen Lv2: every 12 kills heals JSON percent with 7/12 HUD (0.205ms)
+✔ obsidian-thorns Lv2: only melee HP damage returns flat + 15% damage (0.3915ms)
+✔ jaguars-pride Lv2: nearby enemy bonus caps at five and affects hero damage only (0.3277ms)
+✔ earthshaker Lv2: fourth basic attack uses JSON weapon damage fraction (0.3144ms)
+✔ wounded-fury Lv2: strict below-50% threshold grants JSON damage and lifesteal (0.3329ms)
+✔ survivors-will Lv2: JSON speed/duration/ICD and live HUD timer (0.655ms)
+✔ jade-bounty Lv2: XP only heals per gem with JSON attraction and HUD values (0.2117ms)
+✔ bloodlust Lv3: kills refresh five stacks for three seconds (2.3099ms)
+✔ stonehide Lv3: missing-HP tiers apply JSON armor cap to real combat (0.3537ms)
+✔ predators-rhythm Lv3: crit reduces all cooldowns, respecting one-second ICD (0.3621ms)
+✔ feast-of-the-fallen Lv3: every 12 kills heals JSON percent with 7/12 HUD (0.2182ms)
+✔ obsidian-thorns Lv3: only melee HP damage returns flat + 15% damage (0.3072ms)
+✔ jaguars-pride Lv3: nearby enemy bonus caps at five and affects hero damage only (0.3132ms)
+✔ earthshaker Lv3: fourth basic attack uses JSON weapon damage fraction (0.2375ms)
+✔ wounded-fury Lv3: strict below-50% threshold grants JSON damage and lifesteal (0.2282ms)
+✔ survivors-will Lv3: JSON speed/duration/ICD and live HUD timer (0.5611ms)
+✔ jade-bounty Lv3: XP only heals per gem with JSON attraction and HUD values (0.1717ms)
+✔ bloodlust Lv4: kills refresh five stacks for three seconds (0.3972ms)
+✔ stonehide Lv4: missing-HP tiers apply JSON armor cap to real combat (2.194ms)
+✔ predators-rhythm Lv4: crit reduces all cooldowns, respecting one-second ICD (0.3515ms)
+✔ feast-of-the-fallen Lv4: every 12 kills heals JSON percent with 7/12 HUD (0.1893ms)
+✔ obsidian-thorns Lv4: only melee HP damage returns flat + 15% damage (0.6961ms)
+✔ jaguars-pride Lv4: nearby enemy bonus caps at five and affects hero damage only (0.3062ms)
+✔ earthshaker Lv4: fourth basic attack uses JSON weapon damage fraction (0.5123ms)
+✔ wounded-fury Lv4: strict below-50% threshold grants JSON damage and lifesteal (0.5126ms)
+✔ survivors-will Lv4: JSON speed/duration/ICD and live HUD timer (11.5296ms)
+✔ jade-bounty Lv4: XP only heals per gem with JSON attraction and HUD values (0.2838ms)
+✔ bloodlust Lv5: kills refresh five stacks for three seconds (0.4796ms)
+✔ stonehide Lv5: missing-HP tiers apply JSON armor cap to real combat (0.2934ms)
+✔ predators-rhythm Lv5: crit reduces all cooldowns, respecting one-second ICD (0.2447ms)
+✔ feast-of-the-fallen Lv5: every 12 kills heals JSON percent with 7/12 HUD (0.2593ms)
+✔ obsidian-thorns Lv5: only melee HP damage returns flat + 15% damage (0.2388ms)
+✔ jaguars-pride Lv5: nearby enemy bonus caps at five and affects hero damage only (0.3023ms)
+✔ earthshaker Lv5: fourth basic attack uses JSON weapon damage fraction (0.262ms)
+✔ wounded-fury Lv5: strict below-50% threshold grants JSON damage and lifesteal (0.2873ms)
+✔ survivors-will Lv5: JSON speed/duration/ICD and live HUD timer (0.5322ms)
+✔ jade-bounty Lv5: XP only heals per gem with JSON attraction and HUD values (0.3354ms)
+✔ innate upgrades never consume passive slots and preserve their state and max level (1.2904ms)
+✔ all registered Balam skills cast at all six levels with FX/audio hooks and shared cooldown handling (73.7422ms)
+✔ Balam level 10 offers three owned-hero passives, then consumes its milestone only once (1.5594ms)
+✔ replacing a Balam passive removes its old listener and modifiers without removing traits (0.8947ms)
+✔ Stone Maw empty trap waits 2.5 armed seconds, and ward recast cannot stack or burst early (0.9365ms)
+✔ Balam secondary areas inherit level 3 and range modifiers; level 6 fang count and ward scaling are centralized (0.2967ms)
+✔ Pyramid Rush sweeps scaled collision radii so narrow grazes hit without oversized collision range (0.4018ms)
+✔ procedural fallback is deterministic and capped at 24; sound fallback is throttled and stoppable (4.0866ms)
+✔ Camazotz Sonic Screech is a90-degree320 cone:18 damage,200 knockback,1s confusion (17.7843ms)
+✔ Camazotz Bat Swarm warns sixV positions and summons sixCave Bats; ground-only aliases stay playable (7.747ms)
+✔ Camazotz Blood Dive travels600 at520, hits24 once and leaves a3s6DPS trail (22.3191ms)
+✔ Camazotz Eclipse uses a280px moving visibility hole for exactly10s, without hidden damage (123.7732ms)
+✔ Camazotz Twin Dive has two crossing warnings and simultaneous600-unit dives; phase2 speed is+15% (5.2012ms)
+✔ Zipacna Stone Slam hits only r150 for26 with220 knockback (1.7853ms)
+✔ Zipacna Rock Rain has exactly8 independent r55 markers and20-damage boulders (2.2561ms)
+✔ Zipacna Fissure Line erupts sequentially over1.2s along700x70, not as an immediate full-line hit (5.1517ms)
+✔ Zipacna Stone Armor has3 shootable150HP stones;50% reduction ends only after the third dies, with no loot (6.5074ms)
+✔ Zipacna Avalanche warns staggered edge falls; all r55 footprints are inside its600 arena and hit16 (3.3734ms)
+✔ Vucub Sunbeam Sweep is520x50 rotating180degrees over4s,20 per.3s contact and recovery follows the channel (15.3155ms)
+✔ Vucub Feather Barrage fires9 feathers at260 for12 only after its.5s warning (3.5414ms)
+✔ Vucub Solar Flare Rings have3 distinct expanding rings,2 safe gaps each,20 damage outside and none inside (8.7451ms)
+✔ Vucub Second Sun spawns3 shootable80HP orbs, destroying an orb stuns boss1.5s, contact hits22 (9.5969ms)
+✔ Vucub Zenith is invulnerable for4s flight plus1.2s landing warning, then crashes r200 for34 (9.2887ms)
+✔ Ah Puch Death Gaze tracks then locks for the final.5s;520 laser deals28 every.3s for1s (4.5002ms)
+✔ Ah Puch Bone Spear Ring emits12 at r220 and12 half-step-offset spears with a separate.5s warning (4.2922ms)
+✔ Ah Puch Soul Drain pulls only within r380 for2s, deals10 once and heals actual lost HP without exceeding max (6.1677ms)
+✔ Ah Puch Summon Lords opens2 portals and summons2 eliteHollow Priests after1s (2.0451ms)
+✔ Ah Puch Xibalba Shift has4 r120 lights, moves them every15s and deals8DPS only outside light inside arena (35.2758ms)
+✔ Ah Puch Final Rite has exactly3 r130 circles;80 blast at6s into phase, repeats every20s, phase3 speed+25% (108.4506ms)
+✔ camazotz: phase2 transitions once at50% including multiphase jumps (0.9628ms)
+✔ zipacna: phase2 transitions once at50% including multiphase jumps (0.3294ms)
+✔ vucub: phase2 transitions once at60% including multiphase jumps (1.0615ms)
+✔ vucub: phase3 transitions once at25% including multiphase jumps (0.7335ms)
+✔ ahpuch: phase2 transitions once at66% including multiphase jumps (1.1012ms)
+✔ ahpuch: phase3 transitions once at33% including multiphase jumps (0.8821ms)
+✔ camazotz/sonic-screech: no damage, projectile or summon before the entire warning ends (1.2808ms)
+✔ camazotz/bat-swarm: no damage, projectile or summon before the entire warning ends (1.2937ms)
+✔ camazotz/blood-dive: no damage, projectile or summon before the entire warning ends (0.8633ms)
+✔ camazotz/eclipse: no damage, projectile or summon before the entire warning ends (1.1866ms)
+✔ camazotz/twin-dive: no damage, projectile or summon before the entire warning ends (1.2887ms)
+✔ zipacna/stone-slam: no damage, projectile or summon before the entire warning ends (1.5588ms)
+✔ zipacna/rock-rain: no damage, projectile or summon before the entire warning ends (1.446ms)
+✔ zipacna/fissure-line: no damage, projectile or summon before the entire warning ends (1.0273ms)
+✔ zipacna/stone-armor: no damage, projectile or summon before the entire warning ends (1.308ms)
+✔ zipacna/avalanche: no damage, projectile or summon before the entire warning ends (1.624ms)
+✔ vucub/sunbeam-sweep: no damage, projectile or summon before the entire warning ends (1.2756ms)
+✔ vucub/feather-barrage: no damage, projectile or summon before the entire warning ends (0.8741ms)
+✔ vucub/solar-flare-rings: no damage, projectile or summon before the entire warning ends (0.8835ms)
+✔ vucub/second-sun: no damage, projectile or summon before the entire warning ends (0.9584ms)
+✔ vucub/zenith: no damage, projectile or summon before the entire warning ends (8.2493ms)
+✔ ahpuch/death-gaze: no damage, projectile or summon before the entire warning ends (1.9792ms)
+✔ ahpuch/bone-spear-ring: no damage, projectile or summon before the entire warning ends (3.2365ms)
+✔ ahpuch/soul-drain: no damage, projectile or summon before the entire warning ends (1.068ms)
+✔ ahpuch/summon-lords: no damage, projectile or summon before the entire warning ends (2.1466ms)
+✔ ahpuch/xibalba-shift: no damage, projectile or summon before the entire warning ends (2.4962ms)
+✔ ahpuch/final-rite: no damage, projectile or summon before the entire warning ends (4.8931ms)
+✔ boss channels, persistent zones and shootable targets freeze on choices and clean up on death/reuse (13.3396ms)
+✔ stun cancels tracking laser and airborne Zenith without a late hit or lingering invulnerability (16.2975ms)
+✔ each entry has distinct procedural choreography, honours skip/reduced motion and destroys temporary drawing (2.2832ms)
+✔ destroyed heart stones reused as ordinary enemies cannot keep Stone Armor active (1.1477ms)
+✔ Zenith cancellation after source-body reuse never changes the new actor alpha or invulnerability (1.7537ms)
+✔ root cancels physical and ghost dives without teleporting on channel completion; non-moving casts remain allowed (8.7465ms)
+✔ aborting an entrance after boss-body reuse destroys its drawing without mutating the new actor (1.9918ms)
+✔ Final Rite still blasts at phase+6s when the threshold interrupts a previous channel in recovery (20.2049ms)
+✔ a reused Lurker/Golem body cannot make heart stones or sun orbs buried, shielded or reflective (1.7409ms)
+✔ all four definitions retain every JSON number, phase and ability; final roster behaviours are registered (10.0317ms)
+✔ phases transition at exact thresholds, emit each crossed phase once and never regress on healing (5.2796ms)
+✔ damaging cast is telegraphed before execute and every big cast has at least1.2s recovery (13.2278ms)
+✔ phase transformations block hits and DOT until the explicit invulnerability window ends (1.8002ms)
+✔ phase and optional timed enrage multipliers are read without inventing timers or compounding speed (1.122ms)
+✔ stun, silence, death and recycled boss bodies cannot execute a pending warning (5.5212ms)
+✔ cancelled casts consume cooldown and a full warning pool cannot leave a boss stuck (1.0802ms)
+✔ boss single hits stay capped after vulnerability and expired pooled sources; ordinary hits are unchanged (1.5398ms)
+✔ boss pursuit still honors taunt and only hero-directed aiming is blinded (2.4656ms)
+✔ choices freeze cooldowns, warnings and death sequence; no cast is allowed during cinematic or after end (0.9439ms)
+✔ all entrances have step-based2s banners,5/6/8s total, relative1.25 zoom and restore follow/physics/timers/HUD (2.554ms)
+✔ cinematic blocks all damage, DOT, skill/manual attacks, dash and enemy-shot consumption (1.0379ms)
+✔ tap/Back skip is gated at1s, restores game immediately, retains a readable banner, cues only once (0.8264ms)
+✔ Skip boss entrances setting gives only a2s name banner; reduced motion leaves camera unchanged (0.7342ms)
+✔ cinematic cancellation, shutdown and resize restore camera without accidentally resuming ended physics (0.6948ms)
+✔ arrival warning is exactly8s ahead, once per boss, serialised, usesJSON schedule in both modes (1.0901ms)
+✔ overdue/queued boss still gets a complete8s warning and full cap failure retries instead of spending boss (0.4843ms)
+✔ arena isfixed600 world units; Final Rite framework creates exactly3 safe circles and caps damage80 (2.1043ms)
+✔ boss bar reports phase notches, shield, armor and protection without changing physical anchor (0.6202ms)
+✔ death is one-shot, delayed.9s, paused by choices and survives body reuse without mutating new actor (0.6599ms)
+✔ shutdown cancels pending death reward and active warning, releases death sprite exactly once (0.4231ms)
+✔ boss HP stays exactlyJSON on all maps/modes and ground-only aliases keep canonical phases (2.0995ms)
+✔ arrival direction uses the real safe rectangle, never RTL or a hard-coded1280x720 edge (0.4155ms)
+✔ all new player-facing boss strings exist inEN/FR/AR withWestern digits (1.3969ms)
+✔ boss manifest and animation factory use all seven 16-frame states with four-frame fallback (7.9948ms)
+✔ 192px boss body retains the original world-space radius and centre (0.7862ms)
+✔ canonical recipes have unique signatures and preload each of the 46 actual still paths once (1.8543ms)
+✔ all 64 boss frames and 46 effects have exact sizes, transparent pixels, and unique hashes (1398.504ms)
+✔ boss-camazotz-sonic-screech: cast, impact, interrupted owner and shutdown clean all effects (6.4075ms)
+✔ boss-camazotz-bat-swarm: cast, impact, interrupted owner and shutdown clean all effects (1.494ms)
+✔ boss-camazotz-blood-dive: cast, impact, interrupted owner and shutdown clean all effects (1.196ms)
+✔ boss-camazotz-eclipse: cast, impact, interrupted owner and shutdown clean all effects (0.7238ms)
+✔ boss-camazotz-twin-dive: cast, impact, interrupted owner and shutdown clean all effects (0.9942ms)
+✔ boss-zipacna-stone-slam: cast, impact, interrupted owner and shutdown clean all effects (0.9489ms)
+✔ boss-zipacna-rock-rain: cast, impact, interrupted owner and shutdown clean all effects (0.8128ms)
+✔ boss-zipacna-fissure-line: cast, impact, interrupted owner and shutdown clean all effects (1.3362ms)
+✔ boss-zipacna-stone-armor: cast, impact, interrupted owner and shutdown clean all effects (1.3556ms)
+✔ boss-zipacna-avalanche: cast, impact, interrupted owner and shutdown clean all effects (0.5734ms)
+✔ boss-vucub-sunbeam-sweep: cast, impact, interrupted owner and shutdown clean all effects (1.8189ms)
+✔ boss-vucub-feather-barrage: cast, impact, interrupted owner and shutdown clean all effects (0.4435ms)
+✔ boss-vucub-solar-flare-rings: cast, impact, interrupted owner and shutdown clean all effects (2.5441ms)
+✔ boss-vucub-second-sun: cast, impact, interrupted owner and shutdown clean all effects (0.7128ms)
+✔ boss-vucub-zenith: cast, impact, interrupted owner and shutdown clean all effects (0.729ms)
+✔ boss-ahpuch-death-gaze: cast, impact, interrupted owner and shutdown clean all effects (0.7129ms)
+✔ boss-ahpuch-bone-spear-ring: cast, impact, interrupted owner and shutdown clean all effects (0.3885ms)
+✔ boss-ahpuch-soul-drain: cast, impact, interrupted owner and shutdown clean all effects (0.5442ms)
+✔ boss-ahpuch-summon-lords: cast, impact, interrupted owner and shutdown clean all effects (1.8639ms)
+✔ boss-ahpuch-xibalba-shift: cast, impact, interrupted owner and shutdown clean all effects (5.2973ms)
+✔ boss-ahpuch-final-rite: cast, impact, interrupted owner and shutdown clean all effects (1.5975ms)
+✔ gameplay-clock pause freezes boss visuals; eviction removes listeners and geometry masks (6.0082ms)
+✔ beams, sequential fissure, eclipse and flare circles use the gameplay geometry and lifetimes (1.3277ms)
+✔ Zenith trail marks the actual moving player every 0.5s and expires with its flight (0.8015ms)
+✔ manual cinematic clock animates the four entry stills and finish/skip removes them (0.8388ms)
+✔ scheduler cues before execution do not lose armor, and interrupted channels/dives leave no moving still (1.365ms)
+✔ boss clone poses, cinematic entry and white hit flashes never resize its physics actor (1.7088ms)
+✔ boss feather and bone projectiles retain their world collision radii (0.6795ms)
+✔ owner death does not cancel its short death puff and cap cleanup releases its listener (0.6743ms)
+✔ base-five numbers exactly match the independent V06 roster rows (8.2792ms)
+✔ health bars implement all modes, targeting, three-second expiry, bosses and real-view culling (1.1207ms)
+✔ bar dimensions, white chip, shield and elite border stay left-to-right in EN/AR (3.6538ms)
+✔ circle telegraph animates wind-up and resolves exactly once in one batch (2.4088ms)
+✔ ring telegraph animates wind-up and resolves exactly once in one batch (1.0551ms)
+✔ line telegraph animates wind-up and resolves exactly once in one batch (2.3076ms)
+✔ cone telegraph animates wind-up and resolves exactly once in one batch (0.6523ms)
+✔ shape containment matches visible circle/ring/rotated line/cone footprints (0.4796ms)
+✔ stun, death and pooled-sprite reuse cancel live attacks without resolving (1.0137ms)
+✔ telegraphs freeze during choices/loading, cancel at end, respect cap and reuse records (0.9483ms)
+✔ high-contrast outlines thicken and circles have real dash gaps (0.9779ms)
+✔ time caps are bounded and independent of quality, level and map (0.9858ms)
+✔ pack tables preserve base packs and add only their map roster, with exact flier groups (0.996ms)
+✔ whole pack footprints spawn >=120 outside real view at seven aspect ratios (0.9205ms)
+✔ director never partially spawns a pack or exceeds cap including queued starts (2.3319ms)
+✔ elite probability starts at 90s, rises every 20s, caps at 25%, covers all five (0.4316ms)
+✔ armored adds 60% HP, triples XP, reduces front only, reads vertical facing (2.0051ms)
+✔ swift changes speed only, shield absorbs and regenerates 6s after full break (0.6115ms)
+✔ vampiric heals 30% actual damage, caps HP, cannot heal blocked hits (1.3324ms)
+✔ explosive death cancels live warnings but resolves detached r90/18/.6s burst (1.1657ms)
+✔ contact and priest shots use warnings; stun cancels before damage/creation (12.8952ms)
+✔ spawn emergence prevents attacks/movement without permanent inertia (0.5374ms)
+✔ all boss roster openers use their pooled warnings and cancel on stun (4.8742ms)
+✔ settings have saved defaults, EN/FR/AR text and live redraw while paused (0.6247ms)
+✔ reused enemies reset shield, affix, target and warning data (0.2997ms)
+✔ all 15 independent records/handlers are generated exactly from the supplied JSON (48.2029ms)
+✔ Shade: 170px/420 lunge after .35s; one contact hit; .5s +20% recovery (12.5973ms)
+✔ Bat: circles for 1.5-2.5s at r210, .4 marker, dives through it, retreats 1s (10.992ms)
+✔ Jaguar: .55 landing marker, .4 leap, r80/22 shockwave; one half-HP roar buffs 15%/6s (13.3609ms)
+✔ Serpent: Tail Whip cone 110deg/r120/16 +120 knockback; underground immunity then emerge r70/18/.4 knock-up (5.26ms)
+✔ Priest: kites 260-340, Ward nearest ally 40/6s; three 210px/s bolts of 11/.2rad (8.2599ms)
+✔ Vine Lurker: buried/invisible/untargetable until within200; .7 r90 snare roots .8 and deals12 (5.0714ms)
+✔ Stone Guardian: 90deg front guard reduces70%, flanks/DOT unaffected; .8 r100 slam26/knock160 (12.1178ms)
+✔ Wasp: .35s spit8/speed240, poison3dps for3s; silence and bad range prevent shots (15.8094ms)
+✔ Wraith: .5 behind-player marker, teleport then .3 delay slash20, bleed5dps/3s (6.04ms)
+✔ Archer: .6 red line, 380px/s piercing arrow15; below50% exactly3 in fan (2.2241ms)
+✔ Cultist: every10s warns .8, adds2 capped4 incl remaining space; summons disappear with owner (94.3236ms)
+✔ Drowned Spirit: .4 marker pulls120 then16; trail r50 lasts6s, slows35%, bounded pool (2.7968ms)
+✔ Eel: dry85/water150; .45 line then260/440 dash; +8 only within120 of water (9.263ms)
+✔ Golem: every8s .5 warning then3s100% reflection; .7 eight lines resolve only8 shards14 (12.6441ms)
+✔ Wisp: at90 begins1.2 fuse/r90/20, dies; early kill or stun cancels harmlessly (2.9369ms)
+✔ map packs cover each eligible roster, flier groups exact, tanks capped2 and ordinary body overlap does not duplicate attacks (3.471ms)
+✔ choices freeze actions/DOT; stun, fear, death and reuse release burrow/timers/warnings safely (4.7992ms)
+✔ roster hooks emit enemy-id windup/attack, source reuse cannot heal or apply old shooter ownership (2.8537ms)
+✔ new tough enemies count for Trophy Hunter, while base Shades/Wisps do not (1.7494ms)
+✔ Ward ring follows its ally and cancels on ally death or serial reuse without retaining references (2.5221ms)
+✔ a Grasp cannot drag an intangible, invulnerable or dodging hero; rooted Spirit leaves no puddle (2.7958ms)
+✔ fear/aggro-drop cancels pending warnings immediately; cooldown cannot re-cast and Ward cannot affect reused allies (1.0947ms)
+✔ enemy audio hooks use existing sound without fetching, warn once per missing file, and respect mute (1.1974ms)
+✔ boss and ordinary pool reuse clears buried, immunity, reflection, timed shield, recovery and summoner fields (1.647ms)
+✔ enemy manifest loads 16 frames per eligible enemy, without loading other maps or fliers for melee (12.6354ms)
+✔ animation ranges match all 16 frames; a four-frame actor still uses the old animations (2.622ms)
+✔ 18 canonical enemy FX and every ability alias are registered, with unique visual signatures (0.6172ms)
+✔ windup decoration is stationary and cancels on interrupted cast, death or serial reuse (2.2733ms)
+✔ connected-component reflow labels retain an entire sprite crossing a gutter (1.2769ms)
+✔ all 240 frames and 18 effects are real transparent images at exact final sizes (1459.6176ms)
+✔ projectile replacement preserves its old world collision size and uses the correct still (1.5906ms)
+✔ windup squash, white hit flash and jump shadow do not mutate physics size (1.2715ms)
+✔ death visuals detach immediately and serial reuse cannot destroy a newly spawned actor (1.0615ms)
+✔ buried actors have no visible clone or shadow; re-emerge fades upward; culling cleans the clone (1.2819ms)
+✔ production debug handles require fxdebug=1; development remains inspectable (12.6177ms)
+✔ ally cast popup uses the unique skill-id texture, never a deleted numeric icon (1.8794ms)
+✔ Balam and shared FX recipes register once per skill and every visual signature is unique (5.1172ms)
+✔ Balam run preload schedules only registered stills for the selected hero and traits (0.6822ms)
+✔ all 42 Balam/shared still files are transparent PNGs at their final dimensions (1183.7969ms)
+✔ the roster exposes the converted Balam/Kukul pools and pending Ixchel pool (1.9656ms)
+✔ world and progression pools meet the version-zero design scope (1.7184ms)
+✔ supporter offerings are content or cosmetics, never stat boosts (0.6501ms)
+✔ every declared audio asset is a valid RIFF/WAVE file (294.3585ms)
+✔ six cinematic panels and pixel title are complete raster assets (83.9292ms)
+✔ all heroes, enemies, bosses and effects have separate transparent frames (1148.5835ms)
+✔ 114 ID-named skill, stat and HUD icons and an OFL-licensed font are bundled (46.5037ms)
+✔ similarity audit detects the same RGB subject in three- and four-channel PNGs (838.1714ms)
+✔ Ixchel registers all 24 JSON-owned recipes and signatures differ across all 50 shipped recipes (14.0113ms)
+✔ Ixchel spatial and timing metadata stays linked to the exact authoritative mechanics (24.5761ms)
+✔ all Ixchel stages render without placeholders and share the 24 effect budget (6.1647ms)
+✔ projectile FX follows its real body, preserves combat data, and restores visibility when evicted (1.2902ms)
+✔ Ixchel preload caches exactly its 40 stills and does not load another hero (0.7715ms)
+✔ all 40 Ixchel stills are distinct transparent PNGs at 256 or 128 pixels with clear borders (581.5597ms)
+✔ Kukul registers exactly its 24 JSON skills; all 74 shipped recipe signatures are distinct (9.1521ms)
+✔ Kukul FX uses scaled hit geometry, exact catalogue duration, centred trail and moving beam origin (4.1367ms)
+✔ every Kukul stage renders without missing stills under the shared 24-unit budget (14.8494ms)
+✔ Kukul travel follows and rotates with real projectile bodies, preserves hit data, and handles eviction/reuse (1.5233ms)
+✔ Kukul selected-hero preload loads all 40 stills once and never queues another hero (1.3039ms)
+✔ all 40 Kukul PNGs have the required sizes, alpha safety margins and distinct image bytes (418.4769ms)
+✔ proc event hooks attach Fleet Hunter to only the next basic darts and Steady Aim follows its actual ready state (8.4451ms)
+✔ Skyfall FX precedes each unchanged impact and telegraphs persist to their exact staggered hit times (3.0893ms)
+✔ Kukul pool is exactly 16 active + 8 passive + 2 innate; definitions/i18n/paths match JSON (10.1454ms)
+✔ atlatl-volley launches five 20-damage darts in a .13-radian fan with pierce two and range 560 (3.908ms)
+✔ featherstorm travels forward at 160 and ticks 14 every .4s only within radius 70 (3.4937ms)
+✔ serpent-path follows a full sine wave of amplitude 60, speed 600, pierce 12 and range 560 (1.6663ms)
+✔ windstep moves 250, hits passed enemies once, creates a two-second 8/.3 trail and 30% sprint (2.4422ms)
+✔ quetzal-flip retreats 260 from nearest foe, is invulnerable, then fires three aimed 24-damage darts (1.9445ms)
+✔ hunter-snare deals 62 in a target-area radius 120 and roots without suppressing attacks (3.0554ms)
+✔ eagle-eye waits .6s, fires a guaranteed crit with pierce 3 and range 760, and moving cancels cooldown (3.1654ms)
+✔ sun-dart makes five distinct hits with compound +10% damage and 280 range from each last target (1.4805ms)
+✔ storm-nest stays at its cast point and attacks at most three distinct targets every .8s (3.3682ms)
+✔ plume-guard blocks three distinct damage instances, expires at eight seconds, and does not stack on recast (4.1322ms)
+✔ cacao-bomb lobs .7 seconds, clamps target to 400 and blasts radius 150 for 73 with knockback 200 (1.0279ms)
+✔ forked-flight deals no parent hit, splits after .4s into three homing shots with distinct targets (1.334ms)
+✔ gale-ring expands to radius 250, hits once for 46, knocks back 330 and grants a 25% three-second sprint (1.0746ms)
+✔ hunters-trance grants 30% attack speed, 20% crit and limited hero-only steering for six seconds (1.5183ms)
+✔ skyfall telegraphs for .6 then lands twelve 40-damage impacts over 1.5s in radius 50 (1.7917ms)
+✔ kukulkans-breath hits a 520x60 beam ten times at .15s for 16, with 50% movement speed (1.6321ms)
+✔ sharpened-flint Lv1: JSON pierce applies to basic/skill shots but not ally shots (1.4018ms)
+✔ venomous-darts Lv1: only basic hits create at most three independently expiring poison stacks (1.3925ms)
+✔ full-quiver Lv1: the sixth basic attack replaces one dart with JSON count and shows counter (0.8341ms)
+✔ hunters-focus Lv1: consecutive hero hits cap at five and switching/reused targets resets damage (1.0492ms)
+✔ fleet-hunter Lv1: dash/Windstep/Flip primes only next basic attack for three seconds (2.6059ms)
+✔ jungle-instinct Lv1: JSON probability avoids a hit before shields, HP loss and damageTaken (0.5732ms)
+✔ trophy-hunter Lv1: only jaguar/priest/boss kills heal 20% and grant JSON damage for 20s (15.0627ms)
+✔ steady-aim Lv1: after exactly one stationary second JSON crit disappears immediately on movement (1.1019ms)
+✔ sharpened-flint Lv2: JSON pierce applies to basic/skill shots but not ally shots (1.467ms)
+✔ venomous-darts Lv2: only basic hits create at most three independently expiring poison stacks (2.7568ms)
+✔ full-quiver Lv2: the sixth basic attack replaces one dart with JSON count and shows counter (0.9055ms)
+✔ hunters-focus Lv2: consecutive hero hits cap at five and switching/reused targets resets damage (0.7792ms)
+✔ fleet-hunter Lv2: dash/Windstep/Flip primes only next basic attack for three seconds (1.9985ms)
+✔ jungle-instinct Lv2: JSON probability avoids a hit before shields, HP loss and damageTaken (0.5434ms)
+✔ trophy-hunter Lv2: only jaguar/priest/boss kills heal 20% and grant JSON damage for 20s (4.1023ms)
+✔ steady-aim Lv2: after exactly one stationary second JSON crit disappears immediately on movement (0.4595ms)
+✔ sharpened-flint Lv3: JSON pierce applies to basic/skill shots but not ally shots (0.5461ms)
+✔ venomous-darts Lv3: only basic hits create at most three independently expiring poison stacks (0.5173ms)
+✔ full-quiver Lv3: the sixth basic attack replaces one dart with JSON count and shows counter (0.4524ms)
+✔ hunters-focus Lv3: consecutive hero hits cap at five and switching/reused targets resets damage (0.4088ms)
+✔ fleet-hunter Lv3: dash/Windstep/Flip primes only next basic attack for three seconds (1.1134ms)
+✔ jungle-instinct Lv3: JSON probability avoids a hit before shields, HP loss and damageTaken (0.3147ms)
+✔ trophy-hunter Lv3: only jaguar/priest/boss kills heal 20% and grant JSON damage for 20s (3.6129ms)
+✔ steady-aim Lv3: after exactly one stationary second JSON crit disappears immediately on movement (0.463ms)
+✔ sharpened-flint Lv4: JSON pierce applies to basic/skill shots but not ally shots (0.4118ms)
+✔ venomous-darts Lv4: only basic hits create at most three independently expiring poison stacks (0.3565ms)
+✔ full-quiver Lv4: the sixth basic attack replaces one dart with JSON count and shows counter (0.3747ms)
+✔ hunters-focus Lv4: consecutive hero hits cap at five and switching/reused targets resets damage (0.3409ms)
+✔ fleet-hunter Lv4: dash/Windstep/Flip primes only next basic attack for three seconds (1.0068ms)
+✔ jungle-instinct Lv4: JSON probability avoids a hit before shields, HP loss and damageTaken (0.3004ms)
+✔ trophy-hunter Lv4: only jaguar/priest/boss kills heal 20% and grant JSON damage for 20s (2.6288ms)
+✔ steady-aim Lv4: after exactly one stationary second JSON crit disappears immediately on movement (0.3458ms)
+✔ sharpened-flint Lv5: JSON pierce applies to basic/skill shots but not ally shots (0.4418ms)
+✔ venomous-darts Lv5: only basic hits create at most three independently expiring poison stacks (0.3217ms)
+✔ full-quiver Lv5: the sixth basic attack replaces one dart with JSON count and shows counter (0.3245ms)
+✔ hunters-focus Lv5: consecutive hero hits cap at five and switching/reused targets resets damage (0.2901ms)
+✔ fleet-hunter Lv5: dash/Windstep/Flip primes only next basic attack for three seconds (3.0428ms)
+✔ jungle-instinct Lv5: JSON probability avoids a hit before shields, HP loss and damageTaken (0.3925ms)
+✔ trophy-hunter Lv5: only jaguar/priest/boss kills heal 20% and grant JSON damage for 20s (2.9203ms)
+✔ steady-aim Lv5: after exactly one stationary second JSON crit disappears immediately on movement (0.4172ms)
+✔ unknown or removed IDs cannot cast, spend mana or start cooldown; castSkill has no type fallback (1.6856ms)
+✔ Kukul casts all 16 skills at levels 1-6 with shared resources, cooldowns, FX and audio (92.535ms)
+✔ effects created during another effect update remain scheduled and freeze during choices (0.5496ms)
+✔ weighted progress uses measured work, never rewinds on retry, and cannot finish early (3.1976ms)
+✔ minimum display is 600ms but never adds another 600ms to a slow real load (1.6555ms)
+✔ critical failures pause for retry; only failed assets are retried, and skipping critical work is rejected (0.878ms)
+✔ non-critical failure can continue; cancellation releases a waiting recovery (0.7581ms)
+✔ Phaser queue reports cache hits, actual progress and failed files, then removes listeners (1.9729ms)
+✔ atlas and frame-sheet queues use their own data; timeout and abort do not deadlock (9.9973ms)
+✔ selected hero and map manifest excludes other heroes and unused aerial/terrain art without dropping shared run assets (2.6443ms)
+✔ FX and sound manifests are unique per selected skill, include innate/ally skills, and support an audio-key list (1.1764ms)
+✔ audio preload uses real work callbacks, bounded decoders, cached buffers and retry after decode/fetch failure (20.0353ms)
+✔ common audio waits for a playback-decoded frame, reuses the prepared media and does not auto-play (1.4264ms)
+[skills] Sound fallback: skills/sfx-jaguar-roar-cast.wav
+✔ a stuck audio decoder times out or cancels, releases its cache and allows retry (10.9689ms)
+✔ skipped optional sounds fall back without repeated fetches; a successful retry clears that state (1.949ms)
+✔ map preparation preserves the real terrain seed and validates required data (0.2875ms)
+✔ all loading copy has explicit EN/FR/AR text and static reduced-motion torch fallback (8.5141ms)
+✔ maxed boss reward provides a deterministic replacement instead of an empty softlock (6.5121ms)
+✔ Healing Circle heals only inside its cast-position radius, including re-entry (4.4796ms)
+✔ Guardian Link keeps its full JSON share at every rank even when Tank HP is 1 (1.4143ms)
+✔ Jade Ward respects rank-reduced cooldown, without a second unscaled timer (2.1237ms)
+✔ Smoke Bomb blinds enemies inside the placed cloud, not enemies following the hero elsewhere (2.1197ms)
+✔ ended runs reject pending new, upgrade, stat and replacement callbacks (1.3696ms)
+✔ pending companion recruitment and skill callbacks cannot change an ended run (1.3095ms)
+✔ post-run damage and projectile collision callbacks cannot grant late kills (1.9513ms)
+✔ v0.5 save remains compatible and run skill IDs are not persisted (1.2754ms)
+✔ Balam, Kukul and ally generated definitions reproduce exactly from JSON without writing files (56.6115ms)
+✔ 98 JSON briefs and eight UI sounds have complete recipe coverage, with intentional silence only (257.1815ms)
+✔ 150 authored WAVs meet PCM, duration, peak, silence, seamless-loop and uniqueness gates (1029.9902ms)
+✔ synthesis is deterministic, seeded and provides all oscillator / envelope primitives (265.6787ms)
+✔ buffer cache, 60 ms per-ID throttle, pitch ±5%, and bounded voice pools (7.3233ms)
+✔ loop lifetime follows simulation time, pause/resume, early effect end and mute/volume settings (2.7609ms)
+✔ optional/silent cues are quiet; a missing file warns once and falls back without throwing (1.5419ms)
+✔ stopping/destroying before decode finishes cannot start a late loop or one-shot (1.0288ms)
+✔ real hero handler stops its loop and passive suppression / ally event cues stay tied to gameplay (9.4803ms)
+✔ active/passive slot totals and skill caps match each unlock level (3.1513ms)
+✔ locked T cannot cast or recover a cooldown before level 20 (2.2204ms)
+✔ normal draft guarantees a free active and an every-second-level passive, without duplicate cards (1.3166ms)
+✔ full kinds never receive random swap cards; replacements are a separate action (0.8111ms)
+✔ boss rewards contain skills only and prefer owned skill upgrades (0.5607ms)
+✔ maxed loadouts fall back to stat choices and a heal while legacy skills stay active-only (0.4933ms)
+✔ companion screens occur only at level 5 recruitment and levels 8 and 14 picks (7.8615ms)
+✔ level jump 9→11 resolves level 10 normally, consumes its passive milestone once, then resolves 11 (1.0782ms)
+✔ level jump 19→21 resolves the level-20 normal pick and one extra active milestone pick (1.6434ms)
+✔ milestone card helper does not include stat cards or shared innate traits (0.9906ms)
+✔ authored skill descriptions survive, with type copy used only as a fallback (2.3298ms)
+✔ a shield skill receives one mana restoration after its cost, respecting the cap (0.5344ms)
+✔ projectiles and ring effects retain the tint supplied by their skill (2.5525ms)
+✔ chain targets can be reached from the previous enemy, beyond player range (1.0677ms)
+✔ slow percentage scales velocity and defaults to the old 50 percent (0.7989ms)
+✔ generic passive state renders the specified counter, timer and stack fixtures (3.4624ms)
+✔ card kind keeps upgrades in their skill colour and legacy ally cards are classified (0.4654ms)
+✔ slot labels and both milestone banners are translated with Western digits (1.9215ms)
+✔ fear moves away from its source and prevents ranged and contact attacks until expiry (11.7841ms)
+✔ confuse wanders, re-rolls its heading every 0.4 seconds, and prevents attacks (1.8649ms)
+✔ root stops movement but preserves ranged and contact attacks (10.0665ms)
+✔ pull moves at twice speed toward the point, stopping on it; root takes precedence (1.17ms)
+✔ burn deals time-based damage, shows orange tint, and stops at expiry (2.8826ms)
+✔ blind sends hero-aimed ranged shots away, preserves non-hero shots and expires (1.6851ms)
+✔ hiddenUntil makes non-boss enemies wander without attacking; bosses still pursue (5.211ms)
+✔ stun stops movement and all attacks while poison can still damage the enemy (1.0853ms)
+✔ taunt redirects pursuit to the companion and resumes hero pursuit on expiry (1.5326ms)
+✔ silence prevents ranged and boss skills but allows contact damage and movement (8.9244ms)
+✔ disarm retains the existing 45 percent reduction on melee and ranged damage (0.8096ms)
+✔ poison ticks without critical hits and attributes a lethal ally tick correctly (0.8613ms)
+✔ bleed ticks without critical hits and attributes a lethal ally tick correctly (0.392ms)
+✔ mark amplifies incoming damage only while active (0.6509ms)
+✔ slow applies custom percentages with the legacy 50 percent default (0.4376ms)
+✔ event bus subscribes, unsubscribes and clears; passive replacement and levels do not duplicate listeners (0.6823ms)
+✔ every current hero skill has an ID handler and casts at all six levels without errors (97.8501ms)
+✔ ID handlers share level scaling, mana, cooldown and skillCast handling (0.8742ms)
+✔ hero damage reduction, dodge charges, intangibility and reflection are read by combat (2.1143ms)
+✔ hero mana multipliers, lifesteal and cooldown recovery affect their existing paths (1.9346ms)
+✔ all eight passive events originate from the real scene combat and update methods (2.1025ms)
+✔ two innate traits use no active slots and follow all five JSON value levels (2.8989ms)
+✔ shared area/cone/line/projectile helpers select targets and propagate status/source (1.2622ms)
+✔ Jade Bounty extends attraction for XP gems only and pickup consumption heals once (1.1828ms)
+✔ orbit/zone/summon helpers persist, move with the hero where appropriate, and clean up (1.8421ms)
+✔ sheet slicer detects sprites over transparent background and groups cell accents (5.9759ms)
+✔ sheet slicer detects sprites over magenta background and groups cell accents (1.2967ms)
+✔ sheet slicer detects sprites over black background and groups cell accents (1.0832ms)
+✔ sheet slicer reports an occupied-cell mismatch instead of manufacturing a sprite (0.5015ms)
+✔ all 18 UI kit outputs have their specified PNG dimensions and alpha channel (152.3626ms)
+✔ ground weapons never receive aerial enemies or bosses (10.1502ms)
+✔ all four spawn edges remain beyond the visible camera (1.1525ms)
+✔ vertical facing and idle facing are consistent (1.6127ms)
+✔ French and Arabic cover roster, skill names, upgrades and map selectors (1.7895ms)
+✔ new overhead and directional assets are packaged (312.7673ms)
+✔ all skill icons are square with a transparent safety border (3983.2733ms)
+✔ all separately addressable visual assets are inventoried without legacy numeric icons (47.0109ms)
+✔ six male narration files fit their 4.5-second cinematic beats (9.8009ms)
+✔ new cinematic panels retain independent high-resolution artwork (60.0053ms)
+✔ three companion roles expose only the new JSON-owned eight-skill catalogs and translations (8.8544ms)
+✔ temporary ally compatibility adapter is deleted rather than retained as a runtime path (8.8969ms)
+✔ hero active slots follow the level 20 unlock (0.5369ms)
+✔ companion rank advances on the specified cadence and caps at five (0.3872ms)
+✔ Assassin prefers threat over nearest low-damage enemy (0.7555ms)
+✔ all locales use Western digits including Arabic dictionary literals (0.7869ms)
+✔ support artwork uses separate alpha frames rather than hero skins (98.5403ms)
+✔ unrecruited ally is a locked panel containing a localized level, not a question-mark tile (3.1971ms)
+✔ auto indicator reports the mode, updates its tooltip and never toggles the setting itself (1.7684ms)
+✔ HUD lock and attack-mode tooltip keys exist in EN, FR and AR with Western digits (1.0643ms)
+✔ HUD placement CSS contains no Arabic mirroring or logical inline positioning (13.4916ms)
+✔ explicit cacao pouch, skull, lock and mode icons do not fall back to the globe glyph (0.76ms)
+✔ a full 3-active/1-passive loadout always offers deterministic replacement even when the swap roll misses (6.3639ms)
+✔ normal and milestone drafts never produce random swap cards (1.5006ms)
+✔ cancelling replacement in a milestone returns to the original cards without spending it (2.0222ms)
+✔ active replacement preserves slot order, starts at level 1 and clears its cooldown immediately (7.2259ms)
+✔ passive replacement unsubscribes old triggers and immediately resets counters and modifiers (3.2809ms)
+✔ Back from remove restores the exact draft without spending or rerolling (1.9449ms)
+✔ Back from new restores the exact draft without spending or rerolling (2.5277ms)
+✔ Back from confirm restores the exact draft without spending or rerolling (1.5091ms)
+✔ a multi-level jump spends exactly one pick per confirmation and rejects stale callbacks (3.0965ms)
+✔ level-10 milestone replacement consumes its bonus exactly once (3.0254ms)
+✔ level-20 milestone replacement consumes its bonus exactly once (1.2739ms)
+✔ boss rewards offer replacement even when all skills are maxed and the card draft is empty (1.0724ms)
+✔ boss replacement Back preserves its three cards and confirmation continues queued rewards once (1.1654ms)
+✔ replacement is unavailable for free kinds, exhausted pools and innate traits (1.046ms)
+✔ a nearly exhausted replacement pool offers every remaining skill once without inventing duplicates (0.9071ms)
+✔ a death during confirmation cannot replace a skill or advance the queue (2.1837ms)
+✔ pause Skills entry reads equipped levels/descriptions and both innates without resuming (1.9112ms)
+✔ new screens and the corrected hero subtitle have EN/FR/AR copy with Western digits (4.5162ms)
+✔ pause exposes Settings without resuming the game (6.7196ms)
+✔ Android Back through togglePause closes Settings to pause, then resumes only from pause (0.6609ms)
+✔ toggle state words and Quit to Menu have complete EN/FR/AR translations (1.0974ms)
+✔ one toggle component owns its accessible state, mark and localized word in both states (0.6656ms)
+✔ toggle click and Space activation each update the live value exactly once (0.6093ms)
+✔ shared settings content has exactly the existing controls and no English fallback in FR/AR (2.7734ms)
+✔ live settings persist and update the run copy, attack HUD, budgets and audio without resuming (1.2521ms)
+✔ FPS changes restart only the render loop and never wake an already sleeping loop (1.2288ms)
+✔ Settings changes are routed through the run owner, and repeated open/close cannot resume it (0.977ms)
+✔ pause Skills and How to Play are read-only children with Back to pause (0.972ms)
+✔ level-up choices are not dismissed by Back, and stale pause callbacks cannot alter an ended run (0.5175ms)
+✔ main menu and pause import the same renderer and production enables the existing native bridge (16.0948ms)
+✔ first menu and Phaser creation both await the typography gate (14.9605ms)
+✔ shared UI imports a single token and font definition source (3.9769ms)
+✔ font gate waits for file loads, explicit Arabic warming and FontFaceSet.ready (3.7289ms)
+✔ missing files are reported without guessed fetches or falsely registered fonts (0.6488ms)
+✔ a corrupt Latin font reports its failure and cannot deadlock startup (0.821ms)
+✔ Phaser/canvas styles choose heading, small body and Arabic without bold synthesis (2.3935ms)
+✔ old font faces and names are no longer used by runtime source (19.8309ms)
+✔ every required font subset and original OFL notice is bundled (release acceptance) (33.4511ms)
+✔ V2 kit contains exactly the 41 requested ids, separate files and exact longest sides (677.386ms)
+✔ every finished kit PNG has a transparent surround and no residual magenta matte (746.8223ms)
+✔ no final asset reuses another image (file and decoded-pixel hashes) (1954.9373ms)
+✔ normal/pressed/disabled button states and card states share exact silhouettes but retain different art (319.1678ms)
+✔ all 28 resizable kit entries have safe positive integer nine-slice caps (1.0941ms)
+✔ torch poses share one canvas, common bottom baseline, and unique flame imagery (61.2117ms)
+✔ subpage backdrop is calmer/darker than hero selection and all backgrounds are 16:9 (157.1643ms)
+✔ matte cleanup rejects pink while keeping gold, jade, dark stone and red (0.6562ms)
+✔ state geometry alignment uses normal alpha but never copies normal RGB (1.6586ms)
+✔ kit source provenance is retained and explicitly distinguishes requested model from unexposed routing (3.9634ms)
+a.png 20x40
+b.png 20x40
+Sliced 2 sprites from fixture.png (80x60; 2 connected components; transparent background).
+c.png 20x40
+d.png 20x40
+Sliced 2 sprites from fixture.png (80x60; 2 connected components; transparent background).
+✔ shared-scale bottom anchoring preserves frame size and existing default slicing is centered (214.3104ms)
+✔ resize mode fills the parent instead of fitting a fixed 1280x720 canvas (31.5738ms)
+✔ all requested aspects have uniform zoom and exactly 720 visible world units vertically (0.8996ms)
+✔ camera resize preserves its viewed center, and live bounds ignore a stale worldView (3.9298ms)
+✔ camera resize also preserves center after Phaser has already resized its camera (0.3324ms)
+✔ the real scene resize updates terrain, fog and active full-screen effects while choices are paused (11.3743ms)
+✔ manual aim refreshes the pointer world position against the current resized camera (1.531ms)
+✔ all spawn edges remain outside every live viewport with their full padding (1.0082ms)
+✔ screen shake normalizes each axis including zoom and honors reduced motion (0.6587ms)
+✔ XP cost calibration preserves a quick first pick and increasing positive integer costs (6.4009ms)
+✔ XP tuning changes costs only; level 10 and 20 slot thresholds stay fixed (1.896ms)
+✔ multi-level XP bursts keep the remainder and queue every earned level once (1.3242ms)
+✔ pacing status uses inclusive unrounded boundaries and never counts unreached milestones as a pass (0.461ms)
+✔ pacing evidence includes at least three distinct runs per hero/mode and accurate milestone traces (17.6289ms)
+ℹ tests 535
+ℹ suites 0
+ℹ pass 535
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5929.0544
+
+> sangre-y-jade@0.5.0 build
+> vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 322 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                    0.85 kB │ gzip:   0.46 kB
+dist/assets/slot-trait-ring-DF6UhDq8.png                           5.86 kB
+dist/assets/AtkinsonHyperlegible-latin-ext-700-BoVPHkS0.woff2      9.37 kB
+dist/assets/AtkinsonHyperlegible-latin-ext-400-DRk46D-x.woff2      9.38 kB
+dist/assets/Jersey15-latin-ext-400-CvhfUKc7.woff2                 12.50 kB
+dist/assets/Jersey15-latin-400-C8Nlw5JP.woff2                     16.58 kB
+dist/assets/AtkinsonHyperlegible-latin-400-BrHNak5F.woff2         17.21 kB
+dist/assets/AtkinsonHyperlegible-latin-700-GZI4o3u0.woff2         17.52 kB
+dist/assets/slot-ally-plate-CH7164vc.png                          21.83 kB
+dist/assets/slot-passive-ring-BKt3CpNo.png                        23.46 kB
+dist/assets/slot-locked-ring-QdXyxMKI.png                         30.22 kB
+dist/assets/silencing-dart-C17s5f1J.png                           30.63 kB
+dist/assets/four-directions-Br9_Uefz.png                          30.66 kB
+dist/assets/obsidian-arc-BQ2CLAg_.png                             31.11 kB
+dist/assets/copal-star-BTDrZ22p.png                               31.63 kB
+dist/assets/spirit-familiar-D8HcJRyj.png                          32.25 kB
+dist/assets/forked-flight-BdJq5QnM.png                            32.33 kB
+dist/assets/hunters-trance-B70OlmQg.png                           32.55 kB
+dist/assets/jade-halo-Dn5s3tJ8.png                                32.69 kB
+dist/assets/hunter-snare-Bg6qjwkH.png                             32.74 kB
+dist/assets/fang-path-Bh_dh9qW.png                                32.97 kB
+dist/assets/full-quiver-BZTDkQoC.png                              33.54 kB
+dist/assets/sharpened-flint-BbaAlUEr.png                          33.94 kB
+dist/assets/jade-needles-D4FhXPEj.png                             34.01 kB
+dist/assets/hunters-mark-LftKhqqL.png                             34.37 kB
+dist/assets/lunar-boon-BW6s-yBH.png                               34.39 kB
+dist/assets/stat-swiftness-C3mvAgEG.png                           34.44 kB
+dist/assets/venomous-darts-7emLeWsk.png                           34.71 kB
+dist/assets/glyph-comet-B9K5ZhwF.png                              34.78 kB
+dist/assets/war-drum-BSGzqVDu.png                                 34.89 kB
+dist/assets/sun-dart-YJjSBfhr.png                                 34.90 kB
+dist/assets/nine-lives-C38rgn37.png                               34.96 kB
+dist/assets/black-mirror-BNBOrRBS.png                             34.99 kB
+dist/assets/prowlers-leap-CgiVFR-b.png                            35.02 kB
+dist/assets/claw-cyclone-CX-_3p8A.png                             35.26 kB
+dist/assets/quetzal-flip-DaeMX-xJ.png                             35.32 kB
+dist/assets/ixchels-mantle-CAS2uEnJ.png                           35.35 kB
+dist/assets/jaguar-roar-hhIayc0m.png                              35.59 kB
+dist/assets/ancestor-flame-BDf4JXVo.png                           35.83 kB
+dist/assets/storm-nest-Bwv2M_Os.png                               35.92 kB
+dist/assets/mana-spring-D_W_20Hr.png                              35.99 kB
+dist/assets/stone-maw-DEuGnlde.png                                36.05 kB
+dist/assets/serpent-coil-DemOOuNt.png                             36.07 kB
+dist/assets/ui-hud-attack-P_7024S-.png                            36.32 kB
+dist/assets/atlatl-volley-DydOIJuH.png                            36.37 kB
+dist/assets/wounded-fury-DoYmcWi7.png                             36.40 kB
+dist/assets/predators-rhythm-BXnH3g2t.png                         36.54 kB
+dist/assets/serpent-path-C0QYyDbA.png                             36.56 kB
+dist/assets/cacao-bomb-B7ITUUOz.png                               36.62 kB
+dist/assets/jungle-instinct-D3j5hvip.png                          36.71 kB
+dist/assets/sun-claw-YujOrc3z.png                                 36.81 kB
+dist/assets/ancestral-echo-0IIFGJHB.png                           36.90 kB
+dist/assets/jade-bounty-fh-BebZI.png                              37.00 kB
+dist/assets/cacao-bloom-CLDbuJ0A.png                              37.04 kB
+dist/assets/ambush-Cx6TD8X4.png                                   37.08 kB
+dist/assets/plume-guard-R1_IIUdh.png                              37.09 kB
+dist/assets/execute-B-YbPh4Z.png                                  37.12 kB
+dist/assets/skyfall-BCuVMxd-.png                                  37.19 kB
+dist/assets/eagle-eye-CMnOiLdf.png                                37.24 kB
+dist/assets/heart-of-balam-DAuvVN3C.png                           37.26 kB
+dist/assets/venom-blade-DBsOOoSS.png                              37.31 kB
+dist/assets/stat-vigor-CTJWKH40.png                               37.34 kB
+dist/assets/verdant-mercy-CxLImAvU.png                            37.43 kB
+dist/assets/jaguar-echo-Cibw1xLe.png                              37.47 kB
+dist/assets/survivors-will-iMX0o6NH.png                           37.47 kB
+dist/assets/stonehide-Bf54VCL4.png                                37.61 kB
+dist/assets/trophy-hunter-CKb_kaG0.png                            37.71 kB
+dist/assets/bloodlust-DZC2Doe2.png                                37.76 kB
+dist/assets/bloodless-hunt-WLYmOCdt.png                           37.93 kB
+dist/assets/dreamwalk-JlfOrdsq.png                                37.94 kB
+dist/assets/bodyguard-CpXPMiHo.png                                37.99 kB
+dist/assets/stat-fortune-NqfIDxfT.png                             38.12 kB
+dist/assets/featherstorm-BimAObye.png                             38.14 kB
+dist/assets/gale-ring-Chggrr9y.png                                38.23 kB
+dist/assets/copal-veil-RrCfGMyI.png                               38.26 kB
+dist/assets/censer-wave-DsKi2VWu.png                              38.32 kB
+dist/assets/stat-renewal-CAlCNNxP.png                             38.37 kB
+dist/assets/ceiba-breaker-C_PagSL0.png                            38.59 kB
+dist/assets/earthshaker-DbLNczQm.png                              38.65 kB
+dist/assets/kukulkans-breath-BhpGANWz.png                         38.71 kB
+dist/assets/lifebond-CbhyEHBO.png                                 38.71 kB
+dist/assets/clay-bomb-Fg0Q7DLX.png                                38.77 kB
+dist/assets/pyramid-rush-BY7zrwsR.png                             38.83 kB
+dist/assets/moonwell-D0cNyWAD.png                                 38.94 kB
+dist/assets/stat-critical-DITVNXhh.png                            38.99 kB
+dist/assets/slot-active-plate-BchfVuRg.png                        39.02 kB
+dist/assets/stat-armor-BxFhMy2d.png                               39.17 kB
+dist/assets/vanish-xkE3Ua4j.png                                   39.54 kB
+dist/assets/steady-aim-BiHNo1so.png                               39.56 kB
+dist/assets/ui-hud-dash-B1Yq3h_n.png                              39.61 kB
+dist/assets/raincaller-Bx_b1_iz.png                               39.63 kB
+dist/assets/stat-haste-Dwrun_lK.png                               39.63 kB
+dist/assets/fleet-hunter-gGDZfWSq.png                             39.82 kB
+dist/assets/relentless-pursuit-5WwsMDOv.png                       39.87 kB
+dist/assets/stat-reach-7z57RN_Q.png                               39.88 kB
+dist/assets/rooted-meditation-CvlKUOoI.png                        40.00 kB
+dist/assets/guardian-link-BubJnIhr.png                            40.02 kB
+dist/assets/windstep-CMjvf9yS.png                                 40.05 kB
+dist/assets/jade-resilience-DhdvT_r6.png                          40.05 kB
+dist/assets/bounty-contract-CBxa9_o5.png                          40.25 kB
+dist/assets/war-cry-Dlt7dAJ7.png                                  40.64 kB
+dist/assets/stat-might-DUWz9twx.png                               40.98 kB
+dist/assets/jade-ward-BFMu-8qL.png                                41.14 kB
+dist/assets/bulwark-wall-lviQJ5Vz.png                             41.18 kB
+dist/assets/radiant-beacon-DmXRWzC_.png                           41.61 kB
+dist/assets/obsidian-thorns-Bw35A87D.png                          41.94 kB
+dist/assets/spirit-harvest-E6BFew8g.png                           42.24 kB
+dist/assets/feast-of-the-fallen-DfmzHI5R.png                      42.27 kB
+dist/assets/hunters-focus-ePL00HXd.png                            42.29 kB
+dist/assets/jaguars-pride-DzndAxLt.png                            42.32 kB
+dist/assets/sacred-fervor-DvDTbpRM.png                            42.33 kB
+dist/assets/saving-grace-DZpF6r08.png                             42.44 kB
+dist/assets/smoke-bomb-BAMYB8_O.png                               42.60 kB
+dist/assets/crescent-blessing-D1CkAOXR.png                        42.61 kB
+dist/assets/ui-shrine-vitality-Bu0IGIj_.png                       42.76 kB
+dist/assets/cleansing-light-B96zK8_A.png                          42.91 kB
+dist/assets/stat-wisdom-CD-zwfeS.png                              42.94 kB
+dist/assets/shield-bash-CYo6ekxK.png                              43.18 kB
+dist/assets/ui-shrine-damage-ClTjXVKF.png                         43.48 kB
+dist/assets/shield-throw-D9eaXxjk.png                             43.54 kB
+dist/assets/mana-overflow-oXNWvPV9.png                            43.61 kB
+dist/assets/ground-slam-D0lj5Tsc.png                              43.89 kB
+dist/assets/ui-shrine-fortune-O8XHp84T.png                        44.23 kB
+dist/assets/healing-circle-D4bvp6Xu.png                           44.25 kB
+dist/assets/sanctuary-dome-WwOq4sk9.png                           44.70 kB
+dist/assets/ui-shrine-speed-BderQoFQ.png                          45.52 kB
+dist/assets/slot-locked-plate-CbMImHTk.png                        46.04 kB
+dist/assets/ally-panel-bg-CLJt-EVn.png                            66.75 kB
+dist/assets/milestone-banner-3jvFvkij.png                        199.89 kB
+dist/assets/bg-subpage-BDfFmNmZ.webp                             532.93 kB
+dist/assets/NotoSansArabic-BtkkNFXq.ttf                          844.68 kB
+dist/assets/index-CSxIAzho.css                                    85.25 kB │ gzip:  18.47 kB
+dist/assets/ambush-BCCmWQy6.js                                     0.09 kB │ gzip:   0.10 kB
+dist/assets/vanish-Brsd9vM_.js                                     0.09 kB │ gzip:   0.10 kB
+dist/assets/execute-uQqti9I2.js                                    0.09 kB │ gzip:   0.10 kB
+dist/assets/skyfall-DMrGvLOR.js                                    0.09 kB │ gzip:   0.10 kB
+dist/assets/war-cry-ClCLV5kS.js                                    0.09 kB │ gzip:   0.10 kB
+dist/assets/lifebond-xn6QtDxg.js                                   0.09 kB │ gzip:   0.11 kB
+dist/assets/moonwell-riQfrc4H.js                                   0.09 kB │ gzip:   0.11 kB
+dist/assets/sun-claw-B-9ZjKGx.js                                   0.09 kB │ gzip:   0.11 kB
+dist/assets/sun-dart-B6Fjgvnr.js                                   0.09 kB │ gzip:   0.11 kB
+dist/assets/war-drum-driPcRnx.js                                   0.09 kB │ gzip:   0.11 kB
+dist/assets/windstep-CgQBgwd_.js                                   0.09 kB │ gzip:   0.11 kB
+dist/assets/bloodlust-DZ-eg8Zt.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/bodyguard-znE3qrbK.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/clay-bomb-BskPDWeT.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/dreamwalk-AEeDS7aD.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/eagle-eye-DNKdSCy-.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/fang-path-DBDGt0ih.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/gale-ring-C_I-QC-5.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/jade-halo-BMl2jGSr.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/jade-ward-DdiTj-N3.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/stone-maw-B6-AA_8M.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/stonehide-CeB9n8QY.js                                  0.09 kB │ gzip:   0.11 kB
+dist/assets/cacao-bomb-N4U-j4_3.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/copal-star-Dg1Oqits.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/copal-veil-CRlUg5uz.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/lunar-boon-C-0ZlzO0.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/nine-lives-DXpuBzKk.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/raincaller-BjOXQGZ1.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/smoke-bomb-BESoHH3w.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-armor-wYu0KvQ-.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-haste-Crtt-Rhs.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-might-BUryOiPO.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-reach-B64qgs2f.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-vigor-DBesVlgs.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/steady-aim-4ZyEexSL.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/storm-nest-BplRQkBZ.js                                 0.09 kB │ gzip:   0.11 kB
+dist/assets/cacao-bloom-CTVxT1Yk.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/censer-wave-B3dm2090.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/earthshaker-Le82PYje.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/full-quiver-zkYYfCE1.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/glyph-comet-DpkTP6bN.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/ground-slam-CvSRWn7m.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/jade-bounty-DMNQCHZX.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/jaguar-echo-hymT0iUI.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/jaguar-roar-Ch8Ow-SH.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/mana-spring-BDLXkCZU.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/plume-guard-DB0sibwh.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/shield-bash-CrmtfaCR.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-wisdom-CjGTdkzd.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/ui-hud-dash-GYtERKx_.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/venom-blade-YIjpGcfN.js                                0.09 kB │ gzip:   0.11 kB
+dist/assets/black-mirror-CVzg2I9V.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/bulwark-wall-8KLOzOkj.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/claw-cyclone-C8O6N1ii.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/featherstorm-8zx2j8Y8.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/fleet-hunter-CJI8ul3j.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/hunter-snare-CB0TH1xv.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/hunters-mark-D_Wuqs3V.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/jade-needles-Dp89TbKa.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/obsidian-arc-CHZlTt6n.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/pyramid-rush-DbkjXa6C.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/quetzal-flip-CHPCkV5q.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/saving-grace-BRCrCFmO.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/serpent-coil-BrDRySSN.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/serpent-path-BKOb3wq1.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/shield-throw-v_-eQUPB.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-fortune-pcLETnT9.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-renewal-TpexSBlU.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/wounded-fury-DEXmeWEs.js                               0.09 kB │ gzip:   0.11 kB
+dist/assets/atlatl-volley-Cd4GK2H6.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/ceiba-breaker-D2RW_ZKX.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/forked-flight-DGlHBIiA.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/guardian-link-D1Baqe5L.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/hunters-focus-DYWfYt47.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/jaguars-pride-BKbewQ68.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/mana-overflow-B8t2r5wk.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/prowlers-leap-B3vDY1Eb.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/sacred-fervor-X-fqLzpU.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-critical-BMhRjKI-.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/trophy-hunter-qpvbFApg.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/ui-hud-attack-PKuvQqmI.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/verdant-mercy-CnIMxpNh.js                              0.09 kB │ gzip:   0.11 kB
+dist/assets/ancestor-flame-Bc--H8b1.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/ancestral-echo-BYmzQyjs.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/bloodless-hunt-BVQmQLoR.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/healing-circle-BMQsNLv-.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/heart-of-balam-BFPaHiR-.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/hunters-trance-oiP83znp.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/ixchels-mantle-NqHt6DFA.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/radiant-beacon-DYWLeEvD.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/sanctuary-dome-BpVXp3Re.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/silencing-dart-DAgwqfkx.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/spirit-harvest-B98jiBUP.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/stat-swiftness-BG8LszG_.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/survivors-will-BzTu-Bw7.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/venomous-darts-CtLPNdPV.js                             0.09 kB │ gzip:   0.11 kB
+dist/assets/bounty-contract-BOyqgCD2.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/cleansing-light-Ds4_acgp.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/four-directions-ColDD0w9.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/jade-resilience-Cw0TaqkH.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/jungle-instinct-DICielep.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/obsidian-thorns-CoLv5ZZa.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/sharpened-flint-CfCi4O8r.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/spirit-familiar-D7m8QfR4.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/ui-shrine-speed-DcH15aK_.js                            0.09 kB │ gzip:   0.11 kB
+dist/assets/kukulkans-breath-CM2STUM4.js                           0.10 kB │ gzip:   0.11 kB
+dist/assets/predators-rhythm-sU1nQt0k.js                           0.10 kB │ gzip:   0.11 kB
+dist/assets/ui-shrine-damage-BVozq1EV.js                           0.10 kB │ gzip:   0.11 kB
+dist/assets/crescent-blessing-C1iGTL_U.js                          0.10 kB │ gzip:   0.11 kB
+dist/assets/rooted-meditation-PrxZnDlK.js                          0.10 kB │ gzip:   0.11 kB
+dist/assets/ui-shrine-fortune-CW7gWgeQ.js                          0.10 kB │ gzip:   0.11 kB
+dist/assets/relentless-pursuit-CCrjLKO-.js                         0.10 kB │ gzip:   0.12 kB
+dist/assets/ui-shrine-vitality-BMp4fEyv.js                         0.10 kB │ gzip:   0.12 kB
+dist/assets/feast-of-the-fallen-DlQ1s1j3.js                        0.10 kB │ gzip:   0.12 kB
+dist/assets/index-meGeGBbp.js                                  1,695.11 kB │ gzip: 485.12 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 12.10s

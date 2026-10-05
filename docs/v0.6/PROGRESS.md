@@ -398,3 +398,34 @@ All final entrance, special-mechanic, boss-bar and arrival/entry contacts were v
 - New boss sprites/stills and developer-provided recordings arrive in later prompts. Temporary drawing, existing actors/sounds and one-warning fallbacks are intentional; future boss-placeholder warnings are reported, not suppressed. No claim of final art, globally missing-warning-free assets or audible audio.
 - The 180s coverage fights use documented high hero HP, bounded damage to bosses, staged phase thresholds and no ordinary packs, with real Phaser updates/physics/attacks/collisions. They are robustness/coverage tests, not balance or FPS measurements. All production numbers remain those of the JSON.
 - The same unrelated unfinished French untranslated-key audit remains the only shared-tree failure. Native review, earlier pacing outliers and unfinished UI/editor/artwork are neither completed nor discarded here. No device/emulator, APK, physical Android or native FPS validation was available or requested.
+
+## V12 — Boss visuals — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v12`. Prompt V12 complete.
+
+### Changed
+
+- Added 16-frame sheets for Camazotz, Zipacna, Vucub Caquix and Ah Puch, sliced to individual 192×192 images with seven named states. Retained byte-for-byte copies of the prior 4 boss frames as source backups. Added 42 ability stills at 256×256 and four 512×512 entrance images.
+- Connected bosses to the 16-frame texture manifest and the visual clone controller; kept their physics body and combat geometry stable. Scheduler windup, attack, recover and death poses now show the corresponding animation. Entries use the new art and keep skip, reduced-motion and fallback behavior.
+- Registered unique FX recipes for 21 boss abilities and four entrances. Visuals follow each ability's combat geometry and lifetime; hit masks and pooled objects are released on interruption, expiry, owner death and shutdown.
+- Added reproducible artwork manifests, contact sheets, a similarity/asset checker, an interactive dev preview, and headless visual/combat coverage. Corrected several clipped or ambiguous stills after inspecting the full contacts. No audio, music, voice or Android files changed; existing sound hooks remain in use.
+- Generation provenance and conservative integration choices are in `ASSET_LOG.md`, `DECISIONS.md` and `BOSS_VISUALS.md`.
+
+### Verification
+
+| Command / run | Result |
+| --- | --- |
+| `npm run check` in the indexed-source snapshot | 535/535 tests pass; build passes (21.3s total) |
+| `npm run build` in the shared workspace | Pass (18.2s); existing large-chunk advisory |
+| Boss artwork checker | 110/110 files, exact sizes, alpha, no edge magenta, 110 unique hashes; no similar pair flagged |
+| Production FX gallery | 53 checks, 25 recipes, no console/HTTP/missing-asset warnings |
+| Four instrumented Phaser boss fights, 180s each | 38 checks, 0 errors/warnings; every ability executed; peak live effect count ≤24; death animations and cleanup verified |
+| Boss framework regressions | 51 checks; six EN/FR/AR screen configurations and entry/bar/warning captures |
+| HUD and loading regression suites | 497 and 62 checks pass |
+| `npm run check` in the shared workspace | 565/566 pass; one pre-existing unfinished French audit flags `MANA` and `Cacao` as untranslated; left out of scope |
+
+### Open issues
+
+- The image-generation service does not expose its selected model/variant. Prompts requested Flare for the actor sheets and Sunburst for targeted repairs; routing cannot be independently verified. The native generated sheets were 1254×1254 and were normalized to 2048×2048 before slicing.
+- Automated fights mute browser audio and use instrumentation to cover abilities/phases. No audible, mobile-device or FPS measurement is claimed. Existing unrelated dirty UI, localization, branding and Android work remains untouched.
+- Vucub's final sheet uses the requested Sunburst correction after a clipped Flare result; the initial is preserved in the source archive.

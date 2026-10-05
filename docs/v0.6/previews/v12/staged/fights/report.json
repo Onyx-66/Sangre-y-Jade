@@ -1,0 +1,517 @@
+{
+  "createdAt": "2026-10-05T14:57:19.290Z",
+  "policy": "V12 visual coverage stress audit; not balance or FPS measurement",
+  "secondsPerBoss": 180,
+  "stepHz": 30,
+  "runs": [
+    {
+      "id": "camazotz",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19747.759999999904,
+      "casts": {
+        "camazotz:sonic-screech": 17,
+        "camazotz:bat-swarm": 14,
+        "camazotz:blood-dive": 18,
+        "camazotz:eclipse": 4,
+        "camazotz:twin-dive": 8
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 90.03333333333079
+        }
+      ],
+      "damageTaken": 252.2400000000962,
+      "targetKills": {},
+      "peakFx": 24,
+      "peakWarnings": 7,
+      "peakTasks": 5,
+      "peakTargets": 0,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19996.599999999988,
+          "bossHp": 1390.9069999999986,
+          "phase": 1,
+          "alive": 11
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19944.8,
+          "bossHp": 1386.580999999998,
+          "phase": 1,
+          "alive": 7
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19908.559999999987,
+          "bossHp": 686,
+          "phase": 2,
+          "alive": 4
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19859.71999999998,
+          "bossHp": 685.1600000000001,
+          "phase": 2,
+          "alive": 6
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19810.63999999994,
+          "bossHp": 681.3800000000005,
+          "phase": 2,
+          "alive": 8
+        }
+      ],
+      "missing": [],
+      "visualAudit": {
+        "registered": true,
+        "clonePresent": true,
+        "deathState": true,
+        "deathFrames": [
+          "boss-camazotz-frame-12",
+          "boss-camazotz-frame-13",
+          "boss-camazotz-frame-14",
+          "boss-camazotz-frame-15"
+        ],
+        "deathDone": 1,
+        "deathCleaned": true,
+        "bossFxRemaining": 0
+      },
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    },
+    {
+      "id": "zipacna",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19895.199999999993,
+      "casts": {
+        "zipacna:stone-slam": 19,
+        "zipacna:rock-rain": 17,
+        "zipacna:fissure-line": 16,
+        "zipacna:stone-armor": 1,
+        "zipacna:avalanche": 8
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 90.03333333333079
+        }
+      ],
+      "damageTaken": 104.80000000000655,
+      "targetKills": {
+        "heart-stone": 3
+      },
+      "peakFx": 24,
+      "peakWarnings": 8,
+      "peakTasks": 4,
+      "peakTargets": 3,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19977.44,
+          "bossHp": 2267.638999999998,
+          "phase": 1,
+          "alive": 1
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19954.879999999997,
+          "bossHp": 2235.7264999999957,
+          "phase": 1,
+          "alive": 1
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19917.759999999995,
+          "bossHp": 1127,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19917.759999999995,
+          "bossHp": 1113.096499999999,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19917.759999999995,
+          "bossHp": 1082.3224999999968,
+          "phase": 2,
+          "alive": 1
+        }
+      ],
+      "missing": [],
+      "visualAudit": {
+        "registered": true,
+        "clonePresent": true,
+        "deathState": true,
+        "deathFrames": [
+          "boss-zipacna-frame-12",
+          "boss-zipacna-frame-13",
+          "boss-zipacna-frame-14",
+          "boss-zipacna-frame-15"
+        ],
+        "deathDone": 1,
+        "deathCleaned": true,
+        "bossFxRemaining": 0
+      },
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    },
+    {
+      "id": "vucub",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19241.519999999957,
+      "casts": {
+        "vucub:sunbeam-sweep": 15,
+        "vucub:feather-barrage": 15,
+        "vucub:solar-flare-rings": 14,
+        "vucub:second-sun": 7,
+        "vucub:zenith": 2
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 60.033333333332486
+        },
+        {
+          "phase": 3,
+          "seconds": 120.03333333332908
+        }
+      ],
+      "damageTaken": 758.4800000000432,
+      "targetKills": {
+        "second-sun": 16
+      },
+      "peakFx": 13,
+      "peakWarnings": 2,
+      "peakTasks": 2,
+      "peakTargets": 3,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19865.759999999995,
+          "bossHp": 3255.499500000009,
+          "phase": 1,
+          "alive": 1
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19685.279999999984,
+          "bossHp": 1947,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19561.359999999975,
+          "bossHp": 1923.2895,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19483.11999999997,
+          "bossHp": 792,
+          "phase": 3,
+          "alive": 3
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19348.319999999963,
+          "bossHp": 772.5464999999998,
+          "phase": 3,
+          "alive": 1
+        }
+      ],
+      "missing": [],
+      "visualAudit": {
+        "registered": true,
+        "clonePresent": true,
+        "deathState": true,
+        "deathFrames": [
+          "boss-vucub-frame-12",
+          "boss-vucub-frame-13",
+          "boss-vucub-frame-14",
+          "boss-vucub-frame-15"
+        ],
+        "deathDone": 1,
+        "deathCleaned": true,
+        "bossFxRemaining": 0
+      },
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    },
+    {
+      "id": "ahpuch",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19016.30666666668,
+      "casts": {
+        "ahpuch:death-gaze": 14,
+        "ahpuch:bone-spear-ring": 13,
+        "ahpuch:soul-drain": 9,
+        "ahpuch:summon-lords": 7,
+        "ahpuch:xibalba-shift": 1,
+        "ahpuch:final-rite": 3
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 60.033333333332486
+        },
+        {
+          "phase": 3,
+          "seconds": 120.03333333332908
+        }
+      ],
+      "damageTaken": 983.6933333333218,
+      "targetKills": {},
+      "peakFx": 24,
+      "peakWarnings": 16,
+      "peakTasks": 2,
+      "peakTargets": 0,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19962.879999999997,
+          "bossHp": 7736.117999999997,
+          "phase": 1,
+          "alive": 3
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19916.039999999994,
+          "bossHp": 5070,
+          "phase": 2,
+          "alive": 4
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19743.666666666657,
+          "bossHp": 5045.098,
+          "phase": 2,
+          "alive": 8
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19468.359999999993,
+          "bossHp": 2496,
+          "phase": 3,
+          "alive": 9
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19257.880000000005,
+          "bossHp": 2425.0979999999963,
+          "phase": 3,
+          "alive": 11
+        }
+      ],
+      "missing": [],
+      "visualAudit": {
+        "registered": true,
+        "clonePresent": true,
+        "deathState": true,
+        "deathFrames": [
+          "boss-ahpuch-frame-12",
+          "boss-ahpuch-frame-13",
+          "boss-ahpuch-frame-14",
+          "boss-ahpuch-frame-15"
+        ],
+        "deathDone": 1,
+        "deathCleaned": true,
+        "bossFxRemaining": 0
+      },
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    }
+  ],
+  "checks": [
+    {
+      "label": "camazotz: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "camazotz: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "camazotz: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "camazotz: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "camazotz: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "camazotz: no missing boss/skill stills",
+      "passed": true
+    },
+    {
+      "label": "camazotz: all states, four death frames and zero leaked boss FX",
+      "passed": true
+    },
+    {
+      "label": "zipacna: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "zipacna: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "zipacna: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "zipacna: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "zipacna: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "zipacna: no missing boss/skill stills",
+      "passed": true
+    },
+    {
+      "label": "zipacna: all states, four death frames and zero leaked boss FX",
+      "passed": true
+    },
+    {
+      "label": "vucub: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "vucub: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "vucub: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "vucub: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "vucub: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "vucub: no missing boss/skill stills",
+      "passed": true
+    },
+    {
+      "label": "vucub: all states, four death frames and zero leaked boss FX",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: no missing boss/skill stills",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: all states, four death frames and zero leaked boss FX",
+      "passed": true
+    },
+    {
+      "label": "en/camazotz: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "en/zipacna: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "en/vucub: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "en/ahpuch: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/camazotz: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/zipacna: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/vucub: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/ahpuch: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "zero browser exceptions, console errors or HTTP failures",
+      "passed": true
+    },
+    {
+      "label": "zero console or missing-asset warnings",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "captures": [
+    "camazotz-entry.png",
+    "zipacna-entry.png",
+    "vucub-entry.png",
+    "ahpuch-entry.png",
+    "en-eclipse-568x320.png",
+    "en-stone-armor-568x320.png",
+    "en-solar-flare-rings-568x320.png",
+    "en-final-rite-568x320.png",
+    "ar-eclipse-568x320.png",
+    "ar-stone-armor-568x320.png",
+    "ar-solar-flare-rings-568x320.png",
+    "ar-final-rite-568x320.png"
+  ],
+  "wallSeconds": 70.13919920000001,
+  "passed": true
+}

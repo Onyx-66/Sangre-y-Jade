@@ -68,7 +68,9 @@ test('six cinematic panels and pixel title are complete raster assets', async ()
 });
 test('all heroes, enemies, bosses and effects have separate transparent frames',async()=>{
   const names=['hero-balam','hero-ixchel','hero-kukul','enemy-shade','enemy-bat','enemy-jaguar','enemy-serpent','enemy-priest','boss-camazotz','boss-zipacna','boss-vucub','boss-ahpuch',...Array.from({length:6},(_,i)=>`fx-${i}`)];
-  for(const name of names)for(let n=0;n<4;n++){const meta=await sharp(resolve(`public/assets/pixel/frames/${name}-${n}.png`)).metadata();assert.equal(meta.width,128,name);assert.equal(meta.height,128,name);assert.ok(meta.hasAlpha,name);}
+  for(const name of names){const boss=name.startsWith('boss-'),size=boss?192:128;
+    for(let n=0;n<(boss?16:4);n++){const meta=await sharp(resolve(`public/assets/pixel/frames/${name}-${n}.png`)).metadata();assert.equal(meta.width,size,name);assert.equal(meta.height,size,name);assert.ok(meta.hasAlpha,name);}
+  }
 });
 test('114 ID-named skill, stat and HUD icons and an OFL-licensed font are bundled',()=>{
   const icons=readdirSync(resolve('public/assets/pixel/skills')).filter(file=>file.endsWith('.png'));

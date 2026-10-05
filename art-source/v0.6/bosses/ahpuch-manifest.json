@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v12-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v12\\ahpuch-contact.png",
+  "items": [
+    {
+      "file": "frames/boss-ahpuch-0.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-1.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-2.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-3.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-4.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-5.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-6.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-7.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-8.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-9.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-10.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-11.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-12.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-13.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-14.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/boss-ahpuch-15.png",
+      "width": 192,
+      "height": 192,
+      "spriteScale": 0.4017857142857143,
+      "anchor": "bottom"
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import {canEnemyAttack,enemyDamageMult,enemyShotAngle} from '../skills/StatusEff
 import {spawnOutsideView} from './CombatRules.js';
 import {worldView} from './Viewport.js';
 import {BossRuntime,cue} from '../bosses/common.js';
+import {decorateBossProjectile} from '../fx/recipes/bosses.js';
 
 export const bossStateDefaults=()=>({bossState:null,bossInvulnerableUntil:0,bossArmorPct:0,bossShield:0,bossShieldMax:0,
  bossObject:false,bossTarget:null,bossTargetKind:null,bossAttack:false,bossOwner:null,bossOwnerSerial:null});
@@ -42,7 +43,8 @@ export class BossController {
    },
    projectile:(heading,speed,amount,origin=boss)=>{
     if(!this.running()||!this.valid(state)||state.dead)return null;
-    return this.scene.spawnEnemyProjectile(origin.x,origin.y,heading,speed,bossDamage(amount*enemyDamageMult(this.scene,boss)*(enrage?.damageMult||1)),boss);
+    const shot=this.scene.spawnEnemyProjectile(origin.x,origin.y,heading,speed,bossDamage(amount*enemyDamageMult(this.scene,boss)*(enrage?.damageMult||1)),boss);
+    decorateBossProjectile(this.scene,shot,definition.id,ctx.ability?.id);return shot;
    },
    dash:options=>{state.motion={...options,remaining:options.length/options.speed,angle:ctx.angle,previous:{x:boss.x,y:boss.y},hit:false,recovery:ctx.ability.recovery};
     boss.setVelocity(Math.cos(ctx.angle)*options.speed,Math.sin(ctx.angle)*options.speed);},
@@ -96,6 +98,7 @@ export class BossController {
   }
   if(state.busy||state.channel||(boss.getData('bossInvulnerableUntil')||0)>this.scene.elapsed){boss.setVelocity(0,0);return;}
   const recovering=state.recoveryUntil>this.scene.elapsed;
+  this.scene.animateCharacter?.(boss,boss.getData('artKey'),recovering?'recover':'walk');
   if(recovering)boss.setVelocity(0,0);else state.behavior.move?.(ctx,dt);
   if(this.scene.elapsed<state.initialReady||boss.getData('silenceUntil')>this.scene.elapsed)return;
   for(const raw of state.behavior.abilities(ctx)){
@@ -158,8 +161,10 @@ export class BossController {
   const state=this.state;if(!this.valid(state)||state.boss!==boss||state.dead)return false;
   this.cancel(state);state.runtime?.destroy();state.dead=true;
   if(!state.behavior.temporary)cue(this.context(),'death');
-  const sprite=this.scene.add?.sprite?.(boss.x,boss.y,boss.texture?.key||boss.getData('artKey'));
-  sprite?.setDepth?.(24).setScale(boss.scaleX||1,boss.scaleY||1).setTint?.(state.definition.color||0xffcf4a);
+  const sprite=this.scene.bossVisuals?.die(boss)||this.scene.add?.sprite?.(boss.x,boss.y,boss.texture?.key||boss.getData('artKey'));
+  sprite?.setDepth?.(24).setScale(boss.scaleX||1,boss.scaleY||1);
+  const deathKey=`${boss.getData('artKey')}-death`;
+  if(this.scene.anims?.exists(deathKey))sprite?.play?.(deathKey);
   this.scene.playEffect?.(2,boss.x,boss.y,190);
   state.death={remaining:.9,sprite,done};this.scene.options?.bossHooks?.death?.({definition:state.definition,boss});return true;
  }

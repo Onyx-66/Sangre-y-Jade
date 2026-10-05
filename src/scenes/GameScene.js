@@ -20,6 +20,9 @@ import { IXCHEL_FX_IDS } from '../fx/recipes/ixchel.js';
 import '../fx/recipes/kukul.js';
 import { decorateEnemyProjectile } from '../fx/recipes/enemies.js';
 import { ENEMY_EFFECT_IDS } from '../art/enemyVisuals.js';
+import { BOSS_FX_IDS,bossBodyCircle } from '../art/bossVisuals.js';
+import { BossVisualSystem } from '../systems/BossVisualSystem.js';
+import '../fx/recipes/bosses.js';
 import { EnemyVisualSystem } from '../systems/EnemyVisualSystem.js';
 import { decorateIxchelProjectile } from '../fx/ixchelStages.js';
 import { SkillAudio } from '../systems/SkillAudio.js';
@@ -60,7 +63,7 @@ export class GameScene extends Phaser.Scene {
     const hero=this.options.hero;
     const ids=[...(hero.skills||[]),...(hero.passives||[]),{id:'survivors-will'},{id:'jade-bounty'}].map(skill=>skill.id);
     if(hero.id==='ixchel')ids.push(...IXCHEL_FX_IDS);
-    FxDirector.preload(this,[...ids,...ENEMY_EFFECT_IDS]);
+    FxDirector.preload(this,[...ids,...ENEMY_EFFECT_IDS,...BOSS_FX_IDS]);
   }
 
   create() {
@@ -150,6 +153,7 @@ export class GameScene extends Phaser.Scene {
     this.spawnDirector=new SpawnDirector(this);
     this.enemySystem=new EnemyBehaviorSystem(this);
     this.enemyVisuals=new EnemyVisualSystem(this);
+    this.bossVisuals=new BossVisualSystem(this);
     this.options.loading?.progress.set('world',.35);
     this.createPlayer();
     this.options.loading?.progress.set('world',.7);
@@ -299,6 +303,7 @@ export class GameScene extends Phaser.Scene {
     this.updateHud();
     this.enemyBars?.draw();
     this.enemyVisuals?.update();
+    this.bossVisuals?.update();
   }
 
   updateMovement(dt) {
@@ -905,7 +910,7 @@ export class GameScene extends Phaser.Scene {
     boss.anims.stop();
     boss.setTexture(artKey).clearTint();
     boss.setAlpha(1);this.enemyVisuals?.remove(boss);
-    boss.body.setCircle(24,40,44);
+    boss.body.setCircle(...bossBodyCircle(boss,artKey));
     boss.setData({
       artKey,animLock:0,serial: ++this.enemySerial, isBoss: true, bossId: data.id, displayName: data.name,
       hp: data.hp, maxHp: data.hp, speed: data.speed, damage: data.damage,
@@ -915,6 +920,7 @@ export class GameScene extends Phaser.Scene {
     });
     this.activeBoss = boss;
     const state=this.bossController?.init(boss,data);
+    this.bossVisuals?.init(boss);
     if(state){const definition={...state.definition,name:data.id===data.definitionId?state.definition.name:data.name,epithet:boss.getData('displayEpithet')};
       const entry=state.behavior.entry?.(this.bossController.context());
       this.cutscenes?.start(boss,definition,{entry,onComplete:()=>this.bossController.refreshBar()});
@@ -1304,6 +1310,7 @@ export class GameScene extends Phaser.Scene {
     const animation=this.anims.exists(`${key}-${state}`)?`${key}-${state}`:`${key}-${state==='windup'?'attack':state==='recover'?'idle':state}`;
     sprite.play(animation,true);
     this.enemyVisuals?.pose(sprite,state,lock);
+    this.bossVisuals?.pose(sprite,state,lock);
   }
 
   togglePause() {
@@ -1380,6 +1387,7 @@ export class GameScene extends Phaser.Scene {
     this.telegraphs?.destroy();this.enemyBars?.destroy();this.spawnDirector?.destroy();
     this.enemySystem?.destroy();
     this.enemyVisuals?.destroy();
+    this.bossVisuals?.destroy();
     this.hud?.destroy();
   }
 }

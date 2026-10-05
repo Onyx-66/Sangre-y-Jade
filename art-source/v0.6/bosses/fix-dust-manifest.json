@@ -1,0 +1,15 @@
+{
+  "expectedCount": 1,
+  "columns": 1,
+  "rows": 1,
+  "background": "transparent",
+  "outputDir": ".tools\\v12-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v12\\fix-dust-contact.png",
+  "items": [
+    {
+      "file": "fx/boss-zipacna-stone-slam/accent.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

@@ -12,7 +12,7 @@ export function textureManifest({hero,map,base='/',allyIds=CHARACTER_ROWS.suppor
   const rows={hero:heroes,enemy:enemiesForArt(hero,map),
     boss:CHARACTER_ROWS.boss.filter(id=>!groundOnly||!['camazotz','vucub'].includes(id)),support:allyIds};
   const actors=[...Object.entries(rows).flatMap(([kind,names])=>names.map(name=>`${kind}-${name}`)),...heroes.flatMap(name=>['up','down'].map(dir=>`hero-${name}-${dir}`)),...Array.from({length:6},(_,i)=>`fx-${i}`)];
-  for(const key of actors){image(key,`frames/${key}-0.png`);for(let i=0;i<(key.startsWith('enemy-')?16:4);i++)image(`${key}-frame-${i}`,`frames/${key}-${i}.png`);}
+  for(const key of actors){image(key,`frames/${key}-0.png`);for(let i=0;i<(/^(enemy|boss)-/.test(key)?16:4);i++)image(`${key}-frame-${i}`,`frames/${key}-${i}.png`);}
   const terrain=['temple','palm','rocks','ruin','stela','foliage','roots',...(map?[map.id==='cenote'?'crystal':'tree']:['tree','crystal'])];
   for(const name of terrain)image(`top-${name}`,`top-${name}.png`);
   for(const name of ['stela','ruin','palm','foliage','roots','crystal','urn','basket','weapon-balam','weapon-ixchel','weapon-kukul','bracers','pendant','headdress','cacao','potion'])image(name,`${name}.png`);
