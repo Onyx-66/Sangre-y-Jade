@@ -22,6 +22,8 @@ const SFX = {
   victory: 'sfx-victory.wav',
   defeat: 'sfx-defeat.wav',
 };
+export const RUN_AUDIO_KEYS = Object.keys(SFX).map(key=>`sfx:${key}`);
+export function audioFileFor(key){const [kind,name]=key.split(':');return (kind==='music'?TRACKS:kind==='sfx'?SFX:{})[name];}
 
 export class AudioDirector {
   constructor(save) {
@@ -32,6 +34,8 @@ export class AudioDirector {
     this.sfxPools = new Map();
     this.lastSound = new Map();
     this.effectClients = new Set();
+    this.prepared = new Map();
+    this.unavailable = new Set();
     this.base = `${import.meta.env?.BASE_URL||'/'}assets/audio/`;
   }
 
@@ -63,14 +67,34 @@ export class AudioDirector {
 
   stopNarration(){if(this.narration){this.narration.pause();this.narration.src='';this.narration=null;}}
 
+  prepareKey(key,{signal,timeout=20000}={}) {
+    const file=audioFileFor(key);
+    if(!file)return Promise.reject(new Error(`Unknown audio key: ${key}`));
+    if(signal?.aborted)return Promise.reject(new DOMException('Loading cancelled','AbortError'));
+    const cached=this.prepared.get(key);if(cached?.readyState>=2)return Promise.resolve(cached);
+    return new Promise((resolve,reject)=>{
+      const voice=cached||new Audio();this.prepared.set(key,voice);voice.preload='auto';
+      const cleanup=()=>{clearTimeout(timer);voice.removeEventListener('loadeddata',ready);voice.removeEventListener('error',fail);signal?.removeEventListener('abort',abort);};
+      const ready=()=>{cleanup();this.unavailable.delete(key);resolve(voice);};
+      const failed=error=>{cleanup();this.prepared.delete(key);if(error.name!=='AbortError')this.unavailable.add(key);voice.src='';reject(error);};
+      const fail=()=>failed(new Error(`Missing audio: ${file}`));
+      const abort=()=>failed(new DOMException('Loading cancelled','AbortError'));
+      const timer=setTimeout(fail,timeout);
+      voice.addEventListener('loadeddata',ready,{once:true});voice.addEventListener('error',fail,{once:true});signal?.addEventListener('abort',abort,{once:true});
+      voice.src=`${this.base}${file}`;voice.load();
+    });
+  }
+
   music(name, fadeMs = 550) {
+    if(this.unavailable.has(`music:${name}`)){if(name!=='menu'&&!this.unavailable.has('music:menu'))return this.music('menu',fadeMs);return;}
     if(name!=='prologue')this.stopNarration();
     if (this.currentName === name) {
       this.applySettings();
       return;
     }
     const file = TRACKS[name] || TRACKS.menu;
-    const next = new Audio(`${this.base}${file}`);
+    const next = this.prepared.get(`music:${name}`)||new Audio(`${this.base}${file}`);
+    this.prepared.delete(`music:${name}`);
     next.loop = true;
     next.preload = 'auto';
     next.volume = 0;
@@ -107,18 +131,20 @@ export class AudioDirector {
   }
 
   sfx(name, variance = 0) {
+    if(this.unavailable.has(`sfx:${name}`)){const fallback=['spell','hit','slash'].find(key=>!this.unavailable.has(`sfx:${key}`));if(!fallback)return;name=fallback;}
     if (!this.unlocked || !SFX[name]) return;
     const now=performance.now();
     if(now-(this.lastSound.get(name)||-1000)<(name==='pickup'?75:35))return;
     this.lastSound.set(name,now);
     let pool = this.sfxPools.get(name);
     if (!pool) {
-      pool = Array.from({ length: 4 }, () => {
-        const audio = new Audio(`${this.base}${SFX[name]}`);
+      pool = Array.from({ length: 4 }, (_,index) => {
+        const audio = index===0&&this.prepared.get(`sfx:${name}`)||new Audio(`${this.base}${SFX[name]}`);
         audio.preload = 'auto';
         return audio;
       });
       this.sfxPools.set(name, pool);
+      this.prepared.delete(`sfx:${name}`);
     }
     const audio = pool.find((entry) => entry.paused) || pool[0];
     audio.pause();

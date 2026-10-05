@@ -5,6 +5,11 @@ import { MAPS, RUN_MODES, STORE_ITEMS } from './data/world.js';
 import { SaveSystem } from './systems/SaveSystem.js';
 import { AudioDirector } from './systems/AudioDirector.js';
 import { GameScene } from './scenes/GameScene.js';
+import { LoadingScene } from './scenes/LoadingScene.js';
+import { LoadingScreen } from './ui/LoadingScreen.js';
+import { RunLoadProgress } from './systems/RunLoadProgress.js';
+import { SkillAudio } from './systems/SkillAudio.js';
+import './ui/loading.css';
 import { runPrologue } from './systems/Prologue.js';
 import { renderRunSetup } from './systems/RunSetup.js';
 import { interfaceIcon } from './art/interfaceIcons.js';
@@ -53,6 +58,7 @@ class SangreYJadeApp {
   }
 
   clearGame() {
+    if(this.loadingSession){const session=this.loadingSession;this.loadingSession=null;this.cancelLoading=null;session.controller.abort();session.screen.destroy();session.skillAudio.destroy();session.resolve(false);}
     if (this.game) {
       this.game.destroy(true);
       this.game = null;
@@ -133,16 +139,30 @@ class SangreYJadeApp {
 
   async startRun() {
     this.clearGame();
-    await waitForGameFonts();
-    this.uiRoot.replaceChildren();
     const hero = heroList().find((entry) => entry.id === this.lastSelection.heroId) || heroList()[0];
     const map = MAPS.find((entry) => entry.id === this.lastSelection.mapId) || MAPS[0];
     const mode = RUN_MODES.find((entry) => entry.id === this.lastSelection.modeId) || RUN_MODES[0];
+    const controller=new AbortController(),screen=new LoadingScreen({hero,map,reduceMotion:this.save.data.settings.reducedMotion,signal:controller.signal});
+    let resolve;const ready=new Promise(done=>resolve=done);
+    const session={controller,screen,resolve,started:performance.now(),hero,map,audio:this.audio,audioKeys:map.audioKeys,skillAudio:new SkillAudio(this.audio),signal:controller.signal};
+    session.progress=new RunLoadProgress(state=>screen.update(state));
+    session.complete=scene=>{
+      if(this.loadingSession!==session||controller.signal.aborted)return;
+      this.loadingSession=null;this.cancelLoading=null;scene.loadingRun=false;scene.options.loading=null;
+      if(!scene.pausedForChoice){scene.time.paused=false;scene.physics.resume();}
+      this.audio.music(map.music);screen.destroy();resolve(this.game);
+    };
+    session.failed=error=>{if(error.name!=='AbortError'&&this.loadingSession===session){this.clearGame();this.showFatal(error);}};
+    this.loadingSession=session;this.cancelLoading=()=>{this.clearGame();this.showTitle();};
+    try{await waitForGameFonts();}catch(error){session.failed(error);return false;}
+    if(controller.signal.aborted)return false;
+    this.uiRoot.replaceChildren();
     const scene = new GameScene({
       hero, map, mode,
       meta: this.save.metaBonuses(),
       settings: { ...this.save.data.settings },
       audio: this.audio,
+      loading: session,
       uiRoot: this.uiRoot,
       onSettingsChange: (key,value) => applySettingChange({save:this.save,audio:this.audio,scene},key,value),
       onEnd: (summary) => {
@@ -163,9 +183,10 @@ class SangreYJadeApp {
       fps: { target: this.save.data.settings.fps, limit: this.save.data.settings.fps, forceSetTimeOut: this.save.data.settings.fps === 30 },
       scale: { mode: Phaser.Scale.RESIZE, autoCenter: Phaser.Scale.NO_CENTER },
       physics: { default: 'arcade', arcade: { gravity: { x: 0, y: 0 }, debug: false } },
-      scene: [scene],
+      scene: [new LoadingScene(session),scene],
       audio: { noAudio: true },
     });
+    return ready;
   }
 
   showSummary(summary) {

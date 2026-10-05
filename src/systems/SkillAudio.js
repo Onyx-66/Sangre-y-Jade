@@ -9,13 +9,27 @@ export class SkillAudio {
     this.createContext=createContext||(()=>{const Context=globalThis.AudioContext||globalThis.webkitAudioContext;return Context?new Context():null;});
     this.base=`${audio.base||`${import.meta.env?.BASE_URL||'/'}assets/audio/`}sfx/`;
     this.paused=false;this.destroyed=false;this.epoch=0;this.plays=new Map();
+    this.unavailable=new Set();
     audio.effectClients?.add(this);if(audio.unlocked)this.unlock();
   }
   unlock(){
     if(this.destroyed)return;
-    if(!this.context){this.context=this.createContext();if(this.context){this.gain=this.context.createGain();this.gain.connect(this.context.destination);this.applySettings();}}
+    this.ensureContext();
     this.context?.resume?.().catch(()=>{});
     for(const loop of this.loops.values())if(!loop.voice&&!loop.loading&&!this.paused)this.startLoop(loop);
+  }
+  ensureContext(){if(!this.context){this.context=this.createContext();if(this.context){this.gain=this.context.createGain();this.gain.connect(this.context.destination);this.applySettings();}}return this.context;}
+  async prepareFile(file,{signal,timeout=20000}={}){
+    if(this.destroyed||signal?.aborted)throw new DOMException('Loading cancelled','AbortError');
+    if(!this.ensureContext())throw new Error(`Audio decoder unavailable: ${file}`);
+    const controller=new AbortController();let rejectStopped;
+    const stopped=new Promise((_,reject)=>rejectStopped=reject);
+    const abort=()=>{controller.abort();rejectStopped(new DOMException('Loading cancelled','AbortError'));};
+    const timer=setTimeout(()=>{controller.abort();rejectStopped(new Error(`Audio decode timed out: ${file}`));},timeout);signal?.addEventListener('abort',abort,{once:true});
+    const decoding=this.buffer(file,{signal:controller.signal});
+    try{const buffer=await Promise.race([decoding,stopped]);this.unavailable.delete(file);return buffer;}
+    catch(error){if(this.buffers.get(file)===decoding)this.buffers.delete(file);if(signal?.aborted)throw new DOMException('Loading cancelled','AbortError');this.unavailable.add(file);throw error;}
+    finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
   }
   volume(){return Math.max(0,Math.min(1,this.audio.volumes?.().sfx??1));}
   applySettings(){if(this.gain)this.gain.gain.setValueAtTime(this.volume()*.55,this.context.currentTime);}
@@ -25,11 +39,11 @@ export class SkillAudio {
     const file=this.file(id,kind);if(!this.missing.has(file)){this.missing.add(file);console.warn(`[skills] Sound fallback: ${file}`);}
     this.audio.sfx?.(/dart|needle|volley/.test(id)?'dart':'spell',.05);
   }
-  async buffer(file){
-    if(!this.buffers.has(file))this.buffers.set(file,(async()=>{
-      const response=await this.fetcher(`${this.base}${file}`);if(!response.ok)throw Error(`Missing sound: ${file}`);
+  buffer(file,{signal}={}){
+    if(!this.buffers.has(file)){let loading;loading=(async()=>{
+      const response=await this.fetcher(`${this.base}${file}`,{signal});if(!response.ok)throw Error(`Missing sound: ${file}`);
       return this.context.decodeAudioData(await response.arrayBuffer());
-    })());
+    })().catch(error=>{if(this.buffers.get(file)===loading)this.buffers.delete(file);throw error;});this.buffers.set(file,loading);}
     return this.buffers.get(file);
   }
   play(id,kind='cast') {
@@ -42,6 +56,7 @@ export class SkillAudio {
     this.unlock();
     if(!known||!this.context||!this.fetcher){this.fallback(id,kind);return false;}
     const epoch=this.epoch,file=this.file(id,kind);
+    if(this.unavailable.has(file)){this.fallback(id,kind);return false;}
     this.buffer(file).then(buffer=>{
       if(this.destroyed||epoch!==this.epoch||(this.paused&&kind!=='ui')||this.volume()===0)return;
       this.startVoice(key,buffer,false,0,file);
@@ -79,6 +94,7 @@ export class SkillAudio {
   startLoop(record){
     if(record.loading||record.voice||this.destroyed||this.paused||!this.context)return;
     record.loading=true;const file=this.file(record.id,'loop');
+    if(this.unavailable.has(file)){this.stop(record.id);this.fallback(record.id,'loop');return;}
     this.buffer(file).then(buffer=>{
       record.loading=false;if(this.destroyed||this.paused||this.loops.get(record.id)!==record)return;
       record.voice=this.startVoice(record.id,buffer,true,record.offset%buffer.duration,file);

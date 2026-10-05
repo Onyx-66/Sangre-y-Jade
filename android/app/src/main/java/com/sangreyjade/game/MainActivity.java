@@ -110,7 +110,7 @@ public class MainActivity extends Activity {
     @Override public void onWindowFocusChanged(boolean focused){super.onWindowFocusChanged(focused);if(focused)applyImmersiveMode();}
     @Override public void onConfigurationChanged(Configuration config){super.onConfigurationChanged(config);applyImmersiveMode();}
     private WebResourceResponse missing(){return new WebResourceResponse("text/plain","UTF-8",404,"Not found",null,new ByteArrayInputStream(new byte[0]));}
-    private void handleBack(){web.evaluateJavascript("(()=>{const a=window.__SANGRE_Y_JADE__;if(a?.game){a.game.scene.getScene('Ritual').togglePause()}else{a?.cancelPrologue?.();a?.showTitle()}})()",null);}
+    private void handleBack(){web.evaluateJavascript("(()=>{const a=window.__SANGRE_Y_JADE__;if(a?.cancelLoading){a.cancelLoading();return}if(a?.game){a.game.scene.getScene('Ritual').togglePause()}else{a?.cancelPrologue?.();a?.showTitle()}})()",null);}
     // API 26–32 use the legacy callback; API 33+ registers predictive back above.
     @SuppressLint("GestureBackNavigation")
     @Override public void onBackPressed(){handleBack();}

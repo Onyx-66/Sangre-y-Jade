@@ -43,7 +43,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   preload() {
-    preloadTextures(this);
+    if(this.options.loading)return;
+    preloadTextures(this,{hero:this.options.hero,map:this.options.map});
     const hero=this.options.hero;
     const ids=[...(hero.skills||[]),...(hero.passives||[]),{id:'survivors-will'},{id:'jade-bounty'}].map(skill=>skill.id);
     if(hero.id==='ixchel')ids.push(...IXCHEL_FX_IDS);
@@ -60,6 +61,7 @@ export class GameScene extends Phaser.Scene {
     this.meta = meta;
     this.ended = false;
     this.pausedForChoice = false;
+    this.loadingRun = Boolean(this.options.loading);
     this.elapsed = 0;
     this.autoTimer = 0;
     this.basicAttackCount = 0;
@@ -124,13 +126,16 @@ export class GameScene extends Phaser.Scene {
 
     buildTextures(this);
     this.fx=new FxDirector(this);
-    this.skillAudio=new SkillAudio(audio);
+    this.skillAudio=this.options.loading?.skillAudio||new SkillAudio(audio);
+    this.options.loading?.progress.set('world',.1);
     this.physics.world.setBounds(-50000, -50000, 100000, 100000);
     this.cameras.main.setBackgroundColor(map.colors.ground);
     this.cameras.main.roundPixels = true;
     this.createWorld();
     this.createGroups();
+    this.options.loading?.progress.set('world',.35);
     this.createPlayer();
+    this.options.loading?.progress.set('world',.7);
     this.resizeViewport(this.scale.gameSize);
     this.onViewportResize=size=>this.resizeViewport(size);
     this.scale.on('resize',this.onViewportResize);
@@ -149,7 +154,8 @@ export class GameScene extends Phaser.Scene {
     this.hud.setSkills(this.skillSlots, slotCount('active', this.loadoutLevel));
     this.refreshPassiveHud();
     this.hud.toast(`${map.name} · ${mode.name}`);
-    this.audio.music(map.music);
+    if(this.loadingRun){this.time.paused=true;this.physics.pause();this.updateHud();this.options.loading.progress.set('world',.8);this.options.loading.onSceneReady(this);}
+    else this.audio.music(map.music);
     this.events.once('shutdown', () => this.cleanup());
     this.events.once('destroy', () => this.cleanup());
   }
@@ -236,7 +242,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   update(_time, deltaRaw) {
-    if (this.ended || this.pausedForChoice || !this.player?.active) return;
+    if (this.ended || this.loadingRun || this.pausedForChoice || !this.player?.active) return;
     const delta = Math.min(deltaRaw, 50);
     const dt = delta / 1000;
     this.elapsed += dt;

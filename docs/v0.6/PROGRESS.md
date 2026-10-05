@@ -8,6 +8,7 @@
 - [x] 04 — Fullscreen viewport and safe areas
 - [x] V1 — Typography and shared design tokens
 - [x] V2 — Generated UI kit and nine-slice preview
+- [x] V6 — Real weighted run loading and recovery
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -208,3 +209,39 @@ Evidence and usage: `UI_KIT.md`, `ASSET_LOG.md`, `UI_KIT_SOURCES.json`, `preview
 - Built-in image generation does not expose model/variant selection or routing metadata. **gpt-image-2.5 Flare was requested, actual routing cannot be verified.** Returned sources are 1254×1254 sheets / 1672×941 backgrounds; normalization and exact final sizes are documented, without claiming native 2048/1920 detail.
 - The prior unfinished localization audit is still the sole full-suite failure; no new failures and no edits to that unrelated work.
 - This prompt intentionally does not wire new art into player screens; that is the following UI implementation work. Mobile/Android application of the kit remains for that work, not this asset-only step.
+
+## V6 — Real weighted run loading and recovery — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v6`.
+
+### Changed
+
+- Replaced the exposed green startup canvas with an opaque, safe-area-aware loading overlay using the V2 stone panel, ornate bar/fill, small existing logo, selected hero/map art and animated torches. Added percentage, six phase names and three rotating tips in EN/FR/AR; Western digits stay LTR, Arabic copy is RTL, reduced motion leaves static torches.
+- Added a real six-phase weighted tracker and a Phaser loader scene. Moved run texture/FX preparation out of the old startup path, selecting the hero/map instead of loading every hero. Added actual cached image/atlas/frame-sheet progress, four-worker root/skill audio preparation, optional audio-key lists, map validation/seed and future map/prop-pool hooks, world creation checkpoints and rendered-frame warm-up.
+- Added filename-specific failure UI: Retry fetches only failed work; optional failures can Continue with the old FX/sound fallback. Percentages never rewind and reach 100% only after completed work; reveal waits at least 600 ms. Game simulation stays frozen behind the overlay, and map music starts after loading. Android Back cancels cleanly rather than accessing a missing gameplay scene.
+- Added timeout/cancellation handling for both fetching and a stuck audio decoder, retry-safe caches and a bounds/localization/real-progress browser suite. Updated one old texture assertion to inspect the real manifest after its extraction, without weakening its unique-icon assertion. No new game art, audio files, dependencies, package-version bump, APK or network download.
+- Preserved earlier unfinished V3/V4/V5 and user changes; staged only V6 hunks. Recovered the interrupted corrupt Git index without changing working files, keeping its backup. Tested a V6-only staged source snapshot in `.tools/v6-staged-check` to prove the commit does not depend on those unrelated changes.
+
+### Test results
+
+| Command | Result |
+| --- | --- |
+| `node --test tests/loading-v06.test.js tests/skill-audio.test.js` | 22/22 pass, including 14 new loading tests; 0.60 s runner |
+| `npm run check` in the V6-only staged snapshot | 361/361 pass, no skips; 3.20 s runner; production build passes, 279 modules, 9.49 s Vite |
+| `npm run check` in the full worktree | 391/392 pass, no skips; 3.90 s runner; stops on the same pre-existing French `MANA` / `Cacao` audit, so its `&&` build is skipped |
+| `npm run build` in the full worktree | Pass, 290 modules, 19.10 s Vite; existing large-chunk warning |
+| `npm run test:loading` in the worktree and staged snapshot | 62 checks pass in each; 8 screenshots; no unexpected browser/HTTP errors |
+| `SYJ_HUD_OUTPUT=docs/v0.6/previews/v6/hud-regression` then `npm run test:hud` in staged snapshot | 497 checks pass; 32 HUD layout screenshots plus cards; no browser/HTTP errors |
+| `SYJ_SETTINGS_OUTPUT=docs/v0.6/previews/v6/settings-regression` then `npm run test:settings` in staged snapshot | 211 checks pass; settings/toggles/pause/navigation; no browser/HTTP errors |
+| `git diff --cached --check` | Pass for V6 changes |
+
+The loading matrix covers all three heroes/maps in EN/FR/AR at 568×320 and 1280×720. It waits for actual displayed hero/map images, checks panel bounds and LTR percentages, records 259–271 real progress samples per run, rejects early simulation/transparent exposure, verifies selected texture/music and decoded skill buffers, and injects critical image, optional still, optional sound and future map-generation failures. It tests Retry, Continue, no repeated missing-sound fetch, hook retry while paused, rotating tips during delayed real work, reduced motion and actual Android Back cancellation. Decoder timeout/cancellation tests first reproduced a cache-retention defect; the tested fix makes retry work without a stale promise deleting a newer cache entry.
+
+Evidence: `previews/v6/report.json`, eight loading/error screenshots, `contact.png`, and the HUD/settings regression reports. All eight loading/error captures were visually reviewed. The final isolated cold run took 11.20 s during concurrent builds; subsequent runs took 1.66–2.66 s. These are desktop measurements with deliberate request delays, not Android performance claims.
+
+### Open issues
+
+- The unrelated unfinished localization audit remains the only worktree test failure; the V6-only commit tests and build pass. Earlier menu/editor/translation/artwork work is preserved and not completed or included by this prompt.
+- New FR/AR loading text is marked `TODO native review`.
+- New finite-map generation/prop pools, new ambience and `audio-v06/` wiring remain for their respective later steps. V6 provides the hooks/list support and uses current data/sounds now.
+- No Android device/emulator was used. Browser testing verifies the actual Back-hook source; native WebView rendering and APK execution remain unverified.
