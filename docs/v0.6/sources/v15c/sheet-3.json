@@ -1,0 +1,155 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "isolateCells": true,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15c/sheet-3-contact.png",
+  "items": [
+    {
+      "id": "shells",
+      "description": "shells and pebbles",
+      "category": "debris",
+      "file": "maps/cenote/debris/shells.png",
+      "width": 96,
+      "height": 80,
+      "keyFringe": 3
+    },
+    {
+      "id": "rope-coil",
+      "description": "coil of rope",
+      "category": "debris",
+      "file": "maps/cenote/debris/rope-coil.png",
+      "width": 96,
+      "height": 96,
+      "keyFringe": 3
+    },
+    {
+      "id": "broken-paddle",
+      "description": "broken wooden paddle",
+      "category": "debris",
+      "file": "maps/cenote/debris/broken-paddle.png",
+      "width": 128,
+      "height": 64,
+      "keyFringe": 3
+    },
+    {
+      "id": "pottery-shards",
+      "description": "pottery shards",
+      "category": "debris",
+      "file": "maps/cenote/debris/pottery-shards.png",
+      "width": 96,
+      "height": 80,
+      "keyFringe": 3
+    },
+    {
+      "id": "temple-gate-submerged",
+      "description": "submerged temple gate rising from the water with glowing carvings, 768 px (landmark)",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/temple-gate-submerged.png",
+      "width": 768,
+      "height": 768,
+      "keyFringe": 3
+    },
+    {
+      "id": "shrine-island",
+      "description": "small stone shrine on a round island",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/shrine-island.png",
+      "width": 384,
+      "height": 320,
+      "keyFringe": 3
+    },
+    {
+      "id": "dock-hut-a",
+      "description": "hut on stilts over water",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/dock-hut-a.png",
+      "width": 384,
+      "height": 384,
+      "keyFringe": 3
+    },
+    {
+      "id": "dock-hut-b",
+      "description": "small fishing hut",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/dock-hut-b.png",
+      "width": 320,
+      "height": 320,
+      "keyFringe": 3
+    },
+    {
+      "id": "bridge-rope",
+      "description": "rope bridge segment",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/bridge-rope.png",
+      "width": 448,
+      "height": 256,
+      "keyFringe": 3
+    },
+    {
+      "id": "dock-planks",
+      "description": "wooden dock segment",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/dock-planks.png",
+      "width": 384,
+      "height": 256,
+      "keyFringe": 3
+    },
+    {
+      "id": "idol-head-large",
+      "description": "large carved stone idol head half sunk in water",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/idol-head-large.png",
+      "width": 512,
+      "height": 448,
+      "keyFringe": 3
+    },
+    {
+      "id": "stairs-water",
+      "description": "ruined stone stairway going into water",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/stairs-water.png",
+      "width": 384,
+      "height": 320,
+      "keyFringe": 3
+    },
+    {
+      "id": "altar-water",
+      "description": "altar in shallow water",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/altar-water.png",
+      "width": 320,
+      "height": 288,
+      "keyFringe": 3
+    },
+    {
+      "id": "gate-small",
+      "description": "small carved stone arch",
+      "category": "buildings",
+      "file": "maps/cenote/buildings/gate-small.png",
+      "width": 320,
+      "height": 384,
+      "keyFringe": 3
+    },
+    {
+      "id": "boat-small",
+      "description": "small wooden canoe",
+      "category": "props",
+      "file": "maps/cenote/props/boat-small.png",
+      "width": 160,
+      "height": 96,
+      "keyFringe": 3
+    },
+    {
+      "id": "lantern-hanging",
+      "description": "hanging glowing lantern (light source)",
+      "category": "props",
+      "file": "maps/cenote/props/lantern-hanging.png",
+      "width": 80,
+      "height": 144,
+      "keyFringe": 3
+    }
+  ]
+}

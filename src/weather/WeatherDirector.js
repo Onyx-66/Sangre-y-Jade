@@ -287,7 +287,7 @@ export class WeatherDirector {
 
   syncTorchGlows(view) {
     const sources = [...(this.scene.lightSources || this.scene.mapWorld?.lightSources || this.scene.mapWorld?.activeLightSources || [])]
-      .map(source => ({ x: Number(source.x), y: Number(source.y) }))
+      .map(source => ({ x: Number(source.x), y: Number(source.y), color: source.color }))
       .filter(source => Number.isFinite(source.x) && Number.isFinite(source.y) && source.x >= view.x - 100 && source.x <= view.right + 100 && source.y >= view.y - 100 && source.y <= view.bottom + 100)
       .sort((a, b) => Math.hypot(a.x - (this.scene.player?.x || 0), a.y - (this.scene.player?.y || 0)) - Math.hypot(b.x - (this.scene.player?.x || 0), b.y - (this.scene.player?.y || 0)))
       .slice(0, this.maxTorches);
@@ -297,6 +297,10 @@ export class WeatherDirector {
       if (!glow) continue;
       if (!source) { glow.setVisible?.(false); glow.setActive?.(false); continue; }
       glow.setPosition?.(source.x, source.y).setScale?.(this.mapId === 'cenote' ? 1.05 : 1).setAlpha?.(0.22);
+      const authoredKey=`map-${this.mapId}-glow-${source.color}`;
+      if(source.color && this.scene.textures?.exists?.(authoredKey)){
+        glow.setTexture?.(authoredKey);glow.setDisplaySize?.(240,240);glow.setAlpha?.(.30);
+      }else glow.setTexture?.(makeTorchGlowTexture(this.scene));
       glow.setDepth?.(source.y - 4); glow.setActive?.(true); glow.setVisible?.(true);
     }
   }

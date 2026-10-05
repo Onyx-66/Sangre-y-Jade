@@ -1,0 +1,35 @@
+{
+  "expectedCount": 3,
+  "columns": 4,
+  "rows": 4,
+  "isolateCells": true,
+  "background": "transparent",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15c/sheet-5-contact.png",
+  "items": [
+    {
+      "id": "glow-cyan",
+      "description": "soft additive cyan light halo",
+      "category": "glows",
+      "file": "maps/cenote/glow-cyan.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "id": "glow-violet",
+      "description": "soft additive violet light halo",
+      "category": "glows",
+      "file": "maps/cenote/glow-violet.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "id": "glow-green",
+      "description": "soft additive green light halo",
+      "category": "glows",
+      "file": "maps/cenote/glow-green.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "expectedCount": 8,
+  "columns": 4,
+  "rows": 4,
+  "isolateCells": true,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15c/sheet-4-contact.png",
+  "items": [
+    {
+      "id": "crystal-lamp",
+      "description": "crystal lamp on a post (light source)",
+      "category": "props",
+      "file": "maps/cenote/props/crystal-lamp.png",
+      "width": 80,
+      "height": 160,
+      "keyFringe": 3
+    },
+    {
+      "id": "barrel-wet",
+      "description": "wet barrel",
+      "category": "props",
+      "file": "maps/cenote/props/barrel-wet.png",
+      "width": 96,
+      "height": 128,
+      "keyFringe": 3
+    },
+    {
+      "id": "net-hanging",
+      "description": "fishing net on poles",
+      "category": "props",
+      "file": "maps/cenote/props/net-hanging.png",
+      "width": 160,
+      "height": 144,
+      "keyFringe": 3
+    },
+    {
+      "id": "pot-wet",
+      "description": "clay pot half in water",
+      "category": "props",
+      "file": "maps/cenote/props/pot-wet.png",
+      "width": 96,
+      "height": 96,
+      "keyFringe": 3
+    },
+    {
+      "id": "totem-water",
+      "description": "carved water totem",
+      "category": "props",
+      "file": "maps/cenote/props/totem-water.png",
+      "width": 96,
+      "height": 144,
+      "keyFringe": 3
+    },
+    {
+      "id": "sign-rune",
+      "description": "rune marker stone",
+      "category": "props",
+      "file": "maps/cenote/props/sign-rune.png",
+      "width": 96,
+      "height": 128,
+      "keyFringe": 3
+    },
+    {
+      "id": "rack-fish",
+      "description": "fish drying rack",
+      "category": "props",
+      "file": "maps/cenote/props/rack-fish.png",
+      "width": 160,
+      "height": 144,
+      "keyFringe": 3
+    },
+    {
+      "id": "chest-old",
+      "description": "old closed chest",
+      "category": "props",
+      "file": "maps/cenote/props/chest-old.png",
+      "width": 128,
+      "height": 96,
+      "keyFringe": 3
+    }
+  ]
+}

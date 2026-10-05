@@ -1,14 +1,16 @@
 import { MAP_KITS } from '../data/mapDefinitions.js';
+import { createCenoteArt } from './CenoteArt.js';
 
 export function mapArtManifest(map) {
   const kit = map?.kit || MAP_KITS[typeof map === 'string' ? map : map?.id];
   if (!kit?.artVersion) return [];
-  return [...(kit.ground || []), ...kit.items].filter(item => item.image)
+  return [...(kit.ground || []), ...(kit.glows || []), ...kit.items].filter(item => item.image)
     .map(item => ({ key: item.textureKey, file: item.image }));
 }
 
 /** A few tiled surfaces, independent of map area; props still use the cell pool. */
-export function createMapArt(scene, kit) {
+export function createMapArt(scene, kit, layout) {
+  if(kit.id==='cenote')return createCenoteArt(scene,kit,layout);
   const objects = [], masks = [];
   const key = id => `map-${kit.id}-${id}`;
   if (!kit.artVersion || !scene.floor?.setTexture || !scene.add?.tileSprite || !scene.textures.exists(key('moss-grass'))) return null;

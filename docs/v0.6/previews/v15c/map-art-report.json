@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-05T21:26:00.556Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "captures": [
+    {
+      "position": "centre",
+      "player": {
+        "x": 0,
+        "y": 0
+      },
+      "activeProps": 66,
+      "allocatedProps": 66,
+      "wrongBodies": [],
+      "realProps": 66,
+      "ground": "ddefd6ab-6588-4248-9ade-55309a7ae38e",
+      "lights": [],
+      "waterZones": [
+        {
+          "x": -1780,
+          "y": 320,
+          "radius": 620
+        },
+        {
+          "x": 1780,
+          "y": -320,
+          "radius": 620
+        }
+      ],
+      "weather": [
+        {
+          "key": "weather-drip",
+          "loaded": true
+        },
+        {
+          "key": "weather-cave-fog",
+          "loaded": true
+        },
+        {
+          "key": "weather-spore",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rock-small",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "position": "corner",
+      "player": {
+        "x": 2300,
+        "y": -1550
+      },
+      "activeProps": 39,
+      "allocatedProps": 66,
+      "wrongBodies": [],
+      "realProps": 39,
+      "ground": "ddefd6ab-6588-4248-9ade-55309a7ae38e",
+      "lights": [
+        "map-cenote-glow-cyan"
+      ],
+      "waterZones": [
+        {
+          "x": -1780,
+          "y": 320,
+          "radius": 620
+        },
+        {
+          "x": 1780,
+          "y": -320,
+          "radius": 620
+        }
+      ],
+      "weather": [
+        {
+          "key": "weather-drip",
+          "loaded": true
+        },
+        {
+          "key": "weather-cave-fog",
+          "loaded": true
+        },
+        {
+          "key": "weather-spore",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rock-small",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "position": "landmark",
+      "player": {
+        "x": -1970,
+        "y": -1660
+      },
+      "activeProps": 29,
+      "allocatedProps": 66,
+      "wrongBodies": [],
+      "realProps": 29,
+      "ground": "ddefd6ab-6588-4248-9ade-55309a7ae38e",
+      "lights": [
+        "map-cenote-glow-cyan"
+      ],
+      "waterZones": [
+        {
+          "x": -1780,
+          "y": 320,
+          "radius": 620
+        },
+        {
+          "x": 1780,
+          "y": -320,
+          "radius": 620
+        }
+      ],
+      "weather": [
+        {
+          "key": "weather-drip",
+          "loaded": true
+        },
+        {
+          "key": "weather-cave-fog",
+          "loaded": true
+        },
+        {
+          "key": "weather-spore",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rock-small",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "position": "boundary",
+      "player": {
+        "x": -2720,
+        "y": 700
+      },
+      "activeProps": 45,
+      "allocatedProps": 66,
+      "wrongBodies": [],
+      "realProps": 45,
+      "ground": "ddefd6ab-6588-4248-9ade-55309a7ae38e",
+      "lights": [
+        "map-cenote-glow-green",
+        "map-cenote-glow-green",
+        "map-cenote-glow-green",
+        "map-cenote-glow-violet"
+      ],
+      "waterZones": [
+        {
+          "x": -1780,
+          "y": 320,
+          "radius": 620
+        },
+        {
+          "x": 1780,
+          "y": -320,
+          "radius": 620
+        }
+      ],
+      "weather": [
+        {
+          "key": "weather-drip",
+          "loaded": true
+        },
+        {
+          "key": "weather-cave-fog",
+          "loaded": true
+        },
+        {
+          "key": "weather-spore",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rock-small",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "httpErrors": [],
+  "performance": {
+    "cpuThrottle": 4,
+    "rafFrameMs": {
+      "samples": 1732,
+      "mean": 7.256986143187066,
+      "p50": 6.900000000001455,
+      "p95": 7.100000000002183,
+      "max": 21
+    },
+    "gameFrameMs": {
+      "samples": 589,
+      "mean": 21.186757215619693,
+      "p50": 20.899999998509884,
+      "p95": 27.399999998509884,
+      "max": 33.399999998509884
+    },
+    "sceneUpdateMs": {
+      "samples": 590,
+      "mean": 2.9381355932455953,
+      "p50": 2.800000000745058,
+      "p95": 4.200000002980232,
+      "max": 10.199999999254942
+    },
+    "activeProps": 62,
+    "allocatedProps": 67,
+    "weatherParticles": 3,
+    "loadedMapTextures": 60
+  }
+}

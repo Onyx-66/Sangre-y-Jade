@@ -188,7 +188,7 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
 
   const outputRoot = resolveInside(root, manifest.outputDir || 'public/assets/pixel', 'outputDir');
   const { data, info } = await sharp(inputPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const found = detectSpriteCells(data, info.width, info.height, mode, columns, rows);
+  const found = detectSpriteCells(data, info.width, info.height, mode, columns, rows, {collectLabels:Boolean(manifest.isolateCells)});
   if (found.cells.size !== expectedCount) {
     const foundCells = [...found.cells.keys()].sort((a, b) => a - b).map((cell) => cell + 1);
     throw new Error(`Sprite count mismatch: expected ${expectedCount} non-background sprites, found ${found.cells.size} occupied cells (${found.components} connected components; cells ${foundCells.join(', ') || 'none'}).`);
@@ -210,6 +210,14 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
       left: bounds.left, top: bounds.top,
       width: bounds.right - bounds.left + 1, height: bounds.bottom - bounds.top + 1,
     }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    // A subject may extend across its nominal cell border. Preserve its full
+    // connected components, but never include fragments owned by another cell.
+    if(found.labels)for(let y=0;y<crop.info.height;y++)for(let x=0;x<crop.info.width;x++){
+      const label=found.labels[(bounds.top+y)*info.width+bounds.left+x];
+      if(label!==index){const p=(y*crop.info.width+x)*4;
+        crop.data[p]=mode==='black'?0:255;crop.data[p+1]=0;crop.data[p+2]=mode==='black'?0:255;crop.data[p+3]=mode==='transparent'?0:255;
+      }
+    }
     const cleaned = defringeCrop(crop, mode, {softMatte:Boolean(item.softMatte),keyFringe:Math.min(4,Math.max(0,Math.floor(item.keyFringe||0)))});
     const fitWidth=item.fullBleed?item.width:item.spriteScale?Math.max(1,Math.round(crop.info.width*item.spriteScale)):Math.max(1,Math.round(item.width*.94));
     const fitHeight=item.fullBleed?item.height:item.spriteScale?Math.max(1,Math.round(crop.info.height*item.spriteScale)):Math.max(1,Math.round(item.height*.94));

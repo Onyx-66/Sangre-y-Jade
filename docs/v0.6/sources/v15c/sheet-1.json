@@ -1,0 +1,155 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "isolateCells": true,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15c/sheet-1-contact.png",
+  "items": [
+    {
+      "id": "wet-stone",
+      "description": "seamless wet dark stone",
+      "category": "ground",
+      "file": "maps/cenote/ground/wet-stone.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "shallow-water",
+      "description": "seamless shallow turquoise water with ripples",
+      "category": "ground",
+      "file": "maps/cenote/ground/shallow-water.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "sand-bank",
+      "description": "seamless pale sand",
+      "category": "ground",
+      "file": "maps/cenote/ground/sand-bank.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "glow-moss",
+      "description": "seamless stone with glowing moss",
+      "category": "ground",
+      "file": "maps/cenote/ground/glow-moss.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "cave-floor",
+      "description": "seamless rough cave floor with pebbles",
+      "category": "ground",
+      "file": "maps/cenote/ground/cave-floor.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "wet-planks",
+      "description": "seamless wet wooden planks",
+      "category": "ground",
+      "file": "maps/cenote/ground/wet-planks.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "root-hanging-a",
+      "description": "thick hanging cave root cluster",
+      "category": "trees",
+      "file": "maps/cenote/trees/root-hanging-a.png",
+      "width": 256,
+      "height": 320,
+      "keyFringe": 3
+    },
+    {
+      "id": "root-giant",
+      "description": "giant cave tree root arch (landmark size)",
+      "category": "trees",
+      "file": "maps/cenote/trees/root-giant.png",
+      "width": 512,
+      "height": 512,
+      "keyFringe": 3
+    },
+    {
+      "id": "root-ground",
+      "description": "roots crawling over the ground",
+      "category": "trees",
+      "file": "maps/cenote/trees/root-ground.png",
+      "width": 256,
+      "height": 192,
+      "keyFringe": 3
+    },
+    {
+      "id": "mushroom-giant-a",
+      "description": "giant glowing mushroom, blue",
+      "category": "trees",
+      "file": "maps/cenote/trees/mushroom-giant-a.png",
+      "width": 288,
+      "height": 320,
+      "keyFringe": 3
+    },
+    {
+      "id": "mushroom-giant-b",
+      "description": "giant glowing mushroom, violet",
+      "category": "trees",
+      "file": "maps/cenote/trees/mushroom-giant-b.png",
+      "width": 288,
+      "height": 320,
+      "keyFringe": 3
+    },
+    {
+      "id": "fern-cave",
+      "description": "pale cave fern",
+      "category": "trees",
+      "file": "maps/cenote/trees/fern-cave.png",
+      "width": 224,
+      "height": 192,
+      "keyFringe": 3
+    },
+    {
+      "id": "tree-cave-small",
+      "description": "small pale cave tree",
+      "category": "trees",
+      "file": "maps/cenote/trees/tree-cave-small.png",
+      "width": 224,
+      "height": 288,
+      "keyFringe": 3
+    },
+    {
+      "id": "vine-glow",
+      "description": "hanging glowing vines",
+      "category": "trees",
+      "file": "maps/cenote/trees/vine-glow.png",
+      "width": 192,
+      "height": 256,
+      "keyFringe": 3
+    },
+    {
+      "id": "moss-clump",
+      "description": "glowing moss clump",
+      "category": "plants",
+      "file": "maps/cenote/plants/moss-clump.png",
+      "width": 128,
+      "height": 96,
+      "keyFringe": 3
+    },
+    {
+      "id": "flowers-glow",
+      "description": "small glowing blue flowers",
+      "category": "plants",
+      "file": "maps/cenote/plants/flowers-glow.png",
+      "width": 128,
+      "height": 128,
+      "keyFringe": 3
+    }
+  ]
+}

@@ -474,3 +474,16 @@ Status: art and integration complete; verification caveats below.
 
 - Requested Flare routing cannot be verified because the image tool does not expose it. Native output resolution is documented above; all final dimensions are verified.
 - The short throttled desktop sample does not establish sustained 60FPS and is not an Android measurement. No performance rebalance or unrelated translation fix was made. Existing unfinished UI, localization, Android, branding and other work remains untouched.
+
+## V15c — Sunken Cenote art kit — 2026-10-05
+
+Status: art and integration complete; verification caveats below.
+
+- Generated and visually inspected 56 Cenote catalog images plus three colored glows. Added native sources/slice manifests, category contact sheets and six 3×3 tiling previews. Re-generated low-contrast ground and corrected glow margins; per-file provenance is in `ASSET_LOG.md`.
+- Filled the Cenote kit with real paths, dimensions, anchors, colliders, fade/breakable/light flags. Added lake/bank/shore regions aligned with existing shallow-water circles, fixed-allocation shimmer with Reduced motion support, authored colored lights and cavern boundary strips. Player water speed remains exactly 80%. Old assets and all audio remain unchanged.
+- Fixed opt-in sheet slicing to preserve connected subjects across grid boundaries without copying neighboring fragments. Added a reproducing regression test.
+- Targeted suite: **28/28 pass**, including 600 seeded map layouts. Four real Phaser screenshots pass with no browser errors or failed asset requests. See `ART_QA_V15C.md` and `previews/v15c/`.
+- `npm run check`: **593/594 pass**; only the existing French `MANA`/`Cacao` audit fails. Production build passes separately, with the existing large-chunk advisory.
+- 600-frame full-kit desktop sample at 4× CPU throttle: actual frame mean **21.19ms (~47.2 FPS)**, p95 **27.40ms**; update CPU p95 **4.20ms**. **62 active / 67 allocated** props, below 350.
+
+Open issues: the image tool cannot verify requested Flare model routing; the pre-existing localization audit remains; this short headless performance sample is not sustained 60FPS or mobile certification. No unrelated work was included.

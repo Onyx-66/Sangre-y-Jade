@@ -55,7 +55,7 @@ export class MapWorld {
     this.colliderPool = [];
     this.spatialHash = new SpatialHash(256);
     this.stuck = new Map();
-    this.lightSources = new Set(this.layout.lightSources.filter(item=>item.lightEnabled!==false).map(item => ({ id: item.worldId, x: item.x, y: item.y, kind: item.id })));
+    this.lightSources = new Set(this.layout.lightSources.filter(item=>item.lightEnabled!==false).map(item => ({ id: item.worldId, x: item.x, y: item.y + (item.lightOffsetY || 0) * item.scale, kind: item.id, color: item.lightColor })));
     this.activeLightSources = new Set();
     this.waterZones = this.layout.waterZones;
     this.peakActive = 0;
@@ -66,7 +66,7 @@ export class MapWorld {
     scene.mapLayout = this.layout;
     scene.waterZones = this.waterZones;
     scene.lightSources = this.lightSources;
-    this.art = createMapArt(scene, this.kit);
+    this.art = createMapArt(scene, this.kit, this.layout);
     this.drawBoundary();
     this.drawPathways();
     this.drawWater();
@@ -105,6 +105,7 @@ export class MapWorld {
   }
 
   drawWater() {
+    if(this.art?.handlesWater)return;
     const scene = this.scene;
     this.waterGraphics = scene.add?.graphics?.().setDepth?.(-90);
     if (!this.waterGraphics) return;
@@ -172,6 +173,7 @@ export class MapWorld {
 
   update(view = this.worldView()) {
     if (this.destroyed) return;
+    this.art?.update?.(this.scene.time?.now || 0);
     this.requestVisible(view);
     this.processPending(this.chunkBudget);
     this.updateFades();

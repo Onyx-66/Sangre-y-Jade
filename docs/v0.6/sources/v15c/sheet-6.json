@@ -1,0 +1,65 @@
+{
+  "expectedCount": 6,
+  "columns": 4,
+  "rows": 4,
+  "isolateCells": true,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15c/sheet-6-contact.png",
+  "items": [
+    {
+      "id": "wet-stone",
+      "description": "seamless wet dark stone",
+      "category": "ground",
+      "file": "maps/cenote/ground/wet-stone.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "shallow-water",
+      "description": "seamless shallow turquoise water with ripples",
+      "category": "ground",
+      "file": "maps/cenote/ground/shallow-water.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "sand-bank",
+      "description": "seamless pale sand",
+      "category": "ground",
+      "file": "maps/cenote/ground/sand-bank.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "glow-moss",
+      "description": "seamless stone with glowing moss",
+      "category": "ground",
+      "file": "maps/cenote/ground/glow-moss.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "cave-floor",
+      "description": "seamless rough cave floor with pebbles",
+      "category": "ground",
+      "file": "maps/cenote/ground/cave-floor.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "wet-planks",
+      "description": "seamless wet wooden planks",
+      "category": "ground",
+      "file": "maps/cenote/ground/wet-planks.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    }
+  ]
+}

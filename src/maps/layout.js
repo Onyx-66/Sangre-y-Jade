@@ -1,4 +1,5 @@
 import { MAP_KITS } from '../data/mapDefinitions.js';
+import { cenoteGroundRegions } from './CenoteArt.js';
 
 export const WORLD_WIDTH = 6400;
 export const WORLD_HEIGHT = 4800;
@@ -106,6 +107,7 @@ export function generateMapLayout(mapId, kit = MAP_KITS[mapId], seed = 1, { onPr
     bounds: { ...PLAYABLE_BOUNDS },
     wallStyle: kit.wallStyle,
     waterZones: kit.waterZones.map(zone => ({ ...zone })),
+    groundRegions: mapId === 'cenote' ? cenoteGroundRegions(kit.waterZones) : [],
     cells, byCell, placements: placed,
     lightSources: placed.filter(item => item.lightSource),
     colliders: placed.filter(item => item.collider.type !== 'none'),
