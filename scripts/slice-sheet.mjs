@@ -36,10 +36,11 @@ function cellAt(x, y, width, height, columns, rows) {
 }
 
 /** Find foreground connected components, then group detached accents inside each declared sheet cell. */
-export function detectSpriteCells(rgba, width, height, mode, columns, rows) {
+export function detectSpriteCells(rgba, width, height, mode, columns, rows, {collectLabels=false}={}) {
   const visited = new Uint8Array(width * height);
   const queue = new Int32Array(width * height);
   const cells = new Map();
+  const labels=collectLabels?new Int16Array(width*height).fill(-1):undefined;
   let components = 0;
 
   for (let start = 0; start < width * height; start += 1) {
@@ -73,13 +74,14 @@ export function detectSpriteCells(rgba, width, height, mode, columns, rows) {
     if (area < 3) continue;
     components += 1;
     const cell = cellAt((minX + maxX) / 2, (minY + maxY) / 2, width, height, columns, rows);
+    if(labels)for(let i=0;i<tail;i++)labels[queue[i]]=cell;
     const bounds = cells.get(cell) || { left: width, top: height, right: -1, bottom: -1, area: 0 };
     bounds.left = Math.min(bounds.left, minX); bounds.top = Math.min(bounds.top, minY);
     bounds.right = Math.max(bounds.right, maxX); bounds.bottom = Math.max(bounds.bottom, maxY);
     bounds.area += area;
     cells.set(cell, bounds);
   }
-  return { cells, components };
+  return { cells, components, ...(labels?{labels}:{}) };
 }
 
 function resolveInside(base, relative, label) {
@@ -94,6 +96,7 @@ function resolveInside(base, relative, label) {
 function defringeCrop(crop, mode) {
   const { data, info } = crop;
   const rgba = Buffer.from(data);
+  const keyed=mode==='magenta'?Array.from({length:info.width*info.height},(_,pixel)=>isBackground(data,pixel*4,mode)):null;
   for (let i = 0; i < rgba.length; i += 4) {
     if (mode === 'transparent') {
       if (rgba[i + 3] <= 20) rgba[i + 3] = 0;
@@ -101,7 +104,11 @@ function defringeCrop(crop, mode) {
     }
     if (mode === 'magenta') {
       const r = rgba[i], g = rgba[i + 1], b = rgba[i + 2];
-      if (r >= 180 && b >= 180 && g <= 150 && Math.abs(r - b) <= 100) {
+      const pixel=i/4,x=pixel%info.width,y=Math.floor(pixel/info.width);
+      const matteEdge=keyed&&(x===0||y===0||x===info.width-1||y===info.height-1||
+        keyed[pixel-1]||keyed[pixel+1]||keyed[pixel-info.width]||keyed[pixel+info.width]);
+      if ((r >= 180 && b >= 180 && g <= 150 && Math.abs(r - b) <= 100)||
+          (matteEdge&&r>g+30&&b>g+30&&Math.abs(r-b)<60)) {
         const alpha = Math.max(255 - r, g, 255 - b) / 255;
         if (alpha < 0.035) { rgba[i + 3] = 0; continue; }
         rgba[i] = Math.min(255, Math.round((r - 255 * (1 - alpha)) / alpha));

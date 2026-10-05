@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\crystal_golem-contact.png",
+  "items": [
+    {
+      "file": "frames/enemy-crystal_golem-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-crystal_golem-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    }
+  ]
+}

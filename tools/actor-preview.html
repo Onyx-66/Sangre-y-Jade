@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>V9 enemy animation preview (development only)</title>
+<style>body{margin:16px;background:#29251f;color:#fff0ce;font:16px system-ui}h1{font-size:24px}button{padding:12px;background:#26363b;color:#ffcf4a;border:1px solid #ffcf4a}section{margin:18px 0;border-top:1px solid #776147;padding-top:12px}.states{display:flex;gap:8px;flex-wrap:wrap}figure{margin:0;background:#191c20;border:1px solid #51534d;text-align:center;padding:4px}img{width:128px;height:128px;image-rendering:pixelated;object-fit:contain}figcaption{font-size:14px}small{color:#bcb1a0}</style></head>
+<body><h1>Enemy animation states</h1><p>Development-only preview. Each column loops its state. All actors face right; the game flips them. <small>Use ?candidate=1 before promoting newly sliced assets.</small></p><button id="motion">Pause / play</button><div id="actors"></div>
+<script type="module">
+import {ENEMY_IDS,ENEMY_ANIMATIONS} from '../src/art/enemyVisuals.js';
+const candidate=new URLSearchParams(location.search).has('candidate');
+const base=candidate?'../.tools/v9-candidate/pixel/frames/':'../assets/pixel/frames/';
+const loaded=new Map(),elements=[];let paused=false;
+document.querySelector('#motion').onclick=()=>{paused=!paused;};
+await Promise.all(ENEMY_IDS.flatMap(id=>Array.from({length:16},async(_,n)=>{
+ const image=new Image();image.src=`${base}enemy-${id}-${n}.png`;await image.decode();loaded.set(`${id}-${n}`,image.src);
+})));
+for(const id of ENEMY_IDS){const section=document.createElement('section'),title=document.createElement('h2');title.textContent=id;section.append(title);
+ const row=document.createElement('div');row.className='states';section.append(row);
+ for(const [state,animation]of Object.entries(ENEMY_ANIMATIONS)){const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');
+  image.alt=`${id} ${state}`;image.src=loaded.get(`${id}-${animation.frames[0]}`);caption.textContent=state;figure.append(image,caption);row.append(figure);
+  elements.push({id,state,animation,image});}document.querySelector('#actors').append(section);
+}
+await Promise.all(elements.map(({image})=>image.decode()));
+window.__actorPreview={ids:ENEMY_IDS,states:Object.keys(ENEMY_ANIMATIONS),frames:loaded.size,ready:true};
+let time=0,last=performance.now();function animate(now){if(!paused)time+=(now-last)/1000;last=now;
+ for(const {id,animation,image}of elements){const frames=animation.frames,index=Math.floor(time*animation.rate)%frames.length,source=loaded.get(`${id}-${frames[index]}`);if(image.src!==source)image.src=source;}requestAnimationFrame(animate);}requestAnimationFrame(animate);
+</script></body></html>

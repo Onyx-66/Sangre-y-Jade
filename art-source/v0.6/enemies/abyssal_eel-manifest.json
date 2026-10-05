@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\abyssal_eel-contact.png",
+  "items": [
+    {
+      "file": "frames/enemy-abyssal_eel-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-abyssal_eel-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    }
+  ]
+}

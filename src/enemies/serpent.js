@@ -8,6 +8,7 @@ export default {id:'serpent',update(ctx){const tail=attack(ctx,'Tail Whip'),p=at
       if(!cast(ctx,'Burrow',{shape:'ring',...marker,radius:p.radius,innerRadius:p.radius*.75},w=>{
         ctx.enemy.body?.reset?ctx.enemy.body.reset(marker.x,marker.y):ctx.enemy.setPosition(marker.x,marker.y);
         ctx.enemy.setData({burrowing:false,invulnerableEnemy:false});ctx.enemy.setVisible?.(true);
+        ctx.scene.enemyVisuals?.emerge(ctx.enemy);
         areaHit(ctx,w,p.damage,{melee:true,knockup:p.knockup});
       })){ctx.enemy.setData({burrowing:false,invulnerableEnemy:false});ctx.enemy.setVisible?.(true);}
       ctx.state.cooldowns.Burrow=old;

@@ -1,0 +1,3221 @@
+{
+  "createdAt": "2026-10-05T10:55:11.128Z",
+  "files": 258,
+  "uniqueHashes": 258,
+  "fringes": 0,
+  "images": [
+    {
+      "id": "shade-0",
+      "file": "frames/enemy-shade-0.png",
+      "size": 128,
+      "opaquePixels": 5343,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "shade-1",
+      "file": "frames/enemy-shade-1.png",
+      "size": 128,
+      "opaquePixels": 5363,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "shade-2",
+      "file": "frames/enemy-shade-2.png",
+      "size": 128,
+      "opaquePixels": 5337,
+      "boundsY": [
+        33,
+        124
+      ]
+    },
+    {
+      "id": "shade-3",
+      "file": "frames/enemy-shade-3.png",
+      "size": 128,
+      "opaquePixels": 5618,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "shade-4",
+      "file": "frames/enemy-shade-4.png",
+      "size": 128,
+      "opaquePixels": 5589,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "shade-5",
+      "file": "frames/enemy-shade-5.png",
+      "size": 128,
+      "opaquePixels": 5628,
+      "boundsY": [
+        32,
+        124
+      ]
+    },
+    {
+      "id": "shade-6",
+      "file": "frames/enemy-shade-6.png",
+      "size": 128,
+      "opaquePixels": 4331,
+      "boundsY": [
+        53,
+        124
+      ]
+    },
+    {
+      "id": "shade-7",
+      "file": "frames/enemy-shade-7.png",
+      "size": 128,
+      "opaquePixels": 5477,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "shade-8",
+      "file": "frames/enemy-shade-8.png",
+      "size": 128,
+      "opaquePixels": 5686,
+      "boundsY": [
+        42,
+        124
+      ]
+    },
+    {
+      "id": "shade-9",
+      "file": "frames/enemy-shade-9.png",
+      "size": 128,
+      "opaquePixels": 5418,
+      "boundsY": [
+        43,
+        124
+      ]
+    },
+    {
+      "id": "shade-10",
+      "file": "frames/enemy-shade-10.png",
+      "size": 128,
+      "opaquePixels": 5161,
+      "boundsY": [
+        38,
+        124
+      ]
+    },
+    {
+      "id": "shade-11",
+      "file": "frames/enemy-shade-11.png",
+      "size": 128,
+      "opaquePixels": 5564,
+      "boundsY": [
+        26,
+        124
+      ]
+    },
+    {
+      "id": "shade-12",
+      "file": "frames/enemy-shade-12.png",
+      "size": 128,
+      "opaquePixels": 5417,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "shade-13",
+      "file": "frames/enemy-shade-13.png",
+      "size": 128,
+      "opaquePixels": 5597,
+      "boundsY": [
+        23,
+        124
+      ]
+    },
+    {
+      "id": "shade-14",
+      "file": "frames/enemy-shade-14.png",
+      "size": 128,
+      "opaquePixels": 5103,
+      "boundsY": [
+        23,
+        124
+      ]
+    },
+    {
+      "id": "shade-15",
+      "file": "frames/enemy-shade-15.png",
+      "size": 128,
+      "opaquePixels": 2935,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "bat-0",
+      "file": "frames/enemy-bat-0.png",
+      "size": 128,
+      "opaquePixels": 5483,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "bat-1",
+      "file": "frames/enemy-bat-1.png",
+      "size": 128,
+      "opaquePixels": 5394,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "bat-2",
+      "file": "frames/enemy-bat-2.png",
+      "size": 128,
+      "opaquePixels": 4631,
+      "boundsY": [
+        47,
+        124
+      ]
+    },
+    {
+      "id": "bat-3",
+      "file": "frames/enemy-bat-3.png",
+      "size": 128,
+      "opaquePixels": 5627,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "bat-4",
+      "file": "frames/enemy-bat-4.png",
+      "size": 128,
+      "opaquePixels": 4956,
+      "boundsY": [
+        46,
+        124
+      ]
+    },
+    {
+      "id": "bat-5",
+      "file": "frames/enemy-bat-5.png",
+      "size": 128,
+      "opaquePixels": 5704,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "bat-6",
+      "file": "frames/enemy-bat-6.png",
+      "size": 128,
+      "opaquePixels": 5677,
+      "boundsY": [
+        25,
+        124
+      ]
+    },
+    {
+      "id": "bat-7",
+      "file": "frames/enemy-bat-7.png",
+      "size": 128,
+      "opaquePixels": 5209,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "bat-8",
+      "file": "frames/enemy-bat-8.png",
+      "size": 128,
+      "opaquePixels": 4468,
+      "boundsY": [
+        45,
+        124
+      ]
+    },
+    {
+      "id": "bat-9",
+      "file": "frames/enemy-bat-9.png",
+      "size": 128,
+      "opaquePixels": 5286,
+      "boundsY": [
+        42,
+        124
+      ]
+    },
+    {
+      "id": "bat-10",
+      "file": "frames/enemy-bat-10.png",
+      "size": 128,
+      "opaquePixels": 5629,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "bat-11",
+      "file": "frames/enemy-bat-11.png",
+      "size": 128,
+      "opaquePixels": 5353,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "bat-12",
+      "file": "frames/enemy-bat-12.png",
+      "size": 128,
+      "opaquePixels": 5548,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "bat-13",
+      "file": "frames/enemy-bat-13.png",
+      "size": 128,
+      "opaquePixels": 4416,
+      "boundsY": [
+        58,
+        124
+      ]
+    },
+    {
+      "id": "bat-14",
+      "file": "frames/enemy-bat-14.png",
+      "size": 128,
+      "opaquePixels": 4906,
+      "boundsY": [
+        33,
+        124
+      ]
+    },
+    {
+      "id": "bat-15",
+      "file": "frames/enemy-bat-15.png",
+      "size": 128,
+      "opaquePixels": 1804,
+      "boundsY": [
+        52,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-0",
+      "file": "frames/enemy-jaguar-0.png",
+      "size": 128,
+      "opaquePixels": 2558,
+      "boundsY": [
+        54,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-1",
+      "file": "frames/enemy-jaguar-1.png",
+      "size": 128,
+      "opaquePixels": 2554,
+      "boundsY": [
+        54,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-2",
+      "file": "frames/enemy-jaguar-2.png",
+      "size": 128,
+      "opaquePixels": 2432,
+      "boundsY": [
+        57,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-3",
+      "file": "frames/enemy-jaguar-3.png",
+      "size": 128,
+      "opaquePixels": 2386,
+      "boundsY": [
+        58,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-4",
+      "file": "frames/enemy-jaguar-4.png",
+      "size": 128,
+      "opaquePixels": 2525,
+      "boundsY": [
+        56,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-5",
+      "file": "frames/enemy-jaguar-5.png",
+      "size": 128,
+      "opaquePixels": 2453,
+      "boundsY": [
+        56,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-6",
+      "file": "frames/enemy-jaguar-6.png",
+      "size": 128,
+      "opaquePixels": 2379,
+      "boundsY": [
+        73,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-7",
+      "file": "frames/enemy-jaguar-7.png",
+      "size": 128,
+      "opaquePixels": 2580,
+      "boundsY": [
+        56,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-8",
+      "file": "frames/enemy-jaguar-8.png",
+      "size": 128,
+      "opaquePixels": 2511,
+      "boundsY": [
+        57,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-9",
+      "file": "frames/enemy-jaguar-9.png",
+      "size": 128,
+      "opaquePixels": 2521,
+      "boundsY": [
+        63,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-10",
+      "file": "frames/enemy-jaguar-10.png",
+      "size": 128,
+      "opaquePixels": 2551,
+      "boundsY": [
+        57,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-11",
+      "file": "frames/enemy-jaguar-11.png",
+      "size": 128,
+      "opaquePixels": 2746,
+      "boundsY": [
+        51,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-12",
+      "file": "frames/enemy-jaguar-12.png",
+      "size": 128,
+      "opaquePixels": 2636,
+      "boundsY": [
+        68,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-13",
+      "file": "frames/enemy-jaguar-13.png",
+      "size": 128,
+      "opaquePixels": 2022,
+      "boundsY": [
+        87,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-14",
+      "file": "frames/enemy-jaguar-14.png",
+      "size": 128,
+      "opaquePixels": 2283,
+      "boundsY": [
+        62,
+        124
+      ]
+    },
+    {
+      "id": "jaguar-15",
+      "file": "frames/enemy-jaguar-15.png",
+      "size": 128,
+      "opaquePixels": 1523,
+      "boundsY": [
+        63,
+        124
+      ]
+    },
+    {
+      "id": "serpent-0",
+      "file": "frames/enemy-serpent-0.png",
+      "size": 128,
+      "opaquePixels": 5129,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "serpent-1",
+      "file": "frames/enemy-serpent-1.png",
+      "size": 128,
+      "opaquePixels": 5110,
+      "boundsY": [
+        35,
+        124
+      ]
+    },
+    {
+      "id": "serpent-2",
+      "file": "frames/enemy-serpent-2.png",
+      "size": 128,
+      "opaquePixels": 5093,
+      "boundsY": [
+        46,
+        124
+      ]
+    },
+    {
+      "id": "serpent-3",
+      "file": "frames/enemy-serpent-3.png",
+      "size": 128,
+      "opaquePixels": 5138,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "serpent-4",
+      "file": "frames/enemy-serpent-4.png",
+      "size": 128,
+      "opaquePixels": 4778,
+      "boundsY": [
+        52,
+        124
+      ]
+    },
+    {
+      "id": "serpent-5",
+      "file": "frames/enemy-serpent-5.png",
+      "size": 128,
+      "opaquePixels": 5112,
+      "boundsY": [
+        41,
+        124
+      ]
+    },
+    {
+      "id": "serpent-6",
+      "file": "frames/enemy-serpent-6.png",
+      "size": 128,
+      "opaquePixels": 5283,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "serpent-7",
+      "file": "frames/enemy-serpent-7.png",
+      "size": 128,
+      "opaquePixels": 6714,
+      "boundsY": [
+        23,
+        124
+      ]
+    },
+    {
+      "id": "serpent-8",
+      "file": "frames/enemy-serpent-8.png",
+      "size": 128,
+      "opaquePixels": 6597,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "serpent-9",
+      "file": "frames/enemy-serpent-9.png",
+      "size": 128,
+      "opaquePixels": 5974,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "serpent-10",
+      "file": "frames/enemy-serpent-10.png",
+      "size": 128,
+      "opaquePixels": 6013,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "serpent-11",
+      "file": "frames/enemy-serpent-11.png",
+      "size": 128,
+      "opaquePixels": 6032,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "serpent-12",
+      "file": "frames/enemy-serpent-12.png",
+      "size": 128,
+      "opaquePixels": 5845,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "serpent-13",
+      "file": "frames/enemy-serpent-13.png",
+      "size": 128,
+      "opaquePixels": 5216,
+      "boundsY": [
+        39,
+        124
+      ]
+    },
+    {
+      "id": "serpent-14",
+      "file": "frames/enemy-serpent-14.png",
+      "size": 128,
+      "opaquePixels": 5153,
+      "boundsY": [
+        25,
+        124
+      ]
+    },
+    {
+      "id": "serpent-15",
+      "file": "frames/enemy-serpent-15.png",
+      "size": 128,
+      "opaquePixels": 2887,
+      "boundsY": [
+        41,
+        124
+      ]
+    },
+    {
+      "id": "priest-0",
+      "file": "frames/enemy-priest-0.png",
+      "size": 128,
+      "opaquePixels": 5943,
+      "boundsY": [
+        15,
+        124
+      ]
+    },
+    {
+      "id": "priest-1",
+      "file": "frames/enemy-priest-1.png",
+      "size": 128,
+      "opaquePixels": 6111,
+      "boundsY": [
+        16,
+        124
+      ]
+    },
+    {
+      "id": "priest-2",
+      "file": "frames/enemy-priest-2.png",
+      "size": 128,
+      "opaquePixels": 5978,
+      "boundsY": [
+        17,
+        124
+      ]
+    },
+    {
+      "id": "priest-3",
+      "file": "frames/enemy-priest-3.png",
+      "size": 128,
+      "opaquePixels": 5929,
+      "boundsY": [
+        17,
+        124
+      ]
+    },
+    {
+      "id": "priest-4",
+      "file": "frames/enemy-priest-4.png",
+      "size": 128,
+      "opaquePixels": 5949,
+      "boundsY": [
+        16,
+        124
+      ]
+    },
+    {
+      "id": "priest-5",
+      "file": "frames/enemy-priest-5.png",
+      "size": 128,
+      "opaquePixels": 5846,
+      "boundsY": [
+        19,
+        124
+      ]
+    },
+    {
+      "id": "priest-6",
+      "file": "frames/enemy-priest-6.png",
+      "size": 128,
+      "opaquePixels": 6030,
+      "boundsY": [
+        19,
+        124
+      ]
+    },
+    {
+      "id": "priest-7",
+      "file": "frames/enemy-priest-7.png",
+      "size": 128,
+      "opaquePixels": 6929,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "priest-8",
+      "file": "frames/enemy-priest-8.png",
+      "size": 128,
+      "opaquePixels": 6498,
+      "boundsY": [
+        20,
+        124
+      ]
+    },
+    {
+      "id": "priest-9",
+      "file": "frames/enemy-priest-9.png",
+      "size": 128,
+      "opaquePixels": 5604,
+      "boundsY": [
+        21,
+        124
+      ]
+    },
+    {
+      "id": "priest-10",
+      "file": "frames/enemy-priest-10.png",
+      "size": 128,
+      "opaquePixels": 5637,
+      "boundsY": [
+        17,
+        124
+      ]
+    },
+    {
+      "id": "priest-11",
+      "file": "frames/enemy-priest-11.png",
+      "size": 128,
+      "opaquePixels": 5600,
+      "boundsY": [
+        23,
+        124
+      ]
+    },
+    {
+      "id": "priest-12",
+      "file": "frames/enemy-priest-12.png",
+      "size": 128,
+      "opaquePixels": 5379,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "priest-13",
+      "file": "frames/enemy-priest-13.png",
+      "size": 128,
+      "opaquePixels": 5694,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "priest-14",
+      "file": "frames/enemy-priest-14.png",
+      "size": 128,
+      "opaquePixels": 5685,
+      "boundsY": [
+        21,
+        124
+      ]
+    },
+    {
+      "id": "priest-15",
+      "file": "frames/enemy-priest-15.png",
+      "size": 128,
+      "opaquePixels": 4292,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-0",
+      "file": "frames/enemy-vine_lurker-0.png",
+      "size": 128,
+      "opaquePixels": 5405,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-1",
+      "file": "frames/enemy-vine_lurker-1.png",
+      "size": 128,
+      "opaquePixels": 5390,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-2",
+      "file": "frames/enemy-vine_lurker-2.png",
+      "size": 128,
+      "opaquePixels": 5115,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-3",
+      "file": "frames/enemy-vine_lurker-3.png",
+      "size": 128,
+      "opaquePixels": 5140,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-4",
+      "file": "frames/enemy-vine_lurker-4.png",
+      "size": 128,
+      "opaquePixels": 5289,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-5",
+      "file": "frames/enemy-vine_lurker-5.png",
+      "size": 128,
+      "opaquePixels": 5296,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-6",
+      "file": "frames/enemy-vine_lurker-6.png",
+      "size": 128,
+      "opaquePixels": 5397,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-7",
+      "file": "frames/enemy-vine_lurker-7.png",
+      "size": 128,
+      "opaquePixels": 5413,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-8",
+      "file": "frames/enemy-vine_lurker-8.png",
+      "size": 128,
+      "opaquePixels": 5872,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-9",
+      "file": "frames/enemy-vine_lurker-9.png",
+      "size": 128,
+      "opaquePixels": 5717,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-10",
+      "file": "frames/enemy-vine_lurker-10.png",
+      "size": 128,
+      "opaquePixels": 5298,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-11",
+      "file": "frames/enemy-vine_lurker-11.png",
+      "size": 128,
+      "opaquePixels": 5151,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-12",
+      "file": "frames/enemy-vine_lurker-12.png",
+      "size": 128,
+      "opaquePixels": 5073,
+      "boundsY": [
+        39,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-13",
+      "file": "frames/enemy-vine_lurker-13.png",
+      "size": 128,
+      "opaquePixels": 4722,
+      "boundsY": [
+        51,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-14",
+      "file": "frames/enemy-vine_lurker-14.png",
+      "size": 128,
+      "opaquePixels": 4551,
+      "boundsY": [
+        36,
+        124
+      ]
+    },
+    {
+      "id": "vine_lurker-15",
+      "file": "frames/enemy-vine_lurker-15.png",
+      "size": 128,
+      "opaquePixels": 2213,
+      "boundsY": [
+        58,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-0",
+      "file": "frames/enemy-stone_guardian-0.png",
+      "size": 128,
+      "opaquePixels": 8433,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-1",
+      "file": "frames/enemy-stone_guardian-1.png",
+      "size": 128,
+      "opaquePixels": 8452,
+      "boundsY": [
+        13,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-2",
+      "file": "frames/enemy-stone_guardian-2.png",
+      "size": 128,
+      "opaquePixels": 7890,
+      "boundsY": [
+        13,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-3",
+      "file": "frames/enemy-stone_guardian-3.png",
+      "size": 128,
+      "opaquePixels": 8002,
+      "boundsY": [
+        13,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-4",
+      "file": "frames/enemy-stone_guardian-4.png",
+      "size": 128,
+      "opaquePixels": 7986,
+      "boundsY": [
+        12,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-5",
+      "file": "frames/enemy-stone_guardian-5.png",
+      "size": 128,
+      "opaquePixels": 8244,
+      "boundsY": [
+        11,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-6",
+      "file": "frames/enemy-stone_guardian-6.png",
+      "size": 128,
+      "opaquePixels": 8483,
+      "boundsY": [
+        7,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-7",
+      "file": "frames/enemy-stone_guardian-7.png",
+      "size": 128,
+      "opaquePixels": 8192,
+      "boundsY": [
+        7,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-8",
+      "file": "frames/enemy-stone_guardian-8.png",
+      "size": 128,
+      "opaquePixels": 8887,
+      "boundsY": [
+        15,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-9",
+      "file": "frames/enemy-stone_guardian-9.png",
+      "size": 128,
+      "opaquePixels": 7681,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-10",
+      "file": "frames/enemy-stone_guardian-10.png",
+      "size": 128,
+      "opaquePixels": 8316,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-11",
+      "file": "frames/enemy-stone_guardian-11.png",
+      "size": 128,
+      "opaquePixels": 7661,
+      "boundsY": [
+        13,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-12",
+      "file": "frames/enemy-stone_guardian-12.png",
+      "size": 128,
+      "opaquePixels": 7827,
+      "boundsY": [
+        20,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-13",
+      "file": "frames/enemy-stone_guardian-13.png",
+      "size": 128,
+      "opaquePixels": 7335,
+      "boundsY": [
+        26,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-14",
+      "file": "frames/enemy-stone_guardian-14.png",
+      "size": 128,
+      "opaquePixels": 6080,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "stone_guardian-15",
+      "file": "frames/enemy-stone_guardian-15.png",
+      "size": 128,
+      "opaquePixels": 3787,
+      "boundsY": [
+        42,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-0",
+      "file": "frames/enemy-jungle_wasp-0.png",
+      "size": 128,
+      "opaquePixels": 4024,
+      "boundsY": [
+        24,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-1",
+      "file": "frames/enemy-jungle_wasp-1.png",
+      "size": 128,
+      "opaquePixels": 4148,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-2",
+      "file": "frames/enemy-jungle_wasp-2.png",
+      "size": 128,
+      "opaquePixels": 3897,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-3",
+      "file": "frames/enemy-jungle_wasp-3.png",
+      "size": 128,
+      "opaquePixels": 4169,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-4",
+      "file": "frames/enemy-jungle_wasp-4.png",
+      "size": 128,
+      "opaquePixels": 3987,
+      "boundsY": [
+        32,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-5",
+      "file": "frames/enemy-jungle_wasp-5.png",
+      "size": 128,
+      "opaquePixels": 3988,
+      "boundsY": [
+        36,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-6",
+      "file": "frames/enemy-jungle_wasp-6.png",
+      "size": 128,
+      "opaquePixels": 4375,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-7",
+      "file": "frames/enemy-jungle_wasp-7.png",
+      "size": 128,
+      "opaquePixels": 4515,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-8",
+      "file": "frames/enemy-jungle_wasp-8.png",
+      "size": 128,
+      "opaquePixels": 4014,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-9",
+      "file": "frames/enemy-jungle_wasp-9.png",
+      "size": 128,
+      "opaquePixels": 3602,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-10",
+      "file": "frames/enemy-jungle_wasp-10.png",
+      "size": 128,
+      "opaquePixels": 3683,
+      "boundsY": [
+        33,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-11",
+      "file": "frames/enemy-jungle_wasp-11.png",
+      "size": 128,
+      "opaquePixels": 3630,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-12",
+      "file": "frames/enemy-jungle_wasp-12.png",
+      "size": 128,
+      "opaquePixels": 3166,
+      "boundsY": [
+        57,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-13",
+      "file": "frames/enemy-jungle_wasp-13.png",
+      "size": 128,
+      "opaquePixels": 3384,
+      "boundsY": [
+        52,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-14",
+      "file": "frames/enemy-jungle_wasp-14.png",
+      "size": 128,
+      "opaquePixels": 3511,
+      "boundsY": [
+        39,
+        124
+      ]
+    },
+    {
+      "id": "jungle_wasp-15",
+      "file": "frames/enemy-jungle_wasp-15.png",
+      "size": 128,
+      "opaquePixels": 2278,
+      "boundsY": [
+        49,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-0",
+      "file": "frames/enemy-blood_wraith-0.png",
+      "size": 128,
+      "opaquePixels": 4292,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-1",
+      "file": "frames/enemy-blood_wraith-1.png",
+      "size": 128,
+      "opaquePixels": 4326,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-2",
+      "file": "frames/enemy-blood_wraith-2.png",
+      "size": 128,
+      "opaquePixels": 4253,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-3",
+      "file": "frames/enemy-blood_wraith-3.png",
+      "size": 128,
+      "opaquePixels": 4105,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-4",
+      "file": "frames/enemy-blood_wraith-4.png",
+      "size": 128,
+      "opaquePixels": 4331,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-5",
+      "file": "frames/enemy-blood_wraith-5.png",
+      "size": 128,
+      "opaquePixels": 4220,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-6",
+      "file": "frames/enemy-blood_wraith-6.png",
+      "size": 128,
+      "opaquePixels": 4437,
+      "boundsY": [
+        35,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-7",
+      "file": "frames/enemy-blood_wraith-7.png",
+      "size": 128,
+      "opaquePixels": 5330,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-8",
+      "file": "frames/enemy-blood_wraith-8.png",
+      "size": 128,
+      "opaquePixels": 5962,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-9",
+      "file": "frames/enemy-blood_wraith-9.png",
+      "size": 128,
+      "opaquePixels": 5257,
+      "boundsY": [
+        33,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-10",
+      "file": "frames/enemy-blood_wraith-10.png",
+      "size": 128,
+      "opaquePixels": 4486,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-11",
+      "file": "frames/enemy-blood_wraith-11.png",
+      "size": 128,
+      "opaquePixels": 4774,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-12",
+      "file": "frames/enemy-blood_wraith-12.png",
+      "size": 128,
+      "opaquePixels": 4326,
+      "boundsY": [
+        58,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-13",
+      "file": "frames/enemy-blood_wraith-13.png",
+      "size": 128,
+      "opaquePixels": 4325,
+      "boundsY": [
+        40,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-14",
+      "file": "frames/enemy-blood_wraith-14.png",
+      "size": 128,
+      "opaquePixels": 4394,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "blood_wraith-15",
+      "file": "frames/enemy-blood_wraith-15.png",
+      "size": 128,
+      "opaquePixels": 3236,
+      "boundsY": [
+        43,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-0",
+      "file": "frames/enemy-bone_archer-0.png",
+      "size": 128,
+      "opaquePixels": 3680,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-1",
+      "file": "frames/enemy-bone_archer-1.png",
+      "size": 128,
+      "opaquePixels": 3695,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-2",
+      "file": "frames/enemy-bone_archer-2.png",
+      "size": 128,
+      "opaquePixels": 3729,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-3",
+      "file": "frames/enemy-bone_archer-3.png",
+      "size": 128,
+      "opaquePixels": 3588,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-4",
+      "file": "frames/enemy-bone_archer-4.png",
+      "size": 128,
+      "opaquePixels": 3636,
+      "boundsY": [
+        26,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-5",
+      "file": "frames/enemy-bone_archer-5.png",
+      "size": 128,
+      "opaquePixels": 3674,
+      "boundsY": [
+        26,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-6",
+      "file": "frames/enemy-bone_archer-6.png",
+      "size": 128,
+      "opaquePixels": 4119,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-7",
+      "file": "frames/enemy-bone_archer-7.png",
+      "size": 128,
+      "opaquePixels": 4093,
+      "boundsY": [
+        24,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-8",
+      "file": "frames/enemy-bone_archer-8.png",
+      "size": 128,
+      "opaquePixels": 4254,
+      "boundsY": [
+        21,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-9",
+      "file": "frames/enemy-bone_archer-9.png",
+      "size": 128,
+      "opaquePixels": 4178,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-10",
+      "file": "frames/enemy-bone_archer-10.png",
+      "size": 128,
+      "opaquePixels": 3743,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-11",
+      "file": "frames/enemy-bone_archer-11.png",
+      "size": 128,
+      "opaquePixels": 4108,
+      "boundsY": [
+        36,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-12",
+      "file": "frames/enemy-bone_archer-12.png",
+      "size": 128,
+      "opaquePixels": 4508,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-13",
+      "file": "frames/enemy-bone_archer-13.png",
+      "size": 128,
+      "opaquePixels": 4215,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-14",
+      "file": "frames/enemy-bone_archer-14.png",
+      "size": 128,
+      "opaquePixels": 3723,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "bone_archer-15",
+      "file": "frames/enemy-bone_archer-15.png",
+      "size": 128,
+      "opaquePixels": 2709,
+      "boundsY": [
+        48,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-0",
+      "file": "frames/enemy-moon_cultist-0.png",
+      "size": 128,
+      "opaquePixels": 4852,
+      "boundsY": [
+        15,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-1",
+      "file": "frames/enemy-moon_cultist-1.png",
+      "size": 128,
+      "opaquePixels": 4940,
+      "boundsY": [
+        15,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-2",
+      "file": "frames/enemy-moon_cultist-2.png",
+      "size": 128,
+      "opaquePixels": 5264,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-3",
+      "file": "frames/enemy-moon_cultist-3.png",
+      "size": 128,
+      "opaquePixels": 5480,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-4",
+      "file": "frames/enemy-moon_cultist-4.png",
+      "size": 128,
+      "opaquePixels": 5535,
+      "boundsY": [
+        16,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-5",
+      "file": "frames/enemy-moon_cultist-5.png",
+      "size": 128,
+      "opaquePixels": 5503,
+      "boundsY": [
+        16,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-6",
+      "file": "frames/enemy-moon_cultist-6.png",
+      "size": 128,
+      "opaquePixels": 4935,
+      "boundsY": [
+        11,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-7",
+      "file": "frames/enemy-moon_cultist-7.png",
+      "size": 128,
+      "opaquePixels": 5661,
+      "boundsY": [
+        10,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-8",
+      "file": "frames/enemy-moon_cultist-8.png",
+      "size": 128,
+      "opaquePixels": 7223,
+      "boundsY": [
+        13,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-9",
+      "file": "frames/enemy-moon_cultist-9.png",
+      "size": 128,
+      "opaquePixels": 7047,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-10",
+      "file": "frames/enemy-moon_cultist-10.png",
+      "size": 128,
+      "opaquePixels": 5468,
+      "boundsY": [
+        26,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-11",
+      "file": "frames/enemy-moon_cultist-11.png",
+      "size": 128,
+      "opaquePixels": 4520,
+      "boundsY": [
+        31,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-12",
+      "file": "frames/enemy-moon_cultist-12.png",
+      "size": 128,
+      "opaquePixels": 4178,
+      "boundsY": [
+        34,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-13",
+      "file": "frames/enemy-moon_cultist-13.png",
+      "size": 128,
+      "opaquePixels": 4642,
+      "boundsY": [
+        36,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-14",
+      "file": "frames/enemy-moon_cultist-14.png",
+      "size": 128,
+      "opaquePixels": 5085,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "moon_cultist-15",
+      "file": "frames/enemy-moon_cultist-15.png",
+      "size": 128,
+      "opaquePixels": 3224,
+      "boundsY": [
+        28,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-0",
+      "file": "frames/enemy-drowned_spirit-0.png",
+      "size": 128,
+      "opaquePixels": 4140,
+      "boundsY": [
+        21,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-1",
+      "file": "frames/enemy-drowned_spirit-1.png",
+      "size": 128,
+      "opaquePixels": 4261,
+      "boundsY": [
+        20,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-2",
+      "file": "frames/enemy-drowned_spirit-2.png",
+      "size": 128,
+      "opaquePixels": 4339,
+      "boundsY": [
+        21,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-3",
+      "file": "frames/enemy-drowned_spirit-3.png",
+      "size": 128,
+      "opaquePixels": 4209,
+      "boundsY": [
+        20,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-4",
+      "file": "frames/enemy-drowned_spirit-4.png",
+      "size": 128,
+      "opaquePixels": 4173,
+      "boundsY": [
+        24,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-5",
+      "file": "frames/enemy-drowned_spirit-5.png",
+      "size": 128,
+      "opaquePixels": 4408,
+      "boundsY": [
+        25,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-6",
+      "file": "frames/enemy-drowned_spirit-6.png",
+      "size": 128,
+      "opaquePixels": 4266,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-7",
+      "file": "frames/enemy-drowned_spirit-7.png",
+      "size": 128,
+      "opaquePixels": 4618,
+      "boundsY": [
+        20,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-8",
+      "file": "frames/enemy-drowned_spirit-8.png",
+      "size": 128,
+      "opaquePixels": 5789,
+      "boundsY": [
+        26,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-9",
+      "file": "frames/enemy-drowned_spirit-9.png",
+      "size": 128,
+      "opaquePixels": 4928,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-10",
+      "file": "frames/enemy-drowned_spirit-10.png",
+      "size": 128,
+      "opaquePixels": 3876,
+      "boundsY": [
+        25,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-11",
+      "file": "frames/enemy-drowned_spirit-11.png",
+      "size": 128,
+      "opaquePixels": 4205,
+      "boundsY": [
+        24,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-12",
+      "file": "frames/enemy-drowned_spirit-12.png",
+      "size": 128,
+      "opaquePixels": 3893,
+      "boundsY": [
+        38,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-13",
+      "file": "frames/enemy-drowned_spirit-13.png",
+      "size": 128,
+      "opaquePixels": 4221,
+      "boundsY": [
+        40,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-14",
+      "file": "frames/enemy-drowned_spirit-14.png",
+      "size": 128,
+      "opaquePixels": 3842,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "drowned_spirit-15",
+      "file": "frames/enemy-drowned_spirit-15.png",
+      "size": 128,
+      "opaquePixels": 2762,
+      "boundsY": [
+        42,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-0",
+      "file": "frames/enemy-abyssal_eel-0.png",
+      "size": 128,
+      "opaquePixels": 3828,
+      "boundsY": [
+        68,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-1",
+      "file": "frames/enemy-abyssal_eel-1.png",
+      "size": 128,
+      "opaquePixels": 3828,
+      "boundsY": [
+        66,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-2",
+      "file": "frames/enemy-abyssal_eel-2.png",
+      "size": 128,
+      "opaquePixels": 3665,
+      "boundsY": [
+        63,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-3",
+      "file": "frames/enemy-abyssal_eel-3.png",
+      "size": 128,
+      "opaquePixels": 3721,
+      "boundsY": [
+        66,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-4",
+      "file": "frames/enemy-abyssal_eel-4.png",
+      "size": 128,
+      "opaquePixels": 3793,
+      "boundsY": [
+        61,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-5",
+      "file": "frames/enemy-abyssal_eel-5.png",
+      "size": 128,
+      "opaquePixels": 3610,
+      "boundsY": [
+        70,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-6",
+      "file": "frames/enemy-abyssal_eel-6.png",
+      "size": 128,
+      "opaquePixels": 4907,
+      "boundsY": [
+        33,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-7",
+      "file": "frames/enemy-abyssal_eel-7.png",
+      "size": 128,
+      "opaquePixels": 5156,
+      "boundsY": [
+        30,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-8",
+      "file": "frames/enemy-abyssal_eel-8.png",
+      "size": 128,
+      "opaquePixels": 3758,
+      "boundsY": [
+        71,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-9",
+      "file": "frames/enemy-abyssal_eel-9.png",
+      "size": 128,
+      "opaquePixels": 3281,
+      "boundsY": [
+        72,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-10",
+      "file": "frames/enemy-abyssal_eel-10.png",
+      "size": 128,
+      "opaquePixels": 3382,
+      "boundsY": [
+        70,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-11",
+      "file": "frames/enemy-abyssal_eel-11.png",
+      "size": 128,
+      "opaquePixels": 4333,
+      "boundsY": [
+        46,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-12",
+      "file": "frames/enemy-abyssal_eel-12.png",
+      "size": 128,
+      "opaquePixels": 4790,
+      "boundsY": [
+        45,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-13",
+      "file": "frames/enemy-abyssal_eel-13.png",
+      "size": 128,
+      "opaquePixels": 4309,
+      "boundsY": [
+        47,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-14",
+      "file": "frames/enemy-abyssal_eel-14.png",
+      "size": 128,
+      "opaquePixels": 4056,
+      "boundsY": [
+        37,
+        124
+      ]
+    },
+    {
+      "id": "abyssal_eel-15",
+      "file": "frames/enemy-abyssal_eel-15.png",
+      "size": 128,
+      "opaquePixels": 2532,
+      "boundsY": [
+        53,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-0",
+      "file": "frames/enemy-crystal_golem-0.png",
+      "size": 128,
+      "opaquePixels": 6770,
+      "boundsY": [
+        12,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-1",
+      "file": "frames/enemy-crystal_golem-1.png",
+      "size": 128,
+      "opaquePixels": 6498,
+      "boundsY": [
+        13,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-2",
+      "file": "frames/enemy-crystal_golem-2.png",
+      "size": 128,
+      "opaquePixels": 6005,
+      "boundsY": [
+        15,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-3",
+      "file": "frames/enemy-crystal_golem-3.png",
+      "size": 128,
+      "opaquePixels": 6040,
+      "boundsY": [
+        16,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-4",
+      "file": "frames/enemy-crystal_golem-4.png",
+      "size": 128,
+      "opaquePixels": 6106,
+      "boundsY": [
+        15,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-5",
+      "file": "frames/enemy-crystal_golem-5.png",
+      "size": 128,
+      "opaquePixels": 6211,
+      "boundsY": [
+        14,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-6",
+      "file": "frames/enemy-crystal_golem-6.png",
+      "size": 128,
+      "opaquePixels": 6593,
+      "boundsY": [
+        9,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-7",
+      "file": "frames/enemy-crystal_golem-7.png",
+      "size": 128,
+      "opaquePixels": 6533,
+      "boundsY": [
+        7,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-8",
+      "file": "frames/enemy-crystal_golem-8.png",
+      "size": 128,
+      "opaquePixels": 7443,
+      "boundsY": [
+        18,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-9",
+      "file": "frames/enemy-crystal_golem-9.png",
+      "size": 128,
+      "opaquePixels": 8219,
+      "boundsY": [
+        20,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-10",
+      "file": "frames/enemy-crystal_golem-10.png",
+      "size": 128,
+      "opaquePixels": 6586,
+      "boundsY": [
+        19,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-11",
+      "file": "frames/enemy-crystal_golem-11.png",
+      "size": 128,
+      "opaquePixels": 5718,
+      "boundsY": [
+        22,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-12",
+      "file": "frames/enemy-crystal_golem-12.png",
+      "size": 128,
+      "opaquePixels": 5967,
+      "boundsY": [
+        29,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-13",
+      "file": "frames/enemy-crystal_golem-13.png",
+      "size": 128,
+      "opaquePixels": 5918,
+      "boundsY": [
+        33,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-14",
+      "file": "frames/enemy-crystal_golem-14.png",
+      "size": 128,
+      "opaquePixels": 5818,
+      "boundsY": [
+        19,
+        124
+      ]
+    },
+    {
+      "id": "crystal_golem-15",
+      "file": "frames/enemy-crystal_golem-15.png",
+      "size": 128,
+      "opaquePixels": 3663,
+      "boundsY": [
+        27,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-0",
+      "file": "frames/enemy-glow_wisp-0.png",
+      "size": 128,
+      "opaquePixels": 3281,
+      "boundsY": [
+        45,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-1",
+      "file": "frames/enemy-glow_wisp-1.png",
+      "size": 128,
+      "opaquePixels": 3431,
+      "boundsY": [
+        38,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-2",
+      "file": "frames/enemy-glow_wisp-2.png",
+      "size": 128,
+      "opaquePixels": 3437,
+      "boundsY": [
+        45,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-3",
+      "file": "frames/enemy-glow_wisp-3.png",
+      "size": 128,
+      "opaquePixels": 3543,
+      "boundsY": [
+        47,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-4",
+      "file": "frames/enemy-glow_wisp-4.png",
+      "size": 128,
+      "opaquePixels": 3561,
+      "boundsY": [
+        45,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-5",
+      "file": "frames/enemy-glow_wisp-5.png",
+      "size": 128,
+      "opaquePixels": 3425,
+      "boundsY": [
+        43,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-6",
+      "file": "frames/enemy-glow_wisp-6.png",
+      "size": 128,
+      "opaquePixels": 3917,
+      "boundsY": [
+        40,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-7",
+      "file": "frames/enemy-glow_wisp-7.png",
+      "size": 128,
+      "opaquePixels": 4039,
+      "boundsY": [
+        40,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-8",
+      "file": "frames/enemy-glow_wisp-8.png",
+      "size": 128,
+      "opaquePixels": 4942,
+      "boundsY": [
+        44,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-9",
+      "file": "frames/enemy-glow_wisp-9.png",
+      "size": 128,
+      "opaquePixels": 4306,
+      "boundsY": [
+        47,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-10",
+      "file": "frames/enemy-glow_wisp-10.png",
+      "size": 128,
+      "opaquePixels": 3451,
+      "boundsY": [
+        44,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-11",
+      "file": "frames/enemy-glow_wisp-11.png",
+      "size": 128,
+      "opaquePixels": 3639,
+      "boundsY": [
+        39,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-12",
+      "file": "frames/enemy-glow_wisp-12.png",
+      "size": 128,
+      "opaquePixels": 3072,
+      "boundsY": [
+        48,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-13",
+      "file": "frames/enemy-glow_wisp-13.png",
+      "size": 128,
+      "opaquePixels": 3008,
+      "boundsY": [
+        44,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-14",
+      "file": "frames/enemy-glow_wisp-14.png",
+      "size": 128,
+      "opaquePixels": 1861,
+      "boundsY": [
+        54,
+        124
+      ]
+    },
+    {
+      "id": "glow_wisp-15",
+      "file": "frames/enemy-glow_wisp-15.png",
+      "size": 128,
+      "opaquePixels": 1007,
+      "boundsY": [
+        59,
+        124
+      ]
+    },
+    {
+      "id": "soul-bolt",
+      "file": "fx/soul-bolt/main.png",
+      "size": 256,
+      "opaquePixels": 16830,
+      "boundsY": [
+        65,
+        189
+      ]
+    },
+    {
+      "id": "venom-spit",
+      "file": "fx/venom-spit/main.png",
+      "size": 256,
+      "opaquePixels": 18471,
+      "boundsY": [
+        50,
+        204
+      ]
+    },
+    {
+      "id": "arrow-red",
+      "file": "fx/arrow-red/main.png",
+      "size": 256,
+      "opaquePixels": 11936,
+      "boundsY": [
+        80,
+        175
+      ]
+    },
+    {
+      "id": "vine-snare",
+      "file": "fx/vine-snare/main.png",
+      "size": 256,
+      "opaquePixels": 26299,
+      "boundsY": [
+        30,
+        224
+      ]
+    },
+    {
+      "id": "puddle",
+      "file": "fx/puddle/main.png",
+      "size": 256,
+      "opaquePixels": 28665,
+      "boundsY": [
+        32,
+        222
+      ]
+    },
+    {
+      "id": "crystal-shard",
+      "file": "fx/crystal-shard/main.png",
+      "size": 256,
+      "opaquePixels": 15611,
+      "boundsY": [
+        59,
+        195
+      ]
+    },
+    {
+      "id": "wisp-explosion",
+      "file": "fx/wisp-explosion/main.png",
+      "size": 256,
+      "opaquePixels": 34045,
+      "boundsY": [
+        12,
+        242
+      ]
+    },
+    {
+      "id": "blood-slash",
+      "file": "fx/blood-slash/main.png",
+      "size": 256,
+      "opaquePixels": 21647,
+      "boundsY": [
+        21,
+        234
+      ]
+    },
+    {
+      "id": "blink-flash",
+      "file": "fx/blink-flash/main.png",
+      "size": 256,
+      "opaquePixels": 25451,
+      "boundsY": [
+        19,
+        236
+      ]
+    },
+    {
+      "id": "tail-whip-arc",
+      "file": "fx/tail-whip-arc/main.png",
+      "size": 256,
+      "opaquePixels": 27548,
+      "boundsY": [
+        16,
+        239
+      ]
+    },
+    {
+      "id": "shockwave-ring",
+      "file": "fx/shockwave-ring/main.png",
+      "size": 256,
+      "opaquePixels": 24210,
+      "boundsY": [
+        29,
+        225
+      ]
+    },
+    {
+      "id": "dust-puff",
+      "file": "fx/dust-puff/main.png",
+      "size": 256,
+      "opaquePixels": 24497,
+      "boundsY": [
+        33,
+        222
+      ]
+    },
+    {
+      "id": "spawn-crack",
+      "file": "fx/spawn-crack/main.png",
+      "size": 256,
+      "opaquePixels": 27788,
+      "boundsY": [
+        11,
+        243
+      ]
+    },
+    {
+      "id": "death-puff-green",
+      "file": "fx/death-puff-green/main.png",
+      "size": 256,
+      "opaquePixels": 26012,
+      "boundsY": [
+        13,
+        241
+      ]
+    },
+    {
+      "id": "death-puff-red",
+      "file": "fx/death-puff-red/main.png",
+      "size": 256,
+      "opaquePixels": 28985,
+      "boundsY": [
+        10,
+        245
+      ]
+    },
+    {
+      "id": "death-puff-cyan",
+      "file": "fx/death-puff-cyan/main.png",
+      "size": 256,
+      "opaquePixels": 24393,
+      "boundsY": [
+        11,
+        243
+      ]
+    },
+    {
+      "id": "shield-ring-blue",
+      "file": "fx/shield-ring-blue/main.png",
+      "size": 256,
+      "opaquePixels": 36393,
+      "boundsY": [
+        10,
+        244
+      ]
+    },
+    {
+      "id": "telegraph-glyph",
+      "file": "fx/telegraph-glyph/main.png",
+      "size": 256,
+      "opaquePixels": 28123,
+      "boundsY": [
+        30,
+        225
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "shade",
+      "b": "vine_lurker",
+      "hamming": 18,
+      "difference": 17.96
+    },
+    {
+      "a": "moon_cultist",
+      "b": "glow_wisp",
+      "hamming": 18,
+      "difference": 24.723
+    },
+    {
+      "a": "vine_lurker",
+      "b": "bone_archer",
+      "hamming": 19,
+      "difference": 15.579
+    },
+    {
+      "a": "shade",
+      "b": "glow_wisp",
+      "hamming": 20,
+      "difference": 24.797
+    },
+    {
+      "a": "priest",
+      "b": "vine_lurker",
+      "hamming": 20,
+      "difference": 18.942
+    },
+    {
+      "a": "priest",
+      "b": "moon_cultist",
+      "hamming": 20,
+      "difference": 17.245
+    },
+    {
+      "a": "vine_lurker",
+      "b": "stone_guardian",
+      "hamming": 20,
+      "difference": 22.172
+    },
+    {
+      "a": "blood_wraith",
+      "b": "crystal_golem",
+      "hamming": 20,
+      "difference": 30.999
+    },
+    {
+      "a": "serpent",
+      "b": "vine_lurker",
+      "hamming": 21,
+      "difference": 21.301
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "drowned_spirit",
+      "hamming": 21,
+      "difference": 20.744
+    },
+    {
+      "a": "drowned_spirit",
+      "b": "glow_wisp",
+      "hamming": 21,
+      "difference": 24.137
+    },
+    {
+      "a": "shade",
+      "b": "stone_guardian",
+      "hamming": 22,
+      "difference": 27.929
+    },
+    {
+      "a": "bat",
+      "b": "glow_wisp",
+      "hamming": 22,
+      "difference": 26.253
+    },
+    {
+      "a": "priest",
+      "b": "glow_wisp",
+      "hamming": 22,
+      "difference": 27.471
+    },
+    {
+      "a": "vine_lurker",
+      "b": "crystal_golem",
+      "hamming": 23,
+      "difference": 29.314
+    },
+    {
+      "a": "bone_archer",
+      "b": "moon_cultist",
+      "hamming": 23,
+      "difference": 15.458
+    },
+    {
+      "a": "shade",
+      "b": "priest",
+      "hamming": 24,
+      "difference": 23.701
+    },
+    {
+      "a": "shade",
+      "b": "moon_cultist",
+      "hamming": 24,
+      "difference": 21.202
+    },
+    {
+      "a": "jaguar",
+      "b": "bone_archer",
+      "hamming": 24,
+      "difference": 12.853
+    },
+    {
+      "a": "blood_wraith",
+      "b": "drowned_spirit",
+      "hamming": 24,
+      "difference": 19.28
+    },
+    {
+      "a": "bone_archer",
+      "b": "crystal_golem",
+      "hamming": 24,
+      "difference": 30.991
+    },
+    {
+      "a": "jaguar",
+      "b": "vine_lurker",
+      "hamming": 25,
+      "difference": 13.963
+    },
+    {
+      "a": "priest",
+      "b": "bone_archer",
+      "hamming": 25,
+      "difference": 18.591
+    },
+    {
+      "a": "priest",
+      "b": "crystal_golem",
+      "hamming": 25,
+      "difference": 32.749
+    },
+    {
+      "a": "vine_lurker",
+      "b": "blood_wraith",
+      "hamming": 25,
+      "difference": 13.51
+    },
+    {
+      "a": "stone_guardian",
+      "b": "crystal_golem",
+      "hamming": 25,
+      "difference": 33.02
+    },
+    {
+      "a": "moon_cultist",
+      "b": "drowned_spirit",
+      "hamming": 25,
+      "difference": 18.902
+    },
+    {
+      "a": "serpent",
+      "b": "bone_archer",
+      "hamming": 26,
+      "difference": 23.003
+    },
+    {
+      "a": "vine_lurker",
+      "b": "glow_wisp",
+      "hamming": 26,
+      "difference": 23.453
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "glow_wisp",
+      "hamming": 26,
+      "difference": 26.11
+    },
+    {
+      "a": "blood_wraith",
+      "b": "abyssal_eel",
+      "hamming": 26,
+      "difference": 22.799
+    },
+    {
+      "a": "abyssal_eel",
+      "b": "crystal_golem",
+      "hamming": 26,
+      "difference": 36.414
+    },
+    {
+      "a": "shade",
+      "b": "serpent",
+      "hamming": 27,
+      "difference": 22.85
+    },
+    {
+      "a": "shade",
+      "b": "blood_wraith",
+      "hamming": 27,
+      "difference": 20.051
+    },
+    {
+      "a": "shade",
+      "b": "bone_archer",
+      "hamming": 27,
+      "difference": 21.333
+    },
+    {
+      "a": "shade",
+      "b": "drowned_spirit",
+      "hamming": 27,
+      "difference": 21.431
+    },
+    {
+      "a": "bat",
+      "b": "crystal_golem",
+      "hamming": 27,
+      "difference": 33.262
+    },
+    {
+      "a": "jaguar",
+      "b": "priest",
+      "hamming": 27,
+      "difference": 17.694
+    },
+    {
+      "a": "jaguar",
+      "b": "jungle_wasp",
+      "hamming": 27,
+      "difference": 17.593
+    },
+    {
+      "a": "serpent",
+      "b": "moon_cultist",
+      "hamming": 27,
+      "difference": 25.11
+    },
+    {
+      "a": "priest",
+      "b": "drowned_spirit",
+      "hamming": 27,
+      "difference": 22.499
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "crystal_golem",
+      "hamming": 27,
+      "difference": 30.616
+    },
+    {
+      "a": "bat",
+      "b": "priest",
+      "hamming": 28,
+      "difference": 22.273
+    },
+    {
+      "a": "bat",
+      "b": "stone_guardian",
+      "hamming": 28,
+      "difference": 26.079
+    },
+    {
+      "a": "bat",
+      "b": "moon_cultist",
+      "hamming": 28,
+      "difference": 19.407
+    },
+    {
+      "a": "jaguar",
+      "b": "abyssal_eel",
+      "hamming": 28,
+      "difference": 22.132
+    },
+    {
+      "a": "priest",
+      "b": "stone_guardian",
+      "hamming": 28,
+      "difference": 25.782
+    },
+    {
+      "a": "vine_lurker",
+      "b": "moon_cultist",
+      "hamming": 28,
+      "difference": 15.936
+    },
+    {
+      "a": "drowned_spirit",
+      "b": "abyssal_eel",
+      "hamming": 28,
+      "difference": 26.721
+    },
+    {
+      "a": "drowned_spirit",
+      "b": "crystal_golem",
+      "hamming": 28,
+      "difference": 30.859
+    },
+    {
+      "a": "shade",
+      "b": "jaguar",
+      "hamming": 29,
+      "difference": 20.32
+    },
+    {
+      "a": "bat",
+      "b": "bone_archer",
+      "hamming": 29,
+      "difference": 19.141
+    },
+    {
+      "a": "jaguar",
+      "b": "moon_cultist",
+      "hamming": 29,
+      "difference": 14.424
+    },
+    {
+      "a": "serpent",
+      "b": "glow_wisp",
+      "hamming": 29,
+      "difference": 28.232
+    },
+    {
+      "a": "vine_lurker",
+      "b": "abyssal_eel",
+      "hamming": 29,
+      "difference": 23.245
+    },
+    {
+      "a": "stone_guardian",
+      "b": "blood_wraith",
+      "hamming": 29,
+      "difference": 22.519
+    },
+    {
+      "a": "stone_guardian",
+      "b": "abyssal_eel",
+      "hamming": 29,
+      "difference": 31.396
+    },
+    {
+      "a": "shade",
+      "b": "bat",
+      "hamming": 30,
+      "difference": 25.454
+    },
+    {
+      "a": "bat",
+      "b": "vine_lurker",
+      "hamming": 30,
+      "difference": 20.093
+    },
+    {
+      "a": "bat",
+      "b": "jungle_wasp",
+      "hamming": 30,
+      "difference": 19.862
+    },
+    {
+      "a": "jaguar",
+      "b": "blood_wraith",
+      "hamming": 30,
+      "difference": 12.135
+    },
+    {
+      "a": "serpent",
+      "b": "abyssal_eel",
+      "hamming": 30,
+      "difference": 27.78
+    },
+    {
+      "a": "serpent",
+      "b": "crystal_golem",
+      "hamming": 30,
+      "difference": 34.56
+    },
+    {
+      "a": "priest",
+      "b": "jungle_wasp",
+      "hamming": 30,
+      "difference": 22.55
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "moon_cultist",
+      "hamming": 30,
+      "difference": 18.188
+    },
+    {
+      "a": "blood_wraith",
+      "b": "bone_archer",
+      "hamming": 30,
+      "difference": 14.299
+    },
+    {
+      "a": "shade",
+      "b": "abyssal_eel",
+      "hamming": 31,
+      "difference": 25.412
+    },
+    {
+      "a": "shade",
+      "b": "crystal_golem",
+      "hamming": 31,
+      "difference": 30.921
+    },
+    {
+      "a": "bat",
+      "b": "blood_wraith",
+      "hamming": 31,
+      "difference": 17.994
+    },
+    {
+      "a": "jaguar",
+      "b": "stone_guardian",
+      "hamming": 31,
+      "difference": 23.565
+    },
+    {
+      "a": "jaguar",
+      "b": "glow_wisp",
+      "hamming": 31,
+      "difference": 21.927
+    },
+    {
+      "a": "serpent",
+      "b": "priest",
+      "hamming": 31,
+      "difference": 26.814
+    },
+    {
+      "a": "serpent",
+      "b": "stone_guardian",
+      "hamming": 31,
+      "difference": 29.704
+    },
+    {
+      "a": "priest",
+      "b": "blood_wraith",
+      "hamming": 31,
+      "difference": 17.956
+    },
+    {
+      "a": "vine_lurker",
+      "b": "drowned_spirit",
+      "hamming": 31,
+      "difference": 19.279
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "blood_wraith",
+      "hamming": 31,
+      "difference": 17.109
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "abyssal_eel",
+      "hamming": 31,
+      "difference": 26.985
+    },
+    {
+      "a": "blood_wraith",
+      "b": "moon_cultist",
+      "hamming": 31,
+      "difference": 14.01
+    },
+    {
+      "a": "blood_wraith",
+      "b": "glow_wisp",
+      "hamming": 31,
+      "difference": 23.21
+    },
+    {
+      "a": "bone_archer",
+      "b": "glow_wisp",
+      "hamming": 31,
+      "difference": 23.017
+    },
+    {
+      "a": "moon_cultist",
+      "b": "abyssal_eel",
+      "hamming": 31,
+      "difference": 24.535
+    },
+    {
+      "a": "abyssal_eel",
+      "b": "glow_wisp",
+      "hamming": 31,
+      "difference": 26.786
+    },
+    {
+      "a": "crystal_golem",
+      "b": "glow_wisp",
+      "hamming": 31,
+      "difference": 35.08
+    },
+    {
+      "a": "shade",
+      "b": "jungle_wasp",
+      "hamming": 32,
+      "difference": 24.079
+    },
+    {
+      "a": "jaguar",
+      "b": "serpent",
+      "hamming": 32,
+      "difference": 23.238
+    },
+    {
+      "a": "jaguar",
+      "b": "drowned_spirit",
+      "hamming": 32,
+      "difference": 19.196
+    },
+    {
+      "a": "jaguar",
+      "b": "crystal_golem",
+      "hamming": 32,
+      "difference": 31.158
+    },
+    {
+      "a": "stone_guardian",
+      "b": "jungle_wasp",
+      "hamming": 32,
+      "difference": 26.605
+    },
+    {
+      "a": "stone_guardian",
+      "b": "glow_wisp",
+      "hamming": 32,
+      "difference": 32.785
+    },
+    {
+      "a": "bone_archer",
+      "b": "abyssal_eel",
+      "hamming": 32,
+      "difference": 24.78
+    },
+    {
+      "a": "bat",
+      "b": "jaguar",
+      "hamming": 33,
+      "difference": 18.584
+    },
+    {
+      "a": "bat",
+      "b": "serpent",
+      "hamming": 33,
+      "difference": 27.873
+    },
+    {
+      "a": "bat",
+      "b": "abyssal_eel",
+      "hamming": 33,
+      "difference": 27.04
+    },
+    {
+      "a": "priest",
+      "b": "abyssal_eel",
+      "hamming": 33,
+      "difference": 27.517
+    },
+    {
+      "a": "stone_guardian",
+      "b": "bone_archer",
+      "hamming": 33,
+      "difference": 23.887
+    },
+    {
+      "a": "jungle_wasp",
+      "b": "bone_archer",
+      "hamming": 33,
+      "difference": 18.599
+    },
+    {
+      "a": "moon_cultist",
+      "b": "crystal_golem",
+      "hamming": 33,
+      "difference": 32.475
+    },
+    {
+      "a": "serpent",
+      "b": "blood_wraith",
+      "hamming": 34,
+      "difference": 23.216
+    },
+    {
+      "a": "serpent",
+      "b": "drowned_spirit",
+      "hamming": 34,
+      "difference": 26.525
+    },
+    {
+      "a": "bone_archer",
+      "b": "drowned_spirit",
+      "hamming": 34,
+      "difference": 20.233
+    },
+    {
+      "a": "stone_guardian",
+      "b": "drowned_spirit",
+      "hamming": 35,
+      "difference": 27.663
+    },
+    {
+      "a": "vine_lurker",
+      "b": "jungle_wasp",
+      "hamming": 36,
+      "difference": 17.999
+    },
+    {
+      "a": "stone_guardian",
+      "b": "moon_cultist",
+      "hamming": 36,
+      "difference": 25.694
+    },
+    {
+      "a": "serpent",
+      "b": "jungle_wasp",
+      "hamming": 37,
+      "difference": 28.838
+    },
+    {
+      "a": "bat",
+      "b": "drowned_spirit",
+      "hamming": 39,
+      "difference": 24.351
+    }
+  ],
+  "errors": []
+}

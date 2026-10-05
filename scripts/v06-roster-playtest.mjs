@@ -13,6 +13,7 @@ const modes=(arg('modes')||'quick').split(',');
 const seeds=(arg('seeds')||'1701').split(',').map(Number);
 const seconds=Number(arg('seconds'))||null;
 const verification=true;
+const enemyVisuals=process.argv.includes('--enemy-visuals');
 const maps=(arg('maps')||'overgrown,bloodmoon,cenote').split(',');
 assert.ok(maps.every(id=>['overgrown','bloodmoon','cenote'].includes(id)),'Unknown map');
 const preferredAlly=arg('ally')||'saintess';
@@ -21,7 +22,7 @@ assert.ok(heroes.every(id=>['balam','ixchel','kukul'].includes(id)),'Unknown her
 assert.ok(modes.every(id=>['quick','full'].includes(id)),'Unknown mode');
 assert.ok(seeds.length&&seeds.every(Number.isSafeInteger)&&new Set(seeds).size===seeds.length,'Seeds must be distinct integers');
 assert.ok(seconds===null||(seconds>0&&seconds<=1200),'Invalid duration');
-const output=path.resolve('docs/v0.6/previews/v8/roster');
+const output=path.resolve(arg('output')||'docs/v0.6/previews/v8/roster');
 await fs.mkdir(output,{recursive:true});
 const start=performance.now();
 const report={label,createdAt:new Date().toISOString(),policy:'roster-bot-v8-coverage-packs',maps,viewport:[1280,720],
@@ -64,7 +65,7 @@ try{
    await app.startRun();
   },{hero,mode,seed,map});
   await page.locator('.hud').waitFor();
-  const result=await page.evaluate(async({hero,mode,seed,seconds,verification,preferredAlly,map})=>{
+  const result=await page.evaluate(async({hero,mode,seed,seconds,verification,preferredAlly,map,enemyVisuals})=>{
    const {GameScene}=await import('/src/scenes/GameScene.js');
    const game=window.__SANGRE_Y_JADE__.game,scene=game.scene.getScene('Ritual');game.loop.stop();
    const audit=false?(await import('/scripts/verification-observers.mjs')).observeRun(scene,(await import('/src/systems/SkillDraft.js')).slotCount):null;
@@ -100,6 +101,19 @@ try{
    // presentation must not alter a fast simulation's combat/draft randomness.
    scene.audio.sfx=()=>{};
    for(const method of ['play','loop','ui'])scene.skillAudio[method]=()=>null;
+   const excludedAllyFx=new Set(),animationStates=new Set();
+   if(enemyVisuals){
+    const {FxDirector}=await import('/src/fx/FxDirector.js'),{ALLY_CATALOG}=await import('/src/data/allyCatalog.js');
+    const allies=new Set(Object.values(ALLY_CATALOG).flat().map(skill=>skill.id));
+    const play=scene.fx.play.bind(scene.fx);scene.fx.play=(id,...args)=>{
+     // This is the enemy presentation audit, not the unfinished ally FX step.
+     // Report unregistered ally presentation explicitly; do not filter console
+     // output, asset errors, enemy recipes, hero FX or game mechanics.
+     if(allies.has(id)&&!FxDirector.recipes.has(id)){excludedAllyFx.add(id);return null;}return play(id,...args);};
+    const animate=scene.animateCharacter.bind(scene);scene.animateCharacter=(sprite,key,state,...args)=>{
+     if(key?.startsWith('enemy-'))animationStates.add(state);return animate(sprite,key,state,...args);};
+    const die=scene.enemyVisuals.die.bind(scene.enemyVisuals);scene.enemyVisuals.die=enemy=>{animationStates.add('death');return die(enemy);};
+   }
    // Presentation only. Choices still go through the original progression callbacks.
    for(const method of ['setStats','setSkills','setCooldown','setPassives','setInnates','setAlly','setBoss','clearBoss','toast','showUnlock'])scene.hud[method]=()=>{};
    scene.floatText=()=>{};
@@ -178,16 +192,17 @@ try{
     if(frames>Math.ceil(end*31)+100)throw Error('Simulation stopped advancing');
    }
    choose();
-   return {map,hero,mode,seed,spawnCounts,stuck,enemyCasts:{...scene.enemySystem.casts},peakFxUnits,peakTelegraphs,peakPuddles,seconds:scene.elapsed,level10:times[10]??null,level20:times[20]??null,endLevel:scene.stats.level,
+   return {map,hero,mode,seed,spawnCounts,stuck,enemyCasts:{...scene.enemySystem.casts},excludedAllyFx:[...excludedAllyFx],animationStates:[...animationStates],peakFxUnits,peakTelegraphs,peakPuddles,seconds:scene.elapsed,level10:times[10]??null,level20:times[20]??null,endLevel:scene.stats.level,
     completedDuration:scene.elapsed>=end-1e-6,ended:scene.ended,hp:scene.stats.hp,kills:scene.stats.kills,damageTaken:scene.stats.damageTaken,
     cacao:scene.stats.cacao,peakAlive,baseKills,bossKills,ttk,averageBaseTtk:ttk.filter(t=>!t.elite).reduce((sum,t)=>sum+t.seconds,0)/Math.max(1,ttk.filter(t=>!t.elite).length),
     xpTotal,collected,spawned,frames,levels,choices,samples,skills:scene.skillSlots.map(s=>({id:s.id,level:s.level})),
     passives:scene.passiveSlots.map(s=>({id:s.id,level:s.level})),ally:scene.companion?.id,summary,
     ...(audit?{audit:{...audit,snapshot:undefined,allyCasts:{...scene.allyCasts}}}:{})};
-  },{hero,mode,seed,seconds,verification,preferredAlly,map});
+  },{hero,mode,seed,seconds,verification,preferredAlly,map,enemyVisuals});
   if(verification){result.warnings=warnings;result.httpErrors=httpErrors;}
   result.errors=errors;report.runs.push(result);await save();
   assert.equal(result.errors.length,0,'Browser exceptions');assert.equal(result.httpErrors.length,0,'Failed asset requests');assert.equal(result.stuck.length,0,'Stuck enemies');
+  if(enemyVisuals)assert.equal(result.warnings.length,0,`Missing presentation assets: ${result.warnings.join('\n')}`);
   const roster=JSON.parse(await fs.readFile('src/data/enemies-v06.json','utf8'));
   const eligible=Object.values(roster).filter(e=>(e.maps.includes('all')||e.maps.includes(map))&&!(hero==='balam'&&e.flier));
   if(!seconds){assert.equal(result.completedDuration,true,'Bot died before ten minutes');for(const enemy of eligible)assert.ok(result.spawnCounts[enemy.id]>0,`${map}: missing enemy ${enemy.id}`);

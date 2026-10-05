@@ -18,6 +18,9 @@ import { FxDirector } from '../fx/FxDirector.js';
 import '../fx/recipes/balam.js';
 import { IXCHEL_FX_IDS } from '../fx/recipes/ixchel.js';
 import '../fx/recipes/kukul.js';
+import { decorateEnemyProjectile } from '../fx/recipes/enemies.js';
+import { ENEMY_EFFECT_IDS } from '../art/enemyVisuals.js';
+import { EnemyVisualSystem } from '../systems/EnemyVisualSystem.js';
 import { decorateIxchelProjectile } from '../fx/ixchelStages.js';
 import { SkillAudio } from '../systems/SkillAudio.js';
 import { skillModifiers, inMirrorArc } from '../skills/balam/runtime.js';
@@ -53,7 +56,7 @@ export class GameScene extends Phaser.Scene {
     const hero=this.options.hero;
     const ids=[...(hero.skills||[]),...(hero.passives||[]),{id:'survivors-will'},{id:'jade-bounty'}].map(skill=>skill.id);
     if(hero.id==='ixchel')ids.push(...IXCHEL_FX_IDS);
-    FxDirector.preload(this,ids);
+    FxDirector.preload(this,[...ids,...ENEMY_EFFECT_IDS]);
   }
 
   create() {
@@ -142,6 +145,7 @@ export class GameScene extends Phaser.Scene {
     this.enemyBars=new EnemyHealthBars(this);
     this.spawnDirector=new SpawnDirector(this);
     this.enemySystem=new EnemyBehaviorSystem(this);
+    this.enemyVisuals=new EnemyVisualSystem(this);
     this.options.loading?.progress.set('world',.35);
     this.createPlayer();
     this.options.loading?.progress.set('world',.7);
@@ -283,6 +287,7 @@ export class GameScene extends Phaser.Scene {
     this.updateWorld();
     this.updateHud();
     this.enemyBars?.draw();
+    this.enemyVisuals?.update();
   }
 
   updateMovement(dt) {
@@ -613,6 +618,8 @@ export class GameScene extends Phaser.Scene {
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
     projectile.setData({ damage, life: 4, source,sourceSerial:source?.getData?.('serial'), previousX:x, previousY:y,
       poison:null,bleed:null,piercing:false,hitHero:false,reflected:false,enemyId:null });
+    projectile.setData('enemyFx',null);
+    decorateEnemyProjectile(this,projectile,source);
     return projectile;
   }
 
@@ -632,6 +639,7 @@ export class GameScene extends Phaser.Scene {
         {poison:projectile.getData('poison'),bleed:projectile.getData('bleed')});
       if(projectile.getData('piercing')){projectile.setData('hitHero',true);return;}
     }
+    if(projectile.getData('enemyFx'))this.fx.play(projectile.getData('enemyFx'),'impact',{x:projectile.x,y:projectile.y,size:35,duration:.2,sound:false});
     projectile.destroy();
   }
 
@@ -747,7 +755,8 @@ export class GameScene extends Phaser.Scene {
     if (options.visuals !== false) {
       this.animateCharacter(enemy,enemy.getData('artKey'),'hurt',.16);
       if(this.settings.particles!=='low'||crit) this.playEffect(2,enemy.x,enemy.y,crit?62:38);
-      enemy.setTint(crit ? 0xffe294 : 0xd5fff1);
+      if(this.enemyVisuals?.actors.has(enemy))this.enemyVisuals.pose(enemy,'hurt',.16);
+      else enemy.setTint(crit ? 0xffe294 : 0xd5fff1);
       this.time.delayedCall(65, () => enemy?.active && (enemy.getData('burnUntil') > this.elapsed ? enemy.setTint(0xff8a36) : enemy.clearTint()));
       if (knockback && enemy.body) {
         const angle = Phaser.Math.Angle.Between(origin.x, origin.y, enemy.x, enemy.y);
@@ -767,6 +776,7 @@ export class GameScene extends Phaser.Scene {
     this.playEffect(2,x,y,isBoss?190:68);
     const bossId = enemy.getData('bossId');
     const xp = enemy.getData('xp') || 5;
+    this.enemyVisuals?.die(enemy);
     this.enemySystem?.interrupt(enemy);this.enemySystem?.removeOwned(enemy);
     this.telegraphs?.cancelOwner(enemy);
     if(enemy.getData('affix')==='explosive')this.telegraphs?.play({shape:'circle',x,y,radius:90,windup:.6,tag:'death-burst',
@@ -877,7 +887,7 @@ export class GameScene extends Phaser.Scene {
     // Explicit radii are reserved for summons/boss abilities and automated QA.
     if(forcedRadius){const angle=Math.random()*TAU;position.x=this.player.x+Math.cos(angle)*forcedRadius;position.y=this.player.y+Math.sin(angle)*forcedRadius;}
     const {x,y}=position;
-    const artKey=`enemy-${ENEMY_ART_FALLBACK[type]||type}`;
+    const artKey=this.textures?.exists(`enemy-${type}`)?`enemy-${type}`:`enemy-${ENEMY_ART_FALLBACK[type]||type}`;
     const enemy = this.enemies.get(x, y, artKey);
     if (!enemy) return;
     enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setAlpha(1).setDepth(12).setScale(data.flier?.48:.56);
@@ -895,7 +905,8 @@ export class GameScene extends Phaser.Scene {
     });
     applyAffix(enemy,spawnOptions.affix===undefined?rollAffix(this.elapsed):spawnOptions.affix);
     this.enemySystem?.init(enemy);
-    if(spawnOptions.emerge){enemy.setData('spawningUntil',this.elapsed+.55);enemy.setAlpha(0);}
+    this.enemyVisuals?.init(enemy);
+    if(spawnOptions.emerge){enemy.setData('spawningUntil',this.elapsed+.55);enemy.setAlpha(0);this.enemyVisuals?.emerge(enemy);}
     return enemy;
   }
 
@@ -916,6 +927,7 @@ export class GameScene extends Phaser.Scene {
     boss.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(13).setScale(data.id==='ahpuch'?1.65:1.35);
     boss.anims.stop();
     boss.setTexture(artKey).clearTint();
+    boss.setAlpha(1);this.enemyVisuals?.remove(boss);
     boss.body.setCircle(24,40,44);
     boss.setData({
       artKey,animLock:0,serial: ++this.enemySerial, isBoss: true, bossId: data.id, displayName: data.name,
@@ -1300,8 +1312,12 @@ export class GameScene extends Phaser.Scene {
   animateCharacter(sprite,key,state,lock=0) {
     if(!sprite?.active||!key)return;
     if(!lock && (sprite.getData('animLock')||0)>this.elapsed)return;
+    const action=sprite.getData('behaviorState');
+    if(!lock&&action&&(state==='walk'||state==='idle'))state=action.busy?'windup':action.motion||action.after?'attack':action.recoveryUntil>this.elapsed?'recover':state;
     if(lock)sprite.setData('animLock',this.elapsed+lock);
-    sprite.play(`${key}-${state}`,true);
+    const animation=this.anims.exists(`${key}-${state}`)?`${key}-${state}`:`${key}-${state==='windup'?'attack':state==='recover'?'idle':state}`;
+    sprite.play(animation,true);
+    this.enemyVisuals?.pose(sprite,state,lock);
   }
 
   bossTelegraph(x, y, radius, color, callback,owner=this.activeBoss) {
@@ -1383,6 +1399,7 @@ export class GameScene extends Phaser.Scene {
     this.fx?.destroy();this.skillAudio?.destroy();this.skillBuffs?.clear();
     this.telegraphs?.destroy();this.enemyBars?.destroy();this.spawnDirector?.destroy();
     this.enemySystem?.destroy();
+    this.enemyVisuals?.destroy();
     this.hud?.destroy();
   }
 }

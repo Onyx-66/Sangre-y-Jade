@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-10-05T10:54:12.494Z",
+  "checks": [
+    {
+      "label": "preview decodes every one of the 240 frames",
+      "passed": true
+    },
+    {
+      "label": "preview displays 105 independent actor/state animations",
+      "passed": true
+    },
+    {
+      "label": "preview actually advances animation frames",
+      "passed": true
+    },
+    {
+      "label": "preview pause is functional",
+      "passed": true
+    },
+    {
+      "label": "no browser/HTTP errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "label": "no missing still/handler/sound warnings",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "captures": [
+    "candidate-actor-preview.png"
+  ]
+}

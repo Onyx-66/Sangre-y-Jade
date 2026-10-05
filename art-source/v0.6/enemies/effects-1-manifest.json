@@ -1,0 +1,90 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\effects-1-contact.png",
+  "items": [
+    {
+      "file": "fx/soul-bolt/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/venom-spit/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/arrow-red/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/vine-snare/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/puddle/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/crystal-shard/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/wisp-explosion/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/blood-slash/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/blink-flash/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/tail-whip-arc/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/shockwave-ring/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/dust-puff/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/spawn-crack/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/death-puff-green/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/death-puff-red/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/death-puff-cyan/main.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

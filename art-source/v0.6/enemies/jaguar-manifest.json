@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\jaguar-contact.png",
+  "items": [
+    {
+      "file": "frames/enemy-jaguar-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-jaguar-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    }
+  ]
+}

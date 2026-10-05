@@ -2,6 +2,8 @@ import Phaser from 'phaser';
 import { textureManifest } from '../art/textureManifest.js';
 import { FxDirector } from '../fx/FxDirector.js';
 import { IXCHEL_FX_IDS } from '../fx/recipes/ixchel.js';
+import '../fx/recipes/enemies.js';
+import { ENEMY_EFFECT_IDS } from '../art/enemyVisuals.js';
 import { RUN_AUDIO_KEYS } from '../systems/AudioDirector.js';
 import { runSkillIds,fxManifest,runAudioManifest,prepareMapData } from '../systems/RunLoadManifest.js';
 import { loadTextureBatch,loadAudioBatch } from '../systems/RunAssetLoader.js';
@@ -28,7 +30,7 @@ export class LoadingScene extends Phaser.Scene {
     await recover(textureManifest({hero,map,base}),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('textures',value)}));
     const ids=runSkillIds(hero,{extraIds:hero.id==='ixchel'?IXCHEL_FX_IDS:[],allies:o.allies||[]});
     await recover(runAudioManifest(ids,map,{base,audioKeys:o.audioKeys||RUN_AUDIO_KEYS}),files=>loadAudioBatch(o.audio,skillAudio,files,{signal,onProgress:value=>progress.set('audio',value)}));
-    await recover(fxManifest(ids,FxDirector.recipes,base),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('skills',value)}));
+    await recover(fxManifest([...ids,...ENEMY_EFFECT_IDS],FxDirector.recipes,base).map(file=>({...file,critical:ENEMY_EFFECT_IDS.some(id=>file.key===`fx-still-${id}-main`)})),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('skills',value)}));
     progress.set('skills',1);
     progress.set('world',0);
     const scene=await new Promise((resolve,reject)=>{

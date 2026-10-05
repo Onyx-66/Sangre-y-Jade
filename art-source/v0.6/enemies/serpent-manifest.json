@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\serpent-contact.png",
+  "items": [
+    {
+      "file": "frames/enemy-serpent-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-serpent-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\drowned_spirit-contact.png",
+  "items": [
+    {
+      "file": "frames/enemy-drowned_spirit-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    },
+    {
+      "file": "frames/enemy-drowned_spirit-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.26339285714285715,
+      "anchor": "bottom"
+    }
+  ]
+}

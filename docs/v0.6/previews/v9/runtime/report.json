@@ -1,0 +1,208 @@
+{
+  "createdAt": "2026-10-05T11:02:16.078Z",
+  "checks": [
+    {
+      "label": "preview decodes every one of the 240 frames",
+      "passed": true
+    },
+    {
+      "label": "preview displays 105 independent actor/state animations",
+      "passed": true
+    },
+    {
+      "label": "preview actually advances animation frames",
+      "passed": true
+    },
+    {
+      "label": "preview pause is functional",
+      "passed": true
+    },
+    {
+      "label": "en/568: every real enemy renders through its own non-physics sprite",
+      "passed": true
+    },
+    {
+      "label": "en/568: all 105 real Phaser animation definitions use the exact frames",
+      "passed": true
+    },
+    {
+      "label": "en/568: all 240 real frames advance on the rendered sprites",
+      "passed": true
+    },
+    {
+      "label": "en/568: real windup stretch and white hit flash",
+      "passed": true
+    },
+    {
+      "label": "en/568: presentation leaves collision size unchanged",
+      "passed": true
+    },
+    {
+      "label": "en/568: all 18 actual FX textures render",
+      "passed": true
+    },
+    {
+      "label": "en/568: strict 24-unit cap, no procedural still fallback",
+      "passed": true
+    },
+    {
+      "label": "en/568: death playback, pool reuse and cleanup are serial-safe",
+      "passed": true,
+      "evidence": {
+        "sameBody": true,
+        "oldDestroyed": true,
+        "currentActive": true,
+        "actors": 15,
+        "missing": [],
+        "fx": 19,
+        "cleaned": true
+      }
+    },
+    {
+      "label": "en/1280: every real enemy renders through its own non-physics sprite",
+      "passed": true
+    },
+    {
+      "label": "en/1280: all 105 real Phaser animation definitions use the exact frames",
+      "passed": true
+    },
+    {
+      "label": "en/1280: all 240 real frames advance on the rendered sprites",
+      "passed": true
+    },
+    {
+      "label": "en/1280: real windup stretch and white hit flash",
+      "passed": true
+    },
+    {
+      "label": "en/1280: presentation leaves collision size unchanged",
+      "passed": true
+    },
+    {
+      "label": "en/1280: all 18 actual FX textures render",
+      "passed": true
+    },
+    {
+      "label": "en/1280: strict 24-unit cap, no procedural still fallback",
+      "passed": true
+    },
+    {
+      "label": "en/1280: death playback, pool reuse and cleanup are serial-safe",
+      "passed": true,
+      "evidence": {
+        "sameBody": true,
+        "oldDestroyed": true,
+        "currentActive": true,
+        "actors": 15,
+        "missing": [],
+        "fx": 19,
+        "cleaned": true
+      }
+    },
+    {
+      "label": "ar/568: every real enemy renders through its own non-physics sprite",
+      "passed": true
+    },
+    {
+      "label": "ar/568: all 105 real Phaser animation definitions use the exact frames",
+      "passed": true
+    },
+    {
+      "label": "ar/568: all 240 real frames advance on the rendered sprites",
+      "passed": true
+    },
+    {
+      "label": "ar/568: real windup stretch and white hit flash",
+      "passed": true
+    },
+    {
+      "label": "ar/568: presentation leaves collision size unchanged",
+      "passed": true
+    },
+    {
+      "label": "ar/568: all 18 actual FX textures render",
+      "passed": true
+    },
+    {
+      "label": "ar/568: strict 24-unit cap, no procedural still fallback",
+      "passed": true
+    },
+    {
+      "label": "ar/568: death playback, pool reuse and cleanup are serial-safe",
+      "passed": true,
+      "evidence": {
+        "sameBody": true,
+        "oldDestroyed": true,
+        "currentActive": true,
+        "actors": 15,
+        "missing": [],
+        "fx": 19,
+        "cleaned": true
+      }
+    },
+    {
+      "label": "ar/1280: every real enemy renders through its own non-physics sprite",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: all 105 real Phaser animation definitions use the exact frames",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: all 240 real frames advance on the rendered sprites",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: real windup stretch and white hit flash",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: presentation leaves collision size unchanged",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: all 18 actual FX textures render",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: strict 24-unit cap, no procedural still fallback",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: death playback, pool reuse and cleanup are serial-safe",
+      "passed": true,
+      "evidence": {
+        "sameBody": true,
+        "oldDestroyed": true,
+        "currentActive": true,
+        "actors": 15,
+        "missing": [],
+        "fx": 19,
+        "cleaned": true
+      }
+    },
+    {
+      "label": "no browser/HTTP errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "label": "no missing still/handler/sound warnings",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "captures": [
+    "actor-preview.png",
+    "en-568x320-actors.png",
+    "en-568x320-fx.png",
+    "en-1280x720-actors.png",
+    "en-1280x720-fx.png",
+    "ar-568x320-actors.png",
+    "ar-568x320-fx.png",
+    "ar-1280x720-actors.png",
+    "ar-1280x720-fx.png"
+  ]
+}

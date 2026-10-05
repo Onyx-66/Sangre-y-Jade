@@ -1,0 +1,20 @@
+{
+  "expectedCount": 2,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\effects-fix-contact.png",
+  "items": [
+    {
+      "file": "fx/vine-snare/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/wisp-explosion/main.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

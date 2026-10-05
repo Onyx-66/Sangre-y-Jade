@@ -22,7 +22,8 @@ export function eligible(ctx) {
 }
 export function cue(ctx,phase,position=ctx.enemy,extra={}) {
   const id=`enemy-${ctx.data.id}-${phase}`;
-  ctx.scene.fx?.play(id,phase==='windup'?'cast':'impact',{...point(position),duration:.3,sound:false,...extra});
+  const isAlive=phase==='windup'?()=>ctx.enemy.active&&ctx.enemy.getData('serial')===ctx.state.serial&&ctx.state.busy===extra.ability&&!ctx.scene.ended:undefined;
+  ctx.scene.fx?.play(id,phase==='windup'?'cast':'impact',{...point(position),duration:.3,sound:false,isAlive,...extra});
   ctx.scene.skillAudio?.play(id,'cast');
 }
 export function cast(ctx,name,shape,onResolve) {
@@ -30,15 +31,17 @@ export function cast(ctx,name,shape,onResolve) {
   const spell=['Soul Volley','Ward','Venom Spit','Aimed Shot','Summon'].includes(name);
   if(spell&&ctx.enemy.getData('silenceUntil')>ctx.scene.elapsed)return false;
   const p=attack(ctx,name),serial=ctx.state.serial;
+  ctx.enemy.setData('visualHeading',ctx.angle);
   ctx.state.busy=name;ctx.state.cooldowns[name]=ctx.scene.elapsed+p.cooldown;
-  cue(ctx,'windup',shape);ctx.scene.animateCharacter?.(ctx.enemy,ctx.enemy.getData('artKey'),'attack',p.windup);
+  cue(ctx,'windup',shape,{ability:name,duration:p.windup});ctx.scene.animateCharacter?.(ctx.enemy,ctx.enemy.getData('artKey'),'windup',p.windup);
   const cancel=()=>{if(ctx.enemy.getData('serial')===serial){ctx.state.busy=null;restore(ctx);}};
   const warning=ctx.scene.telegraphs?.play({x:ctx.enemy.x,y:ctx.enemy.y,windup:p.windup,owner:ctx.enemy,tag:name,sound:false,...shape,
     onCancel:cancel,onResolve:w=>{
       if(ctx.enemy.getData('serial')!==serial)return;
       ctx.state.busy=null;
       if(!eligible(ctx)||(spell&&ctx.enemy.getData('silenceUntil')>ctx.scene.elapsed)){restore(ctx);return;}
-      cue(ctx,'attack',w);ctx.scene.enemySystem?.countCast(ctx.data.id,name);onResolve(w,p);
+      cue(ctx,'attack',w,{ability:name});ctx.scene.animateCharacter?.(ctx.enemy,ctx.enemy.getData('artKey'),'attack',.25);
+      ctx.scene.enemySystem?.countCast(ctx.data.id,name);onResolve(w,p);
     }});
   if(!warning){cancel();return false;}return true;
 }
@@ -65,6 +68,7 @@ export function teleport(ctx,destination) {place(ctx.enemy,destination.x,destina
 export function motion(ctx,destination,{duration,speed,hit,end,leap=false}={}) {
   const start=point(ctx.enemy),length=distance(start,destination);
   ctx.state.motion={start,destination,age:0,duration:duration??length/speed,hit,end,leap,hitOnce:false};
+  ctx.scene.animateCharacter?.(ctx.enemy,ctx.enemy.getData('artKey'),'attack',ctx.state.motion.duration);
   ctx.enemy.setData('heading',Math.atan2(destination.y-start.y,destination.x-start.x));ctx.enemy.setVelocity(0,0);
 }
 function segmentDistance(a,b,p) {
@@ -84,7 +88,9 @@ export function stepAction(ctx) {
     }
     if(p>=1){state.motion=null;if(eligible(ctx))m.end?.();}return true;
   }
-  if(state.recoveryUntil>ctx.scene.elapsed||state.busy){ctx.enemy.setVelocity(0,0);return true;}
+  if(state.recoveryUntil>ctx.scene.elapsed||state.busy){ctx.enemy.setVelocity(0,0);
+    if(state.recoveryUntil>ctx.scene.elapsed)ctx.scene.animateCharacter?.(ctx.enemy,ctx.enemy.getData('artKey'),'recover',state.recoveryUntil-ctx.scene.elapsed);
+    return true;}
   return false;
 }
 export function dash(ctx,p,angle=ctx.angle,extra={}) {
@@ -100,8 +106,12 @@ export function leap(ctx,p,destination) {
 export function shield(ctx,target,p) {
   target.setData({wardShield:p.shield,wardUntil:ctx.scene.elapsed+p.duration});
   ctx.scene.enemyBars?.damage(target,target.getData('hp'));
+  const serial=target.getData('serial');ctx.scene.fx?.play('shield-ring-blue','aura',{x:target.x,y:target.y,followTarget:target,
+    radius:(target.getData('radius')||16)+5,duration:p.duration,isAlive:()=>target.active&&target.getData('serial')===serial&&target.getData('wardShield')>0&&target.getData('wardUntil')>ctx.scene.elapsed,sound:false});
 }
-export function reflect(ctx,p) {ctx.enemy.setData({prismUntil:ctx.scene.elapsed+p.duration,prismReflect:p.reflectPct});}
+export function reflect(ctx,p) {ctx.enemy.setData({prismUntil:ctx.scene.elapsed+p.duration,prismReflect:p.reflectPct});
+  const serial=ctx.state.serial;ctx.scene.fx?.play('shield-ring-blue','aura',{x:ctx.enemy.x,y:ctx.enemy.y,followTarget:ctx.enemy,
+    radius:ctx.data.radius+7,duration:p.duration,isAlive:()=>ctx.enemy.active&&ctx.enemy.getData('serial')===serial&&ctx.enemy.getData('prismUntil')>ctx.scene.elapsed,sound:false});}
 export function summons(ctx,p) {
   const owned=ctx.scene.enemies.getChildren().filter(e=>e.active&&e.getData('summoner')===ctx.enemy&&e.getData('summonerSerial')===ctx.state.serial);
   const count=Math.min(p.count,p.cap-owned.length);

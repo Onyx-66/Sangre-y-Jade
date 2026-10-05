@@ -1,0 +1,223 @@
+{
+  "label": "v9-pilot",
+  "createdAt": "2026-10-05T10:54:49.655Z",
+  "policy": "roster-bot-v8-coverage-packs",
+  "maps": [
+    "overgrown"
+  ],
+  "viewport": [
+    1280,
+    720
+  ],
+  "stepHz": 30,
+  "seeds": [
+    1701
+  ],
+  "seconds": 30,
+  "meta": "fresh save; no shrine upgrades",
+  "settings": "auto attack/aim, high detail, muted presentation audio (no wall-clock RNG)",
+  "targets": {
+    "quick": {
+      "10": [
+        210,
+        270
+      ],
+      "20": [
+        480,
+        570
+      ]
+    },
+    "full": {
+      "10": [
+        240,
+        330
+      ],
+      "20": [
+        540,
+        720
+      ]
+    }
+  },
+  "runs": [
+    {
+      "map": "overgrown",
+      "hero": "kukul",
+      "mode": "quick",
+      "seed": 1701,
+      "spawnCounts": {
+        "shade": 12,
+        "bat": 2
+      },
+      "stuck": [],
+      "enemyCasts": {
+        "shade:Lunge": 6,
+        "bat:Swoop Dive": 1
+      },
+      "excludedAllyFx": [],
+      "animationStates": [
+        "walk",
+        "hurt",
+        "death",
+        "windup",
+        "attack",
+        "idle",
+        "recover"
+      ],
+      "peakFxUnits": 14,
+      "peakTelegraphs": 3,
+      "peakPuddles": 0,
+      "seconds": 30.00000000000065,
+      "level10": null,
+      "level20": null,
+      "endLevel": 3,
+      "completedDuration": true,
+      "ended": false,
+      "hp": 118,
+      "kills": 14,
+      "damageTaken": 0,
+      "cacao": 1,
+      "peakAlive": 4,
+      "baseKills": {
+        "shade": 12,
+        "bat": 2
+      },
+      "bossKills": [],
+      "ttk": [
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4999999999999996
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.4666666666666615
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.5666666666666575
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 0.6999999999999975
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.7333333333333272
+        },
+        {
+          "type": "bat",
+          "elite": false,
+          "seconds": 1.9666666666666597
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.1000000000001044
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0666666666667695
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 5.066666666666919
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.8000000000000895
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.9000000000001442
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.7333333333334693
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 2.0333333333334345
+        },
+        {
+          "type": "shade",
+          "elite": false,
+          "seconds": 1.6000000000000796
+        }
+      ],
+      "averageBaseTtk": 2.1595238095238796,
+      "xpTotal": 136,
+      "collected": 14,
+      "spawned": 14,
+      "frames": 901,
+      "levels": [
+        {
+          "level": 1,
+          "seconds": 0,
+          "xpTotal": 0
+        },
+        {
+          "level": 2,
+          "seconds": 5.199999999999991,
+          "xpTotal": 20
+        },
+        {
+          "level": 3,
+          "seconds": 27.900000000000546,
+          "xpTotal": 126
+        }
+      ],
+      "choices": [
+        {
+          "seconds": 5.199999999999991,
+          "level": 2,
+          "title": "Level 2",
+          "id": "windstep",
+          "kind": "active",
+          "choice": "new-active"
+        },
+        {
+          "seconds": 27.900000000000546,
+          "level": 3,
+          "title": "Level 3",
+          "id": "jade-bounty",
+          "kind": "passive",
+          "choice": "upgrade-passive"
+        }
+      ],
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "level": 3,
+          "xpTotal": 136,
+          "kills": 14,
+          "hp": 118,
+          "alive": 0,
+          "drops": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "windstep",
+          "level": 1
+        }
+      ],
+      "passives": [],
+      "summary": null,
+      "warnings": [],
+      "httpErrors": [],
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "wallSeconds": 21.725016
+}

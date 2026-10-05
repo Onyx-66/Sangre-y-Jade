@@ -1,0 +1,20 @@
+{
+  "expectedCount": 2,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": ".tools\\v9-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v9\\effects-2-contact.png",
+  "items": [
+    {
+      "file": "fx/shield-ring-blue/main.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "file": "fx/telegraph-glyph/main.png",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

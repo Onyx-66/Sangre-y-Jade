@@ -10,6 +10,7 @@
 - [x] V2 — Generated UI kit and nine-slice preview
 - [x] V6 — Real weighted run loading and recovery
 - [x] V8 — Complete enemy roster and behaviours
+- [x] V9 — Generated enemy frames, effect stills and animation integration
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -284,3 +285,40 @@ Evidence: `previews/v8/roster/final-roster.json`, `staged-roster.json`, `preview
 - Water remains the documented placeholder query and Spirit puddles until finite cenote geometry exists. Conservative pack tables fill a missing JSON field; all assumptions are in `DECISIONS.md`.
 - The interrupted V7 XP/cacao before/after study is not completed by V8; pacing/currency outliers are reported, not rebalanced.
 - The unrelated French audit remains the only worktree test failure; the isolated commit's tests/build pass. FR/AR additions need native review. Prior dirty work is not discarded, completed, pushed or included here.
+
+## V9 — Enemy animation sheets and effect visuals — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v9`.
+
+### Changed
+
+- Generated and reviewed 15 enemy sheets, sliced into 240 individual 128x128 alpha frames in the specified order, plus 18 distinct 256x256 enemy effect stills. Preserved the five recognizable base designs and all 20 original base frames byte-for-byte in `art-source/v0.6/enemies/legacy/`. Retained native sheets, rejected/corrected results, exact prompts, slicing manifests and one provenance line per final image.
+- Added seven real enemy animation states with four-frame actor fallback. Connected V8 wind-up, attack, recovery, emergence, hurt and death to the correct states. Added non-physics squash/stretch, ground shadows, 65ms white hit flashes, elite aura and serial-safe detached death animations/dissolve puffs. Physics sizes, AI geometry, roster values and progression timing are unchanged.
+- Registered 18 canonical FX recipes with 30 ability aliases; wired real enemy projectiles, zones, shields, teleports, telegraph ornaments and typed death puffs. Effects respect the existing 24-unit cap; warnings cancel on stun/death, and shield/death visuals clean up on expiration and pooled-body reuse. Lazy loading selects eligible map enemies and canonical stills, not alias file paths.
+- Extended the shared slicer for complete connected components crossing grid gutters, common actor scale/baseline and magenta defringe without erasing purple interiors. Added dimension/alpha/hash/fringe/similarity auditing, contact sheets, a development-only 105-state actor preview, strict runtime checks and deterministic enemy-visual bot evidence.
+- No audio files, dependencies, downloads, branding, APK or package-version changes. Staged only V9 hunks and assets; earlier unfinished menu/editor/localization/companion-art work is preserved and excluded. Verified the indexed source separately from the shared dirty worktree.
+
+### Test results
+
+| Command / fixture | Result |
+| --- | --- |
+| `node --test tests/enemy-visuals.test.js tests/enemy-roster.test.js tests/slice-sheet.test.js` | 40/40 pass, including 10 new V9 tests; 0.440s runner |
+| `node scripts/check-enemy-art.mjs` | 258 exact-size alpha PNGs, 258 distinct hashes, zero opaque magenta pixels, zero flagged enemy pairs |
+| `node scripts/v06-enemy-visuals-playtest.mjs --candidate` | 6 checks pass before promotion; actual decoding, animation advance, pause and contact |
+| `node scripts/v06-enemy-visuals-playtest.mjs` in worktree and indexed snapshot | 38 checks pass in each, 9 screenshots each; EN/AR at 568x320 and 1280x720; all 240 frames advance, flash/collision/cap/death/reuse/cleanup checks pass |
+| `npm run check` in indexed V9 snapshot | 421/421 pass, no skips; 2.502s runner; production build passes, 306 modules, 16.26s Vite |
+| `npm run check` in full shared worktree | 451/452 pass, no skips; 2.538s runner / 3.874s command; same pre-existing French `MANA` / `Cacao` audit failure; its `&&` build is skipped |
+| `npm run build` in full worktree | Pass, 317 modules, 14.38s Vite; existing large-chunk advisory only |
+| `node scripts/v06-roster-playtest.mjs --enemy-visuals --label=v9-ten-minute-final --output=docs/v0.6/previews/v9/roster` | Three full 600s map runs; every eligible enemy and active attack, all seven states; no exceptions, HTTP failures, missing enemy assets or stuck actors; peak FX units 24 |
+| Same roster fixture in indexed snapshot, label `v9-staged-ten-minute` | All three runs pass; 33.88s wall; kills, cacao, level timings and attack counts match V8 exactly |
+| `SYJ_LOADING_OUTPUT=docs/v0.6/previews/v9/staged/loading`, then `npm run test:loading` in indexed snapshot | 62 checks pass, 8 screenshots; real loading/progress, retries, optional Continue, Back, EN/FR/AR |
+| `git diff --cached --check` and staged scope/backup audit | Pass; no protected, native or audio paths; all 20 legacy frames match pre-V9 bytes |
+
+Evidence and reproduction details: `ENEMY_VISUALS.md`, `enemy-art-sources.json`, `ASSET_LOG.md`, `previews/v9/` actor/effect contacts and runtime/roster/loading reports. All final actor contacts, the final effect contact and runtime captures were visually reviewed. Coverage-biased runs finish at levels 14 / 16 / 14 with level 10 at 358.27s / 324.43s / 349.07s; V8 pacing outliers remain unchanged, not rebalanced by V9.
+
+### Open issues
+
+- Requested gpt-image-2.5 Flare, with Sunburst requested for near-miss corrections; the image service exposes no model/variant selector or verified routing metadata. Native sheets are 1254x1254, preserved and normalized/reflowed before exact-size slicing; native 2048 detail is not claimed.
+- The unrelated unfinished French audit remains the sole worktree test failure; the V9-only commit tests and build pass. Prior menu/editor/translation/artwork is neither discarded nor completed here.
+- The enemy-only bot explicitly reports/skips three unregistered companion FX while keeping companion mechanics; it does not suppress console warnings. No enemy/hero missing-file warnings occur. Audio is muted in deterministic tests and retains V8's old-sound fallback in production; unfinished companion FX/audio are outside this prompt, so no globally warning-free audible run is claimed.
+- No Android device/emulator or audible manual test was available; no mobile/native FPS claim. Map geometry, boss sheets, new recordings and earlier pacing work remain for their respective prompts.
