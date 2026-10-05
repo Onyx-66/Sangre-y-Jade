@@ -444,3 +444,18 @@ Status: complete — 2026-10-05.
 
 - `v06_design.json` describes map content in prose without placement coordinates/count tables for buildings, pack tables or Cenote water boundaries. The conservative inferred layout and preserved spawn-pack compositions are documented in `DECISIONS.md`; replace these assumptions when structured map data/art arrives.
 - Headless step p95 meets the 16.7ms target, but occasional p99/max spikes remain (notably Overgrown's 193.5ms maximum). This is a simulation-step measurement, not a rendered/device 60FPS guarantee; sampled heap growth is recorded but not a post-GC leak diagnosis.
+
+## V14 — Weather layers and ambient map tint — 2026-10-05
+
+Status: implemented and verified.
+
+- Added a seeded `WeatherDirector` for permanent Overgrown mist/leaves/god rays, Bloodmoon fog/ash/embers/lightning, and Cenote drips/mist/spores/ceiling rays. It owns bounded quality pools (Low 80 / Medium 160 / High 300), ambient tint/vignette, and additive glows fed by MapWorld’s registered lights.
+- Added seeded rain, ash-storm and rockfall intervals from the design’s approximate ranges. Rain/ash veils stay at 10%/20%; ambient/fog graphics render below Telegraphs. Cenote rockfalls use a 0.72s circle warning and small 6-damage impact. Reduce flashing suppresses lightning flashes.
+- Mapped procedural/optional stills to the exact 14 IDs in `assets.weather`, so future map-art files are looked up as `weather/<id>.png` without inventing aliases.
+- Added AudioDirector map/weather loop fades and optional ambience one-shots using the manifest’s ambience paths; unavailable files are optional, warn once, and use silence or existing hit/boss SFX. No audio or weather image files were generated; procedural effects remain the fallback.
+- `node --test tests/weather-v14.test.js`: 7/7 pass, including exact asset IDs, pool caps, seeded timing, reduce flashing, warning-before-damage, manifest paths and a 10-minute no-GameObject-growth simulation. Playwright screenshots: [Overgrown](previews/v14/overgrown-weather-1280x720.png), [Bloodmoon](previews/v14/bloodmoon-weather-1280x720.png), [Cenote](previews/v14/cenote-weather-1280x720.png); report: [weather-report.json](previews/v14/weather-report.json).
+- `npm run check`: 581/582 tests pass; the only failure remains the pre-existing French localization audit (`MANA`, `Cacao`), untouched as out of scope. `npm run build` passes separately (Vite’s existing large-chunk advisory remains).
+
+### Open issues
+
+- The V06 weather image and ambience files are not present in this worktree; the runtime’s procedural art and optional audio fallbacks were verified, but generated stills and audible playback await the supplied map-art/audio assets. The browser screenshot run used the local desktop browser, not a mobile device.

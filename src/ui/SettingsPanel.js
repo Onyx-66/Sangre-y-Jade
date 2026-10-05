@@ -9,7 +9,7 @@ export const SETTINGS_CONTROLS=[
  {key:'music',id:'music',label:'Music volume',type:'range'},
  {key:'sfx',id:'sfx',label:'Sound effects',type:'range'},
  {key:'fps',id:'fps',label:'Frame-rate cap',options:[[60,'60 FPS'],[30,'30 FPS · Battery saver']]},
- {key:'particles',id:'particles',label:'Effect density',options:[['high','High'],['low','Low']]},
+ {key:'particles',id:'particles',label:'Effect density',options:[['high','High'],['medium','Medium'],['low','Low']]},
  {key:'autoAim',id:'aim',label:'Aim mode',options:[['auto','Auto-aim nearest target'],['direction','Aim in movement direction']]},
  {key:'screenShake',label:'Screen shake',type:'toggle'},
  {key:'damageNumbers',label:'Damage numbers',type:'toggle'},

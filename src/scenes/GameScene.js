@@ -40,6 +40,7 @@ import { CutsceneDirector } from '../systems/CutsceneDirector.js';
 import { BossPresentation } from '../ui/BossPresentation.js';
 import { BOSS_FAIRNESS, bossDamage } from '../bosses/rules.js';
 import { MapWorld, actorCanCollideWithMap, waterSpeedMultiplier } from '../maps/MapWorld.js';
+import { WeatherDirector } from '../weather/WeatherDirector.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -162,6 +163,7 @@ export class GameScene extends Phaser.Scene {
     this.createPlayer();
     this.options.loading?.progress.set('world',.7);
     this.resizeViewport(this.scale.gameSize);
+    this.weather=new WeatherDirector(this,{mapId:map.id,seed:this.mapWorld.seed});
     this.onViewportResize=size=>this.resizeViewport(size);
     this.scale.on('resize',this.onViewportResize);
     this.createInput();
@@ -194,7 +196,9 @@ export class GameScene extends Phaser.Scene {
       .setOrigin(.5).setDepth(-100);
     if(this.mapData.id === 'bloodmoon') this.floor.setTint(0x956789);
     if(this.mapData.id === 'cenote') this.floor.setTint(0x568eaf);
-    this.fog = this.add.graphics().setScrollFactor(0).setDepth(80);
+    // Keep the persistent map haze below the Telegraph layer (depth 5) so weather
+    // and map tint can never wash out a fairness warning.
+    this.fog = this.add.graphics().setScrollFactor(0).setDepth(4);
     this.decorGroup = this.add.group();
   }
 
@@ -280,6 +284,7 @@ export class GameScene extends Phaser.Scene {
     const delta = Math.min(deltaRaw, 50);
     const dt = delta / 1000;
     this.elapsed += dt;
+    this.weather?.update(dt);
     this.skillAudio?.update?.(dt);
     this.passives.emit('tick', { dt });
     this.autoTimer -= dt * this.stats.cooldownRecoveryMult * (this.passives.modifiers().attackSpeedMult??1) * skillModifiers(this).attackSpeedMult;
@@ -1366,6 +1371,7 @@ export class GameScene extends Phaser.Scene {
     window.removeEventListener('pointerup',this.releaseAttack);
     window.removeEventListener('blur',this.releaseAttack);
     this.passives?.destroy();
+    this.weather?.destroy();
     this.skillEffects?.forEach((effect) => effect.destroy());
     this.fx?.destroy();this.skillAudio?.destroy();this.skillBuffs?.clear();
     this.telegraphs?.destroy();this.enemyBars?.destroy();this.spawnDirector?.destroy();

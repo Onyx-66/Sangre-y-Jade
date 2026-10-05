@@ -1,0 +1,53 @@
+{
+  "createdAt": "2026-10-05T18:47:05.329Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "maps": [
+    {
+      "mapId": "overgrown",
+      "event": "warm-rain-shower",
+      "scheduled": true,
+      "rockfallMarker": false,
+      "quality": "high",
+      "particles": 39,
+      "cap": 300,
+      "torchGlows": 0,
+      "telegraphs": 0,
+      "visibilityReduction": 0.1,
+      "screenshot": "docs\\v0.6\\previews\\v14\\overgrown-weather-1280x720.png",
+      "errors": []
+    },
+    {
+      "mapId": "bloodmoon",
+      "event": "ash-storm",
+      "scheduled": true,
+      "rockfallMarker": false,
+      "quality": "high",
+      "particles": 46,
+      "cap": 300,
+      "torchGlows": 0,
+      "telegraphs": 0,
+      "visibilityReduction": 0.2,
+      "screenshot": "docs\\v0.6\\previews\\v14\\bloodmoon-weather-1280x720.png",
+      "errors": []
+    },
+    {
+      "mapId": "cenote",
+      "event": "rockfall",
+      "scheduled": true,
+      "rockfallMarker": true,
+      "quality": "high",
+      "particles": 5,
+      "cap": 300,
+      "torchGlows": 2,
+      "telegraphs": 2,
+      "visibilityReduction": 0,
+      "screenshot": "docs\\v0.6\\previews\\v14\\cenote-weather-1280x720.png",
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "optionalWeatherAssetsMissing": []
+}
