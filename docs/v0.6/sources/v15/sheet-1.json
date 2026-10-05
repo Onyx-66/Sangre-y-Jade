@@ -1,0 +1,154 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15/sheet-1-contact.png",
+  "items": [
+    {
+      "id": "moss-grass",
+      "description": "seamless lush grass with clover",
+      "category": "ground",
+      "file": "maps/overgrown/ground/moss-grass.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "dry-grass",
+      "description": "seamless yellowed grass",
+      "category": "ground",
+      "file": "maps/overgrown/ground/dry-grass.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "dirt-path",
+      "description": "seamless packed dirt path",
+      "category": "ground",
+      "file": "maps/overgrown/ground/dirt-path.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "cobble-plaza",
+      "description": "seamless mossy cobblestone plaza",
+      "category": "ground",
+      "file": "maps/overgrown/ground/cobble-plaza.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "mud",
+      "description": "seamless wet mud with puddle shine",
+      "category": "ground",
+      "file": "maps/overgrown/ground/mud.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "jungle-floor",
+      "description": "seamless dark leaf litter and roots",
+      "category": "ground",
+      "file": "maps/overgrown/ground/jungle-floor.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "tree-broadleaf-a",
+      "description": "round broadleaf tree canopy, green",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-broadleaf-a.png",
+      "width": 288,
+      "height": 288,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-broadleaf-b",
+      "description": "broadleaf tree canopy, darker teal-green",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-broadleaf-b.png",
+      "width": 288,
+      "height": 288,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-palm-a",
+      "description": "tropical palm, top-down",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-palm-a.png",
+      "width": 256,
+      "height": 288,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-palm-b",
+      "description": "smaller double palm",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-palm-b.png",
+      "width": 224,
+      "height": 256,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-ceiba",
+      "description": "giant ceiba tree with buttress roots (landmark size)",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-ceiba.png",
+      "width": 512,
+      "height": 512,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-fig",
+      "description": "strangler fig with hanging roots",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-fig.png",
+      "width": 320,
+      "height": 384,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-flowering-pink",
+      "description": "flowering tree with pink blossoms",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-flowering-pink.png",
+      "width": 288,
+      "height": 320,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-fruit-orange",
+      "description": "fruit tree with orange fruit",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-fruit-orange.png",
+      "width": 256,
+      "height": 288,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-willow",
+      "description": "weeping willow-like vine tree",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-willow.png",
+      "width": 320,
+      "height": 384,
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-sapling",
+      "description": "young sapling",
+      "category": "trees",
+      "file": "maps/overgrown/trees/tree-sapling.png",
+      "width": 192,
+      "height": 224,
+      "keyFringe": 4
+    }
+  ]
+}

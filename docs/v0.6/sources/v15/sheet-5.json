@@ -1,0 +1,136 @@
+{
+  "expectedCount": 14,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15/sheet-5-contact.png",
+  "items": [
+    {
+      "id": "leaf-a",
+      "description": "small green leaf, falling",
+      "category": "weather",
+      "file": "weather/leaf-a.png",
+      "width": 128,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "leaf-b",
+      "description": "small yellow leaf, falling",
+      "category": "weather",
+      "file": "weather/leaf-b.png",
+      "width": 128,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "rain-streak",
+      "description": "thin diagonal rain streak, bluish white",
+      "category": "weather",
+      "file": "weather/rain-streak.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "rain-splash",
+      "description": "tiny rain splash ring",
+      "category": "weather",
+      "file": "weather/rain-splash.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "mist-wisp",
+      "description": "soft white-green mist wisp, seamless soft edges",
+      "category": "weather",
+      "file": "weather/mist-wisp.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "god-ray",
+      "description": "soft diagonal golden light shaft",
+      "category": "weather",
+      "file": "weather/god-ray.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "ash-flake",
+      "description": "grey ash flake",
+      "category": "weather",
+      "file": "weather/ash-flake.png",
+      "width": 128,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "ember",
+      "description": "tiny glowing orange ember",
+      "category": "weather",
+      "file": "weather/ember.png",
+      "width": 128,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "red-fog",
+      "description": "seamless soft red-purple fog texture 512",
+      "category": "weather",
+      "file": "weather/red-fog.png",
+      "width": 512,
+      "height": 512,
+      "fullBleed": true
+    },
+    {
+      "id": "lightning-flash",
+      "description": "jagged white-blue lightning bolt, tall",
+      "category": "weather",
+      "file": "weather/lightning-flash.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "spore",
+      "description": "glowing cyan spore dot",
+      "category": "weather",
+      "file": "weather/spore.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "drip",
+      "description": "falling water drop with tiny trail",
+      "category": "weather",
+      "file": "weather/drip.png",
+      "width": 128,
+      "height": 128,
+      "softMatte": true
+    },
+    {
+      "id": "cave-fog",
+      "description": "seamless cool blue-violet fog texture 512",
+      "category": "weather",
+      "file": "weather/cave-fog.png",
+      "width": 512,
+      "height": 512,
+      "fullBleed": true
+    },
+    {
+      "id": "rock-small",
+      "description": "small falling rock with motion blur",
+      "category": "weather",
+      "file": "weather/rock-small.png",
+      "width": 128,
+      "height": 128,
+      "keyFringe": 4
+    }
+  ]
+}

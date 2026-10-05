@@ -20,848 +20,960 @@
       "category": "trees",
       "description": "round broadleaf tree canopy, green",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 288,
+        "height": 288,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 24,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-broadleaf-a.png",
+      "textureKey": "map-overgrown-tree-broadleaf-a",
+      "lightEnabled": false
     },
     {
       "id": "tree-broadleaf-b",
       "category": "trees",
       "description": "broadleaf tree canopy, darker teal-green",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 288,
+        "height": 288,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 24,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-broadleaf-b.png",
+      "textureKey": "map-overgrown-tree-broadleaf-b",
+      "lightEnabled": false
     },
     {
       "id": "tree-palm-a",
       "category": "trees",
       "description": "tropical palm, top-down",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 256,
+        "height": 288,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 22,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-palm"
+      "placeholderTexture": "top-palm",
+      "image": "maps/overgrown/trees/tree-palm-a.png",
+      "textureKey": "map-overgrown-tree-palm-a",
+      "lightEnabled": false
     },
     {
       "id": "tree-palm-b",
       "category": "trees",
       "description": "smaller double palm",
       "size": {
-        "width": 150,
-        "height": 150,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 224,
+        "height": 256,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 24,
+        "radius": 19,
         "offsetX": 0,
-        "offsetY": 27
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-palm"
+      "placeholderTexture": "top-palm",
+      "image": "maps/overgrown/trees/tree-palm-b.png",
+      "textureKey": "map-overgrown-tree-palm-b",
+      "lightEnabled": false
     },
     {
       "id": "tree-ceiba",
       "category": "trees",
       "description": "giant ceiba tree with buttress roots (landmark size)",
       "size": {
-        "width": 460,
-        "height": 460,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 512,
+        "height": 512,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 74,
+        "radius": 67,
         "offsetX": 0,
-        "offsetY": 83
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-ceiba.png",
+      "textureKey": "map-overgrown-tree-ceiba",
+      "lightEnabled": false
     },
     {
       "id": "tree-fig",
       "category": "trees",
       "description": "strangler fig with hanging roots",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 384,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 27,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-fig.png",
+      "textureKey": "map-overgrown-tree-fig",
+      "lightEnabled": false
     },
     {
       "id": "tree-flowering-pink",
       "category": "trees",
       "description": "flowering tree with pink blossoms",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 288,
+        "height": 320,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 24,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-flowering-pink.png",
+      "textureKey": "map-overgrown-tree-flowering-pink",
+      "lightEnabled": false
     },
     {
       "id": "tree-fruit-orange",
       "category": "trees",
       "description": "fruit tree with orange fruit",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 256,
+        "height": 288,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 22,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-fruit-orange.png",
+      "textureKey": "map-overgrown-tree-fruit-orange",
+      "lightEnabled": false
     },
     {
       "id": "tree-willow",
       "category": "trees",
       "description": "weeping willow-like vine tree",
       "size": {
-        "width": 250,
-        "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 384,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 40,
+        "radius": 27,
         "offsetX": 0,
-        "offsetY": 45
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-willow.png",
+      "textureKey": "map-overgrown-tree-willow",
+      "lightEnabled": false
     },
     {
       "id": "tree-sapling",
       "category": "trees",
       "description": "young sapling",
       "size": {
-        "width": 150,
-        "height": 150,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 192,
+        "height": 224,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.94
       },
       "collider": {
         "type": "circle",
-        "radius": 24,
+        "radius": 16,
         "offsetX": 0,
-        "offsetY": 27
+        "offsetY": 0
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-tree"
+      "placeholderTexture": "top-tree",
+      "image": "maps/overgrown/trees/tree-sapling.png",
+      "textureKey": "map-overgrown-tree-sapling",
+      "lightEnabled": false
     },
     {
       "id": "bush-round",
       "category": "plants",
       "description": "round green bush",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 144,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/bush-round.png",
+      "textureKey": "map-overgrown-bush-round",
+      "lightEnabled": false
     },
     {
       "id": "bush-flowers-pink",
       "category": "plants",
       "description": "bush with pink flowers",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/bush-flowers-pink.png",
+      "textureKey": "map-overgrown-bush-flowers-pink",
+      "lightEnabled": false
     },
     {
       "id": "bush-flowers-white",
       "category": "plants",
       "description": "bush with white flowers",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 144,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/bush-flowers-white.png",
+      "textureKey": "map-overgrown-bush-flowers-white",
+      "lightEnabled": false
     },
     {
       "id": "fern-a",
       "category": "plants",
       "description": "large fern",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 192,
+        "height": 160,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/fern-a.png",
+      "textureKey": "map-overgrown-fern-a",
+      "lightEnabled": false
     },
     {
       "id": "fern-b",
       "category": "plants",
       "description": "small fern cluster",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 128,
+        "height": 112,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/fern-b.png",
+      "textureKey": "map-overgrown-fern-b",
+      "lightEnabled": false
     },
     {
       "id": "tall-grass-a",
       "category": "plants",
       "description": "tall grass tuft",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 128,
+        "height": 144,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/tall-grass-a.png",
+      "textureKey": "map-overgrown-tall-grass-a",
+      "lightEnabled": false
     },
     {
       "id": "flowers-blue",
       "category": "plants",
       "description": "blue wildflowers",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 128,
+        "height": 112,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/flowers-blue.png",
+      "textureKey": "map-overgrown-flowers-blue",
+      "lightEnabled": false
     },
     {
       "id": "flowers-yellow",
       "category": "plants",
       "description": "yellow wildflowers",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 128,
+        "height": 112,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/flowers-yellow.png",
+      "textureKey": "map-overgrown-flowers-yellow",
+      "lightEnabled": false
     },
     {
       "id": "lilies",
       "category": "plants",
       "description": "large jungle leaves",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 144,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/lilies.png",
+      "textureKey": "map-overgrown-lilies",
+      "lightEnabled": false
     },
     {
       "id": "vines-hanging",
       "category": "plants",
       "description": "hanging vines for walls",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-foliage"
+      "placeholderTexture": "top-foliage",
+      "image": "maps/overgrown/plants/vines-hanging.png",
+      "textureKey": "map-overgrown-vines-hanging",
+      "lightEnabled": false
     },
     {
       "id": "rock-mossy-large",
       "category": "rocks",
       "description": "large mossy boulder",
       "size": {
-        "width": 220,
-        "height": 220,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 256,
+        "height": 224,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 62,
+        "radius": 63,
         "offsetX": 0,
-        "offsetY": 40
+        "offsetY": -45
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/rocks/rock-mossy-large.png",
+      "textureKey": "map-overgrown-rock-mossy-large",
+      "lightEnabled": false
     },
     {
       "id": "rock-mossy-small",
       "category": "rocks",
       "description": "small mossy boulder",
       "size": {
-        "width": 130,
-        "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 128,
+        "height": 112,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 36,
+        "radius": 31,
         "offsetX": 0,
-        "offsetY": 23
+        "offsetY": -22
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/rocks/rock-mossy-small.png",
+      "textureKey": "map-overgrown-rock-mossy-small",
+      "lightEnabled": false
     },
     {
       "id": "rock-slab",
       "category": "rocks",
       "description": "flat stone slab",
       "size": {
-        "width": 130,
-        "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 192,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
         "radius": 36,
         "offsetX": 0,
-        "offsetY": 23
+        "offsetY": -26
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/rocks/rock-slab.png",
+      "textureKey": "map-overgrown-rock-slab",
+      "lightEnabled": false
     },
     {
       "id": "rubble-pile",
       "category": "rocks",
       "description": "pile of carved stone rubble",
       "size": {
-        "width": 220,
-        "height": 220,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 224,
+        "height": 160,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 62,
+        "radius": 45,
         "offsetX": 0,
-        "offsetY": 40
+        "offsetY": -32
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/rocks/rubble-pile.png",
+      "textureKey": "map-overgrown-rubble-pile",
+      "lightEnabled": false
     },
     {
       "id": "stela-fallen",
       "category": "rocks",
       "description": "fallen carved stela",
       "size": {
-        "width": 130,
-        "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 256,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
         "radius": 36,
         "offsetX": 0,
-        "offsetY": 23
+        "offsetY": -26
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/rocks/stela-fallen.png",
+      "textureKey": "map-overgrown-stela-fallen",
+      "lightEnabled": false
     },
     {
       "id": "stela-standing",
       "category": "rocks",
       "description": "standing carved stela (landmark prop)",
       "size": {
-        "width": 130,
-        "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 256,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 36,
+        "radius": 45,
         "offsetX": 0,
-        "offsetY": 23
+        "offsetY": -51
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/rocks/stela-standing.png",
+      "textureKey": "map-overgrown-stela-standing",
+      "lightEnabled": false
     },
     {
       "id": "log-fallen",
       "category": "debris",
       "description": "fallen log with moss",
       "size": {
-        "width": 140,
-        "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-roots"
+      "placeholderTexture": "top-roots",
+      "image": "maps/overgrown/debris/log-fallen.png",
+      "textureKey": "map-overgrown-log-fallen",
+      "lightEnabled": false
     },
     {
       "id": "stump",
       "category": "debris",
       "description": "tree stump",
       "size": {
-        "width": 140,
-        "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/debris/stump.png",
+      "textureKey": "map-overgrown-stump",
+      "lightEnabled": false
     },
     {
       "id": "mushrooms-red",
       "category": "debris",
       "description": "red mushrooms",
       "size": {
-        "width": 140,
-        "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 80,
+        "height": 80,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/debris/mushrooms-red.png",
+      "textureKey": "map-overgrown-mushrooms-red",
+      "lightEnabled": false
     },
     {
       "id": "mushrooms-brown",
       "category": "debris",
       "description": "brown mushroom cluster",
       "size": {
-        "width": 140,
-        "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 80,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/debris/mushrooms-brown.png",
+      "textureKey": "map-overgrown-mushrooms-brown",
+      "lightEnabled": false
     },
     {
       "id": "twigs",
       "category": "debris",
       "description": "twigs and leaves pile",
       "size": {
-        "width": 140,
-        "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 80,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/debris/twigs.png",
+      "textureKey": "map-overgrown-twigs",
+      "lightEnabled": false
     },
     {
       "id": "stones-small",
       "category": "debris",
       "description": "a few small stones",
       "size": {
-        "width": 140,
-        "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 64,
+        "height": 64,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-rocks"
+      "placeholderTexture": "top-rocks",
+      "image": "maps/overgrown/debris/stones-small.png",
+      "textureKey": "map-overgrown-stones-small",
+      "lightEnabled": false
     },
     {
       "id": "temple-central",
@@ -869,400 +981,447 @@
       "description": "central stepped stone temple with a staircase, overgrown, top-down 3/4, 768 px (landmark)",
       "size": {
         "width": 768,
-        "height": 599,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "height": 768,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 522,
-        "height": 292,
+        "width": 553,
+        "height": 461,
         "offsetX": 0,
-        "offsetY": 192
+        "offsetY": -246
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-temple"
+      "placeholderTexture": "top-temple",
+      "image": "maps/overgrown/buildings/temple-central.png",
+      "textureKey": "map-overgrown-temple-central",
+      "lightEnabled": false
     },
     {
       "id": "temple-wall-a",
       "category": "buildings",
       "description": "ruined temple wall segment, straight",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 384,
+        "height": 256,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 190,
-        "height": 106,
+        "width": 276,
+        "height": 72,
         "offsetX": 0,
-        "offsetY": 70
+        "offsetY": -41
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-temple"
+      "placeholderTexture": "top-temple",
+      "image": "maps/overgrown/buildings/temple-wall-a.png",
+      "textureKey": "map-overgrown-temple-wall-a",
+      "lightEnabled": false
     },
     {
       "id": "temple-wall-corner",
       "category": "buildings",
       "description": "ruined temple wall corner",
       "size": {
-        "width": 360,
-        "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 320,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 245,
-        "height": 137,
+        "width": 230,
+        "height": 90,
         "offsetX": 0,
-        "offsetY": 90
+        "offsetY": -51
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-temple"
+      "placeholderTexture": "top-temple",
+      "image": "maps/overgrown/buildings/temple-wall-corner.png",
+      "textureKey": "map-overgrown-temple-wall-corner",
+      "lightEnabled": false
     },
     {
       "id": "hut-thatched-a",
       "category": "buildings",
       "description": "Maya thatched hut, round",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 320,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 190,
-        "height": 106,
+        "width": 230,
+        "height": 90,
         "offsetX": 0,
-        "offsetY": 70
+        "offsetY": -51
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/buildings/hut-thatched-a.png",
+      "textureKey": "map-overgrown-hut-thatched-a",
+      "lightEnabled": false
     },
     {
       "id": "hut-thatched-b",
       "category": "buildings",
       "description": "Maya thatched hut, rectangular with porch",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 384,
+        "height": 320,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 190,
-        "height": 106,
+        "width": 276,
+        "height": 90,
         "offsetX": 0,
-        "offsetY": 70
+        "offsetY": -51
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/buildings/hut-thatched-b.png",
+      "textureKey": "map-overgrown-hut-thatched-b",
+      "lightEnabled": false
     },
     {
       "id": "hut-thatched-c",
       "category": "buildings",
       "description": "larger hut with storage shed",
       "size": {
-        "width": 480,
-        "height": 374,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 448,
+        "height": 384,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 326,
-        "height": 182,
+        "width": 323,
+        "height": 108,
         "offsetX": 0,
-        "offsetY": 120
+        "offsetY": -61
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/buildings/hut-thatched-c.png",
+      "textureKey": "map-overgrown-hut-thatched-c",
+      "lightEnabled": false
     },
     {
       "id": "market-stall-a",
       "category": "buildings",
       "description": "ruined market stall with faded red cloth",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 256,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 190,
-        "height": 106,
+        "width": 230,
+        "height": 72,
         "offsetX": 0,
-        "offsetY": 70
+        "offsetY": -41
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/buildings/market-stall-a.png",
+      "textureKey": "map-overgrown-market-stall-a",
+      "lightEnabled": false
     },
     {
       "id": "market-stall-b",
       "category": "buildings",
       "description": "market stall with baskets",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 288,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 190,
-        "height": 106,
+        "width": 230,
+        "height": 81,
         "offsetX": 0,
-        "offsetY": 70
+        "offsetY": -46
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/buildings/market-stall-b.png",
+      "textureKey": "map-overgrown-market-stall-b",
+      "lightEnabled": false
     },
     {
       "id": "altar",
       "category": "buildings",
       "description": "carved stone altar",
       "size": {
-        "width": 360,
-        "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 256,
+        "height": 256,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 245,
-        "height": 137,
+        "width": 184,
+        "height": 72,
         "offsetX": 0,
-        "offsetY": 90
+        "offsetY": -41
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-stela"
+      "placeholderTexture": "top-stela",
+      "image": "maps/overgrown/buildings/altar.png",
+      "textureKey": "map-overgrown-altar",
+      "lightEnabled": false
     },
     {
       "id": "shrine-small",
       "category": "buildings",
       "description": "small stone shrine with a jade idol",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 288,
+        "height": 320,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 190,
-        "height": 106,
+        "width": 207,
+        "height": 90,
         "offsetX": 0,
-        "offsetY": 70
+        "offsetY": -51
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-stela"
+      "placeholderTexture": "top-stela",
+      "image": "maps/overgrown/buildings/shrine-small.png",
+      "textureKey": "map-overgrown-shrine-small",
+      "lightEnabled": false
     },
     {
       "id": "fountain-dry",
       "category": "buildings",
       "description": "dry stone fountain",
       "size": {
-        "width": 360,
-        "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 288,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 0.9
       },
       "collider": {
         "type": "rect",
-        "width": 245,
-        "height": 137,
+        "width": 230,
+        "height": 81,
         "offsetX": 0,
-        "offsetY": 90
+        "offsetY": -46
       },
       "depthOffset": 2,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/buildings/fountain-dry.png",
+      "textureKey": "map-overgrown-fountain-dry",
+      "lightEnabled": false
     },
     {
       "id": "pot-clay-a",
       "category": "props",
       "description": "clay pot",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 80,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 25,
+        "radius": 19,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": -14
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
-      "placeholderTexture": "urn"
+      "placeholderTexture": "urn",
+      "image": "maps/overgrown/props/pot-clay-a.png",
+      "textureKey": "map-overgrown-pot-clay-a",
+      "lightEnabled": false
     },
     {
       "id": "pot-clay-b",
       "category": "props",
       "description": "large clay urn",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 144,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 25,
+        "radius": 23,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": -22
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
-      "placeholderTexture": "urn"
+      "placeholderTexture": "urn",
+      "image": "maps/overgrown/props/pot-clay-b.png",
+      "textureKey": "map-overgrown-pot-clay-b",
+      "lightEnabled": false
     },
     {
       "id": "basket-woven",
       "category": "props",
       "description": "woven basket",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 25,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
-      "breakable": true,
+      "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "basket"
+      "placeholderTexture": "basket",
+      "image": "maps/overgrown/props/basket-woven.png",
+      "textureKey": "map-overgrown-basket-woven",
+      "lightEnabled": false
     },
     {
       "id": "barrel-wood",
       "category": "props",
       "description": "wooden barrel",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 25,
+        "radius": 23,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": -19
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
-      "placeholderTexture": "urn"
+      "placeholderTexture": "urn",
+      "image": "maps/overgrown/props/barrel-wood.png",
+      "textureKey": "map-overgrown-barrel-wood",
+      "lightEnabled": false
     },
     {
       "id": "crate-wood",
@@ -1271,156 +1430,238 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 25,
+        "radius": 27,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": -17
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
-      "placeholderTexture": "basket"
+      "placeholderTexture": "basket",
+      "image": "maps/overgrown/props/crate-wood.png",
+      "textureKey": "map-overgrown-crate-wood",
+      "lightEnabled": false
     },
     {
       "id": "well-stone",
       "category": "props",
       "description": "stone well",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 160,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 31,
+        "radius": 38,
         "offsetX": 0,
-        "offsetY": 20
+        "offsetY": -24
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/props/well-stone.png",
+      "textureKey": "map-overgrown-well-stone",
+      "lightEnabled": false
     },
     {
       "id": "torch-post",
       "category": "props",
       "description": "unlit wooden torch post",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 64,
+        "height": 160,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "none",
+        "radius": 0,
         "width": 0,
         "height": 0,
         "offsetX": 0,
         "offsetY": 0
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
-      "lightSource": false,
-      "placeholderTexture": "top-stela"
+      "lightSource": true,
+      "placeholderTexture": "top-stela",
+      "image": "maps/overgrown/props/torch-post.png",
+      "textureKey": "map-overgrown-torch-post",
+      "lightEnabled": false
     },
     {
       "id": "fence-wood",
       "category": "props",
       "description": "short wooden fence segment",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 31,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0,
         "offsetX": 0,
-        "offsetY": 20
+        "offsetY": 0
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/props/fence-wood.png",
+      "textureKey": "map-overgrown-fence-wood",
+      "lightEnabled": false
     },
     {
       "id": "cart-wooden",
       "category": "props",
       "description": "broken wooden cart",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 160,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
         "type": "circle",
-        "radius": 31,
+        "radius": 38,
         "offsetX": 0,
-        "offsetY": 20
+        "offsetY": -19
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/props/cart-wooden.png",
+      "textureKey": "map-overgrown-cart-wooden",
+      "lightEnabled": false
     },
     {
       "id": "sign-carved",
       "category": "props",
       "description": "carved stone marker",
       "size": {
-        "width": 112,
-        "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 128,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 0.9
       },
       "collider": {
-        "type": "none",
-        "width": 0,
-        "height": 0,
+        "type": "circle",
+        "radius": 23,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": -19
       },
-      "depthOffset": 5,
+      "depthOffset": 2,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
-      "placeholderTexture": "top-ruin"
+      "placeholderTexture": "top-ruin",
+      "image": "maps/overgrown/props/sign-carved.png",
+      "textureKey": "map-overgrown-sign-carved",
+      "lightEnabled": false
     }
+  ],
+  "artVersion": "v15",
+  "ground": [
+    {
+      "id": "moss-grass",
+      "image": "maps/overgrown/ground/moss-grass.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "textureKey": "map-overgrown-moss-grass"
+    },
+    {
+      "id": "dry-grass",
+      "image": "maps/overgrown/ground/dry-grass.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "textureKey": "map-overgrown-dry-grass"
+    },
+    {
+      "id": "dirt-path",
+      "image": "maps/overgrown/ground/dirt-path.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "textureKey": "map-overgrown-dirt-path"
+    },
+    {
+      "id": "cobble-plaza",
+      "image": "maps/overgrown/ground/cobble-plaza.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "textureKey": "map-overgrown-cobble-plaza"
+    },
+    {
+      "id": "mud",
+      "image": "maps/overgrown/ground/mud.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "textureKey": "map-overgrown-mud"
+    },
+    {
+      "id": "jungle-floor",
+      "image": "maps/overgrown/ground/jungle-floor.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "textureKey": "map-overgrown-jungle-floor"
+    }
+  ],
+  "boundaryTreeIds": [
+    "tree-broadleaf-a",
+    "tree-broadleaf-b",
+    "tree-fig"
   ]
 }

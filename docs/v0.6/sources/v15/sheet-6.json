@@ -1,0 +1,64 @@
+{
+  "expectedCount": 6,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15/sheet-6-contact.png",
+  "items": [
+    {
+      "id": "moss-grass",
+      "description": "seamless lush grass with clover",
+      "category": "ground",
+      "file": "maps/overgrown/ground/moss-grass.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "dry-grass",
+      "description": "seamless yellowed grass",
+      "category": "ground",
+      "file": "maps/overgrown/ground/dry-grass.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "dirt-path",
+      "description": "seamless packed dirt path",
+      "category": "ground",
+      "file": "maps/overgrown/ground/dirt-path.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "cobble-plaza",
+      "description": "seamless mossy cobblestone plaza",
+      "category": "ground",
+      "file": "maps/overgrown/ground/cobble-plaza.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "mud",
+      "description": "seamless wet mud with puddle shine",
+      "category": "ground",
+      "file": "maps/overgrown/ground/mud.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    },
+    {
+      "id": "jungle-floor",
+      "description": "seamless dark leaf litter and roots",
+      "category": "ground",
+      "file": "maps/overgrown/ground/jungle-floor.png",
+      "width": 256,
+      "height": 256,
+      "fullBleed": true
+    }
+  ]
+}

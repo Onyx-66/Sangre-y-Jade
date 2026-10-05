@@ -459,3 +459,18 @@ Status: implemented and verified.
 ### Open issues
 
 - The V06 weather image and ambience files are not present in this worktree; the runtime’s procedural art and optional audio fallbacks were verified, but generated stills and audible playback await the supplied map-art/audio assets. The browser screenshot run used the local desktop browser, not a mobile device.
+
+## V15 — Overgrown Temple map artwork — 2026-10-05
+
+Status: art and integration complete; verification caveats below.
+
+- Generated and inspected all 59 map images and 14 shared weather stills. Added exact-size PNGs, source sheets/manifests, category contact sheets and six 3×3 ground tiling previews. Re-generated noisy ground and rejected contaminated weather; corrected the remaining key fringe in the shared slicer. Per-file provenance is in `ASSET_LOG.md`.
+- Filled the Overgrown kit's real paths, dimensions, anchors, footprints, fade/breakable/light flags; added tiled terrain and authored boundary canopies. Kept finite-map layouts, pools and old assets. Fixed StaticBody refresh overwriting the authored footprints; preserved weather particle world sizes and lazy per-map loading. No audio files changed.
+- Targeted map/weather/art suite: **21/21 pass**, including 200 seeds per map, 73 exact-size unique images, seamless edges, preload selection and real-body geometry. Four Playwright views pass with no browser errors or HTTP failures: centre, corner, landmark and boundary. See `previews/v15/` and `ART_QA_V15.md`.
+- `npm run check`: **586/587 pass**; the sole failure is the existing French translation audit (`MANA`, `Cacao`). Production build passes separately; existing large-chunk advisory remains.
+- Full-kit headless Chrome at 1280×720, 4× CPU throttle: actual game frame mean **20.97ms (~47.7 FPS)**, p95 **27.70ms**; scene-update p95 **5.30ms**. 54 active / 57 allocated prop sprites, below the 350 cap; all 59 kit textures plus one baked boundary texture loaded.
+
+### Open issues
+
+- Requested Flare routing cannot be verified because the image tool does not expose it. Native output resolution is documented above; all final dimensions are verified.
+- The short throttled desktop sample does not establish sustained 60FPS and is not an Android measurement. No performance rebalance or unrelated translation fix was made. Existing unfinished UI, localization, Android, branding and other work remains untouched.

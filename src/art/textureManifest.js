@@ -1,10 +1,14 @@
 import { ALLY_CATALOG } from '../data/allyCatalog.js';
 import { ENEMY_IDS,enemiesForArt } from './enemyVisuals.js';
+import { mapArtManifest } from '../maps/MapArt.js';
+import { weatherStillIds, WEATHER_STILL_PATHS } from '../weather/WeatherDirector.js';
 export const CHARACTER_ROWS={hero:['balam','ixchel','kukul'],enemy:ENEMY_IDS,boss:['camazotz','zipacna','vucub','ahpuch'],support:['saintess','tank','assassin']};
 
 export function textureManifest({hero,map,base='/',allyIds=CHARACTER_ROWS.support}={}){
   const root=`${base}assets/pixel/`,files=[];
   const image=(key,file,critical=true)=>files.push({key,url:`${root}${file}`,type:'image',critical});
+  for(const asset of mapArtManifest(map))image(asset.key,asset.file);
+  for(const id of weatherStillIds(map?.id))image(`weather-${id}`,WEATHER_STILL_PATHS[id],false);
   files.push({key:'pickup-bubble',url:`${base}assets/ui/pickup-bubble.svg`,type:'image',critical:true});
   image('support-bomb','support-bomb.png');
   for(const id of allyIds)for(const skill of ALLY_CATALOG[id]||[])image(`skill-icon-${skill.id}`,skill.iconFile,false);

@@ -1,0 +1,154 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15/sheet-2-contact.png",
+  "items": [
+    {
+      "id": "bush-round",
+      "description": "round green bush",
+      "category": "plants",
+      "file": "maps/overgrown/plants/bush-round.png",
+      "width": 144,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "bush-flowers-pink",
+      "description": "bush with pink flowers",
+      "category": "plants",
+      "file": "maps/overgrown/plants/bush-flowers-pink.png",
+      "width": 160,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "bush-flowers-white",
+      "description": "bush with white flowers",
+      "category": "plants",
+      "file": "maps/overgrown/plants/bush-flowers-white.png",
+      "width": 144,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "fern-a",
+      "description": "large fern",
+      "category": "plants",
+      "file": "maps/overgrown/plants/fern-a.png",
+      "width": 192,
+      "height": 160,
+      "keyFringe": 4
+    },
+    {
+      "id": "fern-b",
+      "description": "small fern cluster",
+      "category": "plants",
+      "file": "maps/overgrown/plants/fern-b.png",
+      "width": 128,
+      "height": 112,
+      "keyFringe": 4
+    },
+    {
+      "id": "tall-grass-a",
+      "description": "tall grass tuft",
+      "category": "plants",
+      "file": "maps/overgrown/plants/tall-grass-a.png",
+      "width": 128,
+      "height": 144,
+      "keyFringe": 4
+    },
+    {
+      "id": "flowers-blue",
+      "description": "blue wildflowers",
+      "category": "plants",
+      "file": "maps/overgrown/plants/flowers-blue.png",
+      "width": 128,
+      "height": 112,
+      "keyFringe": 4
+    },
+    {
+      "id": "flowers-yellow",
+      "description": "yellow wildflowers",
+      "category": "plants",
+      "file": "maps/overgrown/plants/flowers-yellow.png",
+      "width": 128,
+      "height": 112,
+      "keyFringe": 4
+    },
+    {
+      "id": "lilies",
+      "description": "large jungle leaves",
+      "category": "plants",
+      "file": "maps/overgrown/plants/lilies.png",
+      "width": 160,
+      "height": 144,
+      "keyFringe": 4
+    },
+    {
+      "id": "vines-hanging",
+      "description": "hanging vines for walls",
+      "category": "plants",
+      "file": "maps/overgrown/plants/vines-hanging.png",
+      "width": 160,
+      "height": 192,
+      "keyFringe": 4
+    },
+    {
+      "id": "rock-mossy-large",
+      "description": "large mossy boulder",
+      "category": "rocks",
+      "file": "maps/overgrown/rocks/rock-mossy-large.png",
+      "width": 256,
+      "height": 224,
+      "keyFringe": 4
+    },
+    {
+      "id": "rock-mossy-small",
+      "description": "small mossy boulder",
+      "category": "rocks",
+      "file": "maps/overgrown/rocks/rock-mossy-small.png",
+      "width": 128,
+      "height": 112,
+      "keyFringe": 4
+    },
+    {
+      "id": "rock-slab",
+      "description": "flat stone slab",
+      "category": "rocks",
+      "file": "maps/overgrown/rocks/rock-slab.png",
+      "width": 192,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "rubble-pile",
+      "description": "pile of carved stone rubble",
+      "category": "rocks",
+      "file": "maps/overgrown/rocks/rubble-pile.png",
+      "width": 224,
+      "height": 160,
+      "keyFringe": 4
+    },
+    {
+      "id": "stela-fallen",
+      "description": "fallen carved stela",
+      "category": "rocks",
+      "file": "maps/overgrown/rocks/stela-fallen.png",
+      "width": 256,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "stela-standing",
+      "description": "standing carved stela (landmark prop)",
+      "category": "rocks",
+      "file": "maps/overgrown/rocks/stela-standing.png",
+      "width": 160,
+      "height": 256,
+      "keyFringe": 4
+    }
+  ]
+}

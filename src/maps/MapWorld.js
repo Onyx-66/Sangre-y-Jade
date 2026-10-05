@@ -1,6 +1,7 @@
 import { MAP_KITS } from '../data/mapDefinitions.js';
 import { SpatialHash } from './SpatialHash.js';
 import { generateMapLayout, packWorldCells, PLAYABLE_BOUNDS, WORLD_HALF } from './layout.js';
+import { createMapArt } from './MapArt.js';
 
 const nextFrame = () => new Promise(resolve => setTimeout(resolve, 0));
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -54,7 +55,7 @@ export class MapWorld {
     this.colliderPool = [];
     this.spatialHash = new SpatialHash(256);
     this.stuck = new Map();
-    this.lightSources = new Set(this.layout.lightSources.map(item => ({ id: item.worldId, x: item.x, y: item.y, kind: item.id })));
+    this.lightSources = new Set(this.layout.lightSources.filter(item=>item.lightEnabled!==false).map(item => ({ id: item.worldId, x: item.x, y: item.y, kind: item.id })));
     this.activeLightSources = new Set();
     this.waterZones = this.layout.waterZones;
     this.peakActive = 0;
@@ -65,6 +66,7 @@ export class MapWorld {
     scene.mapLayout = this.layout;
     scene.waterZones = this.waterZones;
     scene.lightSources = this.lightSources;
+    this.art = createMapArt(scene, this.kit);
     this.drawBoundary();
     this.drawPathways();
     this.drawWater();
@@ -84,7 +86,7 @@ export class MapWorld {
 
   drawBoundary() {
     const scene = this.scene;
-    this.wallGraphics = scene.add?.graphics?.().setDepth?.(2);
+    this.wallGraphics = scene.add?.graphics?.().setDepth?.(this.art ? -9990 : 2);
     if (!this.wallGraphics) return;
     const g = this.wallGraphics;
     const color = this.map.id === 'overgrown' ? 0x15271e : this.map.id === 'bloodmoon' ? 0x17121c : 0x0a1119;
@@ -114,6 +116,7 @@ export class MapWorld {
   }
 
   drawPathways() {
+    if (this.art) return;
     const graphics = this.scene.add?.graphics?.().setDepth?.(-95);
     this.pathGraphics = graphics;
     if (!graphics) return;
@@ -175,6 +178,7 @@ export class MapWorld {
   }
 
   texture(item) {
+    if(item.textureKey && this.scene.textures?.exists?.(item.textureKey))return item.textureKey;
     const requested = item.placeholderTexture;
     if (this.scene.textures?.exists?.(requested)) return requested;
     const fallbacks = ['top-foliage', 'top-rocks', 'top-ruin', 'top-tree'];
@@ -208,7 +212,7 @@ export class MapWorld {
     object.setData({ mapPlacementId: item.worldId, mapItemId: item.id, mapCategory: item.category,
       breakable: item.breakable, lightSource: item.lightSource, blocksGround: item.collider.type !== 'none',
       hp: item.breakable ? 24 : 0, kind: item.breakable ? item.id : item.category });
-    if (item.lightSource) this.activeLightSources.add(object);
+    if (item.lightSource && item.lightEnabled!==false) this.activeLightSources.add(object);
     return object;
   }
 
@@ -217,18 +221,21 @@ export class MapWorld {
     if (!body) return;
     const displayW = object.displayWidth, displayH = object.displayHeight;
     const shape = item.collider;
+    // Phaser's StaticBody refresh resets its dimensions to the full image.
+    // Refresh FIRST, then set the measured footprint and offset (also on reuse).
+    body.offset?.set?.(0,0);
+    body.updateFromGameObject?.();
     if (shape.type === 'circle') {
       const radius = Math.max(4, shape.radius * item.scale);
       const ox = displayW * item.anchor.x + shape.offsetX * item.scale - radius;
       const oy = displayH * item.anchor.y + shape.offsetY * item.scale - radius;
-      body.setCircle(radius, ox, oy);
+      body.setCircle(radius, 0, 0).setOffset(ox, oy);
     } else {
       const width = Math.max(8, shape.width * item.scale), height = Math.max(8, shape.height * item.scale);
       const ox = displayW * item.anchor.x + shape.offsetX * item.scale - width / 2;
       const oy = displayH * item.anchor.y + shape.offsetY * item.scale - height / 2;
       body.setSize(width, height, false).setOffset(ox, oy);
     }
-    body.updateFromGameObject?.();
   }
 
   activateCell(key) {
@@ -361,6 +368,7 @@ export class MapWorld {
   destroy() {
     if (this.destroyed) return;
     this.destroyed = true;
+    this.art?.destroy();
     this.wallGraphics?.destroy(); this.pathGraphics?.destroy(); this.waterGraphics?.destroy();
     for (const key of [...this.activeCells]) this.recycleCell(key);
     this.active.clear(); this.stuck.clear(); this.lightSources.clear(); this.activeLightSources.clear(); this.spatialHash.clear();

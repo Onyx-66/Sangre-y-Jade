@@ -60,6 +60,11 @@ const WEATHER = Object.freeze({
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 const between = (rng, [min, max]) => min + rng() * (max - min);
 const eventParticles = event => event?.particles || (event?.particle ? [event.particle] : []);
+export function weatherStillIds(mapId) {
+  const config=WEATHER[mapId];
+  if(!config)return [];
+  return [...new Set([...config.layers.map(layer=>layer.id),...eventParticles(config.event).map(layer=>layer.id),...(config.lightning?['lightning-flash']:[])])];
+}
 const mulberry32 = (seed) => {
   let state = seed >>> 0;
   return () => {
@@ -211,9 +216,12 @@ export class WeatherDirector {
   }
 
   refreshStills() {
+    // The authored shaft replaces the procedural ray drawing, not an extra
+    // layer on top of it. Ambient tint and vignette remain independent.
+    this.staticGraphics?.setVisible?.(!this.scene.textures?.exists?.('weather-god-ray'));
     for (const [id, key] of this.stillKeys) {
       if (this.scene.textures?.exists?.(key)) {
-        for (const sprite of this.particles) if (sprite.weatherEmitter?.id === id) sprite.setTexture?.(key);
+        for (const sprite of this.particles) if (sprite.weatherEmitter?.id === id) { sprite.setTexture?.(key);sprite.setDisplaySize?.(sprite.weatherDisplaySize,sprite.weatherDisplaySize); }
         for (const overlay of this.overlaySprites || []) if (overlay.id === id) overlay.sprite.setTexture?.(key);
       }
     }
@@ -251,7 +259,8 @@ export class WeatherDirector {
           image.onload = () => {
             if (!this.destroyed && !this.scene.textures?.exists?.(key)) {
               this.scene.textures?.addImage?.(key, image);
-              for (const sprite of this.particles) if (sprite.weatherEmitter?.id === id) sprite.setTexture?.(key);
+              if(id==='god-ray')this.staticGraphics?.setVisible?.(false);
+              for (const sprite of this.particles) if (sprite.weatherEmitter?.id === id) { sprite.setTexture?.(key);sprite.setDisplaySize?.(sprite.weatherDisplaySize,sprite.weatherDisplaySize); }
               for (const overlay of this.overlaySprites) if (overlay.id === id) overlay.sprite.setTexture?.(key);
             }
             URL.revokeObjectURL(url);
@@ -309,7 +318,9 @@ export class WeatherDirector {
     const key = this.stillKeys.get(layerId);
     const texture = key && this.scene.textures?.exists?.(key) ? key : makeProceduralTexture(this.scene, layerId);
     sprite.setTexture?.(texture); sprite.setPosition?.(x, y); sprite.setDepth?.(emitter.depth ?? 0);
-    sprite.setScale?.(layerId.startsWith('leaf-') ? 0.65 + this.rng() * 0.65 : 0.55 + this.rng() * 0.9);
+    const size=24*(layerId.startsWith('leaf-') ? 0.65 + this.rng() * 0.65 : 0.55 + this.rng() * 0.9);
+    sprite.weatherDisplaySize=size;
+    sprite.setDisplaySize?.(size,size);
     sprite.setRotation?.(this.rng() * Math.PI * 2); sprite.setTint?.(this.particleTint(layerId));
     sprite.setAlpha?.(emitter.alpha ?? 0.5); sprite.setActive?.(true); sprite.setVisible?.(true);
     sprite.weatherEmitter = emitter; sprite.weatherAge = 0; sprite.weatherLife = between(this.rng, emitter.life || [2, 4]);

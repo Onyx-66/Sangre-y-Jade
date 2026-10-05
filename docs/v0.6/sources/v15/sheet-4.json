@@ -1,0 +1,109 @@
+{
+  "expectedCount": 11,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "outputDir": "public/assets/pixel",
+  "contactSheet": "docs/v0.6/previews/v15/sheet-4-contact.png",
+  "items": [
+    {
+      "id": "fountain-dry",
+      "description": "dry stone fountain",
+      "category": "buildings",
+      "file": "maps/overgrown/buildings/fountain-dry.png",
+      "width": 320,
+      "height": 288,
+      "keyFringe": 4
+    },
+    {
+      "id": "pot-clay-a",
+      "description": "clay pot",
+      "category": "props",
+      "file": "maps/overgrown/props/pot-clay-a.png",
+      "width": 80,
+      "height": 96,
+      "keyFringe": 4
+    },
+    {
+      "id": "pot-clay-b",
+      "description": "large clay urn",
+      "category": "props",
+      "file": "maps/overgrown/props/pot-clay-b.png",
+      "width": 96,
+      "height": 144,
+      "keyFringe": 4
+    },
+    {
+      "id": "basket-woven",
+      "description": "woven basket",
+      "category": "props",
+      "file": "maps/overgrown/props/basket-woven.png",
+      "width": 96,
+      "height": 96,
+      "keyFringe": 4
+    },
+    {
+      "id": "barrel-wood",
+      "description": "wooden barrel",
+      "category": "props",
+      "file": "maps/overgrown/props/barrel-wood.png",
+      "width": 96,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "crate-wood",
+      "description": "wooden crate",
+      "category": "props",
+      "file": "maps/overgrown/props/crate-wood.png",
+      "width": 112,
+      "height": 112,
+      "keyFringe": 4
+    },
+    {
+      "id": "well-stone",
+      "description": "stone well",
+      "category": "props",
+      "file": "maps/overgrown/props/well-stone.png",
+      "width": 160,
+      "height": 160,
+      "keyFringe": 4
+    },
+    {
+      "id": "torch-post",
+      "description": "unlit wooden torch post",
+      "category": "props",
+      "file": "maps/overgrown/props/torch-post.png",
+      "width": 64,
+      "height": 160,
+      "keyFringe": 4
+    },
+    {
+      "id": "fence-wood",
+      "description": "short wooden fence segment",
+      "category": "props",
+      "file": "maps/overgrown/props/fence-wood.png",
+      "width": 160,
+      "height": 96,
+      "keyFringe": 4
+    },
+    {
+      "id": "cart-wooden",
+      "description": "broken wooden cart",
+      "category": "props",
+      "file": "maps/overgrown/props/cart-wooden.png",
+      "width": 160,
+      "height": 128,
+      "keyFringe": 4
+    },
+    {
+      "id": "sign-carved",
+      "description": "carved stone marker",
+      "category": "props",
+      "file": "maps/overgrown/props/sign-carved.png",
+      "width": 96,
+      "height": 128,
+      "keyFringe": 4
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-05T20:17:57.555Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "captures": [
+    {
+      "position": "centre",
+      "player": {
+        "x": 0,
+        "y": 0
+      },
+      "activeProps": 53,
+      "allocatedProps": 53,
+      "wrongBodies": [],
+      "realProps": 53,
+      "ground": "a4aaeb14-9373-4e59-97e9-3574d0505fac",
+      "weather": [
+        {
+          "key": "weather-mist-wisp",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-a",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-b",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-streak",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-splash",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "position": "corner",
+      "player": {
+        "x": 2200,
+        "y": 1400
+      },
+      "activeProps": 34,
+      "allocatedProps": 53,
+      "wrongBodies": [],
+      "realProps": 34,
+      "ground": "a4aaeb14-9373-4e59-97e9-3574d0505fac",
+      "weather": [
+        {
+          "key": "weather-mist-wisp",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-a",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-b",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-streak",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-splash",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "position": "landmark",
+      "player": {
+        "x": -1970,
+        "y": -1660
+      },
+      "activeProps": 32,
+      "allocatedProps": 53,
+      "wrongBodies": [],
+      "realProps": 32,
+      "ground": "a4aaeb14-9373-4e59-97e9-3574d0505fac",
+      "weather": [
+        {
+          "key": "weather-mist-wisp",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-a",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-b",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-streak",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-splash",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "position": "boundary",
+      "player": {
+        "x": -2720,
+        "y": 700
+      },
+      "activeProps": 45,
+      "allocatedProps": 53,
+      "wrongBodies": [],
+      "realProps": 45,
+      "ground": "a4aaeb14-9373-4e59-97e9-3574d0505fac",
+      "weather": [
+        {
+          "key": "weather-mist-wisp",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-a",
+          "loaded": true
+        },
+        {
+          "key": "weather-leaf-b",
+          "loaded": true
+        },
+        {
+          "key": "weather-god-ray",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-streak",
+          "loaded": true
+        },
+        {
+          "key": "weather-rain-splash",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "httpErrors": [],
+  "performance": {
+    "cpuThrottle": 4,
+    "rafFrameMs": {
+      "samples": 590,
+      "mean": 7.497288135593221,
+      "p50": 7,
+      "p95": 13.799999999999272,
+      "max": 48.600000000000364
+    },
+    "gameFrameMs": {
+      "samples": 205,
+      "mean": 20.9663414634219,
+      "p50": 20.800000000745058,
+      "p95": 27.699999999254942,
+      "max": 60.19999999925494
+    },
+    "sceneUpdateMs": {
+      "samples": 206,
+      "mean": 3.3000000000759524,
+      "p50": 3,
+      "p95": 5.300000000745058,
+      "max": 12.5
+    },
+    "activeProps": 54,
+    "allocatedProps": 57,
+    "weatherParticles": 5,
+    "loadedMapTextures": 60
+  }
+}

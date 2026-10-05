@@ -93,7 +93,7 @@ function resolveInside(base, relative, label) {
   return absolute;
 }
 
-function defringeCrop(crop, mode) {
+function defringeCrop(crop, mode, { softMatte = false, keyFringe = 0 } = {}) {
   const { data, info } = crop;
   const rgba = Buffer.from(data);
   const keyed=mode==='magenta'?Array.from({length:info.width*info.height},(_,pixel)=>isBackground(data,pixel*4,mode)):null;
@@ -105,16 +105,33 @@ function defringeCrop(crop, mode) {
     if (mode === 'magenta') {
       const r = rgba[i], g = rgba[i + 1], b = rgba[i + 2];
       const pixel=i/4,x=pixel%info.width,y=Math.floor(pixel/info.width);
+      if (keyFringe && r>g+8 && b>g+8) {
+        let touchesKey=false;
+        for(let dy=-keyFringe;dy<=keyFringe&&!touchesKey;dy++)for(let dx=-keyFringe;dx<=keyFringe;dx++){
+          const nx=x+dx,ny=y+dy;
+          if(nx<0||ny<0||nx>=info.width||ny>=info.height||keyed[ny*info.width+nx]){touchesKey=true;break;}
+        }
+        if(touchesKey){rgba[i+3]=0;continue;}
+      }
       const matteEdge=keyed&&(x===0||y===0||x===info.width-1||y===info.height-1||
         keyed[pixel-1]||keyed[pixel+1]||keyed[pixel-info.width]||keyed[pixel+info.width]);
-      if ((r >= 180 && b >= 180 && g <= 150 && Math.abs(r - b) <= 100)||
+      // A soft glow is composited over the key throughout, including its pale
+      // core (which need not look magenta). Unmatte its entire coverage.
+      if (softMatte || (r >= 180 && b >= 180 && g <= 150 && Math.abs(r - b) <= 100)||
           (matteEdge&&r>g+30&&b>g+30&&Math.abs(r-b)<60)) {
         const alpha = Math.max(255 - r, g, 255 - b) / 255;
         if (alpha < 0.035) { rgba[i + 3] = 0; continue; }
-        rgba[i] = Math.min(255, Math.round((r - 255 * (1 - alpha)) / alpha));
+        rgba[i] = Math.max(0, Math.min(255, Math.round((r - 255 * (1 - alpha)) / alpha)));
         rgba[i + 1] = Math.min(255, Math.round(g / alpha));
-        rgba[i + 2] = Math.min(255, Math.round((b - 255 * (1 - alpha)) / alpha));
+        rgba[i + 2] = Math.max(0, Math.min(255, Math.round((b - 255 * (1 - alpha)) / alpha)));
         rgba[i + 3] = Math.min(rgba[i + 3], Math.round(alpha * 255));
+        if (softMatte) {
+          // Generated soft halos can reach their detected crop boundary. A
+          // short feather prevents a rectangular matte edge in the final glow.
+          const edge=Math.min(x,y,info.width-1-x,info.height-1-y);
+          const feather=Math.min(1,edge/Math.max(1,Math.min(info.width,info.height)*.06));
+          rgba[i+3]=Math.round(rgba[i+3]*feather);
+        }
       } else if (isBackground(rgba, i, mode)) rgba[i + 3] = 0;
     } else if (isBackground(rgba, i, mode)) rgba[i + 3] = 0;
     else {
@@ -179,16 +196,23 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
 
   const outputBuffers = [];
   for (let index = 0; index < expectedCount; index += 1) {
-    const bounds = found.cells.get(index);
+    let bounds = found.cells.get(index);
     if (!bounds) throw new Error(`Sprite count mismatch: no sprite in reading-order cell ${index + 1}.`);
     const item = items[index];
+    // Ground tiles use the interior square of their generated patch and fill the
+    // final canvas. Ordinary sprites retain the existing trim/transparent margin.
+    if (item.fullBleed) {
+      const side = Math.floor(Math.min(bounds.right-bounds.left+1,bounds.bottom-bounds.top+1)*.93);
+      const left = Math.round((bounds.left+bounds.right+1-side)/2), top = Math.round((bounds.top+bounds.bottom+1-side)/2);
+      bounds = {left,top,right:left+side-1,bottom:top+side-1};
+    }
     const crop = await sharp(inputPath).extract({
       left: bounds.left, top: bounds.top,
       width: bounds.right - bounds.left + 1, height: bounds.bottom - bounds.top + 1,
     }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-    const cleaned = defringeCrop(crop, mode);
-    const fitWidth=item.spriteScale?Math.max(1,Math.round(crop.info.width*item.spriteScale)):Math.max(1,Math.round(item.width*.94));
-    const fitHeight=item.spriteScale?Math.max(1,Math.round(crop.info.height*item.spriteScale)):Math.max(1,Math.round(item.height*.94));
+    const cleaned = defringeCrop(crop, mode, {softMatte:Boolean(item.softMatte),keyFringe:Math.min(4,Math.max(0,Math.floor(item.keyFringe||0)))});
+    const fitWidth=item.fullBleed?item.width:item.spriteScale?Math.max(1,Math.round(crop.info.width*item.spriteScale)):Math.max(1,Math.round(item.width*.94));
+    const fitHeight=item.fullBleed?item.height:item.spriteScale?Math.max(1,Math.round(crop.info.height*item.spriteScale)):Math.max(1,Math.round(item.height*.94));
     if(fitWidth>item.width||fitHeight>item.height)throw new Error(`spriteScale exceeds final canvas for ${item.file}`);
     const fitted = await sharp(cleaned.data, { raw: { width: crop.info.width, height: crop.info.height, channels: 4 } })
       .resize(fitWidth,fitHeight, { fit: 'inside', kernel: sharp.kernel.lanczos3 })
@@ -201,13 +225,20 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
       catch (error) { if (error.code !== 'ENOENT') throw error; }
     }
     const bottom=item.anchor==='bottom'?Math.min(3,item.height-metadata.height):Math.ceil((item.height-metadata.height)/2);
-    const image = await sharp(fitted).extend({
+    let image = await sharp(fitted).extend({
       top: item.height-metadata.height-bottom,
       bottom,
       left: Math.floor((item.width - metadata.width) / 2),
       right: Math.ceil((item.width - metadata.width) / 2),
       background: { r: 0, g: 0, b: 0, alpha: 0 },
     }).png({ compressionLevel: 9 }).toBuffer();
+    if (mode === 'magenta') {
+      // Lanczos can reintroduce a handful of saturated matte pixels at a keyed
+      // boundary; remove only unmistakable key colour after the final resize.
+      const raw = await sharp(image).ensureAlpha().raw().toBuffer();
+      for(let p=0;p<raw.length;p+=4)if(raw[p]>=210&&raw[p+2]>=210&&raw[p+1]<=45)raw[p+3]=0;
+      image=await sharp(raw,{raw:{width:item.width,height:item.height,channels:4}}).png({compressionLevel:9}).toBuffer();
+    }
     await fs.writeFile(targetPath, image);
     outputBuffers.push(image);
     console.log(`${item.file} ${item.width}x${item.height}`);
