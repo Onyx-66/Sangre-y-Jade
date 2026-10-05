@@ -1,0 +1,320 @@
+{
+  "candidate": true,
+  "secondsPerAlly": 600,
+  "policy": "High hero/enemy HP; fixed nearby threats; six active skills rotated one per 100s with both passives; no packs/bosses/XP. Real update, physics, AI, damage and FX.",
+  "runs": [
+    {
+      "role": "saintess",
+      "seconds": 600.0000000001116,
+      "frames": 18000,
+      "states": [
+        "support-saintess-walk",
+        "support-saintess-idle",
+        "support-saintess-windup",
+        "support-saintess-attack",
+        "support-saintess-recover",
+        "support-saintess-hurt",
+        "support-saintess-death"
+      ],
+      "casts": {
+        "healing-circle": 8,
+        "jade-ward": 10,
+        "cleansing-light": 10,
+        "sanctuary-dome": 7,
+        "radiant-beacon": 6,
+        "lifebond": 8
+      },
+      "uncast": [],
+      "peakFx": 10,
+      "missing": [],
+      "basicHits": 0,
+      "basicDamage": [],
+      "strikeFrames": [],
+      "fx": [
+        "enemy-priest-windup",
+        "telegraph-glyph",
+        "saintess-cast-glow",
+        "enemy-priest-attack",
+        "shield-ring-blue",
+        "healing-circle",
+        "saintess-heal-pulse",
+        "ally-skill-pop",
+        "jade-ward",
+        "cleansing-light",
+        "sanctuary-dome",
+        "radiant-beacon",
+        "lifebond"
+      ]
+    },
+    {
+      "role": "tank",
+      "seconds": 600.0000000001116,
+      "frames": 18000,
+      "states": [
+        "support-tank-walk",
+        "support-tank-windup",
+        "support-tank-attack",
+        "support-tank-recover",
+        "support-tank-idle",
+        "support-tank-hurt",
+        "support-tank-death"
+      ],
+      "casts": {
+        "bulwark-wall": 5,
+        "war-cry": 9,
+        "shield-bash": 12,
+        "ground-slam": 12,
+        "clay-bomb": 12,
+        "shield-throw": 14
+      },
+      "uncast": [],
+      "peakFx": 12,
+      "missing": [],
+      "basicHits": 487,
+      "basicDamage": [
+        7
+      ],
+      "strikeFrames": [
+        "support-tank-frame-8"
+      ],
+      "fx": [
+        "enemy-priest-windup",
+        "telegraph-glyph",
+        "survivors-will",
+        "enemy-priest-attack",
+        "shield-ring-blue",
+        "bulwark-wall",
+        "tank-slam-ring",
+        "ally-skill-pop",
+        "tank-bash-arc",
+        "war-cry",
+        "shield-bash",
+        "ground-slam",
+        "clay-bomb",
+        "shield-throw"
+      ]
+    },
+    {
+      "role": "assassin",
+      "seconds": 600.0000000001116,
+      "frames": 18000,
+      "states": [
+        "support-assassin-walk",
+        "support-assassin-windup",
+        "support-assassin-attack",
+        "support-assassin-recover",
+        "support-assassin-idle",
+        "support-assassin-hurt",
+        "support-assassin-death"
+      ],
+      "casts": {
+        "ambush": 32,
+        "execute": 17,
+        "venom-blade": 15,
+        "silencing-dart": 12,
+        "smoke-bomb": 9,
+        "vanish": 6
+      },
+      "uncast": [],
+      "peakFx": 11,
+      "missing": [],
+      "basicHits": 613,
+      "basicDamage": [
+        12
+      ],
+      "strikeFrames": [
+        "support-assassin-frame-8"
+      ],
+      "fx": [
+        "enemy-priest-windup",
+        "telegraph-glyph",
+        "assassin-afterimage",
+        "enemy-priest-attack",
+        "shield-ring-blue",
+        "ambush",
+        "assassin-blink-puff",
+        "ally-skill-pop",
+        "assassin-slash-x",
+        "execute",
+        "venom-blade",
+        "silencing-dart",
+        "smoke-bomb",
+        "vanish"
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/overgrown-base.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/wind-soft.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/wind-soft.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/overgrown-base.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/overgrown-base.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/wind-soft.mp3"
+  ],
+  "checks": [
+    {
+      "label": "all 48 frames decode",
+      "passed": true
+    },
+    {
+      "label": "saintess-heal-pulse: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "saintess-cast-glow: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "tank-bash-arc: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "tank-slam-ring: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "assassin-slash-x: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "assassin-afterimage: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "assassin-blink-puff: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "ally-skill-pop: bounded and cleaned",
+      "passed": true
+    },
+    {
+      "label": "saintess: 600 seconds",
+      "passed": true
+    },
+    {
+      "label": "saintess: every active casts",
+      "passed": true
+    },
+    {
+      "label": "saintess: no missing stills and cap respected",
+      "passed": true
+    },
+    {
+      "label": "saintess: basic hits exercised",
+      "passed": true
+    },
+    {
+      "label": "saintess: basic damage unchanged and on frame 8",
+      "passed": true
+    },
+    {
+      "label": "tank: 600 seconds",
+      "passed": true
+    },
+    {
+      "label": "tank: every active casts",
+      "passed": true
+    },
+    {
+      "label": "tank: no missing stills and cap respected",
+      "passed": true
+    },
+    {
+      "label": "tank: basic hits exercised",
+      "passed": true
+    },
+    {
+      "label": "tank: basic damage unchanged and on frame 8",
+      "passed": true
+    },
+    {
+      "label": "assassin: 600 seconds",
+      "passed": true
+    },
+    {
+      "label": "assassin: every active casts",
+      "passed": true
+    },
+    {
+      "label": "assassin: no missing stills and cap respected",
+      "passed": true
+    },
+    {
+      "label": "assassin: basic hits exercised",
+      "passed": true
+    },
+    {
+      "label": "assassin: basic damage unchanged and on frame 8",
+      "passed": true
+    },
+    {
+      "label": "no console/HTTP errors",
+      "passed": true
+    },
+    {
+      "label": "no warnings except documented external ambience files (audio out of scope)",
+      "passed": true
+    }
+  ],
+  "effects": [
+    {
+      "id": "saintess-heal-pulse",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "saintess-cast-glow",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "tank-bash-arc",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "tank-slam-ring",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "assassin-slash-x",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "assassin-afterimage",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "assassin-blink-puff",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    },
+    {
+      "id": "ally-skill-pop",
+      "peak": 1,
+      "remaining": 0,
+      "missing": []
+    }
+  ],
+  "knownMissingAudio": [
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/overgrown-base.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/wind-soft.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/wind-soft.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/overgrown-base.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/overgrown-base.mp3",
+    "Optional audio unavailable; using silence/fallback: sfx/ambience/wind-soft.mp3"
+  ],
+  "passed": true
+}

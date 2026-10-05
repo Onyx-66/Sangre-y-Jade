@@ -1,0 +1,139 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools\\v16-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v16\\tank-contact.png",
+  "items": [
+    {
+      "file": "frames/support-tank-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-tank-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.21415607985480944,
+      "anchor": "bottom",
+      "keyFringe": 1
+    }
+  ]
+}

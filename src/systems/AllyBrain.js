@@ -88,23 +88,43 @@ export class AllyBrain {
       const failsafe=skill.failsafe&&scene.elapsed-this.readySince.get(skill.id)>=ALLY_RULES.failsafe_seconds
         &&Boolean(dangerousEnemy(scene.enemies.getChildren(),scene.player,ALLY_RULES.failsafe_enemy_range));
       if((!normal&&!failsafe)||handler.canCast?.(scene,this.support,skill,target,{failsafe})===false)continue;
-      if(this.cast(skill,target,handler))return true;
+      if(this.cast(skill,target,handler,{failsafe}))return true;
     }
     scene.hud?.setAlly?.(ally);
     return false;
   }
 
-  cast(skill,target,handler=ALLY_ACTIVE_HANDLERS[skill.id]) {
+  cast(skill,target,handler=ALLY_ACTIVE_HANDLERS[skill.id],options={}) {
     const scene=this.scene,ally=scene.companion;
     if(scene.pausedForChoice||scene.ended||scene.elapsed-this.lastCast<ALLY_RULES.global_gap_seconds||!handler)return false;
+    if(this.support.visuals?.enabled){
+      if(this.support.visuals.busy)return false;
+      // Reserve the existing cooldown/gap at windup. All gameplay effects run
+      // on the first strike frame; a failed cast releases its reservation.
+      const previousLast=this.lastCast;
+      this.lastCast=scene.elapsed;skill.remaining=skill.cooldown;
+      return this.support.visuals.begin('cast',()=>{
+        if(scene.ended||scene.pausedForChoice)return false;
+        if(handler.canCast?.(scene,this.support,skill,target,options)===false||handler.cast(scene,this.support,skill,target)!==true){skill.remaining=0;this.lastCast=previousLast;return false;}
+        skill.remaining=Math.max(0,skill.remaining-Math.max(0,skill.cooldownRefund||0));skill.cooldownRefund=0;
+        this.castFeedback(skill,ally);return true;
+      },target);
+    }
     if(handler.cast(scene,this.support,skill,target)!==true)return false;
     skill.remaining=Math.max(0,skill.cooldown-Math.max(0,skill.cooldownRefund||0));
     skill.cooldownRefund=0;
     this.readySince.delete(skill.id);this.lastCast=scene.elapsed;
+    scene.animateCharacter?.(ally.sprite,`support-${ally.id}`,'attack',.32);
+    this.castFeedback(skill,ally);
+    return true;
+  }
+
+  castFeedback(skill,ally) {
+    const scene=this.scene;
+    this.readySince.delete(skill.id);
     this.casts[skill.id]=(this.casts[skill.id]||0)+1;
     scene.skillAudio?.ui?.('ally-cast');
     if(typeof window!=='undefined'&&runtimeDebugEnabled())window.__allyCasts=this.casts;
-    scene.animateCharacter?.(ally.sprite,`support-${ally.id}`,'attack',.32);
     this.popIcon(skill,ally);
     scene.hud?.setAlly?.(ally);
     return true;
@@ -112,6 +132,7 @@ export class AllyBrain {
 
   popIcon(skill,ally) {
     const scene=this.scene;
+    if(this.support.visuals?.enabled)this.support.visuals.effect('ally-skill-pop',{x:ally.sprite.x,y:ally.sprite.y-48});
     if(!scene.add?.image)return;
     const icon=scene.add.image(ally.sprite.x,ally.sprite.y-48,`skill-icon-${skill.id}`).setDepth(22).setDisplaySize(28,28);
     if(scene.tweens?.add)scene.tweens.add({targets:icon,y:icon.y-26,alpha:0,duration:600,onComplete:()=>icon.destroy()});

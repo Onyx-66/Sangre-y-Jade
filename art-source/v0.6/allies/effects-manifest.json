@@ -1,0 +1,59 @@
+{
+  "expectedCount": 8,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools\\v16-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v16\\effects-contact.png",
+  "items": [
+    {
+      "file": "fx/saintess-heal-pulse/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/saintess-cast-glow/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/tank-bash-arc/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/tank-slam-ring/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/assassin-slash-x/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/assassin-afterimage/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/assassin-blink-puff/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    },
+    {
+      "file": "fx/ally-skill-pop/main.png",
+      "width": 256,
+      "height": 256,
+      "keyFringe": 1
+    }
+  ]
+}

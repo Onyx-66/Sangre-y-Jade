@@ -3,6 +3,8 @@ import { ALLY_CATALOG, ALLY_RULES } from '../data/allyCatalog.js';
 import { ALLY_PASSIVE_HANDLERS } from '../skills/allies/index.js';
 import { t } from '../i18n/index.js';
 import { AllyBrain } from './AllyBrain.js';
+import { AllyVisuals } from '../art/allyVisuals.js';
+import '../fx/recipes/allies.js';
 
 const pointSegmentDistance=(p,a,b)=>{
  const dx=b.x-a.x,dy=b.y-a.y,length=dx*dx+dy*dy;
@@ -20,7 +22,7 @@ function segmentsWithin(a,b,c,d,radius){
 }
 
 export class SupportSystem {
- constructor(scene){this.scene=scene;this.traps=[];this.effects={};this.origins={};this.wall=null;this.lastStealthAt=-Infinity;this.stealthDamageUntil=0;this.brain=new AllyBrain(scene,this);}
+ constructor(scene){this.scene=scene;this.traps=[];this.effects={};this.origins={};this.wall=null;this.lastStealthAt=-Infinity;this.stealthDamageUntil=0;this.visuals=new AllyVisuals(scene);this.brain=new AllyBrain(scene,this);}
  summon(id,heroLevel=ALLY_RULES.join_level){
   const s=this.scene,data=SUPPORTS[id];if(s.companion||!data)return null;
   const sprite=s.add.sprite(s.player.x-75,s.player.y+40,`support-${id}`).setScale(.62).setDepth(19);
@@ -95,6 +97,9 @@ export class SupportSystem {
  }
  update(dt){
   const s=this.scene,a=s.companion;if(!a)return;
+  if(s.ended){this.visuals.destroy();return;}
+  if(s.pausedForChoice||s.scene?.isPaused?.())return;
+  this.visuals.update(dt);
   const target=dangerousEnemy(s.enemies.getChildren(),s.player),p=this.numberMultiplier();
   a.target=target;
   let x=s.player.x-s.lastMove.x*90,y=s.player.y-s.lastMove.y*90;
@@ -103,13 +108,13 @@ export class SupportSystem {
   const dx=x-a.sprite.x,dy=y-a.sprite.y,d=Math.hypot(dx,dy);
   if(d>900)a.sprite.setPosition(x,y);
   else if(d>10){const step=Math.min(d,s.stats.speed*(a.id==='assassin'?1.6:1.2)*dt);a.sprite.x+=dx/d*step;a.sprite.y+=dy/d*step;}
-  a.sprite.setFlipX(dx<0);s.animateCharacter(a.sprite,`support-${a.id}`,d>10?'walk':'idle');
+  if(!this.visuals.busy){a.sprite.setFlipX(dx<0);s.animateCharacter(a.sprite,`support-${a.id}`,d>10?'walk':'idle');}
   for(const k of a.skills)if(k.skillKind!=='passive')k.remaining=Math.max(0,k.remaining-dt);
   a.shot-=dt;
   // The healer never attacks. Tank and Assassin have modest class basic attacks.
-  if(a.id!=='saintess'&&target&&a.shot<=0&&Math.hypot(target.x-a.sprite.x,target.y-a.sprite.y)<160){
-   s.damageEnemy(target,(a.id==='assassin'?12:7)*p,0,0,a.sprite,{byAlly:true});s.playEffect(0,target.x,target.y,55);
-   s.animateCharacter(a.sprite,`support-${a.id}`,'attack',.28);
+  if(a.id!=='saintess'&&target&&a.shot<=0&&!this.visuals.busy&&Math.hypot(target.x-a.sprite.x,target.y-a.sprite.y)<160){
+   this.visuals.begin('attack',()=>{if(!target.active)return false;s.damageEnemy(target,(a.id==='assassin'?12:7)*p,0,0,a.sprite,{byAlly:true});s.playEffect(0,target.x,target.y,55);return true;},target);
+   if(!this.visuals.enabled)s.animateCharacter(a.sprite,`support-${a.id}`,'attack',.28);
    const speed=s.passives?.modifiers({ally:a}).allyAttackSpeedMult||1;
    a.shot=1.2/speed;
   }

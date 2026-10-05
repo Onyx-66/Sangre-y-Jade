@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="data:,"><title>V16 ally preview — dev only</title>
+<style>body{background:#252127;color:#e9dcc3;font:16px system-ui;margin:16px}.states{display:flex;gap:8px;flex-wrap:wrap}figure{margin:0;background:#171d24;text-align:center;padding:8px}img{width:128px;height:128px;image-rendering:pixelated}button,select{min-height:44px;background:#233c3d;color:#ffcf4a}canvas{max-width:100%}</style></head>
+<body><h1>Ally animation and effects preview</h1><p>Development only. Seven states per ally; candidate art via ?candidate=1.</p><button id="motion">Pause / play</button><div id="actors"></div><h2>Effect</h2><select id="effect-id"></select> <button id="replay">Replay</button><div id="effect"></div>
+<script type="module">
+import Phaser from 'phaser';
+import {ALLY_IDS,ALLY_EFFECT_IDS} from '../src/art/allyVisuals.js';
+import {ENEMY_ANIMATIONS} from '../src/art/enemyVisuals.js';
+import {FxDirector} from '../src/fx/FxDirector.js';
+import '../src/fx/recipes/allies.js';
+const base=new URLSearchParams(location.search).has('candidate')?'../.tools/v16-candidate/pixel/':'../assets/pixel/';
+const loaded=new Map(),elements=[];let paused=false,time=0,last=performance.now();
+await Promise.all(ALLY_IDS.flatMap(id=>Array.from({length:16},async(_,n)=>{const image=new Image();image.src=`${base}frames/support-${id}-${n}.png`;await image.decode();loaded.set(`${id}-${n}`,image.src);} )));
+for(const id of ALLY_IDS){const section=document.createElement('section'),title=document.createElement('h2'),row=document.createElement('div');title.textContent=id;row.className='states';section.append(title,row);
+ for(const [state,animation]of Object.entries(ENEMY_ANIMATIONS)){const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');image.alt=`${id} ${state}`;image.src=loaded.get(`${id}-${animation.frames[0]}`);caption.textContent=state;figure.append(image,caption);row.append(figure);elements.push({id,animation,image});}document.querySelector('#actors').append(section);}
+document.querySelector('#motion').onclick=()=>paused=!paused;
+function animate(now){if(!paused)time+=(now-last)/1000;last=now;for(const {id,animation,image}of elements)image.src=loaded.get(`${id}-${animation.frames[Math.floor(time*animation.rate)%animation.frames.length]}`);requestAnimationFrame(animate);}requestAnimationFrame(animate);
+const select=document.querySelector('#effect-id');for(const id of ALLY_EFFECT_IDS){const option=document.createElement('option');option.value=id;option.textContent=id;select.append(option);}
+class Preview extends Phaser.Scene{
+ preload(){for(const id of ALLY_EFFECT_IDS)this.load.image(`fx-still-${id}-main`,`${base}fx/${id}/main.png`);}
+ create(){this.fx=new FxDirector(this);this.settings={reducedMotion:false};this.replay();select.onchange=()=>this.replay();document.querySelector('#replay').onclick=()=>this.replay();window.__allyPreview={ready:true,frames:loaded.size,scene:this,effects:ALLY_EFFECT_IDS};}
+ replay(){this.fx.destroy();this.fx.play(select.value,'cast',{x:300,y:150,size:170,sound:false});}
+}
+new Phaser.Game({type:Phaser.AUTO,width:600,height:300,parent:'effect',backgroundColor:'#171d24',pixelArt:true,audio:{noAudio:true},scene:Preview});
+</script></body></html>

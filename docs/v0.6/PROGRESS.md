@@ -487,3 +487,15 @@ Status: art and integration complete; verification caveats below.
 - 600-frame full-kit desktop sample at 4× CPU throttle: actual frame mean **21.19ms (~47.2 FPS)**, p95 **27.40ms**; update CPU p95 **4.20ms**. **62 active / 67 allocated** props, below 350.
 
 Open issues: the image tool cannot verify requested Flare model routing; the pre-existing localization audit remains; this short headless performance sample is not sustained 60FPS or mobile certification. No unrelated work was included.
+
+## V16 — Ally animation and effects — 2026-10-05
+
+Status: presentation implemented; known verification caveats below.
+
+- Generated and inspected 48 ally frames and 8 effect stills. Preserved all original 0–3 frames in source backups; verified candidates in-game before promotion. Added sources/manifests, contact sheets, per-file asset log and `tools/ally-preview.html`. Rejected the first painterly effect sheet and corrected the retry's empty gutters.
+- Registered seven animation states with legacy four-frame fallback. Ally windup/strike/recovery now gates actual damage/casts at frame 8, with shadows, trails, impact effects, skill-pop ring and future ally audio IDs falling back to existing sounds. No skill definition, damage/rank number, movement or targeting rule changed; no audio files touched.
+- Fixed the early basic-attack path running before the choice/end guard. Pending actions now freeze on choice pause and cancel on shutdown/end; failed skill casts release their reserved cooldown/global gap.
+- Targeted ally suite: **45/45 pass**. Final `npm run check`: **602/603 pass**, sole pre-existing French audit failure (`MANA`, `Cacao`). Production build passes separately, with the existing large-chunk advisory.
+- Candidate and promoted real-Phaser audits each complete **600 simulated seconds per ally**; all **18/18 active skills** cast, all seven state keys render, and effects peak at **10/12/11 of 24** for Saintess/Tank/Assassin. Tank's 487 basic hits all deal 7 on frame 8; Assassin's 612 all deal 12 on frame 8. Zero browser/HTTP errors or missing stills. See `ART_QA_V16.md` and `previews/v16/runtime/report.json`.
+
+Open issues: strict zero-warning gate remains unmet for pre-existing optional Overgrown ambience files (`overgrown-base`, `wind-soft`, and `rain-light` if rain occurs). Requested Flare routing is unexposed. No mobile FPS or audible-playback certification; no invented ally death mechanic. Unrelated dirty work and localization failure are preserved.

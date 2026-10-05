@@ -8,7 +8,7 @@ export function buildTextures(scene) {
   for(const [kind,names] of Object.entries({...CHARACTER_ROWS,hero:[...CHARACTER_ROWS.hero,...CHARACTER_ROWS.hero.flatMap(name=>[`${name}-up`,`${name}-down`])] })) for(const name of names) {
     const key=`${kind}-${name}`;
     if(!scene.textures.exists(key))continue;
-    const states=(kind==='enemy'||kind==='boss')&&scene.textures.exists(`${key}-frame-15`)
+    const states=(kind==='enemy'||kind==='boss'||kind==='support')&&scene.textures.exists(`${key}-frame-15`)
       ?Object.entries(ENEMY_ANIMATIONS).map(([state,{frames,rate,repeat}])=>[state,frames,rate,repeat])
       :[['idle',[0,0,1,0],3,-1],['walk',[0,1,0,1],8,-1],['attack',[2,2,0],12,0],['hurt',[3,3,0],12,0]];
     for(const [state,frames,rate,repeat] of states) {

@@ -1,0 +1,139 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools\\v16-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v16\\saintess-contact.png",
+  "items": [
+    {
+      "file": "frames/support-saintess-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-saintess-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.22562141491395793,
+      "anchor": "bottom",
+      "keyFringe": 1
+    }
+  ]
+}

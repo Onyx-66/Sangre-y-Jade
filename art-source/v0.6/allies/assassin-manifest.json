@@ -1,0 +1,139 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools\\v16-candidate\\pixel",
+  "contactSheet": "docs\\v0.6\\previews\\v16\\assassin-contact.png",
+  "items": [
+    {
+      "file": "frames/support-assassin-0.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-1.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-2.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-3.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-4.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-5.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-6.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-7.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-8.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-9.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-10.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-11.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-12.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-13.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-14.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    },
+    {
+      "file": "frames/support-assassin-15.png",
+      "width": 128,
+      "height": 128,
+      "spriteScale": 0.2114695340501792,
+      "anchor": "bottom",
+      "keyFringe": 1
+    }
+  ]
+}
