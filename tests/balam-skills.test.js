@@ -27,7 +27,7 @@ test('Balam definitions, names, copy and paths come from JSON; only his 16 activ
  for(const source of [...db.heroes.balam,...db.shared]){
   const skill=def(source.id);assert.equal(skill.name,source.name);assert.equal(skill.description,source.desc);assert.equal(skill.iconFile,source.icon_file);
   assert.deepEqual(skillMessages.findLast(row=>row[0]===source.name),[source.name,source.fr,source.ar]);
-  assert.deepEqual(skillMessages.findLast(row=>row[0]===source.desc),[source.desc,source.desc,source.desc]);
+  const copy=skillMessages.findLast(row=>row[0]===source.desc);assert.ok(copy?.slice(1).every(text=>text&&text!==source.desc));
   if(skill.kind==='active'){assert.equal(skill.cooldown,source.cd);assert.equal(skill.mana,source.mana);assert.equal(typeof ACTIVE_HANDLERS[skill.id],'function');}
   else {assert.deepEqual(skill.values,(source.vals.match(/\d+(?:\.\d+)?/g)||[]).map(Number).slice(0,5));assert.ok(PASSIVE_HANDLERS[skill.id]);}
  }

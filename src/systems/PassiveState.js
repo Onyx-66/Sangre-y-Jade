@@ -1,4 +1,5 @@
 import { SHARED_DEFINITIONS } from '../skills/generated/balam.js';
+import { t } from '../i18n/index.js';
 const clamp = (value, max = 1) => Math.max(0, Math.min(max, Number(value) || 0));
 export const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
@@ -12,7 +13,7 @@ export function passiveStateMarkup(state) {
   if (state.type === 'timer') {
     const remaining = Math.max(0, Number(state.remaining) || 0), duration = Math.max(1, Number(state.duration) || 1);
     const ready = state.ready ?? remaining === 0;
-    return `<span class="passive-timer ${ready ? 'is-ready' : ''}" style="--remaining:${ready ? 0 : clamp(remaining / duration) * 360}deg" aria-label="${escapeHtml(state.label || (ready ? 'Ready' : `${Math.ceil(remaining)}s`))}"></span>`;
+    return `<span class="passive-timer ${ready ? 'is-ready' : ''}" style="--remaining:${ready ? 0 : clamp(remaining / duration) * 360}deg" aria-label="${escapeHtml(state.label ? t(state.label) : ready ? t('Ready') : t('{n}s',{n:Math.ceil(remaining)}))}"></span>`;
   }
   if (state.type === 'stacks') {
     const max = Math.max(1, Math.min(12, Math.floor(Number(state.max) || 5))), value = clamp(Math.floor(Number(state.value) || 0), max);
@@ -35,7 +36,7 @@ export const INNATE_HUD = SHARED_DEFINITIONS.map(skill=>({...skill,art:skill.art
 export function passiveStateText(state) {
   if(!state)return '';
   if(state.type==='counter'||state.type==='stacks')return `${state.value}/${state.max}`;
-  if(state.type==='timer')return `${Math.ceil(state.remaining||0)}s`;
-  if(state.type==='bonus')return `+${state.healPerGem} HP · +${state.pickupRangePct}%`;
+  if(state.type==='timer')return (state.ready??state.remaining===0)?t('Ready'):t('{n}s',{n:Math.ceil(state.remaining||0)});
+  if(state.type==='bonus')return t('+{hp} HP · +{range}% pickup range',{hp:state.healPerGem,range:state.pickupRangePct});
   return '';
 }

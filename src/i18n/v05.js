@@ -1,3 +1,4 @@
+// TODO native review: all French and Arabic strings in this table.
 export const v05Messages=[
  ['VERSION 0.5','VERSION 0.5','الإصدار 0.5'],
  ['Move with WASD/arrow keys or the left joystick. Cast with Q/E/R/T. Dash with Space. In manual mode, hold F, click the arena, or hold Attack. Esc pauses.','Déplacez-vous avec WASD, les flèches ou le joystick. Compétences : Q/E/R/T. Esquive : Espace. En mode manuel, maintenez F, le clic ou Attaquer. Échap : pause.','تحرك بأزرار WASD أو الأسهم أو عصا التحكم. المهارات: Q/E/R/T. الاندفاع: المسافة. للهجوم اليدوي اضغط مطولا على F أو الساحة أو زر الهجوم. Esc للإيقاف المؤقت.'],

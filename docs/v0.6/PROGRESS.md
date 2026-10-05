@@ -508,3 +508,13 @@ Open issues: strict zero-warning gate remains unmet for pre-existing optional Ov
 - Final `npm run check`: **614/615 pass**, sole pre-existing French `MANA`/`Cacao` audit failure. Production build passes separately (existing chunk-size advisory). `audio:check` passes ID/budget validation; runtime content missing **P0 264 / P1 85 / P2 112**, size **0 / 45 MB**. Downloads contains 91 MP3s / **2.03 MB**, inspected but not copied under the explicit no-audio-write instruction.
 
 Open issues: developer placement of audio files, typo/unmapped-file review, final listening/Android checks and authored Ah Puch section offsets. Full details and conservative decisions are documented; unrelated edits remain outside the V17 commit.
+
+## V18 — Release localization — 2026-10-06
+
+- Completed and registered EN/FR/AR release copy, including enemy/map/weather labels, settings/editor/Replace/Skills/ally copy and twelve loading tips. Included the existing skill translations, localized passive state and deterministic translation generator. FR/AR tables are marked `// TODO native review`; obsolete generic skill descriptions no longer reach the UI.
+- Fixed localized panel width, scrolling ally headings, replacement card text bounds, results-footer clipping, Arabic label fonts and choice/settings overlay direction. HUD coordinates, Western numerals and key letters remain LTR. Corrected the obsolete Heroes help text to the actual slot rules.
+- `npm run test:i18n`: **8/8 pass**, **726 dictionary / 168 runtime keys**, zero untranslated keys; negative tests demonstrate that missing/English-copy/placeholder failures are rejected. Fixed the previous false failure for the genuine French cognates `MANA` and `Cacao`.
+- `npm run check`: **618/618 tests pass**, production build passes (existing large-chunk advisory). `npm run test:i18n:browser`: **222 captures pass**, EN/FR/AR at **568×320 and 1280×720**, zero browser console errors; Arabic screenshots visually reviewed. Intentional scrolling retains readable text and reachable controls.
+- See `I18N_REPORT_V18.md` and `previews/v18/report.json` for coverage and evidence. No art/audio files, dependencies or gameplay numbers changed; unrelated dirty work was kept outside this commit.
+
+Open issues: native proofreading and Android rendering review; pre-existing incomplete seven-tab Settings implementation and legacy Ixchel skill pool. The browser matrix uses the current checkout's earlier uncommitted UI prerequisites; this task does not absorb or implement those unrelated features.

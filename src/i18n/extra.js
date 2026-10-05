@@ -1,3 +1,4 @@
+// TODO native review: all French and Arabic strings in this table.
 export const extraMessages=[
 ['VERSION 0.4','VERSION 0.4','الإصدار 0.4'],
 ['Continue','Continuer','متابعة'],['Ready to Play','Prêt à jouer','جاهز للعب'],['Choose where you will fight.','Choisissez votre terrain de combat.','اختر ساحة القتال.'],['Choose how long you want to survive.','Choisissez la durée de votre partie.','اختر مدة الجولة.'],['Choose your attack controls, then start your run.','Choisissez vos commandes d’attaque, puis lancez la partie.','اختر نمط الهجوم ثم ابدأ الجولة.'],['STAMINA','ENDURANCE','التحمل'],['Stamina','Endurance','التحمل'],['min','min','دقيقة'],['Narration: English male voice','Narration : voix masculine anglaise','السرد: صوت رجل بالإنجليزية'],

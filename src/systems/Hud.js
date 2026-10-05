@@ -35,7 +35,7 @@ export class Hud {
       </div>
       <div class="boss-wrap" hidden><div class="boss-name"></div><div class="boss-bar"><span></span></div></div>
       <div class="joystick" aria-label="Movement joystick"><div class="joystick-knob"></div></div>
-      <div class="xp-dock"><div class="xp-heading">${interfaceIcon('xp')}<b data-level>Level 1</b></div><div class="bar xp"><span></span><label>0 / 20 XP</label></div></div>
+      <div class="xp-dock"><div class="xp-heading">${interfaceIcon('xp')}<b data-level>${t('Level {n}',{n:1})}</b></div><div class="bar xp"><span></span><label>0 / 20 ${t('XP')}</label></div></div>
       <button id="auto-indicator" type="button" data-hud-tip></button>
       <div class="ally-panel" aria-label="${t('Ally')}"><div class="ally-lock" data-ally-lock>${interfaceIcon('lock')}<b data-ally-level></b></div><button class="ally-portrait" data-support disabled aria-label="Support Loadout"></button><div class="ally-skills">${Array.from({length:3},(_,i)=>`<span class="ally-skill empty" data-ally-skill="${i}"><span class="skill-icon"></span><span class="ally-cooldown"></span></span>`).join('')}</div><img class="ally-rank-badge" data-ally-rank hidden alt=""><small class="ally-name"></small></div>
       <div class="skill-dock">
@@ -244,7 +244,7 @@ export class Hud {
     this.manaLabel.textContent = `${Math.floor(state.mana)} / ${state.maxMana} ${t('MANA')}`;
     this.xpFill.style.width = `${xp * 100}%`;
     this.levelLabel.textContent = t('LEVEL {n}',{n:state.level});
-    this.xpLabel.textContent = `${Math.floor(state.xp)} / ${state.nextXp} XP`;
+    this.xpLabel.textContent = `${Math.floor(state.xp)} / ${state.nextXp} ${t('XP')}`;
     this.staminaFill.style.width=`${clamp(state.stamina??1,0,1)*100}%`;
     this.staminaLabel.textContent=`${t('STAMINA')} ${Math.round((state.stamina??1)*100)}%`;
     const left = Math.max(0, Math.ceil(state.duration - state.elapsed));
@@ -265,7 +265,7 @@ export class Hud {
       button.querySelector('.skill-icon').innerHTML = skill ? iconMarkup(skill) : '＋';
       button.querySelector('.slot-level').textContent=button.disabled?t('Lv {n}',{n:20}):'';
       button.setAttribute('aria-label', button.disabled?t('Unlocks at level {n}',{n:20}):t(skill ? `${skill.name}, level ${skill.level}` : `Empty skill slot ${index + 1}`));
-      button.title = t(skill ? `${skill.name} · Lv ${skill.level}\n${skillDescription(skill)}` : 'Choose a skill when you level up');
+      button.title = skill ? `${t('{name} · Lv {n}',{name:t(skill.name),n:skill.level})}\n${t(skillDescription(skill))}` : t('Choose a skill when you level up');
     });
   }
 
@@ -309,6 +309,8 @@ export class Hud {
   showChoice(title, cards, onChoose, subtitle = 'Choose an upgrade.', secondary=null, presentation={}) {
     const overlay = document.createElement('div');
     overlay.className = 'modal-backdrop';
+    // Menus mirror independently from the physical, always-LTR HUD below.
+    overlay.dir=getLanguage()==='ar'?'rtl':'ltr';
     if(presentation.className)overlay.classList.add(presentation.className);
     if(presentation.stage)overlay.dataset.stage=presentation.stage;
     overlay.innerHTML = `
@@ -381,6 +383,7 @@ export class Hud {
 
   showSettings(onChange,onBack) {
     const overlay=document.createElement('div');overlay.className='modal-backdrop pause-settings';
+    overlay.dir=getLanguage()==='ar'?'rtl':'ltr';
     overlay.innerHTML='<section class="modal settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title"></section>';
     renderSettingsPanel(overlay.querySelector('.settings-panel'),this.settings,{
       onChange,onClose:()=>{overlay.remove();onBack();},closeLabel:'Back',onSound:id=>this.callbacks.settingsSound?.(id),

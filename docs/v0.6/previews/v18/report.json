@@ -1,0 +1,3977 @@
+{
+  "results": [
+    {
+      "file": "en-568x320-menu.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-hero.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choose Your Hero",
+          "y": 8,
+          "height": 51.796875,
+          "scrollTop": 0,
+          "scrollHeight": 38,
+          "clientHeight": 38
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-map.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choose a Map",
+          "y": 8,
+          "height": 51.796875,
+          "scrollTop": 0,
+          "scrollHeight": 38,
+          "clientHeight": 38
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-mode.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Game Mode",
+          "y": 51,
+          "height": 24.296875,
+          "scrollTop": 0,
+          "scrollHeight": 24,
+          "clientHeight": 24
+        },
+        {
+          "class": "card-grid wizard-modes",
+          "y": 104.1875,
+          "height": 149.8125,
+          "scrollTop": 0,
+          "scrollHeight": 150,
+          "clientHeight": 150
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-ready.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Ready to Play",
+          "y": 51,
+          "height": 24.296875,
+          "scrollTop": 0,
+          "scrollHeight": 24,
+          "clientHeight": 24
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-upgrades.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Upgrades",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-shop.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Shop",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-help-heroes.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-help-ritual.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-help-accessibility.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-settings-audio.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-settings-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-loading.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-loading-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-ally-panel-tooltip.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-unlock-passive.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-unlock-active.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-pause.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Paused",
+          "y": 21,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-pause-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal settings-panel",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 25,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-skills.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Skills",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.578125,
+          "height": 151.421875,
+          "scrollTop": 0,
+          "scrollHeight": 347,
+          "clientHeight": 151
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-pause-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 44.015625,
+          "height": 231.953125,
+          "scrollTop": 0,
+          "scrollHeight": 226,
+          "clientHeight": 226
+        },
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 61.015625,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-ally.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Choose Your Companion",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.578125,
+          "height": 201.421875,
+          "scrollTop": 3,
+          "scrollHeight": 274,
+          "clientHeight": 201
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-level-up.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 27.578125,
+          "height": 264.84375,
+          "scrollTop": 0,
+          "scrollHeight": 259,
+          "clientHeight": 259
+        },
+        {
+          "class": "",
+          "text": "Level 2",
+          "y": 40.578125,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 101.15625,
+          "height": 136.265625,
+          "scrollTop": 0,
+          "scrollHeight": 136,
+          "clientHeight": 136
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-boss-reward.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 27.578125,
+          "height": 264.84375,
+          "scrollTop": 0,
+          "scrollHeight": 259,
+          "clientHeight": 259
+        },
+        {
+          "class": "",
+          "text": "Boss Defeated",
+          "y": 40.578125,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 101.15625,
+          "height": 136.265625,
+          "scrollTop": 0,
+          "scrollHeight": 136,
+          "clientHeight": 136
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-replace-remove.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Choose a skill to remove",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 227,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-replace-new.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 14.078125,
+          "height": 291.84375,
+          "scrollTop": 0,
+          "scrollHeight": 286,
+          "clientHeight": 286
+        },
+        {
+          "class": "",
+          "text": "Choose a replacement",
+          "y": 27.078125,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 85.65625,
+          "height": 166.265625,
+          "scrollTop": 0,
+          "scrollHeight": 166,
+          "clientHeight": 166
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-replace-confirm.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Confirm replacement",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 174,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-hud-editor.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Customize HUD",
+          "y": 64,
+          "height": 27,
+          "scrollTop": 0,
+          "scrollHeight": 27,
+          "clientHeight": 27
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-hud-export.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Customize HUD",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-hud-import-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Customize HUD",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-boss-entry.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-boss-bar.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-568x320-defeat.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Game Over",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-568x320-victory.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Victory!",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-menu.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-hero.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choisissez votre héros",
+          "y": 8,
+          "height": 51.796875,
+          "scrollTop": 0,
+          "scrollHeight": 38,
+          "clientHeight": 38
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-map.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choisissez une carte",
+          "y": 8,
+          "height": 51.796875,
+          "scrollTop": 0,
+          "scrollHeight": 38,
+          "clientHeight": 38
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-mode.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Mode de jeu",
+          "y": 51,
+          "height": 24.296875,
+          "scrollTop": 0,
+          "scrollHeight": 24,
+          "clientHeight": 24
+        },
+        {
+          "class": "card-grid wizard-modes",
+          "y": 104.1875,
+          "height": 149.8125,
+          "scrollTop": 0,
+          "scrollHeight": 150,
+          "clientHeight": 150
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-ready.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Prêt à jouer",
+          "y": 51,
+          "height": 24.296875,
+          "scrollTop": 0,
+          "scrollHeight": 24,
+          "clientHeight": 24
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-upgrades.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Améliorations",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-shop.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Boutique",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-help-heroes.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-help-ritual.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-help-accessibility.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Options",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-settings-audio.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Options",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-settings-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Options",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-loading.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-loading-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-ally-panel-tooltip.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-unlock-passive.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-unlock-active.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-pause.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Pause",
+          "y": 21,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-pause-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal settings-panel",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Options",
+          "y": 25,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-skills.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Compétences",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.578125,
+          "height": 151.421875,
+          "scrollTop": 0,
+          "scrollHeight": 391,
+          "clientHeight": 151
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-pause-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 44.015625,
+          "height": 231.953125,
+          "scrollTop": 0,
+          "scrollHeight": 226,
+          "clientHeight": 226
+        },
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 61.015625,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-ally.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Choisissez votre compagnon",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.578125,
+          "height": 201.421875,
+          "scrollTop": 3,
+          "scrollHeight": 293,
+          "clientHeight": 201
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-level-up.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 18.125,
+          "height": 283.734375,
+          "scrollTop": 0,
+          "scrollHeight": 278,
+          "clientHeight": 278
+        },
+        {
+          "class": "",
+          "text": "Niveau 2",
+          "y": 31.125,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.703125,
+          "height": 155.15625,
+          "scrollTop": 0,
+          "scrollHeight": 155,
+          "clientHeight": 155
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-boss-reward.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 18.125,
+          "height": 283.734375,
+          "scrollTop": 0,
+          "scrollHeight": 278,
+          "clientHeight": 278
+        },
+        {
+          "class": "",
+          "text": "Boss vaincu",
+          "y": 31.125,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.703125,
+          "height": 155.15625,
+          "scrollTop": 0,
+          "scrollHeight": 155,
+          "clientHeight": 155
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-replace-remove.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Choisissez la compétence à retirer",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 249,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-replace-new.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Choisissez une nouvelle compétence",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 174,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-replace-confirm.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Confirmer le remplacement",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 174,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-hud-editor.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Personnaliser l’interface",
+          "y": 64,
+          "height": 27,
+          "scrollTop": 0,
+          "scrollHeight": 27,
+          "clientHeight": 27
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-hud-export.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Personnaliser l’interface",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-hud-import-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Personnaliser l’interface",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-boss-entry.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-boss-bar.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-568x320-defeat.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Défaite",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "fr-568x320-victory.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "Victoire !",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-menu.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-hero.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "اختر بطلك",
+          "y": 8,
+          "height": 44,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-map.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "اختر الخريطة",
+          "y": 8,
+          "height": 44,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-mode.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "نمط اللعب",
+          "y": 51,
+          "height": 24.296875,
+          "scrollTop": 0,
+          "scrollHeight": 24,
+          "clientHeight": 24
+        },
+        {
+          "class": "card-grid wizard-modes",
+          "y": 104.1875,
+          "height": 148.21875,
+          "scrollTop": 0,
+          "scrollHeight": 148,
+          "clientHeight": 148
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-ready.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "جاهز للعب",
+          "y": 51,
+          "height": 24.296875,
+          "scrollTop": 0,
+          "scrollHeight": 24,
+          "clientHeight": 24
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-upgrades.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الترقيات",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-shop.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "المتجر",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-help.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 71,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-help-heroes.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-help-ritual.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-help-accessibility.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": -148,
+          "height": 43.1875,
+          "scrollTop": 0,
+          "scrollHeight": 43,
+          "clientHeight": 43
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-settings.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-settings-audio.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-settings-hud.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 67,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-loading.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-loading-error.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-ally-panel-tooltip.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-unlock-passive.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-unlock-active.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-pause.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "إيقاف مؤقت",
+          "y": 21,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-pause-settings.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal settings-panel",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 25,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-skills.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "المهارات",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.578125,
+          "height": 151.421875,
+          "scrollTop": 0,
+          "scrollHeight": 372,
+          "clientHeight": 151
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-pause-help.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 44.015625,
+          "height": 231.953125,
+          "scrollTop": 0,
+          "scrollHeight": 226,
+          "clientHeight": 226
+        },
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 61.015625,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-ally.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "اختر رفيقك",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 91.578125,
+          "height": 201.421875,
+          "scrollTop": 3,
+          "scrollHeight": 255,
+          "clientHeight": 201
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-level-up.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 37.015625,
+          "height": 245.953125,
+          "scrollTop": 0,
+          "scrollHeight": 240,
+          "clientHeight": 240
+        },
+        {
+          "class": "",
+          "text": "المستوى 2",
+          "y": 50.015625,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 110.59375,
+          "height": 117.375,
+          "scrollTop": 0,
+          "scrollHeight": 117,
+          "clientHeight": 117
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-boss-reward.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 37.015625,
+          "height": 245.953125,
+          "scrollTop": 0,
+          "scrollHeight": 240,
+          "clientHeight": 240
+        },
+        {
+          "class": "",
+          "text": "هُزم الزعيم",
+          "y": 50.015625,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 110.59375,
+          "height": 117.375,
+          "scrollTop": 0,
+          "scrollHeight": 117,
+          "clientHeight": 117
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-replace-remove.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "اختر المهارة التي ستزيلها",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 270,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-replace-new.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 14.078125,
+          "height": 291.84375,
+          "scrollTop": 0,
+          "scrollHeight": 286,
+          "clientHeight": 286
+        },
+        {
+          "class": "",
+          "text": "اختر المهارة الجديدة",
+          "y": 27.078125,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 85.65625,
+          "height": 166.265625,
+          "scrollTop": 0,
+          "scrollHeight": 166,
+          "clientHeight": 166
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-replace-confirm.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "تأكيد الاستبدال",
+          "y": 23,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        },
+        {
+          "class": "card-grid",
+          "y": 81.578125,
+          "height": 174.421875,
+          "scrollTop": 0,
+          "scrollHeight": 174,
+          "clientHeight": 174
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-hud-editor.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "تخصيص الواجهة",
+          "y": 64,
+          "height": 27,
+          "scrollTop": 0,
+          "scrollHeight": 27,
+          "clientHeight": 27
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-hud-export.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "تخصيص الواجهة",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-hud-import-error.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "تخصيص الواجهة",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-boss-entry.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-boss-bar.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-568x320-defeat.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "انتهت اللعبة",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "ar-568x320-victory.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 10,
+          "height": 300,
+          "scrollTop": 0,
+          "scrollHeight": 294,
+          "clientHeight": 294
+        },
+        {
+          "class": "",
+          "text": "انتصار!",
+          "y": 27,
+          "height": 29.6875,
+          "scrollTop": 0,
+          "scrollHeight": 30,
+          "clientHeight": 30
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-menu.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-hero.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choose Your Hero",
+          "y": 16,
+          "height": 76.59375,
+          "scrollTop": 0,
+          "scrollHeight": 49,
+          "clientHeight": 49
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-map.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choose a Map",
+          "y": 16,
+          "height": 76.59375,
+          "scrollTop": 0,
+          "scrollHeight": 49,
+          "clientHeight": 49
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-mode.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Game Mode",
+          "y": 74.390625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid wizard-modes",
+          "y": 189.875,
+          "height": 400,
+          "scrollTop": 0,
+          "scrollHeight": 400,
+          "clientHeight": 400
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-ready.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Ready to Play",
+          "y": 74.390625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-upgrades.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Upgrades",
+          "y": 176.328125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-shop.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Shop",
+          "y": 78,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-help-heroes.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-help-ritual.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-help-accessibility.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-settings-audio.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-settings-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-loading.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-loading-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-ally-panel-tooltip.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-unlock-passive.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-unlock-active.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-pause.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.109375,
+          "height": 373.765625,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "Paused",
+          "y": 200.109375,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-pause-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal settings-panel",
+          "y": 20,
+          "height": 680,
+          "scrollTop": 0,
+          "scrollHeight": 674,
+          "clientHeight": 674
+        },
+        {
+          "class": "",
+          "text": "Settings",
+          "y": 47,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-skills.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 64.296875,
+          "height": 591.390625,
+          "scrollTop": 0,
+          "scrollHeight": 585,
+          "clientHeight": 585
+        },
+        {
+          "class": "",
+          "text": "Skills",
+          "y": 91.296875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 165.0625,
+          "height": 413.625,
+          "scrollTop": 0,
+          "scrollHeight": 414,
+          "clientHeight": 414
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-pause-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 238.875,
+          "height": 242.25,
+          "scrollTop": 0,
+          "scrollHeight": 236,
+          "clientHeight": 236
+        },
+        {
+          "class": "",
+          "text": "How to Play",
+          "y": 265.875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-ally.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 60,
+          "height": 600,
+          "scrollTop": 0,
+          "scrollHeight": 594,
+          "clientHeight": 594
+        },
+        {
+          "class": "",
+          "text": "Choose Your Companion",
+          "y": 87,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 160.765625,
+          "height": 472.234375,
+          "scrollTop": 0,
+          "scrollHeight": 472,
+          "clientHeight": 472
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-level-up.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.203125,
+          "height": 373.578125,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "Level 2",
+          "y": 200.203125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 273.96875,
+          "height": 195.8125,
+          "scrollTop": 0,
+          "scrollHeight": 196,
+          "clientHeight": 196
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-boss-reward.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.203125,
+          "height": 373.578125,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "Boss Defeated",
+          "y": 200.203125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 273.96875,
+          "height": 195.8125,
+          "scrollTop": 0,
+          "scrollHeight": 196,
+          "clientHeight": 196
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-replace-remove.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 110.078125,
+          "height": 499.828125,
+          "scrollTop": 0,
+          "scrollHeight": 494,
+          "clientHeight": 494
+        },
+        {
+          "class": "",
+          "text": "Choose a skill to remove",
+          "y": 137.078125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 210.84375,
+          "height": 322.0625,
+          "scrollTop": 0,
+          "scrollHeight": 322,
+          "clientHeight": 322
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-replace-new.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 154.765625,
+          "height": 410.46875,
+          "scrollTop": 0,
+          "scrollHeight": 404,
+          "clientHeight": 404
+        },
+        {
+          "class": "",
+          "text": "Choose a replacement",
+          "y": 181.765625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 255.53125,
+          "height": 232.703125,
+          "scrollTop": 0,
+          "scrollHeight": 233,
+          "clientHeight": 233
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-replace-confirm.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 150.96875,
+          "height": 418.0625,
+          "scrollTop": 0,
+          "scrollHeight": 412,
+          "clientHeight": 412
+        },
+        {
+          "class": "",
+          "text": "Confirm replacement",
+          "y": 177.96875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 251.734375,
+          "height": 226.703125,
+          "scrollTop": 0,
+          "scrollHeight": 227,
+          "clientHeight": 227
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-hud-editor.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Customize HUD",
+          "y": 64,
+          "height": 27,
+          "scrollTop": 0,
+          "scrollHeight": 27,
+          "clientHeight": 27
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-hud-export.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Customize HUD",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-hud-import-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Customize HUD",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-boss-entry.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-boss-bar.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "en-1280x720-defeat.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 226.75,
+          "height": 266.484375,
+          "scrollTop": 0,
+          "scrollHeight": 260,
+          "clientHeight": 260
+        },
+        {
+          "class": "",
+          "text": "Game Over",
+          "y": 253.75,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "en-1280x720-victory.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 226.75,
+          "height": 266.484375,
+          "scrollTop": 0,
+          "scrollHeight": 260,
+          "clientHeight": 260
+        },
+        {
+          "class": "",
+          "text": "Victory!",
+          "y": 253.75,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-menu.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-hero.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choisissez votre héros",
+          "y": 16,
+          "height": 76.59375,
+          "scrollTop": 0,
+          "scrollHeight": 49,
+          "clientHeight": 49
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-map.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "Choisissez une carte",
+          "y": 16,
+          "height": 76.59375,
+          "scrollTop": 0,
+          "scrollHeight": 49,
+          "clientHeight": 49
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-mode.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Mode de jeu",
+          "y": 74.390625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid wizard-modes",
+          "y": 189.875,
+          "height": 400,
+          "scrollTop": 0,
+          "scrollHeight": 400,
+          "clientHeight": 400
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-ready.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Prêt à jouer",
+          "y": 74.390625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-upgrades.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Améliorations",
+          "y": 176.328125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-shop.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Boutique",
+          "y": 78,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-help-heroes.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-help-ritual.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-help-accessibility.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Options",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-settings-audio.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Options",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-settings-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Options",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-loading.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-loading-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-ally-panel-tooltip.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-unlock-passive.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-unlock-active.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-pause.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.109375,
+          "height": 373.765625,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "Pause",
+          "y": 200.109375,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-pause-settings.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal settings-panel",
+          "y": 20,
+          "height": 680,
+          "scrollTop": 0,
+          "scrollHeight": 674,
+          "clientHeight": 674
+        },
+        {
+          "class": "",
+          "text": "Options",
+          "y": 47,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-skills.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 64.296875,
+          "height": 591.390625,
+          "scrollTop": 0,
+          "scrollHeight": 585,
+          "clientHeight": 585
+        },
+        {
+          "class": "",
+          "text": "Compétences",
+          "y": 91.296875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 165.0625,
+          "height": 413.625,
+          "scrollTop": 0,
+          "scrollHeight": 414,
+          "clientHeight": 414
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-pause-help.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 238.875,
+          "height": 242.25,
+          "scrollTop": 0,
+          "scrollHeight": 236,
+          "clientHeight": 236
+        },
+        {
+          "class": "",
+          "text": "Comment jouer",
+          "y": 265.875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-ally.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 60,
+          "height": 600,
+          "scrollTop": 0,
+          "scrollHeight": 594,
+          "clientHeight": 594
+        },
+        {
+          "class": "",
+          "text": "Choisissez votre compagnon",
+          "y": 87,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 160.765625,
+          "height": 472.234375,
+          "scrollTop": 0,
+          "scrollHeight": 472,
+          "clientHeight": 472
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-level-up.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.203125,
+          "height": 373.578125,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "Niveau 2",
+          "y": 200.203125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 273.96875,
+          "height": 195.8125,
+          "scrollTop": 0,
+          "scrollHeight": 196,
+          "clientHeight": 196
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-boss-reward.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.203125,
+          "height": 373.578125,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "Boss vaincu",
+          "y": 200.203125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 273.96875,
+          "height": 195.8125,
+          "scrollTop": 0,
+          "scrollHeight": 196,
+          "clientHeight": 196
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-replace-remove.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 110.078125,
+          "height": 499.828125,
+          "scrollTop": 0,
+          "scrollHeight": 494,
+          "clientHeight": 494
+        },
+        {
+          "class": "",
+          "text": "Choisissez la compétence à retirer",
+          "y": 137.078125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 210.84375,
+          "height": 322.0625,
+          "scrollTop": 0,
+          "scrollHeight": 322,
+          "clientHeight": 322
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-replace-new.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 135.875,
+          "height": 448.25,
+          "scrollTop": 0,
+          "scrollHeight": 442,
+          "clientHeight": 442
+        },
+        {
+          "class": "",
+          "text": "Choisissez une nouvelle compétence",
+          "y": 162.875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 236.640625,
+          "height": 270.484375,
+          "scrollTop": 0,
+          "scrollHeight": 270,
+          "clientHeight": 270
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-replace-confirm.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 150.96875,
+          "height": 418.0625,
+          "scrollTop": 0,
+          "scrollHeight": 412,
+          "clientHeight": 412
+        },
+        {
+          "class": "",
+          "text": "Confirmer le remplacement",
+          "y": 177.96875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 251.734375,
+          "height": 226.703125,
+          "scrollTop": 0,
+          "scrollHeight": 227,
+          "clientHeight": 227
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-hud-editor.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Personnaliser l’interface",
+          "y": 64,
+          "height": 27,
+          "scrollTop": 0,
+          "scrollHeight": 27,
+          "clientHeight": 27
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-hud-export.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Personnaliser l’interface",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-hud-import-error.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "",
+          "text": "Personnaliser l’interface",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-boss-entry.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-boss-bar.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "fr-1280x720-defeat.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 226.75,
+          "height": 266.484375,
+          "scrollTop": 0,
+          "scrollHeight": 260,
+          "clientHeight": 260
+        },
+        {
+          "class": "",
+          "text": "Défaite",
+          "y": 253.75,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "fr-1280x720-victory.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 226.75,
+          "height": 266.484375,
+          "scrollTop": 0,
+          "scrollHeight": 260,
+          "clientHeight": 260
+        },
+        {
+          "class": "",
+          "text": "Victoire !",
+          "y": 253.75,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-menu.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-hero.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "اختر بطلك",
+          "y": 16,
+          "height": 76.59375,
+          "scrollTop": 0,
+          "scrollHeight": 49,
+          "clientHeight": 49
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-map.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "kit-slice kit-title",
+          "text": "اختر الخريطة",
+          "y": 16,
+          "height": 76.59375,
+          "scrollTop": 0,
+          "scrollHeight": 49,
+          "clientHeight": 49
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-mode.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "نمط اللعب",
+          "y": 74.390625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid wizard-modes",
+          "y": 189.875,
+          "height": 400,
+          "scrollTop": 0,
+          "scrollHeight": 400,
+          "clientHeight": 400
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-ready.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "جاهز للعب",
+          "y": 74.390625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-upgrades.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الترقيات",
+          "y": 176.328125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-shop.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "المتجر",
+          "y": 78,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-help.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-help-heroes.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-help-ritual.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-help-accessibility.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 127.828125,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-settings.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-settings-audio.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-settings-hud.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 79,
+          "height": 51.84375,
+          "scrollTop": 0,
+          "scrollHeight": 52,
+          "clientHeight": 52
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-loading.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-loading-error.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-hud.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-ally-panel-tooltip.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-unlock-passive.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-unlock-active.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-pause.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 173.109375,
+          "height": 373.765625,
+          "scrollTop": 0,
+          "scrollHeight": 368,
+          "clientHeight": 368
+        },
+        {
+          "class": "",
+          "text": "إيقاف مؤقت",
+          "y": 200.109375,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-pause-settings.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal settings-panel",
+          "y": 20,
+          "height": 680,
+          "scrollTop": 0,
+          "scrollHeight": 674,
+          "clientHeight": 674
+        },
+        {
+          "class": "",
+          "text": "الإعدادات",
+          "y": 47,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-skills.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 64.296875,
+          "height": 591.390625,
+          "scrollTop": 0,
+          "scrollHeight": 585,
+          "clientHeight": 585
+        },
+        {
+          "class": "",
+          "text": "المهارات",
+          "y": 91.296875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 165.0625,
+          "height": 413.625,
+          "scrollTop": 0,
+          "scrollHeight": 414,
+          "clientHeight": 414
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-pause-help.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 238.875,
+          "height": 242.25,
+          "scrollTop": 0,
+          "scrollHeight": 236,
+          "clientHeight": 236
+        },
+        {
+          "class": "",
+          "text": "طريقة اللعب",
+          "y": 265.875,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-ally.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 60,
+          "height": 600,
+          "scrollTop": 0,
+          "scrollHeight": 594,
+          "clientHeight": 594
+        },
+        {
+          "class": "",
+          "text": "اختر رفيقك",
+          "y": 87,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 160.765625,
+          "height": 472.234375,
+          "scrollTop": 0,
+          "scrollHeight": 472,
+          "clientHeight": 472
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-level-up.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 182.65625,
+          "height": 354.6875,
+          "scrollTop": 0,
+          "scrollHeight": 349,
+          "clientHeight": 349
+        },
+        {
+          "class": "",
+          "text": "المستوى 2",
+          "y": 209.65625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 283.421875,
+          "height": 176.921875,
+          "scrollTop": 0,
+          "scrollHeight": 177,
+          "clientHeight": 177
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-boss-reward.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 182.65625,
+          "height": 354.6875,
+          "scrollTop": 0,
+          "scrollHeight": 349,
+          "clientHeight": 349
+        },
+        {
+          "class": "",
+          "text": "هُزم الزعيم",
+          "y": 209.65625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 283.421875,
+          "height": 176.921875,
+          "scrollTop": 0,
+          "scrollHeight": 177,
+          "clientHeight": 177
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-replace-remove.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 110.078125,
+          "height": 499.828125,
+          "scrollTop": 0,
+          "scrollHeight": 494,
+          "clientHeight": 494
+        },
+        {
+          "class": "",
+          "text": "اختر المهارة التي ستزيلها",
+          "y": 137.078125,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 210.84375,
+          "height": 322.0625,
+          "scrollTop": 0,
+          "scrollHeight": 322,
+          "clientHeight": 322
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-replace-new.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 154.765625,
+          "height": 410.46875,
+          "scrollTop": 0,
+          "scrollHeight": 404,
+          "clientHeight": 404
+        },
+        {
+          "class": "",
+          "text": "اختر المهارة الجديدة",
+          "y": 181.765625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 255.53125,
+          "height": 232.703125,
+          "scrollTop": 0,
+          "scrollHeight": 233,
+          "clientHeight": 233
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-replace-confirm.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 160.40625,
+          "height": 399.171875,
+          "scrollTop": 0,
+          "scrollHeight": 393,
+          "clientHeight": 393
+        },
+        {
+          "class": "",
+          "text": "تأكيد الاستبدال",
+          "y": 187.40625,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        },
+        {
+          "class": "card-grid",
+          "y": 261.171875,
+          "height": 207.8125,
+          "scrollTop": 0,
+          "scrollHeight": 208,
+          "clientHeight": 208
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-hud-editor.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "تخصيص الواجهة",
+          "y": 64,
+          "height": 27,
+          "scrollTop": 0,
+          "scrollHeight": 27,
+          "clientHeight": 27
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-hud-export.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "تخصيص الواجهة",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-hud-import-error.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "",
+          "text": "تخصيص الواجهة",
+          "y": 0,
+          "height": 0,
+          "scrollTop": 0,
+          "scrollHeight": 0,
+          "clientHeight": 0
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-boss-entry.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-boss-bar.png",
+      "failures": [],
+      "direction": "ltr",
+      "geometry": []
+    },
+    {
+      "file": "ar-1280x720-defeat.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 226.75,
+          "height": 266.484375,
+          "scrollTop": 0,
+          "scrollHeight": 260,
+          "clientHeight": 260
+        },
+        {
+          "class": "",
+          "text": "انتهت اللعبة",
+          "y": 253.75,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    },
+    {
+      "file": "ar-1280x720-victory.png",
+      "failures": [],
+      "direction": "rtl",
+      "geometry": [
+        {
+          "class": "modal",
+          "y": 226.75,
+          "height": 266.484375,
+          "scrollTop": 0,
+          "scrollHeight": 260,
+          "clientHeight": 260
+        },
+        {
+          "class": "",
+          "text": "انتصار!",
+          "y": 253.75,
+          "height": 38.875,
+          "scrollTop": 0,
+          "scrollHeight": 39,
+          "clientHeight": 39
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

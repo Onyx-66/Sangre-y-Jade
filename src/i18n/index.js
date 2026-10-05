@@ -5,13 +5,18 @@ import { extraMessages } from './extra.js';
 import { v05Messages } from './v05.js';
 import { skillsHudMessages } from './skills-hud.js';
 import { v06Messages } from './v06.js';
+import { menuV06Messages } from './menu-v06.js';
+import { screensV06Messages } from './screens-v06.js';
+import { hudEditorMessages } from './hud-editor.js';
 import { loadingMessages } from './loading-v06.js';
 import { enemyV06Messages } from './enemies-v06.js';
 import { bossV06Messages } from './bosses-v06.js';
 import { audioMessages } from './audio-v06.js';
+import { worldV06Messages } from './world-v06.js';
 export const LOCALES=['en','fr','ar'];
 const dictionaries={en:new Map(),fr:new Map(),ar:new Map()};
-for(const [en,fr,ar] of [...messages,...skillMessages,...extraMessages,...v05Messages,...skillsHudMessages,...v06Messages,...loadingMessages,...enemyV06Messages,...bossV06Messages]){dictionaries.en.set(en,en);dictionaries.fr.set(en,fr);dictionaries.ar.set(en,ar);}
+for(const [en,fr,ar] of worldV06Messages){dictionaries.en.set(en,en);dictionaries.fr.set(en,fr);dictionaries.ar.set(en,ar);}
+for(const [en,fr,ar] of [...messages,...skillMessages,...extraMessages,...v05Messages,...skillsHudMessages,...v06Messages,...menuV06Messages,...screensV06Messages,...hudEditorMessages,...loadingMessages,...enemyV06Messages,...bossV06Messages]){dictionaries.en.set(en,en);dictionaries.fr.set(en,fr);dictionaries.ar.set(en,ar);}
 export const westernDigits=value=>String(value).replace(/[٠-٩]/g,c=>String(c.charCodeAt(0)-0x660)).replace(/[۰-۹]/g,c=>String(c.charCodeAt(0)-0x6f0)).replace(/٫/g,'.').replace(/٪/g,'%');
 for(const [en,[fr,ar]]of Object.entries(audioMessages)){dictionaries.en.set(en,en);dictionaries.fr.set(en,fr);dictionaries.ar.set(en,ar);}
 let language='en';
@@ -51,3 +56,5 @@ export function translateDOM(root){
 }
 export const languageMarkup=()=>`<label class="language-switch" title="${t('Language')}">${interfaceIcon('globe')}<select data-language aria-label="${t('Language')}" data-no-translate><option value="en" ${language==='en'?'selected':''}>English</option><option value="fr" ${language==='fr'?'selected':''}>Français</option><option value="ar" ${language==='ar'?'selected':''}>العربية</option></select></label>`;
 export const hasTranslation=(key,locale)=>dictionaries[locale]?.has(key)??false;
+// Read-only snapshots let the release audit detect accidental English fallbacks.
+export const translationEntries=()=>[...dictionaries.en.keys()].map(key=>[key,...['fr','ar'].map(locale=>dictionaries[locale].get(key))]);

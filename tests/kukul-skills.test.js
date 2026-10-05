@@ -25,7 +25,7 @@ test('Kukul pool is exactly 16 active + 8 passive + 2 innate; definitions/i18n/p
  assert.equal(KUKUL_DEFINITIONS.length,24);
  for(const source of db.heroes.kukul){
   const skill=def(source.id);assert.equal(skill.owner,'kukul');assert.equal(skill.name,source.name);assert.equal(skill.description,source.desc);assert.equal(skill.iconFile,source.icon_file);
-  assert.deepEqual(skillMessages.findLast(row=>row[0]===source.name),[source.name,source.fr,source.ar]);assert.deepEqual(skillMessages.findLast(row=>row[0]===source.desc),[source.desc,source.desc,source.desc]);
+  assert.deepEqual(skillMessages.findLast(row=>row[0]===source.name),[source.name,source.fr,source.ar]);assert.ok(skillMessages.findLast(row=>row[0]===source.desc)?.slice(1).every(text=>text&&text!==source.desc));
   if(skill.kind==='active'){assert.equal(skill.cooldown,source.cd);assert.equal(skill.mana,source.mana);assert.equal(typeof ACTIVE_HANDLERS[skill.id],'function');}
   else {assert.equal(skill.values.length,5);const text=source.id==='trophy-hunter'?source.vals.split(';')[1]:source.vals;assert.deepEqual(skill.values,text.match(/\d+(?:\.\d+)?/g).map(Number).slice(0,5));assert.ok(PASSIVE_HANDLERS[skill.id]);}
  }

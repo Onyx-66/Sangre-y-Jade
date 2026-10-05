@@ -278,7 +278,7 @@ class SangreYJadeApp {
     this.currentPage='showCodex';
     const entries = {
       world: ['The World','A fantasy adventure inspired by Maya cities, astronomy, trade, and mythology. The heroes and invasion are fictional.'],
-      heroes: ['Heroes','Balam fights in melee. Ixchel uses mana-based magic. Kukul fires piercing darts. Each hero has 20 skills; equip up to three per run.'],
+      heroes: ['Heroes','Each hero has 16 active skills and 8 passives. Start with 3 active slots, 1 passive slot, and 2 innate traits. More slots unlock at levels 10 and 20.'],
       ritual: ['Combat','Choose auto-attack or manual attack in Settings. Move to avoid enemies, collect XP, and pick upgrades. At level 5, a permanent AI ally joins you and tougher enemies enter the waves. Melee heroes face ground enemies and ground-based bosses.'],
       economy: ['Currency & Upgrades','Cacao is earned during runs and kept after defeat. Spend it on permanent upgrades. Break pots and baskets to find extra supplies.'],
       equipment: ['Equipment','Mini-bosses drop equipment and offer skill upgrades. Equipment lasts for the current run; permanent upgrades are bought in the main menu.'],

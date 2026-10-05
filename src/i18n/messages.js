@@ -1,4 +1,5 @@
 // English source text is the stable key. Each row is [English, French, Arabic].
+// TODO native review: all French and Arabic strings in this table.
 export const messages = [
 ['Medium','Moyenne','متوسطة'], // TODO native review
 ['Play','Jouer','العب'],['Upgrades','Améliorations','الترقيات'],['Shop','Boutique','المتجر'],['Settings','Options','الإعدادات'],['Codex','Guide','الدليل'],['How to Play','Comment jouer','طريقة اللعب'],['Watch Intro','Voir l’intro','شاهد المقدمة'],['Skip Intro','Passer','تخطي المقدمة'],['Loading intro…','Chargement…','جارٍ تحميل المقدمة…'],['Language','Langue','اللغة'],['Enable sound','Activer le son','تشغيل الصوت'],['Sound enabled','Son activé','الصوت مفعّل'],

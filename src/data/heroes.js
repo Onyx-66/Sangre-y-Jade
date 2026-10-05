@@ -82,10 +82,8 @@ export const MODIFIERS = [
   { id: 'fortune', name: 'Cacao Fortune', icon: '●', description: '+18% cacao drops', stat: 'fortune', amount: 0.18 },
 ];
 
-export const SKILL_DESCRIPTIONS={
- projectile:'Fire a piercing projectile.',burst:'Fire several projectiles in a spread.',nova:'Damage and knock back nearby enemies.',cone:'Strike enemies in a wide arc.',line:'Fire a powerful shot through enemies in a line.',orbit:'Fire a ring of projectiles and gain a small shield.',trap:'Place a trap that explodes after a short delay.',heal:'Restore health.',shield:'Gain a shield that absorbs damage.',chain:'Hit several nearby enemies with a chain attack.',summon:'Summon a stationary ally that attacks for 12 seconds.',dash:'Dash forward and damage enemies in your path.',rain:'Strike several spots around the target.'
-};
-export const skillDescription = (skill) => skill?.description || SKILL_DESCRIPTIONS[skill?.type] || '';
+// Each skill owns its text. A missing description must not claim a generic mechanic.
+export const skillDescription = (skill) => skill?.description || '';
 const statNames={might:'Damage',vigor:'Max Health',haste:'Attack Speed',reach:'Area & Range',swiftness:'Move Speed',critical:'Critical Chance',armor:'Armor',renewal:'Regeneration',wisdom:'Experience',fortune:'Cacao Drops'};
 for(const modifier of MODIFIERS)modifier.name=statNames[modifier.id];
 export const heroList = () => Object.values(HEROES);

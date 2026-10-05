@@ -1,6 +1,19 @@
 /* Final typography cascade: minimum readable sizes also apply in compact/RTL
    layouts; none of the older art styles may shrink copy to make it fit. */
 body { font-size: var(--font-body); line-height: var(--line-height); }
+/* Long localized copy must fit the padded viewport, not 94vw plus padding. */
+.screen > .panel { max-width:100%; min-width:0; }
+.screen:not(.kit-screen) { grid-template-columns:minmax(0,1fr); }
+.codex-content, .store-item > div, .upgrade > div { min-width:0; overflow-wrap:break-word; }
+/* Long ally details scroll, while the title and arrival note stay visible. */
+.modal:has(.ally-card-details) { height:min(600px,calc(var(--usable-height) - 20px)); grid-template-rows:auto auto minmax(0,1fr); }
+.modal:has(.ally-card-details) .card-grid { overflow-y:auto; align-self:stretch; grid-auto-rows:max-content; padding:3px; margin:0; }
+.replacement-choice[data-stage=remove] .modal .card-grid { grid-auto-rows:max-content; overflow-y:auto; padding:3px; }
+.modal:has(.summary-stats) .summary-stats { min-height:0; overflow-y:auto; margin:0; align-self:stretch; }
+.modal:has(.summary-stats) .panel-actions { position:static; margin:0; padding:0; background:none; }
+html[lang=ar] .skills-readonly .modal .skill-ribbon,
+html[lang=ar] .choice-card .tag, html[lang=ar] .hud .hud-counter small,
+html[lang=ar] .boss-epithet, html[lang=ar] .kit-screen .version { font-family:var(--font-arabic); }
 .currency { font-weight: 400; }
 .hero-heading { display: contents; }
 .hero-role { font-family: var(--font-body-family); font-size: var(--font-body); font-weight: 400; line-height: var(--line-height); }

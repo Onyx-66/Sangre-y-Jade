@@ -1,14 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { HEROES, SKILL_DESCRIPTIONS, skillDescription } from '../src/data/heroes.js';
+import { HEROES, skillDescription } from '../src/data/heroes.js';
 import { applyProjectileTint, applySlow, chainAttack, restoreSkillMana, ringEffect } from '../src/systems/SkillCombat.js';
 
-test('authored skill descriptions survive, with type copy used only as a fallback', () => {
+test('authored skill descriptions survive and no generic type copy is shown', () => {
   const roar = HEROES.balam.skills.find((skill) => skill.id === 'jaguar-roar');
   assert.equal(roar.description, 'A terrifying roar hurts nearby foes and makes them flee for 2 seconds.');
-  assert.notEqual(roar.description, SKILL_DESCRIPTIONS[roar.type]);
   assert.equal(skillDescription(roar), roar.description);
-  assert.equal(skillDescription({ type: 'nova' }), SKILL_DESCRIPTIONS.nova);
+  assert.equal(skillDescription({ type: 'nova' }), '');
 });
 
 test('a shield skill receives one mana restoration after its cost, respecting the cap', () => {
