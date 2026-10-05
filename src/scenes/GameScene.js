@@ -32,6 +32,10 @@ import { Telegraph } from '../systems/Telegraph.js';
 import { SpawnDirector } from '../systems/SpawnDirector.js';
 import { enemyAffixDefaults, rollAffix, applyAffix, frontalDamageMult, absorbEnemyShield, updateEnemyShield, healVampiric } from '../systems/EnemyAffixes.js';
 import { EnemyBehaviorSystem, ENEMY_ART_FALLBACK, rosterDamageMult, PRIORITY_ENEMIES, enemyBehaviorDefaults } from '../systems/EnemyBehaviorSystem.js';
+import { BossController, bossStateDefaults } from '../systems/BossController.js';
+import { CutsceneDirector } from '../systems/CutsceneDirector.js';
+import { BossPresentation } from '../ui/BossPresentation.js';
+import { BOSS_FAIRNESS, bossDamage } from '../bosses/rules.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -164,6 +168,9 @@ export class GameScene extends Phaser.Scene {
       attack:()=>{if(this.settings.attackMode==='manual' && this.autoTimer<=0 && !this.pausedForChoice)this.autoAttack();},
     });
     this.hud.setHero(hero);
+    this.bossPresentation = new BossPresentation(this);
+    this.bossController = new BossController(this);
+    this.cutscenes = new CutsceneDirector(this);
     this.hud.setSkills(this.skillSlots, slotCount('active', this.loadoutLevel));
     this.refreshPassiveHud();
     this.hud.toast(`${map.name} · ${mode.name}`);
@@ -195,6 +202,7 @@ export class GameScene extends Phaser.Scene {
     this.decorTimer=0;
     if(this.player&&this.decorGroup&&this.props)this.generateChunks();
     this.hud?.hideTooltip();
+    this.cutscenes?.resize(this.viewport);
   }
 
   createGroups() {
@@ -255,6 +263,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   update(_time, deltaRaw) {
+    if(this.cutscenes?.active){this.cutscenes.update(Math.min(deltaRaw,50)/1000);return;}
     if (this.ended || this.loadingRun || this.pausedForChoice || !this.player?.active) return;
     const delta = Math.min(deltaRaw, 50);
     const dt = delta / 1000;
@@ -266,6 +275,7 @@ export class GameScene extends Phaser.Scene {
     this.decorTimer -= dt;
     this.invulnerable = Math.max(0, this.invulnerable - dt);
     this.dash.cooldown = Math.max(0, this.dash.cooldown - dt);
+    this.bossController?.updateWorld(dt);
     this.enemySystem?.updateWorld(dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateMovement(dt);
@@ -284,6 +294,7 @@ export class GameScene extends Phaser.Scene {
     if(this.pausedForChoice||this.ended)return;
     this.updateVitals(dt);
     this.updateDirector(dt);
+    if(this.pausedForChoice||this.ended)return;
     this.updateWorld();
     this.updateHud();
     this.enemyBars?.draw();
@@ -344,15 +355,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   updateDirector(dt) {
-    if (!this.finalSpawned && this.elapsed >= this.modeData.duration && !this.activeBoss) {
-      this.finalSpawned = true;
-      this.spawnBoss(BOSSES[3]);
-    }
-    const thresholds = [.25, .5, .75].map((f) => this.modeData.duration * f);
-    if (this.nextBossIndex < 3 && this.elapsed >= thresholds[this.nextBossIndex] && !this.activeBoss) {
-      this.spawnBoss(BOSSES[this.nextBossIndex]);
-      this.nextBossIndex += 1;
-    }
+    this.bossController?.updateArrival();
+    if(this.pausedForChoice||this.ended)return;
     this.spawnDirector?.update(dt);
   }
 
@@ -364,49 +368,8 @@ export class GameScene extends Phaser.Scene {
     });
   }
 
-  updateBoss(boss, dt, dx, dy, distance) {
-    if (!canEnemyAttack(this, boss)) { boss.setVelocity(0, 0); return; }
-    const pattern = boss.getData('pattern');
-    let timer = (boss.getData('patternTimer') || 1) - dt;
-    boss.setData('patternTimer', timer);
-    const speed = boss.getData('speed');
-    if (boss.getData('dashing') > 0) {
-      boss.setData('dashing', boss.getData('dashing') - dt);
-    } else {
-      boss.setVelocity(dx / distance * speed, dy / distance * speed);
-    }
-    if (timer > 0 || boss.getData('silenceUntil')>this.elapsed) return;
-    this.animateCharacter(boss,boss.getData('artKey'),'attack',.4);
-    const angle=enemyShotAngle(this,boss,Math.atan2(dy,dx));
-    const warning=(shape,extra,resolve)=>this.telegraphs?.play({shape,x:boss.x,y:boss.y,angle,windup:.62,owner:boss,tag:'boss',...extra,
-      onResolve:()=>{if(boss.active&&canEnemyAttack(this,boss)&&!(boss.getData('silenceUntil')>this.elapsed))resolve();}});
-    if (pattern === 'dash') {
-      const dash=()=>{boss.setData('dashing',.6);boss.setVelocity(Math.cos(angle)*390,Math.sin(angle)*390);};
-      if(this.telegraphs)warning('line',{length:234,width:60},dash);else dash();
-      boss.setData('patternTimer', 3.2);
-    } else if (pattern === 'quake') {
-      const quakeX=this.player.x,quakeY=this.player.y;
-      this.bossTelegraph(quakeX, quakeY, 155, 0xe39c59, () => {
-        if (!boss.active || !canEnemyAttack(this, boss)) return;
-        if (Phaser.Math.Distance.Between(this.player.x, this.player.y, quakeX, quakeY) < 155) this.damagePlayer(22 * enemyDamageMult(this, boss), quakeX, quakeY, boss);
-        this.damageArea({ x: quakeX, y: quakeY }, 155, 0, 0, false);
-      },boss);
-      boss.setData('patternTimer', 4.1);
-    } else if (pattern === 'sun') {
-      const shoot=()=>{for(let i=-2;i<=2;i++)this.spawnEnemyProjectile(boss.x,boss.y,angle+i*.18,235,13*enemyDamageMult(this,boss),boss);};
-      if(this.telegraphs)warning('cone',{radius:410,arc:.9},shoot);else shoot();
-      boss.setData('patternTimer', 2.05);
-    } else {
-      const hpRatio = boss.getData('hp') / boss.getData('maxHp');
-      const count = hpRatio > .6 ? 7 : hpRatio > .3 ? 10 : 14;
-      const shoot=()=>{
-        for(let i=0;i<count;i++)this.spawnEnemyProjectile(boss.x,boss.y,(i/count)*TAU+angle,185+(i%2)*55,14*enemyDamageMult(this,boss),boss);
-        if(hpRatio<.65)for(let i=0;i<(hpRatio<.3?3:1);i++)this.spawnEnemy('shade',null,{emerge:true});
-      };
-      if(this.telegraphs)warning('ring',{radius:100,innerRadius:75},shoot);else shoot();
-      boss.setData('patternTimer', hpRatio < .3 ? 1.35 : 2.15);
-    }
-    this.hud.setBoss(boss.getData('displayName'), boss.getData('hp') / boss.getData('maxHp'));
+  updateBoss(boss, dt) {
+    this.bossController?.update(boss,dt);
   }
 
   updateProjectiles(dt) {
@@ -502,7 +465,7 @@ export class GameScene extends Phaser.Scene {
     this.hud.setStats({ ...this.stats, elapsed: this.elapsed,stamina:1-this.dash.cooldown/3.1 });
     this.refreshPassiveHud();
     this.hud.setAlly?.(this.companion);
-    if (this.activeBoss?.active) this.hud.setBoss(this.activeBoss.getData('displayName'), this.activeBoss.getData('hp') / this.activeBoss.getData('maxHp'));
+    if (this.activeBoss?.active) this.bossController?.refreshBar();
   }
 
   refreshPassiveHud() {
@@ -610,6 +573,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   spawnEnemyProjectile(x, y, angle, speed, damage, source = null) {
+    const bossAttack=!!source?.getData?.('isBoss');
+    if(bossAttack){if(this.bossCinematic)return null;damage=bossDamage(damage);}
     const projectile = this.enemyProjectiles.get(x, y, 'fx-5');
     if (!projectile) return;
     projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(15);
@@ -617,14 +582,14 @@ export class GameScene extends Phaser.Scene {
     projectile.body.setCircle(21,43,43);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
     projectile.setData({ damage, life: 4, source,sourceSerial:source?.getData?.('serial'), previousX:x, previousY:y,
-      poison:null,bleed:null,piercing:false,hitHero:false,reflected:false,enemyId:null });
+      poison:null,bleed:null,piercing:false,hitHero:false,reflected:false,enemyId:null,bossAttack });
     projectile.setData('enemyFx',null);
     decorateEnemyProjectile(this,projectile,source);
     return projectile;
   }
 
   onEnemyProjectileHit(projectile) {
-    if (this.ended || !projectile.active || projectile.getData('hitHero') || this.stats.intangibleUntil > this.elapsed) return;
+    if (this.ended || this.bossCinematic || !projectile.active || projectile.getData('hitHero') || this.stats.intangibleUntil > this.elapsed) return;
     if (this.stats.reflectUntil > this.elapsed && inMirrorArc(this,projectile)) {
       const velocity = projectile.body.velocity;
       const reflected = this.fireProjectile(projectile.x, projectile.y, Math.atan2(-velocity.y, -velocity.x),
@@ -734,16 +699,19 @@ export class GameScene extends Phaser.Scene {
 
   damageEnemy(enemy, rawDamage, critBonus = 0, knockback = 0, origin = this.player, options = {}) {
     if (this.ended || !enemy?.active || rawDamage <= 0) return;
+    const bossMult=enemy.getData('isBoss')?(this.bossController?.damageMultiplier(enemy)??1):1;
+    if(!bossMult)return;
     const rosterMult=rosterDamageMult(enemy,origin,this.elapsed,options.dot);if(!rosterMult)return;
     const byAlly = options.byAlly ?? Boolean(origin?.getData?.('byAlly'));
     const heroOwned=!byAlly||options.heroSkill;
     const modifiers=heroOwned?this.passives.modifiers({enemy,dot:options.dot,byAlly}):{};
     const crit = !options.dot && options.canCrit!==false && Math.random() < this.stats.crit + critBonus + (modifiers.crit??0) + (heroOwned?(skillModifiers(this).crit??0):0);
     const stealthMult=heroOwned&&!options.dot&&origin===this.player?(this.support.consumeStealthStrike?.()??1):1;
-    const damage = rawDamage * stealthMult * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1) * frontalDamageMult(enemy,origin,options.dot) * rosterMult;
+    const damage = rawDamage * stealthMult * (modifiers.damageMult??1) * (crit ? this.stats.critDamage : 1) * (enemy.getData('markUntil')>this.elapsed?1+enemy.getData('markBonus'):1) * frontalDamageMult(enemy,origin,options.dot) * rosterMult * bossMult;
     const beforeHp=enemy.getData('hp'),hpDamage=absorbEnemyShield(enemy,damage,this.elapsed);
     const hp = beforeHp - hpDamage;
     enemy.setData('hp', hp);
+    if(enemy.getData('isBoss'))this.bossController?.phaseChanged();
     this.enemyBars?.damage(enemy,beforeHp);
     this.stats.damageDone += damage;
     const lifesteal=this.stats.lifestealPct+(modifiers.lifestealPct??0)+(this.support.modifiers().lifestealPct??0);
@@ -792,13 +760,8 @@ export class GameScene extends Phaser.Scene {
     if (isBoss) {
       this.activeBoss = null;
       this.hud.clearBoss();
-      for (let i = 0; i < 8; i += 1) this.spawnPickup('cacao', x + Phaser.Math.Between(-55, 55), y + Phaser.Math.Between(-55, 55), this.support.cacaoValue?.(3)??3);
-      if (bossId === 'ahpuch') {
-        this.audio.sfx('victory');
-        this.time.delayedCall(900, () => this.finishRun(true));
-      } else {
-        this.grantBossReward(bossId);
-      }
+      const complete=()=>this.finishBossDeath(bossId,x,y);
+      if(!this.bossController?.die(enemy,complete))complete();
     } else {
       this.spawnPickup('xp', x, y, xp);
       const cacaoChance = .055 * (1 + this.stats.fortune);
@@ -808,7 +771,9 @@ export class GameScene extends Phaser.Scene {
   }
 
   damagePlayer(rawDamage, sourceX, sourceY, source = null, melee = false, options = {}) {
-    if (rawDamage<=0||(!options.dot&&this.invulnerable > 0) || this.stats.intangibleUntil > this.elapsed || this.ended || this.pausedForChoice) return false;
+    if (rawDamage<=0||this.bossCinematic||(!options.dot&&this.invulnerable > 0) || this.stats.intangibleUntil > this.elapsed || this.ended || this.pausedForChoice) return false;
+    const bossHit=source?.getData?.('isBoss')||source?.getData?.('bossAttack');
+    if(bossHit)rawDamage=bossDamage(rawDamage);
     if (!options.dot&&this.stats.dodgeCharges > 0) {
       if(!consumePlume(this))this.stats.dodgeCharges -= 1;
       this.invulnerable = .58;
@@ -825,6 +790,7 @@ export class GameScene extends Phaser.Scene {
     let damage = (options.dot?rawDamage:Math.max(1, rawDamage - (this.stats.armor+buffs.armor+(this.passives.modifiers().armor??0)) * .72))*(1-buffs.reduction);
     if (!options.dot&&this.hasGear('jaguar-vest') && this.hitCount % 7 === 0) damage = 1;
     damage *= this.stats.damageTakenMult;
+    if(bossHit)damage=bossDamage(damage);
     if (this.stats.shield > 0) {
       const blocked = Math.min(this.stats.shield, damage);
       this.stats.shield -= blocked;
@@ -861,11 +827,12 @@ export class GameScene extends Phaser.Scene {
 
   touchEnemy(enemy) {
     if (!enemy?.active || !canEnemyAttack(this, enemy, true)) return;
+    if(enemy.getData('isBoss')&&this.bossController?.touch(enemy))return;
     if(this.enemySystem?.touch(enemy))return;
     if(this.telegraphs&&!(enemy.getData('contactReadyUntil')>this.elapsed)){
       if(!(enemy.getData('nextContact')>this.elapsed)&&!this.telegraphs.has(enemy,'contact')){
         const radius=(enemy.getData('radius')||20)+24;
-        this.telegraphs.play({shape:'circle',x:enemy.x,y:enemy.y,radius,windup:.35,owner:enemy,tag:'contact',sound:'click',
+        this.telegraphs.play({shape:'circle',x:enemy.x,y:enemy.y,radius,windup:enemy.getData('isBoss')?BOSS_FAIRNESS.minimumTelegraph:.35,owner:enemy,tag:'contact',sound:'click',
           onResolve:()=>{enemy.setData({contactReadyUntil:this.elapsed+.25,nextContact:this.elapsed+1});},
           onCancel:()=>enemy.setData('contactReadyUntil',0)});
       }return;
@@ -901,7 +868,7 @@ export class GameScene extends Phaser.Scene {
       speed: data.speed, damage: data.damage, xp: data.xp,
       ranged: data.ranged || false, nextShot: 1 + Math.random(), isBoss: false,
       tough:data.tough,priorityTarget:PRIORITY_ENEMIES.has(type),summoner:spawnOptions.summoner||null,summonerSerial:spawnOptions.summoner?.getData('serial'),
-      ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),heading:0,
+      ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),...bossStateDefaults(),heading:0,
     });
     applyAffix(enemy,spawnOptions.affix===undefined?rollAffix(this.elapsed):spawnOptions.affix);
     this.enemySystem?.init(enemy);
@@ -910,8 +877,9 @@ export class GameScene extends Phaser.Scene {
     return enemy;
   }
 
-  spawnBoss(data) {
-    if (this.activeBoss || this.ended) return;
+  spawnBoss(data,{position}={}) {
+    if (this.activeBoss || this.ended || this.bossController?.state?.dead) return;
+    data={...BOSSES.find(row=>row.definitionId===(data.definitionId||data.id)),...data,definitionId:data.definitionId||data.id};
     if(this.spawnDirector&&!this.spawnDirector.hasSpace()){
       // A scheduled boss owns one slot in the same cap, never a cap+1 exception.
       const distant=this.enemies.getChildren().filter(e=>e.active&&!e.getData('isBoss')).sort((a,b)=>
@@ -919,11 +887,10 @@ export class GameScene extends Phaser.Scene {
       if(distant){this.enemySystem?.removeOwned(distant);this.telegraphs?.cancelOwner(distant);distant.disableBody(true,true);}
     }
     data=bossForHero(this.heroData,data);
-    const {x,y}=spawnOutsideView(worldView(this),Math.random,120+96*(data.id==='ahpuch'?1.65:1.35));
+    const {x,y}=position||spawnOutsideView(worldView(this),Math.random,120+96*(data.id==='ahpuch'?1.65:1.35));
     const artKey=data.artKey||`boss-${data.id}`;
     const boss = this.enemies.get(x, y, artKey);
     if (!boss) return;
-    const hpScale = this.mapData.difficulty * (this.modeData.id === 'full' ? 1.18 : 1);
     boss.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(13).setScale(data.id==='ahpuch'?1.65:1.35);
     boss.anims.stop();
     boss.setTexture(artKey).clearTint();
@@ -931,16 +898,25 @@ export class GameScene extends Phaser.Scene {
     boss.body.setCircle(24,40,44);
     boss.setData({
       artKey,animLock:0,serial: ++this.enemySerial, isBoss: true, bossId: data.id, displayName: data.name,
-      hp: data.hp * hpScale, maxHp: data.hp * hpScale, speed: data.speed, damage: data.damage * this.mapData.difficulty,
-      xp: 100, pattern: data.pattern, patternTimer: 1.5, seed: Math.random() * 20,
-      ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),heading:0,dashing: 0,
+      hp: data.hp, maxHp: data.hp, speed: data.speed, damage: data.damage,
+      xp: 100, seed: Math.random() * 20,displayEpithet:data.id===data.definitionId?data.epithet:'',
+      ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),...bossStateDefaults(),heading:0,
       type:null,tough:true,priorityTarget:false,summoner:null,summonerSerial:null,
     });
     this.activeBoss = boss;
-    this.hud.setBoss(data.name, 1);
-    this.hud.toast(data.name);
-    this.audio.music('boss');
-    this.audio.sfx('boss');
+    const state=this.bossController?.init(boss,data);
+    if(state){const definition={...state.definition,name:data.id===data.definitionId?state.definition.name:data.name,epithet:boss.getData('displayEpithet')};
+      const entry=state.behavior.entry?.(this.bossController.context());
+      this.cutscenes?.start(boss,definition,{entry,onComplete:()=>this.bossController.refreshBar()});
+    }else {this.hud.setBoss(data.name,1);this.audio.music?.('boss');this.audio.sfx('boss');}
+    return boss;
+  }
+
+  finishBossDeath(bossId,x,y){
+    if(this.ended)return;
+    for(let i=0;i<8;i++)this.spawnPickup('cacao',x+Phaser.Math.Between(-55,55),y+Phaser.Math.Between(-55,55),this.support.cacaoValue?.(3)??3);
+    if(bossId==='ahpuch'){this.audio.sfx('victory');this.finishRun(true);}
+    else this.grantBossReward(bossId);
   }
 
   grantBossReward(bossId) {
@@ -1320,17 +1296,9 @@ export class GameScene extends Phaser.Scene {
     this.enemyVisuals?.pose(sprite,state,lock);
   }
 
-  bossTelegraph(x, y, radius, color, callback,owner=this.activeBoss) {
-    if(this.telegraphs)return this.telegraphs.play({shape:'circle',x,y,radius,windup:.62,owner,onResolve:callback});
-    const marker = this.add.circle(x, y, radius, color, .1).setStrokeStyle(4, color, .8).setDepth(5).setScale(.25);
-    this.tweens.add({ targets: marker, scale: 1, alpha: .58, duration: 620, onComplete: () => {
-      callback?.();
-      this.tweens.add({ targets: marker, scale: 1.15, alpha: 0, duration: 180, onComplete: () => marker.destroy() });
-    }});
-  }
-
   togglePause() {
     if(this.ended)return;
+    if(this.cutscenes?.active){this.cutscenes.skip();return;}
     // Escape and the native Android Back hook route to the current pause panel.
     if(this.pauseSession){this.pauseSession.back();return;}
     if(this.pausedForChoice)return;
@@ -1361,6 +1329,7 @@ export class GameScene extends Phaser.Scene {
   finishRun(victory, abandoned = false) {
     if (this.ended) return;
     this.ended = true;
+    this.cutscenes?.destroy();this.bossController?.destroy();this.bossPresentation?.destroy();
     this.telegraphs?.cancelAll();
     this.skillAudio?.stopAll?.();
     this.tweens.pauseAll();
@@ -1390,6 +1359,7 @@ export class GameScene extends Phaser.Scene {
     if (this.cleaned) return;
     this.cleaned = true;
     this.ended = true; // Destroying a ward/movement effect must not deal shutdown damage.
+    this.cutscenes?.destroy();this.bossController?.destroy();this.bossPresentation?.destroy();
     this.pauseSession?.overlay?.remove();this.pauseSession=null;
     if(this.onViewportResize)this.scale.off('resize',this.onViewportResize);
     window.removeEventListener('pointerup',this.releaseAttack);

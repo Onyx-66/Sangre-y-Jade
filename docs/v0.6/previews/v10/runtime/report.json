@@ -1,0 +1,1046 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "label": "en/568: real eight-second arrival warning and one horn",
+      "passed": true,
+      "evidence": {
+        "warning": true,
+        "spawnAt": 150,
+        "horn": 1,
+        "point": {
+          "x": 888.6,
+          "y": -180
+        },
+        "view": {
+          "x": -639,
+          "y": -360,
+          "width": 1278,
+          "height": 720,
+          "right": 639,
+          "bottom": 360
+        },
+        "arrow": {
+          "x": 527.4992065429688,
+          "y": 90.82733917236328,
+          "width": 33.0015869140625,
+          "height": 33.00157165527344
+        }
+      }
+    },
+    {
+      "label": "en/568: planned spawn outside actual camera view",
+      "passed": true
+    },
+    {
+      "label": "en/568: actual cinematic freezes time/physics and blocks combat",
+      "passed": true,
+      "evidence": {
+        "tooEarly": false,
+        "active": true,
+        "age": 0.05,
+        "paused": true,
+        "noDamage": true,
+        "noTime": true,
+        "hp": 1400,
+        "manualShots": 0,
+        "remaining": 0
+      }
+    },
+    {
+      "label": "en/568: early tap cannot skip",
+      "passed": true
+    },
+    {
+      "label": "en/568: camera zoom and readable kit banner with one-shot hooks",
+      "passed": true,
+      "evidence": {
+        "zoom": 1.2500000000000002,
+        "name": "Camazotz",
+        "epithet": "the Death Bat",
+        "visible": true,
+        "inside": true,
+        "dir": "ltr",
+        "hooks": {
+          "horn": 1,
+          "stinger": 1,
+          "voice": 1,
+          "music": 1,
+          "phases": [],
+          "death": 0
+        }
+      }
+    },
+    {
+      "label": "en/568: natural completion resumes and restores camera",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "resumed": true,
+        "zoom": 1,
+        "follow": true,
+        "bar": {
+          "x": 210,
+          "y": 86,
+          "width": 346,
+          "height": 44,
+          "inside": true,
+          "notches": 1,
+          "phase": "2",
+          "hp": "700 / 1400",
+          "shield": true,
+          "armor": true,
+          "direction": "ltr",
+          "meter": {
+            "x": 210,
+            "y": 109,
+            "width": 346,
+            "height": 21
+          }
+        }
+      }
+    },
+    {
+      "label": "en/568: phase/shield/armor boss bar inside screen",
+      "passed": true,
+      "evidence": {
+        "x": 210,
+        "y": 86,
+        "width": 346,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 210,
+          "y": 109,
+          "width": 346,
+          "height": 21
+        }
+      }
+    },
+    {
+      "label": "all four current attacks use real pooled warnings, execute, and recover",
+      "passed": true,
+      "evidence": [
+        {
+          "id": "camazotz",
+          "hp": 1400,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 0,
+          "damage": 18,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        },
+        {
+          "id": "zipacna",
+          "hp": 2300,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 0,
+          "damage": 22,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        },
+        {
+          "id": "vucub",
+          "hp": 3300,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 5,
+          "damage": 0,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        },
+        {
+          "id": "ahpuch",
+          "hp": 7800,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 7,
+          "damage": 0,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        }
+      ]
+    },
+    {
+      "label": "temporary attacks preserve current damage, dash and projectile counts",
+      "passed": true,
+      "evidence": [
+        {
+          "id": "camazotz",
+          "hp": 1400,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 0,
+          "damage": 18,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        },
+        {
+          "id": "zipacna",
+          "hp": 2300,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 0,
+          "damage": 22,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        },
+        {
+          "id": "vucub",
+          "hp": 3300,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 5,
+          "damage": 0,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        },
+        {
+          "id": "ahpuch",
+          "hp": 7800,
+          "warning": 0.62,
+          "noEarly": true,
+          "casts": 1,
+          "shots": 7,
+          "damage": 0,
+          "recovery": 1.1999999999999886,
+          "motionResolved": true
+        }
+      ]
+    },
+    {
+      "label": "native Back before one second does not skip",
+      "passed": true
+    },
+    {
+      "label": "real tap skip resumes immediately with a two-second name flash",
+      "passed": true
+    },
+    {
+      "label": "real death delays reward until sequence ends exactly once",
+      "passed": true,
+      "evidence": {
+        "before": true,
+        "delayed": true,
+        "once": true,
+        "rewards": 1,
+        "deathHook": 1
+      }
+    },
+    {
+      "label": "en/1280: real eight-second arrival warning and one horn",
+      "passed": true,
+      "evidence": {
+        "warning": true,
+        "spawnAt": 150,
+        "horn": 1,
+        "point": {
+          "x": 889.6,
+          "y": -180
+        },
+        "view": {
+          "x": -640,
+          "y": -360,
+          "width": 1280,
+          "height": 720,
+          "right": 640,
+          "bottom": 360
+        },
+        "arrow": {
+          "x": 1239.5015869140625,
+          "y": 218.86097717285156,
+          "width": 32.996826171875,
+          "height": 32.996795654296875
+        }
+      }
+    },
+    {
+      "label": "en/1280: planned spawn outside actual camera view",
+      "passed": true
+    },
+    {
+      "label": "en/1280: actual cinematic freezes time/physics and blocks combat",
+      "passed": true,
+      "evidence": {
+        "tooEarly": false,
+        "active": true,
+        "age": 0.05,
+        "paused": true,
+        "noDamage": true,
+        "noTime": true,
+        "hp": 1400,
+        "manualShots": 0,
+        "remaining": 0
+      }
+    },
+    {
+      "label": "en/1280: early tap cannot skip",
+      "passed": true
+    },
+    {
+      "label": "en/1280: camera zoom and readable kit banner with one-shot hooks",
+      "passed": true,
+      "evidence": {
+        "zoom": 1.25,
+        "name": "Camazotz",
+        "epithet": "the Death Bat",
+        "visible": true,
+        "inside": true,
+        "dir": "ltr",
+        "hooks": {
+          "horn": 1,
+          "stinger": 1,
+          "voice": 1,
+          "music": 1,
+          "phases": [],
+          "death": 0
+        }
+      }
+    },
+    {
+      "label": "en/1280: natural completion resumes and restores camera",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "resumed": true,
+        "zoom": 1,
+        "follow": true,
+        "bar": {
+          "x": 360,
+          "y": 112,
+          "width": 560,
+          "height": 44,
+          "inside": true,
+          "notches": 1,
+          "phase": "2",
+          "hp": "700 / 1400",
+          "shield": true,
+          "armor": true,
+          "direction": "ltr",
+          "meter": {
+            "x": 360,
+            "y": 135,
+            "width": 560,
+            "height": 21
+          }
+        }
+      }
+    },
+    {
+      "label": "en/1280: phase/shield/armor boss bar inside screen",
+      "passed": true,
+      "evidence": {
+        "x": 360,
+        "y": 112,
+        "width": 560,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 360,
+          "y": 135,
+          "width": 560,
+          "height": 21
+        }
+      }
+    },
+    {
+      "label": "fr/568: real eight-second arrival warning and one horn",
+      "passed": true,
+      "evidence": {
+        "warning": true,
+        "spawnAt": 150,
+        "horn": 1,
+        "point": {
+          "x": 888.6,
+          "y": -180
+        },
+        "view": {
+          "x": -639,
+          "y": -360,
+          "width": 1278,
+          "height": 720,
+          "right": 639,
+          "bottom": 360
+        },
+        "arrow": {
+          "x": 527.4992065429688,
+          "y": 90.82733917236328,
+          "width": 33.0015869140625,
+          "height": 33.00157165527344
+        }
+      }
+    },
+    {
+      "label": "fr/568: planned spawn outside actual camera view",
+      "passed": true
+    },
+    {
+      "label": "fr/568: actual cinematic freezes time/physics and blocks combat",
+      "passed": true,
+      "evidence": {
+        "tooEarly": false,
+        "active": true,
+        "age": 0.05,
+        "paused": true,
+        "noDamage": true,
+        "noTime": true,
+        "hp": 1400,
+        "manualShots": 0,
+        "remaining": 0
+      }
+    },
+    {
+      "label": "fr/568: early tap cannot skip",
+      "passed": true
+    },
+    {
+      "label": "fr/568: camera zoom and readable kit banner with one-shot hooks",
+      "passed": true,
+      "evidence": {
+        "zoom": 1.2500000000000002,
+        "name": "Camazotz",
+        "epithet": "la Chauve-souris de la Mort",
+        "visible": true,
+        "inside": true,
+        "dir": "ltr",
+        "hooks": {
+          "horn": 1,
+          "stinger": 1,
+          "voice": 1,
+          "music": 1,
+          "phases": [],
+          "death": 0
+        }
+      }
+    },
+    {
+      "label": "fr/568: natural completion resumes and restores camera",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "resumed": true,
+        "zoom": 1,
+        "follow": true,
+        "bar": {
+          "x": 210,
+          "y": 86,
+          "width": 346,
+          "height": 44,
+          "inside": true,
+          "notches": 1,
+          "phase": "2",
+          "hp": "700 / 1400",
+          "shield": true,
+          "armor": true,
+          "direction": "ltr",
+          "meter": {
+            "x": 210,
+            "y": 109,
+            "width": 346,
+            "height": 21
+          }
+        }
+      }
+    },
+    {
+      "label": "fr/568: phase/shield/armor boss bar inside screen",
+      "passed": true,
+      "evidence": {
+        "x": 210,
+        "y": 86,
+        "width": 346,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 210,
+          "y": 109,
+          "width": 346,
+          "height": 21
+        }
+      }
+    },
+    {
+      "label": "fr/1280: real eight-second arrival warning and one horn",
+      "passed": true,
+      "evidence": {
+        "warning": true,
+        "spawnAt": 150,
+        "horn": 1,
+        "point": {
+          "x": 889.6,
+          "y": -180
+        },
+        "view": {
+          "x": -640,
+          "y": -360,
+          "width": 1280,
+          "height": 720,
+          "right": 640,
+          "bottom": 360
+        },
+        "arrow": {
+          "x": 1239.5015869140625,
+          "y": 218.86097717285156,
+          "width": 32.996826171875,
+          "height": 32.996795654296875
+        }
+      }
+    },
+    {
+      "label": "fr/1280: planned spawn outside actual camera view",
+      "passed": true
+    },
+    {
+      "label": "fr/1280: actual cinematic freezes time/physics and blocks combat",
+      "passed": true,
+      "evidence": {
+        "tooEarly": false,
+        "active": true,
+        "age": 0.05,
+        "paused": true,
+        "noDamage": true,
+        "noTime": true,
+        "hp": 1400,
+        "manualShots": 0,
+        "remaining": 0
+      }
+    },
+    {
+      "label": "fr/1280: early tap cannot skip",
+      "passed": true
+    },
+    {
+      "label": "fr/1280: camera zoom and readable kit banner with one-shot hooks",
+      "passed": true,
+      "evidence": {
+        "zoom": 1.25,
+        "name": "Camazotz",
+        "epithet": "la Chauve-souris de la Mort",
+        "visible": true,
+        "inside": true,
+        "dir": "ltr",
+        "hooks": {
+          "horn": 1,
+          "stinger": 1,
+          "voice": 1,
+          "music": 1,
+          "phases": [],
+          "death": 0
+        }
+      }
+    },
+    {
+      "label": "fr/1280: natural completion resumes and restores camera",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "resumed": true,
+        "zoom": 1,
+        "follow": true,
+        "bar": {
+          "x": 360,
+          "y": 112,
+          "width": 560,
+          "height": 44,
+          "inside": true,
+          "notches": 1,
+          "phase": "2",
+          "hp": "700 / 1400",
+          "shield": true,
+          "armor": true,
+          "direction": "ltr",
+          "meter": {
+            "x": 360,
+            "y": 135,
+            "width": 560,
+            "height": 21
+          }
+        }
+      }
+    },
+    {
+      "label": "fr/1280: phase/shield/armor boss bar inside screen",
+      "passed": true,
+      "evidence": {
+        "x": 360,
+        "y": 112,
+        "width": 560,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 360,
+          "y": 135,
+          "width": 560,
+          "height": 21
+        }
+      }
+    },
+    {
+      "label": "ar/568: real eight-second arrival warning and one horn",
+      "passed": true,
+      "evidence": {
+        "warning": true,
+        "spawnAt": 150,
+        "horn": 1,
+        "point": {
+          "x": 888.6,
+          "y": -180
+        },
+        "view": {
+          "x": -639,
+          "y": -360,
+          "width": 1278,
+          "height": 720,
+          "right": 639,
+          "bottom": 360
+        },
+        "arrow": {
+          "x": 527.4992065429688,
+          "y": 90.82733917236328,
+          "width": 33.0015869140625,
+          "height": 33.00157165527344
+        }
+      }
+    },
+    {
+      "label": "ar/568: planned spawn outside actual camera view",
+      "passed": true
+    },
+    {
+      "label": "ar/568: actual cinematic freezes time/physics and blocks combat",
+      "passed": true,
+      "evidence": {
+        "tooEarly": false,
+        "active": true,
+        "age": 0.05,
+        "paused": true,
+        "noDamage": true,
+        "noTime": true,
+        "hp": 1400,
+        "manualShots": 0,
+        "remaining": 0
+      }
+    },
+    {
+      "label": "ar/568: early tap cannot skip",
+      "passed": true
+    },
+    {
+      "label": "ar/568: camera zoom and readable kit banner with one-shot hooks",
+      "passed": true,
+      "evidence": {
+        "zoom": 1.2500000000000002,
+        "name": "كامازوتز",
+        "epithet": "خفاش الموت",
+        "visible": true,
+        "inside": true,
+        "dir": "rtl",
+        "hooks": {
+          "horn": 1,
+          "stinger": 1,
+          "voice": 1,
+          "music": 1,
+          "phases": [],
+          "death": 0
+        }
+      }
+    },
+    {
+      "label": "ar/568: natural completion resumes and restores camera",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "resumed": true,
+        "zoom": 1,
+        "follow": true,
+        "bar": {
+          "x": 210,
+          "y": 86,
+          "width": 346,
+          "height": 44,
+          "inside": true,
+          "notches": 1,
+          "phase": "2",
+          "hp": "700 / 1400",
+          "shield": true,
+          "armor": true,
+          "direction": "ltr",
+          "meter": {
+            "x": 210,
+            "y": 109,
+            "width": 346,
+            "height": 21
+          }
+        }
+      }
+    },
+    {
+      "label": "ar/568: phase/shield/armor boss bar inside screen",
+      "passed": true,
+      "evidence": {
+        "x": 210,
+        "y": 86,
+        "width": 346,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 210,
+          "y": 109,
+          "width": 346,
+          "height": 21
+        }
+      }
+    },
+    {
+      "label": "ar/1280: real eight-second arrival warning and one horn",
+      "passed": true,
+      "evidence": {
+        "warning": true,
+        "spawnAt": 150,
+        "horn": 1,
+        "point": {
+          "x": 889.6,
+          "y": -180
+        },
+        "view": {
+          "x": -640,
+          "y": -360,
+          "width": 1280,
+          "height": 720,
+          "right": 640,
+          "bottom": 360
+        },
+        "arrow": {
+          "x": 1239.5015869140625,
+          "y": 218.86097717285156,
+          "width": 32.996826171875,
+          "height": 32.996795654296875
+        }
+      }
+    },
+    {
+      "label": "ar/1280: planned spawn outside actual camera view",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: actual cinematic freezes time/physics and blocks combat",
+      "passed": true,
+      "evidence": {
+        "tooEarly": false,
+        "active": true,
+        "age": 0.05,
+        "paused": true,
+        "noDamage": true,
+        "noTime": true,
+        "hp": 1400,
+        "manualShots": 0,
+        "remaining": 0
+      }
+    },
+    {
+      "label": "ar/1280: early tap cannot skip",
+      "passed": true
+    },
+    {
+      "label": "ar/1280: camera zoom and readable kit banner with one-shot hooks",
+      "passed": true,
+      "evidence": {
+        "zoom": 1.25,
+        "name": "كامازوتز",
+        "epithet": "خفاش الموت",
+        "visible": true,
+        "inside": true,
+        "dir": "rtl",
+        "hooks": {
+          "horn": 1,
+          "stinger": 1,
+          "voice": 1,
+          "music": 1,
+          "phases": [],
+          "death": 0
+        }
+      }
+    },
+    {
+      "label": "ar/1280: natural completion resumes and restores camera",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "resumed": true,
+        "zoom": 1,
+        "follow": true,
+        "bar": {
+          "x": 360,
+          "y": 112,
+          "width": 560,
+          "height": 44,
+          "inside": true,
+          "notches": 1,
+          "phase": "2",
+          "hp": "700 / 1400",
+          "shield": true,
+          "armor": true,
+          "direction": "ltr",
+          "meter": {
+            "x": 360,
+            "y": 135,
+            "width": 560,
+            "height": 21
+          }
+        }
+      }
+    },
+    {
+      "label": "ar/1280: phase/shield/armor boss bar inside screen",
+      "passed": true,
+      "evidence": {
+        "x": 360,
+        "y": 112,
+        "width": 560,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 360,
+          "y": 135,
+          "width": 560,
+          "height": 21
+        }
+      }
+    },
+    {
+      "label": "568: boss HUD position identical in EN/FR/AR",
+      "passed": true
+    },
+    {
+      "label": "1280: boss HUD position identical in EN/FR/AR",
+      "passed": true
+    },
+    {
+      "label": "zero browser/HTTP errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "label": "zero console warnings / missing assets",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "captures": [
+    "en-568x320-warning.png",
+    "en-568x320-entrance.png",
+    "en-568x320-bar.png",
+    "en-1280x720-warning.png",
+    "en-1280x720-entrance.png",
+    "en-1280x720-bar.png",
+    "fr-568x320-warning.png",
+    "fr-568x320-entrance.png",
+    "fr-568x320-bar.png",
+    "fr-1280x720-warning.png",
+    "fr-1280x720-entrance.png",
+    "fr-1280x720-bar.png",
+    "ar-568x320-warning.png",
+    "ar-568x320-entrance.png",
+    "ar-568x320-bar.png",
+    "ar-1280x720-warning.png",
+    "ar-1280x720-entrance.png",
+    "ar-1280x720-bar.png",
+    "boss-bar-contact.png",
+    "boss-entrance-contact.png",
+    "boss-warning-contact.png"
+  ],
+  "evidence": [
+    {
+      "locale": "en",
+      "width": 568,
+      "height": 320,
+      "bar": {
+        "x": 210,
+        "y": 86,
+        "width": 346,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 210,
+          "y": 109,
+          "width": 346,
+          "height": 21
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "height": 720,
+      "bar": {
+        "x": 360,
+        "y": 112,
+        "width": 560,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 360,
+          "y": 135,
+          "width": 560,
+          "height": 21
+        }
+      }
+    },
+    {
+      "locale": "fr",
+      "width": 568,
+      "height": 320,
+      "bar": {
+        "x": 210,
+        "y": 86,
+        "width": 346,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 210,
+          "y": 109,
+          "width": 346,
+          "height": 21
+        }
+      }
+    },
+    {
+      "locale": "fr",
+      "width": 1280,
+      "height": 720,
+      "bar": {
+        "x": 360,
+        "y": 112,
+        "width": 560,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 360,
+          "y": 135,
+          "width": 560,
+          "height": 21
+        }
+      }
+    },
+    {
+      "locale": "ar",
+      "width": 568,
+      "height": 320,
+      "bar": {
+        "x": 210,
+        "y": 86,
+        "width": 346,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 210,
+          "y": 109,
+          "width": 346,
+          "height": 21
+        }
+      }
+    },
+    {
+      "locale": "ar",
+      "width": 1280,
+      "height": 720,
+      "bar": {
+        "x": 360,
+        "y": 112,
+        "width": 560,
+        "height": 44,
+        "inside": true,
+        "notches": 1,
+        "phase": "2",
+        "hp": "700 / 1400",
+        "shield": true,
+        "armor": true,
+        "direction": "ltr",
+        "meter": {
+          "x": 360,
+          "y": 135,
+          "width": 560,
+          "height": 21
+        }
+      }
+    }
+  ],
+  "wallSeconds": 36.23514479999999
+}

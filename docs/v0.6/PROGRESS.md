@@ -11,6 +11,7 @@
 - [x] V6 — Real weighted run loading and recovery
 - [x] V8 — Complete enemy roster and behaviours
 - [x] V9 — Generated enemy frames, effect stills and animation integration
+- [x] V10 — Boss controller, entry cinematics and fairness framework
 
 ## Prompt 01 — Replacing skills — 2026-10-04
 
@@ -322,3 +323,37 @@ Evidence and reproduction details: `ENEMY_VISUALS.md`, `enemy-art-sources.json`,
 - The unrelated unfinished French audit remains the sole worktree test failure; the V9-only commit tests and build pass. Prior menu/editor/translation/artwork is neither discarded nor completed here.
 - The enemy-only bot explicitly reports/skips three unregistered companion FX while keeping companion mechanics; it does not suppress console warnings. No enemy/hero missing-file warnings occur. Audio is muted in deterministic tests and retains V8's old-sound fallback in production; unfinished companion FX/audio are outside this prompt, so no globally warning-free audible run is claimed.
 - No Android device/emulator or audible manual test was available; no mobile/native FPS claim. Map geometry, boss sheets, new recordings and earlier pacing work remain for their respective prompts.
+
+## V10 — Boss controller, cinematics and fairness — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v10`.
+
+### Changed
+
+- Compiled authoritative boss definitions and registered a small temporary adapter for the four current attacks. Added HP-threshold phases, scheduling through pooled Telegraph warnings, recovery/cooldown rules, optional transformation/enrage hooks, fixed-radius arenas and serial-safe death/reward completion. Removed the old inline boss pattern/tween-warning path.
+- Set the exact JSON HP/contact damage values; preserved current attack geometry/projectile numbers, ground-only aliases and alive caps. All damaging boss warnings are at least 0.5s, big-cast recovery at least 1.2s and single-hit damage at most 80 even after vulnerability or source-body reuse. Stub coverage includes the future Final Rite's three safe circles; new boss abilities remain for V11.
+- Added stepped 5/5/6/8s entry cinematics with relative camera pan/zoom, letterbox/HUD fades, existing-kit two-second name/epithet banners and sound/voice/music hooks. Entrances freeze gameplay time, physics, timers, tweens, ally/input combat and damage including DOT. Tap/Back skip after one second, the shortened accessibility preference, reduced motion, resize, abort and shutdown restore state safely.
+- Added eight-second arrival warnings with physical edge arrows and an ornate left-to-right boss meter with notches, phase icon, HP, armor/shield and protection data. Reused the `boss-bar` id and optional layout synchronization; updated only the old HUD regression's fill-origin assertion. EN/FR/AR copy uses existing shared translations where available.
+- No raster/audio assets, dependencies, native files, APK, package-version change, downloads or push. Preserved earlier unfinished menu/editor/localization/artwork; staged only V10 hunks. Progress/decisions and `BOSS_FRAMEWORK.md` document the conservative choices and explicit V11 limits.
+
+### Test results
+
+| Command / fixture | Result |
+| --- | --- |
+| `node --test tests/boss-framework.test.js tests/enemies-v06.test.js tests/skills-foundations.test.js` | 74/74 pass, including 24 new V10 tests; 0.265s runner |
+| `node scripts/v06-boss-framework-playtest.mjs` in shared worktree | 51 checks pass, 21 captures/contact sheets, 36.24s; EN/FR/AR at 568x320 and 1280x720; no browser/HTTP errors or console/missing-asset warnings |
+| Same command in final indexed snapshot, `SYJ_BOSS_OUTPUT=docs/v0.6/previews/v10/staged/runtime` | 51 checks pass, 21 captures/contact sheets, 23.61s; actual warning/spawn/entry, damage/input guards, restoration, all four old attacks, skip and one-shot death/reward |
+| `npm run check` in final indexed snapshot | 445/445 pass, no skips; 2.588s runner; production build passes, 314 modules, 15.67s Vite |
+| `npm run check` in shared worktree | 475/476 pass, no skips; 3.616s runner; only the earlier French `MANA` / `Cacao` audit fails, so its `&&` build is skipped |
+| `npm run build` in shared worktree | Pass, 325 modules, 14.55s Vite; existing large-chunk advisory only |
+| `SYJ_HUD_OUTPUT=docs/v0.6/previews/v10/staged/hud`, then `npm run test:hud` | 497 checks pass; 32 layout captures plus card evidence; no overlap/overflow, LTR geometry and locale parity |
+| `SYJ_LOADING_OUTPUT=docs/v0.6/previews/v10/staged/loading`, then `npm run test:loading` | 62 checks pass, eight captures; real loading, retries, optional failures, Back and EN/FR/AR |
+| `git diff --cached --check` and scoped-file audit | Pass; no protected, native, audio, branding or unrelated UI/editor paths staged |
+
+All boss entrance, warning and bar contacts were visually inspected. Tests exercise exact threshold crossings and jumps, cancellations/reuse, accepted vs rejected cooldowns, invulnerability/DOT, optional enrage, damage caps, taunt/blind aiming, frozen choices, relative camera/restore/resize, skip preference, arrival delays/cap retries, arenas/safe circles and death cleanup. Source-only verification uses an ignored indexed snapshot, never resets the shared working files.
+
+### Open issues
+
+- Bespoke entry choreography, new boss attacks/16-frame sheets/effect art and developer-provided horn/stinger/voice recordings are deliberately not implemented by this framework prompt. Existing attacks/art/audio remain usable; hooks are ready for the next step.
+- Neither timed enrage nor phase transformation duration is given in the JSON, so no live timer/window was invented. Final Rite safe zones are stub-tested foundation, not a new enabled boss attack.
+- Earlier uncommitted French untranslated-key and pacing work remains outside scope. FR/AR boss copy needs native review. Browser audio is muted; no audible, Android/emulator or native FPS validation is claimed.

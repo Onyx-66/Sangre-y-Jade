@@ -1,3 +1,5 @@
+@import './ui/bosses.css';
+
 :root {
   color-scheme: dark;
   --safe-top: max(env(safe-area-inset-top, 0px), var(--native-safe-top, 0px));

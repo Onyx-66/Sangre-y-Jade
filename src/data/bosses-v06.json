@@ -1,0 +1,328 @@
+[
+  {
+    "id": "camazotz",
+    "name": "Camazotz",
+    "epithet": "the Death Bat",
+    "hp": 1400,
+    "old_hp": 850,
+    "damage": 18,
+    "arrives": "2:30 (10-min mode) / 5:00 (20-min mode)",
+    "entry": "Night falls early: the screen darkens, hundreds of bat silhouettes gather above the arena, then one huge shape dives into the centre. 5 s.",
+    "phases": [
+      {
+        "name": "Phase 1 (100-50%)",
+        "abilities": [
+          {
+            "name": "Sonic Screech",
+            "telegraph": "cone 90 degrees, r 320, 0.8 s",
+            "effect": "18 dmg, knockback 200, confuses 1 s",
+            "cd": 7,
+            "id": "sonic-screech",
+            "cooldown": 7
+          },
+          {
+            "name": "Bat Swarm",
+            "telegraph": "6 shadow markers in a V",
+            "effect": "summons 6 Cave Bats",
+            "cd": 12,
+            "id": "bat-swarm",
+            "cooldown": 12
+          },
+          {
+            "name": "Blood Dive",
+            "telegraph": "line 600 px, 0.7 s",
+            "effect": "dash at speed 520, 24 dmg, leaves a blood trail for 3 s (6 dps bleed zone)",
+            "cd": 9,
+            "id": "blood-dive",
+            "cooldown": 9
+          }
+        ],
+        "index": 0,
+        "threshold": 1,
+        "speedMult": 1
+      },
+      {
+        "name": "Phase 2 (below 50%)",
+        "abilities": [
+          {
+            "name": "Eclipse",
+            "telegraph": "screen darkens 1 s",
+            "effect": "10 s: only a radius of 280 px around the player is visible; Camazotz eyes glow; bats strike from the dark",
+            "cd": 22,
+            "id": "eclipse",
+            "cooldown": 22
+          },
+          {
+            "name": "Twin Dive",
+            "telegraph": "two crossing lines 0.8 s",
+            "effect": "two simultaneous Blood Dives; speed +15% overall",
+            "cd": 11,
+            "id": "twin-dive",
+            "cooldown": 11
+          }
+        ],
+        "index": 1,
+        "threshold": 0.5,
+        "speedMult": 1.15
+      }
+    ],
+    "voice": "Screeching, inhuman, echoing.",
+    "sheet": "boss-camazotz",
+    "entryDuration": 5,
+    "arrival": {
+      "quick": 150,
+      "full": 300
+    }
+  },
+  {
+    "id": "zipacna",
+    "name": "Zipacna",
+    "epithet": "the Earth-Shaker",
+    "hp": 2300,
+    "old_hp": 1450,
+    "damage": 26,
+    "arrives": "5:00 (10-min mode) / 10:00 (20-min mode)",
+    "entry": "The ground cracks across the whole arena, dust and rocks rise, and Zipacna climbs out of the earth in the centre. 5 s.",
+    "phases": [
+      {
+        "name": "Phase 1 (100-50%)",
+        "abilities": [
+          {
+            "name": "Stone Slam",
+            "telegraph": "circle r 150, 0.9 s",
+            "effect": "26 dmg, knockback 220",
+            "cd": 6,
+            "id": "stone-slam",
+            "cooldown": 6
+          },
+          {
+            "name": "Rock Rain",
+            "telegraph": "8 shadow markers r 55, 1.0 s",
+            "effect": "8 boulders, 20 dmg each",
+            "cd": 9,
+            "id": "rock-rain",
+            "cooldown": 9
+          },
+          {
+            "name": "Fissure Line",
+            "telegraph": "line 700 x 70, 0.8 s",
+            "effect": "cracks erupt in sequence over 1.2 s, 24 dmg",
+            "cd": 10,
+            "id": "fissure-line",
+            "cooldown": 10
+          }
+        ],
+        "index": 0,
+        "threshold": 1,
+        "speedMult": 1
+      },
+      {
+        "name": "Phase 2 (below 50%)",
+        "abilities": [
+          {
+            "name": "Stone Armor",
+            "telegraph": "3 glowing heart stones appear (150 HP each)",
+            "effect": "Zipacna takes 50% less damage until all 3 are destroyed",
+            "cd": 0,
+            "id": "stone-armor",
+            "cooldown": 0
+          },
+          {
+            "name": "Avalanche",
+            "telegraph": "dust and shadows at the arena edge",
+            "effect": "continuous rockfalls at the edges, 16 dmg",
+            "cd": 4,
+            "id": "avalanche",
+            "cooldown": 4
+          }
+        ],
+        "index": 1,
+        "threshold": 0.5,
+        "speedMult": 1
+      }
+    ],
+    "voice": "Deep, rumbling, slow.",
+    "sheet": "boss-zipacna",
+    "entryDuration": 5,
+    "arrival": {
+      "quick": 300,
+      "full": 600
+    }
+  },
+  {
+    "id": "vucub",
+    "name": "Vucub Caquix",
+    "epithet": "the False Sun",
+    "hp": 3300,
+    "old_hp": 2100,
+    "damage": 30,
+    "arrives": "7:30 (10-min mode) / 15:00 (20-min mode)",
+    "entry": "A second sun rises over the temple and blinds the screen white for a moment; Vucub Caquix lands in a burst of golden feathers. 6 s.",
+    "phases": [
+      {
+        "name": "Phase 1 (100-60%)",
+        "abilities": [
+          {
+            "name": "Sunbeam Sweep",
+            "telegraph": "thin line 1 s then a beam 520 x 50",
+            "effect": "rotates 180 degrees over 4 s, 20 dmg per 0.3 s of contact",
+            "cd": 11,
+            "id": "sunbeam-sweep",
+            "cooldown": 11
+          },
+          {
+            "name": "Feather Barrage",
+            "telegraph": "feathers glow 0.5 s",
+            "effect": "fan of 9 feathers, speed 260, 12 dmg",
+            "cd": 5,
+            "id": "feather-barrage",
+            "cooldown": 5
+          },
+          {
+            "name": "Solar Flare Rings",
+            "telegraph": "boss glows 0.6 s",
+            "effect": "3 expanding rings with 2 safe gaps each, 20 dmg",
+            "cd": 9,
+            "id": "solar-flare-rings",
+            "cooldown": 9
+          }
+        ],
+        "index": 0,
+        "threshold": 1,
+        "speedMult": 1
+      },
+      {
+        "name": "Phase 2 (60-25%)",
+        "abilities": [
+          {
+            "name": "Second Sun",
+            "telegraph": "3 orbs orbit the boss",
+            "effect": "orbs (80 HP each, shootable) launch slowly homing, 22 dmg; destroying them stuns the boss 1.5 s",
+            "cd": 16,
+            "id": "second-sun",
+            "cooldown": 16
+          }
+        ],
+        "index": 1,
+        "threshold": 0.6,
+        "speedMult": 1
+      },
+      {
+        "name": "Phase 3 (below 25%)",
+        "abilities": [
+          {
+            "name": "Zenith",
+            "telegraph": "boss flies up (invulnerable), sunbeams mark the player trail 4 s, then a 1.2 s circle r 200",
+            "effect": "crashes down: 34 dmg",
+            "cd": 20,
+            "id": "zenith",
+            "cooldown": 20
+          }
+        ],
+        "index": 2,
+        "threshold": 0.25,
+        "speedMult": 1
+      }
+    ],
+    "voice": "Boastful, bright, arrogant.",
+    "sheet": "boss-vucub",
+    "entryDuration": 6,
+    "arrival": {
+      "quick": 450,
+      "full": 900
+    }
+  },
+  {
+    "id": "ahpuch",
+    "name": "Ah Puch",
+    "epithet": "Lord of Xibalba",
+    "hp": 7800,
+    "old_hp": 5200,
+    "damage": 34,
+    "arrives": "10:00 (10-min mode) / 20:00 (20-min mode) - final boss",
+    "entry": "The underworld gate opens in the arena floor, green light climbs the sky, music drops to a drone, and a skeletal lord rises with a slow voice. 8 s, longest entrance.",
+    "phases": [
+      {
+        "name": "Phase 1 (100-66%)",
+        "abilities": [
+          {
+            "name": "Death Gaze",
+            "telegraph": "tracking line charges 1.5 s",
+            "effect": "laser 520 long, 28 dmg per 0.3 s tick for 1 s",
+            "cd": 9,
+            "id": "death-gaze",
+            "cooldown": 9
+          },
+          {
+            "name": "Bone Spear Ring",
+            "telegraph": "ring of markers r 220, 0.8 s",
+            "effect": "12 spears erupt, then a second ring offset by half a step, 20 dmg each",
+            "cd": 8,
+            "id": "bone-spear-ring",
+            "cooldown": 8
+          },
+          {
+            "name": "Soul Drain",
+            "telegraph": "purple whirl r 380, 0.6 s",
+            "effect": "pulls the player 2 s, 10 dmg and heals the boss",
+            "cd": 15,
+            "id": "soul-drain",
+            "cooldown": 15
+          },
+          {
+            "name": "Summon Lords",
+            "telegraph": "two portals 1 s",
+            "effect": "summons 2 elite Hollow Priests",
+            "cd": 24,
+            "id": "summon-lords",
+            "cooldown": 24
+          }
+        ],
+        "index": 0,
+        "threshold": 1,
+        "speedMult": 1
+      },
+      {
+        "name": "Phase 2 (66-33%)",
+        "abilities": [
+          {
+            "name": "Xibalba Shift",
+            "telegraph": "green fog rises 2 s",
+            "effect": "fog fills the arena (8 dps outside light); 4 safe light circles r 120 move every 15 s",
+            "cd": 0,
+            "id": "xibalba-shift",
+            "cooldown": 0
+          }
+        ],
+        "index": 1,
+        "threshold": 0.66,
+        "speedMult": 1
+      },
+      {
+        "name": "Phase 3 (below 33%)",
+        "abilities": [
+          {
+            "name": "Final Rite",
+            "telegraph": "5 s charge, 3 safe circles r 130",
+            "effect": "blast 80 dmg to anyone outside the circles; first one 6 s into the phase, then every 20 s; boss speed +25%",
+            "cd": 20,
+            "id": "final-rite",
+            "cooldown": 20,
+            "safeCircleCount": 3,
+            "safeRadius": 130
+          }
+        ],
+        "index": 2,
+        "threshold": 0.33,
+        "speedMult": 1.25
+      }
+    ],
+    "voice": "Whispering, cold, hollow, layered.",
+    "sheet": "boss-ahpuch",
+    "entryDuration": 8,
+    "arrival": {
+      "quick": 600,
+      "full": 1200
+    }
+  }
+]

@@ -50,7 +50,10 @@ function measureHud(){
   dashKey:k,dashButton:d,dashFont:{size:getComputedStyle(key).fontSize,family:getComputedStyle(key).fontFamily,spacing:getComputedStyle(key).letterSpacing},
   keyLabels:select('[data-skill] .key').map(el=>el.textContent),
   ltr:[...select('.hud,.hud .bar,.hud .bar label,.hud .key,.hud-counter b')].every(el=>getComputedStyle(el).direction==='ltr'),
-  barsLtr:select('.hud .bar,.boss-bar').every(el=>Math.abs(rect(el.querySelector('span')).left-(rect(el).left+parseFloat(getComputedStyle(el).borderLeftWidth)))<.5),
+  barsLtr:select('.hud .bar,.boss-bar').every(el=>{
+   const inset=el.matches('.boss-bar')&&el.parentElement.dataset.bossFramework?3:parseFloat(getComputedStyle(el).borderLeftWidth);
+   return Math.abs(rect(el.querySelector('span')).left-(rect(el).left+inset))<.5;
+  }),
   lockText:document.querySelector('[data-ally-level]').textContent,
   question:document.querySelector('[data-support]').textContent.includes('?'),
   lockOverflow:document.querySelector('[data-ally-level]').scrollWidth>document.querySelector('[data-ally-level]').clientWidth,

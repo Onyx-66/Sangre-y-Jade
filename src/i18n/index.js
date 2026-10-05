@@ -7,9 +7,10 @@ import { skillsHudMessages } from './skills-hud.js';
 import { v06Messages } from './v06.js';
 import { loadingMessages } from './loading-v06.js';
 import { enemyV06Messages } from './enemies-v06.js';
+import { bossV06Messages } from './bosses-v06.js';
 export const LOCALES=['en','fr','ar'];
 const dictionaries={en:new Map(),fr:new Map(),ar:new Map()};
-for(const [en,fr,ar] of [...messages,...skillMessages,...extraMessages,...v05Messages,...skillsHudMessages,...v06Messages,...loadingMessages,...enemyV06Messages]){dictionaries.en.set(en,en);dictionaries.fr.set(en,fr);dictionaries.ar.set(en,ar);}
+for(const [en,fr,ar] of [...messages,...skillMessages,...extraMessages,...v05Messages,...skillsHudMessages,...v06Messages,...loadingMessages,...enemyV06Messages,...bossV06Messages]){dictionaries.en.set(en,en);dictionaries.fr.set(en,fr);dictionaries.ar.set(en,ar);}
 export const westernDigits=value=>String(value).replace(/[٠-٩]/g,c=>String(c.charCodeAt(0)-0x660)).replace(/[۰-۹]/g,c=>String(c.charCodeAt(0)-0x6f0)).replace(/٫/g,'.').replace(/٪/g,'%');
 let language='en';
 export const getLanguage=()=>language;

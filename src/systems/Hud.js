@@ -6,6 +6,7 @@ import { skillDescription } from '../data/heroes.js';
 import { SLOT_RULES } from './SkillDraft.js';
 import { passiveStateMarkup, passiveStateText, levelPips, cardKind, escapeHtml, INNATE_HUD } from './PassiveState.js';
 import { renderSettingsPanel, controlsMarkup } from '../ui/SettingsPanel.js';
+import { BossBar } from '../ui/BossPresentation.js';
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
 export class Hud {
@@ -57,8 +58,9 @@ export class Hud {
     this.cacao = this.el.querySelector('[data-cacao]');
     this.kills = this.el.querySelector('[data-kills]');
     this.boss = this.el.querySelector('.boss-wrap');
-    this.bossName = this.el.querySelector('.boss-name');
-    this.bossFill = this.el.querySelector('.boss-bar span');
+    this.bossBar = new BossBar(this.boss);
+    this.bossName = this.bossBar.name;
+    this.bossFill = this.bossBar.fill;
     this.skillEls = [...this.el.querySelectorAll('[data-skill]')];
     this.passiveEls = [...this.el.querySelectorAll('[data-passive]')];
     this.tooltip = this.el.querySelector('.skill-tooltip');
@@ -286,10 +288,9 @@ export class Hud {
     else this.cooldowns[index] = ratio;
   }
 
-  setBoss(name, ratio) {
-    this.boss.hidden = false;
-    this.bossName.textContent = t(name);
-    this.bossFill.style.width = `${clamp(ratio, 0, 1) * 100}%`;
+  setBoss(name, ratio, model) {
+    this.bossBar.update(name, ratio, model);
+    this.layoutRuntime?.syncVisibility('boss-bar');
   }
 
   clearBoss() {

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ENEMIES } from '../src/data/world.js';
+import { ENEMIES, BOSSES } from '../src/data/world.js';
+import { BossController } from '../src/systems/BossController.js';
 import { HEROES } from '../src/data/heroes.js';
 import { Telegraph, telegraphContains } from '../src/systems/Telegraph.js';
 import { EnemyHealthBars, healthBarModel } from '../src/systems/EnemyHealthBars.js';
@@ -171,10 +172,12 @@ test('spawn emergence prevents attacks/movement without permanent inertia',()=>{
 });
 
 test('all current boss patterns use pooled warnings and cancel on stun',()=>{
- for(const pattern of ['dash','quake','sun','final']){
-  const scene=makeScene(),boss=addEnemy(scene,{isBoss:true,pattern,patternTimer:.001,hp:1000,maxHp:1000,dashing:0}),{fx}=warnings(scene);
-  scene.activeBoss=boss;scene.updateBoss(boss,.1,-100,0,100);assert.equal(fx.live.size,1,pattern);assert.equal(scene.enemyProjectiles.countActive(),0);
-  boss.setData('stunUntil',scene.elapsed+1);fx.update(1);assert.equal(fx.live.size,0);assert.equal(scene.enemyProjectiles.countActive(),0);assert.equal(boss.getData('dashing'),0);
+ for(const data of BOSSES){
+  const scene=makeScene(),boss=addEnemy(scene,{isBoss:true,bossId:data.id,hp:1000,maxHp:1000}),{fx}=warnings(scene);
+  scene.activeBoss=boss;scene.bossController=new BossController(scene,{graphics:null});scene.bossController.init(boss,data,{initialDelay:0});
+  scene.updateBoss(boss,.1);assert.equal(fx.live.size,1,data.pattern);assert.equal(scene.enemyProjectiles.countActive(),0);
+  boss.setData('stunUntil',scene.elapsed+1);fx.update(1);assert.equal(fx.live.size,0);assert.equal(scene.enemyProjectiles.countActive(),0);
+  assert.equal(scene.bossController.state.motion,null);assert.equal(scene.bossController.state.busy,null);
  }
 });
 

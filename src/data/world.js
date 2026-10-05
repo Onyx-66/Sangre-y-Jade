@@ -1,4 +1,5 @@
 import baseEnemies from './enemies-v06.json' with { type: 'json' };
+import bossDefinitions from './bosses-v06.json' with { type: 'json' };
 
 export const MAPS = [
   {
@@ -45,12 +46,10 @@ export const ENEMIES=Object.fromEntries(Object.entries(baseEnemies).map(([id,dat
   weight:({shade:6,bat:4,jaguar:2,serpent:3,priest:2})[id]||1,
   ranged:['priest','jungle_wasp','bone_archer','moon_cultist'].includes(id)}]));
 
-export const BOSSES = [
-  { id: 'camazotz', name: 'Camazotz, the Death Bat', icon: '🦇', hp: 850, speed: 112, damage: 16, color: 0x755982, pattern: 'dash' },
-  { id: 'zipacna', name: 'Zipacna, the Earth-Shaker', icon: '🐊', hp: 1450, speed: 68, damage: 21, color: 0x8c7149, pattern: 'quake' },
-  { id: 'vucub', name: 'Vucub Caquix, the False Sun', icon: '☀', hp: 2100, speed: 82, damage: 25, color: 0xc95b3f, pattern: 'sun' },
-  { id: 'ahpuch', name: 'Ah Puch, Lord of Xibalba', icon: '☠', hp: 5200, speed: 76, damage: 30, color: 0x56d6a4, pattern: 'final' },
-];
+const bossLegacyLook={camazotz:{icon:'🦇',speed:112,color:0x755982,pattern:'dash'},
+ zipacna:{icon:'🐊',speed:68,color:0x8c7149,pattern:'quake'},vucub:{icon:'☀',speed:82,color:0xc95b3f,pattern:'sun'},
+ ahpuch:{icon:'☠',speed:76,color:0x56d6a4,pattern:'final'}};
+export const BOSSES=bossDefinitions.map(data=>({...bossLegacyLook[data.id],...data,definitionId:data.id}));
 
 export const GEAR = [
   { id: 'jade-pendant', name: 'Jade Pendant', slot: 'Neck', icon: '◆', description: 'Healing pickups restore 35% more HP.', apply: { healing: 0.35 } },

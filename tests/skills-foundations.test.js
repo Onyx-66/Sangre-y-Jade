@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { HEROES } from '../src/data/heroes.js';
+import { BOSSES } from '../src/data/world.js';
+import { BossController } from '../src/systems/BossController.js';
+import { Telegraph } from '../src/systems/Telegraph.js';
 import { ACTIVE_HANDLERS, INNATE_PASSIVES } from '../src/skills/index.js';
 import { EventBus, PassiveSystem } from '../src/skills/PassiveSystem.js';
 import { applyStatus, skillContext, damageArea, cone, lineStrike, spawnProjectile, orbitBlades, zone, summon, updateSkillEffects } from '../src/skills/common.js';
@@ -93,7 +96,9 @@ test('hiddenUntil makes non-boss enemies wander without attacking; bosses still 
   assert.equal(enemy.body.velocity.x, 100);
   assert.equal(scene.enemyProjectiles.countActive(), 0);
   assert.equal(scene.stats.hp, 100);
-  const boss = addEnemy(scene, { isBoss: true, pattern: 'dash', patternTimer: 2 });
+  const boss = addEnemy(scene, { isBoss: true, bossId: 'camazotz' });
+  scene.bossController = new BossController(scene, { graphics: null });
+  scene.bossController.init(boss, BOSSES[0], { initialDelay: 2 });
   updateEnemy(scene, boss, .1);
   assert.equal(boss.body.velocity.x, -100);
   scene.elapsed = 4;
@@ -133,10 +138,20 @@ test('silence prevents ranged and boss skills but allows contact damage and move
   assert.ok(Math.hypot(enemy.body.velocity.x, enemy.body.velocity.y) > 0);
   scene.touchEnemy(enemy);
   assert.equal(scene.stats.hp, 80);
-  const boss = addEnemy(scene, { isBoss: true, pattern: 'sun', patternTimer: .01 });
+  const boss = addEnemy(scene, { isBoss: true, bossId: 'vucub' });
+  scene.telegraphs = new Telegraph(scene, { graphics: null, sound: () => {} });
+  scene.bossController = new BossController(scene, { graphics: null });
+  scene.bossController.init(boss, BOSSES[2], { initialDelay: 0 });
   applyStatus(scene, boss, 'silence', 1);
   updateEnemy(scene, boss, .1);
   assert.equal(scene.enemyProjectiles.countActive(), 0);
+  assert.equal(scene.telegraphs.live.size, 0);
+  assert.ok(Math.hypot(boss.body.velocity.x, boss.body.velocity.y) > 0);
+  scene.elapsed = 3;
+  updateEnemy(scene, boss, .1);
+  assert.equal(scene.telegraphs.live.size, 1);
+  scene.telegraphs.update(.62);
+  assert.equal(scene.enemyProjectiles.countActive(), 5);
 });
 
 test('disarm retains the existing 45 percent reduction on melee and ranged damage', () => {
