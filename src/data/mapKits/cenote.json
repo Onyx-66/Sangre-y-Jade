@@ -1,0 +1,1362 @@
+{
+  "id": "cenote",
+  "world": {
+    "width": 6400,
+    "height": 4800,
+    "wallThickness": 400,
+    "cellSize": 640
+  },
+  "wallStyle": "cave-wall",
+  "waterZones": [
+    {
+      "x": -1780,
+      "y": 320,
+      "radius": 620
+    },
+    {
+      "x": 1780,
+      "y": -320,
+      "radius": 620
+    }
+  ],
+  "colors": [
+    "0x101d2b",
+    "0x18354a",
+    "0x55e5c0",
+    "0x4c597b"
+  ],
+  "items": [
+    {
+      "id": "root-hanging-a",
+      "category": "trees",
+      "description": "thick hanging cave root cluster",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "root-giant",
+      "category": "trees",
+      "description": "giant cave tree root arch (landmark size)",
+      "size": {
+        "width": 460,
+        "height": 460,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 74,
+        "offsetX": 0,
+        "offsetY": 83
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "root-ground",
+      "category": "trees",
+      "description": "roots crawling over the ground",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "mushroom-giant-a",
+      "category": "trees",
+      "description": "giant glowing mushroom, blue",
+      "size": {
+        "width": 460,
+        "height": 460,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 74,
+        "offsetX": 0,
+        "offsetY": 83
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "mushroom-giant-b",
+      "category": "trees",
+      "description": "giant glowing mushroom, violet",
+      "size": {
+        "width": 460,
+        "height": 460,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 74,
+        "offsetX": 0,
+        "offsetY": 83
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "fern-cave",
+      "category": "trees",
+      "description": "pale cave fern",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-cave-small",
+      "category": "trees",
+      "description": "small pale cave tree",
+      "size": {
+        "width": 150,
+        "height": 150,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": 27
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "vine-glow",
+      "category": "trees",
+      "description": "hanging glowing vines",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "moss-clump",
+      "category": "plants",
+      "description": "glowing moss clump",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "flowers-glow",
+      "category": "plants",
+      "description": "small glowing blue flowers",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "reeds",
+      "category": "plants",
+      "description": "water reeds",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "lily-pads",
+      "category": "plants",
+      "description": "lily pads on water",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "mushrooms-small-blue",
+      "category": "plants",
+      "description": "small blue mushrooms",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "mushrooms-small-violet",
+      "category": "plants",
+      "description": "small violet mushrooms",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "grass-cave",
+      "category": "plants",
+      "description": "pale grass tuft",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "algae",
+      "category": "plants",
+      "description": "algae patch in water",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "stalagmite-a",
+      "category": "rocks",
+      "description": "tall stalagmite",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-crystal"
+    },
+    {
+      "id": "stalagmite-b",
+      "category": "rocks",
+      "description": "cluster of stalagmites",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-crystal"
+    },
+    {
+      "id": "crystal-cyan",
+      "category": "rocks",
+      "description": "cyan crystal cluster",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-crystal"
+    },
+    {
+      "id": "crystal-violet",
+      "category": "rocks",
+      "description": "violet crystal cluster",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-crystal"
+    },
+    {
+      "id": "crystal-green",
+      "category": "rocks",
+      "description": "green crystal cluster",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-crystal"
+    },
+    {
+      "id": "boulder-wet",
+      "category": "rocks",
+      "description": "wet boulder",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "boulder-large",
+      "category": "rocks",
+      "description": "large boulder with crystals",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "stone-slab-wet",
+      "category": "rocks",
+      "description": "wet flat stone slab",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "log-driftwood",
+      "category": "debris",
+      "description": "driftwood log",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "bones-fish",
+      "category": "debris",
+      "description": "fish skeleton on the shore",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "shells",
+      "category": "debris",
+      "description": "shells and pebbles",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "rope-coil",
+      "category": "debris",
+      "description": "coil of rope",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "broken-paddle",
+      "category": "debris",
+      "description": "broken wooden paddle",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "pottery-shards",
+      "category": "debris",
+      "description": "pottery shards",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "temple-gate-submerged",
+      "category": "buildings",
+      "description": "submerged temple gate rising from the water with glowing carvings, 768 px (landmark)",
+      "size": {
+        "width": 768,
+        "height": 599,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 522,
+        "height": 292,
+        "offsetX": 0,
+        "offsetY": 192
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "shrine-island",
+      "category": "buildings",
+      "description": "small stone shrine on a round island",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "dock-hut-a",
+      "category": "buildings",
+      "description": "hut on stilts over water",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "dock-hut-b",
+      "category": "buildings",
+      "description": "small fishing hut",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "bridge-rope",
+      "category": "buildings",
+      "description": "rope bridge segment",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "dock-planks",
+      "category": "buildings",
+      "description": "wooden dock segment",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "idol-head-large",
+      "category": "buildings",
+      "description": "large carved stone idol head half sunk in water",
+      "size": {
+        "width": 480,
+        "height": 374,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 326,
+        "height": 182,
+        "offsetX": 0,
+        "offsetY": 120
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "stairs-water",
+      "category": "buildings",
+      "description": "ruined stone stairway going into water",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "altar-water",
+      "category": "buildings",
+      "description": "altar in shallow water",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "gate-small",
+      "category": "buildings",
+      "description": "small carved stone arch",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "boat-small",
+      "category": "props",
+      "description": "small wooden canoe",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "lantern-hanging",
+      "category": "props",
+      "description": "hanging glowing lantern (light source)",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": true,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "crystal-lamp",
+      "category": "props",
+      "description": "crystal lamp on a post (light source)",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": true,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "barrel-wet",
+      "category": "props",
+      "description": "wet barrel",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "net-hanging",
+      "category": "props",
+      "description": "fishing net on poles",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "pot-wet",
+      "category": "props",
+      "description": "clay pot half in water",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "totem-water",
+      "category": "props",
+      "description": "carved water totem",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "sign-rune",
+      "category": "props",
+      "description": "rune marker stone",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "rack-fish",
+      "category": "props",
+      "description": "fish drying rack",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "chest-old",
+      "category": "props",
+      "description": "old closed chest",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    }
+  ]
+}

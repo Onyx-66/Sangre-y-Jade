@@ -34,10 +34,10 @@ export function pickPack(packs,random=Math.random) {
   let roll=random()*packs.reduce((sum,pack)=>sum+pack.weight,0);
   return packs.find(pack=>(roll-=pack.weight)<0)||packs.at(-1);
 }
-export function packPositions(view,count,random=Math.random) {
+export function packPositions(view,count,random=Math.random,mapWorld=null) {
   // Reserve 40 units for sprite extent, and place the entire pack along an edge
   // (never radially toward the screen). All visible pixels stay >=120 outside.
-  const origin=spawnOutsideView(view,random,160),vertical=origin.x<view.x||origin.x>view.right;
+  const origin=mapWorld?.spawnOutsideView(view,random,160)||spawnOutsideView(view,random,160),vertical=origin.x<view.x||origin.x>view.right;
   return Array.from({length:count},(_,i)=>({x:origin.x+(vertical?0:(i-(count-1)/2)*44),y:origin.y+(vertical?(i-(count-1)/2)*44:0)}));
 }
 
@@ -57,7 +57,7 @@ export class SpawnDirector {
       const packs=eligiblePacks(scene.mapData.id,scene.heroData,scene.elapsed,this.cap()-scene.enemies.countActive(),scene.enemies.getChildren());
       const pack=this.choosePack(packs);
       if(pack){
-        const positions=packPositions(worldView(scene),pack.members.length,this.random);
+        const positions=packPositions(worldView(scene),pack.members.length,this.random,scene.mapWorld);
         const spawned=pack.members.map((type,i)=>scene.spawnEnemy(type,null,{position:positions[i],emerge:true})).filter(Boolean);
         this.history.push({seconds:scene.elapsed,id:pack.id,count:spawned.length});
         // Bounded diagnostic history, not an ever-growing run log.

@@ -8,6 +8,7 @@ import { makeScene } from './helpers/scene-fixture.js';
 const sizes=[[568,320],[640,360],[800,360],[960,540],[1024,768],[2400,1080],[3440,1440]];
 function cameraFixture(){return {width:640,height:360,scrollX:-320,scrollY:-180,zoomX:.5,zoomY:.5,worldView:{x:9999},
  setSize(w,h){this.width=w;this.height=h;return this;},setZoom(x,y){this.zoomX=x;this.zoomY=y;return this;},
+ setBounds(x,y,width,height){this.bounds={x,y,width,height};return this;},
  centerOn(x,y){this.scrollX=x-this.width/2;this.scrollY=y-this.height/2;return this;}};}
 test('resize mode fills the parent instead of fitting a fixed 1280x720 canvas',async()=>{
  const main=await fs.readFile(new URL('../src/main.js',import.meta.url),'utf8');
@@ -37,22 +38,25 @@ test('camera resize also preserves center after Phaser has already resized its c
  assert.equal(view.x+view.width/2,0);assert.equal(view.y+view.height/2,0);
  assert.equal(view.height,720);
 });
-test('the real scene resize updates terrain, fog and active full-screen effects while choices are paused',()=>{
+test('the real scene resize keeps finite terrain fixed and updates fog, map streaming and effects while choices are paused',()=>{
  const scene=makeScene(),camera=cameraFixture(),rects=[];scene.cameras={main:camera};
  scene.pausedForChoice=scene.time.paused=true;scene.mapData={id:'bloodmoon',colors:{fog:0x663344}};
  const object=()=>({active:true,setPosition(x,y){this.x=x;this.y=y;return this;},
   setSize(width,height){this.width=width;this.height=height;return this;},
   setDisplaySize(width,height){this.displayWidth=width;this.displayHeight=height;return this;},getData:()=>true});
- scene.floor=object();scene.fog={...object(),clear(){rects.length=0;return this;},fillStyle(color,alpha){this.color=color;this.alpha=alpha;return this;},fillRect(...args){rects.push(args);return this;}};
- const shade=object();scene.fx={live:[{object:shade}]};scene.decorGroup={};let generated=0;scene.generateChunks=()=>generated++;scene.hud.hideTooltip=()=>{};
+ scene.floor=Object.assign(object(),{x:0,y:0,width:6400,height:4800});
+ scene.fog={...object(),clear(){rects.length=0;return this;},fillStyle(color,alpha){this.color=color;this.alpha=alpha;return this;},fillRect(...args){rects.push(args);return this;}};
+ const shade=object();scene.fx={live:[{object:shade}]};scene.decorGroup={};let streamed=0;
+ scene.mapWorld={update(view){streamed++;assert.deepEqual(view,worldView(scene));}};scene.hud.hideTooltip=()=>{};
  for(const [width,height]of sizes){scene.resizeViewport({width,height});const view=worldView(scene);
-  assert.equal(scene.floor.width,view.width+128);assert.equal(scene.floor.height,848);
-  assert.equal(scene.floor.x,width/2);assert.equal(scene.floor.y,height/2);
-  assert.deepEqual(rects,[[-view.width/2-64,-424,view.width+128,848]]);assert.equal(scene.fog.alpha,.14);
-  assert.equal(shade.x,width/2);assert.equal(shade.y,height/2);assert.equal(shade.displayWidth,scene.floor.width);assert.equal(shade.displayHeight,scene.floor.height);
-  assert.equal(scene.pausedForChoice,true);assert.equal(scene.time.paused,true);assert.equal(scene.decorTimer,0);
+  assert.equal(scene.floor.width,6400);assert.equal(scene.floor.height,4800);
+  assert.equal(scene.floor.x,0);assert.equal(scene.floor.y,0);
+  assert.deepEqual(camera.bounds,{x:-3200,y:-2400,width:6400,height:4800});
+  assert.deepEqual(rects,[[-view.width/2-64,-view.height/2-64,view.width+128,view.height+128]]);assert.equal(scene.fog.alpha,.14);
+  assert.equal(shade.x,width/2);assert.equal(shade.y,height/2);assert.equal(shade.displayWidth,view.width+128);assert.equal(shade.displayHeight,view.height+128);
+  assert.equal(scene.pausedForChoice,true);assert.equal(scene.time.paused,true);
  }
- assert.equal(generated,sizes.length);
+ assert.equal(streamed,sizes.length);
 });
 test('manual aim refreshes the pointer world position against the current resized camera',()=>{
  const scene=makeScene(),camera=cameraFixture();scene.cameras={main:camera};scene.settings.attackMode='manual';scene.manualPointer=true;

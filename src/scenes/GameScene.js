@@ -39,6 +39,7 @@ import { BossController, bossStateDefaults } from '../systems/BossController.js'
 import { CutsceneDirector } from '../systems/CutsceneDirector.js';
 import { BossPresentation } from '../ui/BossPresentation.js';
 import { BOSS_FAIRNESS, bossDamage } from '../bosses/rules.js';
+import { MapWorld, actorCanCollideWithMap, waterSpeedMultiplier } from '../maps/MapWorld.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -143,11 +144,14 @@ export class GameScene extends Phaser.Scene {
     this.fx=new FxDirector(this);
     this.skillAudio=this.options.loading?.skillAudio||new SkillAudio(audio);
     this.options.loading?.progress.set('world',.1);
-    this.physics.world.setBounds(-50000, -50000, 100000, 100000);
+    const worldWidth=map.size?.width||6400,worldHeight=map.size?.height||4800,wall=map.kit?.world.wallThickness||400;
+    this.physics.world.setBounds(-worldWidth/2+wall,-worldHeight/2+wall,worldWidth-wall*2,worldHeight-wall*2);
+    this.cameras.main.setBounds(-worldWidth/2,-worldHeight/2,worldWidth,worldHeight);
     this.cameras.main.setBackgroundColor(map.colors.ground);
     this.cameras.main.roundPixels = true;
     this.createWorld();
     this.createGroups();
+    this.mapWorld=new MapWorld(this,{map,seed:this.options.loading?.mapData?.seed||this.options.seed||83492791});
     this.telegraphs=new Telegraph(this);
     this.enemyBars=new EnemyHealthBars(this);
     this.spawnDirector=new SpawnDirector(this);
@@ -185,8 +189,9 @@ export class GameScene extends Phaser.Scene {
   }
 
   createWorld() {
-    this.floor = this.add.tileSprite(0, 0, 1, 1, 'ground')
-      .setOrigin(.5).setScrollFactor(0).setDepth(-100);
+    const width=this.mapData.size?.width||6400,height=this.mapData.size?.height||4800;
+    this.floor = this.add.tileSprite(0, 0, width, height, 'ground')
+      .setOrigin(.5).setDepth(-100);
     if(this.mapData.id === 'bloodmoon') this.floor.setTint(0x956789);
     if(this.mapData.id === 'cenote') this.floor.setTint(0x568eaf);
     this.fog = this.add.graphics().setScrollFactor(0).setDepth(80);
@@ -198,13 +203,14 @@ export class GameScene extends Phaser.Scene {
     const camera=this.cameras.main;
     this.viewport=resizeCamera(camera,size.width,size.height,this.viewport);
     const view=worldView(this);
-    this.floor.setPosition(camera.width/2,camera.height/2).setSize(view.width+2*GROUND_OVERSCAN,view.height+2*GROUND_OVERSCAN);
     this.fog.clear().setPosition(camera.width/2,camera.height/2);
     if(this.mapData.id!=='overgrown')this.fog.fillStyle(this.mapData.colors.fog,this.mapData.id==='bloodmoon'?.14:.18)
       .fillRect(-view.width/2-GROUND_OVERSCAN,-view.height/2-GROUND_OVERSCAN,view.width+2*GROUND_OVERSCAN,view.height+2*GROUND_OVERSCAN);
     for(const {object}of this.fx?.live||[])if(object.active&&object.getData?.('viewportOverlay'))resizeScreenOverlay(this,object);
     this.decorTimer=0;
-    if(this.player&&this.decorGroup&&this.props)this.generateChunks();
+    const worldWidth=this.mapData.size?.width||6400,worldHeight=this.mapData.size?.height||4800;
+    camera.setBounds?.(-worldWidth/2,-worldHeight/2,worldWidth,worldHeight);
+    if(this.player&&this.mapWorld)this.mapWorld.update(view);
     this.hud?.hideTooltip();
     this.cutscenes?.resize(this.viewport);
   }
@@ -228,7 +234,7 @@ export class GameScene extends Phaser.Scene {
     this.player.hiddenUntil = 0;
     this.cameras.main.startFollow(this.player, true, .09, .09);
     this.invulnerable = 0;
-    this.generateChunks();
+    this.mapWorld?.update(worldView(this));
   }
 
   createInput() {
@@ -255,7 +261,7 @@ export class GameScene extends Phaser.Scene {
     this.physics.add.overlap(this.projectiles, this.props, (projectile, prop) => {
       if(projectile.getData('pendingSplit'))return;
       if (!projectile.active || !prop.active) return;
-      this.damageProp(prop, projectile.getData('damage') || 10);
+      if(prop.getData('breakable'))this.damageProp(prop, projectile.getData('damage') || 10);
       this.consumeProjectile(projectile);
     });
     this.physics.add.overlap(this.player, this.enemies, (_, enemy) => this.touchEnemy(enemy));
@@ -263,7 +269,9 @@ export class GameScene extends Phaser.Scene {
       this.onEnemyProjectileHit(projectile);
     });
     this.physics.add.overlap(this.player, this.pickups, (_, pickup) => this.collectPickup(pickup));
-    this.physics.add.overlap(this.player,this.props,(_,prop)=>this.damageProp(prop,Infinity));
+    this.physics.add.collider(this.player,this.props,undefined,(_,prop)=>prop.active&&prop.getData('blocksGround'));
+    this.physics.add.collider(this.enemies,this.props,undefined,(enemy,prop)=>prop.active&&actorCanCollideWithMap({flier:ENEMIES[enemy.getData('type')]?.flier},{blocksGround:prop.getData('blocksGround')}));
+    this.physics.add.overlap(this.player,this.props,(_,prop)=>{if(prop.getData('breakable'))this.damageProp(prop,Infinity);});
   }
 
   update(_time, deltaRaw) {
@@ -285,6 +293,7 @@ export class GameScene extends Phaser.Scene {
     this.updateMovement(dt);
     this.updateCooldowns(dt);
     this.updateEnemies(dt);
+    this.mapWorld?.updateActors(dt);
     if(this.pausedForChoice||this.ended)return;
     this.telegraphs?.update(dt);
     if(this.pausedForChoice||this.ended)return;
@@ -313,6 +322,7 @@ export class GameScene extends Phaser.Scene {
     const slowUntil=this.player.getData('slowUntil')||0;
     const slowPct=this.player.getData('slowPct')??.5;
     const moveSlow=slowUntil>this.elapsed&&(this.stats.slowImmunityUntil||0)<=this.elapsed?1-clamp(slowPct,0,1):1;
+    const terrainSpeed=waterSpeedMultiplier(this.mapWorld,this.player);
     const keyboardX = (this.cursors.left.isDown || this.keys.left.isDown ? -1 : 0) + (this.cursors.right.isDown || this.keys.right.isDown ? 1 : 0);
     const keyboardY = (this.cursors.up.isDown || this.keys.up.isDown ? -1 : 0) + (this.cursors.down.isDown || this.keys.down.isDown ? 1 : 0);
     let x = keyboardX || this.hud.move.x;
@@ -324,12 +334,12 @@ export class GameScene extends Phaser.Scene {
 
     if (this.dash.remaining > 0) {
       this.dash.remaining -= dt;
-      const speed = this.stats.speed * moveSlow * this.passives.modifiers().speedMult * skillModifiers(this).speedMult;
+      const speed = this.stats.speed * moveSlow * terrainSpeed * this.passives.modifiers().speedMult * skillModifiers(this).speedMult;
       this.player.setVelocity(this.dash.x * speed * 3.65, this.dash.y * speed * 3.65);
       this.player.setAlpha(.72 + Math.sin(this.elapsed * 50) * .16);
     } else {
       this.player.setAlpha(1);
-      const speed=this.stats.speed*moveSlow*this.support.modifiers().speed*this.passives.modifiers().speedMult*skillModifiers(this).speedMult;
+      const speed=this.stats.speed*moveSlow*terrainSpeed*this.support.modifiers().speed*this.passives.modifiers().speedMult*skillModifiers(this).speedMult;
       this.player.setVelocity(x * speed, y * speed);
     }
     const pull=this.player.getData('bossPull');
@@ -340,6 +350,7 @@ export class GameScene extends Phaser.Scene {
     this.facing=facingFor(this.player.body.velocity.x,this.player.body.velocity.y,this.facing);
     if(this.facing==='side'&&Math.abs(this.player.body.velocity.x)>4)this.player.setFlipX(this.player.body.velocity.x<0);
     if(this.facing!=='side')this.player.setFlipX(false);
+    this.player.setDepth(this.player.y+20);
     const moving = Math.hypot(this.player.body.velocity.x, this.player.body.velocity.y) > 5;
     this.animateCharacter(this.player,this.playerArtKey(),moving?'walk':'idle');
   }
@@ -374,9 +385,10 @@ export class GameScene extends Phaser.Scene {
   updateEnemies(dt) {
     this.enemies.children.each((enemy) => {
       if (!enemy?.active||this.pausedForChoice||this.ended) return;
-      if(enemy.getData('bossObject')){this.bossController?.updateObject(enemy,dt);return;}
+      if(enemy.getData('bossObject')){this.bossController?.updateObject(enemy,dt);enemy.setDepth(enemy.y+13);return;}
       updateEnemyShield(enemy,this.elapsed);
       updateEnemy(this, enemy, dt);
+      enemy.setDepth(enemy.y+12);
     });
   }
 
@@ -462,14 +474,9 @@ export class GameScene extends Phaser.Scene {
 
   updateWorld() {
     const view=worldView(this);
-    this.floor.tilePositionX = view.x-GROUND_OVERSCAN;
-    this.floor.tilePositionY = view.y-GROUND_OVERSCAN;
     if (this.decorTimer <= 0) {
-      this.generateChunks();
-      this.decorGroup.children.each((item) => {
-        if (item?.active && Phaser.Math.Distance.Between(item.x, item.y, this.player.x, this.player.y) > retentionRadius(this,1000)) item.destroy();
-      });
-      this.decorTimer = 2;
+      this.mapWorld?.update(view);
+      this.decorTimer = .15;
     }
   }
 
@@ -865,14 +872,16 @@ export class GameScene extends Phaser.Scene {
     const data = ENEMIES[type];
     if(!data||(!data.maps.includes('all')&&this.mapData.id&&!data.maps.includes(this.mapData.id)))return null;
     if(data.aliveLimit&&this.enemies.getChildren().filter(e=>e.active&&!e.getData('isBoss')&&e.getData('type')===type).length>=data.aliveLimit)return null;
-    const position=spawnOptions.position||spawnOutsideView(worldView(this),Math.random,160);
+    const view=worldView(this);
+    let position=spawnOptions.position||this.mapWorld?.spawnOutsideView(view,Math.random,160)||spawnOutsideView(view,Math.random,160);
     // Explicit radii are reserved for summons/boss abilities and automated QA.
-    if(forcedRadius){const angle=Math.random()*TAU;position.x=this.player.x+Math.cos(angle)*forcedRadius;position.y=this.player.y+Math.sin(angle)*forcedRadius;}
+    if(forcedRadius){const angle=Math.random()*TAU;position=this.mapWorld?.clampInside({x:this.player.x+Math.cos(angle)*forcedRadius,y:this.player.y+Math.sin(angle)*forcedRadius},data.radius)||{x:this.player.x+Math.cos(angle)*forcedRadius,y:this.player.y+Math.sin(angle)*forcedRadius};}
+    else if(this.mapWorld&&(!(position.x<view.x||position.x>view.right||position.y<view.y||position.y>view.bottom)||position.x < -2800||position.x>2800||position.y < -2000||position.y>2000))position=this.mapWorld.spawnOutsideView(view,Math.random,160);
     const {x,y}=position;
     const artKey=this.textures?.exists(`enemy-${type}`)?`enemy-${type}`:`enemy-${ENEMY_ART_FALLBACK[type]||type}`;
     const enemy = this.enemies.get(x, y, artKey);
     if (!enemy) return;
-    enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setAlpha(1).setDepth(12).setScale(data.flier?.48:.56);
+    enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setAlpha(1).setDepth(12).setScale(data.flier?.48:.56).setCollideWorldBounds(true);
     enemy.anims.stop();
     enemy.setTexture(artKey).clearTint();
     const radius=data.radius/(enemy.scaleX||(data.flier?.48:.56));
@@ -881,7 +890,7 @@ export class GameScene extends Phaser.Scene {
       type, artKey,animLock:0, serial: ++this.enemySerial, seed: Math.random() * 20,
       hp: data.hp, maxHp: data.hp, radius:data.radius,
       speed: data.speed, damage: data.damage, xp: data.xp,
-      ranged: data.ranged || false, nextShot: 1 + Math.random(), isBoss: false,
+      ranged: data.ranged || false, flier: data.flier || false, nextShot: 1 + Math.random(), isBoss: false,
       tough:data.tough,priorityTarget:PRIORITY_ENEMIES.has(type),summoner:spawnOptions.summoner||null,summonerSerial:spawnOptions.summoner?.getData('serial'),
       ...enemyStatusDefaults(),...enemyAffixDefaults(),...enemyBehaviorDefaults(),...bossStateDefaults(),heading:0,
     });
@@ -902,11 +911,13 @@ export class GameScene extends Phaser.Scene {
       if(distant){this.enemySystem?.removeOwned(distant);this.telegraphs?.cancelOwner(distant);distant.disableBody(true,true);}
     }
     data=bossForHero(this.heroData,data);
-    const {x,y}=position||spawnOutsideView(worldView(this),Math.random,120+96*(data.id==='ahpuch'?1.65:1.35));
+    const view=worldView(this);let bossPosition=position||this.mapWorld?.spawnOutsideView(view,Math.random,120+96*(data.id==='ahpuch'?1.65:1.35))||spawnOutsideView(view,Math.random,120+96*(data.id==='ahpuch'?1.65:1.35));
+    if(this.mapWorld&&(bossPosition.x < -2800||bossPosition.x>2800||bossPosition.y < -2000||bossPosition.y>2000))bossPosition=this.mapWorld.spawnOutsideView(view,Math.random,120+96*(data.id==='ahpuch'?1.65:1.35));
+    const {x,y}=bossPosition;
     const artKey=data.artKey||`boss-${data.id}`;
     const boss = this.enemies.get(x, y, artKey);
     if (!boss) return;
-    boss.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(13).setScale(data.id==='ahpuch'?1.65:1.35);
+    boss.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(13).setScale(data.id==='ahpuch'?1.65:1.35).setCollideWorldBounds(true);
     boss.anims.stop();
     boss.setTexture(artKey).clearTint();
     boss.setAlpha(1);this.enemyVisuals?.remove(boss);
@@ -1209,50 +1220,23 @@ export class GameScene extends Phaser.Scene {
     else if (stat === 'fortune') this.stats.fortune += amount;
   }
 
-  generateChunks() {
-    const size = 620;
-    const view=worldView(this),margin=size/2;
-    for (let y=Math.floor((view.y-margin)/size);y<=Math.floor((view.bottom+margin)/size);y++)
-    for (let x=Math.floor((view.x-margin)/size);x<=Math.floor((view.right+margin)/size);x++) {
-      const key = `${x},${y}`;
-      if (this.chunks.has(key)) continue;
-      this.chunks.add(key);
-      const seed = Math.abs((x * 73856093) ^ (y * 19349663) ^ 83492791);
-      let rng=seed>>>0;
-      const random=()=>{rng=(Math.imul(rng,1664525)+1013904223)>>>0;return rng/4294967296;};
-      const count = 7 + (seed % 5);
-      for (let i = 0; i < count; i += 1) {
-        const px = x * size + random() * (size - 80) + 40;
-        const py = y * size + random() * (size - 80) + 40;
-        const texture = ['top-stela','top-ruin','top-palm','top-foliage','top-roots',this.mapData.id==='cenote'?'top-crystal':'top-tree','top-rocks','top-temple'][(seed+i)%8];
-        const sizeRanges={'top-temple':[.9,1.6],'top-tree':[.65,1.25],'top-palm':[.65,1.3],'top-rocks':[.3,.95],'top-foliage':[.25,.7],'top-roots':[.4,.9],'top-stela':[.45,.9],'top-ruin':[.55,1.15],'top-crystal':[.4,.85]};
-        const [min,max]=sizeRanges[texture];const scale=min+random()*(max-min);
-        const item = this.add.image(px, py, texture).setDepth(3).setScale(scale).setFlipX(random()>.5);
-        this.decorGroup.add(item);
-      }
-      if (seed % 3 === 0) {
-        const type = seed % 2 ? 'urn' : 'basket';
-        const prop = this.props.create(x * size + (seed % 440) + 90, y * size + ((seed >> 3) % 430) + 95, type).setDepth(9).setScale(.36);
-        prop.setData({ hp: 24, kind: type });
-        prop.refreshBody();
-      }
-    }
-  }
+  prepareMapWorld(progress,signal) { return this.mapWorld?.prepare(progress,signal); }
 
   damagePropsInArea(x, y, range) {
     this.props.children.each((prop) => {
-      if (prop?.active && Phaser.Math.Distance.Between(x, y, prop.x, prop.y) <= range) this.damageProp(prop, 30);
+      if (prop?.active&&prop.getData('breakable')&&Phaser.Math.Distance.Between(x, y, prop.x, prop.y) <= range) this.damageProp(prop, 30);
     });
   }
 
   damageProp(prop, amount) {
-    if (!prop?.active) return;
+    if (!prop?.active||!prop.getData('breakable')) return;
     const hp = (prop.getData('hp') || 20) - amount;
     prop.setData('hp', hp);
     prop.setTintFill(0xffd89a);
     this.time.delayedCall(80, () => prop?.active && prop.clearTint());
     if (hp > 0) return;
     const x = prop.x; const y = prop.y;
+    this.mapWorld?.markDestroyed(prop.getData('mapPlacementId'));
     prop.destroy();
     const rolls = 1 + (Math.random() < .28 ? 1 : 0);
     for (let i = 0; i < rolls; i += 1) this.spawnPickup('cacao', x + Phaser.Math.Between(-12, 12), y + Phaser.Math.Between(-12, 12), 1);
@@ -1388,6 +1372,7 @@ export class GameScene extends Phaser.Scene {
     this.enemySystem?.destroy();
     this.enemyVisuals?.destroy();
     this.bossVisuals?.destroy();
+    this.mapWorld?.destroy();
     this.hud?.destroy();
   }
 }

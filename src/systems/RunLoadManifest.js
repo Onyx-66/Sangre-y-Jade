@@ -13,8 +13,8 @@ export function runAudioManifest(ids,map,{base='/',audioKeys=[]}={}){
   return [...core,...files];
 }
 
-export function prepareMapData(map,hero){
+export function prepareMapData(map,hero,seed=83492791){
   if(!map?.id||!map.colors||!Number.isFinite(map.colors.ground)||!hero?.id)throw new Error('Invalid map or hero data');
-  // Preserve the current terrain seed; later map generation can extend this hook.
-  return {mapId:map.id,heroId:hero.id,seed:83492791};
+  if(!Number.isSafeInteger(seed))throw new Error('Map seed must be a safe integer');
+  return {mapId:map.id,heroId:hero.id,seed:seed>>>0};
 }

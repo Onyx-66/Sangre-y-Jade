@@ -144,7 +144,9 @@ class SangreYJadeApp {
     const mode = RUN_MODES.find((entry) => entry.id === this.lastSelection.modeId) || RUN_MODES[0];
     const controller=new AbortController(),screen=new LoadingScreen({hero,map,reduceMotion:this.save.data.settings.reducedMotion,signal:controller.signal});
     let resolve;const ready=new Promise(done=>resolve=done);
-    const session={controller,screen,resolve,started:performance.now(),hero,map,audio:this.audio,audioKeys:map.audioKeys,skillAudio:new SkillAudio(this.audio),signal:controller.signal};
+    const seed=(Math.random()*0x100000000)>>>0;
+    const session={controller,screen,resolve,started:performance.now(),hero,map,seed,audio:this.audio,audioKeys:map.audioKeys,skillAudio:new SkillAudio(this.audio),signal:controller.signal,
+      prepareWorld:(scene,progress,signal)=>scene.prepareMapWorld(progress,signal)};
     session.progress=new RunLoadProgress(state=>screen.update(state));
     session.complete=scene=>{
       if(this.loadingSession!==session||controller.signal.aborted)return;

@@ -1,0 +1,128 @@
+{
+  "maps": [
+    {
+      "id": "overgrown",
+      "name": "The Overgrown Temple",
+      "time": "Day",
+      "size": [
+        6400,
+        4800
+      ],
+      "environment": "Sunlit Maya jungle with ancient ruins reclaimed by roots. Warm light, green and gold, visible sky haze.",
+      "weather": [
+        "light mist (permanent, low)",
+        "falling leaves (permanent)",
+        "god rays (permanent, subtle)",
+        "warm rain shower event (about 40 s every 4-5 min, reduces visibility 10%)"
+      ],
+      "palette": "#173f31 ground, #2b6045, gold #c9a24a, mist #cfe9d0",
+      "trees": "broadleaf, palm, ceiba (giant), strangler fig, young saplings; 6 canopy colour variants of green plus a few flowering ones",
+      "rocks": "mossy boulders, stone slabs, rubble piles, fallen stelae",
+      "ground": "moss grass, packed dirt paths, cobbled plaza, shallow mud",
+      "buildings": [
+        "central stepped temple (landmark, 6x6 tiles)",
+        "ruined temple wall segments",
+        "thatched Maya huts (3 designs)",
+        "ruined market stalls with faded cloth",
+        "stone altar",
+        "small shrine"
+      ],
+      "landmarks": "Central plaza with the temple; four hut clusters at the corners; a dry fountain; a long avenue of stelae.",
+      "enemies": [
+        "shade",
+        "bat",
+        "jaguar",
+        "serpent",
+        "priest",
+        "vine_lurker",
+        "stone_guardian",
+        "jungle_wasp"
+      ],
+      "music": "day",
+      "ambience": "jungle day birds, insects, distant waterfall, light wind"
+    },
+    {
+      "id": "bloodmoon",
+      "name": "Temple Under a Blood Moon",
+      "time": "Night",
+      "size": [
+        6400,
+        4800
+      ],
+      "environment": "The same temple district at night under a red moon: burned huts, ritual platforms, bones, torchlight in the dark. Reduced visibility; torches are the readable landmarks.",
+      "weather": [
+        "red fog (pulsing, permanent)",
+        "drifting ash and embers (permanent)",
+        "distant lightning flashes (every 20-40 s)",
+        "ash storm event (about 30 s every 5 min, reduces visibility 20% and adds wind sound)"
+      ],
+      "palette": "#201c2c ground, #432b3b, blood red #d4484f, torch orange #ff9a3c",
+      "trees": "dead gnarled trees, burned stumps, hanging vine curtains, thorn bushes",
+      "rocks": "obsidian shards, cracked altar stones, bone piles",
+      "ground": "ash ground, cracked stone, dark packed dirt with red veins",
+      "buildings": [
+        "burned huts (3 designs)",
+        "ritual platform with braziers (landmark)",
+        "ossuary building with skull racks",
+        "collapsed temple wing",
+        "sacrificial altar",
+        "torch posts and braziers (light sources)"
+      ],
+      "landmarks": "A ritual platform in the centre; a burned village ring; torch avenues leading to the platform.",
+      "enemies": [
+        "shade",
+        "bat",
+        "jaguar",
+        "serpent",
+        "priest",
+        "blood_wraith",
+        "bone_archer",
+        "moon_cultist"
+      ],
+      "music": "night",
+      "ambience": "night wind, crackling fire, low drone, distant howls"
+    },
+    {
+      "id": "cenote",
+      "name": "The Sunken Cenote",
+      "time": "Cavern",
+      "size": [
+        6400,
+        4800
+      ],
+      "environment": "A vast underground cavern with a turquoise lake, glowing crystals, and a submerged temple gate. Cold blue and violet light, bioluminescence.",
+      "weather": [
+        "dripping water and mist (permanent)",
+        "drifting glowing spores (permanent)",
+        "light rays from a ceiling opening (permanent, subtle)",
+        "rockfall event (small rocks with shadow markers, about 20 s every 5 min)"
+      ],
+      "palette": "#101d2b ground, #18354a, turquoise #55e5c0, violet #4c597b",
+      "trees": "hanging roots, giant cave tree roots, mushroom clusters (large), ferns",
+      "rocks": "stalagmites, crystal clusters (several colours), wet boulders",
+      "ground": "wet stone, shallow water (slows the player 20%), sand banks, glowing moss",
+      "buildings": [
+        "submerged temple gate (landmark)",
+        "stone shrine on an island",
+        "dock huts on stilts",
+        "rope bridges",
+        "carved stone idol heads",
+        "ruined stairway into the water"
+      ],
+      "landmarks": "A central lake with a shrine island; a gate at the north wall; crystal fields in the corners.",
+      "enemies": [
+        "shade",
+        "bat",
+        "jaguar",
+        "serpent",
+        "priest",
+        "drowned_spirit",
+        "abyssal_eel",
+        "crystal_golem",
+        "glow_wisp"
+      ],
+      "music": "cenote",
+      "ambience": "cave drips, flowing water, low reverberant hum, bats"
+    }
+  ]
+}

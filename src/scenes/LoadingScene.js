@@ -28,7 +28,7 @@ export class LoadingScene extends Phaser.Scene {
   async run(){
     const o=this.options,{hero,map,progress,screen,signal,skillAudio}=o,base=import.meta.env.BASE_URL;
     const recover=(files,load)=>loadWithRecovery(files,load,failures=>screen.failure(failures),{signal});
-    await recover([{key:`map:${map.id}`,critical:true}],async files=>{try{progress.set('map',0);o.mapData=prepareMapData(map,hero);await o.prepareMap?.(o.mapData,value=>progress.set('map',value),signal);progress.set('map',1);return [];}catch(error){if(error.name==='AbortError')throw error;return files;}});
+    await recover([{key:`map:${map.id}`,critical:true}],async files=>{try{progress.set('map',0);o.mapData=prepareMapData(map,hero,o.seed);await o.prepareMap?.(o.mapData,value=>progress.set('map',value),signal);progress.set('map',1);return [];}catch(error){if(error.name==='AbortError')throw error;return files;}});
     await recover(textureManifest({hero,map,base}),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('textures',value)}));
     const ids=runSkillIds(hero,{extraIds:hero.id==='ixchel'?IXCHEL_FX_IDS:[],allies:o.allies||[]});
     await recover(runAudioManifest(ids,map,{base,audioKeys:o.audioKeys||RUN_AUDIO_KEYS}),files=>loadAudioBatch(o.audio,skillAudio,files,{signal,onProgress:value=>progress.set('audio',value)}));

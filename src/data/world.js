@@ -1,7 +1,8 @@
 import baseEnemies from './enemies-v06.json' with { type: 'json' };
 import bossDefinitions from './bosses-v06.json' with { type: 'json' };
+import { mapDefinition } from './mapDefinitions.js';
 
-export const MAPS = [
+const legacyMaps = [
   {
     id: 'overgrown',
     name: 'The Overgrown Temple',
@@ -33,6 +34,7 @@ export const MAPS = [
     difficulty: 1.36,
   },
 ];
+export const MAPS = legacyMaps.map(map => mapDefinition(map.id, map));
 
 export const RUN_MODES = [
   { id: 'quick', name: 'Survival · 10 min', duration: 600, description: '10-minute survival. Bosses arrive every 2½ minutes.' },

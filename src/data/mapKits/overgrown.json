@@ -1,0 +1,1426 @@
+{
+  "id": "overgrown",
+  "world": {
+    "width": 6400,
+    "height": 4800,
+    "wallThickness": 400,
+    "cellSize": 640
+  },
+  "wallStyle": "dense-tree-line",
+  "waterZones": [],
+  "colors": [
+    "0x173f31",
+    "0x2b6045",
+    "0xc9a24a",
+    "0xcfe9d0"
+  ],
+  "items": [
+    {
+      "id": "tree-broadleaf-a",
+      "category": "trees",
+      "description": "round broadleaf tree canopy, green",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-broadleaf-b",
+      "category": "trees",
+      "description": "broadleaf tree canopy, darker teal-green",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-palm-a",
+      "category": "trees",
+      "description": "tropical palm, top-down",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-palm"
+    },
+    {
+      "id": "tree-palm-b",
+      "category": "trees",
+      "description": "smaller double palm",
+      "size": {
+        "width": 150,
+        "height": 150,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": 27
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-palm"
+    },
+    {
+      "id": "tree-ceiba",
+      "category": "trees",
+      "description": "giant ceiba tree with buttress roots (landmark size)",
+      "size": {
+        "width": 460,
+        "height": 460,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 74,
+        "offsetX": 0,
+        "offsetY": 83
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-fig",
+      "category": "trees",
+      "description": "strangler fig with hanging roots",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-flowering-pink",
+      "category": "trees",
+      "description": "flowering tree with pink blossoms",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-fruit-orange",
+      "category": "trees",
+      "description": "fruit tree with orange fruit",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-willow",
+      "category": "trees",
+      "description": "weeping willow-like vine tree",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-sapling",
+      "category": "trees",
+      "description": "young sapling",
+      "size": {
+        "width": 150,
+        "height": 150,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": 27
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "bush-round",
+      "category": "plants",
+      "description": "round green bush",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "bush-flowers-pink",
+      "category": "plants",
+      "description": "bush with pink flowers",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "bush-flowers-white",
+      "category": "plants",
+      "description": "bush with white flowers",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "fern-a",
+      "category": "plants",
+      "description": "large fern",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "fern-b",
+      "category": "plants",
+      "description": "small fern cluster",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "tall-grass-a",
+      "category": "plants",
+      "description": "tall grass tuft",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "flowers-blue",
+      "category": "plants",
+      "description": "blue wildflowers",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "flowers-yellow",
+      "category": "plants",
+      "description": "yellow wildflowers",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "lilies",
+      "category": "plants",
+      "description": "large jungle leaves",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "vines-hanging",
+      "category": "plants",
+      "description": "hanging vines for walls",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "rock-mossy-large",
+      "category": "rocks",
+      "description": "large mossy boulder",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "rock-mossy-small",
+      "category": "rocks",
+      "description": "small mossy boulder",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "rock-slab",
+      "category": "rocks",
+      "description": "flat stone slab",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "rubble-pile",
+      "category": "rocks",
+      "description": "pile of carved stone rubble",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "stela-fallen",
+      "category": "rocks",
+      "description": "fallen carved stela",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "stela-standing",
+      "category": "rocks",
+      "description": "standing carved stela (landmark prop)",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "log-fallen",
+      "category": "debris",
+      "description": "fallen log with moss",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "stump",
+      "category": "debris",
+      "description": "tree stump",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "mushrooms-red",
+      "category": "debris",
+      "description": "red mushrooms",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "mushrooms-brown",
+      "category": "debris",
+      "description": "brown mushroom cluster",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "twigs",
+      "category": "debris",
+      "description": "twigs and leaves pile",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "stones-small",
+      "category": "debris",
+      "description": "a few small stones",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "temple-central",
+      "category": "buildings",
+      "description": "central stepped stone temple with a staircase, overgrown, top-down 3/4, 768 px (landmark)",
+      "size": {
+        "width": 768,
+        "height": 599,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 522,
+        "height": 292,
+        "offsetX": 0,
+        "offsetY": 192
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "temple-wall-a",
+      "category": "buildings",
+      "description": "ruined temple wall segment, straight",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "temple-wall-corner",
+      "category": "buildings",
+      "description": "ruined temple wall corner",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "hut-thatched-a",
+      "category": "buildings",
+      "description": "Maya thatched hut, round",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "hut-thatched-b",
+      "category": "buildings",
+      "description": "Maya thatched hut, rectangular with porch",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "hut-thatched-c",
+      "category": "buildings",
+      "description": "larger hut with storage shed",
+      "size": {
+        "width": 480,
+        "height": 374,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 326,
+        "height": 182,
+        "offsetX": 0,
+        "offsetY": 120
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "market-stall-a",
+      "category": "buildings",
+      "description": "ruined market stall with faded red cloth",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "market-stall-b",
+      "category": "buildings",
+      "description": "market stall with baskets",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "altar",
+      "category": "buildings",
+      "description": "carved stone altar",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "shrine-small",
+      "category": "buildings",
+      "description": "small stone shrine with a jade idol",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "fountain-dry",
+      "category": "buildings",
+      "description": "dry stone fountain",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "pot-clay-a",
+      "category": "props",
+      "description": "clay pot",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "pot-clay-b",
+      "category": "props",
+      "description": "large clay urn",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "basket-woven",
+      "category": "props",
+      "description": "woven basket",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "basket"
+    },
+    {
+      "id": "barrel-wood",
+      "category": "props",
+      "description": "wooden barrel",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "crate-wood",
+      "category": "props",
+      "description": "wooden crate",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "basket"
+    },
+    {
+      "id": "well-stone",
+      "category": "props",
+      "description": "stone well",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": 20
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "torch-post",
+      "category": "props",
+      "description": "unlit wooden torch post",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "fence-wood",
+      "category": "props",
+      "description": "short wooden fence segment",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": 20
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "cart-wooden",
+      "category": "props",
+      "description": "broken wooden cart",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": 20
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "sign-carved",
+      "category": "props",
+      "description": "carved stone marker",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    }
+  ]
+}

@@ -1,0 +1,1297 @@
+{
+  "id": "bloodmoon",
+  "world": {
+    "width": 6400,
+    "height": 4800,
+    "wallThickness": 400,
+    "cellSize": 640
+  },
+  "wallStyle": "cliff",
+  "waterZones": [],
+  "colors": [
+    "0x201c2c",
+    "0x432b3b",
+    "0xd4484f",
+    "0xff9a3c"
+  ],
+  "items": [
+    {
+      "id": "tree-dead-a",
+      "category": "trees",
+      "description": "dead gnarled tree, no leaves",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-dead-b",
+      "category": "trees",
+      "description": "dead tree with hanging vines",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-twisted",
+      "category": "trees",
+      "description": "twisted dark tree with a few red leaves",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-burned",
+      "category": "trees",
+      "description": "burned tree trunk, charred",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-thorn",
+      "category": "trees",
+      "description": "thorny black tree",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-stump-large",
+      "category": "trees",
+      "description": "huge burned stump",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-weeping-dark",
+      "category": "trees",
+      "description": "weeping tree with dark drooping branches",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "tree-red-leaf",
+      "category": "trees",
+      "description": "tree with red leaves under moonlight",
+      "size": {
+        "width": 250,
+        "height": 250,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 40,
+        "offsetX": 0,
+        "offsetY": 45
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-tree"
+    },
+    {
+      "id": "bush-thorn",
+      "category": "plants",
+      "description": "thorn bush",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "bush-dead",
+      "category": "plants",
+      "description": "dead dry bush",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "grass-dry",
+      "category": "plants",
+      "description": "dry brown grass tuft",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "vines-dark",
+      "category": "plants",
+      "description": "dark hanging vines",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "flowers-red",
+      "category": "plants",
+      "description": "red night flowers",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "mushrooms-glow-red",
+      "category": "plants",
+      "description": "faintly glowing red mushrooms",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "bones-grass",
+      "category": "plants",
+      "description": "grass with bones",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "moss-dark",
+      "category": "plants",
+      "description": "dark moss patch",
+      "size": {
+        "width": 90,
+        "height": 90,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-foliage"
+    },
+    {
+      "id": "obsidian-shard-a",
+      "category": "rocks",
+      "description": "jagged obsidian shard cluster",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "obsidian-shard-b",
+      "category": "rocks",
+      "description": "single tall obsidian shard",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "rock-cracked",
+      "category": "rocks",
+      "description": "cracked grey boulder",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "altar-stone",
+      "category": "rocks",
+      "description": "broken altar stone",
+      "size": {
+        "width": 130,
+        "height": 130,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": 23
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "skull-pile",
+      "category": "rocks",
+      "description": "pile of skulls",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "bone-pile",
+      "category": "rocks",
+      "description": "pile of bones",
+      "size": {
+        "width": 220,
+        "height": 220,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 62,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "log-burned",
+      "category": "debris",
+      "description": "burned log",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-roots"
+    },
+    {
+      "id": "stump-burned",
+      "category": "debris",
+      "description": "burned stump",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "ash-pile",
+      "category": "debris",
+      "description": "ash and ember pile",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "broken-pot",
+      "category": "debris",
+      "description": "broken clay pot",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "rib-cage",
+      "category": "debris",
+      "description": "giant rib cage",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "spears-crossed",
+      "category": "debris",
+      "description": "crossed spears in the ground",
+      "size": {
+        "width": 140,
+        "height": 140,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 1,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-rocks"
+    },
+    {
+      "id": "hut-burned-a",
+      "category": "buildings",
+      "description": "burned Maya hut, roof collapsed",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "hut-burned-b",
+      "category": "buildings",
+      "description": "burned hut with standing walls",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "hut-burned-c",
+      "category": "buildings",
+      "description": "burned longhouse",
+      "size": {
+        "width": 280,
+        "height": 218,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 190,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 70
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "ritual-platform",
+      "category": "buildings",
+      "description": "large stone ritual platform with braziers and a staircase, top-down 3/4, 768 px (landmark)",
+      "size": {
+        "width": 768,
+        "height": 599,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 522,
+        "height": 292,
+        "offsetX": 0,
+        "offsetY": 192
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": true,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "ossuary",
+      "category": "buildings",
+      "description": "stone ossuary building with skull racks",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "temple-wing-collapsed",
+      "category": "buildings",
+      "description": "collapsed temple wing",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "altar-sacrificial",
+      "category": "buildings",
+      "description": "sacrificial altar with dark stains",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "skull-rack",
+      "category": "buildings",
+      "description": "wooden skull rack",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "brazier-stone",
+      "category": "buildings",
+      "description": "stone brazier with fire (light source)",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": true,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "gate-ruined",
+      "category": "buildings",
+      "description": "ruined stone gateway",
+      "size": {
+        "width": 360,
+        "height": 281,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "collider": {
+        "type": "rect",
+        "width": 245,
+        "height": 137,
+        "offsetX": 0,
+        "offsetY": 90
+      },
+      "depthOffset": 2,
+      "fadeBehind": true,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-temple"
+    },
+    {
+      "id": "torch-post-lit",
+      "category": "props",
+      "description": "lit torch post (light source)",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": true,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "torch-ground",
+      "category": "props",
+      "description": "torch stuck in the ground (light source)",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": true,
+      "placeholderTexture": "top-stela"
+    },
+    {
+      "id": "banner-torn",
+      "category": "props",
+      "description": "torn red banner on a pole",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "chains",
+      "category": "props",
+      "description": "hanging chains",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "cage-wood",
+      "category": "props",
+      "description": "broken wooden cage",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "pot-cracked",
+      "category": "props",
+      "description": "cracked urn",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "crate-broken",
+      "category": "props",
+      "description": "broken crate",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "basket"
+    },
+    {
+      "id": "cart-burned",
+      "category": "props",
+      "description": "burned cart",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": 20
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": true,
+      "lightSource": false,
+      "placeholderTexture": "urn"
+    },
+    {
+      "id": "stake-fence",
+      "category": "props",
+      "description": "sharpened stake fence",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "circle",
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": 20
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    },
+    {
+      "id": "totem-bone",
+      "category": "props",
+      "description": "bone totem",
+      "size": {
+        "width": 112,
+        "height": 112,
+        "minScale": 0.82,
+        "maxScale": 1.18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "collider": {
+        "type": "none",
+        "width": 0,
+        "height": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "depthOffset": 5,
+      "fadeBehind": false,
+      "breakable": false,
+      "lightSource": false,
+      "placeholderTexture": "top-ruin"
+    }
+  ]
+}

@@ -429,3 +429,18 @@ Branch: `release/0.6.0`. Version tag: `v0.6.0-v12`. Prompt V12 complete.
 - The image-generation service does not expose its selected model/variant. Prompts requested Flare for the actor sheets and Sunburst for targeted repairs; routing cannot be independently verified. The native generated sheets were 1254×1254 and were normalized to 2048×2048 before slicing.
 - Automated fights mute browser audio and use instrumentation to cover abilities/phases. No audible, mobile-device or FPS measurement is claimed. Existing unrelated dirty UI, localization, branding and Android work remains untouched.
 - Vucub's final sheet uses the requested Sunburst correction after a clipped Flare result; the initial is preserved in the source archive.
+
+## V13 — Finite maps and seeded content
+
+Status: complete — 2026-10-05.
+
+- Added JSON-derived runtime map definitions and generated data-driven prop kits for Overgrown, Bloodmoon and Cenote. Added fixed seeded landmark layouts, per-run seeded decorations, reserved central/arena routes, 400px finite map boundaries, spatial-hash footprints, pooled 640px streaming capped at 350 sprites, prop fade/breakable handling and Cenote water/light zones.
+- Replaced the scrolling infinite floor and chunk generator; wired bounded physics/camera/spawn bounds, ground-only prop collisions, steering avoidance and stuck recovery, 20% Cenote player slow/Abyssal Eel water boost, seeded loader metadata and real map-generation progress.
+- 9/9 V13 map tests pass, including 200 deterministic layouts per map (600 total), stream recycle/cap, collider geometry/filtering, destroyed-breakable hash cleanup, fade-behind, water/light metadata and stuck thresholds. Viewport regression tests pass.
+- Three seeded 10-minute bot runs completed with normal XP/combat and automated level-up picks under headless Chrome 4× CPU throttle: Overgrown 351 kills/Lv15, Bloodmoon 322/Lv15, Cenote 313/Lv15. p95 simulation steps were 5.9/3.8/10.2 ms; peak allocated map sprites 76/82/83. Sampled heap growth was +31.6/+20.6/+30.4 MB. Details: [MAP_PERFORMANCE_V13.md](MAP_PERFORMANCE_V13.md) and [machine report](previews/v13/map-bot-report.json).
+- `npm run check`: 574/575 tests pass; the sole failure is the existing French translation audit (`MANA`, `Cacao`), unrelated to map work. The production build was run separately and passes (13.74s; existing large-chunk advisory).
+
+### Open issues
+
+- `v06_design.json` describes map content in prose without placement coordinates/count tables for buildings, pack tables or Cenote water boundaries. The conservative inferred layout and preserved spawn-pack compositions are documented in `DECISIONS.md`; replace these assumptions when structured map data/art arrives.
+- Headless step p95 meets the 16.7ms target, but occasional p99/max spikes remain (notably Overgrown's 193.5ms maximum). This is a simulation-step measurement, not a rendered/device 60FPS guarantee; sampled heap growth is recorded but not a post-GC leak diagnosis.

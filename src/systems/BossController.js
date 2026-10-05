@@ -174,7 +174,7 @@ export class BossController {
   if(index===null)return;const definition=this.definitions[index];if(!definition)return;
   const due=definition.arrival[s.modeData.id]??s.modeData.duration*(index+1)/4;
   if(!this.warning&&s.elapsed>=due-BOSS_FAIRNESS.warningLead){
-   const point=spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35));
+   const point=s.mapWorld?.spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35))||spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35));
    this.warning={definition,point,spawnAt:Math.max(due,s.elapsed+BOSS_FAIRNESS.warningLead)};
    if(s.options?.bossHooks?.horn)s.options.bossHooks.horn(definition);else s.audio?.sfx?.('boss');
   }
