@@ -41,12 +41,12 @@ function fixture({phases=[{threshold:1,speedMult:1},{threshold:.5,speedMult:1.15
 function presentation(){return {updates:[],start(definition,options){this.definition=definition;this.options=options;},
  update(value){this.updates.push(value);},finish(options){this.finished=options;},clearWarning(){}};}
 
-test('all four definitions retain every JSON number, phase and ability; only temporary current behaviours are registered',()=>{
+test('all four definitions retain every JSON number, phase and ability; final roster behaviours are registered',()=>{
  if(existsSync('docs/v0.6/v06_design.json'))assert.deepEqual(definitions,compileBosses(JSON.parse(readFileSync('docs/v0.6/v06_design.json','utf8'))));
  assert.deepEqual(definitions.map(d=>d.hp),[1400,2300,3300,7800]);assert.deepEqual(definitions.map(d=>d.damage),[18,26,30,34]);
  assert.deepEqual(definitions.map(d=>d.entryDuration),[5,5,6,8]);assert.deepEqual(definitions.map(d=>d.arrival.quick),[150,300,450,600]);
  assert.deepEqual(definitions.map(d=>d.arrival.full),[300,600,900,1200]);assert.deepEqual(Object.keys(BOSS_BEHAVIORS),definitions.map(d=>d.id));
- assert.ok(Object.values(BOSS_BEHAVIORS).every(b=>b.temporary&&typeof b.entry==='function'));
+ assert.ok(Object.values(BOSS_BEHAVIORS).every(b=>!b.temporary&&typeof b.entry==='function'));
  assert.deepEqual(BOSSES.map(d=>d.hp),definitions.map(d=>d.hp));
 });
 test('phases transition at exact thresholds, emit each crossed phase once and never regress on healing',()=>{

@@ -1,0 +1,556 @@
+{
+  "createdAt": "2026-10-05T13:00:17.221Z",
+  "policy": "V11 boss coverage stress audit; not balance or FPS measurement",
+  "secondsPerBoss": 180,
+  "stepHz": 30,
+  "runs": [
+    {
+      "id": "camazotz",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19741.919999999904,
+      "casts": {
+        "camazotz:sonic-screech": 17,
+        "camazotz:bat-swarm": 14,
+        "camazotz:blood-dive": 18,
+        "camazotz:eclipse": 4,
+        "camazotz:twin-dive": 8
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 90.03333333333079
+        }
+      ],
+      "damageTaken": 258.08000000009633,
+      "targetKills": {},
+      "peakFx": 24,
+      "peakWarnings": 8,
+      "peakTasks": 5,
+      "peakTargets": 0,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19997.799999999992,
+          "bossHp": 1392.313999999999,
+          "phase": 1,
+          "alive": 11
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19976.679999999975,
+          "bossHp": 1389.3739999999984,
+          "phase": 1,
+          "alive": 8
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19949.199999999964,
+          "bossHp": 686,
+          "phase": 2,
+          "alive": 6
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19887.15999999996,
+          "bossHp": 683.0600000000003,
+          "phase": 2,
+          "alive": 5
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19839.479999999927,
+          "bossHp": 680.1200000000006,
+          "phase": 2,
+          "alive": 8
+        }
+      ],
+      "missing": [
+        "fx/boss-camazotz-entry-main/main.png",
+        "fx/boss-camazotz-sonic-screech-accent/main.png",
+        "fx/boss-camazotz-sonic-screech-main/main.png",
+        "fx/boss-camazotz-bat-swarm-accent/main.png",
+        "fx/boss-camazotz-bat-swarm-main/main.png",
+        "fx/boss-camazotz-blood-dive-accent/main.png",
+        "fx/boss-camazotz-blood-dive-main/main.png",
+        "fx/boss-camazotz-phase-main/main.png",
+        "fx/boss-camazotz-eclipse-accent/main.png",
+        "fx/boss-camazotz-eclipse-main/main.png",
+        "fx/boss-camazotz-twin-dive-accent/main.png",
+        "fx/boss-camazotz-twin-dive-main/main.png"
+      ],
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    },
+    {
+      "id": "zipacna",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19917.759999999995,
+      "casts": {
+        "zipacna:stone-slam": 19,
+        "zipacna:rock-rain": 17,
+        "zipacna:fissure-line": 16,
+        "zipacna:stone-armor": 1,
+        "zipacna:avalanche": 8
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 90.03333333333079
+        }
+      ],
+      "damageTaken": 82.24000000000524,
+      "targetKills": {
+        "heart-stone": 3
+      },
+      "peakFx": 24,
+      "peakWarnings": 8,
+      "peakTasks": 4,
+      "peakTargets": 3,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19977.44,
+          "bossHp": 2267.638999999998,
+          "phase": 1,
+          "alive": 1
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19954.879999999997,
+          "bossHp": 2234.8294999999957,
+          "phase": 1,
+          "alive": 1
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19917.759999999995,
+          "bossHp": 1127,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19917.759999999995,
+          "bossHp": 1110.3364999999988,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19917.759999999995,
+          "bossHp": 1078.2169999999967,
+          "phase": 2,
+          "alive": 1
+        }
+      ],
+      "missing": [
+        "fx/boss-zipacna-entry-main/main.png",
+        "fx/boss-zipacna-stone-slam-accent/main.png",
+        "fx/boss-zipacna-stone-slam-main/main.png",
+        "fx/boss-zipacna-rock-rain-accent/main.png",
+        "fx/boss-zipacna-rock-rain-main/main.png",
+        "fx/boss-zipacna-fissure-line-accent/main.png",
+        "fx/boss-zipacna-fissure-line-main/main.png",
+        "fx/boss-zipacna-phase-main/main.png",
+        "fx/boss-zipacna-stone-armor-accent/main.png",
+        "fx/boss-zipacna-stone-armor-main/main.png",
+        "fx/boss-zipacna-avalanche-accent/main.png",
+        "fx/boss-zipacna-avalanche-main/main.png"
+      ],
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    },
+    {
+      "id": "vucub",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19261.759999999962,
+      "casts": {
+        "vucub:sunbeam-sweep": 13,
+        "vucub:feather-barrage": 16,
+        "vucub:solar-flare-rings": 14,
+        "vucub:second-sun": 7,
+        "vucub:zenith": 3
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 60.033333333332486
+        },
+        {
+          "phase": 3,
+          "seconds": 120.03333333332908
+        }
+      ],
+      "damageTaken": 738.240000000038,
+      "targetKills": {
+        "second-sun": 11
+      },
+      "peakFx": 19,
+      "peakWarnings": 2,
+      "peakTasks": 2,
+      "peakTargets": 3,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19865.759999999995,
+          "bossHp": 3254.2125000000087,
+          "phase": 1,
+          "alive": 1
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19685.279999999984,
+          "bossHp": 1947,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19587.919999999976,
+          "bossHp": 1925.913,
+          "phase": 2,
+          "alive": 1
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19419.11999999997,
+          "bossHp": 792,
+          "phase": 3,
+          "alive": 2
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19337.439999999966,
+          "bossHp": 775.5164999999998,
+          "phase": 3,
+          "alive": 4
+        }
+      ],
+      "missing": [
+        "fx/boss-vucub-entry-main/main.png",
+        "fx/boss-vucub-sunbeam-sweep-accent/main.png",
+        "fx/boss-vucub-sunbeam-sweep-main/main.png",
+        "fx/boss-vucub-feather-barrage-accent/main.png",
+        "fx/boss-vucub-feather-barrage-main/main.png",
+        "fx/boss-vucub-solar-flare-rings-accent/main.png",
+        "fx/boss-vucub-solar-flare-rings-main/main.png",
+        "fx/boss-vucub-phase-main/main.png",
+        "fx/boss-vucub-second-sun-accent/main.png",
+        "fx/boss-vucub-second-sun-main/main.png",
+        "fx/boss-vucub-zenith-accent/main.png",
+        "fx/boss-vucub-zenith-main/main.png"
+      ],
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    },
+    {
+      "id": "ahpuch",
+      "seconds": 179.99999999999235,
+      "frames": 5400,
+      "hp": 19037.493333333376,
+      "casts": {
+        "ahpuch:death-gaze": 14,
+        "ahpuch:bone-spear-ring": 13,
+        "ahpuch:soul-drain": 9,
+        "ahpuch:summon-lords": 7,
+        "ahpuch:xibalba-shift": 1,
+        "ahpuch:final-rite": 3
+      },
+      "uncast": [],
+      "phaseTimes": [
+        {
+          "phase": 2,
+          "seconds": 60.033333333332486
+        },
+        {
+          "phase": 3,
+          "seconds": 120.03333333332908
+        }
+      ],
+      "damageTaken": 962.5066666666244,
+      "targetKills": {},
+      "peakFx": 24,
+      "peakWarnings": 17,
+      "peakTasks": 2,
+      "peakTargets": 0,
+      "early": [],
+      "cleanup": true,
+      "samples": [
+        {
+          "seconds": 30.00000000000065,
+          "hp": 19962.879999999997,
+          "bossHp": 7733.075999999997,
+          "phase": 1,
+          "alive": 3
+        },
+        {
+          "seconds": 60.033333333332486,
+          "hp": 19916.039999999994,
+          "bossHp": 5070,
+          "phase": 2,
+          "alive": 4
+        },
+        {
+          "seconds": 90.03333333333079,
+          "hp": 19743.666666666657,
+          "bossHp": 5043.577,
+          "phase": 2,
+          "alive": 8
+        },
+        {
+          "seconds": 120.03333333332908,
+          "hp": 19545.933333333345,
+          "bossHp": 2496,
+          "phase": 3,
+          "alive": 10
+        },
+        {
+          "seconds": 150.0333333333274,
+          "hp": 19274.866666666705,
+          "bossHp": 2493.66,
+          "phase": 3,
+          "alive": 9
+        }
+      ],
+      "missing": [
+        "fx/boss-ahpuch-entry-main/main.png",
+        "fx/boss-ahpuch-death-gaze-accent/main.png",
+        "fx/boss-ahpuch-death-gaze-main/main.png",
+        "fx/boss-ahpuch-bone-spear-ring-accent/main.png",
+        "fx/boss-ahpuch-bone-spear-ring-main/main.png",
+        "fx/boss-ahpuch-soul-drain-accent/main.png",
+        "fx/boss-ahpuch-soul-drain-main/main.png",
+        "fx/boss-ahpuch-summon-lords-accent/main.png",
+        "fx/boss-ahpuch-summon-lords-main/main.png",
+        "fx/boss-ahpuch-phase-main/main.png",
+        "fx/boss-ahpuch-xibalba-shift-accent/main.png",
+        "fx/boss-ahpuch-xibalba-shift-main/main.png",
+        "fx/boss-ahpuch-final-rite-accent/main.png",
+        "fx/boss-ahpuch-final-rite-main/main.png"
+      ],
+      "instrumentation": "hero HP20000; boss-hit damage bounded for180s; staged phase thresholds; no normal pack spawns; real player/enemy/orb collisions"
+    }
+  ],
+  "checks": [
+    {
+      "label": "camazotz: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "camazotz: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "camazotz: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "camazotz: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "camazotz: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "zipacna: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "zipacna: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "zipacna: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "zipacna: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "zipacna: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "vucub: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "vucub: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "vucub: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "vucub: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "vucub: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: cinematic started",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: complete180s fight",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: every roster ability executed",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: no warning resolved early",
+      "passed": true
+    },
+    {
+      "label": "ahpuch: all boss objects/warnings cleaned up",
+      "passed": true
+    },
+    {
+      "label": "en/camazotz: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "en/zipacna: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "en/vucub: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "en/ahpuch: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/camazotz: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/zipacna: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/vucub: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "ar/ahpuch: phone HUD and effect bounds",
+      "passed": true
+    },
+    {
+      "label": "zero browser exceptions, console errors or HTTP failures",
+      "passed": true
+    },
+    {
+      "label": "only documented future boss-art/audio warnings",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[skills] Placeholder: fx/boss-camazotz-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-sonic-screech-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-sonic-screech-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-bat-swarm-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-bat-swarm-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-blood-dive-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-blood-dive-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-phase-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-eclipse-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-eclipse-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-twin-dive-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-twin-dive-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-slam-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-slam-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-rock-rain-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-rock-rain-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-fissure-line-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-fissure-line-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-phase-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-armor-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-armor-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-avalanche-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-avalanche-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-sunbeam-sweep-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-sunbeam-sweep-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-feather-barrage-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-feather-barrage-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-solar-flare-rings-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-solar-flare-rings-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-phase-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-second-sun-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-second-sun-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-zenith-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-zenith-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-death-gaze-accent/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-death-gaze-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-bone-spear-ring-accent/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-bone-spear-ring-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-soul-drain-accent/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-soul-drain-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-summon-lords-accent/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-summon-lords-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-phase-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-xibalba-shift-accent/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-xibalba-shift-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-final-rite-accent/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-final-rite-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-eclipse-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-eclipse-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-armor-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-armor-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-solar-flare-rings-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-solar-flare-rings-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-final-rite-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-eclipse-accent/main.png",
+    "[skills] Placeholder: fx/boss-camazotz-eclipse-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-armor-accent/main.png",
+    "[skills] Placeholder: fx/boss-zipacna-stone-armor-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-vucub-solar-flare-rings-accent/main.png",
+    "[skills] Placeholder: fx/boss-vucub-solar-flare-rings-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-entry-main/main.png",
+    "[skills] Placeholder: fx/boss-ahpuch-final-rite-accent/main.png"
+  ],
+  "captures": [
+    "camazotz-entry.png",
+    "zipacna-entry.png",
+    "vucub-entry.png",
+    "ahpuch-entry.png",
+    "en-eclipse-568x320.png",
+    "en-stone-armor-568x320.png",
+    "en-solar-flare-rings-568x320.png",
+    "en-final-rite-568x320.png",
+    "ar-eclipse-568x320.png",
+    "ar-stone-armor-568x320.png",
+    "ar-solar-flare-rings-568x320.png",
+    "ar-final-rite-568x320.png"
+  ],
+  "wallSeconds": 70.59275749999999,
+  "passed": true
+}

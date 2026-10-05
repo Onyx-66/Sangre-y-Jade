@@ -55,7 +55,9 @@ export class CutsceneDirector {
  resize(viewport){const c=this.current;if(!c)return;c.snapshot.zoomX=viewport.zoomX;c.snapshot.zoomY=viewport.zoom;this.update(0);}
  finish({abort=false,keepName=false}={}){
   const c=this.current;if(!c)return;this.current=null;const s=this.scene,{snapshot}=c,camera=s.cameras?.main;
-  if(c.boss.getData('serial')===c.serial)c.entry?.finish?.();
+  // Entry scripts guard actor mutation themselves; drawing must always release,
+  // including an aborted cinematic whose physics body has already been reused.
+  c.entry?.finish?.();
   camera?.setZoom?.(snapshot.zoomX,snapshot.zoomY);camera?.centerOn?.(snapshot.center.x,snapshot.center.y);
   if(snapshot.follow?.active)camera?.startFollow?.(snapshot.follow,true,snapshot.lerpX,snapshot.lerpY);
   if(s.hud?.el){s.hud.el.classList.remove('boss-cinematic-hidden');s.hud.el.style.opacity=snapshot.hudOpacity;}

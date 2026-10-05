@@ -1,4 +1,4 @@
-// V10 uses real Phaser/DOM objects, existing local assets and a controlled clock.
+// Framework regression uses real Phaser/DOM objects and the V11 roster.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -6,7 +6,7 @@ import {createServer} from 'vite';
 import {chromium} from 'playwright-core';
 import sharp from 'sharp';
 
-const output=path.resolve(process.env.SYJ_BOSS_OUTPUT||'docs/v0.6/previews/v10/runtime');
+const output=path.resolve(process.env.SYJ_BOSS_OUTPUT||'docs/v0.6/previews/v11/framework');
 await fs.mkdir(output,{recursive:true});
 const checks=[],errors=[],warnings=[],captures=[],evidence=[],started=performance.now();
 const check=(ok,label,data)=>{checks.push({label,passed:!!ok,...(data?{evidence:data}:{})});assert.ok(ok,label);};
@@ -75,24 +75,29 @@ try{
   evidence.push({locale,width,height,bar:resumed.bar});
   if(locale==='en'&&width===568){
    const combat=await page.evaluate(()=>{
-    const q=window.__bossQA,s=q.scene,records=[];s.stats.armor=0;
-    const dispose=()=>{s.cutscenes.finish({abort:true});s.telegraphs.cancelAll();for(const actor of s.enemies.getChildren())if(actor.active)actor.disableBody(true,true);s.activeBoss=null;s.hud.clearBoss();s.bossController.state=null;};
+    const q=window.__bossQA,s=q.scene,records=[];s.stats.armor=0;s.stats.hp=s.stats.maxHp=10000;
+    const dispose=()=>{s.cutscenes.finish({abort:true});s.bossController.cancel();s.bossController.state?.runtime.destroy();s.telegraphs.cancelAll();
+     for(const actor of [...s.enemies.getChildren(),...s.enemyProjectiles.getChildren()])if(actor.active)actor.disableBody(true,true);
+     s.activeBoss=null;s.hud.clearBoss();s.bossController.state=null;};
     for(const data of q.BOSSES){
      dispose();s.settings.skipBossEntrances=true;const boss=s.spawnBoss(data,{position:{x:s.player.x+180,y:s.player.y}});s.cutscenes.update(2);
      s.bossController.state.initialReady=s.elapsed;s.bossController.state.recoveryUntil=0;boss.setData({bossArmorPct:0,bossShield:0});
-     const before=s.enemyProjectiles.countActive(),hp=s.stats.hp;s.invulnerable=0;s.bossController.update(boss,0);const warning=[...s.telegraphs.live][0];
-     if(!warning)throw Error(`No real warning: ${data.id}`);s.telegraphs.update(.61);const noEarly=s.enemyProjectiles.countActive()===before&&s.stats.hp===hp&&!s.bossController.state.motion;
-     s.elapsed+=.62;s.telegraphs.update(.02);const state=s.bossController.state,motion=state.motion;
-     if(motion){boss.body.reset(s.player.x,s.player.y);s.bossController.update(boss,.01);s.elapsed+=.6;s.bossController.update(boss,.6);}
-     records.push({id:data.id,hp:boss.getData('maxHp'),warning:warning.windup,noEarly,casts:s.bossController.casts[`${data.id}:legacy-${data.pattern}`]||0,
-      shots:s.enemyProjectiles.countActive()-before,damage:hp-s.stats.hp,recovery:state.recoveryUntil-s.elapsed,motionResolved:!state.motion});
+     s.player.body.reset(boss.x-100,boss.y);s.hud.move={x:0,y:0};s.invulnerable=0;
+     const before=s.enemyProjectiles.countActive(),hp=s.stats.hp;s.bossController.update(boss,0);const warning=[...s.telegraphs.live][0];
+     if(!warning)throw Error(`No real warning: ${data.id}`);const windup=warning.windup,ability=s.bossController.state.busy.ability;
+     s.elapsed+=windup-.01;s.telegraphs.update(windup-.01);
+     const noEarly=s.enemyProjectiles.countActive()===before&&s.stats.hp===hp&&!s.bossController.state.channel;
+     s.elapsed+=.02;s.telegraphs.update(.02);const state=s.bossController.state,channel=state.channel;
+     if(channel){s.player.body.reset(boss.x,boss.y);for(let age=0;age<channel.duration-1e-9;age+=.01){s.elapsed+=.01;s.bossController.updateWorld(.01);}}
+     records.push({id:data.id,ability:ability.id,hp:boss.getData('maxHp'),warning:windup,noEarly,casts:s.bossController.casts[`${data.id}:${ability.id}`]||0,
+      shots:s.enemyProjectiles.countActive()-before,damage:hp-s.stats.hp,recovery:state.recoveryUntil-s.elapsed,channelResolved:!state.channel});
      for(const shot of s.enemyProjectiles.getChildren())if(shot.active)shot.disableBody(true,true);
     }
     dispose();s.settings.skipBossEntrances=false;const boss=s.spawnBoss(q.BOSSES[3],{position:{x:s.player.x+200,y:s.player.y}});s.cutscenes.update(.99);
     q.render();return records;
    });
-   check(combat.length===4&&combat.every(r=>r.noEarly&&r.warning>=.5&&r.recovery>=1.2-1e-6&&r.casts>=1&&r.motionResolved), 'all four current attacks use real pooled warnings, execute, and recover',combat);
-   check(combat[0].damage===18&&combat[1].damage===22&&combat[2].shots===5&&combat[3].shots===7,'temporary attacks preserve current damage, dash and projectile counts',combat);
+   check(combat.length===4&&combat.every(r=>r.noEarly&&r.warning>=.5&&r.recovery>=1.2-1e-6&&r.casts>=1&&r.channelResolved), 'all four roster openers use real pooled warnings, execute, and recover',combat);
+   check(combat[0].damage===18&&combat[1].damage===26&&combat[2].damage===260&&combat[3].damage===84,'roster opener damage and beam ticks match the JSON',combat);
    check(await page.evaluate(()=>{const s=window.__bossQA.scene;s.togglePause();return s.cutscenes.active;}),'native Back before one second does not skip');
    await page.evaluate(()=>window.__bossQA.scene.cutscenes.update(.02));
    await page.locator('.boss-cinematic').click({position:{x:width/2,y:height/2}});
@@ -113,13 +118,14 @@ try{
   const rows=evidence.filter(row=>row.width===width),a=rows[0].bar;
   check(rows.every(row=>['x','y','width','height'].every(key=>Math.abs(row.bar[key]-a[key])<1)),`${width}: boss HUD position identical in EN/FR/AR`);
  }
- check(errors.length===0,'zero browser/HTTP errors',errors);check(warnings.length===0,'zero console warnings / missing assets',warnings);
+ check(errors.length===0,'zero browser/HTTP errors',errors);
+ check(warnings.every(w=>/\[skills\] (Placeholder: fx\/boss-|Sound fallback: skills\/sfx-boss-)/.test(w)),'only documented future boss-art/audio warnings',warnings);
  for(const state of ['bar','entrance','warning']){
   const tiles=[];for(const [i,row]of evidence.entries())tiles.push({input:await sharp(path.join(output,`${row.locale}-${row.width}x${row.height}-${state}.png`)).resize(568,320,{fit:'contain'}).toBuffer(),left:(i%2)*568,top:Math.floor(i/2)*320});
   const file=`boss-${state}-contact.png`;await sharp({create:{width:1136,height:960,channels:4,background:'#110d13'}}).composite(tiles).png().toFile(path.join(output,file));captures.push(file);
  }
 }finally{
- const report={passed:checks.every(c=>c.passed)&&!errors.length&&!warnings.length,checks,errors,warnings,captures,evidence,wallSeconds:(performance.now()-started)/1000};
+ const report={passed:checks.length===51&&checks.every(c=>c.passed)&&!errors.length,checks,errors,warnings,captures,evidence,wallSeconds:(performance.now()-started)/1000};
  await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');
  await browser.close();await server.close();console.log(JSON.stringify({passed:report.passed,checks:checks.length,screenshots:captures.length,wallSeconds:report.wallSeconds,output}));
 }

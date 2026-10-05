@@ -1,0 +1,70 @@
+{
+  "versionTag": "v0.6.0-v11",
+  "sourcePaths": [
+    "scripts/compile-bosses-v06.mjs",
+    "scripts/v06-boss-framework-playtest.mjs",
+    "scripts/v06-bosses-playtest.mjs",
+    "src/bosses/ahpuch.js",
+    "src/bosses/camazotz.js",
+    "src/bosses/common.js",
+    "src/bosses/entries.js",
+    "src/bosses/index.js",
+    "src/bosses/vucub.js",
+    "src/bosses/zipacna.js",
+    "src/data/bosses-v06.json",
+    "src/scenes/GameScene.js",
+    "src/systems/BossController.js",
+    "src/systems/CutsceneDirector.js",
+    "src/systems/EnemyBehaviorSystem.js",
+    "src/systems/Telegraph.js",
+    "tests/boss-abilities.test.js",
+    "tests/boss-framework.test.js",
+    "tests/enemies-v06.test.js",
+    "tests/skills-foundations.test.js"
+  ],
+  "indexMatchesTestedSnapshot": true,
+  "priorHudAndI18nPreserved": true,
+  "priorGameSceneHunksPreserved": true,
+  "checks": {
+    "indexed": {
+      "kind": "indexed",
+      "exitCode": 0,
+      "wallSeconds": 32.345712600000006,
+      "tests": 502,
+      "passed": 502,
+      "failed": 0,
+      "testDurationMs": 6897.2668,
+      "modules": 319,
+      "buildSeconds": 20.99
+    },
+    "working": {
+      "kind": "working",
+      "exitCode": 1,
+      "wallSeconds": 10.168641,
+      "tests": 533,
+      "passed": 532,
+      "failed": 1,
+      "testDurationMs": 8743.9409,
+      "modules": null,
+      "buildSeconds": null
+    },
+    "build": {
+      "kind": "working-build",
+      "exitCode": 0,
+      "wallSeconds": 33.883972299999996,
+      "tests": null,
+      "passed": null,
+      "failed": null,
+      "testDurationMs": null,
+      "modules": 330,
+      "buildSeconds": 32.22
+    }
+  },
+  "knownSharedFailure": [
+    "fr: MANA",
+    "fr: Cacao"
+  ],
+  "bossAbilities": 21,
+  "noEarlyWarnings": true,
+  "noBrowserErrors": true
+}

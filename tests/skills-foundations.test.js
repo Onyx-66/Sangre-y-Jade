@@ -149,9 +149,11 @@ test('silence prevents ranged and boss skills but allows contact damage and move
   assert.ok(Math.hypot(boss.body.velocity.x, boss.body.velocity.y) > 0);
   scene.elapsed = 3;
   updateEnemy(scene, boss, .1);
-  assert.equal(scene.telegraphs.live.size, 1);
-  scene.telegraphs.update(.62);
-  assert.equal(scene.enemyProjectiles.countActive(), 5);
+  assert.equal(scene.telegraphs.live.size, 2); // Sweep path plus the leading beam.
+  scene.elapsed = 4;
+  scene.telegraphs.update(1);
+  assert.equal(scene.enemyProjectiles.countActive(), 0);
+  assert.ok(scene.bossController.state.channel); // Real Sunbeam Sweep, not the old fan.
 });
 
 test('disarm retains the existing 45 percent reduction on melee and ranged damage', () => {

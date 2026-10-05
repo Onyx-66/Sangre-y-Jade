@@ -1,4 +1,5 @@
-import {legacyBehavior} from './legacy.js';
-export const BOSS_BEHAVIORS=Object.freeze(Object.fromEntries([
- ['camazotz','dash'],['zipacna','quake'],['vucub','sun'],['ahpuch','final'],
-].map(([id,pattern])=>[id,legacyBehavior(id,pattern)])));
+import camazotz from './camazotz.js';
+import zipacna from './zipacna.js';
+import vucub from './vucub.js';
+import ahpuch from './ahpuch.js';
+export const BOSS_BEHAVIORS=Object.freeze({camazotz,zipacna,vucub,ahpuch});

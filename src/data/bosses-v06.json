@@ -18,7 +18,15 @@
             "effect": "18 dmg, knockback 200, confuses 1 s",
             "cd": 7,
             "id": "sonic-screech",
-            "cooldown": 7
+            "cooldown": 7,
+            "parameters": {
+              "windup": 0.8,
+              "arc": 1.5707963267948966,
+              "radius": 320,
+              "damage": 18,
+              "knockback": 200,
+              "confuse": 1
+            }
           },
           {
             "name": "Bat Swarm",
@@ -26,7 +34,11 @@
             "effect": "summons 6 Cave Bats",
             "cd": 12,
             "id": "bat-swarm",
-            "cooldown": 12
+            "cooldown": 12,
+            "parameters": {
+              "windup": 0.5,
+              "count": 6
+            }
           },
           {
             "name": "Blood Dive",
@@ -34,7 +46,15 @@
             "effect": "dash at speed 520, 24 dmg, leaves a blood trail for 3 s (6 dps bleed zone)",
             "cd": 9,
             "id": "blood-dive",
-            "cooldown": 9
+            "cooldown": 9,
+            "parameters": {
+              "windup": 0.7,
+              "length": 600,
+              "speed": 520,
+              "damage": 24,
+              "duration": 3,
+              "dps": 6
+            }
           }
         ],
         "index": 0,
@@ -50,7 +70,12 @@
             "effect": "10 s: only a radius of 280 px around the player is visible; Camazotz eyes glow; bats strike from the dark",
             "cd": 22,
             "id": "eclipse",
-            "cooldown": 22
+            "cooldown": 22,
+            "parameters": {
+              "windup": 1,
+              "duration": 10,
+              "radius": 280
+            }
           },
           {
             "name": "Twin Dive",
@@ -58,7 +83,11 @@
             "effect": "two simultaneous Blood Dives; speed +15% overall",
             "cd": 11,
             "id": "twin-dive",
-            "cooldown": 11
+            "cooldown": 11,
+            "parameters": {
+              "windup": 0.8,
+              "count": 2
+            }
           }
         ],
         "index": 1,
@@ -93,7 +122,13 @@
             "effect": "26 dmg, knockback 220",
             "cd": 6,
             "id": "stone-slam",
-            "cooldown": 6
+            "cooldown": 6,
+            "parameters": {
+              "windup": 0.9,
+              "radius": 150,
+              "damage": 26,
+              "knockback": 220
+            }
           },
           {
             "name": "Rock Rain",
@@ -101,7 +136,13 @@
             "effect": "8 boulders, 20 dmg each",
             "cd": 9,
             "id": "rock-rain",
-            "cooldown": 9
+            "cooldown": 9,
+            "parameters": {
+              "windup": 1,
+              "count": 8,
+              "radius": 55,
+              "damage": 20
+            }
           },
           {
             "name": "Fissure Line",
@@ -109,7 +150,14 @@
             "effect": "cracks erupt in sequence over 1.2 s, 24 dmg",
             "cd": 10,
             "id": "fissure-line",
-            "cooldown": 10
+            "cooldown": 10,
+            "parameters": {
+              "windup": 0.8,
+              "length": 700,
+              "width": 70,
+              "duration": 1.2,
+              "damage": 24
+            }
           }
         ],
         "index": 0,
@@ -125,7 +173,13 @@
             "effect": "Zipacna takes 50% less damage until all 3 are destroyed",
             "cd": 0,
             "id": "stone-armor",
-            "cooldown": 0
+            "cooldown": 0,
+            "parameters": {
+              "windup": 0.5,
+              "count": 3,
+              "hp": 150,
+              "reduction": 0.5
+            }
           },
           {
             "name": "Avalanche",
@@ -133,7 +187,11 @@
             "effect": "continuous rockfalls at the edges, 16 dmg",
             "cd": 4,
             "id": "avalanche",
-            "cooldown": 4
+            "cooldown": 4,
+            "parameters": {
+              "windup": 0.5,
+              "damage": 16
+            }
           }
         ],
         "index": 1,
@@ -168,7 +226,16 @@
             "effect": "rotates 180 degrees over 4 s, 20 dmg per 0.3 s of contact",
             "cd": 11,
             "id": "sunbeam-sweep",
-            "cooldown": 11
+            "cooldown": 11,
+            "parameters": {
+              "windup": 1,
+              "length": 520,
+              "width": 50,
+              "rotation": 3.141592653589793,
+              "duration": 4,
+              "damage": 20,
+              "tick": 0.3
+            }
           },
           {
             "name": "Feather Barrage",
@@ -176,7 +243,13 @@
             "effect": "fan of 9 feathers, speed 260, 12 dmg",
             "cd": 5,
             "id": "feather-barrage",
-            "cooldown": 5
+            "cooldown": 5,
+            "parameters": {
+              "windup": 0.5,
+              "count": 9,
+              "speed": 260,
+              "damage": 12
+            }
           },
           {
             "name": "Solar Flare Rings",
@@ -184,7 +257,13 @@
             "effect": "3 expanding rings with 2 safe gaps each, 20 dmg",
             "cd": 9,
             "id": "solar-flare-rings",
-            "cooldown": 9
+            "cooldown": 9,
+            "parameters": {
+              "windup": 0.6,
+              "count": 3,
+              "gaps": 2,
+              "damage": 20
+            }
           }
         ],
         "index": 0,
@@ -200,7 +279,14 @@
             "effect": "orbs (80 HP each, shootable) launch slowly homing, 22 dmg; destroying them stuns the boss 1.5 s",
             "cd": 16,
             "id": "second-sun",
-            "cooldown": 16
+            "cooldown": 16,
+            "parameters": {
+              "windup": 0.5,
+              "count": 3,
+              "hp": 80,
+              "damage": 22,
+              "stun": 1.5
+            }
           }
         ],
         "index": 1,
@@ -216,7 +302,13 @@
             "effect": "crashes down: 34 dmg",
             "cd": 20,
             "id": "zenith",
-            "cooldown": 20
+            "cooldown": 20,
+            "parameters": {
+              "windup": 1.2,
+              "trail": 4,
+              "radius": 200,
+              "damage": 34
+            }
           }
         ],
         "index": 2,
@@ -251,7 +343,14 @@
             "effect": "laser 520 long, 28 dmg per 0.3 s tick for 1 s",
             "cd": 9,
             "id": "death-gaze",
-            "cooldown": 9
+            "cooldown": 9,
+            "parameters": {
+              "windup": 1.5,
+              "length": 520,
+              "damage": 28,
+              "tick": 0.3,
+              "duration": 1
+            }
           },
           {
             "name": "Bone Spear Ring",
@@ -259,7 +358,13 @@
             "effect": "12 spears erupt, then a second ring offset by half a step, 20 dmg each",
             "cd": 8,
             "id": "bone-spear-ring",
-            "cooldown": 8
+            "cooldown": 8,
+            "parameters": {
+              "windup": 0.8,
+              "radius": 220,
+              "count": 12,
+              "damage": 20
+            }
           },
           {
             "name": "Soul Drain",
@@ -267,7 +372,13 @@
             "effect": "pulls the player 2 s, 10 dmg and heals the boss",
             "cd": 15,
             "id": "soul-drain",
-            "cooldown": 15
+            "cooldown": 15,
+            "parameters": {
+              "windup": 0.6,
+              "radius": 380,
+              "duration": 2,
+              "damage": 10
+            }
           },
           {
             "name": "Summon Lords",
@@ -275,7 +386,11 @@
             "effect": "summons 2 elite Hollow Priests",
             "cd": 24,
             "id": "summon-lords",
-            "cooldown": 24
+            "cooldown": 24,
+            "parameters": {
+              "windup": 1,
+              "count": 2
+            }
           }
         ],
         "index": 0,
@@ -291,7 +406,14 @@
             "effect": "fog fills the arena (8 dps outside light); 4 safe light circles r 120 move every 15 s",
             "cd": 0,
             "id": "xibalba-shift",
-            "cooldown": 0
+            "cooldown": 0,
+            "parameters": {
+              "windup": 2,
+              "dps": 8,
+              "count": 4,
+              "radius": 120,
+              "moveEvery": 15
+            }
           }
         ],
         "index": 1,
@@ -308,6 +430,13 @@
             "cd": 20,
             "id": "final-rite",
             "cooldown": 20,
+            "parameters": {
+              "windup": 5,
+              "count": 3,
+              "radius": 130,
+              "damage": 80,
+              "first": 6
+            },
             "safeCircleCount": 3,
             "safeRadius": 130
           }

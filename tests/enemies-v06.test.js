@@ -171,11 +171,11 @@ test('spawn emergence prevents attacks/movement without permanent inertia',()=>{
  scene.elapsed=2;updateEnemy(scene,enemy,.1);assert.equal(scene.enemyProjectiles.countActive(),1);
 });
 
-test('all current boss patterns use pooled warnings and cancel on stun',()=>{
+test('all boss roster openers use their pooled warnings and cancel on stun',()=>{
  for(const data of BOSSES){
   const scene=makeScene(),boss=addEnemy(scene,{isBoss:true,bossId:data.id,hp:1000,maxHp:1000}),{fx}=warnings(scene);
   scene.activeBoss=boss;scene.bossController=new BossController(scene,{graphics:null});scene.bossController.init(boss,data,{initialDelay:0});
-  scene.updateBoss(boss,.1);assert.equal(fx.live.size,1,data.pattern);assert.equal(scene.enemyProjectiles.countActive(),0);
+  scene.updateBoss(boss,.1);assert.equal(fx.live.size,{camazotz:1,zipacna:1,vucub:2,ahpuch:1}[data.id],data.id);assert.equal(scene.enemyProjectiles.countActive(),0);
   boss.setData('stunUntil',scene.elapsed+1);fx.update(1);assert.equal(fx.live.size,0);assert.equal(scene.enemyProjectiles.countActive(),0);
   assert.equal(scene.bossController.state.motion,null);assert.equal(scene.bossController.state.busy,null);
  }

@@ -357,3 +357,44 @@ All boss entrance, warning and bar contacts were visually inspected. Tests exerc
 - Bespoke entry choreography, new boss attacks/16-frame sheets/effect art and developer-provided horn/stinger/voice recordings are deliberately not implemented by this framework prompt. Existing attacks/art/audio remain usable; hooks are ready for the next step.
 - Neither timed enrage nor phase transformation duration is given in the JSON, so no live timer/window was invented. Final Rite safe zones are stub-tested foundation, not a new enabled boss attack.
 - Earlier uncommitted French untranslated-key and pacing work remains outside scope. FR/AR boss copy needs native review. Browser audio is muted; no audible, Android/emulator or native FPS validation is claimed.
+
+## V11 — Camazotz, Zipacna, Vucub Caquix and Ah Puch — 2026-10-05
+
+Branch: `release/0.6.0`. Version tag: `v0.6.0-v11`. Prompt V11 complete.
+
+### Changed
+
+- Registered four final boss behaviour modules with a function per ability, replacing the temporary registry adapter. Mechanically derived all authoritative parameters from the JSON prose; retained source descriptions, phases, cooldowns and exact HP/contact damage. Implemented all 21 abilities, including real shootable heart stones/orbs, status effects, persistent zones, beams, safe gaps, fog lights, invulnerable flight and the scheduled Final Rite.
+- Added a small gameplay-clock runtime for channels, hazards, targets and batched temporary drawing. Extended pooled Telegraph warnings for multi-marker casts, tracking, safe-angle gaps and birth-time accounting. Preserve 0.5s minimum warnings, 1.2s recovery and 80-per-hit cap; no damage during entrances or choices. Final Rite always has three safe circles, resolves at phase-three +6s, then repeats every 20s, including a threshold crossing during an earlier channel's recovery.
+- Added four distinct code-drawn entry scripts with existing camera/banner/skip hooks and reduced-motion/flashing handling. Wired main/accent and warn/cast plus entry/phase/death resource hooks. Existing fallbacks warn once for future boss assets; no raster/audio assets, dependencies, package version, native files, APK, downloads or push are included.
+- Fixed new runtime edge cases with tests: trail joins cannot multiply DPS; warning counts cannot parse as seconds; warnings cannot finish one simulation frame early; stones' source serials survive pool reuse; targets clear buried/reflection/affix/shield/render states; cancelled/rooted dives cannot teleport late; aborted Zenith/entry cleanup cannot mutate recycled actors. Summons, targets, warnings and shots clean up with their owner. Ground-only hero compatibility and alive caps remain in place.
+- Preserved all earlier unfinished UI/editor/translation/native/artwork changes. The commit contains only V11 hunks and documentation/evidence. `BOSS_ABILITIES.md` and `DECISIONS.md` document phase inheritance, unspecified geometry, timing, conservative compatibility and test instrumentation.
+
+### Final test results
+
+| Command / fixture | Result |
+| --- | --- |
+| `node --test tests/boss-abilities.test.js tests/boss-framework.test.js` | 81/81 pass; 57 new V11 tests plus 24 framework regressions; 0.371s runner |
+| `npm run check` in final indexed-source snapshot | 502/502 pass, no skips; 6.897s runner; production build passes, 319 modules, 20.99s Vite |
+| `npm run check` in shared worktree | 532/533 pass, no skips; 8.744s runner; sole earlier French `MANA` / `Cacao` audit fails, so its `&&` build is skipped |
+| `npm run build` in shared worktree | Pass, 330 modules, 32.22s Vite during parallel checks; existing large-chunk advisory only |
+| `SYJ_BOSS_OUTPUT=docs/v0.6/previews/v11/staged`, then `node scripts/v06-bosses-playtest.mjs` in final snapshot | 30 checks pass, four actual 180s Phaser fights, all 21 abilities executed; 70.59s wall time; no browser/HTTP/console errors, early warnings or cleanup leaks |
+| `SYJ_BOSS_OUTPUT=docs/v0.6/previews/v11/staged/framework`, then `node scripts/v06-boss-framework-playtest.mjs` | 51 checks pass, 21 captures/contacts, 37.55s; EN/FR/AR at 568x320 and 1280x720, actual entry/pause/skip/death, exact opener damage and physical HUD parity |
+| `SYJ_HUD_OUTPUT=docs/v0.6/previews/v11/staged/hud`, then `npm run test:hud` | 497 checks pass, 32 layout captures plus card fixture; overlap/overflow, LTR geometry and locale parity remain correct |
+| `SYJ_LOADING_OUTPUT=docs/v0.6/previews/v11/staged/loading`, then `npm run test:loading` | 62 checks pass, eight captures; real progress, Retry/Continue/Back and EN/FR/AR; snapshot-only missing native-source copies corrected without editing native code |
+| Indexed-source byte verification, prior-file preservation, scoped-file audit and `git diff --cached --check` | Pass; no protected, dependency, native, audio, branding or unrelated editor/localization paths staged |
+
+| Three-minute coverage fight | Total ability casts | Destructible targets killed | Peak FX / warnings / tasks |
+| --- | --- | --- | --- |
+| Camazotz | 61 (all five abilities) | — | 24 / 8 / 5 |
+| Zipacna | 61 (all five abilities) | 3 heart stones | 24 / 8 / 4 |
+| Vucub Caquix | 53 (all five abilities) | 11 sun orbs | 19 / 2 / 2 |
+| Ah Puch | 47 (all six abilities) | — | 24 / 17 / 2 |
+
+All final entrance, special-mechanic, boss-bar and arrival/entry contacts were visually inspected. Evidence is under `previews/v11/staged/`: boss coverage report/contact, framework report/contacts and HUD/loading reports. Source-only checks use an ignored indexed snapshot, never reset shared working files.
+
+### Open issues / explicit limits
+
+- New boss sprites/stills and developer-provided recordings arrive in later prompts. Temporary drawing, existing actors/sounds and one-warning fallbacks are intentional; future boss-placeholder warnings are reported, not suppressed. No claim of final art, globally missing-warning-free assets or audible audio.
+- The 180s coverage fights use documented high hero HP, bounded damage to bosses, staged phase thresholds and no ordinary packs, with real Phaser updates/physics/attacks/collisions. They are robustness/coverage tests, not balance or FPS measurements. All production numbers remain those of the JSON.
+- The same unrelated unfinished French untranslated-key audit remains the only shared-tree failure. Native review, earlier pacing outliers and unfinished UI/editor/artwork are neither completed nor discarded here. No device/emulator, APK, physical Android or native FPS validation was available or requested.

@@ -43,7 +43,7 @@ export class Telegraph {
     if(!['circle','ring','line','cone'].includes(shape))throw Error(`Unknown telegraph shape: ${shape}`);
     const record=this.free.pop()||{};
     Object.assign(record,{x:0,y:0,angle:0,radius:60,innerRadius:40,length:170,width:32,arc:Math.PI/2,
-      windup:.5,age:0,progress:0,owner:null,follow:null,color:0xd4484f,outlineColor:0xff5963,tag:null,sound:'boss',onResolve:null,onCancel:null,safeCircles:null},options,{shape,serial:++this.serial});
+      windup:.5,age:0,progress:0,bornAt:null,owner:null,follow:null,color:0xd4484f,outlineColor:0xff5963,tag:null,sound:'boss',onResolve:null,onCancel:null,onUpdate:null,safeCircles:null,safeAngles:null,gapWidth:0},options,{shape,serial:++this.serial});
     record.windup=Math.max(.001,record.windup);record.ownerSerial=record.owner?.getData?.('serial');
     record.followSerial=record.follow?.getData?.('serial');
     this.live.add(record);this.sound?.(record);return record;
@@ -53,7 +53,7 @@ export class Telegraph {
     if(!this.live.delete(record))return;
     const callback=cancelled?record.onCancel:record.onResolve;
     // No pooled entry may retain a sprite/closure beyond its warning lifetime.
-    const snapshot={...record};record.owner=record.follow=record.onResolve=record.onCancel=record.safeCircles=null;
+    const snapshot={...record};record.owner=record.follow=record.onResolve=record.onCancel=record.onUpdate=record.safeCircles=record.safeAngles=null;
     this.free.push(record);callback?.(snapshot);
   }
   cancelOwner(owner) {for(const w of [...this.live])if(w.owner===owner)this.release(w,true);this.draw();}
@@ -65,7 +65,9 @@ export class Telegraph {
     for(const w of [...this.live]){
       if(w.owner&&(!w.owner.active||w.owner.getData?.('serial')!==w.ownerSerial||(w.owner.getData?.('stunUntil')||0)>this.scene.elapsed)) {this.release(w,true);continue;}
       if(w.follow){if(!w.follow.active||w.follow.getData?.('serial')!==w.followSerial){this.release(w,true);continue;}w.x=w.follow.x;w.y=w.follow.y;}
-      w.age+=Math.max(0,dt);w.progress=clamp(w.age/w.windup);
+      const seconds=w.bornAt===null?dt:Math.min(dt,Math.max(0,this.scene.elapsed-w.bornAt));
+      w.age+=Math.max(0,seconds);w.progress=w.bornAt!==null&&w.age+1e-9>=w.windup?1:clamp(w.age/w.windup);
+      w.onUpdate?.(w);
       if(w.progress>=1){this.release(w);if(this.scene.ended||this.scene.pausedForChoice)break;}
     }
     this.draw();
@@ -82,6 +84,7 @@ export class Telegraph {
       g.lineStyle((this.scene.settings?.telegraphHighContrast?4:2)/zoom,w.outlineColor,1);dashed(g,outline,6/zoom);
       if(w.shape==='ring')dashed(g,polygon({...w,radius:w.innerRadius}),6/zoom);
       for(const circle of w.safeCircles||[]){g.fillStyle(0x3de0b0,.18).fillCircle(circle.x,circle.y,circle.radius);g.lineStyle(3/zoom,0xe8fff6,1);dashed(g,polygon({...circle,shape:'circle'}),8/zoom);}
+      for(const angle of w.safeAngles||[]){const wedge=polygon({...w,shape:'cone',angle,arc:w.gapWidth});g.fillStyle(0x3de0b0,.32).fillPoints(wedge,true);g.lineStyle(2/zoom,0xe8fff6,1);dashed(g,wedge,8/zoom);}
     }
   }
   destroy() {if(this.destroyed)return;this.cancelAll();this.destroyed=true;this.graphics?.destroy();this.free.length=0;}

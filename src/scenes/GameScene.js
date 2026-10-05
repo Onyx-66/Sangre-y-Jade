@@ -312,6 +312,7 @@ export class GameScene extends Phaser.Scene {
     const keyboardY = (this.cursors.up.isDown || this.keys.up.isDown ? -1 : 0) + (this.cursors.down.isDown || this.keys.down.isDown ? 1 : 0);
     let x = keyboardX || this.hud.move.x;
     let y = keyboardY || this.hud.move.y;
+    if(this.player.getData('confuseUntil')>this.elapsed){x=-x;y=-y;}
     const length = Math.hypot(x, y);
     if (length > 1) { x /= length; y /= length; }
     if (length > .1) this.lastMove.set(x, y).normalize();
@@ -325,6 +326,11 @@ export class GameScene extends Phaser.Scene {
       this.player.setAlpha(1);
       const speed=this.stats.speed*moveSlow*this.support.modifiers().speed*this.passives.modifiers().speedMult*skillModifiers(this).speedMult;
       this.player.setVelocity(x * speed, y * speed);
+    }
+    const pull=this.player.getData('bossPull');
+    if(pull?.until>this.elapsed&&pull.owner?.active&&pull.owner.getData('serial')===pull.serial&&this.dash.remaining<=0){
+      const d=Math.hypot(pull.x-this.player.x,pull.y-this.player.y),speed=Math.min(pull.speed,d/Math.max(.001,dt));
+      if(d)this.player.setVelocity(this.player.body.velocity.x+(pull.x-this.player.x)/d*speed,this.player.body.velocity.y+(pull.y-this.player.y)/d*speed);
     }
     this.facing=facingFor(this.player.body.velocity.x,this.player.body.velocity.y,this.facing);
     if(this.facing==='side'&&Math.abs(this.player.body.velocity.x)>4)this.player.setFlipX(this.player.body.velocity.x<0);
@@ -363,6 +369,7 @@ export class GameScene extends Phaser.Scene {
   updateEnemies(dt) {
     this.enemies.children.each((enemy) => {
       if (!enemy?.active||this.pausedForChoice||this.ended) return;
+      if(enemy.getData('bossObject')){this.bossController?.updateObject(enemy,dt);return;}
       updateEnemyShield(enemy,this.elapsed);
       updateEnemy(this, enemy, dt);
     });
@@ -738,6 +745,7 @@ export class GameScene extends Phaser.Scene {
 
   killEnemy(enemy, byAlly = false) {
     if (!enemy.active) return;
+    if(enemy.getData('bossObject')){this.bossController?.destroyObject(enemy);return;}
     const x = enemy.x; const y = enemy.y;
     const isBoss = enemy.getData('isBoss');
     const wasTopThreat=dangerousEnemy(this.enemies.getChildren(),this.player)===enemy;
@@ -806,7 +814,7 @@ export class GameScene extends Phaser.Scene {
       if (damage > 0) this.passives.emit('damageTaken', { amount: damage, source: source || { x: sourceX, y: sourceY }, melee });
       if(!options.dot)this.floatText(this.player.x, this.player.y - 25, `-${Math.ceil(damage)}`, '#ff7077');
     }
-    for(const kind of ['root','knockup','poison','bleed'])if(options[kind])this.enemySystem?.applyPlayerStatus(kind,options[kind],source);
+    for(const kind of ['root','knockup','confuse','poison','bleed'])if(options[kind])this.enemySystem?.applyPlayerStatus(kind,options[kind],source);
     if(options.dot){if(this.stats.hp<=0)this.finishRun(false);return true;}
     this.invulnerable = .58;
     const angle = Phaser.Math.Angle.Between(sourceX, sourceY, this.player.x, this.player.y);
@@ -826,6 +834,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   touchEnemy(enemy) {
+    if(enemy?.getData('bossObject'))return;
     if (!enemy?.active || !canEnemyAttack(this, enemy, true)) return;
     if(enemy.getData('isBoss')&&this.bossController?.touch(enemy))return;
     if(this.enemySystem?.touch(enemy))return;
@@ -833,6 +842,7 @@ export class GameScene extends Phaser.Scene {
       if(!(enemy.getData('nextContact')>this.elapsed)&&!this.telegraphs.has(enemy,'contact')){
         const radius=(enemy.getData('radius')||20)+24;
         this.telegraphs.play({shape:'circle',x:enemy.x,y:enemy.y,radius,windup:enemy.getData('isBoss')?BOSS_FAIRNESS.minimumTelegraph:.35,owner:enemy,tag:'contact',sound:'click',
+          bornAt:enemy.getData('isBoss')?this.elapsed:null,
           onResolve:()=>{enemy.setData({contactReadyUntil:this.elapsed+.25,nextContact:this.elapsed+1});},
           onCancel:()=>enemy.setData('contactReadyUntil',0)});
       }return;

@@ -4,8 +4,10 @@ import {BOSS_FAIRNESS,bossDamage,fairAbility,phaseForHp,arenaSafeCircles,insideS
 import {canEnemyAttack,enemyDamageMult,enemyShotAngle} from '../skills/StatusEffects.js';
 import {spawnOutsideView} from './CombatRules.js';
 import {worldView} from './Viewport.js';
+import {BossRuntime,cue} from '../bosses/common.js';
 
-export const bossStateDefaults=()=>({bossState:null,bossInvulnerableUntil:0,bossArmorPct:0,bossShield:0,bossShieldMax:0});
+export const bossStateDefaults=()=>({bossState:null,bossInvulnerableUntil:0,bossArmorPct:0,bossShield:0,bossShieldMax:0,
+ bossObject:false,bossTarget:null,bossTargetKind:null,bossAttack:false,bossOwner:null,bossOwnerSerial:null});
 export class BossController {
  constructor(scene,{bosses=definitions,behaviors=BOSS_BEHAVIORS,graphics=scene.add?.graphics?.(),random=Math.random}={}){
   this.scene=scene;this.definitions=bosses;this.behaviors=behaviors;this.graphics=graphics?.setDepth?.(3)||graphics;this.random=random;
@@ -17,11 +19,12 @@ export class BossController {
  init(boss,data,{initialDelay=1.5}={}){
   const definition=this.definitions.find(row=>row.id===(data.definitionId||data.id))||data;
   const behavior=this.behaviors[definition.id];if(!behavior)throw Error(`Unregistered boss: ${definition.id}`);
-  if(this.state){this.cancel(this.state);this.state.death?.sprite?.destroy();}
+  if(this.state){this.cancel(this.state);this.state.runtime?.destroy();this.state.death?.sprite?.destroy();}
   const state={boss,definition,behavior,serial:boss.getData('serial'),phase:0,arena:{x:boss.x,y:boss.y,radius:BOSS_FAIRNESS.arenaRadius},
-   cooldowns:{},used:new Set(),busy:null,motion:null,recoveryUntil:0,startedAt:this.scene.elapsed,initialReady:this.scene.elapsed+initialDelay,
+   cooldowns:{},lastCast:{},used:new Set(),busy:null,motion:null,channel:null,recoveryUntil:0,startedAt:this.scene.elapsed,
+   phaseStartedAt:this.scene.elapsed,initialReady:this.scene.elapsed+initialDelay,
    enraged:false,dead:false,death:null};
-  this.state=state;boss.setData({...bossStateDefaults(),bossState:state});this.warning=null;this.scene.bossPresentation?.clearWarning();
+  this.state=state;state.runtime=new BossRuntime(this,state);boss.setData({...bossStateDefaults(),bossState:state});this.warning=null;this.scene.bossPresentation?.clearWarning();
   this.refreshBar();this.drawArena();return state;
  }
  context(state=this.state,target){
@@ -30,16 +33,16 @@ export class BossController {
   target??=(boss.getData('tauntUntil')>this.scene.elapsed&&taunt?.active)?taunt:this.scene.player;
   const angle=enemyShotAngle(this.scene,boss,Math.atan2(target.y-boss.y,target.x-boss.x),target===this.scene.player);
   const phase=definition.phases[state.phase],enrage=state.enraged?definition.enrage:null;
-  const ctx={scene:this.scene,boss,state,definition,behavior,phase,target,angle,
+  const ctx={scene:this.scene,boss,state,definition,behavior,phase,target,angle,runtime:state.runtime,
    speed:boss.getData('speed')*(phase.speedMult||1)*(enrage?.speedMult||1),safeCircles:[],
    damage:(amount,x=boss.x,y=boss.y,options={})=>{
     if(!this.running()||!this.valid(state)||state.dead||!boss.active)return false;
     if(ctx.ability?.id==='final-rite'&&insideSafeCircle(this.scene.player,ctx.safeCircles))return false;
     return this.scene.damagePlayer(bossDamage(amount*enemyDamageMult(this.scene,boss)*(enrage?.damageMult||1)),x,y,boss,!!options.melee,options);
    },
-   projectile:(heading,speed,amount)=>{
+   projectile:(heading,speed,amount,origin=boss)=>{
     if(!this.running()||!this.valid(state)||state.dead)return null;
-    return this.scene.spawnEnemyProjectile(boss.x,boss.y,heading,speed,bossDamage(amount*enemyDamageMult(this.scene,boss)*(enrage?.damageMult||1)),boss);
+    return this.scene.spawnEnemyProjectile(origin.x,origin.y,heading,speed,bossDamage(amount*enemyDamageMult(this.scene,boss)*(enrage?.damageMult||1)),boss);
    },
    dash:options=>{state.motion={...options,remaining:options.length/options.speed,angle:ctx.angle,previous:{x:boss.x,y:boss.y},hit:false,recovery:ctx.ability.recovery};
     boss.setVelocity(Math.cos(ctx.angle)*options.speed,Math.sin(ctx.angle)*options.speed);},
@@ -51,7 +54,8 @@ export class BossController {
   if(index<=state.phase)return;
   this.cancel(state);
   for(let next=state.phase+1;next<=index;next++){
-   state.phase=next;const phase=definition.phases[next];this.protect(phase.invulnerability||0);
+   state.phase=next;state.phaseStartedAt=this.scene.elapsed;const phase=definition.phases[next];this.protect(phase.invulnerability||0);
+   if(!state.behavior.temporary)cue(this.context(),'phase');
    state.behavior.onPhase?.(this.context());this.scene.options?.bossHooks?.phase?.({definition,phase,index:next});
   }
   this.refreshBar();
@@ -65,12 +69,16 @@ export class BossController {
  }
  updateWorld(dt){
   if(!this.running())return;
-  const state=this.state;if(!this.valid(state)){if(state){this.state=null;this.graphics?.clear();}return;}
+  const state=this.state;if(!this.valid(state)){if(state){this.cancel(state);state.runtime?.destroy();this.state=null;this.graphics?.clear();}return;}
   if(state.dead){state.death.remaining-=dt;state.death.sprite?.setAlpha?.(Math.max(0,state.death.remaining/.9));
    if(state.death.remaining<=1e-9){const done=state.death.done;state.death.sprite?.destroy();state.death=null;this.state=null;this.graphics?.clear();done?.();}return;}
-  if(!state.boss.active){this.cancel(state);this.state=null;this.graphics?.clear();return;}
+  if(!state.boss.active){this.cancel(state);state.runtime?.destroy();this.state=null;this.graphics?.clear();return;}
   this.phaseChanged();
   if(!canEnemyAttack(this.scene,state.boss))this.cancel(state);
+  if(state.boss.getData('rootUntil')>this.scene.elapsed)
+   for(const task of [...state.runtime.tasks])if(task.movement)state.runtime.finish(task,true);
+  state.runtime?.update(dt);
+  if(!this.running()||!this.valid(state)||state.dead)return;
   const enrage=state.definition.enrage;
   if(!state.enraged&&Number.isFinite(enrage?.after)&&this.scene.elapsed-state.startedAt>=enrage.after){state.enraged=true;state.behavior.onEnrage?.(this.context());}
   this.refreshBar();this.drawArena();
@@ -86,56 +94,70 @@ export class BossController {
    if(motion.remaining<=1e-9){state.motion=null;boss.setVelocity(0,0);state.recoveryUntil=this.scene.elapsed+motion.recovery;}
    return;
   }
-  if(state.busy||state.recoveryUntil>this.scene.elapsed||(boss.getData('bossInvulnerableUntil')||0)>this.scene.elapsed){boss.setVelocity(0,0);return;}
-  state.behavior.move?.(ctx,dt);
+  if(state.busy||state.channel||(boss.getData('bossInvulnerableUntil')||0)>this.scene.elapsed){boss.setVelocity(0,0);return;}
+  const recovering=state.recoveryUntil>this.scene.elapsed;
+  if(recovering)boss.setVelocity(0,0);else state.behavior.move?.(ctx,dt);
   if(this.scene.elapsed<state.initialReady||boss.getData('silenceUntil')>this.scene.elapsed)return;
   for(const raw of state.behavior.abilities(ctx)){
-   const ability=fairAbility(raw),key=`${state.phase}:${ability.id}`;
+   const ability=fairAbility(raw),key=ability.id;
+   // A scheduled non-damaging charge may overlap the last recovery fraction;
+   // its hit still waits the full warning, well beyond that recovery window.
+   if(recovering&&!ability.chargeDuringRecovery)continue;
    if((state.cooldowns[ability.id]||0)>this.scene.elapsed||(ability.cooldown===0&&state.used.has(key))||ability.condition?.(ctx)===false)continue;
    if(this.cast(state,ability,ctx)){state.used.add(key);break;}
   }
  }
  cast(state,ability,ctx=this.context(state)){
-  if(!this.running()||!this.valid(state)||state.busy||state.dead)return false;
+  if(!this.running()||!this.valid(state)||state.busy||state.channel||state.dead)return false;
   ability=fairAbility(ability);
   ctx.ability=ability;
   if(ability.id==='final-rite'){
    const rule=state.definition.phases.flatMap(p=>p.abilities||[]).find(a=>a.id==='final-rite');
    ctx.safeCircles=arenaSafeCircles(state.arena,rule?.safeRadius||130);
   }
-  const shape=ability.shape?.(ctx)||{shape:'circle',radius:80};
   const token={ability,serial:state.serial};state.busy=token;state.boss.setVelocity(0,0);
   this.scene.animateCharacter?.(state.boss,state.boss.getData('artKey'),'windup',ability.windup);
-  const warning=this.scene.telegraphs?.play({x:state.boss.x,y:state.boss.y,angle:ctx.angle,...shape,windup:ability.windup,
-   safeCircles:ctx.safeCircles,owner:state.boss,tag:`boss:${ability.id}`,sound:'boss',
-   onCancel:()=>{if(this.valid(state)&&state.busy===token){state.busy=null;state.recoveryUntil=this.scene.elapsed+ability.recovery;}},
-   onResolve:w=>{
+  const cancel=()=>{if(this.valid(state)&&state.busy===token){state.busy=null;ability.cancel?.(ctx);state.recoveryUntil=this.scene.elapsed+ability.recovery;}};
+  const begin=()=>{
+   if(!this.running()||!this.valid(state)||state.busy!==token){cancel();return false;}
+   const shapes=ability.warnings?.(ctx)||[ability.shape?.(ctx)||{shape:'circle',radius:80}],pool=this.scene.telegraphs;
+   if(!pool||pool.live.size+shapes.length>pool.capacity){state.busy=null;ability.cancel?.(ctx);return false;}
+   if(!state.behavior.temporary)cue(ctx,ability.id,'warn');
+   shapes.forEach((shape,index)=>pool.play({x:state.boss.x,y:state.boss.y,angle:ctx.angle,...shape,windup:ability.windup,
+    safeCircles:ctx.safeCircles,owner:state.boss,bornAt:this.scene.elapsed,tag:`boss:${ability.id}`,sound:state.behavior.temporary?'boss':false,
+    onUpdate:ability.track?(w=>ability.track(ctx,w)):undefined,onCancel:cancel,
+    onResolve:index?undefined:w=>{
     if(!this.valid(state)||state.busy!==token)return;state.busy=null;
     if(!this.running()||state.dead||!state.boss.active||!canEnemyAttack(this.scene,state.boss)||state.boss.getData('silenceUntil')>this.scene.elapsed){state.recoveryUntil=this.scene.elapsed+ability.recovery;return;}
     this.scene.animateCharacter?.(state.boss,state.boss.getData('artKey'),'attack',.4);
     const key=`${state.definition.id}:${ability.id}`;this.casts[key]=(this.casts[key]||0)+1;
+    if(!state.behavior.temporary)cue(ctx,ability.id,'cast',w);
     ability.execute(ctx,w);
-    if(this.valid(state)&&!state.dead&&!state.motion)state.recoveryUntil=this.scene.elapsed+ability.recovery;
-   }});
-  if(!warning){state.busy=null;return false;}
+    if(this.valid(state)&&!state.dead&&!state.motion&&!state.channel)state.recoveryUntil=this.scene.elapsed+ability.recovery;
+   }}));return true;
+  };
+  if(ability.prepare)ability.prepare(ctx,begin,cancel);else if(!begin())return false;
   // A cancelled warning still consumes its cooldown; retries cannot spam wind-ups.
-  state.cooldowns[ability.id]=this.scene.elapsed+ability.cooldown;return true;
+  state.cooldowns[ability.id]=this.scene.elapsed+ability.cooldown;state.lastCast[ability.id]=this.scene.elapsed;return true;
  }
  touch(boss){
   // A dash owns its swept hit; stationary overlap must not bypass its warning.
   if(!this.running())return true;
-  const state=boss.getData('bossState');if(state?.motion||state?.busy||state?.dead||state?.recoveryUntil>this.scene.elapsed)return true;
+  const state=boss.getData('bossState');if(state?.motion||state?.channel||state?.busy||state?.dead||state?.recoveryUntil>this.scene.elapsed)return true;
   return false;
  }
  cancel(state=this.state){
   if(!state)return;
+  const pending=state.busy||state.motion||state.channel;
   if(state.boss.getData('serial')===state.serial){this.scene.telegraphs?.cancelOwner(state.boss);state.boss.setVelocity?.(0,0);}
   state.busy=null;state.motion=null;
-  state.recoveryUntil=this.scene.elapsed+BOSS_FAIRNESS.minimumRecovery;
+  state.runtime?.interrupt();
+  if(pending)state.recoveryUntil=Math.max(state.recoveryUntil,this.scene.elapsed+BOSS_FAIRNESS.minimumRecovery);
  }
  die(boss,done){
   const state=this.state;if(!this.valid(state)||state.boss!==boss||state.dead)return false;
-  this.cancel(state);state.dead=true;
+  this.cancel(state);state.runtime?.destroy();state.dead=true;
+  if(!state.behavior.temporary)cue(this.context(),'death');
   const sprite=this.scene.add?.sprite?.(boss.x,boss.y,boss.texture?.key||boss.getData('artKey'));
   sprite?.setDepth?.(24).setScale(boss.scaleX||1,boss.scaleY||1).setTint?.(state.definition.color||0xffcf4a);
   this.scene.playEffect?.(2,boss.x,boss.y,190);
@@ -169,5 +191,7 @@ export class BossController {
   });
  }
  drawArena(){const state=this.state;this.graphics?.clear();if(this.valid(state)&&!state.dead)this.graphics?.lineStyle?.(2,0xffcf4a,.12).strokeCircle(state.arena.x,state.arena.y,state.arena.radius);}
- destroy(){if(this.destroyed)return;this.cancel();this.state?.death?.sprite?.destroy();this.state=null;this.warning=null;this.graphics?.destroy();this.scene.bossPresentation?.clearWarning();this.destroyed=true;}
+ updateObject(actor,dt){this.state?.runtime?.updateTarget(actor,dt);}
+ destroyObject(actor){this.state?.runtime?.destroyTarget(actor);}
+ destroy(){if(this.destroyed)return;this.cancel();this.state?.runtime?.destroy();this.state?.death?.sprite?.destroy();this.state=null;this.warning=null;this.graphics?.destroy();this.scene.bossPresentation?.clearWarning();this.destroyed=true;}
 }

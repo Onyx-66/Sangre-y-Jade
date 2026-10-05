@@ -63,7 +63,7 @@ export class EnemyBehaviorSystem {
   applyPlayerStatus(kind,params,source) {
     if(!params||this.scene.ended)return;
     const player=this.scene.player,now=this.scene.elapsed;
-    if(kind==='root'||kind==='knockup'){player.setData(`${kind}Until`,Math.max(player.getData(`${kind}Until`)||0,now+params));return;}
+    if(kind==='root'||kind==='knockup'||kind==='confuse'){player.setData(`${kind}Until`,Math.max(player.getData(`${kind}Until`)||0,now+params));return;}
     player.setData(`enemy${kind}`,{dps:params.dps,until:now+params.duration,source,serial:source?.getData?.('serial')});
   }
   updateWorld(dt) {
