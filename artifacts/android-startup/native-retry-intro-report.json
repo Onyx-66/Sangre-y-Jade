@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "label": "Packaged application and local fonts load",
+      "passed": true
+    },
+    {
+      "label": "No JavaScript errors in the Android WebView",
+      "passed": true
+    },
+    {
+      "label": "No missing packaged assets in the Android WebView",
+      "passed": true
+    },
+    {
+      "label": "Repeated-failure test starts in canvas recovery mode",
+      "passed": true
+    },
+    {
+      "label": "Android host also survives a second renderer crash",
+      "passed": true
+    },
+    {
+      "label": "Second failure shows a native retry panel instead of an automatic restart loop",
+      "passed": true
+    },
+    {
+      "label": "Native Retry button has a reachable touch target",
+      "passed": true
+    },
+    {
+      "label": "Native Retry restores a running application in safe rendering mode",
+      "passed": true
+    },
+    {
+      "label": "Native Retry keeps the saved-storage canary",
+      "passed": true
+    },
+    {
+      "label": "Intro playback keeps the Android host alive",
+      "passed": true
+    },
+    {
+      "label": "Intro skip returns to the menu and records completion",
+      "passed": true
+    },
+    {
+      "label": "Intro has no JavaScript errors or missing packaged images",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "android": "17",
+  "state": {
+    "text": "العب\nالترقيات\n0\nطريقة اللعب\nشاهد المقدمة\nالمتجر\nالإعدادات\nVERSION 0.6.0\nEnglish\nFrançais\nالعربية",
+    "app": true,
+    "nativeStartup": {
+      "canvas": true,
+      "recovering": false
+    },
+    "introImages": 0,
+    "fontsComplete": "true",
+    "viewport": [
+      891,
+      411
+    ],
+    "userAgent": "Mozilla/5.0 (Linux; Android 17; sdk_gphone16k_x86_64 Build/CP41.260828.004.A7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.5 Mobile Safari/537.36",
+    "memory": {
+      "used": 10000000,
+      "limit": 1070000000
+    }
+  }
+}

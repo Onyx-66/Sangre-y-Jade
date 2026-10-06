@@ -1,0 +1,6 @@
+<resources>
+    <!-- TODO native review -->
+    <string name="renderer_error">تعذّر على أندرويد إبقاء محرّك الويب للعبة قيد التشغيل. حدّث Android System WebView وChrome ثم أعد المحاولة. تقدّمك محفوظ.</string>
+    <!-- TODO native review -->
+    <string name="renderer_retry">إعادة المحاولة</string>
+</resources>

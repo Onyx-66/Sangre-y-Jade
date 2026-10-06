@@ -1,0 +1,4 @@
+<resources>
+    <string name="renderer_error">Android could not keep the game’s web renderer running. Update Android System WebView and Chrome, then retry. Your saved progress is kept.</string>
+    <string name="renderer_retry">Retry</string>
+</resources>

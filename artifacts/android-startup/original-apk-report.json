@@ -1,0 +1,24 @@
+{
+  "state": {
+    "text": "Play\nUpgrades\n0\nHow to Play\nWatch Intro\nShop\nSettings\nVERSION 0.6.0\nEnglish\nFrançais\nالعربية",
+    "app": true,
+    "introImages": 0,
+    "fontsComplete": "true",
+    "viewport": [
+      891,
+      411
+    ],
+    "userAgent": "Mozilla/5.0 (Linux; Android 17; sdk_gphone16k_x86_64 Build/CP41.260828.004.A7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.5 Mobile Safari/537.36",
+    "memory": {
+      "used": 10000000,
+      "limit": 1070000000
+    }
+  },
+  "errors": [],
+  "android": "17",
+  "rendererCrash": {
+    "processSurvived": false,
+    "survivingPid": ""
+  },
+  "nativeLog": ""
+}

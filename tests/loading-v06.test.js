@@ -49,6 +49,28 @@ test('atlas and frame-sheet queues use their own data; timeout and abort do not 
  const result=await loadTextureBatch(scene,files,{timeout:5});assert.deepEqual(result,files);assert.equal(scene.load.listenerCount('complete'),0);
  const cancel=new AbortController();const waiting=loadTextureBatch(scene,files,{signal:cancel.signal});cancel.abort();await assert.rejects(waiting,{name:'AbortError'});assert.equal(scene.load.listenerCount('progress'),0);
 });
+test('a slow texture batch keeps loading while real progress advances, even beyond the timeout duration',async t=>{
+ t.mock.timers.enable({apis:['setTimeout']});
+ const scene=textureScene();scene.load.start=()=>{};
+ const files=['one','two','three'].map(key=>({key,url:`${key}.png`,critical:true}));
+ const result=loadTextureBatch(scene,files,{timeout:20});
+ for(let i=0;i<files.length;i++){
+  t.mock.timers.tick(19);scene.keys.add(files[i].key);scene.load.emit('progress',(i+1)/files.length);
+ }
+ scene.load.emit('complete');
+ assert.deepEqual(await result,[],'healthy 57ms batch must not fail at a fixed 20ms deadline');
+ assert.equal(scene.load.listenerCount('progress'),0);
+});
+test('a texture batch that stops making progress still times out and identifies only missing assets',async t=>{
+ t.mock.timers.enable({apis:['setTimeout']});
+ const scene=textureScene();scene.load.start=()=>{};
+ const files=['loaded','stalled'].map(key=>({key,url:`${key}.png`,critical:true}));
+ const result=loadTextureBatch(scene,files,{timeout:20});
+ t.mock.timers.tick(19);scene.keys.add('loaded');scene.load.emit('progress',.5);
+ t.mock.timers.tick(19);scene.load.emit('progress',.5);t.mock.timers.tick(2);
+ assert.deepEqual(await result,[files[1]]);
+ assert.equal(scene.load.listenerCount('complete'),0);
+});
 test('selected hero and map manifest excludes other heroes and unused aerial/terrain art without dropping shared run assets',()=>{
  const files=textureManifest({hero,map}),keys=files.map(f=>f.key);assert.equal(new Set(keys).size,keys.length);assert.ok(keys.includes('hero-balam-up-frame-3'));assert.ok(!keys.some(k=>k.startsWith('hero-ixchel')||k.startsWith('hero-kukul')));assert.ok(!keys.includes('enemy-bat'));assert.ok(!keys.includes('top-crystal'));assert.ok(keys.includes('ground')&&keys.includes('support-saintess-frame-0')&&keys.includes('top-tree'));
  const cenote=textureManifest({hero:{...hero,id:'kukul',automatic:{type:'ranged'}},map:{...map,id:'cenote'}});assert.ok(cenote.some(f=>f.key==='top-crystal'));assert.ok(!cenote.some(f=>f.key==='top-tree'));assert.ok(cenote.some(f=>f.key==='enemy-bat'));

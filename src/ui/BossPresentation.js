@@ -1,8 +1,9 @@
 import kit from '../data/uiKit.json' with {type:'json'};
 import {t,getLanguage} from '../i18n/index.js';
 import {warningEdgePoint} from '../bosses/rules.js';
+import {assetUrl} from './assetUrl.js';
 
-const source=id=>`${import.meta.env?.BASE_URL||'/'}${kit.items.find(item=>item.id===id).path}`;
+const source=id=>assetUrl(kit.items.find(item=>item.id===id).path);
 function banner(definition,className='boss-entry-name'){
  const el=document.createElement('div');el.className=className;
  el.style.setProperty('--boss-banner',`url('${source('banner-title')}')`);

@@ -2,9 +2,9 @@ import catalog from '../data/uiKit.json' with { type:'json' };
 import { t,getLanguage } from '../i18n/index.js';
 import { loadingTips } from '../i18n/loading-v06.js';
 import { abortError } from '../systems/RunLoadProgress.js';
+import { assetUrl as asset } from './assetUrl.js';
 
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
-const asset=path=>`${import.meta.env?.BASE_URL||'/'}${path}`;
 const kit=id=>catalog.items.find(item=>item.id===id);
 const source=id=>asset(kit(id).path);
 const slice=id=>{const {top,right,bottom,left}=kit(id).sliceInsets;return `--load-image:url('${source(id)}');--load-insets:${top} ${right} ${bottom} ${left};border-width:${top*.3}px ${right*.3}px ${bottom*.3}px ${left*.3}px`;};

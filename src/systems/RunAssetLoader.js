@@ -8,12 +8,19 @@ export function loadTextureBatch(scene,files,{onProgress=()=>{},signal,timeout=2
     if(!pending.length){onProgress(1);resolve([]);return;}
     const failures=new Map(),byKey=new Map(pending.map(file=>[file.key,file]));
     const cached=files.length-pending.length;
-    const progress=value=>onProgress((cached+value*pending.length)/files.length);
+    let timer,lastProgress=-1;
+    const progress=value=>{
+      if(value>lastProgress){lastProgress=value;armTimeout();}
+      onProgress((cached+value*pending.length)/files.length);
+    };
     const error=file=>{const entry=byKey.get(file.key);if(entry)failures.set(entry.key,entry);};
     const cleanup=()=>{clearTimeout(timer);scene.load.off('progress',progress);scene.load.off('loaderror',error);scene.load.off('complete',complete);signal?.removeEventListener('abort',abort);};
     const complete=()=>{cleanup();onProgress(1);resolve([...failures.values()]);};
     const abort=()=>{cleanup();scene.load.reset();reject(abortError());};
-    const timer=setTimeout(()=>{for(const file of pending)if(!scene.textures.exists(file.key))failures.set(file.key,file);scene.load.reset();complete();},timeout);
+    // Slow Android decoding/upload is healthy while files keep completing.
+    // Only stop a batch that has made no new progress for the timeout period.
+    const armTimeout=()=>{clearTimeout(timer);timer=setTimeout(()=>{for(const file of pending)if(!scene.textures.exists(file.key))failures.set(file.key,file);scene.load.reset();complete();},timeout);};
+    armTimeout();
     scene.load.on('progress',progress);scene.load.on('loaderror',error);scene.load.once('complete',complete);signal?.addEventListener('abort',abort,{once:true});
     for(const file of pending){
       if(file.type==='atlas')scene.load.atlas(file.key,file.url,file.dataUrl);

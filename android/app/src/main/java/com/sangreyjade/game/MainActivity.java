@@ -9,6 +9,8 @@ import android.graphics.Insets;
 import android.annotation.SuppressLint;
 import android.window.OnBackInvokedDispatcher;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Gravity;
 import android.view.WindowManager;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
@@ -18,19 +20,32 @@ import android.webkit.WebViewClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebChromeClient;
+import android.webkit.RenderProcessGoneDetail;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Button;
+import android.util.Log;
 import java.io.ByteArrayInputStream;
 import java.util.HashMap;
 
 public class MainActivity extends Activity {
     private WebView web;
     private int safeLeft,safeTop,safeRight,safeBottom;
+    private boolean safeRenderer;
     private static final String ORIGIN = "appassets.androidplatform.net";
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
+        safeRenderer=getPreferences(MODE_PRIVATE).getBoolean("safe_renderer",false);
         if(Build.VERSION.SDK_INT>=33)getOnBackInvokedDispatcher().registerOnBackInvokedCallback(OnBackInvokedDispatcher.PRIORITY_DEFAULT,this::handleBack);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         applyImmersiveMode();
-        web=new WebView(this);
+        try { web=new WebView(this); }
+        catch(RuntimeException error){
+            Log.e("SangreStartup","Android could not create the WebView",error);
+            showRendererError();
+            return;
+        }
+        if(safeRenderer)web.setLayerType(View.LAYER_TYPE_SOFTWARE,null);
         if((getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE)!=0)WebView.setWebContentsDebuggingEnabled(true);
         web.setBackgroundColor(0xff251828);
         web.setFitsSystemWindows(false);
@@ -59,6 +74,20 @@ public class MainActivity extends Activity {
         web.getSettings().setAllowContentAccess(false);
         web.setWebChromeClient(new WebChromeClient());
         web.setWebViewClient(new WebViewClient() {
+            @Override public boolean onRenderProcessGone(WebView failed,RenderProcessGoneDetail detail){
+                Log.e("SangreStartup","WebView renderer stopped; crashed="+detail.didCrash()+", safeRenderer="+safeRenderer);
+                // Android otherwise terminates the host app for a dead renderer.
+                // Remove and destroy that WebView; it must never be used again.
+                if(failed.getParent() instanceof ViewGroup)((ViewGroup)failed.getParent()).removeView(failed);
+                if(web==failed)web=null;
+                failed.destroy();
+                if(!safeRenderer){
+                    getPreferences(MODE_PRIVATE).edit().putBoolean("safe_renderer",true).apply();
+                    getIntent().putExtra("renderer_recovery",true);
+                    recreate();
+                }else showRendererError();
+                return true;
+            }
             @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) { return !ORIGIN.equals(r.getUrl().getHost()); }
             @Override public WebResourceResponse shouldInterceptRequest(WebView v, WebResourceRequest r) {
                 if(!ORIGIN.equals(r.getUrl().getHost())) return missing();
@@ -82,7 +111,8 @@ public class MainActivity extends Activity {
             @Override public void onPageFinished(WebView v,String url) { v.evaluateJavascript("window.__SANGRE_Y_JADE__?.audio.unlock()",null);publishSafeInsets();v.requestApplyInsets(); }
         });
         setContentView(web);
-        web.loadUrl("https://"+ORIGIN+"/index.html");
+        String recovery=getIntent().getBooleanExtra("renderer_recovery",false)?"&nativeRecovery=1":"";
+        web.loadUrl("https://"+ORIGIN+"/index.html"+(safeRenderer?"?nativeRenderer=canvas"+recovery:""));
     }
     private void applyImmersiveMode(){
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -105,12 +135,21 @@ public class MainActivity extends Activity {
         if(web==null)return;
         // Native insets are physical pixels; the viewport/HUD uses CSS pixels.
         String values="["+safeLeft+","+safeTop+","+safeRight+","+safeBottom+"]";
-        web.evaluateJavascript("(()=>{const p=window.devicePixelRatio||1;const v="+values+";['left','top','right','bottom'].forEach((s,i)=>document.documentElement.style.setProperty('--native-safe-'+s,v[i]/p+'px'))})()",null);
+        web.evaluateJavascript("(()=>{const root=document.documentElement;if(!root)return;const p=window.devicePixelRatio||1;const v="+values+";['left','top','right','bottom'].forEach((s,i)=>root.style.setProperty('--native-safe-'+s,v[i]/p+'px'))})()",null);
     }
     @Override public void onWindowFocusChanged(boolean focused){super.onWindowFocusChanged(focused);if(focused)applyImmersiveMode();}
     @Override public void onConfigurationChanged(Configuration config){super.onConfigurationChanged(config);applyImmersiveMode();}
     private WebResourceResponse missing(){return new WebResourceResponse("text/plain","UTF-8",404,"Not found",null,new ByteArrayInputStream(new byte[0]));}
-    private void handleBack(){web.evaluateJavascript("(()=>{const a=window.__SANGRE_Y_JADE__;if(a?.cancelLoading){a.cancelLoading();return}if(a?.game){a.game.scene.getScene('Ritual').togglePause()}else{a?.cancelPrologue?.();a?.showTitle()}})()",null);}
+    private void handleBack(){if(web==null){finish();return;}web.evaluateJavascript("(()=>{const a=window.__SANGRE_Y_JADE__;if(a?.cancelLoading){a.cancelLoading();return}if(a?.game){a.game.scene.getScene('Ritual').togglePause()}else{a?.cancelPrologue?.();a?.showTitle()}})()",null);}
+    private void showRendererError(){
+        LinearLayout panel=new LinearLayout(this);
+        panel.setOrientation(LinearLayout.VERTICAL);panel.setGravity(Gravity.CENTER);panel.setPadding(32,32,32,32);
+        panel.setBackgroundColor(0xff251828);
+        TextView message=new TextView(this);message.setText(R.string.renderer_error);message.setTextColor(Color.WHITE);message.setTextSize(18);message.setGravity(Gravity.CENTER);
+        panel.addView(message);
+        Button retry=new Button(this);retry.setText(R.string.renderer_retry);retry.setOnClickListener(view->recreate());panel.addView(retry);
+        setContentView(panel);
+    }
     // API 26–32 use the legacy callback; API 33+ registers predictive back above.
     @SuppressLint("GestureBackNavigation")
     @Override public void onBackPressed(){handleBack();}

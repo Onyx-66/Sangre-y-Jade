@@ -3,6 +3,7 @@ import './style.css';
 import { heroList } from './data/heroes.js';
 import { MAPS, RUN_MODES, STORE_ITEMS } from './data/world.js';
 import { SaveSystem } from './systems/SaveSystem.js';
+import { nativeStartupOptions } from './systems/NativeStartup.js';
 import { AudioDirector } from './systems/AudioDirector.js';
 import { GameScene } from './scenes/GameScene.js';
 import { LoadingScene } from './scenes/LoadingScene.js';
@@ -38,6 +39,7 @@ class SangreYJadeApp {
     this.gameRoot = document.querySelector('#game-root');
     this.uiRoot = document.querySelector('#ui-root');
     this.save = new SaveSystem();
+    this.nativeStartup = nativeStartupOptions(window.location);
     setLanguage(this.save.data.settings.language);
     this.audio = new AudioDirector(this.save);
     this.game = null;
@@ -48,7 +50,7 @@ class SangreYJadeApp {
     window.addEventListener('error', (event) => this.showFatal(event.error || event.message));
     window.addEventListener('unhandledrejection', (event) => this.showFatal(event.reason));
     document.documentElement.classList.toggle('reduce-motion',this.save.data.settings.reducedMotion);
-    if(this.save.data.prologueRevision!==2) this.playPrologue(()=>this.showTitle());
+    if(this.save.data.prologueRevision!==2&&!this.nativeStartup.recovering) this.playPrologue(()=>this.showTitle());
     else this.showTitle();
     this.registerServiceWorker();
   }
@@ -174,7 +176,7 @@ class SangreYJadeApp {
       },
     });
     this.game = new Phaser.Game({
-      type: Phaser.AUTO,
+      type: this.nativeStartup.canvas ? Phaser.CANVAS : Phaser.AUTO,
       parent: this.gameRoot,
       width: this.gameRoot.clientWidth,
       height: this.gameRoot.clientHeight,

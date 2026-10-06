@@ -1,0 +1,6 @@
+<resources>
+    <!-- TODO native review -->
+    <string name="renderer_error">Android n’a pas pu maintenir le moteur web du jeu. Mettez à jour Android System WebView et Chrome, puis réessayez. Votre progression est conservée.</string>
+    <!-- TODO native review -->
+    <string name="renderer_retry">Réessayer</string>
+</resources>
