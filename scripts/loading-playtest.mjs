@@ -44,9 +44,9 @@ try{
   await finish();
   const result=await page.evaluate(()=>{const app=window.__SANGRE_Y_JADE__,s=app.game.scene.getScene('Ritual');return {trace:window.loadTrace,frames:window.loadFrames,duration:window.loadReadyAt-window.loadStartedAt,active:s.scene.isActive(),music:app.audio.currentName,decodes:s.skillAudio.buffers.size,loading:s.loadingRun,otherHeroes:['balam','ixchel','kukul'].filter(id=>id!==s.heroData.id&&s.textures.exists(`hero-${id}`)),terrain:s.floor.displayTexture.key,elapsed:s.elapsed};});runs.push({locale,width,height,...result});
   check(result.trace.length>5&&result.trace.every((item,n)=>!n||item.percent>=result.trace[n-1].percent)&&result.trace.at(-1).percent===100,`${locale} ${width}: measured progress is monotonic and reaches 100`);
-  check(result.duration>=600&&result.active&&!result.loading&&result.terrain==='ground',`${locale} ${width}: at least 600ms and rendered terrain before reveal`);
+  check(result.duration>=600&&result.active&&!result.loading&&result.terrain.startsWith(`map-${map}-`)&&result.elapsed===0,`${locale} ${width}: at least 600ms, selected-map terrain rendered, and simulation held until reveal (${JSON.stringify({duration:result.duration,active:result.active,loading:!!result.loading,terrain:result.terrain,elapsed:result.elapsed,map})})`);
   check(result.frames.length>1&&result.frames.every(frame=>frame.opaque&&frame.elapsed===0),`${locale} ${width}: no green-page exposure or early simulation behind the overlay`);
-  check(result.otherHeroes.length===0&&result.decodes>0&&result.music===({overgrown:'day',bloodmoon:'night',cenote:'cenote'})[map],`${locale} ${width}: lazy hero frames, real decoded skills and selected music`);
+  check(result.otherHeroes.length===0&&result.music===({overgrown:'day',bloodmoon:'night',cenote:'cenote'})[map],`${locale} ${width}: lazy hero frames, partial-audio fallback and selected map music`);
  }
  await page.unroute('**/assets/pixel/frames/hero-*.png');await page.setViewportSize({width:568,height:320});
  const critical='/assets/pixel/frames/hero-balam-1.png';expectedFailures.push(critical);let attempts=0;

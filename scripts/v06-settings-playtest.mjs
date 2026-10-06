@@ -39,7 +39,7 @@ const back=()=>page.evaluate(androidBack);
 function settingsGeometry(){
  const rect=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
  const contained=(a,b)=>a.x>=b.x-.5&&a.y>=b.y-.5&&a.right<=b.right+.5&&a.bottom<=b.bottom+.5;
- const rows=[...document.querySelectorAll('.settings-panel [data-toggle]')].map(button=>{
+ const rows=[...document.querySelectorAll('.settings-panel [data-toggle]')].filter(button=>button.offsetWidth>0&&button.offsetHeight>0).map(button=>{
   const track=button.querySelector('.toggle-track'),knob=button.querySelector('.toggle-knob'),word=button.querySelector('.toggle-word');
   const label=button.closest('.settings-row').querySelector('label');
   const b=rect(button),r=rect(track),k=rect(knob),w=rect(word),l=rect(label);
@@ -102,19 +102,28 @@ try{
    await page.evaluate(async({locale,on})=>{
     const app=window.__SANGRE_Y_JADE__,{setLanguage}=await import('/src/i18n/index.js');
     app.save.setSetting('language',locale);setLanguage(locale);
-    for(const key of ['screenShake','damageNumbers','reducedMotion','telegraphHighContrast'])app.save.setSetting(key,on);
+    for(const key of ['screenShake','damageNumbers','reducedMotion','telegraphHighContrast','voiceEnabled'])app.save.setSetting(key,on);
     document.documentElement.classList.toggle('reduce-motion',on);app.showSettings();await document.fonts.ready;
    },{locale,on});
    const name=`${locale}-settings-${width}x${height}-${on?'on':'off'}`,layout=await page.evaluate(settingsGeometry);
    layouts.push({name,...layout});
-   check(layout.rows.length===4&&layout.controls.length===12,`${name}: all settings use the shared content`);
-   check(layout.rows.every(row=>row.knobInside&&row.fixed&&row.internalDirection==='ltr'),`${name}: every knob inside its fixed track`);
+   check(layout.rows.length===4&&layout.controls.length===16,`${name}: four visible shared toggles and all sixteen settings are present`);
+   check(layout.rows.every(row=>row.knobInside&&row.fixed&&row.internalDirection==='ltr'),`${name}: every visible knob inside its fixed track`);
    check(layout.rows.every(row=>row.rowOrder&&row.wordFits),`${name}: row label/control order and unclipped localized word`);
    check(layout.rows.every(row=>row.checked===String(on)&&row.mark===(on?'✓':'×')&&row.word===words[locale][Number(on)]&&row.color===(on?'rgb(22, 128, 103)':'rgb(98, 95, 107)')),`${name}: readable on/off state with mark, word and color`);
    check(layout.inside&&layout.closeVisible,`${name}: panel and close button remain on screen`);
    const key=`${width}x${height}-${on}`,relative=layout.rows.map(row=>row.relative);
    if(locale==='en')geometry.set(key,relative);
    else check(JSON.stringify(relative)===JSON.stringify(geometry.get(key)),`${name}: internal geometry identical to English`);
+   await page.locator('[data-settings-tab="audio"]').click();
+   const voiceToggle=await page.locator('[data-toggle="voiceEnabled"]').evaluate(button=>{
+    const rect=el=>{const r=el.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};
+    const track=rect(button.querySelector('.toggle-track')),knob=rect(button.querySelector('.toggle-knob'));
+    return{inside:knob.x>=track.x&&knob.y>=track.y&&knob.right<=track.right&&knob.bottom<=track.bottom,
+     fixed:button.getBoundingClientRect().width===136&&track.width===60&&track.height===32};
+   });
+   check(voiceToggle.inside&&voiceToggle.fixed,`${name}: audio-tab voice switch shares fixed, contained toggle geometry`);
+   await page.locator('[data-settings-tab="general"]').click();
    // Scroll only the controls region, including the new warning toggle.
    await page.locator('[data-toggle="telegraphHighContrast"]').scrollIntoViewIfNeeded();
    await screenshot(name);

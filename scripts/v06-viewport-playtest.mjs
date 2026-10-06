@@ -140,8 +140,8 @@ try{
   const panel=await page.locator('.settings-panel').boundingBox(),close=await page.locator('[data-back]').boundingBox();
   check(panel.x>=24&&panel.y>=20&&panel.x+panel.width<=width-12&&panel.y+panel.height<=height-10&&close.y+close.height<=panel.y+panel.height,`${locale}-${width}x${height}: main settings and its close action fit the safe area`);
   await page.evaluate(()=>{const a=window.__SANGRE_Y_JADE__;a.setupStep=0;a.showRunSetup();});
-  for(let step=0;step<4;step++){
-   const panel=await page.locator('.wizard-panel').boundingBox(),button=await page.locator(step===3?'[data-start]':'[data-next]').boundingBox();
+  for(let step=0;step<2;step++){
+   const panel=await page.locator('.selection-page').boundingBox(),button=await page.locator('[data-next]').boundingBox();
    check(panel.x>=24&&panel.y>=20&&panel.x+panel.width<=width-12&&panel.y+panel.height<=height-10&&button.y+button.height<=panel.y+panel.height,`${locale}-${width}x${height}: setup step ${step+1} and its action fit the safe area`);
    if(step<3)await page.locator('[data-next]').click();
   }

@@ -10,8 +10,8 @@ export function actorCanCollideWithMap(actor, prop) {
   return Boolean(prop?.blocksGround && !actor?.flier);
 }
 
-export function stuckRecovery(seconds, moved, moving = true) {
-  if (!moving || moved >= 2) return 'none';
+export function stuckRecovery(seconds, moved) {
+  if (moved >= 2) return 'none';
   if (seconds >= 2) return 'reposition';
   if (seconds >= 1) return 'nudge';
   return 'none';
@@ -320,7 +320,9 @@ export class MapWorld {
     for (const enemy of enemies) {
       if (!enemy.active || enemy.getData('isBoss') || enemy.getData('flier')) continue;
       const actorRadius = enemy.getData('radius') || 16, velocity = enemy.body?.velocity;
-      if (!velocity || Math.hypot(velocity.x, velocity.y) < 3) continue;
+      // A blocked Arcade body often reports near-zero velocity. Keep it in the
+      // detector so stationary ground enemies can reach the 1s/2s recovery.
+      if (!velocity) continue;
       const nearby = this.blockersAround(enemy.x, enemy.y, actorRadius + 180);
       let avoidX = 0, avoidY = 0, nearest = null, nearestDistance = Infinity;
       for (const item of nearby) {
@@ -344,8 +346,10 @@ export class MapWorld {
       if (!state) state = { x: enemy.x, y: enemy.y, seconds: 0 };
       const moved = Math.hypot(enemy.x - state.x, enemy.y - state.y);
       state.seconds = moved < 2 ? state.seconds + dt : 0;
-      state.x = enemy.x; state.y = enemy.y;
-      const recovery=stuckRecovery(state.seconds,moved,Math.hypot(velocity.x,velocity.y)>15);
+      // Measure progress from the last meaningful position, not one frame.
+      // A 48px/s guardian moves only 0.8px at 60Hz and is not stuck.
+      if (moved >= 2) { state.x = enemy.x; state.y = enemy.y; }
+      const recovery=stuckRecovery(state.seconds,moved);
       if (recovery === 'nudge') {
         const angle = nearest ? Math.atan2(enemy.y - nearest.cy, enemy.x - nearest.cx) + 0.9 : Math.atan2(velocity.y, velocity.x) + 0.7;
         velocity.x += Math.cos(angle) * 90 * dt; velocity.y += Math.sin(angle) * 90 * dt;
@@ -361,6 +365,7 @@ export class MapWorld {
         }));
         if (options.length) { enemy.setPosition(options[0].x, options[0].y); enemy.body.reset(options[0].x, options[0].y); }
         state.seconds = 0;
+        state.x = enemy.x; state.y = enemy.y;
       }
       this.stuck.set(key, state);
     }

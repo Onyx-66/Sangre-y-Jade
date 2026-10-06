@@ -150,7 +150,29 @@ test('stuck detector nudges at one second and repositions by two seconds', () =>
   assert.equal(stuckRecovery(1.99, 0), 'nudge');
   assert.equal(stuckRecovery(2, 0), 'reposition');
   assert.equal(stuckRecovery(3, 5), 'none');
-  assert.equal(stuckRecovery(3, 0, false), 'none');
+  assert.equal(stuckRecovery(1, 0), 'nudge', 'stationary actors are nudged after one second');
+  assert.equal(stuckRecovery(3, 0), 'reposition', 'zero velocity is still recoverable after two seconds');
+});
+
+test('slow ground enemies making progress are not teleported by the stuck detector', () => {
+  let resets=0;
+  const enemy={active:true,x:0,y:0,getData:key=>({serial:1,radius:16}[key]),
+    body:{velocity:{x:48,y:0},reset(){resets++;}},setPosition(x,y){this.x=x;this.y=y;}};
+  const world={scene:{enemies:{getChildren:()=>[enemy]}},stuck:new Map(),blockersAround:()=>[],clampInside:p=>p};
+  for(let i=0;i<300;i++){enemy.x+=48/60;MapWorld.prototype.updateActors.call(world,1/60);}
+  assert.equal(resets,0,'0.8px each frame is progress, not five seconds stuck');
+  assert.equal(enemy.body.velocity.x,48,'no false nudge');
+  for(let i=0;i<125;i++)MapWorld.prototype.updateActors.call(world,1/60);
+  assert.ok(resets>=1,'actually blocked enemies still recover');
+});
+
+test('a ground enemy stopped by collision still reaches stuck recovery', () => {
+  let resets=0;
+  const enemy={active:true,x:0,y:0,getData:key=>({serial:2,radius:16}[key]),
+    body:{velocity:{x:0,y:0},reset(){resets++;}},setPosition(x,y){this.x=x;this.y=y;}};
+  const world={scene:{enemies:{getChildren:()=>[enemy]}},stuck:new Map(),blockersAround:()=>[],clampInside:p=>p};
+  for(let i=0;i<125;i++)MapWorld.prototype.updateActors.call(world,1/60);
+  assert.ok(resets>=1,'zero-velocity actors must be nudged/repositioned rather than skipped');
 });
 
 function makeScene(mapId) {

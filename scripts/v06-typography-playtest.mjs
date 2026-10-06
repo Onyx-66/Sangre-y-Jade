@@ -36,7 +36,7 @@ function audit(selector) {
     const clip = scroller && rect(scroller);
     // Scrollable settings are intentionally a bounded list. Audit all of them
     // horizontally, and only visible text against the viewport vertically.
-    const owner = el.closest('.choice-card,.btn,.skill-tooltip,.panel,.modal,.brand-lockup') || root;
+    const owner = el.closest('.choice-card,.btn,.kit-card,.kit-button,.skill-tooltip,.panel,.modal,.menu-layout') || root;
     const bounds = rect(owner);
     for (const box of boxes) {
       if (clip && (box.bottom < clip.y || box.top > clip.bottom)) {
@@ -53,9 +53,13 @@ function audit(selector) {
     if (style.fontFamily.startsWith('"Jersey 15",') && style.fontWeight !== '400') failures.push(`bold Jersey: ${text}`);
     samples.push({ text, family: style.fontFamily, size: style.fontSize, weight: style.fontWeight, lineHeight: style.lineHeight });
   }
-  const buttons = [...root.querySelectorAll('.btn')].filter(el => el.getClientRects().length).map(rect);
-  for (const box of buttons) if (!inside(box, viewport)) failures.push('action outside screen');
-  const cards = [...root.querySelectorAll('.choice-card')].map(el => ({ el, r: rect(el) }));
+  const buttons = [...root.querySelectorAll('.btn,.kit-button')].filter(el => el.getClientRects().length).map(el => ({el,box:rect(el)}));
+  for (const {el,box} of buttons) {
+    const clipper=el.closest('.settings-content'),clipperRect=clipper&&rect(clipper);
+    const clippedAway=clipperRect&&(box.bottom<=clipperRect.y||box.y>=clipperRect.bottom);
+    if (!clippedAway&&!inside(box, viewport)) failures.push('action outside screen');
+  }
+  const cards = [...root.querySelectorAll('.choice-card,.kit-card')].map(el => ({ el, r: rect(el) }));
   for (const { el, r } of cards) {
     if (el.scrollWidth > el.clientWidth + 2 || el.scrollHeight > el.clientHeight + 2) failures.push(`card overflow: ${el.textContent.trim().slice(0, 50)}`);
     for (const button of buttons) if (Math.min(r.right, button.right) - Math.max(r.x, button.x) > 1 && Math.min(r.bottom, button.bottom) - Math.max(r.y, button.y) > 1)
@@ -84,7 +88,7 @@ try {
     ['Jersey 15','Atkinson Hyperlegible','Noto Sans Arabic'].every(family => [...document.fonts].some(face => face.family.replaceAll('"','') === family && face.status === 'loaded')) &&
     window.__SANGRE_Y_JADE__.typography.missing.length === 0), 'all three bundled font families actually loaded before menu');
   // Prove the bounds test can fail on a real, deliberately damaged layout.
-  const bad = await page.addStyleTag({ content: '.brand-lockup .btn{width:900px!important}' });
+  const bad = await page.addStyleTag({ content: '.menu-layout .kit-button{width:900px!important}' });
   check((await page.evaluate(audit, '.screen')).failures.length > 0, 'overflow detector rejects deliberately oversized menu buttons');
   await bad.evaluate(el => el.remove());
   for (const locale of ['en', 'fr', 'ar']) {

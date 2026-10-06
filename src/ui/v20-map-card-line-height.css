@@ -1,0 +1,17 @@
+/* Keep the compact map picker within the minimum readable line-height contract. */
+@media (min-width: 541px) and (max-height: 520px) {
+  .kit-screen .map-selection-card .map-name,
+  .kit-screen .map-selection-card .map-difficulty {
+    line-height: 1.35 !important;
+  }
+
+  .kit-screen .hero-selection-card .hero-stage {
+    height: 38px;
+    min-height: 38px;
+  }
+
+  .kit-screen .hero-selection-card {
+    gap: 0;
+    padding: 1px;
+  }
+}

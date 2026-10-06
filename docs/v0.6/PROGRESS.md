@@ -518,3 +518,10 @@ Open issues: developer placement of audio files, typo/unmapped-file review, fina
 - See `I18N_REPORT_V18.md` and `previews/v18/report.json` for coverage and evidence. No art/audio files, dependencies or gameplay numbers changed; unrelated dirty work was kept outside this commit.
 
 Open issues: native proofreading and Android rendering review; pre-existing incomplete seven-tab Settings implementation and legacy Ixchel skill pool. The browser matrix uses the current checkout's earlier uncommitted UI prerequisites; this task does not absorb or implement those unrelated features.
+
+## V20 — Strict release review — 2026-10-06
+
+- Reviewed the current release working tree against V06_SPEC, v06_design and the prior skills spec. Added `docs/v0.6/REVIEW.md` with the acceptance checklist, evidence, fixes, blockers and ship recommendation.
+- Fixed zero-velocity stuck recovery for collision-blocked ground enemies and added slow-progress/stationary regression tests. Fixed 568×320 compact-landscape hero/map card overflow and line-height; corrected stale viewport/settings test assumptions.
+- Verification: `npm run check` **620/620 pass + build**; HUD **497 pass**; viewport **476 pass**; typography **100 pass**; i18n **8 pass / 0 untranslated**; skills validator **108 entries OK**. Menu landscape matrix passed; extra portrait guard fails. Settings browser test is inconclusive (`ERR_STRING_TOO_LONG`); loading map-art check fails.
+- Release blockers remain: audio **0/461** (264 P0 missing); no registered map art and Blood Moon assets absent; pacing misses for Balam/Kukul; 4× sample ~47.2 FPS; residual bot stuck reports and 20-minute/mobile/boss-kill validation still need resolution. Recommendation: **do not ship**.
