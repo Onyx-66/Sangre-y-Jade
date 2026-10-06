@@ -1,0 +1,16 @@
+Device: Samsung Galaxy A56 (SM-A566B), Android 16, API 36
+Installed application: com.sangreyjade.game, version 0.6.0, versionCode 7
+Reproduced with adb am start -W on 2026-10-06 at 16:12:19 (phone time).
+This excerpt is restricted to the game's crash; unrelated phone logs were not saved.
+
+FATAL EXCEPTION: main
+Process: com.sangreyjade.game, PID: 23205
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.sangreyjade.game/com.sangreyjade.game.MainActivity}
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.view.WindowInsetsController com.android.internal.policy.DecorView.getWindowInsetsController()' on a null object reference
+    at com.android.internal.policy.PhoneWindow.getInsetsController(PhoneWindow.java:4523)
+    at com.sangreyjade.game.MainActivity.applyImmersiveMode(MainActivity.java:128)
+    at com.sangreyjade.game.MainActivity.onCreate(MainActivity.java:41)
+
+Earlier crashes at 12:39 used the same cause. Repeated build-7 crashes
+at 15:22 and 15:23 also have this exact cause. The renderer recovery cannot fix
+this failure because it happens before the WebView is constructed.

@@ -7,8 +7,13 @@ import assert from 'node:assert/strict';
 const adb = process.env.ADB_BIN || 'C:/Users/kossa/AppData/Local/Android/Sdk/platform-tools/adb.exe';
 const serial = process.env.ANDROID_SERIAL || 'emulator-5554';
 const call = (...args) => execFileSync(adb, ['-s', serial, ...args], { encoding: 'utf8', timeout: 30000, maxBuffer: 8 * 1024 * 1024 }).trim();
-const output = resolve('artifacts/android-startup');
+const output = resolve(process.env.ANDROID_OUTPUT || 'artifacts/android-startup');
 mkdirSync(output, { recursive: true });
+if (process.argv.includes('--cold-launch')) {
+  // Stop only this app, keeping its data, and exercise the real Activity startup.
+  call('shell', 'am', 'force-stop', 'com.sangreyjade.game');
+  call('shell', 'am', 'start', '-W', '-n', 'com.sangreyjade.game/.MainActivity');
+}
 // A fresh emulator may show Android's own fullscreen education above the app.
 // CDP clicks bypass it, but real Android Back/touches do not. Dismiss only this
 // known system dialog; do not confuse its interception with a game bug.
@@ -55,6 +60,11 @@ try {
   }));
   report.state = state;
   check(state.app && state.fontsComplete === 'true', 'Packaged application and local fonts load');
+  if (process.argv.includes('--cold-launch')) {
+    await page.waitForTimeout(5000);
+    check(call('shell', 'pidof', 'com.sangreyjade.game').split(' ').includes(pid), 'Cold launch keeps the same native host alive');
+    check(call('shell', 'dumpsys', 'activity', 'activities').split('\n').some(line => /topResumedActivity=.*com.sangreyjade.game/.test(line)), 'Cold-launched game remains foreground');
+  }
   if (process.argv.includes('--renderer-crash')) {
     await page.evaluate(() => localStorage.setItem('android-startup-canary', 'preserved'));
     const session = await browser.contexts()[0].newCDPSession(page);
@@ -130,6 +140,20 @@ try {
       call('pull', '/sdcard/syj-startup-smoke.png', resolve(output, `${hero}-${locale}-gameplay.png`));
       console.log(`Android gameplay passed: ${hero}/${map}/${locale}.`);
     }
+  }
+  if (process.argv.includes('--lifecycle')) {
+    check(await page.evaluate(() => !!window.__SANGRE_Y_JADE__.game?.scene.getScene('Ritual')?.player?.active), 'Lifecycle test starts in gameplay');
+    call('shell', 'input', 'keyevent', '3');
+    await page.waitForTimeout(1000);
+    check(call('shell', 'pidof', 'com.sangreyjade.game').split(' ').includes(pid), 'Backgrounding keeps the native host alive');
+    check(await page.evaluate(() => window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').pausedForChoice), 'Backgrounding pauses gameplay');
+    call('shell', 'am', 'start', '-W', '-n', 'com.sangreyjade.game/.MainActivity');
+    await page.locator('[data-resume]').waitFor();
+    check(await page.evaluate(() => window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').pausedForChoice), 'Returning from Home keeps the pause menu');
+    const elapsed = await page.evaluate(() => window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').elapsed);
+    await page.locator('[data-resume]').click();
+    await page.waitForFunction(before => window.__SANGRE_Y_JADE__.game.scene.getScene('Ritual').elapsed > before, elapsed);
+    check(true, 'Resume after backgrounding advances gameplay');
   }
   check(errors.length === 0, 'No JavaScript errors in the Android WebView');
   check(failedRequests.length === 0, 'No missing packaged assets in the Android WebView');

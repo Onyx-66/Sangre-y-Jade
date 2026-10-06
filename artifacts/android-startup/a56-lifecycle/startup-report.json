@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "label": "Packaged application and local fonts load",
+      "passed": true
+    },
+    {
+      "label": "Lifecycle test starts in gameplay",
+      "passed": true
+    },
+    {
+      "label": "Backgrounding keeps the native host alive",
+      "passed": true
+    },
+    {
+      "label": "Backgrounding pauses gameplay",
+      "passed": true
+    },
+    {
+      "label": "Returning from Home keeps the pause menu",
+      "passed": true
+    },
+    {
+      "label": "Resume after backgrounding advances gameplay",
+      "passed": true
+    },
+    {
+      "label": "No JavaScript errors in the Android WebView",
+      "passed": true
+    },
+    {
+      "label": "No missing packaged assets in the Android WebView",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "android": "16",
+  "state": {
+    "text": "125 / 125 صحة\nالتحمل 100%\n09:06\n1\n14\nالمستوى 1\n102 / 1000000000 خبرة\nمستوى 5\n＋\nمستوى 10\nQ\n＋\nE\n＋\nR\n＋\nT\nمستوى 20\nSpace",
+    "app": true,
+    "nativeStartup": {
+      "canvas": false,
+      "recovering": false
+    },
+    "introImages": 0,
+    "fontsComplete": "true",
+    "viewport": [
+      832,
+      384
+    ],
+    "userAgent": "Mozilla/5.0 (Linux; Android 16; SM-A566B Build/BP4A.251205.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/153.0.8010.36 Mobile Safari/537.36",
+    "memory": {
+      "used": 10000000,
+      "limit": 3140000000
+    },
+    "loader": {
+      "state": 4,
+      "totalToLoad": 106,
+      "totalComplete": 106,
+      "totalFailed": 0,
+      "inflight": []
+    }
+  }
+}

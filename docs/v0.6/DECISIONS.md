@@ -224,3 +224,10 @@
 - Keep the public version at 0.6.0 and use Android build code 7 for an in-place update over the previously delivered code 6. Deliver the debug-signed, signature-verified APK because production keys are out of scope. Preserve the previous Desktop APK and create a distinctly named startup-fix copy.
 - Use a 20-second no-progress timeout rather than a fixed 20-second total loading deadline. Extend only the emulator smoke-test wait to 300 seconds: host software emulation is not a phone loading-time or FPS benchmark.
 - Do not change game Back routing for the failed emulator check: `dumpsys window` and native UI inspection identify Android's `ImmersiveModeConfirmation` education window as the actual input interceptor. Dismiss its known system `Got it` button in the harness, keep the existing callbacks, and remove the unnecessary experimental key handler.
+
+## Galaxy A56 confirmed startup cause — 2026-10-06
+
+- The user connected the physical A56: Android 16 / API 36. Build 7 fails before WebView construction because Samsung's `PhoneWindow.getInsetsController()` dereferences an uninitialized decor. This new device evidence supersedes the prior unknown-trigger limitation; do not attribute this failure to cache, saved progress or a renderer crash.
+- Initialize the decor before fullscreen setup and retrieve its controller from that view, retaining the null guard and immersive flags. Keep rendering, gameplay and content unchanged; do not add a broad exception handler to hide the lifecycle bug.
+- Preserve version name 0.6.0, package and signing identity; increment Android build code to 8, install in place, and preserve older APKs. Use physical cold-launch, intro, gameplay and background/resume checks in addition to the source regression guard. Restore the original English menu and discard only test-run runtime overrides after verification.
+- Preserve the pre-existing unstaged HUD-editor Back hook and other dirty work outside this crash-fix commit. Do not push, download, alter audio, access production signing keys or claim the unrelated release checklist has passed.

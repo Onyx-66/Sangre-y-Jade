@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "label": "Packaged application and local fonts load",
+      "passed": true
+    },
+    {
+      "label": "Cold launch keeps the same native host alive",
+      "passed": true
+    },
+    {
+      "label": "Cold-launched game remains foreground",
+      "passed": true
+    },
+    {
+      "label": "balam/overgrown/en: game loads without fatal errors",
+      "passed": true
+    },
+    {
+      "label": "balam/overgrown/en: touch joystick moves the hero",
+      "passed": true
+    },
+    {
+      "label": "balam/overgrown/en: touch dash works",
+      "passed": true
+    },
+    {
+      "label": "balam/overgrown/en: pause freezes gameplay",
+      "passed": true
+    },
+    {
+      "label": "balam/overgrown/en: Android Back closes Settings without resuming",
+      "passed": true
+    },
+    {
+      "label": "balam/overgrown/en: Resume continues gameplay",
+      "passed": true
+    },
+    {
+      "label": "ixchel/bloodmoon/fr: game loads without fatal errors",
+      "passed": true
+    },
+    {
+      "label": "ixchel/bloodmoon/fr: touch joystick moves the hero",
+      "passed": true
+    },
+    {
+      "label": "ixchel/bloodmoon/fr: touch dash works",
+      "passed": true
+    },
+    {
+      "label": "ixchel/bloodmoon/fr: pause freezes gameplay",
+      "passed": true
+    },
+    {
+      "label": "ixchel/bloodmoon/fr: Android Back closes Settings without resuming",
+      "passed": true
+    },
+    {
+      "label": "ixchel/bloodmoon/fr: Resume continues gameplay",
+      "passed": true
+    },
+    {
+      "label": "kukul/cenote/ar: game loads without fatal errors",
+      "passed": true
+    },
+    {
+      "label": "kukul/cenote/ar: touch joystick moves the hero",
+      "passed": true
+    },
+    {
+      "label": "kukul/cenote/ar: touch dash works",
+      "passed": true
+    },
+    {
+      "label": "kukul/cenote/ar: pause freezes gameplay",
+      "passed": true
+    },
+    {
+      "label": "kukul/cenote/ar: Android Back closes Settings without resuming",
+      "passed": true
+    },
+    {
+      "label": "kukul/cenote/ar: Resume continues gameplay",
+      "passed": true
+    },
+    {
+      "label": "No JavaScript errors in the Android WebView",
+      "passed": true
+    },
+    {
+      "label": "No missing packaged assets in the Android WebView",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "android": "16",
+  "state": {
+    "text": "Play\nUpgrades\n115\nHow to Play\nWatch Intro\nShop\nSettings\nVERSION 0.6.0\nEnglish\nFrançais\nالعربية",
+    "app": true,
+    "nativeStartup": {
+      "canvas": false,
+      "recovering": false
+    },
+    "introImages": 0,
+    "fontsComplete": "true",
+    "viewport": [
+      832,
+      384
+    ],
+    "userAgent": "Mozilla/5.0 (Linux; Android 16; SM-A566B Build/BP4A.251205.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/153.0.8010.36 Mobile Safari/537.36",
+    "memory": {
+      "used": 10000000,
+      "limit": 3140000000
+    }
+  },
+  "runs": [
+    {
+      "hero": "balam",
+      "map": "overgrown",
+      "locale": "en",
+      "loadingMs": 5222,
+      "renderer": 2
+    },
+    {
+      "hero": "ixchel",
+      "map": "bloodmoon",
+      "locale": "fr",
+      "loadingMs": 4371,
+      "renderer": 2
+    },
+    {
+      "hero": "kukul",
+      "map": "cenote",
+      "locale": "ar",
+      "loadingMs": 5285,
+      "renderer": 2
+    }
+  ]
+}
