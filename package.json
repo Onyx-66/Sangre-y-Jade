@@ -1,6 +1,6 @@
 {
   "name": "sangre-y-jade",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
   "description": "Sangre y Jade — a Maya-inspired mobile-first survival roguelite.",
@@ -24,6 +24,8 @@
     "test:viewport": "node scripts/v06-viewport-playtest.mjs",
     "test:typography": "node scripts/v06-typography-playtest.mjs",
     "test:ui-kit": "node scripts/ui-kit-playtest.mjs",
+    "test:menus": "node scripts/v06-menu-playtest.mjs",
+    "test:menu-update": "node scripts/menu-layout-update-playtest.mjs",
     "check": "npm run test && npm run build",
     "playtest": "node scripts/playtest.mjs",
     "marketing": "node scripts/capture-marketing.mjs",

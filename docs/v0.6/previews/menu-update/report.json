@@ -1,0 +1,1671 @@
+{
+  "checks": [
+    {
+      "label": "en menu 568: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "en upgrades 568: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "en hero 568: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en map 568: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en mode 568: ",
+      "passed": true
+    },
+    {
+      "label": "en ready 568: ",
+      "passed": true
+    },
+    {
+      "label": "fr menu 568: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "fr upgrades 568: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "fr hero 568: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr map 568: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr mode 568: ",
+      "passed": true
+    },
+    {
+      "label": "fr ready 568: ",
+      "passed": true
+    },
+    {
+      "label": "ar menu 568: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":157.796875,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":157.8125,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":157.796875,\"height\":44,\"y\":176.390625},\"language\":{\"width\":157.8125,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":157.8125,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "ar upgrades 568: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "ar hero 568: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar map 568: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar mode 568: ",
+      "passed": true
+    },
+    {
+      "label": "ar ready 568: ",
+      "passed": true
+    },
+    {
+      "label": "en menu 800: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "en upgrades 800: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "en hero 800: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en map 800: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en mode 800: ",
+      "passed": true
+    },
+    {
+      "label": "en ready 800: ",
+      "passed": true
+    },
+    {
+      "label": "fr menu 800: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "fr upgrades 800: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "fr hero 800: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr map 800: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr mode 800: ",
+      "passed": true
+    },
+    {
+      "label": "fr ready 800: ",
+      "passed": true
+    },
+    {
+      "label": "ar menu 800: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"shop\":{\"width\":215.40625,\"height\":44,\"y\":126.390625},\"settings\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"language\":{\"width\":215.40625,\"height\":44,\"y\":176.390625},\"selector\":{\"width\":215.40625,\"height\":44,\"y\":176.390625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "ar upgrades 800: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "ar hero 800: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar map 800: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar mode 800: ",
+      "passed": true
+    },
+    {
+      "label": "ar ready 800: ",
+      "passed": true
+    },
+    {
+      "label": "en menu 1280: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "en upgrades 1280: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "en hero 1280: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en map 1280: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en mode 1280: ",
+      "passed": true
+    },
+    {
+      "label": "en ready 1280: ",
+      "passed": true
+    },
+    {
+      "label": "fr menu 1280: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "fr upgrades 1280: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "fr hero 1280: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr map 1280: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr mode 1280: ",
+      "passed": true
+    },
+    {
+      "label": "fr ready 1280: ",
+      "passed": true
+    },
+    {
+      "label": "ar menu 1280: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":266,\"height\":52,\"y\":519.59375},\"shop\":{\"width\":266,\"height\":52,\"y\":519.59375},\"settings\":{\"width\":266,\"height\":52,\"y\":579.59375},\"language\":{\"width\":266,\"height\":52,\"y\":579.59375},\"selector\":{\"width\":266,\"height\":52,\"y\":579.59375}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "ar upgrades 1280: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "ar hero 1280: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar map 1280: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar mode 1280: ",
+      "passed": true
+    },
+    {
+      "label": "ar ready 1280: ",
+      "passed": true
+    },
+    {
+      "label": "en menu 320: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "en upgrades 320: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "en hero 320: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en map 320: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "en mode 320: ",
+      "passed": true
+    },
+    {
+      "label": "en ready 320: ",
+      "passed": true
+    },
+    {
+      "label": "fr menu 320: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "fr upgrades 320: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "fr hero 320: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr map 320: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "fr mode 320: ",
+      "passed": true
+    },
+    {
+      "label": "fr ready 320: ",
+      "passed": true
+    },
+    {
+      "label": "ar menu 320: ",
+      "passed": true
+    },
+    {
+      "label": "shop matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "settings matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "language matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "selector matches Watch Intro geometry: {\"intro\":{\"width\":147,\"height\":44,\"y\":312.140625},\"shop\":{\"width\":147,\"height\":44,\"y\":312.140625},\"settings\":{\"width\":147,\"height\":44,\"y\":362.140625},\"language\":{\"width\":147,\"height\":44,\"y\":362.140625},\"selector\":{\"width\":147,\"height\":44,\"y\":362.140625}}",
+      "passed": true
+    },
+    {
+      "label": "Language and Settings on the same row",
+      "passed": true
+    },
+    {
+      "label": "exactly one menu language selector",
+      "passed": true
+    },
+    {
+      "label": "no wallet on menu upgrade button",
+      "passed": true
+    },
+    {
+      "label": "ar upgrades 320: ",
+      "passed": true
+    },
+    {
+      "label": "four image/detail/level cards",
+      "passed": true
+    },
+    {
+      "label": "wallet inside upgrades",
+      "passed": true
+    },
+    {
+      "label": "old heading/subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "ar hero 320: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar map 320: ",
+      "passed": true
+    },
+    {
+      "label": "large top-centred art before card details",
+      "passed": true
+    },
+    {
+      "label": "red unselected / green selected art borders",
+      "passed": true
+    },
+    {
+      "label": "ar mode 320: ",
+      "passed": true
+    },
+    {
+      "label": "ar ready 320: ",
+      "passed": true
+    },
+    {
+      "label": "audit rejects actual overflow: {\"x\":-52.796875,\"y\":12,\"width\":900,\"height\":208.390625}",
+      "passed": true
+    },
+    {
+      "label": "inline language applies and persists",
+      "passed": true
+    },
+    {
+      "label": "real touch swipe scrolls upgrade cards",
+      "passed": true
+    },
+    {
+      "label": "purchase updates wallet immediately",
+      "passed": true
+    },
+    {
+      "label": "purchase updates current/max level immediately",
+      "passed": true
+    },
+    {
+      "label": "wallet persists after reload",
+      "passed": true
+    },
+    {
+      "label": "rank persists after reload",
+      "passed": true
+    },
+    {
+      "label": "unaffordable purchases disabled",
+      "passed": true
+    },
+    {
+      "label": "rank-eight cap retained",
+      "passed": true
+    },
+    {
+      "label": "keyboard reaches selected-card traits",
+      "passed": true
+    },
+    {
+      "label": "keyboard returns to description",
+      "passed": true
+    },
+    {
+      "label": "Back preserves hero choice",
+      "passed": true
+    },
+    {
+      "label": "unchanged four-step setup reaches Start Run",
+      "passed": true
+    },
+    {
+      "label": "no console, page or HTTP errors: ",
+      "passed": true
+    }
+  ],
+  "layouts": [
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "en",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "en",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "en",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "en",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "en",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "en",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "fr",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "fr",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "fr",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "fr",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "fr",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "fr",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "ar",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "ar",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "ar",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "ar",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "ar",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 568,
+        "height": 320
+      },
+      "locale": "ar",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "en",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "en",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "en",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "en",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "en",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "en",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "fr",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "fr",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "fr",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "fr",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "fr",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "fr",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "ar",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "ar",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "ar",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "ar",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "ar",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 800,
+        "height": 360
+      },
+      "locale": "ar",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "en",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "en",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "en",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "en",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "en",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "en",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "fr",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "fr",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "fr",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "fr",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "fr",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "fr",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "ar",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "ar",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "ar",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "ar",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "ar",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "locale": "ar",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "en",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "en",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "en",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "en",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "en",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "en",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "fr",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "fr",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "fr",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "fr",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "fr",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "fr",
+      "screen": "ready",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "ar",
+      "screen": "menu",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "ar",
+      "screen": "upgrades",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "ar",
+      "screen": "hero",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "ar",
+      "screen": "map",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "ar",
+      "screen": "mode",
+      "failures": []
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "locale": "ar",
+      "screen": "ready",
+      "failures": []
+    }
+  ],
+  "errors": []
+}

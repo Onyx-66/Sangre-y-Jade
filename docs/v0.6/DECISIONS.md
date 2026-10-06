@@ -231,3 +231,11 @@
 - Initialize the decor before fullscreen setup and retrieve its controller from that view, retaining the null guard and immersive flags. Keep rendering, gameplay and content unchanged; do not add a broad exception handler to hide the lifecycle bug.
 - Preserve version name 0.6.0, package and signing identity; increment Android build code to 8, install in place, and preserve older APKs. Use physical cold-launch, intro, gameplay and background/resume checks in addition to the source regression guard. Restore the original English menu and discard only test-run runtime overrides after verification.
 - Preserve the pre-existing unstaged HUD-editor Back hook and other dirty work outside this crash-fix commit. Do not push, download, alter audio, access production signing keys or claim the unrelated release checklist has passed.
+
+## Menu organisation update — 2026-10-06
+
+- Scope "upgrade cards" to the four existing permanent upgrades in the Upgrades window. Keep their effects, price curve and maximum rank of 8 unchanged; do not add permanent upgrades for individual run skills.
+- Reuse the existing supplied wordmark, hero frames, map pictures, shrine icons and UI kit. The requested red/green selection borders are code-rendered accents around the existing ornate frames, not new raster assets.
+- On short landscape screens, card details scroll independently while art, identity and Back/Continue remain visible. In portrait, the three top-art cards form a vertically scrollable list. Keep 14 px body copy and 44 px controls rather than squeezing the content; Page Up/Down and Home/End reach selected-card details with the keyboard.
+- Include the existing menu-kit/rendering prerequisites in this UI commit because the updated menu and selection screens depend on them. Preserve unrelated HUD-editor, Android, settings, map, audio and asset changes outside it. Test evidence covers this current working checkout, not a clean-clone certification of all prior uncommitted work.
+- This request changes the UI source only: do not push, reinstall the phone, overwrite or rebuild the earlier Desktop APK without a new build request.

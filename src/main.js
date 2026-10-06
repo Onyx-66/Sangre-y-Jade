@@ -14,7 +14,7 @@ import './ui/loading.css';
 import { runPrologue } from './systems/Prologue.js';
 import { renderRunSetup } from './systems/RunSetup.js';
 import { interfaceIcon } from './art/interfaceIcons.js';
-import { portraitMarkup, artUrl, iconMarkup } from './art/uiArt.js';
+import { portraitMarkup, artUrl } from './art/uiArt.js';
 import './pixel.css';
 import './v04.css';
 import './v05.css';
@@ -25,6 +25,13 @@ import './viewport.css';
 import './ui/tokens.css';
 import './fonts-v06.css';
 import './ui/typography.css';
+import { version as APP_VERSION } from '../package.json';
+import './ui/kit.css';
+import { mainMenuMarkup } from './ui/MenuScreens.js';
+import { upgradesMarkup } from './ui/UpgradeScreen.js';
+import { kitUrl } from './ui/Kit.js';
+import './ui/menu-update.css';
+import { bindKitNavigation } from './ui/KitNavigation.js';
 import { waitForGameFonts } from './ui/Typography.js';
 import { renderSettingsPanel } from './ui/SettingsPanel.js';
 import { applySettingChange } from './systems/RuntimeSettings.js';
@@ -61,6 +68,8 @@ class SangreYJadeApp {
 
   clearGame() {
     if(this.loadingSession){const session=this.loadingSession;this.loadingSession=null;this.cancelLoading=null;session.controller.abort();session.screen.destroy();session.skillAudio.destroy();session.resolve(false);}
+    this.screenCleanup?.();
+    this.screenCleanup = null;
     if (this.game) {
       this.game.destroy(true);
       this.game = null;
@@ -70,16 +79,20 @@ class SangreYJadeApp {
 
   setScreen(html, className = '') {
     this.audio.ui?.('panel-open');
+    this.screenCleanup?.();
+    this.screenCleanup = null;
     const menuArt=new URL(artUrl('title.webp'),document.baseURI).href;
     this.uiRoot.innerHTML = `<section class="screen ${className}" style="--menu-art:url('${menuArt}')">${html}</section>`;
+    const versionLabel=this.uiRoot.querySelector('.version');
+    if(versionLabel){versionLabel.textContent=`VERSION ${APP_VERSION}`;versionLabel.dataset.noTranslate='';}
     translateDOM(this.uiRoot.firstElementChild);
     this.addLanguageSelector(this.uiRoot.firstElementChild);
+    if(this.uiRoot.firstElementChild.classList.contains('kit-screen'))this.screenCleanup=bindKitNavigation(this.uiRoot.firstElementChild);
     return this.uiRoot.firstElementChild;
   }
 
   addLanguageSelector(screen){
-    screen.querySelector('.language-switch')?.remove();
-    screen.insertAdjacentHTML('beforeend',languageMarkup());
+    if(!screen.querySelector('.language-switch'))screen.insertAdjacentHTML('beforeend',languageMarkup());
     screen.querySelector('[data-language]').addEventListener('change',event=>{
       this.save.setSetting('language',event.target.value);setLanguage(event.target.value);
       if(this.currentPage==='prologue')this.playPrologue(this.prologueNext);
@@ -96,28 +109,7 @@ class SangreYJadeApp {
     this.currentPage='showTitle';
     this.clearGame();
     this.audio.music('menu');
-    const screen = this.setScreen(`
-      <div class="brand-lockup">
-        <img class="brand-logo" src="${this.asset('assets/branding/logo-menu.png')}" alt="Sangre y Jade">
-        <div class="eyebrow">Survive the night</div>
-        <h1>Sangre <span>y Jade</span></h1>
-        <p class="tagline">Fight the hordes. Upgrade your skills. Defeat the bosses.</p>
-        <div class="menu-stack">
-          <button class="btn primary" data-action="play">Play</button>
-          <div class="menu-row">
-            <button class="btn ghost" data-action="shrine">Upgrades <span class="currency">● ${this.save.data.cacao}</span></button>
-            <button class="btn ghost" data-action="codex">How to Play</button>
-          </div>
-          <div class="menu-row">
-            <button class="btn ghost small" data-action="prologue">Watch Intro</button>
-            <button class="btn ghost small" data-action="store">Shop</button>
-            <button class="btn ghost small icon-button" data-action="settings" aria-label="Settings" title="Settings">${interfaceIcon('settings')}</button>
-          </div>
-        </div>
-      </div>
-      <div class="version">VERSION 0.5</div>
-    `, 'cinematic-bg');
-    screen.style.backgroundImage = `url("${artUrl('title.webp')}")`;
+    const screen = this.setScreen(mainMenuMarkup(), 'kit-screen menu-screen');
     screen.addEventListener('click', (event) => {
       const action = event.target.closest('[data-action]')?.dataset.action;
       if (!action) return;
@@ -134,6 +126,8 @@ class SangreYJadeApp {
   }
 
   playPrologue(onDone) {
+    this.screenCleanup?.();
+    this.screenCleanup = null;
     this.currentPage='prologue';this.prologueNext=onDone;
     return runPrologue(this,onDone);
   }
@@ -223,24 +217,9 @@ class SangreYJadeApp {
   showShrine() {
     this.audio.music('shop-upgrades');
     this.currentPage='showShrine';
-    const upgrades = [
-      { id: 'damage', name: 'Obsidian Edge', effect: '+3.5% starting damage per rank' },
-      { id: 'vitality', name: 'Cacao & Herbs', effect: '+7 starting HP per rank' },
-      { id: 'speed', name: 'Quetzal Step', effect: '+1.8% movement speed per rank' },
-      { id: 'fortune', name: 'Merchant’s Favor', effect: '+4% cacao fortune per rank' },
-    ];
     const render = () => {
-      const screen = this.setScreen(`
-        <section class="panel">
-          <h2>Upgrades</h2><p class="panel-subtitle">Spend earned cacao on permanent upgrades.</p>
-          <p class="currency" style="text-align:center;font-size:1.25rem">● ${this.save.data.cacao} cacao</p>
-          <div class="shrine-grid">${upgrades.map((upgrade) => {
-            const level = this.save.data.upgrades[upgrade.id];
-            const cost = this.save.upgradeCost(upgrade.id);
-            return `<article class="upgrade">${iconMarkup({id:`ui-shrine-${upgrade.id}`})}<div><b>${upgrade.name}</b><div>${upgrade.effect}</div><div class="level-pips">${'◆'.repeat(level)}${'◇'.repeat(8-level)}</div></div><button class="btn small" data-buy="${upgrade.id}" ${level >= 8 || this.save.data.cacao < cost ? 'disabled' : ''}>${level >= 8 ? 'Max' : `● ${cost}`}</button></article>`;
-          }).join('')}</div>
-          <div class="panel-actions"><button class="btn ghost" data-back>Return</button></div>
-        </section>`);
+      const screen = this.setScreen(upgradesMarkup(this.save), 'kit-screen upgrades-screen');
+      screen.style.setProperty('--kit-backdrop', `url('${kitUrl('bg-subpage')}')`);
       $$('[data-buy]', screen).forEach((button) => button.addEventListener('click', () => {
         if (this.save.buyUpgrade(button.dataset.buy)) { this.clickSound(); render(); }
       }));

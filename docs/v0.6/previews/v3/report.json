@@ -1,0 +1,1900 @@
+{
+  "checks": [
+    {
+      "label": "en-menu-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "en-menu-568x320.png: old title block absent",
+      "passed": true
+    },
+    {
+      "label": "en-menu-568x320.png: supplied wordmark used",
+      "passed": true
+    },
+    {
+      "label": "en-menu-568x320.png: five secondary actions, including text Settings",
+      "passed": true
+    },
+    {
+      "label": "en-hero-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "en-hero-568x320.png: three heroes, one selection",
+      "passed": true
+    },
+    {
+      "label": "en-hero-568x320.png: selected hero shows two innate traits",
+      "passed": true
+    },
+    {
+      "label": "en-hero-568x320.png selected ixchel: ",
+      "passed": true
+    },
+    {
+      "label": "en-hero-568x320.png selected kukul: ",
+      "passed": true
+    },
+    {
+      "label": "en-hero-568x320.png selected balam: ",
+      "passed": true
+    },
+    {
+      "label": "en-map-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "en-map-568x320.png: three map cards",
+      "passed": true
+    },
+    {
+      "label": "en-map-568x320.png: existing map images kept",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-568x320.png: old title block absent",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-568x320.png: supplied wordmark used",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-568x320.png: five secondary actions, including text Settings",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-568x320.png: three heroes, one selection",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-568x320.png: selected hero shows two innate traits",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-568x320.png selected ixchel: ",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-568x320.png selected kukul: ",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-568x320.png selected balam: ",
+      "passed": true
+    },
+    {
+      "label": "fr-map-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "fr-map-568x320.png: three map cards",
+      "passed": true
+    },
+    {
+      "label": "fr-map-568x320.png: existing map images kept",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-568x320.png: old title block absent",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-568x320.png: supplied wordmark used",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-568x320.png: five secondary actions, including text Settings",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-568x320.png: three heroes, one selection",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-568x320.png: selected hero shows two innate traits",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-568x320.png selected ixchel: ",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-568x320.png selected kukul: ",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-568x320.png selected balam: ",
+      "passed": true
+    },
+    {
+      "label": "ar-map-568x320.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "ar-map-568x320.png: three map cards",
+      "passed": true
+    },
+    {
+      "label": "ar-map-568x320.png: existing map images kept",
+      "passed": true
+    },
+    {
+      "label": "en-menu-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "en-menu-1280x720.png: old title block absent",
+      "passed": true
+    },
+    {
+      "label": "en-menu-1280x720.png: supplied wordmark used",
+      "passed": true
+    },
+    {
+      "label": "en-menu-1280x720.png: five secondary actions, including text Settings",
+      "passed": true
+    },
+    {
+      "label": "en-hero-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "en-hero-1280x720.png: three heroes, one selection",
+      "passed": true
+    },
+    {
+      "label": "en-hero-1280x720.png: selected hero shows two innate traits",
+      "passed": true
+    },
+    {
+      "label": "en-hero-1280x720.png selected ixchel: ",
+      "passed": true
+    },
+    {
+      "label": "en-hero-1280x720.png selected kukul: ",
+      "passed": true
+    },
+    {
+      "label": "en-hero-1280x720.png selected balam: ",
+      "passed": true
+    },
+    {
+      "label": "en-map-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "en-map-1280x720.png: three map cards",
+      "passed": true
+    },
+    {
+      "label": "en-map-1280x720.png: existing map images kept",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-1280x720.png: old title block absent",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-1280x720.png: supplied wordmark used",
+      "passed": true
+    },
+    {
+      "label": "fr-menu-1280x720.png: five secondary actions, including text Settings",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-1280x720.png: three heroes, one selection",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-1280x720.png: selected hero shows two innate traits",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-1280x720.png selected ixchel: ",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-1280x720.png selected kukul: ",
+      "passed": true
+    },
+    {
+      "label": "fr-hero-1280x720.png selected balam: ",
+      "passed": true
+    },
+    {
+      "label": "fr-map-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "fr-map-1280x720.png: three map cards",
+      "passed": true
+    },
+    {
+      "label": "fr-map-1280x720.png: existing map images kept",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-1280x720.png: old title block absent",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-1280x720.png: supplied wordmark used",
+      "passed": true
+    },
+    {
+      "label": "ar-menu-1280x720.png: five secondary actions, including text Settings",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-1280x720.png: three heroes, one selection",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-1280x720.png: selected hero shows two innate traits",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-1280x720.png selected ixchel: ",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-1280x720.png selected kukul: ",
+      "passed": true
+    },
+    {
+      "label": "ar-hero-1280x720.png selected balam: ",
+      "passed": true
+    },
+    {
+      "label": "ar-map-1280x720.png: no overflow/overlap, 44dp targets, two-line descriptions: ",
+      "passed": true
+    },
+    {
+      "label": "ar-map-1280x720.png: three map cards",
+      "passed": true
+    },
+    {
+      "label": "ar-map-1280x720.png: existing map images kept",
+      "passed": true
+    },
+    {
+      "label": "portrait en menu: ",
+      "passed": true
+    },
+    {
+      "label": "portrait en hero: ",
+      "passed": true
+    },
+    {
+      "label": "portrait en map: ",
+      "passed": true
+    },
+    {
+      "label": "portrait ar menu: ",
+      "passed": true
+    },
+    {
+      "label": "portrait ar hero: ",
+      "passed": true
+    },
+    {
+      "label": "portrait ar map: ",
+      "passed": true
+    },
+    {
+      "label": "layout audit rejects deliberately oversized controls",
+      "passed": true
+    },
+    {
+      "label": "arrow keys follow card geometry",
+      "passed": true
+    },
+    {
+      "label": "keyboard has a visible focus ring",
+      "passed": true
+    },
+    {
+      "label": "selection rerender preserves keyboard focus",
+      "passed": true
+    },
+    {
+      "label": "language selector keeps current wizard step and hero",
+      "passed": true
+    },
+    {
+      "label": "Back preserves selection",
+      "passed": true
+    },
+    {
+      "label": "RTL gamepad follows physical card positions with visible focus ring",
+      "passed": true
+    },
+    {
+      "label": "menu → hero → map → mode → controls → playable run; menu listeners disposed",
+      "passed": true
+    },
+    {
+      "label": "existing click/confirm hooks still play audio",
+      "passed": true
+    },
+    {
+      "label": "menu navigation does not reappear during gameplay",
+      "passed": true
+    },
+    {
+      "label": "no console/page/HTTP errors: ",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "layouts": [
+    {
+      "locale": "en",
+      "screen": "menu",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "menu-title-logo",
+          "x": 10,
+          "y": 52.1875,
+          "right": 224.390625,
+          "bottom": 180.1875,
+          "width": 214.390625,
+          "height": 128
+        },
+        {
+          "selector": "menu-actions",
+          "x": 236.390625,
+          "y": 12,
+          "right": 558,
+          "bottom": 220.390625,
+          "width": 321.609375,
+          "height": 208.390625
+        },
+        {
+          "selector": "play",
+          "x": 236.390625,
+          "y": 12,
+          "right": 558,
+          "bottom": 68.390625,
+          "width": 321.609375,
+          "height": 56.390625
+        },
+        {
+          "selector": "shrine",
+          "x": 236.390625,
+          "y": 76.390625,
+          "right": 394.1875,
+          "bottom": 120.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "codex",
+          "x": 400.1875,
+          "y": 76.390625,
+          "right": 558,
+          "bottom": 120.390625,
+          "width": 157.8125,
+          "height": 44
+        },
+        {
+          "selector": "prologue",
+          "x": 236.390625,
+          "y": 126.390625,
+          "right": 394.1875,
+          "bottom": 170.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "store",
+          "x": 400.1875,
+          "y": 126.390625,
+          "right": 558,
+          "bottom": 170.390625,
+          "width": 157.8125,
+          "height": 44
+        },
+        {
+          "selector": "settings",
+          "x": 236.390625,
+          "y": 176.390625,
+          "right": 394.1875,
+          "bottom": 220.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "",
+          "x": 400.1875,
+          "y": 176.390625,
+          "right": 558,
+          "bottom": 220.390625,
+          "width": 157.8125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "screen": "hero",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 10,
+          "y": 8,
+          "right": 558,
+          "bottom": 80.6875,
+          "width": 548,
+          "height": 72.6875
+        },
+        {
+          "selector": "selection-cards hero-selection-grid",
+          "x": 10,
+          "y": 84.6875,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 548,
+          "height": 179.015625
+        },
+        {
+          "selector": "balam",
+          "x": 10,
+          "y": 84.6875,
+          "right": 188.65625,
+          "bottom": 263.703125,
+          "width": 178.65625,
+          "height": 179.015625
+        },
+        {
+          "selector": "ixchel",
+          "x": 194.65625,
+          "y": 84.6875,
+          "right": 373.328125,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 179.015625
+        },
+        {
+          "selector": "kukul",
+          "x": 379.328125,
+          "y": 84.6875,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 179.015625
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 150,
+          "y": 267.703125,
+          "right": 280,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 288,
+          "y": 267.703125,
+          "right": 418,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "",
+          "x": 474,
+          "y": 5,
+          "right": 556,
+          "bottom": 49,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "screen": "map",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 10,
+          "y": 8,
+          "right": 558,
+          "bottom": 80.6875,
+          "width": 548,
+          "height": 72.6875
+        },
+        {
+          "selector": "selection-cards map-selection-grid",
+          "x": 10,
+          "y": 84.6875,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 548,
+          "height": 179.015625
+        },
+        {
+          "selector": "overgrown",
+          "x": 10,
+          "y": 84.6875,
+          "right": 188.65625,
+          "bottom": 263.703125,
+          "width": 178.65625,
+          "height": 179.015625
+        },
+        {
+          "selector": "bloodmoon",
+          "x": 194.65625,
+          "y": 84.6875,
+          "right": 373.328125,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 179.015625
+        },
+        {
+          "selector": "cenote",
+          "x": 379.328125,
+          "y": 84.6875,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 179.015625
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 150,
+          "y": 267.703125,
+          "right": 280,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 288,
+          "y": 267.703125,
+          "right": 418,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "",
+          "x": 474,
+          "y": 5,
+          "right": 556,
+          "bottom": 49,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "screen": "menu",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "menu-title-logo",
+          "x": 10,
+          "y": 52.1875,
+          "right": 224.390625,
+          "bottom": 180.1875,
+          "width": 214.390625,
+          "height": 128
+        },
+        {
+          "selector": "menu-actions",
+          "x": 236.390625,
+          "y": 12,
+          "right": 558,
+          "bottom": 220.390625,
+          "width": 321.609375,
+          "height": 208.390625
+        },
+        {
+          "selector": "play",
+          "x": 236.390625,
+          "y": 12,
+          "right": 558,
+          "bottom": 68.390625,
+          "width": 321.609375,
+          "height": 56.390625
+        },
+        {
+          "selector": "shrine",
+          "x": 236.390625,
+          "y": 76.390625,
+          "right": 394.1875,
+          "bottom": 120.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "codex",
+          "x": 400.1875,
+          "y": 76.390625,
+          "right": 558,
+          "bottom": 120.390625,
+          "width": 157.8125,
+          "height": 44
+        },
+        {
+          "selector": "prologue",
+          "x": 236.390625,
+          "y": 126.390625,
+          "right": 394.1875,
+          "bottom": 170.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "store",
+          "x": 400.1875,
+          "y": 126.390625,
+          "right": 558,
+          "bottom": 170.390625,
+          "width": 157.8125,
+          "height": 44
+        },
+        {
+          "selector": "settings",
+          "x": 236.390625,
+          "y": 176.390625,
+          "right": 394.1875,
+          "bottom": 220.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "",
+          "x": 400.1875,
+          "y": 176.390625,
+          "right": 558,
+          "bottom": 220.390625,
+          "width": 157.8125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "screen": "hero",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 10,
+          "y": 8,
+          "right": 558,
+          "bottom": 99.578125,
+          "width": 548,
+          "height": 91.578125
+        },
+        {
+          "selector": "selection-cards hero-selection-grid",
+          "x": 10,
+          "y": 103.578125,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 548,
+          "height": 160.125
+        },
+        {
+          "selector": "balam",
+          "x": 10,
+          "y": 103.578125,
+          "right": 188.65625,
+          "bottom": 263.703125,
+          "width": 178.65625,
+          "height": 160.125
+        },
+        {
+          "selector": "ixchel",
+          "x": 194.65625,
+          "y": 103.578125,
+          "right": 373.328125,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 160.125
+        },
+        {
+          "selector": "kukul",
+          "x": 379.328125,
+          "y": 103.578125,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 160.125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 147.65625,
+          "y": 267.703125,
+          "right": 277.65625,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 285.65625,
+          "y": 267.703125,
+          "right": 420.328125,
+          "bottom": 312,
+          "width": 134.671875,
+          "height": 44.296875
+        },
+        {
+          "selector": "",
+          "x": 474,
+          "y": 5,
+          "right": 556,
+          "bottom": 49,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "screen": "map",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 10,
+          "y": 8,
+          "right": 558,
+          "bottom": 80.6875,
+          "width": 548,
+          "height": 72.6875
+        },
+        {
+          "selector": "selection-cards map-selection-grid",
+          "x": 10,
+          "y": 84.6875,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 548,
+          "height": 179.015625
+        },
+        {
+          "selector": "overgrown",
+          "x": 10,
+          "y": 84.6875,
+          "right": 188.65625,
+          "bottom": 263.703125,
+          "width": 178.65625,
+          "height": 179.015625
+        },
+        {
+          "selector": "bloodmoon",
+          "x": 194.65625,
+          "y": 84.6875,
+          "right": 373.328125,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 179.015625
+        },
+        {
+          "selector": "cenote",
+          "x": 379.328125,
+          "y": 84.6875,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 179.015625
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 147.65625,
+          "y": 267.703125,
+          "right": 277.65625,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 285.65625,
+          "y": 267.703125,
+          "right": 420.328125,
+          "bottom": 312,
+          "width": 134.671875,
+          "height": 44.296875
+        },
+        {
+          "selector": "",
+          "x": 474,
+          "y": 5,
+          "right": 556,
+          "bottom": 49,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "screen": "menu",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "menu-title-logo",
+          "x": 343.609375,
+          "y": 52.1875,
+          "right": 558,
+          "bottom": 180.1875,
+          "width": 214.390625,
+          "height": 128
+        },
+        {
+          "selector": "menu-actions",
+          "x": 10,
+          "y": 12,
+          "right": 331.609375,
+          "bottom": 220.390625,
+          "width": 321.609375,
+          "height": 208.390625
+        },
+        {
+          "selector": "play",
+          "x": 10,
+          "y": 12,
+          "right": 331.609375,
+          "bottom": 68.390625,
+          "width": 321.609375,
+          "height": 56.390625
+        },
+        {
+          "selector": "shrine",
+          "x": 173.8125,
+          "y": 76.390625,
+          "right": 331.609375,
+          "bottom": 120.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "codex",
+          "x": 10,
+          "y": 76.390625,
+          "right": 167.8125,
+          "bottom": 120.390625,
+          "width": 157.8125,
+          "height": 44
+        },
+        {
+          "selector": "prologue",
+          "x": 173.8125,
+          "y": 126.390625,
+          "right": 331.609375,
+          "bottom": 170.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "store",
+          "x": 10,
+          "y": 126.390625,
+          "right": 167.8125,
+          "bottom": 170.390625,
+          "width": 157.8125,
+          "height": 44
+        },
+        {
+          "selector": "settings",
+          "x": 173.8125,
+          "y": 176.390625,
+          "right": 331.609375,
+          "bottom": 220.390625,
+          "width": 157.796875,
+          "height": 44
+        },
+        {
+          "selector": "",
+          "x": 10,
+          "y": 176.390625,
+          "right": 167.8125,
+          "bottom": 220.390625,
+          "width": 157.8125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "screen": "hero",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 10,
+          "y": 8,
+          "right": 558,
+          "bottom": 72.578125,
+          "width": 548,
+          "height": 64.578125
+        },
+        {
+          "selector": "selection-cards hero-selection-grid",
+          "x": 10,
+          "y": 76.578125,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 548,
+          "height": 187.125
+        },
+        {
+          "selector": "balam",
+          "x": 379.34375,
+          "y": 76.578125,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 178.65625,
+          "height": 187.125
+        },
+        {
+          "selector": "ixchel",
+          "x": 194.671875,
+          "y": 76.578125,
+          "right": 373.34375,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 187.125
+        },
+        {
+          "selector": "kukul",
+          "x": 10,
+          "y": 76.578125,
+          "right": 188.671875,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 187.125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 288,
+          "y": 267.703125,
+          "right": 418,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 150,
+          "y": 267.703125,
+          "right": 280,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "",
+          "x": 449,
+          "y": 5,
+          "right": 531,
+          "bottom": 49,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "screen": "map",
+      "width": 568,
+      "height": 320,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 10,
+          "y": 8,
+          "right": 558,
+          "bottom": 72.578125,
+          "width": 548,
+          "height": 64.578125
+        },
+        {
+          "selector": "selection-cards map-selection-grid",
+          "x": 10,
+          "y": 76.578125,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 548,
+          "height": 187.125
+        },
+        {
+          "selector": "overgrown",
+          "x": 379.34375,
+          "y": 76.578125,
+          "right": 558,
+          "bottom": 263.703125,
+          "width": 178.65625,
+          "height": 187.125
+        },
+        {
+          "selector": "bloodmoon",
+          "x": 194.671875,
+          "y": 76.578125,
+          "right": 373.34375,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 187.125
+        },
+        {
+          "selector": "cenote",
+          "x": 10,
+          "y": 76.578125,
+          "right": 188.671875,
+          "bottom": 263.703125,
+          "width": 178.671875,
+          "height": 187.125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 288,
+          "y": 267.703125,
+          "right": 418,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 150,
+          "y": 267.703125,
+          "right": 280,
+          "bottom": 312,
+          "width": 130,
+          "height": 44.296875
+        },
+        {
+          "selector": "",
+          "x": 449,
+          "y": 5,
+          "right": 531,
+          "bottom": 49,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "screen": "menu",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "menu-title-logo",
+          "x": 24,
+          "y": 80.40625,
+          "right": 564,
+          "bottom": 368.40625,
+          "width": 540,
+          "height": 288
+        },
+        {
+          "selector": "menu-actions",
+          "x": 24,
+          "y": 380.40625,
+          "right": 564,
+          "bottom": 631.59375,
+          "width": 540,
+          "height": 251.1875
+        },
+        {
+          "selector": "play",
+          "x": 24,
+          "y": 380.40625,
+          "right": 564,
+          "bottom": 447.59375,
+          "width": 540,
+          "height": 67.1875
+        },
+        {
+          "selector": "shrine",
+          "x": 24,
+          "y": 459.59375,
+          "right": 290,
+          "bottom": 511.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "codex",
+          "x": 298,
+          "y": 459.59375,
+          "right": 564,
+          "bottom": 511.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "prologue",
+          "x": 24,
+          "y": 519.59375,
+          "right": 290,
+          "bottom": 571.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "store",
+          "x": 298,
+          "y": 519.59375,
+          "right": 564,
+          "bottom": 571.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "settings",
+          "x": 24,
+          "y": 579.59375,
+          "right": 290,
+          "bottom": 631.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "",
+          "x": 298,
+          "y": 579.59375,
+          "right": 564,
+          "bottom": 631.59375,
+          "width": 266,
+          "height": 52
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "screen": "hero",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 100,
+          "y": 16,
+          "right": 1180,
+          "bottom": 119.484375,
+          "width": 1080,
+          "height": 103.484375
+        },
+        {
+          "selector": "selection-cards hero-selection-grid",
+          "x": 100,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 1080,
+          "height": 498.828125
+        },
+        {
+          "selector": "balam",
+          "x": 100,
+          "y": 131.484375,
+          "right": 449.328125,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "ixchel",
+          "x": 465.328125,
+          "y": 131.484375,
+          "right": 814.65625,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "kukul",
+          "x": 830.65625,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 349.34375,
+          "height": 498.828125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 468,
+          "y": 642.3125,
+          "right": 632,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 648,
+          "y": 642.3125,
+          "right": 812,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "",
+          "x": 1175,
+          "y": 15,
+          "right": 1257,
+          "bottom": 59,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "screen": "map",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 100,
+          "y": 16,
+          "right": 1180,
+          "bottom": 119.484375,
+          "width": 1080,
+          "height": 103.484375
+        },
+        {
+          "selector": "selection-cards map-selection-grid",
+          "x": 100,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 1080,
+          "height": 498.828125
+        },
+        {
+          "selector": "overgrown",
+          "x": 100,
+          "y": 131.484375,
+          "right": 449.328125,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "bloodmoon",
+          "x": 465.328125,
+          "y": 131.484375,
+          "right": 814.65625,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "cenote",
+          "x": 830.65625,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 349.34375,
+          "height": 498.828125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 468,
+          "y": 642.3125,
+          "right": 632,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 648,
+          "y": 642.3125,
+          "right": 812,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "",
+          "x": 1175,
+          "y": 15,
+          "right": 1257,
+          "bottom": 59,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "screen": "menu",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "menu-title-logo",
+          "x": 24,
+          "y": 80.40625,
+          "right": 564,
+          "bottom": 368.40625,
+          "width": 540,
+          "height": 288
+        },
+        {
+          "selector": "menu-actions",
+          "x": 24,
+          "y": 380.40625,
+          "right": 564,
+          "bottom": 631.59375,
+          "width": 540,
+          "height": 251.1875
+        },
+        {
+          "selector": "play",
+          "x": 24,
+          "y": 380.40625,
+          "right": 564,
+          "bottom": 447.59375,
+          "width": 540,
+          "height": 67.1875
+        },
+        {
+          "selector": "shrine",
+          "x": 24,
+          "y": 459.59375,
+          "right": 290,
+          "bottom": 511.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "codex",
+          "x": 298,
+          "y": 459.59375,
+          "right": 564,
+          "bottom": 511.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "prologue",
+          "x": 24,
+          "y": 519.59375,
+          "right": 290,
+          "bottom": 571.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "store",
+          "x": 298,
+          "y": 519.59375,
+          "right": 564,
+          "bottom": 571.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "settings",
+          "x": 24,
+          "y": 579.59375,
+          "right": 290,
+          "bottom": 631.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "",
+          "x": 298,
+          "y": 579.59375,
+          "right": 564,
+          "bottom": 631.59375,
+          "width": 266,
+          "height": 52
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "screen": "hero",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 100,
+          "y": 16,
+          "right": 1180,
+          "bottom": 119.484375,
+          "width": 1080,
+          "height": 103.484375
+        },
+        {
+          "selector": "selection-cards hero-selection-grid",
+          "x": 100,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 1080,
+          "height": 498.828125
+        },
+        {
+          "selector": "balam",
+          "x": 100,
+          "y": 131.484375,
+          "right": 449.328125,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "ixchel",
+          "x": 465.328125,
+          "y": 131.484375,
+          "right": 814.65625,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "kukul",
+          "x": 830.65625,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 349.34375,
+          "height": 498.828125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 467.03125,
+          "y": 642.3125,
+          "right": 631.03125,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 647.03125,
+          "y": 642.3125,
+          "right": 812.96875,
+          "bottom": 696,
+          "width": 165.9375,
+          "height": 53.6875
+        },
+        {
+          "selector": "",
+          "x": 1175,
+          "y": 15,
+          "right": 1257,
+          "bottom": 59,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "screen": "map",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 100,
+          "y": 16,
+          "right": 1180,
+          "bottom": 119.484375,
+          "width": 1080,
+          "height": 103.484375
+        },
+        {
+          "selector": "selection-cards map-selection-grid",
+          "x": 100,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 1080,
+          "height": 498.828125
+        },
+        {
+          "selector": "overgrown",
+          "x": 100,
+          "y": 131.484375,
+          "right": 449.328125,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "bloodmoon",
+          "x": 465.328125,
+          "y": 131.484375,
+          "right": 814.65625,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "cenote",
+          "x": 830.65625,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 349.34375,
+          "height": 498.828125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 467.03125,
+          "y": 642.3125,
+          "right": 631.03125,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 647.03125,
+          "y": 642.3125,
+          "right": 812.96875,
+          "bottom": 696,
+          "width": 165.9375,
+          "height": 53.6875
+        },
+        {
+          "selector": "",
+          "x": 1175,
+          "y": 15,
+          "right": 1257,
+          "bottom": 59,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "screen": "menu",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "menu-title-logo",
+          "x": 716,
+          "y": 80.40625,
+          "right": 1256,
+          "bottom": 368.40625,
+          "width": 540,
+          "height": 288
+        },
+        {
+          "selector": "menu-actions",
+          "x": 716,
+          "y": 380.40625,
+          "right": 1256,
+          "bottom": 631.59375,
+          "width": 540,
+          "height": 251.1875
+        },
+        {
+          "selector": "play",
+          "x": 716,
+          "y": 380.40625,
+          "right": 1256,
+          "bottom": 447.59375,
+          "width": 540,
+          "height": 67.1875
+        },
+        {
+          "selector": "shrine",
+          "x": 990,
+          "y": 459.59375,
+          "right": 1256,
+          "bottom": 511.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "codex",
+          "x": 716,
+          "y": 459.59375,
+          "right": 982,
+          "bottom": 511.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "prologue",
+          "x": 990,
+          "y": 519.59375,
+          "right": 1256,
+          "bottom": 571.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "store",
+          "x": 716,
+          "y": 519.59375,
+          "right": 982,
+          "bottom": 571.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "settings",
+          "x": 990,
+          "y": 579.59375,
+          "right": 1256,
+          "bottom": 631.59375,
+          "width": 266,
+          "height": 52
+        },
+        {
+          "selector": "",
+          "x": 716,
+          "y": 579.59375,
+          "right": 982,
+          "bottom": 631.59375,
+          "width": 266,
+          "height": 52
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "screen": "hero",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 100,
+          "y": 16,
+          "right": 1180,
+          "bottom": 119.484375,
+          "width": 1080,
+          "height": 103.484375
+        },
+        {
+          "selector": "selection-cards hero-selection-grid",
+          "x": 100,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 1080,
+          "height": 498.828125
+        },
+        {
+          "selector": "balam",
+          "x": 830.671875,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "ixchel",
+          "x": 465.34375,
+          "y": 131.484375,
+          "right": 814.671875,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "kukul",
+          "x": 100,
+          "y": 131.484375,
+          "right": 449.34375,
+          "bottom": 630.3125,
+          "width": 349.34375,
+          "height": 498.828125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 648,
+          "y": 642.3125,
+          "right": 812,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 468,
+          "y": 642.3125,
+          "right": 632,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "",
+          "x": 1146,
+          "y": 15,
+          "right": 1228,
+          "bottom": 59,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "locale": "ar",
+      "screen": "map",
+      "width": 1280,
+      "height": 720,
+      "failures": [],
+      "boxes": [
+        {
+          "selector": "selection-header",
+          "x": 100,
+          "y": 16,
+          "right": 1180,
+          "bottom": 119.484375,
+          "width": 1080,
+          "height": 103.484375
+        },
+        {
+          "selector": "selection-cards map-selection-grid",
+          "x": 100,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 1080,
+          "height": 498.828125
+        },
+        {
+          "selector": "overgrown",
+          "x": 830.671875,
+          "y": 131.484375,
+          "right": 1180,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "bloodmoon",
+          "x": 465.34375,
+          "y": 131.484375,
+          "right": 814.671875,
+          "bottom": 630.3125,
+          "width": 349.328125,
+          "height": 498.828125
+        },
+        {
+          "selector": "cenote",
+          "x": 100,
+          "y": 131.484375,
+          "right": 449.34375,
+          "bottom": 630.3125,
+          "width": 349.34375,
+          "height": 498.828125
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-secondary ",
+          "x": 648,
+          "y": 642.3125,
+          "right": 812,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "kit-button kit-slice kit-button-primary ",
+          "x": 468,
+          "y": 642.3125,
+          "right": 632,
+          "bottom": 696,
+          "width": 164,
+          "height": 53.6875
+        },
+        {
+          "selector": "",
+          "x": 1146,
+          "y": 15,
+          "right": 1228,
+          "bottom": 59,
+          "width": 82,
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "durationMs": 47749.1932
+}

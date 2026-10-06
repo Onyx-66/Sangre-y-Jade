@@ -1,4 +1,5 @@
 export const menuV06Messages = [
+  ['Level', 'Niveau', 'المستوى'], // TODO native review
   ['Armored melee fighter. Ground targets only.', 'Guerrier blindé. Cibles au sol seulement.', 'محارب مدرع. يهاجم الأعداء الأرضيين.'], // TODO native review
   ['Ranged spells. Mana regenerates over time.', 'Sorts à distance. Le mana se régénère.', 'سحر بعيد المدى. تتجدد المانا تدريجيا.'], // TODO native review
   ['Fast hunter. Darts pierce multiple targets.', 'Chasseur rapide. Fléchettes perforantes.', 'صياد سريع. تخترق سهامه عدة أعداء.'], // TODO native review

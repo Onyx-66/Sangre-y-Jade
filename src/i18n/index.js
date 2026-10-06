@@ -54,7 +54,7 @@ export function translateDOM(root){
  }
  for(const el of root.querySelectorAll('[aria-label],[title],[alt]'))for(const attr of ['aria-label','title','alt'])if(el.hasAttribute(attr))el.setAttribute(attr,t(el.getAttribute(attr)));
 }
-export const languageMarkup=()=>`<label class="language-switch" title="${t('Language')}">${interfaceIcon('globe')}<select data-language aria-label="${t('Language')}" data-no-translate><option value="en" ${language==='en'?'selected':''}>English</option><option value="fr" ${language==='fr'?'selected':''}>Français</option><option value="ar" ${language==='ar'?'selected':''}>العربية</option></select></label>`;
+export const languageMarkup=({button=false}={})=>`<label class="language-switch${button?' kit-button kit-slice kit-button-secondary menu-language':''}" title="${t('Language')}">${interfaceIcon('globe')}${button?`<span>${t('Language')}</span>`:''}<select data-language aria-label="${t('Language')}" data-no-translate><option value="en" ${language==='en'?'selected':''}>English</option><option value="fr" ${language==='fr'?'selected':''}>Français</option><option value="ar" ${language==='ar'?'selected':''}>العربية</option></select></label>`;
 export const hasTranslation=(key,locale)=>dictionaries[locale]?.has(key)??false;
 // Read-only snapshots let the release audit detect accidental English fallbacks.
 export const translationEntries=()=>[...dictionaries.en.keys()].map(key=>[key,...['fr','ar'].map(locale=>dictionaries[locale].get(key))]);
