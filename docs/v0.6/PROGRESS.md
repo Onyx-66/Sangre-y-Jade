@@ -555,3 +555,12 @@ Open issues: this short startup/control validation does not clear the unrelated 
 - Visually reviewed phone/desktop/portrait screenshots, including Arabic. Evidence: `docs/v0.6/previews/menu-update/report.json`, six selected EN/AR screenshots in that directory, and the existing menu regression report. No new art, audio, dependencies, gameplay tuning or save migrations.
 
 Open issues: this is not a full-release clearance. Existing unrelated review blockers remain; machine-written FR/AR copy still needs native review. The already delivered A56 APK and phone installation have not been changed by this source/UI update. Unrelated dirty work is preserved and nothing is pushed.
+
+## Package menu update as Android build 9 — 2026-10-06
+
+- Prompt: package the latest UI changes into a new APK. Retained version name 0.6.0 and the A56 startup fix; incremented Android version code to **9**. Built offline debug/release variants and preserved the existing signing/update identity.
+- Verification: `npm run check` **634/634 tests + production build pass**; Android `assembleDebug`, `assembleRelease`, `lintDebug` pass. APK v2 signature, package/version metadata and source/Desktop SHA-256 verified. Existing large web-chunk advisory only.
+- Installed only on the local emulator. **5/5 cold-launch checks** and **62/62 packaged EN/FR/AR menu checks** pass, with zero JavaScript errors or missing tested assets; reviewed the menu and Arabic upgrade/selection screenshots. Evidence is in `artifacts/android-startup/menu-update-build9-launch/`.
+- Delivered `C:/Users/kossa/Desktop/Sangre-y-Jade-v0.6.0-build9-menu-update.apk` (**127,763,426 bytes**), SHA-256 `f13cc9868deff6533fb2f329aa294c52231a3bbdadc8606a7d6edfa8293ced8a`. Earlier APKs are untouched. Full details: `ANDROID_MENU_UPDATE_BUILD9.md`.
+
+Open issues: full emulator gameplay smoke is inconclusive after a harness/install race and subsequent emulator/tool-session loss during software-rendered loading; no physical phone is attached for build 9. Prior release-review blockers remain. No phone install, push, audio changes, downloads or production-key access; unrelated dirty work is preserved.

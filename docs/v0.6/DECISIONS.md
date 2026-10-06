@@ -239,3 +239,9 @@
 - On short landscape screens, card details scroll independently while art, identity and Back/Continue remain visible. In portrait, the three top-art cards form a vertically scrollable list. Keep 14 px body copy and 44 px controls rather than squeezing the content; Page Up/Down and Home/End reach selected-card details with the keyboard.
 - Include the existing menu-kit/rendering prerequisites in this UI commit because the updated menu and selection screens depend on them. Preserve unrelated HUD-editor, Android, settings, map, audio and asset changes outside it. Test evidence covers this current working checkout, not a clean-clone certification of all prior uncommitted work.
 - This request changes the UI source only: do not push, reinstall the phone, overwrite or rebuild the earlier Desktop APK without a new build request.
+
+## Package the menu update — 2026-10-06
+
+- The new explicit APK request supersedes the previous source-only packaging restriction. Keep version name 0.6.0, package and public signing identity; increment Android version code to 9 for an in-place update. Preserve all old Desktop APKs and use a distinct build-9 filename.
+- Deliver the signature-verified debug APK, not the unsigned release output. Do not access production signing keys, install on the disconnected phone or infer permission to push.
+- Record the successful cold-launch and packaged-menu emulator checks separately from the inconclusive longer gameplay smoke. Do not claim build 9 has passed physical A56 or full-release acceptance testing. Preserve all unrelated dirty work outside the packaging commit.

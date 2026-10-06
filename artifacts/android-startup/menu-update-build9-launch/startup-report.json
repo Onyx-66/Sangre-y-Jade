@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "label": "Packaged application and local fonts load",
+      "passed": true
+    },
+    {
+      "label": "Cold launch keeps the same native host alive",
+      "passed": true
+    },
+    {
+      "label": "Cold-launched game remains foreground",
+      "passed": true
+    },
+    {
+      "label": "No JavaScript errors in the Android WebView",
+      "passed": true
+    },
+    {
+      "label": "No missing packaged assets in the Android WebView",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "android": "17",
+  "state": {
+    "text": "Play\nUpgrades\nHow to Play\nWatch Intro\nShop\nSettings\nLanguage\nEnglish\nFrançais\nالعربية\nVERSION 0.6.0",
+    "app": true,
+    "nativeStartup": {
+      "canvas": true,
+      "recovering": false
+    },
+    "introImages": 0,
+    "fontsComplete": "true",
+    "viewport": [
+      891,
+      411
+    ],
+    "userAgent": "Mozilla/5.0 (Linux; Android 17; sdk_gphone16k_x86_64 Build/CP41.260828.004.A7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.5 Mobile Safari/537.36",
+    "memory": {
+      "used": 10000000,
+      "limit": 1070000000
+    }
+  }
+}

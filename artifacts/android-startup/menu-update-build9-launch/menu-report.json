@@ -1,0 +1,254 @@
+{
+  "checks": [
+    {
+      "label": "en: menu language applies",
+      "passed": true
+    },
+    {
+      "label": "en: shop matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "en: settings matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "en: language matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "en: selector matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "en: Settings and Language share a row",
+      "passed": true
+    },
+    {
+      "label": "en: one language selector",
+      "passed": true
+    },
+    {
+      "label": "en: no cacao on Upgrades button",
+      "passed": true
+    },
+    {
+      "label": "en: packaged version label",
+      "passed": true
+    },
+    {
+      "label": "en: four upgrade cards",
+      "passed": true
+    },
+    {
+      "label": "en: cacao inside Upgrades matches save",
+      "passed": true
+    },
+    {
+      "label": "en: old heading and subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "en: current/max levels in cards",
+      "passed": true
+    },
+    {
+      "label": "en: all upgrade images load",
+      "passed": true
+    },
+    {
+      "label": "en: three hero cards",
+      "passed": true
+    },
+    {
+      "label": "en: hero art top centred",
+      "passed": true
+    },
+    {
+      "label": "en: hero red/green borders",
+      "passed": true
+    },
+    {
+      "label": "en: three map cards",
+      "passed": true
+    },
+    {
+      "label": "en: map art top centred",
+      "passed": true
+    },
+    {
+      "label": "en: map red/green borders",
+      "passed": true
+    },
+    {
+      "label": "fr: menu language applies",
+      "passed": true
+    },
+    {
+      "label": "fr: shop matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "fr: settings matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "fr: language matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "fr: selector matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "fr: Settings and Language share a row",
+      "passed": true
+    },
+    {
+      "label": "fr: one language selector",
+      "passed": true
+    },
+    {
+      "label": "fr: no cacao on Upgrades button",
+      "passed": true
+    },
+    {
+      "label": "fr: packaged version label",
+      "passed": true
+    },
+    {
+      "label": "fr: four upgrade cards",
+      "passed": true
+    },
+    {
+      "label": "fr: cacao inside Upgrades matches save",
+      "passed": true
+    },
+    {
+      "label": "fr: old heading and subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "fr: current/max levels in cards",
+      "passed": true
+    },
+    {
+      "label": "fr: all upgrade images load",
+      "passed": true
+    },
+    {
+      "label": "fr: three hero cards",
+      "passed": true
+    },
+    {
+      "label": "fr: hero art top centred",
+      "passed": true
+    },
+    {
+      "label": "fr: hero red/green borders",
+      "passed": true
+    },
+    {
+      "label": "fr: three map cards",
+      "passed": true
+    },
+    {
+      "label": "fr: map art top centred",
+      "passed": true
+    },
+    {
+      "label": "fr: map red/green borders",
+      "passed": true
+    },
+    {
+      "label": "ar: menu language applies",
+      "passed": true
+    },
+    {
+      "label": "ar: shop matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "ar: settings matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "ar: language matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "ar: selector matches Watch Intro size",
+      "passed": true
+    },
+    {
+      "label": "ar: Settings and Language share a row",
+      "passed": true
+    },
+    {
+      "label": "ar: one language selector",
+      "passed": true
+    },
+    {
+      "label": "ar: no cacao on Upgrades button",
+      "passed": true
+    },
+    {
+      "label": "ar: packaged version label",
+      "passed": true
+    },
+    {
+      "label": "ar: four upgrade cards",
+      "passed": true
+    },
+    {
+      "label": "ar: cacao inside Upgrades matches save",
+      "passed": true
+    },
+    {
+      "label": "ar: old heading and subtitle removed",
+      "passed": true
+    },
+    {
+      "label": "ar: current/max levels in cards",
+      "passed": true
+    },
+    {
+      "label": "ar: all upgrade images load",
+      "passed": true
+    },
+    {
+      "label": "ar: three hero cards",
+      "passed": true
+    },
+    {
+      "label": "ar: hero art top centred",
+      "passed": true
+    },
+    {
+      "label": "ar: hero red/green borders",
+      "passed": true
+    },
+    {
+      "label": "ar: three map cards",
+      "passed": true
+    },
+    {
+      "label": "ar: map art top centred",
+      "passed": true
+    },
+    {
+      "label": "ar: map red/green borders",
+      "passed": true
+    },
+    {
+      "label": "No packaged-menu JavaScript errors",
+      "passed": true
+    },
+    {
+      "label": "No missing packaged-menu assets",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": []
+}
