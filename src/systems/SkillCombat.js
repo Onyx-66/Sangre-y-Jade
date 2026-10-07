@@ -1,3 +1,5 @@
+import { effectDepth } from '../render/layers.js';
+
 export function restoreSkillMana(stats, restore) {
   if (restore) stats.mana = Math.min(stats.maxMana, stats.mana + restore);
 }
@@ -30,7 +32,7 @@ export function chainAttack(scene, target, range, damage, count, { onLink } = {}
     if (!enemy) break;
     hit.add(enemy);
     const line = scene.add.line(0, 0, previous.x, previous.y, enemy.x, enemy.y, 0xa6ffe1, .78)
-      .setOrigin(0).setDepth(17).setLineWidth(3, 1);
+      .setOrigin(0).setDepth(effectDepth((previous.y+enemy.y)/2,17)).setLineWidth(3, 1);
     scene.tweens.add({ targets: line, alpha: 0, duration: 180 + index * 25, onComplete: () => line.destroy() });
     onLink?.({x:previous.x,y:previous.y},enemy,index);
     scene.damageEnemy(enemy, damage * Math.pow(.88, index), 0, 90);

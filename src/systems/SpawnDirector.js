@@ -1,6 +1,7 @@
 import { canSpawnEnemy, spawnOutsideView } from './CombatRules.js';
 import { worldView } from './Viewport.js';
 import roster from '../data/enemies-v06.json' with { type:'json' };
+import { effectDepth } from '../render/layers.js';
 
 // The design lists map rosters, but no pack-table field. Preserve section 6.2's
 // examples and the roster's exact group sizes; see V8 in DECISIONS.md.
@@ -43,7 +44,7 @@ export function packPositions(view,count,random=Math.random,mapWorld=null) {
 
 export class SpawnDirector {
   constructor(scene,{random=Math.random,graphics=scene.add?.graphics?.(),choosePack}={}) {
-    this.scene=scene;this.random=random;this.graphics=graphics?.setDepth?.(8)||graphics;
+    this.scene=scene;this.random=random;this.graphics=graphics?.setDepth?.(effectDepth(0,8))||graphics;
     this.nextPack=0;this.history=[];this.peakAlive=0;
     this.choosePack=choosePack||(packs=>pickPack(packs,this.random));
   }

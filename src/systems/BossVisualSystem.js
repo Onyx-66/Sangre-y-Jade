@@ -1,11 +1,13 @@
 // Like the enemy renderer, boss poses are non-physics sprites. The original
 // body keeps its radius, world centre and combat scale through every pose.
+import { backgroundDepth, objectBaseY, setWorldDepth } from '../render/layers.js';
 export class BossVisualSystem {
- constructor(scene){this.scene=scene;this.actors=new Map();this.shadows=scene.add.graphics().setDepth(9);}
+ constructor(scene){this.scene=scene;this.actors=new Map();this.shadows=scene.add.graphics().setDepth(backgroundDepth(8999));}
  init(boss){
   this.remove(boss);const key=boss.getData('artKey');
   if(!key?.startsWith('boss-')||!this.scene.textures.exists(`${key}-frame-15`))return;
-  const sprite=this.scene.add.sprite(boss.x,boss.y,key).setOrigin(.5,.985).setDepth(13);
+  const sprite=this.scene.add.sprite(boss.x,boss.y,key).setOrigin(.5,.985);
+  setWorldDepth(sprite, objectBaseY(sprite));
   const entry={sprite,serial:boss.getData('serial'),scale:boss.scaleX,alpha:1,state:'idle',until:0,flashUntil:0};
   this.actors.set(boss,entry);this.sync(boss,entry);boss.setAlpha(0);
  }
@@ -27,7 +29,8 @@ export class BossVisualSystem {
   const pose=e.until>now?e.state:state?.busy?'windup':state?.channel?'attack':state?.recoveryUntil>now?'recover':'idle';
   const squash=!scene.settings.reducedMotion&&pose==='windup'?[1.07,.94]:!scene.settings.reducedMotion&&pose==='attack'?[1.09,.96]:[1,1];
   const sprite=e.sprite.setTexture(frame).setFlipX(heading).setVisible(boss.visible);
-  sprite.setPosition(boss.x,boss.y+24*e.scale).setScale(e.scale*squash[0],e.scale*squash[1]).setAlpha(e.alpha);
+  sprite.setPosition(boss.x,boss.y+24*e.scale-(boss.getData('elevation')||0)).setScale(e.scale*squash[0],e.scale*squash[1]).setAlpha(e.alpha);
+  setWorldDepth(sprite, boss.getData('worldFootY')??objectBaseY(sprite));
   if(e.flashUntil>now)sprite.setTintFill(0xffffff);else if(boss.isTinted)sprite.setTint(boss.tintTopLeft);else sprite.clearTint();
   boss.setAlpha(0);
   if(sprite.visible){this.shadows.fillStyle(0x15121c,.4).fillEllipse(boss.x,boss.y+24*e.scale,80*e.scale,22*e.scale);

@@ -129,7 +129,8 @@ export const KUKUL_FX_RECIPES={
  }),
  skyfall:recipe('skyfall','red-target-circle-and-smoky-falling-dart','JSON 0.6-second telegraph then twelve impacts across 1.5 seconds, r50 dust','NORMAL',['#d9413a','#3b2a1a'],{
   cast(s,c,t){const p=params('skyfall');if(s.add.rectangle&&s.fx?.track){
-    const shade=s.add.rectangle(0,0,1,1,0x000000,.16).setScrollFactor(0).setDepth(21).setData('viewportOverlay',true);
+    const shade=s.add.rectangle(0,0,1,1,0x000000,.16).setScrollFactor(0).setData('viewportOverlay',true);
+    shade.setDepth(weatherDepth(0,901));
     resizeScreenOverlay(s,shade);
     s.fx.track(shade);hold(s,shade,(c.duration??p.telegraphSeconds)+p.duration);
    }return puff(s,t,'accent',s.player,40,.18);},
@@ -183,3 +184,4 @@ export const KUKUL_FX_RECIPES={
 };
 export const KUKUL_FX_IDS=Object.keys(KUKUL_FX_RECIPES);
 for(const [id,value] of Object.entries(KUKUL_FX_RECIPES))FxDirector.register(id,value);
+import { weatherDepth } from '../../render/layers.js';

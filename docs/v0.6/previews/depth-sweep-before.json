@@ -1,0 +1,5092 @@
+{
+  "seed": 83492791,
+  "step": 160,
+  "maps": [
+    {
+      "mapId": "overgrown",
+      "seed": 83492791,
+      "placements": 936,
+      "markerPixels": {
+        "min": 0,
+        "max": 906
+      },
+      "lastScreenPoint": {
+        "x": 550,
+        "y": 225,
+        "canvasWidth": 800,
+        "canvasHeight": 450
+      },
+      "failures": [
+        {
+          "x": -2640,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "b898e2d3-9339-4d66-8b69-46f38e621c77",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -1984,
+              "bounds": {
+                "x": -2675.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "b898e2d3-9339-4d66-8b69-46f38e621c77",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1984,
+              "bounds": {
+                "x": -2515.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "b898e2d3-9339-4d66-8b69-46f38e621c77",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1984,
+              "bounds": {
+                "x": -2355.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2160,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "b898e2d3-9339-4d66-8b69-46f38e621c77",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2160,
+              "y": -1984,
+              "bounds": {
+                "x": -2195.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2640,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -1824,
+              "bounds": {
+                "x": -2675.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1824,
+              "bounds": {
+                "x": -2515.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1824,
+              "bounds": {
+                "x": -2355.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2160,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2160,
+              "y": -1824,
+              "bounds": {
+                "x": -2195.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2640,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -1664,
+              "bounds": {
+                "x": -2675.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1664,
+              "bounds": {
+                "x": -2515.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1664,
+              "bounds": {
+                "x": -2355.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2160,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2160,
+              "y": -1664,
+              "bounds": {
+                "x": -2195.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1200,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1664,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "hut-thatched-a",
+              "x": 1200,
+              "y": -1500,
+              "bounds": {
+                "x": 1040,
+                "y": -1788,
+                "width": 320,
+                "height": 320
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1680,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1680,
+              "y": -1664,
+              "bounds": {
+                "x": 1644.16,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "hut-thatched-b",
+              "x": 1800,
+              "y": -1500,
+              "bounds": {
+                "x": 1608,
+                "y": -1788,
+                "width": 384,
+                "height": 320
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1840,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1840,
+              "y": -1664,
+              "bounds": {
+                "x": 1804.16,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "hut-thatched-b",
+              "x": 1800,
+              "y": -1500,
+              "bounds": {
+                "x": 1608,
+                "y": -1788,
+                "width": 384,
+                "height": 320
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 2320,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 2320,
+              "y": -1664,
+              "bounds": {
+                "x": 2284.16,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "hut-thatched-c",
+              "x": 2400,
+              "y": -1500,
+              "bounds": {
+                "x": 2176,
+                "y": -1845.6,
+                "width": 448,
+                "height": 384
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 2480,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 2480,
+              "y": -1664,
+              "bounds": {
+                "x": 2444.16,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "hut-thatched-c",
+              "x": 2400,
+              "y": -1500,
+              "bounds": {
+                "x": 2176,
+                "y": -1845.6,
+                "width": 448,
+                "height": 384
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -1520,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1500,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1508,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1504,
+              "bounds": {
+                "x": -2515.84,
+                "y": -1571.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1508,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -1520,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1500,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1508,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1504,
+              "bounds": {
+                "x": -2355.84,
+                "y": -1571.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1508,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-central",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2191.2,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1200,
+          "y": -1520,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1500,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1508,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1504,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1571.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1508,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "hut-thatched-a",
+              "x": 1200,
+              "y": -1500,
+              "bounds": {
+                "x": 1040,
+                "y": -1788,
+                "width": 320,
+                "height": 320
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1840,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "2701875f-3814-4532-8207-643b8178edbc",
+              "x": -1600,
+              "y": -1400,
+              "bounds": {
+                "x": -2080,
+                "y": -1720,
+                "width": 960,
+                "height": 640
+              },
+              "depth": -9998,
+              "alpha": 0.38,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1840,
+              "y": -1024,
+              "bounds": {
+                "x": -1875.84,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "market-stall-b",
+              "x": -1800,
+              "y": -900,
+              "bounds": {
+                "x": -1960,
+                "y": -1159.2,
+                "width": 320,
+                "height": 288
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1200,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "2701875f-3814-4532-8207-643b8178edbc",
+              "x": -1600,
+              "y": -1400,
+              "bounds": {
+                "x": -2080,
+                "y": -1720,
+                "width": 960,
+                "height": 640
+              },
+              "depth": -9998,
+              "alpha": 0.38,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1200,
+              "y": -1024,
+              "bounds": {
+                "x": -1235.84,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "altar",
+              "x": -1200,
+              "y": -900,
+              "bounds": {
+                "x": -1328,
+                "y": -1130.4,
+                "width": 256,
+                "height": 256
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1200,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1024,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "shrine-small",
+              "x": 1200,
+              "y": -900,
+              "bounds": {
+                "x": 1056,
+                "y": -1188,
+                "width": 288,
+                "height": 320
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1840,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "be083909-6731-4938-a3b6-b6bd25149c59",
+              "x": 1700,
+              "y": -900,
+              "bounds": {
+                "x": 1390,
+                "y": -1130,
+                "width": 620,
+                "height": 460
+              },
+              "depth": -9998,
+              "alpha": 0.44,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1840,
+              "y": -1024,
+              "bounds": {
+                "x": 1804.16,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "fountain-dry",
+              "x": 1800,
+              "y": -900,
+              "bounds": {
+                "x": 1640,
+                "y": -1159.2,
+                "width": 320,
+                "height": 288
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 560,
+          "y": -880,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -860,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -868,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 560,
+              "y": -864,
+              "bounds": {
+                "x": 524.16,
+                "y": -931.3792,
+                "width": 71.67999999999995,
+                "height": 71.67999999999995
+              },
+              "depth": -868,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "rubble-pile",
+              "x": 540.2092571314424,
+              "y": -838.3901718016714,
+              "bounds": {
+                "x": 436.4406468739733,
+                "y": -971.8069564184174,
+                "width": 207.53722051493827,
+                "height": 148.24087179638445
+              },
+              "depth": -836.3901718016714,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -880,
+          "y": 880,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 900,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 892,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -880,
+              "y": 896,
+              "bounds": {
+                "x": -915.84,
+                "y": 828.6208,
+                "width": 71.67999999999995,
+                "height": 71.67999999999995
+              },
+              "depth": 892,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "rock-mossy-large",
+              "x": -887.1430957373232,
+              "y": 916.186711397022,
+              "bounds": {
+                "x": -998.5170931940526,
+                "y": 740.7726654026732,
+                "width": 222.7479949134588,
+                "height": 194.90449554927648
+              },
+              "depth": 918.186711397022,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1680,
+          "y": 880,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 900,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 892,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1680,
+              "y": 896,
+              "bounds": {
+                "x": 1644.16,
+                "y": 828.6208,
+                "width": 71.68000000000006,
+                "height": 71.67999999999995
+              },
+              "depth": 892,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "well-stone",
+              "x": 1671.5271451584995,
+              "y": 968.4373126346618,
+              "bounds": {
+                "x": 1587.609227127768,
+                "y": 817.3850601793453,
+                "width": 167.83583606146271,
+                "height": 167.83583606146283
+              },
+              "depth": 970.4373126346618,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -880,
+          "y": 1360,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1380,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1372,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -880,
+              "y": 1376,
+              "bounds": {
+                "x": -915.84,
+                "y": 1308.6208,
+                "width": 71.67999999999995,
+                "height": 71.68000000000006
+              },
+              "depth": 1372,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-fruit-orange",
+              "x": -822.5769574921578,
+              "y": 1529.4665712416172,
+              "bounds": {
+                "x": -965.6813296049088,
+                "y": 1226.8008242231488,
+                "width": 286.2087442255021,
+                "height": 321.9848372536899
+              },
+              "depth": 1531.4665712416172,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2000,
+          "y": 1520,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1540,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1532,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3aafe5af-9c2d-44d8-9378-7b751e1d1862",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2000,
+              "y": 1536,
+              "bounds": {
+                "x": -2035.84,
+                "y": 1468.6208,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": 1532,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-palm-a",
+              "x": -2002.5082156192511,
+              "y": 1705.5335973408073,
+              "bounds": {
+                "x": -2143.1684260144084,
+                "y": 1408.0372523550495,
+                "width": 281.32042079031476,
+                "height": 316.4854733891041
+              },
+              "depth": 1707.5335973408073,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        }
+      ],
+      "northSouthActors": []
+    },
+    {
+      "mapId": "bloodmoon",
+      "seed": 83492791,
+      "placements": 936,
+      "markerPixels": {
+        "min": 0,
+        "max": 909
+      },
+      "lastScreenPoint": {
+        "x": 550,
+        "y": 225,
+        "canvasWidth": 800,
+        "canvasHeight": 450
+      },
+      "failures": [
+        {
+          "x": 1200,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1824,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1891.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "ritual-platform",
+              "x": 1200,
+              "y": -1500,
+              "bounds": {
+                "x": 816,
+                "y": -2027.12,
+                "width": 768,
+                "height": 599
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1200,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1664,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "ritual-platform",
+              "x": 1200,
+              "y": -1500,
+              "bounds": {
+                "x": 816,
+                "y": -2027.12,
+                "width": 768,
+                "height": 599
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1360,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1360,
+              "y": -1664,
+              "bounds": {
+                "x": 1324.16,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "ritual-platform",
+              "x": 1200,
+              "y": -1500,
+              "bounds": {
+                "x": 816,
+                "y": -2027.12,
+                "width": 768,
+                "height": 599
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 560,
+          "y": -880,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -860,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -868,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 560,
+              "y": -864,
+              "bounds": {
+                "x": 524.16,
+                "y": -931.3792,
+                "width": 71.67999999999995,
+                "height": 71.67999999999995
+              },
+              "depth": -868,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-twisted",
+              "x": 511.7028007861227,
+              "y": -756.6663195341825,
+              "bounds": {
+                "x": 372.81068387045525,
+                "y": -1001.1164453057572,
+                "width": 277.78423383133486,
+                "height": 277.78423383133486
+              },
+              "depth": -754.6663195341825,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2640,
+          "y": -720,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -700,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -708,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -704,
+              "bounds": {
+                "x": -2675.84,
+                "y": -771.3792,
+                "width": 71.67999999999984,
+                "height": 71.67999999999995
+              },
+              "depth": -708,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-dead-a",
+              "x": -2663.316283185035,
+              "y": -627.7355573512614,
+              "bounds": {
+                "x": -2774.720092441188,
+                "y": -823.8062616420909,
+                "width": 222.80761851230636,
+                "height": 222.80761851230636
+              },
+              "depth": -625.7355573512614,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": 560,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 580,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 572,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": 576,
+              "bounds": {
+                "x": -2355.84,
+                "y": 508.62080000000003,
+                "width": 71.67999999999984,
+                "height": 71.67999999999995
+              },
+              "depth": 572,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-thorn",
+              "x": -2298.4174221605062,
+              "y": 673.6131941545755,
+              "bounds": {
+                "x": -2434.9997438446153,
+                "y": 433.22830799054356,
+                "width": 273.1646433682181,
+                "height": 273.16464336821804
+              },
+              "depth": 675.6131941545755,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 2640,
+          "y": 560,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 450,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 580,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 572,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 2640,
+              "y": 576,
+              "bounds": {
+                "x": 2604.16,
+                "y": 508.62080000000003,
+                "width": 71.67999999999984,
+                "height": 71.67999999999995
+              },
+              "depth": 572,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-stump-large",
+              "x": 2647.9023297484964,
+              "y": 636.4732117541134,
+              "bounds": {
+                "x": 2539.57237575599,
+                "y": 445.812492727302,
+                "width": 216.65990798501298,
+                "height": 216.65990798501298
+              },
+              "depth": 638.4732117541134,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 880,
+          "y": 880,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 900,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 892,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 880,
+              "y": 896,
+              "bounds": {
+                "x": 844.16,
+                "y": 828.6208,
+                "width": 71.67999999999995,
+                "height": 71.67999999999995
+              },
+              "depth": 892,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-dead-b",
+              "x": 893.8449440672994,
+              "y": 945.2065804898739,
+              "bounds": {
+                "x": 763.9537772277836,
+                "y": 716.5981268523261,
+                "width": 259.7823336790316,
+                "height": 259.7823336790316
+              },
+              "depth": 947.2065804898739,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2000,
+          "y": 1200,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1220,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1212,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2000,
+              "y": 1216,
+              "bounds": {
+                "x": -2035.84,
+                "y": 1148.6208,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": 1212,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "tree-weeping-dark",
+              "x": -1993.9397614132613,
+              "y": 1336.6968082468957,
+              "bounds": {
+                "x": -2135.142792083556,
+                "y": 1088.1794742671773,
+                "width": 282.4060613405891,
+                "height": 282.4060613405891
+              },
+              "depth": 1338.6968082468957,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 560,
+          "y": 1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1700,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1692,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "3ace097e-b7b1-4b63-be2d-3185d307380f",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 560,
+              "y": 1696,
+              "bounds": {
+                "x": 524.16,
+                "y": 1628.6208,
+                "width": 71.67999999999995,
+                "height": 71.68000000000006
+              },
+              "depth": 1692,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "rock-cracked",
+              "x": 555.8542607631534,
+              "y": 1703.157040214166,
+              "bounds": {
+                "x": 480.25290946397,
+                "y": 1594.291094343342,
+                "width": 151.20270259836684,
+                "height": 151.20270259836684
+              },
+              "depth": 1704.157040214166,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        }
+      ],
+      "northSouthActors": []
+    },
+    {
+      "mapId": "cenote",
+      "seed": 83492791,
+      "placements": 936,
+      "markerPixels": {
+        "min": 0,
+        "max": 907
+      },
+      "lastScreenPoint": {
+        "x": 550,
+        "y": 225,
+        "canvasWidth": 800,
+        "canvasHeight": 450
+      },
+      "failures": [
+        {
+          "x": -2640,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "4660bfe8-6753-4cf5-9136-cc76356d92e5",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -1984,
+              "bounds": {
+                "x": -2675.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "shells",
+              "x": -2705.912813125178,
+              "y": -1918.0482025649399,
+              "bounds": {
+                "x": -2755.618230518773,
+                "y": -1994.2631759017854,
+                "width": 99.41083478718974,
+                "height": 82.84236232265835
+              },
+              "depth": -1916.0482025649399,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "4660bfe8-6753-4cf5-9136-cc76356d92e5",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1984,
+              "bounds": {
+                "x": -2515.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "4660bfe8-6753-4cf5-9136-cc76356d92e5",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1984,
+              "bounds": {
+                "x": -2355.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2160,
+          "y": -2000,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1980,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1988,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "4660bfe8-6753-4cf5-9136-cc76356d92e5",
+              "x": 0,
+              "y": -2200,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 400
+              },
+              "depth": -9989,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2160,
+              "y": -1984,
+              "bounds": {
+                "x": -2195.84,
+                "y": -2051.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1988,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "chest-old",
+              "x": -2071.174302943051,
+              "y": -1935.0930504277349,
+              "bounds": {
+                "x": -2135.6483602461217,
+                "y": -2024.0672495059728,
+                "width": 128.9481146061421,
+                "height": 96.71108595460646
+              },
+              "depth": -1933.0930504277349,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2640,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -1824,
+              "bounds": {
+                "x": -2675.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1824,
+              "bounds": {
+                "x": -2515.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1824,
+              "bounds": {
+                "x": -2355.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2160,
+          "y": -1840,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1820,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1828,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2160,
+              "y": -1824,
+              "bounds": {
+                "x": -2195.84,
+                "y": -1891.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1828,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2640,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 350,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2640,
+              "y": -1664,
+              "bounds": {
+                "x": -2675.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1664,
+              "bounds": {
+                "x": -2515.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1664,
+              "bounds": {
+                "x": -2355.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2160,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2160,
+              "y": -1664,
+              "bounds": {
+                "x": -2195.84,
+                "y": -1731.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1840,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1840,
+              "y": -1664,
+              "bounds": {
+                "x": -1875.84,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "shrine-island",
+              "x": -1800,
+              "y": -1500,
+              "bounds": {
+                "x": -1992,
+                "y": -1794.4,
+                "width": 384,
+                "height": 320
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1200,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "fc10323d-fb68-4808-b72b-9e7073f6e760",
+              "x": -1200,
+              "y": -1200,
+              "bounds": {
+                "x": -1660,
+                "y": -1660,
+                "width": 920,
+                "height": 920
+              },
+              "depth": -9999,
+              "alpha": 0.25,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1200,
+              "y": -1664,
+              "bounds": {
+                "x": -1235.84,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "dock-hut-a",
+              "x": -1200,
+              "y": -1500,
+              "bounds": {
+                "x": -1392,
+                "y": -1853.28,
+                "width": 384,
+                "height": 384
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1200,
+          "y": -1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1660,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1668,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1664,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1731.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1668,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "dock-hut-b",
+              "x": 1200,
+              "y": -1500,
+              "bounds": {
+                "x": 1040,
+                "y": -1794.4,
+                "width": 320,
+                "height": 320
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": -1520,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1500,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1508,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": -1504,
+              "bounds": {
+                "x": -2515.84,
+                "y": -1571.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1508,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2320,
+          "y": -1520,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1500,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1508,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2320,
+              "y": -1504,
+              "bounds": {
+                "x": -2355.84,
+                "y": -1571.3792,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": -1508,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "temple-gate-submerged",
+              "x": -2400,
+              "y": -1500,
+              "bounds": {
+                "x": -2784,
+                "y": -2206.56,
+                "width": 768,
+                "height": 768
+              },
+              "depth": -1498,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1200,
+          "y": -1200,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1180,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1188,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "fc10323d-fb68-4808-b72b-9e7073f6e760",
+              "x": -1200,
+              "y": -1200,
+              "bounds": {
+                "x": -1660,
+                "y": -1660,
+                "width": 920,
+                "height": 920
+              },
+              "depth": -9999,
+              "alpha": 0.25,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1200,
+              "y": -1184,
+              "bounds": {
+                "x": -1235.84,
+                "y": -1251.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1188,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "idol-head-large",
+              "x": -1200,
+              "y": -900,
+              "bounds": {
+                "x": -1456,
+                "y": -1312.16,
+                "width": 512,
+                "height": 448
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1360,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "fc10323d-fb68-4808-b72b-9e7073f6e760",
+              "x": -1200,
+              "y": -1200,
+              "bounds": {
+                "x": -1660,
+                "y": -1660,
+                "width": 920,
+                "height": 920
+              },
+              "depth": -9999,
+              "alpha": 0.25,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1360,
+              "y": -1024,
+              "bounds": {
+                "x": -1395.84,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "idol-head-large",
+              "x": -1200,
+              "y": -900,
+              "bounds": {
+                "x": -1456,
+                "y": -1312.16,
+                "width": 512,
+                "height": 448
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1200,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "fc10323d-fb68-4808-b72b-9e7073f6e760",
+              "x": -1200,
+              "y": -1200,
+              "bounds": {
+                "x": -1660,
+                "y": -1660,
+                "width": 920,
+                "height": 920
+              },
+              "depth": -9999,
+              "alpha": 0.25,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1200,
+              "y": -1024,
+              "bounds": {
+                "x": -1235.84,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "idol-head-large",
+              "x": -1200,
+              "y": -900,
+              "bounds": {
+                "x": -1456,
+                "y": -1312.16,
+                "width": 512,
+                "height": 448
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1200,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "6b152be4-4f03-423a-b0f6-dd38388fb432",
+              "x": 1780,
+              "y": -320,
+              "bounds": {
+                "x": 1070,
+                "y": -1030,
+                "width": 1420,
+                "height": 1420
+              },
+              "depth": -9998,
+              "alpha": 0.42,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1200,
+              "y": -1024,
+              "bounds": {
+                "x": 1164.16,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "stairs-water",
+              "x": 1200,
+              "y": -900,
+              "bounds": {
+                "x": 1008,
+                "y": -1194.4,
+                "width": 384,
+                "height": 320
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1840,
+          "y": -1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1020,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": -1028,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "6b152be4-4f03-423a-b0f6-dd38388fb432",
+              "x": 1780,
+              "y": -320,
+              "bounds": {
+                "x": 1070,
+                "y": -1030,
+                "width": 1420,
+                "height": 1420
+              },
+              "depth": -9998,
+              "alpha": 0.42,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1840,
+              "y": -1024,
+              "bounds": {
+                "x": 1804.16,
+                "y": -1091.3792,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": -1028,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "altar-water",
+              "x": 1800,
+              "y": -900,
+              "bounds": {
+                "x": 1640,
+                "y": -1164.96,
+                "width": 320,
+                "height": 288
+              },
+              "depth": -898,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 560,
+          "y": 1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1060,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1052,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 560,
+              "y": 1056,
+              "bounds": {
+                "x": 524.16,
+                "y": 988.6208,
+                "width": 71.67999999999995,
+                "height": 71.67999999999995
+              },
+              "depth": 1052,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "boulder-wet",
+              "x": 571.820203108713,
+              "y": 1094.7809359915555,
+              "bounds": {
+                "x": 493.47656305041164,
+                "y": 979.4590978257359,
+                "width": 156.68728011660278,
+                "height": 125.34982409328222
+              },
+              "depth": 1096.7809359915555,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": 1360,
+          "y": 1040,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1060,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1052,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": 1360,
+              "y": 1056,
+              "bounds": {
+                "x": 1324.16,
+                "y": 988.6208,
+                "width": 71.68000000000006,
+                "height": 71.67999999999995
+              },
+              "depth": 1052,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "boulder-large",
+              "x": 1363.3005160558969,
+              "y": 1186.4319150224328,
+              "bounds": {
+                "x": 1235.7282052928954,
+                "y": 981.0404946940005,
+                "width": 255.144621526003,
+                "height": 223.2515438352525
+              },
+              "depth": 1188.4319150224328,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -1680,
+          "y": 1200,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1220,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1212,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -1680,
+              "y": 1216,
+              "bounds": {
+                "x": -1715.84,
+                "y": 1148.6208,
+                "width": 71.68000000000006,
+                "height": 71.68000000000006
+              },
+              "depth": 1212,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "root-giant",
+              "x": -1829.5012365486473,
+              "y": 1516.9846451301128,
+              "bounds": {
+                "x": -2088.9045220645517,
+                "y": 1039.6825997808487,
+                "width": 518.8065710318087,
+                "height": 518.8065710318087
+              },
+              "depth": 1518.9846451301128,
+              "alpha": 0.6,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        },
+        {
+          "x": -2480,
+          "y": 1680,
+          "markerPixels": 0,
+          "screenPoint": {
+            "x": 400,
+            "y": 225,
+            "canvasWidth": 800,
+            "canvasHeight": 450
+          },
+          "hero": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1700,
+            "parent": "scene",
+            "texture": "hero-kukul-frame-0",
+            "frame": "__BASE"
+          },
+          "enemy": {
+            "visible": true,
+            "alpha": 1,
+            "depth": 1692,
+            "texture": "enemy-shade",
+            "frame": "__BASE"
+          },
+          "overlapObjects": [
+            {
+              "name": "4e16db65-4a11-43ed-8397-ea3c1f7c5b1a",
+              "x": 0,
+              "y": 0,
+              "bounds": {
+                "x": -3200,
+                "y": -2400,
+                "width": 6400,
+                "height": 4800
+              },
+              "depth": -10000,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "enemy-shade",
+              "x": -2480,
+              "y": 1696,
+              "bounds": {
+                "x": -2515.84,
+                "y": 1628.6208,
+                "width": 71.67999999999984,
+                "height": 71.68000000000006
+              },
+              "depth": 1692,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            },
+            {
+              "name": "boulder-large",
+              "x": -2435.1664931122214,
+              "y": 1780.8700251858681,
+              "bounds": {
+                "x": -2574.0679492811114,
+                "y": 1557.2386807539551,
+                "width": 277.80291233778007,
+                "height": 243.07754829555756
+              },
+              "depth": 1782.8700251858681,
+              "alpha": 1,
+              "blendMode": 0,
+              "frame": "__BASE"
+            }
+          ]
+        }
+      ],
+      "northSouthActors": []
+    }
+  ],
+  "errors": [],
+  "httpErrors": []
+}

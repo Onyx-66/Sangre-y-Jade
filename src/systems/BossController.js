@@ -7,12 +7,13 @@ import {spawnOutsideView} from './CombatRules.js';
 import {worldView} from './Viewport.js';
 import {BossRuntime,cue} from '../bosses/common.js';
 import {decorateBossProjectile} from '../fx/recipes/bosses.js';
+import { effectDepth, objectBaseY, setWorldDepth } from '../render/layers.js';
 
 export const bossStateDefaults=()=>({bossState:null,bossInvulnerableUntil:0,bossArmorPct:0,bossShield:0,bossShieldMax:0,
  bossObject:false,bossTarget:null,bossTargetKind:null,bossAttack:false,bossOwner:null,bossOwnerSerial:null});
 export class BossController {
  constructor(scene,{bosses=definitions,behaviors=BOSS_BEHAVIORS,graphics=scene.add?.graphics?.(),random=Math.random}={}){
-  this.scene=scene;this.definitions=bosses;this.behaviors=behaviors;this.graphics=graphics?.setDepth?.(3)||graphics;this.random=random;
+  this.scene=scene;this.definitions=bosses;this.behaviors=behaviors;this.graphics=graphics?.setDepth?.(effectDepth(0,3))||graphics;this.random=random;
   this.state=null;this.warning=null;this.casts={};this.destroyed=false;
  }
  valid(state=this.state){return !!state&&!this.destroyed&&(state.dead?state===this.state:
@@ -167,7 +168,7 @@ export class BossController {
   this.scene.audio?.voice?.(`boss-${state.definition.id}-death`,{owner:'run'});
   if(!state.behavior.temporary)cue(this.context(),'death');
   const sprite=this.scene.bossVisuals?.die(boss)||this.scene.add?.sprite?.(boss.x,boss.y,boss.texture?.key||boss.getData('artKey'));
-  sprite?.setDepth?.(24).setScale(boss.scaleX||1,boss.scaleY||1);
+  if(sprite){sprite.setDepth(effectDepth(boss.y,24)).setScale(boss.scaleX||1,boss.scaleY||1);setWorldDepth(boss,objectBaseY(boss));}
   const deathKey=`${boss.getData('artKey')}-death`;
   if(this.scene.anims?.exists(deathKey))sprite?.play?.(deathKey);
   this.scene.playEffect?.(2,boss.x,boss.y,190);

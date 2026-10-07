@@ -5,6 +5,7 @@ import { t } from '../i18n/index.js';
 import { AllyBrain } from './AllyBrain.js';
 import { AllyVisuals } from '../art/allyVisuals.js';
 import '../fx/recipes/allies.js';
+import { effectDepth, objectBaseY, setWorldDepth } from '../render/layers.js';
 
 const pointSegmentDistance=(p,a,b)=>{
  const dx=b.x-a.x,dy=b.y-a.y,length=dx*dx+dy*dy;
@@ -25,7 +26,10 @@ export class SupportSystem {
  constructor(scene){this.scene=scene;this.traps=[];this.effects={};this.origins={};this.wall=null;this.lastStealthAt=-Infinity;this.stealthDamageUntil=0;this.visuals=new AllyVisuals(scene);this.brain=new AllyBrain(scene,this);}
  summon(id,heroLevel=ALLY_RULES.join_level){
   const s=this.scene,data=SUPPORTS[id];if(s.companion||!data)return null;
-  const sprite=s.add.sprite(s.player.x-75,s.player.y+40,`support-${id}`).setScale(.62).setDepth(19);
+  const sprite=s.add.sprite(s.player.x-75,s.player.y+40,`support-${id}`).setScale(.62);
+  sprite.setData('level',s.player.getData?.('level')||0);
+  s.mapWorld?.collision.track(sprite,{radius:11,footOffset:24});
+  setWorldDepth(sprite,objectBaseY(sprite));
   sprite.setData('animLock',0);
   sprite.setData('byAlly',true);
   s.companion={id,sprite,skills:[],level:heroLevel,rank:allyRank(heroLevel),shot:.5,hp:100};
@@ -108,6 +112,8 @@ export class SupportSystem {
   let x=s.player.x-s.lastMove.x*90,y=s.player.y-s.lastMove.y*90;
   if(a.id==='tank'&&target){const d=Math.hypot(target.x-s.player.x,target.y-s.player.y)||1;x=s.player.x+(target.x-s.player.x)/d*85;y=s.player.y+(target.y-s.player.y)/d*85;}
   if(a.id==='assassin'&&target){x=target.x-35;y=target.y+30;}
+  const goal=s.mapWorld?.collision.steer(a.sprite,{x,y,level:s.player.getData?.('level')||0});
+  if(goal){x=goal.x;y=goal.y;}
   const dx=x-a.sprite.x,dy=y-a.sprite.y,d=Math.hypot(dx,dy);
   if(d>900)a.sprite.setPosition(x,y);
   else if(d>10){const step=Math.min(d,s.stats.speed*(a.id==='assassin'?1.6:1.2)*dt);a.sprite.x+=dx/d*step;a.sprite.y+=dy/d*step;}
@@ -145,7 +151,8 @@ export class SupportSystem {
  }
  placeBomb(skill){
   const s=this.scene;if(this.traps.length>=6){const old=this.traps.shift();old.sprite.destroy();}
-  const sprite=s.add.image(s.player.x-s.lastMove.x*45,s.player.y-s.lastMove.y*45,'support-bomb').setDisplaySize(42,42).setDepth(8);
+  const x=s.player.x-s.lastMove.x*45,y=s.player.y-s.lastMove.y*45;
+  const sprite=s.add.image(x,y,'support-bomb').setDisplaySize(42,42).setDepth(effectDepth(y,8));
   sprite.setData('byAlly',true);
   this.traps.push({id:skill.id,skill,sprite,life:skill.params.fuseDuration,armed:true});
   s.fx?.play(skill.id,'ground',{x:sprite.x,y:sprite.y,duration:skill.params.fuseDuration});

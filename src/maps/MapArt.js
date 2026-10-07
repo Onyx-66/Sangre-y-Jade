@@ -1,5 +1,6 @@
 import { MAP_KITS } from '../data/mapDefinitions.js';
 import { createCenoteArt } from './CenoteArt.js';
+import { backgroundDepth } from '../render/layers.js';
 
 export function mapArtManifest(map) {
   const kit = map?.kit || MAP_KITS[typeof map === 'string' ? map : map?.id];
@@ -15,9 +16,9 @@ export function createMapArt(scene, kit, layout) {
   const key = id => `map-${kit.id}-${id}`;
   if (!kit.artVersion || !scene.floor?.setTexture || !scene.add?.tileSprite || !scene.textures.exists(key('moss-grass'))) return null;
   // Ground must be below y-sorted props/actors even in the negative-y half of the finite world.
-  scene.floor.setTexture(key('moss-grass')).setDepth(-10000).setTint(0x829b83);
+  scene.floor.setTexture(key('moss-grass')).setDepth(backgroundDepth()).setTint(0x829b83);
   const tile = (id,x,y,width,height,depth,alpha=1) => {
-    const sprite=scene.add.tileSprite(x,y,width,height,key(id)).setDepth(depth).setAlpha(alpha).setTint(0x9aaa90);
+    const sprite=scene.add.tileSprite(x,y,width,height,key(id)).setDepth(backgroundDepth(depth + 10000)).setAlpha(alpha).setTint(0x9aaa90);
     objects.push(sprite); return sprite;
   };
   const softPatch = (id,x,y,w,h,alpha) => {
@@ -47,7 +48,7 @@ export function createMapArt(scene, kit, layout) {
     texture.refresh();
   }
   for(const [x,y,w,h,rotation] of [[0,-2200,6400,400,0],[0,2200,6400,400,Math.PI],[-3000,0,4800,400,-Math.PI/2],[3000,0,4800,400,Math.PI/2]]){
-    const wall=scene.add.tileSprite(x,y,w,h,wallKey).setRotation(rotation).setDepth(-9989).setTint(0x749573);
+    const wall=scene.add.tileSprite(x,y,w,h,wallKey).setRotation(rotation).setDepth(backgroundDepth(11)).setTint(0x749573);
     objects.push(wall);
   }
   return { objects, destroy(){for(const object of objects)object.destroy();for(const mask of masks)mask.destroy();} };

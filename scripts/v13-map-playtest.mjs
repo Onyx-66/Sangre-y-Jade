@@ -6,9 +6,9 @@ import assert from 'node:assert/strict';
 import { createServer } from 'vite';
 import { chromium } from 'playwright-core';
 
-const maps = ['overgrown', 'bloodmoon', 'cenote'];
+const maps = process.env.MAP_BOT_MAPS?.split(',') || ['overgrown', 'bloodmoon', 'cenote'];
 const seedFor = map => ({ overgrown: 13001, bloodmoon: 13002, cenote: 13003 })[map];
-const output = path.resolve('docs/v0.6/previews/v13/map-bot-report.json');
+const output = path.resolve(process.env.MAP_BOT_REPORT || 'docs/v0.6/previews/v13/map-bot-report.json');
 await fs.mkdir(path.dirname(output), { recursive: true });
 const report = { createdAt: new Date().toISOString(), simulatedSeconds: 600, stepHz: 20,
   cpuThrottleRate: 4, maps: [], errors: [], httpErrors: [] };
@@ -53,6 +53,7 @@ try {
 
     const result = await page.evaluate(async ({ mapId, seed }) => {
       const { GameScene } = await import('/src/scenes/GameScene.js');
+      const { penetration, blocksLevel } = await import('/src/world/geometry.js');
       const app = window.__SANGRE_Y_JADE__, game = app.game, scene = game.scene.getScene('Ritual');
       game.loop.stop(); scene.sys.sceneUpdate = GameScene.prototype.update;
       // Preserve ordinary enemy, XP and level-up logic; an oversized HP pool keeps this
@@ -62,7 +63,7 @@ try {
       for (const method of ['play', 'loop', 'ui']) scene.skillAudio[method] = () => null;
       for (const method of ['toast', 'showUnlock']) scene.hud[method] = () => {};
       scene.floatText = () => {};
-      const delta = 50, frameTimes = [], heapSamples = [], activeSamples = [];
+      const delta = 50, frameTimes = [], heapSamples = [], activeSamples = [], collisionFailures=[],stuckFailures=[],movementSamples=new Map();
       let clock = scene.time.now, frames = 0, nextDecision = 0, maxHeap = 0, maxActive = 0, maxSprites = 0, pendingChoice = null;
       scene.hud.showChoice = (title, cards, choose, _subtitle, secondary, options) => { pendingChoice = { title, cards, choose, secondary, options }; };
       while (scene.elapsed < 600 - 1e-5 && !scene.ended) {
@@ -103,9 +104,24 @@ try {
         clock += delta; scene.cameras.main.preRender(); game.headlessStep(clock, delta); frames++;
         const elapsed = performance.now() - frameStart; frameTimes.push(elapsed);
         if (frames % 100 === 0) {
+          for(const [actor,state] of scene.mapWorld.collision.actors){
+            if(!actor.active||state.flier)continue;
+            for(const item of scene.mapWorld.blockersAround(state.x,state.y,state.radius))if(blocksLevel(item,state.level)&&penetration(state,state.radius,item))
+              collisionFailures.push({time:scene.elapsed,actor:actor.getData('type')||'hero/ally',object:item.worldId,x:state.x,y:state.y});
+          }
+          for(const enemy of scene.enemies.getChildren()){
+            if(!enemy.active||enemy.getData('flier')||enemy.getData('isBoss')||enemy.getData('ranged')||enemy.getData('buried'))continue;
+            const serial=enemy.getData('serial'),old=movementSamples.get(serial),action=enemy.getData('behaviorState');
+            const stationary=old&&Math.hypot(enemy.x-old.x,enemy.y-old.y)<2&&!action?.busy&&!action?.motion;
+            const samples=stationary?old.samples+1:0;
+            movementSamples.set(serial,{x:enemy.x,y:enemy.y,samples});
+            if(samples>=3&&Math.hypot(enemy.x-scene.player.x,enemy.y-scene.player.y)>100&&scene.mapWorld.blockersAround(enemy.x,enemy.y,40).length)
+              stuckFailures.push({serial,type:enemy.getData('type'),time:scene.elapsed,x:enemy.x,y:enemy.y,velocity:{x:enemy.body.velocity.x,y:enemy.body.velocity.y},recovery:scene.mapWorld.stuck.get(serial)});
+          }
           const used = performance.memory?.usedJSHeapSize || 0; heapSamples.push(used); maxHeap = Math.max(maxHeap, used);
           const active = scene.mapWorld?.active.size || 0;
-          const sprites = active + (scene.mapWorld?.visualPool.length || 0) + (scene.mapWorld?.colliderPool.length || 0);
+          const sprites = active + (scene.mapWorld?.visualPool.length || 0) + (scene.mapWorld?.colliderPool.length || 0)
+            +scene.mapWorld.overheads.parts.size+scene.mapWorld.overheads.pool.length;
           activeSamples.push(active); maxActive = Math.max(maxActive, active); maxSprites = Math.max(maxSprites, sprites);
         }
         if (frames > 14000) throw new Error(`${mapId}: simulation clock stopped at ${scene.elapsed.toFixed(2)}s (choice=${!!pendingChoice}, paused=${scene.pausedForChoice}, ended=${scene.ended})`);
@@ -114,7 +130,7 @@ try {
       const percentile = p => sorted[Math.min(sorted.length-1,Math.floor((sorted.length-1)*p))] || 0;
       const usedFirst = heapSamples.find(value => value > 0) || 0, usedLast = [...heapSamples].reverse().find(value => value > 0) || 0;
       return { mapId, seed, simSeconds: scene.elapsed, frames, completed: scene.elapsed >= 599.95 || scene.ended,
-        level: scene.stats.level, kills: scene.stats.kills, player: { x: scene.player.x, y: scene.player.y },
+        collisionFailures, stuckFailures, level: scene.stats.level, kills: scene.stats.kills, player: { x: scene.player.x, y: scene.player.y },
         frameMs: { mean: sum / Math.max(1, frames), p50: percentile(.5), p95: percentile(.95), p99: percentile(.99), max: sorted.at(-1) || 0,
           estimatedFps: 1000 / Math.max(0.001, sum / Math.max(1, frames)), over16_7ms: frameTimes.filter(value => value > 16.7).length },
         memory: { firstSampleBytes: usedFirst || null, lastSampleBytes: usedLast || null, peakBytes: maxHeap || null,
@@ -123,10 +139,12 @@ try {
           activePropSamples: activeSamples }, seedPolicy: 'seeded map base layout; deterministic decoration' };
     }, { mapId, seed: seedFor(mapId) });
     result.errors = errors; result.httpErrors = httpErrors;
-    assert.equal(result.completed, true, `${mapId}: 10-minute simulation completed`);
-    assert.ok(result.streaming.peakAllocatedSprites <= 350, `${mapId}: prop sprite pool remained <=350`);
     report.maps.push(result); report.errors.push(...errors.map(error => `${mapId}: ${error}`)); report.httpErrors.push(...httpErrors.map(error => `${mapId}: ${error}`));
     await fs.writeFile(output, JSON.stringify(report, null, 2) + '\n');
+    assert.equal(result.completed, true, `${mapId}: 10-minute simulation completed`);
+    assert.equal(result.collisionFailures.length,0,`${mapId}: actors embedded in solids: ${JSON.stringify(result.collisionFailures.slice(0,10))}`);
+    assert.equal(result.stuckFailures.length,0,`${mapId}: stationary ground enemies near obstacles: ${JSON.stringify(result.stuckFailures.slice(0,10))}`);
+    assert.ok(result.streaming.peakAllocatedSprites <= 350, `${mapId}: prop sprite pool remained <=350`);
     console.log(`${mapId}: ${result.simSeconds.toFixed(1)} simulated s, ${result.frames} frames, FPS=${result.frameMs.estimatedFps.toFixed(1)}, p95=${result.frameMs.p95.toFixed(2)}ms, peak sprites=${result.streaming.peakAllocatedSprites}`);
     await context.close();
   }

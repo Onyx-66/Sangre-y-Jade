@@ -1,0 +1,59 @@
+{
+  "seed": 83492791,
+  "step": 160,
+  "maps": [
+    {
+      "mapId": "overgrown",
+      "seed": 83492791,
+      "placements": 936,
+      "markerPixels": {
+        "min": 220,
+        "max": 1165
+      },
+      "lastScreenPoint": {
+        "x": 550,
+        "y": 225,
+        "canvasWidth": 800,
+        "canvasHeight": 450
+      },
+      "failures": [],
+      "northSouthActors": []
+    },
+    {
+      "mapId": "bloodmoon",
+      "seed": 83492791,
+      "placements": 936,
+      "markerPixels": {
+        "min": 340,
+        "max": 1165
+      },
+      "lastScreenPoint": {
+        "x": 550,
+        "y": 225,
+        "canvasWidth": 800,
+        "canvasHeight": 450
+      },
+      "failures": [],
+      "northSouthActors": []
+    },
+    {
+      "mapId": "cenote",
+      "seed": 83492791,
+      "placements": 936,
+      "markerPixels": {
+        "min": 220,
+        "max": 1165
+      },
+      "lastScreenPoint": {
+        "x": 550,
+        "y": 225,
+        "canvasWidth": 800,
+        "canvasHeight": 450
+      },
+      "failures": [],
+      "northSouthActors": []
+    }
+  ],
+  "errors": [],
+  "httpErrors": []
+}

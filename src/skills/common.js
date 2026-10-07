@@ -1,4 +1,5 @@
 import { configureProjectile } from './kukul/projectiles.js';
+import { effectDepth } from '../render/layers.js';
 const TAU = Math.PI * 2;
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
@@ -83,7 +84,7 @@ export function timedEffect(scene, duration, sprites, update, onEnd = () => {}) 
 
 export function orbitBlades(scene, { count = 3, radius = 115, duration = 4, damage, hitRadius = 30, interval = .25, angularSpeed = TAU, texture = 'player-dart', tint = 0x69eec1, ...options }) {
   const sprites = Array.from({ length: clamp(Math.floor(count), 1, 24) }, () =>
-    scene.add.image(scene.player.x, scene.player.y, texture).setDepth(16).setDisplaySize(42, 42).setTint(tint));
+    scene.add.image(scene.player.x, scene.player.y, texture).setDepth(effectDepth(scene.player.y,16)).setDisplaySize(42, 42).setTint(tint));
   let angle = 0, remaining = 0;
   return timedEffect(scene, duration, sprites, (dt) => {
     angle += angularSpeed * dt;
@@ -100,7 +101,7 @@ export function orbitBlades(scene, { count = 3, radius = 115, duration = 4, dama
 
 export function zone(scene, { origin = scene.player, radius, duration, damage, interval = .5, texture = 'trap', tint = 0x69eec1, ...options }) {
   const point = { x: origin.x, y: origin.y };
-  const sprite = scene.add.image(point.x, point.y, texture).setDepth(7).setDisplaySize(radius * 2, radius * 2).setTint(tint).setAlpha(.6);
+  const sprite = scene.add.image(point.x, point.y, texture).setDepth(effectDepth(point.y,7)).setDisplaySize(radius * 2, radius * 2).setTint(tint).setAlpha(.6);
   let remaining = 0;
   return timedEffect(scene, duration, [sprite], (dt) => {
     remaining -= dt;

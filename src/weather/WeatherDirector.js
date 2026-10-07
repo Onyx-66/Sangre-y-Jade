@@ -1,4 +1,5 @@
 import { worldView } from '../systems/Viewport.js';
+import { weatherDepth, weatherBackdropDepth, setWeatherDepth } from '../render/layers.js';
 
 export const WEATHER_QUALITY_CAPS = Object.freeze({ low: 80, medium: 160, high: 300 });
 
@@ -140,10 +141,10 @@ export class WeatherDirector {
     this.maxParticles = 0;
     this.maxTorches = maxTorches;
     this.torchGlows = [];
-    this.staticGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(3);
-    this.ambientGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(4);
-    this.vignetteGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(4);
-    this.flashGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(4);
+    this.staticGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(weatherBackdropDepth(1));
+    this.ambientGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(weatherBackdropDepth(2));
+    this.vignetteGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(weatherBackdropDepth(3));
+    this.flashGraphics = scene.add?.graphics?.().setScrollFactor?.(0).setDepth?.(weatherBackdropDepth(4));
     this.createStaticOverlays();
     this.setQuality(scene.settings?.particles || 'medium');
     for (const layer of this.config.layers) if (layer.rate) {
@@ -185,7 +186,7 @@ export class WeatherDirector {
     while (this.particles.length < this.maxParticles) {
       const sprite = this.scene.add?.image?.(0, 0, defaultTexture);
       if (!sprite) break;
-      sprite.setActive?.(false); sprite.setVisible?.(false); sprite.setDepth?.(-3);
+      sprite.setActive?.(false); sprite.setVisible?.(false); setWeatherDepth(sprite,0,-3);
       sprite.weatherEmitter = null; sprite.weatherLife = 0; sprite.weatherAge = 0;
       this.particles.push(sprite);
     }
@@ -236,7 +237,7 @@ export class WeatherDirector {
       const texture = this.scene.textures?.exists?.(key) ? key : makeProceduralTexture(this.scene, layer.id);
       const sprite = this.scene.add.image(0, 0, texture);
       sprite.setOrigin?.(0.5); sprite.setScrollFactor?.(0);
-      sprite.setDepth?.(layer.flash ? 4.5 : 3.5); sprite.setAlpha?.(0);
+      sprite.setDepth?.(weatherBackdropDepth(layer.flash ? 4 : 3)); sprite.setAlpha?.(0);
       sprite.setActive?.(true); sprite.setVisible?.(false);
       this.overlaySprites.push({ id: layer.id, sprite, flash: Boolean(layer.flash) });
     }
@@ -279,7 +280,7 @@ export class WeatherDirector {
       // Phaser's BlendModes.ADD enum is 1 (normal is 0); avoid importing the
       // browser-only Phaser bundle here so the deterministic system tests run in Node.
       const glow = this.scene.add.image(0, 0, key).setBlendMode?.(1);
-      glow?.setOrigin?.(0.5); glow?.setDepth?.(-2); glow?.setAlpha?.(0.16);
+      glow?.setOrigin?.(0.5); setWeatherDepth(glow,0,-2); glow?.setAlpha?.(0.16);
       glow?.setActive?.(false); glow?.setVisible?.(false);
       if (glow) this.torchGlows.push(glow);
     }
@@ -301,7 +302,7 @@ export class WeatherDirector {
       if(source.color && this.scene.textures?.exists?.(authoredKey)){
         glow.setTexture?.(authoredKey);glow.setDisplaySize?.(240,240);glow.setAlpha?.(.30);
       }else glow.setTexture?.(makeTorchGlowTexture(this.scene));
-      glow.setDepth?.(source.y - 4); glow.setActive?.(true); glow.setVisible?.(true);
+      setWeatherDepth(glow,source.y,-4); glow.setActive?.(true); glow.setVisible?.(true);
     }
   }
 
@@ -321,7 +322,7 @@ export class WeatherDirector {
     const y = spawnAtTop ? view.y - 12 - this.rng() * 40 : view.y + this.rng() * view.height;
     const key = this.stillKeys.get(layerId);
     const texture = key && this.scene.textures?.exists?.(key) ? key : makeProceduralTexture(this.scene, layerId);
-    sprite.setTexture?.(texture); sprite.setPosition?.(x, y); sprite.setDepth?.(emitter.depth ?? 0);
+    sprite.setTexture?.(texture); sprite.setPosition?.(x, y); setWeatherDepth(sprite,y,emitter.depth ?? 0);
     const size=24*(layerId.startsWith('leaf-') ? 0.65 + this.rng() * 0.65 : 0.55 + this.rng() * 0.9);
     sprite.weatherDisplaySize=size;
     sprite.setDisplaySize?.(size,size);
@@ -365,6 +366,7 @@ export class WeatherDirector {
     for (const sprite of [...this.liveParticles]) {
       sprite.weatherAge += dt;
       sprite.x += sprite.weatherVX * dt; sprite.y += sprite.weatherVY * dt;
+      setWeatherDepth(sprite,sprite.y,sprite.weatherEmitter?.depth??0);
       const remain = clamp(1 - sprite.weatherAge / sprite.weatherLife, 0, 1);
       sprite.setAlpha?.(sprite.weatherAlpha * Math.min(1, remain * 3));
       if (sprite.weatherAge >= sprite.weatherLife || sprite.x < view.x - 90 || sprite.x > view.right + 90 || sprite.y < view.y - 90 || sprite.y > view.bottom + 90) this.recycle(sprite);

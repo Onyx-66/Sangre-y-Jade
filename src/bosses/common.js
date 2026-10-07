@@ -4,6 +4,7 @@ import {enemyStatusDefaults,updateDamageOverTime} from '../skills/StatusEffects.
 import {canSpawnEnemy} from '../systems/CombatRules.js';
 import {enemyAffixDefaults} from '../systems/EnemyAffixes.js';
 import {enemyBehaviorDefaults} from '../systems/EnemyBehaviorSystem.js';
+import { effectDepth, setWorldDepth, weatherBackdropDepth } from '../render/layers.js';
 
 export const TAU=Math.PI*2;
 export const point=o=>({x:o.x,y:o.y});
@@ -58,7 +59,7 @@ export function spawnAdds(ctx,type,positions,{elite=false}={}){
 // normal damage/projectile collision group, so melee and all skills can hit them.
 export class BossRuntime {
  constructor(controller,state){this.controller=controller;this.scene=controller.scene;this.state=state;this.tasks=[];this.targets=[];
-  this.graphics=this.scene.add?.graphics?.()?.setDepth(9);this.dark=this.scene.add?.graphics?.()?.setDepth(81);this.destroyed=false;}
+  this.graphics=this.scene.add?.graphics?.()?.setDepth(effectDepth(0,9));this.dark=this.scene.add?.graphics?.()?.setDepth(weatherBackdropDepth(80));this.destroyed=false;}
  alive(){return !this.destroyed&&this.controller.valid(this.state)&&!this.state.dead&&this.state.boss.active&&!this.scene.ended;}
  add(task){const item={age:0,duration:Infinity,interruptible:false,...task};this.tasks.push(item);if(item.channel)this.state.channel=item;return item;}
  finish(task,cancel=false){const i=this.tasks.indexOf(task);if(i<0)return;this.tasks.splice(i,1);
@@ -82,7 +83,8 @@ export class BossRuntime {
  target({kind,hp,position,radius=22,onDestroy,update}){
   const actor=this.scene.enemies.get(position.x,position.y,'fx-5');if(!actor)return null;
   this.scene.enemyVisuals?.remove(actor);
-  actor.enableBody(true,position.x,position.y,true,true).setActive(true).setVisible(true).setAlpha(1).setDepth(17).setDisplaySize(radius*2,radius*2);
+  actor.enableBody(true,position.x,position.y,true,true).setActive(true).setVisible(true).setAlpha(1).setDisplaySize(radius*2,radius*2);
+  setWorldDepth(actor,position.y+radius);
   const art=kind==='heart-stone'?'fx-still-boss-zipacna-stone-armor-accent':'fx-still-boss-vucub-second-sun-main';
   const hasArt=this.scene.textures?.exists(art);actor.anims.stop();actor.setTexture(hasArt?art:'fx-5').clearTint?.();
   actor.setDisplaySize(radius*2,radius*2);if(!hasArt)actor.setTint(kind==='heart-stone'?0xc58a3d:0xffcf4a);

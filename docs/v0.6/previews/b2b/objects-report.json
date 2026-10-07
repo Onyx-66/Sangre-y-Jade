@@ -1,0 +1,32 @@
+{
+  "maps": [
+    {
+      "map": "overgrown",
+      "sweeps": 584,
+      "failures": [],
+      "finalLevel": 2,
+      "split": 4,
+      "closedDoors": 3,
+      "props": 42
+    },
+    {
+      "map": "bloodmoon",
+      "sweeps": 944,
+      "failures": [],
+      "finalLevel": 2,
+      "split": 11,
+      "closedDoors": 3,
+      "props": 49
+    },
+    {
+      "map": "cenote",
+      "sweeps": 552,
+      "failures": [],
+      "finalLevel": 2,
+      "split": 4,
+      "closedDoors": 2,
+      "props": 35
+    }
+  ],
+  "errors": []
+}

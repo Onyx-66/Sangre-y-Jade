@@ -135,12 +135,24 @@ test('kit categories map to circle/rectangle footprints and Phaser bodies receiv
   world.destroy();
 });
 
-test('tree and building canopies fade to 60 percent only when the hero is behind', () => {
+test('overhead art fades to 55 percent for an overlapping hero, ally or boss and restores without changing actor alpha', () => {
   const scene = makeScene('overgrown'), world = new MapWorld(scene, { map: scene.mapData, seed: 8 });
   let alpha = 1; const object = { setAlpha(value) { alpha = value; return this; } };
-  world.active.set('canopy', { item: { fadeBehind: true, x: 0, y: 100, size: { width: 160 } }, object });
-  scene.player.x = 0; scene.player.y = 0; world.updateFades(); assert.equal(alpha, .6);
-  scene.player.y = 200; world.updateFades(); assert.equal(alpha, 1);
+  const item={ fadeBehind:true, x:0, y:100, scale:1, anchor:{x:.5,y:.5}, size:{width:160,height:200} };
+  world.active.set('canopy', { item, object });
+  scene.player={x:0,y:0,displayWidth:32,displayHeight:48,active:true,alpha:.72};
+  scene.companion={sprite:{x:500,y:500,active:true}};
+  scene.bossController={activeBoss:{x:-500,y:-500,active:true}};
+  world.updateFades(); assert.equal(alpha, .55); assert.equal(scene.player.alpha,.72);
+  scene.player.y=220; world.updateFades(); assert.equal(alpha,1,'a south-side actor is in front of the unified tree/building sprite');
+  scene.player.y=0;
+  scene.player.x=500; scene.player.y=500; world.updateFades(); assert.equal(alpha, 1);
+  scene.player.x=0; scene.player.y=0; scene.companion.sprite.x=0; scene.companion.sprite.y=0;
+  world.updateFades(); assert.equal(alpha, .55);
+  scene.companion.sprite.x=500; scene.bossController.activeBoss.x=0; scene.bossController.activeBoss.y=0;
+  world.updateFades(); assert.equal(alpha, .55);
+  scene.bossController.activeBoss.x=500; scene.bossController.activeBoss.y=500;
+  scene.player.x=500; scene.player.y=500; world.updateFades(); assert.equal(alpha, 1);
   world.destroy();
 });
 
@@ -173,6 +185,14 @@ test('a ground enemy stopped by collision still reaches stuck recovery', () => {
   const world={scene:{enemies:{getChildren:()=>[enemy]}},stuck:new Map(),blockersAround:()=>[],clampInside:p=>p};
   for(let i=0;i<125;i++)MapWorld.prototype.updateActors.call(world,1/60);
   assert.ok(resets>=1,'zero-velocity actors must be nudged/repositioned rather than skipped');
+});
+
+test('small collision jitter cannot indefinitely reset the stuck detector',()=>{
+  let resets=0;
+  const enemy={active:true,x:0,y:0,getData:k=>({serial:3,radius:16}[k]),body:{velocity:{x:40,y:0},reset(){resets++;}},setPosition(x,y){this.x=x;this.y=y;}};
+  const world={scene:{enemies:{getChildren:()=>[enemy]}},stuck:new Map(),blockersAround:()=>[],clampInside:p=>p};
+  for(let i=0;i<180;i++){enemy.x=(i%4<2?3:-3);MapWorld.prototype.updateActors.call(world,1/60);}
+  assert.ok(resets>0,'six-pixel oscillations are not progress around an obstacle');
 });
 
 function makeScene(mapId) {

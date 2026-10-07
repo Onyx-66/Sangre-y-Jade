@@ -30,10 +30,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 24,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 24
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -42,7 +42,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-broadleaf-a.png",
       "textureKey": "map-overgrown-tree-broadleaf-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 24
+      },
+      "occluder": {
+        "x": -144,
+        "y": -270.71999999999997,
+        "width": 288,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-broadleaf-b",
@@ -59,10 +78,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 24,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 24
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -71,7 +90,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-broadleaf-b.png",
       "textureKey": "map-overgrown-tree-broadleaf-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 24
+      },
+      "occluder": {
+        "x": -144,
+        "y": -270.71999999999997,
+        "width": 288,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-palm-a",
@@ -88,10 +126,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 22,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -100,7 +138,26 @@
       "placeholderTexture": "top-palm",
       "image": "maps/overgrown/trees/tree-palm-a.png",
       "textureKey": "map-overgrown-tree-palm-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
+      },
+      "occluder": {
+        "x": -128,
+        "y": -270.71999999999997,
+        "width": 256,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-palm-b",
@@ -117,10 +174,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 19,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 19
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -129,7 +186,26 @@
       "placeholderTexture": "top-palm",
       "image": "maps/overgrown/trees/tree-palm-b.png",
       "textureKey": "map-overgrown-tree-palm-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 19
+      },
+      "occluder": {
+        "x": -112,
+        "y": -240.64,
+        "width": 224,
+        "height": 166.4
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-ceiba",
@@ -146,10 +222,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 67,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 67
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -158,7 +234,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-ceiba.png",
       "textureKey": "map-overgrown-tree-ceiba",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 67
+      },
+      "occluder": {
+        "x": -256,
+        "y": -481.28,
+        "width": 512,
+        "height": 332.8
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-fig",
@@ -175,10 +270,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 27,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 27
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -187,7 +282,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-fig.png",
       "textureKey": "map-overgrown-tree-fig",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 27
+      },
+      "occluder": {
+        "x": -160,
+        "y": -360.96,
+        "width": 320,
+        "height": 249.60000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-flowering-pink",
@@ -204,10 +318,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 24,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 24
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -216,7 +330,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-flowering-pink.png",
       "textureKey": "map-overgrown-tree-flowering-pink",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 24
+      },
+      "occluder": {
+        "x": -144,
+        "y": -300.79999999999995,
+        "width": 288,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-fruit-orange",
@@ -233,10 +366,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 22,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -245,7 +378,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-fruit-orange.png",
       "textureKey": "map-overgrown-tree-fruit-orange",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
+      },
+      "occluder": {
+        "x": -128,
+        "y": -270.71999999999997,
+        "width": 256,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-willow",
@@ -262,10 +414,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 27,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 27
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -274,7 +426,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-willow.png",
       "textureKey": "map-overgrown-tree-willow",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 27
+      },
+      "occluder": {
+        "x": -160,
+        "y": -360.96,
+        "width": 320,
+        "height": 249.60000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-sapling",
@@ -291,10 +462,10 @@
         "y": 0.94
       },
       "collider": {
-        "type": "circle",
-        "radius": 16,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 16
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -303,7 +474,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/overgrown/trees/tree-sapling.png",
       "textureKey": "map-overgrown-tree-sapling",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 16
+      },
+      "occluder": {
+        "x": -96,
+        "y": -210.56,
+        "width": 192,
+        "height": 145.6
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "bush-round",
@@ -320,12 +510,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -334,7 +524,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/bush-round.png",
       "textureKey": "map-overgrown-bush-round",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "bush-flowers-pink",
@@ -351,12 +555,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -365,7 +569,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/bush-flowers-pink.png",
       "textureKey": "map-overgrown-bush-flowers-pink",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "bush-flowers-white",
@@ -382,12 +600,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -396,7 +614,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/bush-flowers-white.png",
       "textureKey": "map-overgrown-bush-flowers-white",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "fern-a",
@@ -413,12 +645,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -427,7 +659,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/fern-a.png",
       "textureKey": "map-overgrown-fern-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "fern-b",
@@ -444,12 +690,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -458,7 +704,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/fern-b.png",
       "textureKey": "map-overgrown-fern-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "tall-grass-a",
@@ -475,12 +735,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -489,7 +749,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/tall-grass-a.png",
       "textureKey": "map-overgrown-tall-grass-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "flowers-blue",
@@ -506,12 +780,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -520,7 +794,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/flowers-blue.png",
       "textureKey": "map-overgrown-flowers-blue",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "flowers-yellow",
@@ -537,12 +825,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -551,7 +839,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/flowers-yellow.png",
       "textureKey": "map-overgrown-flowers-yellow",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "lilies",
@@ -568,12 +870,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -582,7 +884,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/lilies.png",
       "textureKey": "map-overgrown-lilies",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "vines-hanging",
@@ -599,12 +915,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -613,7 +929,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/overgrown/plants/vines-hanging.png",
       "textureKey": "map-overgrown-vines-hanging",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "rock-mossy-large",
@@ -630,10 +960,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 63,
         "offsetX": 0,
-        "offsetY": -45
+        "offsetY": -45,
+        "type": "circle",
+        "radius": 63
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -642,7 +972,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/rocks/rock-mossy-large.png",
       "textureKey": "map-overgrown-rock-mossy-large",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -45,
+        "type": "circle",
+        "radius": 63
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "rock-mossy-small",
@@ -659,10 +1001,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 31,
         "offsetX": 0,
-        "offsetY": -22
+        "offsetY": -22,
+        "type": "circle",
+        "radius": 31
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -671,7 +1013,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/rocks/rock-mossy-small.png",
       "textureKey": "map-overgrown-rock-mossy-small",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -22,
+        "type": "circle",
+        "radius": 31
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "rock-slab",
@@ -688,10 +1042,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 36,
         "offsetX": 0,
-        "offsetY": -26
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -700,7 +1054,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/rocks/rock-slab.png",
       "textureKey": "map-overgrown-rock-slab",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "rubble-pile",
@@ -717,10 +1083,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 45,
         "offsetX": 0,
-        "offsetY": -32
+        "offsetY": -32,
+        "type": "circle",
+        "radius": 45
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -729,7 +1095,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/rocks/rubble-pile.png",
       "textureKey": "map-overgrown-rubble-pile",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -32,
+        "type": "circle",
+        "radius": 45
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stela-fallen",
@@ -746,10 +1124,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 36,
         "offsetX": 0,
-        "offsetY": -26
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -758,7 +1136,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/rocks/stela-fallen.png",
       "textureKey": "map-overgrown-stela-fallen",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stela-standing",
@@ -775,10 +1165,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 45,
         "offsetX": 0,
-        "offsetY": -51
+        "offsetY": -51,
+        "type": "circle",
+        "radius": 45
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -787,7 +1177,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/rocks/stela-standing.png",
       "textureKey": "map-overgrown-stela-standing",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -51,
+        "type": "circle",
+        "radius": 45
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "log-fallen",
@@ -804,12 +1206,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -818,7 +1220,21 @@
       "placeholderTexture": "top-roots",
       "image": "maps/overgrown/debris/log-fallen.png",
       "textureKey": "map-overgrown-log-fallen",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stump",
@@ -835,12 +1251,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -849,7 +1265,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/debris/stump.png",
       "textureKey": "map-overgrown-stump",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "mushrooms-red",
@@ -866,12 +1296,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -880,7 +1310,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/debris/mushrooms-red.png",
       "textureKey": "map-overgrown-mushrooms-red",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "mushrooms-brown",
@@ -897,12 +1341,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -911,7 +1355,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/debris/mushrooms-brown.png",
       "textureKey": "map-overgrown-mushrooms-brown",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "twigs",
@@ -928,12 +1386,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -942,7 +1400,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/debris/twigs.png",
       "textureKey": "map-overgrown-twigs",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stones-small",
@@ -959,12 +1431,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -973,7 +1445,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/overgrown/debris/stones-small.png",
       "textureKey": "map-overgrown-stones-small",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "temple-central",
@@ -990,11 +1476,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -246,
         "type": "rect",
         "width": 553,
-        "height": 461,
-        "offsetX": 0,
-        "offsetY": -246
+        "height": 461
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1003,7 +1489,34 @@
       "placeholderTexture": "top-temple",
       "image": "maps/overgrown/buildings/temple-central.png",
       "textureKey": "map-overgrown-temple-central",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -246,
+        "type": "rect",
+        "width": 553,
+        "height": 461
+      },
+      "occluder": {
+        "x": -384,
+        "y": -691.2,
+        "width": 768,
+        "height": 499.20000000000005
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -15.5,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "temple-wall-a",
@@ -1020,11 +1533,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -41,
         "type": "rect",
         "width": 276,
-        "height": 72,
-        "offsetX": 0,
-        "offsetY": -41
+        "height": 72
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1033,7 +1546,20 @@
       "placeholderTexture": "top-temple",
       "image": "maps/overgrown/buildings/temple-wall-a.png",
       "textureKey": "map-overgrown-temple-wall-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "wall",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -41,
+        "type": "rect",
+        "width": 276,
+        "height": 72
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "temple-wall-corner",
@@ -1050,11 +1576,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -51,
         "type": "rect",
         "width": 230,
-        "height": 90,
-        "offsetX": 0,
-        "offsetY": -51
+        "height": 90
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1063,7 +1589,20 @@
       "placeholderTexture": "top-temple",
       "image": "maps/overgrown/buildings/temple-wall-corner.png",
       "textureKey": "map-overgrown-temple-wall-corner",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "wall",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -51,
+        "type": "rect",
+        "width": 230,
+        "height": 90
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "hut-thatched-a",
@@ -1080,11 +1619,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -51,
         "type": "rect",
         "width": 230,
-        "height": 90,
-        "offsetX": 0,
-        "offsetY": -51
+        "height": 90
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1093,7 +1632,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/buildings/hut-thatched-a.png",
       "textureKey": "map-overgrown-hut-thatched-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -51,
+        "type": "rect",
+        "width": 230,
+        "height": 90
+      },
+      "occluder": {
+        "x": -160,
+        "y": -288,
+        "width": 320,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -6,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "hut-thatched-b",
@@ -1110,11 +1676,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -51,
         "type": "rect",
         "width": 276,
-        "height": 90,
-        "offsetX": 0,
-        "offsetY": -51
+        "height": 90
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1123,7 +1689,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/buildings/hut-thatched-b.png",
       "textureKey": "map-overgrown-hut-thatched-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -51,
+        "type": "rect",
+        "width": 276,
+        "height": 90
+      },
+      "occluder": {
+        "x": -192,
+        "y": -288,
+        "width": 384,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -6,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "hut-thatched-c",
@@ -1140,11 +1733,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -61,
         "type": "rect",
         "width": 323,
-        "height": 108,
-        "offsetX": 0,
-        "offsetY": -61
+        "height": 108
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1153,7 +1746,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/buildings/hut-thatched-c.png",
       "textureKey": "map-overgrown-hut-thatched-c",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -61,
+        "type": "rect",
+        "width": 323,
+        "height": 108
+      },
+      "occluder": {
+        "x": -224,
+        "y": -345.6,
+        "width": 448,
+        "height": 249.60000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -7,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "market-stall-a",
@@ -1170,11 +1790,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -41,
         "type": "rect",
         "width": 230,
-        "height": 72,
-        "offsetX": 0,
-        "offsetY": -41
+        "height": 72
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1183,7 +1803,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/buildings/market-stall-a.png",
       "textureKey": "map-overgrown-market-stall-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -41,
+        "type": "rect",
+        "width": 230,
+        "height": 72
+      },
+      "occluder": {
+        "x": -160,
+        "y": -230.4,
+        "width": 320,
+        "height": 166.4
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -5,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "market-stall-b",
@@ -1200,11 +1847,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -46,
         "type": "rect",
         "width": 230,
-        "height": 81,
-        "offsetX": 0,
-        "offsetY": -46
+        "height": 81
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1213,7 +1860,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/buildings/market-stall-b.png",
       "textureKey": "map-overgrown-market-stall-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -46,
+        "type": "rect",
+        "width": 230,
+        "height": 81
+      },
+      "occluder": {
+        "x": -160,
+        "y": -259.2,
+        "width": 320,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -5.5,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "altar",
@@ -1230,11 +1904,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -41,
         "type": "rect",
         "width": 184,
-        "height": 72,
-        "offsetX": 0,
-        "offsetY": -41
+        "height": 72
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1243,7 +1917,27 @@
       "placeholderTexture": "top-stela",
       "image": "maps/overgrown/buildings/altar.png",
       "textureKey": "map-overgrown-altar",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -41,
+        "type": "rect",
+        "width": 184,
+        "height": 72
+      },
+      "occluder": {
+        "x": -128,
+        "y": -230.4,
+        "width": 256,
+        "height": 166.4
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "shrine-small",
@@ -1260,11 +1954,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -51,
         "type": "rect",
         "width": 207,
-        "height": 90,
-        "offsetX": 0,
-        "offsetY": -51
+        "height": 90
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1273,7 +1967,34 @@
       "placeholderTexture": "top-stela",
       "image": "maps/overgrown/buildings/shrine-small.png",
       "textureKey": "map-overgrown-shrine-small",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -51,
+        "type": "rect",
+        "width": 207,
+        "height": 90
+      },
+      "occluder": {
+        "x": -144,
+        "y": -288,
+        "width": 288,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -6,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "fountain-dry",
@@ -1290,11 +2011,11 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -46,
         "type": "rect",
         "width": 230,
-        "height": 81,
-        "offsetX": 0,
-        "offsetY": -46
+        "height": 81
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1303,7 +2024,27 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/buildings/fountain-dry.png",
       "textureKey": "map-overgrown-fountain-dry",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -46,
+        "type": "rect",
+        "width": 230,
+        "height": 81
+      },
+      "occluder": {
+        "x": -160,
+        "y": -259.2,
+        "width": 320,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "pot-clay-a",
@@ -1320,10 +2061,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 19,
         "offsetX": 0,
-        "offsetY": -14
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 19
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1332,7 +2073,19 @@
       "placeholderTexture": "urn",
       "image": "maps/overgrown/props/pot-clay-a.png",
       "textureKey": "map-overgrown-pot-clay-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "breakable",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 19
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "pot-clay-b",
@@ -1349,10 +2102,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -22
+        "offsetY": -22,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1361,7 +2114,19 @@
       "placeholderTexture": "urn",
       "image": "maps/overgrown/props/pot-clay-b.png",
       "textureKey": "map-overgrown-pot-clay-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "breakable",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -22,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "basket-woven",
@@ -1378,12 +2143,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1392,7 +2157,21 @@
       "placeholderTexture": "basket",
       "image": "maps/overgrown/props/basket-woven.png",
       "textureKey": "map-overgrown-basket-woven",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "barrel-wood",
@@ -1409,10 +2188,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -19
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1421,7 +2200,19 @@
       "placeholderTexture": "urn",
       "image": "maps/overgrown/props/barrel-wood.png",
       "textureKey": "map-overgrown-barrel-wood",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "breakable",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "crate-wood",
@@ -1438,10 +2229,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 27,
         "offsetX": 0,
-        "offsetY": -17
+        "offsetY": -17,
+        "type": "circle",
+        "radius": 27
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1450,7 +2241,19 @@
       "placeholderTexture": "basket",
       "image": "maps/overgrown/props/crate-wood.png",
       "textureKey": "map-overgrown-crate-wood",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "breakable",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -17,
+        "type": "circle",
+        "radius": 27
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "well-stone",
@@ -1467,10 +2270,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 38,
         "offsetX": 0,
-        "offsetY": -24
+        "offsetY": -24,
+        "type": "circle",
+        "radius": 38
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1479,7 +2282,19 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/props/well-stone.png",
       "textureKey": "map-overgrown-well-stone",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -24,
+        "type": "circle",
+        "radius": 38
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "torch-post",
@@ -1496,12 +2311,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1510,7 +2325,21 @@
       "placeholderTexture": "top-stela",
       "image": "maps/overgrown/props/torch-post.png",
       "textureKey": "map-overgrown-torch-post",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": true
     },
     {
       "id": "fence-wood",
@@ -1527,12 +2356,12 @@
         "y": 0.9
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1541,7 +2370,21 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/props/fence-wood.png",
       "textureKey": "map-overgrown-fence-wood",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "cart-wooden",
@@ -1558,10 +2401,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 38,
         "offsetX": 0,
-        "offsetY": -19
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 38
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1570,7 +2413,19 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/props/cart-wooden.png",
       "textureKey": "map-overgrown-cart-wooden",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 38
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "sign-carved",
@@ -1587,10 +2442,10 @@
         "y": 0.9
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -19
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1599,7 +2454,19 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/overgrown/props/sign-carved.png",
       "textureKey": "map-overgrown-sign-carved",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     }
   ],
   "artVersion": "v15",
@@ -1663,5 +2530,6 @@
     "tree-broadleaf-a",
     "tree-broadleaf-b",
     "tree-fig"
-  ]
+  ],
+  "objectSchemaVersion": 1
 }

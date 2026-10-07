@@ -1,12 +1,14 @@
 import { deathEffect } from '../art/enemyVisuals.js';
+import { backgroundDepth, objectBaseY, setWorldDepth } from '../render/layers.js';
 
 // Presentation lives on non-physics sprites: squash/stretch never changes a hitbox.
 export class EnemyVisualSystem{
- constructor(scene){this.scene=scene;this.actors=new Map();this.shadows=scene.add.graphics().setDepth(9);}
+ constructor(scene){this.scene=scene;this.actors=new Map();this.shadows=scene.add.graphics().setDepth(backgroundDepth(8999));}
  init(enemy){
   this.remove(enemy);if(enemy.getData('isBoss'))return;
   const key=enemy.getData('artKey');if(!this.scene.textures.exists(`${key}-frame-15`))return;
-  const sprite=this.scene.add.sprite(enemy.x,enemy.y,key).setOrigin(.5,.94).setDepth(12);
+  const sprite=this.scene.add.sprite(enemy.x,enemy.y,key).setOrigin(.5,.94);
+  setWorldDepth(sprite, objectBaseY(sprite));
   const entry={sprite,serial:enemy.getData('serial'),scale:enemy.scaleX,alpha:enemy.alpha,state:'idle',until:0,flashUntil:0};
   this.actors.set(enemy,entry);this.sync(enemy,entry);enemy.setAlpha(0);
  }
@@ -31,7 +33,8 @@ export class EnemyVisualSystem{
   const sprite=entry.sprite.setTexture(frame).setFlipX(facing).setVisible(enemy.visible&&!enemy.getData('buried')&&!enemy.getData('burrowing'));
   const activePose=entry.until>now?entry.state:null;
   const squash=!this.scene.settings.reducedMotion&&activePose==='windup'?[1.1,.9]:!this.scene.settings.reducedMotion&&activePose==='attack'?[1.12,.94]:[1,1];
-  sprite.setPosition(enemy.x,enemy.y+r-(leap*28)-(hover&&!diving?8:0)+(1-emerge)*12).setScale(entry.scale*squash[0],entry.scale*squash[1]*(.45+.55*emerge));
+  sprite.setPosition(enemy.x,enemy.y+r-(enemy.getData('elevation')||0)-(leap*28)-(hover&&!diving?8:0)+(1-emerge)*12).setScale(entry.scale*squash[0],entry.scale*squash[1]*(.45+.55*emerge));
+  setWorldDepth(sprite, enemy.getData('worldFootY')??objectBaseY(sprite));
   sprite.setAlpha(entry.alpha*emerge);
   if(entry.flashUntil>now)sprite.setTintFill(0xffffff);else if(enemy.isTinted)sprite.setTint(enemy.tintTopLeft);else sprite.clearTint();
   enemy.setAlpha(0);

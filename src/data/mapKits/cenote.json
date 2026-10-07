@@ -41,10 +41,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 26,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 26
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -53,7 +53,26 @@
       "placeholderTexture": "top-roots",
       "image": "maps/cenote/trees/root-hanging-a.png",
       "textureKey": "map-cenote-root-hanging-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 26
+      },
+      "occluder": {
+        "x": -128,
+        "y": -294.40000000000003,
+        "width": 256,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "root-giant",
@@ -70,10 +89,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 51,
         "offsetX": -154,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 51
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -82,7 +101,26 @@
       "placeholderTexture": "top-roots",
       "image": "maps/cenote/trees/root-giant.png",
       "textureKey": "map-cenote-root-giant",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": -154,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 51
+      },
+      "occluder": {
+        "x": -256,
+        "y": -471.04,
+        "width": 512,
+        "height": 332.8
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "root-ground",
@@ -99,10 +137,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 26,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 26
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -111,7 +149,26 @@
       "placeholderTexture": "top-roots",
       "image": "maps/cenote/trees/root-ground.png",
       "textureKey": "map-cenote-root-ground",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 26
+      },
+      "occluder": {
+        "x": -128,
+        "y": -176.64000000000001,
+        "width": 256,
+        "height": 124.80000000000001
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "mushroom-giant-a",
@@ -128,10 +185,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 29,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 29
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -140,7 +197,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/cenote/trees/mushroom-giant-a.png",
       "textureKey": "map-cenote-mushroom-giant-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 29
+      },
+      "occluder": {
+        "x": -144,
+        "y": -294.40000000000003,
+        "width": 288,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "mushroom-giant-b",
@@ -157,10 +233,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 29,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 29
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -169,7 +245,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/cenote/trees/mushroom-giant-b.png",
       "textureKey": "map-cenote-mushroom-giant-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 29
+      },
+      "occluder": {
+        "x": -144,
+        "y": -294.40000000000003,
+        "width": 288,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "fern-cave",
@@ -186,10 +281,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 22,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -198,7 +293,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/cenote/trees/fern-cave.png",
       "textureKey": "map-cenote-fern-cave",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
+      },
+      "occluder": {
+        "x": -112,
+        "y": -176.64000000000001,
+        "width": 224,
+        "height": 124.80000000000001
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "tree-cave-small",
@@ -215,10 +329,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 22,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -227,7 +341,26 @@
       "placeholderTexture": "top-tree",
       "image": "maps/cenote/trees/tree-cave-small.png",
       "textureKey": "map-cenote-tree-cave-small",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 22
+      },
+      "occluder": {
+        "x": -112,
+        "y": -264.96000000000004,
+        "width": 224,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "vine-glow",
@@ -244,10 +377,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 19,
         "offsetX": 0,
-        "offsetY": 0
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 19
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -256,7 +389,26 @@
       "placeholderTexture": "top-roots",
       "image": "maps/cenote/trees/vine-glow.png",
       "textureKey": "map-cenote-vine-glow",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "tree",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "circle",
+        "radius": 19
+      },
+      "occluder": {
+        "x": -96,
+        "y": -235.52,
+        "width": 192,
+        "height": 166.4
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "moss-clump",
@@ -273,12 +425,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -287,7 +439,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/moss-clump.png",
       "textureKey": "map-cenote-moss-clump",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "flowers-glow",
@@ -304,12 +470,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -318,7 +484,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/flowers-glow.png",
       "textureKey": "map-cenote-flowers-glow",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "reeds",
@@ -335,12 +515,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -349,7 +529,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/reeds.png",
       "textureKey": "map-cenote-reeds",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "lily-pads",
@@ -366,12 +560,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -380,7 +574,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/lily-pads.png",
       "textureKey": "map-cenote-lily-pads",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "mushrooms-small-blue",
@@ -397,12 +605,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -411,7 +619,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/mushrooms-small-blue.png",
       "textureKey": "map-cenote-mushrooms-small-blue",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "mushrooms-small-violet",
@@ -428,12 +650,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -442,7 +664,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/mushrooms-small-violet.png",
       "textureKey": "map-cenote-mushrooms-small-violet",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "grass-cave",
@@ -459,12 +695,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -473,7 +709,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/grass-cave.png",
       "textureKey": "map-cenote-grass-cave",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "algae",
@@ -490,12 +740,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -504,7 +754,21 @@
       "placeholderTexture": "top-foliage",
       "image": "maps/cenote/plants/algae.png",
       "textureKey": "map-cenote-algae",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stalagmite-a",
@@ -521,10 +785,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 36,
         "offsetX": 0,
-        "offsetY": -51
+        "offsetY": -51,
+        "type": "circle",
+        "radius": 36
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -533,7 +797,19 @@
       "placeholderTexture": "top-crystal",
       "image": "maps/cenote/rocks/stalagmite-a.png",
       "textureKey": "map-cenote-stalagmite-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -51,
+        "type": "circle",
+        "radius": 36
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stalagmite-b",
@@ -550,10 +826,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 54,
         "offsetX": 0,
-        "offsetY": -45
+        "offsetY": -45,
+        "type": "circle",
+        "radius": 54
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -562,7 +838,19 @@
       "placeholderTexture": "top-crystal",
       "image": "maps/cenote/rocks/stalagmite-b.png",
       "textureKey": "map-cenote-stalagmite-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -45,
+        "type": "circle",
+        "radius": 54
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "crystal-cyan",
@@ -579,10 +867,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 45,
         "offsetX": 0,
-        "offsetY": -38
+        "offsetY": -38,
+        "type": "circle",
+        "radius": 45
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -593,7 +881,19 @@
       "textureKey": "map-cenote-crystal-cyan",
       "lightEnabled": true,
       "lightColor": "cyan",
-      "lightOffsetY": -86
+      "lightOffsetY": -86,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -38,
+        "type": "circle",
+        "radius": 45
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": true
     },
     {
       "id": "crystal-violet",
@@ -610,10 +910,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 45,
         "offsetX": 0,
-        "offsetY": -32
+        "offsetY": -32,
+        "type": "circle",
+        "radius": 45
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -624,7 +924,19 @@
       "textureKey": "map-cenote-crystal-violet",
       "lightEnabled": true,
       "lightColor": "violet",
-      "lightOffsetY": -72
+      "lightOffsetY": -72,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -32,
+        "type": "circle",
+        "radius": 45
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": true
     },
     {
       "id": "crystal-green",
@@ -641,10 +953,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 45,
         "offsetX": 0,
-        "offsetY": -32
+        "offsetY": -32,
+        "type": "circle",
+        "radius": 45
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -655,7 +967,19 @@
       "textureKey": "map-cenote-crystal-green",
       "lightEnabled": true,
       "lightColor": "green",
-      "lightOffsetY": -72
+      "lightOffsetY": -72,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -32,
+        "type": "circle",
+        "radius": 45
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": true
     },
     {
       "id": "boulder-wet",
@@ -672,10 +996,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 36,
         "offsetX": 0,
-        "offsetY": -26
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -684,7 +1008,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/rocks/boulder-wet.png",
       "textureKey": "map-cenote-boulder-wet",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "boulder-large",
@@ -701,10 +1037,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 63,
         "offsetX": 0,
-        "offsetY": -45
+        "offsetY": -45,
+        "type": "circle",
+        "radius": 63
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -713,7 +1049,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/rocks/boulder-large.png",
       "textureKey": "map-cenote-boulder-large",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -45,
+        "type": "circle",
+        "radius": 63
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "stone-slab-wet",
@@ -730,10 +1078,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 36,
         "offsetX": 0,
-        "offsetY": -26
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -742,7 +1090,19 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/rocks/stone-slab-wet.png",
       "textureKey": "map-cenote-stone-slab-wet",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "rock",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -26,
+        "type": "circle",
+        "radius": 36
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "log-driftwood",
@@ -759,12 +1119,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -773,7 +1133,21 @@
       "placeholderTexture": "top-roots",
       "image": "maps/cenote/debris/log-driftwood.png",
       "textureKey": "map-cenote-log-driftwood",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "bones-fish",
@@ -790,12 +1164,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -804,7 +1178,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/debris/bones-fish.png",
       "textureKey": "map-cenote-bones-fish",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "shells",
@@ -821,12 +1209,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -835,7 +1223,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/debris/shells.png",
       "textureKey": "map-cenote-shells",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "rope-coil",
@@ -852,12 +1254,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -866,7 +1268,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/debris/rope-coil.png",
       "textureKey": "map-cenote-rope-coil",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "broken-paddle",
@@ -883,12 +1299,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -897,7 +1313,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/debris/broken-paddle.png",
       "textureKey": "map-cenote-broken-paddle",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "pottery-shards",
@@ -914,12 +1344,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -928,7 +1358,21 @@
       "placeholderTexture": "top-rocks",
       "image": "maps/cenote/debris/pottery-shards.png",
       "textureKey": "map-cenote-pottery-shards",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "temple-gate-submerged",
@@ -945,11 +1389,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -108,
         "type": "rect",
         "width": 538,
-        "height": 200,
-        "offsetX": 0,
-        "offsetY": -108
+        "height": 200
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -958,7 +1402,43 @@
       "placeholderTexture": "top-temple",
       "image": "maps/cenote/buildings/temple-gate-submerged.png",
       "textureKey": "map-cenote-temple-gate-submerged",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "arch",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -108,
+        "type": "rect",
+        "width": 538,
+        "height": 200
+      },
+      "occluder": {
+        "x": -384,
+        "y": -706.5600000000001,
+        "width": 768,
+        "height": 499.20000000000005
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false,
+      "solidParts": [
+        {
+          "type": "rect",
+          "width": 86.08,
+          "height": 200,
+          "offsetX": -225.95999999999998,
+          "offsetY": -108
+        },
+        {
+          "type": "rect",
+          "width": 86.08,
+          "height": 200,
+          "offsetX": 225.95999999999998,
+          "offsetY": -108
+        }
+      ]
     },
     {
       "id": "shrine-island",
@@ -975,11 +1455,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -45,
         "type": "rect",
         "width": 269,
-        "height": 83,
-        "offsetX": 0,
-        "offsetY": -45
+        "height": 83
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -988,7 +1468,34 @@
       "placeholderTexture": "top-stela",
       "image": "maps/cenote/buildings/shrine-island.png",
       "textureKey": "map-cenote-shrine-island",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -45,
+        "type": "rect",
+        "width": 269,
+        "height": 83
+      },
+      "occluder": {
+        "x": -192,
+        "y": -294.40000000000003,
+        "width": 384,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -3.5,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "dock-hut-a",
@@ -1005,11 +1512,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -54,
         "type": "rect",
         "width": 269,
-        "height": 100,
-        "offsetX": 0,
-        "offsetY": -54
+        "height": 100
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1018,7 +1525,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/buildings/dock-hut-a.png",
       "textureKey": "map-cenote-dock-hut-a",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -54,
+        "type": "rect",
+        "width": 269,
+        "height": 100
+      },
+      "occluder": {
+        "x": -192,
+        "y": -353.28000000000003,
+        "width": 384,
+        "height": 249.60000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -4,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "dock-hut-b",
@@ -1035,11 +1569,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -45,
         "type": "rect",
         "width": 224,
-        "height": 83,
-        "offsetX": 0,
-        "offsetY": -45
+        "height": 83
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1048,7 +1582,34 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/buildings/dock-hut-b.png",
       "textureKey": "map-cenote-dock-hut-b",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "house",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -45,
+        "type": "rect",
+        "width": 224,
+        "height": 83
+      },
+      "occluder": {
+        "x": -160,
+        "y": -294.40000000000003,
+        "width": 320,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": {
+        "x": 0,
+        "y": -3.5,
+        "facing": "south",
+        "closed": true,
+        "width": 34,
+        "height": 62
+      },
+      "light": false
     },
     {
       "id": "bridge-rope",
@@ -1065,11 +1626,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -36,
         "type": "rect",
         "width": 314,
-        "height": 67,
-        "offsetX": 0,
-        "offsetY": -36
+        "height": 67
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1078,7 +1639,43 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/buildings/bridge-rope.png",
       "textureKey": "map-cenote-bridge-rope",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "bridge",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -36,
+        "type": "rect",
+        "width": 314,
+        "height": 67
+      },
+      "occluder": {
+        "x": -224,
+        "y": -235.52,
+        "width": 448,
+        "height": 166.4
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false,
+      "solidParts": [
+        {
+          "type": "rect",
+          "width": 50.24,
+          "height": 67,
+          "offsetX": -131.88,
+          "offsetY": -36
+        },
+        {
+          "type": "rect",
+          "width": 50.24,
+          "height": 67,
+          "offsetX": 131.88,
+          "offsetY": -36
+        }
+      ]
     },
     {
       "id": "dock-planks",
@@ -1095,11 +1692,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -36,
         "type": "rect",
         "width": 269,
-        "height": 67,
-        "offsetX": 0,
-        "offsetY": -36
+        "height": 67
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1108,7 +1705,43 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/buildings/dock-planks.png",
       "textureKey": "map-cenote-dock-planks",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "bridge",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -36,
+        "type": "rect",
+        "width": 269,
+        "height": 67
+      },
+      "occluder": {
+        "x": -192,
+        "y": -235.52,
+        "width": 384,
+        "height": 166.4
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false,
+      "solidParts": [
+        {
+          "type": "rect",
+          "width": 43.04,
+          "height": 67,
+          "offsetX": -112.97999999999999,
+          "offsetY": -36
+        },
+        {
+          "type": "rect",
+          "width": 43.04,
+          "height": 67,
+          "offsetX": 112.97999999999999,
+          "offsetY": -36
+        }
+      ]
     },
     {
       "id": "idol-head-large",
@@ -1125,11 +1758,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -63,
         "type": "rect",
         "width": 358,
-        "height": 116,
-        "offsetX": 0,
-        "offsetY": -63
+        "height": 116
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1138,7 +1771,27 @@
       "placeholderTexture": "top-stela",
       "image": "maps/cenote/buildings/idol-head-large.png",
       "textureKey": "map-cenote-idol-head-large",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -63,
+        "type": "rect",
+        "width": 358,
+        "height": 116
+      },
+      "occluder": {
+        "x": -256,
+        "y": -412.16,
+        "width": 512,
+        "height": 291.2
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "stairs-water",
@@ -1155,11 +1808,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -45,
         "type": "rect",
         "width": 269,
-        "height": 83,
-        "offsetX": 0,
-        "offsetY": -45
+        "height": 83
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1168,7 +1821,27 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/buildings/stairs-water.png",
       "textureKey": "map-cenote-stairs-water",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -45,
+        "type": "rect",
+        "width": 269,
+        "height": 83
+      },
+      "occluder": {
+        "x": -192,
+        "y": -294.40000000000003,
+        "width": 384,
+        "height": 208
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "altar-water",
@@ -1185,11 +1858,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -40,
         "type": "rect",
         "width": 224,
-        "height": 75,
-        "offsetX": 0,
-        "offsetY": -40
+        "height": 75
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1198,7 +1871,27 @@
       "placeholderTexture": "top-stela",
       "image": "maps/cenote/buildings/altar-water.png",
       "textureKey": "map-cenote-altar-water",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -40,
+        "type": "rect",
+        "width": 224,
+        "height": 75
+      },
+      "occluder": {
+        "x": -160,
+        "y": -264.96000000000004,
+        "width": 320,
+        "height": 187.20000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false
     },
     {
       "id": "gate-small",
@@ -1215,11 +1908,11 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": -54,
         "type": "rect",
         "width": 224,
-        "height": 100,
-        "offsetX": 0,
-        "offsetY": -54
+        "height": 100
       },
       "depthOffset": 2,
       "fadeBehind": true,
@@ -1228,7 +1921,43 @@
       "placeholderTexture": "top-temple",
       "image": "maps/cenote/buildings/gate-small.png",
       "textureKey": "map-cenote-gate-small",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "arch",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -54,
+        "type": "rect",
+        "width": 224,
+        "height": 100
+      },
+      "occluder": {
+        "x": -160,
+        "y": -353.28000000000003,
+        "width": 320,
+        "height": 249.60000000000002
+      },
+      "overhead": {
+        "cropRatio": 0.65
+      },
+      "door": null,
+      "light": false,
+      "solidParts": [
+        {
+          "type": "rect",
+          "width": 35.84,
+          "height": 100,
+          "offsetX": -94.08,
+          "offsetY": -54
+        },
+        {
+          "type": "rect",
+          "width": 35.84,
+          "height": 100,
+          "offsetX": 94.08,
+          "offsetY": -54
+        }
+      ]
     },
     {
       "id": "boat-small",
@@ -1245,10 +1974,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 38,
         "offsetX": 0,
-        "offsetY": -14
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 38
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1257,7 +1986,19 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/props/boat-small.png",
       "textureKey": "map-cenote-boat-small",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 38
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "lantern-hanging",
@@ -1274,12 +2015,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1290,7 +2031,21 @@
       "textureKey": "map-cenote-lantern-hanging",
       "lightEnabled": true,
       "lightColor": "cyan",
-      "lightOffsetY": -65
+      "lightOffsetY": -65,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": true
     },
     {
       "id": "crystal-lamp",
@@ -1307,12 +2062,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1323,7 +2078,21 @@
       "textureKey": "map-cenote-crystal-lamp",
       "lightEnabled": true,
       "lightColor": "cyan",
-      "lightOffsetY": -72
+      "lightOffsetY": -72,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": true
     },
     {
       "id": "barrel-wet",
@@ -1340,10 +2109,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -19
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1352,7 +2121,19 @@
       "placeholderTexture": "urn",
       "image": "maps/cenote/props/barrel-wet.png",
       "textureKey": "map-cenote-barrel-wet",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "breakable",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "net-hanging",
@@ -1369,12 +2150,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1383,7 +2164,21 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/props/net-hanging.png",
       "textureKey": "map-cenote-net-hanging",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "pot-wet",
@@ -1400,10 +2195,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -14
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1412,7 +2207,19 @@
       "placeholderTexture": "urn",
       "image": "maps/cenote/props/pot-wet.png",
       "textureKey": "map-cenote-pot-wet",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "breakable",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "totem-water",
@@ -1429,10 +2236,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -22
+        "offsetY": -22,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1441,7 +2248,19 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/props/totem-water.png",
       "textureKey": "map-cenote-totem-water",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -22,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "sign-rune",
@@ -1458,10 +2277,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 23,
         "offsetX": 0,
-        "offsetY": -19
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1470,7 +2289,19 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/props/sign-rune.png",
       "textureKey": "map-cenote-sign-rune",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -19,
+        "type": "circle",
+        "radius": 23
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "rack-fish",
@@ -1487,12 +2318,12 @@
         "y": 0.92
       },
       "collider": {
+        "offsetX": 0,
+        "offsetY": 0,
         "type": "none",
         "radius": 0,
         "width": 0,
-        "height": 0,
-        "offsetX": 0,
-        "offsetY": 0
+        "height": 0
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1501,7 +2332,21 @@
       "placeholderTexture": "top-ruin",
       "image": "maps/cenote/props/rack-fish.png",
       "textureKey": "map-cenote-rack-fish",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "decoration",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "type": "none",
+        "radius": 0,
+        "width": 0,
+        "height": 0
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     },
     {
       "id": "chest-old",
@@ -1518,10 +2363,10 @@
         "y": 0.92
       },
       "collider": {
-        "type": "circle",
-        "radius": 31,
         "offsetX": 0,
-        "offsetY": -14
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 31
       },
       "depthOffset": 2,
       "fadeBehind": false,
@@ -1530,7 +2375,19 @@
       "placeholderTexture": "urn",
       "image": "maps/cenote/props/chest-old.png",
       "textureKey": "map-cenote-chest-old",
-      "lightEnabled": false
+      "lightEnabled": false,
+      "kind": "statue",
+      "level": 0,
+      "footprint": {
+        "offsetX": 0,
+        "offsetY": -14,
+        "type": "circle",
+        "radius": 31
+      },
+      "occluder": null,
+      "overhead": null,
+      "door": null,
+      "light": false
     }
   ],
   "artVersion": "v15c",
@@ -1623,5 +2480,6 @@
     "stalagmite-a",
     "stalagmite-b",
     "root-hanging-a"
-  ]
+  ],
+  "objectSchemaVersion": 1
 }

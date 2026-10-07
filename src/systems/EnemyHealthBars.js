@@ -2,6 +2,7 @@ import { worldView } from './Viewport.js';
 import { AFFIX_NAMES } from './EnemyAffixes.js';
 import { t, getLanguage } from '../i18n/index.js';
 import { gameTextStyle } from '../ui/Typography.js';
+import { effectDepth } from '../render/layers.js';
 
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 export function healthBarModel(enemy,{mode='damaged',seconds=0,view,zoom=1,chip}={}) {
@@ -17,7 +18,7 @@ export function healthBarModel(enemy,{mode='damaged',seconds=0,view,zoom=1,chip}
 
 export class EnemyHealthBars {
   constructor(scene,{graphics=scene.add?.graphics?.()}={}) {
-    this.scene=scene;this.graphics=graphics?.setDepth?.(25)||graphics;
+    this.scene=scene;this.graphics=graphics?.setDepth?.(effectDepth(0,25))||graphics;
     this.chips=new Map();this.labels=[];this.models=[];
   }
   damage(enemy,beforeHp) {
@@ -48,8 +49,9 @@ export class EnemyHealthBars {
       if(bar.affix&&scene.add?.text){
         let label=this.labels[labelCount++];
         const name=t(AFFIX_NAMES[bar.affix]);
-        if(!label){label=scene.add.text(0,0,'',{...gameTextStyle(name,12),color:'#ffcf4a'}).setOrigin(.5,1).setDepth(25);this.labels.push(label);}
+        if(!label){label=scene.add.text(0,0,'',{...gameTextStyle(name,12),color:'#ffcf4a'}).setOrigin(.5,1);this.labels.push(label);}
         label.setText(name).setPosition(enemy.x,bar.y-2/zoom).setVisible(true);
+        label.setDepth(effectDepth(enemy.y,25));
         label.setFontFamily(gameTextStyle(name,12).fontFamily).setFontSize(12/zoom);
         // Phaser uses RTL text only inside the label; health/shield fills are physical LTR.
         label.setRTL?.(getLanguage()==='ar');

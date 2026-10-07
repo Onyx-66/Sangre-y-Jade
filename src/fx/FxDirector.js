@@ -1,4 +1,5 @@
 // Deterministic fallback retained for heroes whose art arrives in later asset steps.
+import { effectDepth, weatherDepth } from '../render/layers.js';
 export function placeholderStyle(id) {
   let hash=2166136261;
   for(const char of id)hash=Math.imul(hash^char.charCodeAt(0),16777619)>>>0;
@@ -63,7 +64,7 @@ export class FxDirector {
   }
   playPlaceholder(id,stage,{x=0,y=0,angle=0,scale=1,tint,duration=.4,target}={}) {
     const scene=this.scene,key=this.placeholder(id,stage==='proc'?'proc':'main'),style=placeholderStyle(id),point=target||{x,y};
-    const sprite=scene.add.image(point.x,point.y,key).setDepth(stage==='ground'?8:23).setRotation(angle).setScale(scale).setAlpha(.8);
+    const sprite=scene.add.image(point.x,point.y,key).setDepth(effectDepth(point.y,stage==='ground'?8:23)).setRotation(angle).setScale(scale).setAlpha(.8);
     if(tint!==undefined)sprite.setTint(tint);
     this.track(sprite);
     scene.tweens.add({targets:sprite,scale:scale*1.6,alpha:0,duration:duration*1000,onComplete:()=>sprite.destroy()});
@@ -74,13 +75,13 @@ export class FxDirector {
     const stills=Object.fromEntries(recipe.stills.map(name=>[name,this.texture(id,name)]));
     const blendModes={ADD:'ADD',SCREEN:'SCREEN',NORMAL:'NORMAL'};
     // Keep a still attached to its real projectile/actor without changing collision geometry.
-    stills.follow=(sprite,target,{offsetX=0,offsetY=0,isAlive,replace=false,update}={})=>{
+    stills.follow=(sprite,target,{offsetX=0,offsetY=0,isAlive,replace=false,update,depth=0}={})=>{
       if(!sprite||!target)return sprite;
       const alive=isAlive||(()=>target.active!==false),visible=target.visible;
       const sync=()=>{
         if(!sprite.active)return detach();
         if(!alive()){sprite.destroy();return;}
-        sprite.setPosition(target.x+offsetX,target.y+offsetY);update?.(sprite,target);
+        sprite.setPosition(target.x+offsetX,target.y+offsetY).setDepth(effectDepth(target.y+offsetY,depth));update?.(sprite,target);
       };
       const detach=()=>{scene.events?.off?.('update',sync);if(replace&&alive())target.setVisible?.(visible!==false);};
       if(replace)target.setVisible?.(false);
@@ -90,7 +91,9 @@ export class FxDirector {
       const size=options.size??128,width=options.width??size,height=options.height??size,angle=options.angle??0,
         rotation=options.rotation??angle,depth=options.depth??23,alpha=options.alpha??.9,
         blendMode=options.blendMode??blendModes[recipe.signature?.blendMode]??'ADD',tint=options.tint;
-      const sprite=scene.add.image(x,y,stills[name]||this.texture(id,name)).setDepth(depth).setRotation(rotation).setDisplaySize(width,height).setAlpha(alpha).setBlendMode(blendMode);
+      const sprite=scene.add.image(x,y,stills[name]||this.texture(id,name))
+        .setDepth(options.viewportOverlay?weatherDepth(0,900+depth):effectDepth(y,depth))
+        .setRotation(rotation).setDisplaySize(width,height).setAlpha(alpha).setBlendMode(blendMode);
       if(tint!==undefined)sprite.setTint(tint);
       return director.track(sprite);
     };

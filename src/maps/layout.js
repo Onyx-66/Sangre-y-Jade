@@ -1,5 +1,6 @@
 import { MAP_KITS } from '../data/mapDefinitions.js';
 import { cenoteGroundRegions } from './CenoteArt.js';
+import { assemblePyramid, assembleTemple } from '../world/assemblies.js';
 
 export const WORLD_WIDTH = 6400;
 export const WORLD_HEIGHT = 4800;
@@ -101,6 +102,10 @@ export function generateMapLayout(mapId, kit = MAP_KITS[mapId], seed = 1, { onPr
     byCell.get(item.cellKey).push(item);
   }
   onProgress(1);
+  // Future seeded placements can select these modular structures without
+  // changing collision, floor-transition or streaming code.
+  const assemblies=(kit.assemblies||[]).map(definition=>
+    (definition.type==='temple'?assembleTemple:assemblePyramid)(definition));
   return {
     mapId, seed: Number(seed) >>> 0,
     world: { width: kit.world.width, height: kit.world.height, cellSize: kit.world.cellSize },
@@ -110,7 +115,9 @@ export function generateMapLayout(mapId, kit = MAP_KITS[mapId], seed = 1, { onPr
     groundRegions: mapId === 'cenote' ? cenoteGroundRegions(kit.waterZones) : [],
     cells, byCell, placements: placed,
     lightSources: placed.filter(item => item.lightSource),
-    colliders: placed.filter(item => item.collider.type !== 'none'),
+    colliders: [...placed.filter(item => item.collider.type !== 'none').flatMap(item=>item.solidParts?.length?
+      item.solidParts.map((collider,i)=>({...item,ownerId:item.worldId,worldId:`${item.worldId}:part${i}`,collider,footprint:collider})):[item]),...assemblies.flatMap(a=>a.solids)],
+    stairs: assemblies.flatMap(a=>a.stairs), surfaces: assemblies.flatMap(a=>a.surfaces),
     landmarks: placed.filter(item => item.category === 'buildings'),
     clearAreas: [{ x: 0, y: 0, radius: START_CLEAR_RADIUS, kind: 'start' }, { x: 0, y: 0, radius: BOSS_ARENA_CLEAR_RADIUS, kind: 'boss-arena' }],
     clearPaths: [

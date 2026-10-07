@@ -40,8 +40,10 @@ import { BossController, bossStateDefaults } from '../systems/BossController.js'
 import { CutsceneDirector } from '../systems/CutsceneDirector.js';
 import { BossPresentation } from '../ui/BossPresentation.js';
 import { BOSS_FAIRNESS, bossDamage } from '../bosses/rules.js';
-import { MapWorld, actorCanCollideWithMap, waterSpeedMultiplier } from '../maps/MapWorld.js';
+import { MapWorld, waterSpeedMultiplier } from '../maps/MapWorld.js';
 import { WeatherDirector } from '../weather/WeatherDirector.js';
+import { depthBandName, effectDepth, objectBaseY, setWorldDepth, weatherBackdropDepth, backgroundDepth } from '../render/layers.js';
+import { PlayerOcclusion } from '../render/PlayerOcclusion.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -163,6 +165,8 @@ export class GameScene extends Phaser.Scene {
     this.bossVisuals=new BossVisualSystem(this);
     this.options.loading?.progress.set('world',.35);
     this.createPlayer();
+    this.playerOcclusion = new PlayerOcclusion(this);
+    this.debugDepth = new URLSearchParams(window.location.search).get('debug') === 'depth';
     this.options.loading?.progress.set('world',.7);
     this.resizeViewport(this.scale.gameSize);
     this.weather=new WeatherDirector(this,{mapId:map.id,seed:this.mapWorld.seed});
@@ -195,12 +199,12 @@ export class GameScene extends Phaser.Scene {
   createWorld() {
     const width=this.mapData.size?.width||6400,height=this.mapData.size?.height||4800;
     this.floor = this.add.tileSprite(0, 0, width, height, 'ground')
-      .setOrigin(.5).setDepth(-100);
+      .setOrigin(.5).setDepth(backgroundDepth());
     if(this.mapData.id === 'bloodmoon') this.floor.setTint(0x956789);
     if(this.mapData.id === 'cenote') this.floor.setTint(0x568eaf);
     // Keep the persistent map haze below the Telegraph layer (depth 5) so weather
     // and map tint can never wash out a fairness warning.
-    this.fog = this.add.graphics().setScrollFactor(0).setDepth(4);
+    this.fog = this.add.graphics().setScrollFactor(0).setDepth(weatherBackdropDepth(1));
     this.decorGroup = this.add.group();
   }
 
@@ -231,13 +235,15 @@ export class GameScene extends Phaser.Scene {
   }
 
   createPlayer() {
-    this.player = this.physics.add.sprite(0, 0, `hero-${this.heroData.id}`).setDepth(20);
+    this.player = this.physics.add.sprite(0, 0, `hero-${this.heroData.id}`);
     this.player.setCollideWorldBounds(true);
     this.player.setScale(.64);
-    this.player.body.setCircle(23, 41, 54);
+    // The hero collides at the feet: 11 world pixels, never the full sprite.
+    this.player.body.setCircle(11/.64, 64-11/.64, 64+(24-11)/.64);
     this.player.play(`hero-${this.heroData.id}-idle`);
     this.player.setData('animLock',0);
     this.player.hiddenUntil = 0;
+    this.mapWorld?.collision.track(this.player,{radius:11,footOffset:24});
     this.cameras.main.startFollow(this.player, true, .09, .09);
     this.invulnerable = 0;
     this.mapWorld?.update(worldView(this));
@@ -264,20 +270,15 @@ export class GameScene extends Phaser.Scene {
 
   createCollisions() {
     this.physics.add.overlap(this.projectiles, this.enemies, (projectile, enemy) => this.onProjectileHit(projectile, enemy));
-    this.physics.add.overlap(this.projectiles, this.props, (projectile, prop) => {
-      if(projectile.getData('pendingSplit'))return;
-      if (!projectile.active || !prop.active) return;
-      if(prop.getData('breakable'))this.damageProp(prop, projectile.getData('damage') || 10);
-      this.consumeProjectile(projectile);
-    });
+    // WorldCollision sweeps shots against exact same-level footprints. Arcade
+    // sprite rectangles would block canopies and tunnel through thin walls.
     this.physics.add.overlap(this.player, this.enemies, (_, enemy) => this.touchEnemy(enemy));
     this.physics.add.overlap(this.player, this.enemyProjectiles, (_, projectile) => {
       this.onEnemyProjectileHit(projectile);
     });
     this.physics.add.overlap(this.player, this.pickups, (_, pickup) => this.collectPickup(pickup));
-    this.physics.add.collider(this.player,this.props,undefined,(_,prop)=>prop.active&&prop.getData('blocksGround'));
-    this.physics.add.collider(this.enemies,this.props,undefined,(enemy,prop)=>prop.active&&actorCanCollideWithMap({flier:ENEMIES[enemy.getData('type')]?.flier},{blocksGround:prop.getData('blocksGround')}));
-    this.physics.add.overlap(this.player,this.props,(_,prop)=>{if(prop.getData('breakable'))this.damageProp(prop,Infinity);});
+    // Ground collision includes directly moved allies and does not depend on
+    // whether the prop's art is currently streamed into Arcade's static group.
   }
 
   update(_time, deltaRaw) {
@@ -311,6 +312,7 @@ export class GameScene extends Phaser.Scene {
     updateSkillEffects(this, dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateCompanion(dt);
+    this.mapWorld?.collision.update();
     if(this.pausedForChoice||this.ended)return;
     this.updateVitals(dt);
     this.updateDirector(dt);
@@ -320,6 +322,20 @@ export class GameScene extends Phaser.Scene {
     this.enemyBars?.draw();
     this.enemyVisuals?.update();
     this.bossVisuals?.update();
+    this.mapWorld?.updateFades();
+    this.playerOcclusion?.update();
+    if(this.companion?.sprite?.active)setWorldDepth(this.companion.sprite,objectBaseY(this.companion.sprite));
+    if(this.debugDepth)this.renderDepthDebug();
+  }
+
+  renderDepthDebug() {
+    const colors={background:0x616161,world:0x34d058,overhead:0xffa12b,effects:0xe542e5,weather:0x31c6ed,occlusion:0x9be7ff,hud:0xffffff};
+    for(const object of this.children.list){
+      if(!object?.active||!object.visible||object===this.player||!object.setTint)continue;
+      object.setTint(colors[depthBandName(object.depth)]||0xffffff);
+    }
+    // Unique marker color lets the regression sweep count rendered player pixels.
+    this.player.setTintFill(0xff00ff);
   }
 
   updateMovement(dt) {
@@ -357,7 +373,7 @@ export class GameScene extends Phaser.Scene {
     this.facing=facingFor(this.player.body.velocity.x,this.player.body.velocity.y,this.facing);
     if(this.facing==='side'&&Math.abs(this.player.body.velocity.x)>4)this.player.setFlipX(this.player.body.velocity.x<0);
     if(this.facing!=='side')this.player.setFlipX(false);
-    this.player.setDepth(this.player.y+20);
+    setWorldDepth(this.player, objectBaseY(this.player));
     const moving = Math.hypot(this.player.body.velocity.x, this.player.body.velocity.y) > 5;
     this.animateCharacter(this.player,this.playerArtKey(),moving?'walk':'idle');
   }
@@ -392,10 +408,10 @@ export class GameScene extends Phaser.Scene {
   updateEnemies(dt) {
     this.enemies.children.each((enemy) => {
       if (!enemy?.active||this.pausedForChoice||this.ended) return;
-      if(enemy.getData('bossObject')){this.bossController?.updateObject(enemy,dt);enemy.setDepth(enemy.y+13);return;}
+      if(enemy.getData('bossObject')){this.bossController?.updateObject(enemy,dt);setWorldDepth(enemy,objectBaseY(enemy));return;}
       updateEnemyShield(enemy,this.elapsed);
       updateEnemy(this, enemy, dt);
-      enemy.setDepth(enemy.y+12);
+      setWorldDepth(enemy,objectBaseY(enemy));
     });
   }
 
@@ -406,6 +422,7 @@ export class GameScene extends Phaser.Scene {
   updateProjectiles(dt) {
     this.projectiles.children.each((projectile) => {
       if (!projectile?.active) return;
+      if(this.blockWorldProjectile(projectile))return;
       const wave=projectile.getData('wave');
       if(wave){
         wave.age+=Math.min(dt,Math.max(0,projectile.getData('life')));
@@ -426,23 +443,36 @@ export class GameScene extends Phaser.Scene {
       }
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
+      projectile.setDepth(effectDepth(projectile.y,16));
       if (life <= 0 || Phaser.Math.Distance.Between(projectile.x, projectile.y, this.player.x, this.player.y) > retentionRadius(this,700)) projectile.destroy();
     });
     this.enemyProjectiles.children.each((projectile) => {
       if (!projectile?.active) return;
+      if(this.blockWorldProjectile(projectile))return;
       const previous={x:projectile.getData('previousX')??projectile.x,y:projectile.getData('previousY')??projectile.y};
       if(this.support.blocksProjectile?.(projectile,previous))return;
       projectile.setData({previousX:projectile.x,previousY:projectile.y});
+      projectile.setDepth(effectDepth(projectile.y,15));
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
       if (life <= 0) projectile.destroy();
     });
   }
 
+  blockWorldProjectile(projectile) {
+    const previous=projectile.getData('worldPrevious')||{x:projectile.x,y:projectile.y};
+    const hit=this.mapWorld?.collision.projectile(projectile,previous);
+    projectile.setData('worldPrevious',{x:projectile.x,y:projectile.y});
+    if(!hit)return false;
+    const prop=this.mapWorld.active.get(hit.ownerId||hit.worldId)?.object;
+    if(prop?.active&&hit.breakable)this.damageProp(prop,projectile.getData('damage')||10);
+    projectile.destroy();return true;
+  }
+
   updatePickups() {
     const xpPickupRange = PICKUP_MAGNET_RANGE * this.passives.modifiers().pickupRangeMult;
-    // Containers open on contact too; collecting loot never requires an attack.
-    for(const prop of [...this.props.getChildren()])if(prop.active&&Phaser.Math.Distance.Between(prop.x,prop.y,this.player.x,this.player.y)<50)this.damageProp(prop,Infinity);
+    // Breakables stay solid until an attack destroys them; proximity only
+    // collects the loot already released by a destroyed container.
     this.pickups.children.each((pickup) => {
       if (!pickup?.active||this.pausedForChoice||this.ended) return;
       const distance = Phaser.Math.Distance.Between(pickup.x, pickup.y, this.player.x, this.player.y);
@@ -450,7 +480,8 @@ export class GameScene extends Phaser.Scene {
       if(distance<30){this.collectPickup(pickup);return;}
       if (distance < pickupRange) this.physics.moveToObject(pickup, this.player, 190 + (pickupRange - distance) * 2.2);
       else pickup.setVelocity(0, 0);
-      const bubble=pickup.getData('bubble');if(bubble?.active){const pulse=1+Math.sin(this.elapsed*3+pickup.getData('phase'))*.07;bubble.setPosition(pickup.x,pickup.y).setDisplaySize(pickup.getData('bubbleSize')*pulse,pickup.getData('bubbleSize')*pulse);}
+      setWorldDepth(pickup,objectBaseY(pickup));
+      const bubble=pickup.getData('bubble');if(bubble?.active){const pulse=1+Math.sin(this.elapsed*3+pickup.getData('phase'))*.07;bubble.setPosition(pickup.x,pickup.y).setDisplaySize(pickup.getData('bubbleSize')*pulse,pickup.getData('bubbleSize')*pulse).setDepth(effectDepth(pickup.y,9));}
       if (distance > retentionRadius(this,1150)) pickup.destroy();
     });
   }
@@ -586,7 +617,7 @@ export class GameScene extends Phaser.Scene {
     const isDart=visual==='dart'||(visual==='default'&&this.heroData.id==='kukul');
     const projectile = this.projectiles.get(x, y, isDart?'player-dart':'fx-1');
     if (!projectile) return null;
-    projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(16);
+    projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(effectDepth(y,16));
     projectile.anims.stop();
     projectile.setTexture(isDart?'player-dart':'fx-1');
     applyProjectileTint(projectile, tint);
@@ -594,6 +625,7 @@ export class GameScene extends Phaser.Scene {
     if(!isDart) projectile.play('bolt-1');
     projectile.body.setCircle(18,46,46);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
+    projectile.setData({worldPrevious:{x,y},level:this.player.getData('level')||0});
     projectile.setData({ damage, pierce, life, critBonus, hit: new Set(), source: this.player, byAlly: false, status: null, onHit: null, homingTarget:null, homingSerial:null, homingTurn:0, homingSpeed:0, basicAttack:false, skillId:null, wave:null, pendingSplit:false, splitOwner:null, ixchelFx:null, fxGeneration:null });
     return projectile;
   }
@@ -603,11 +635,12 @@ export class GameScene extends Phaser.Scene {
     if(bossAttack){if(this.bossCinematic)return null;damage=bossDamage(damage);}
     const projectile = this.enemyProjectiles.get(x, y, 'fx-5');
     if (!projectile) return;
-    projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(15);
+    projectile.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(effectDepth(y,15));
     projectile.clearTint().setAlpha(1).setDisplaySize(42,42).setRotation(angle).play('bolt-5');
     projectile.body.setCircle(21,43,43);
     projectile.setVelocity(Math.cos(angle) * speed, Math.sin(angle) * speed);
     projectile.setData({ damage, life: 4, source,sourceSerial:source?.getData?.('serial'), previousX:x, previousY:y,
+      worldPrevious:{x,y},level:source?.getData?.('level')||0,
       poison:null,bleed:null,piercing:false,hitHero:false,reflected:false,enemyId:null,bossAttack });
     projectile.setData('enemyFx',null);
     decorateEnemyProjectile(this,projectile,source);
@@ -615,6 +648,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   onEnemyProjectileHit(projectile) {
+    if(projectile.active&&this.blockWorldProjectile(projectile))return;
     if (this.ended || this.bossCinematic || !projectile.active || projectile.getData('hitHero') || this.stats.intangibleUntil > this.elapsed) return;
     if (this.stats.reflectUntil > this.elapsed && inMirrorArc(this,projectile)) {
       const velocity = projectile.body.velocity;
@@ -635,6 +669,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   onProjectileHit(projectile, enemy) {
+    if(projectile.active&&this.blockWorldProjectile(projectile))return;
     if (this.ended || !projectile.active || !enemy.active || projectile.getData('pendingSplit')) return;
     if(enemy.getData('buried')||enemy.getData('invulnerableEnemy'))return;
     if(this.enemySystem?.reflectProjectile(projectile,enemy))return;
@@ -680,7 +715,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   placeTrap(x, y, range, damage, durationScale = 1, {fxId} = {}) {
-    const trap = this.add.image(x, y, 'trap').setDepth(7).setAlpha(.82).setScale(.7);
+    const trap = this.add.image(x, y, 'trap').setDepth(effectDepth(y,7)).setAlpha(.82).setScale(.7);
     if(fxId)this.fx?.play(fxId,'ground',{x,y,radius:range,duration:1.24*durationScale,target:trap,replace:true});
     this.tweens.add({ targets: trap, scale: range / 64, alpha: .35, duration: 620 * durationScale, yoyo: true, onComplete: () => {
       this.damageArea({ x, y }, range, damage, 230);
@@ -697,7 +732,7 @@ export class GameScene extends Phaser.Scene {
       const radius = Math.sqrt(Math.random()) * range;
       const px = x + Math.cos(angle) * radius;
       const py = y + Math.sin(angle) * radius;
-      const marker = this.add.circle(px, py, 11, 0x67dfb2, .3).setDepth(6);
+      const marker = this.add.circle(px, py, 11, 0x67dfb2, .3).setDepth(effectDepth(py,6));
       if(fxId)this.fx?.play(fxId,'ground',{x:px,y:py,duration:(180+i*35)/1000,width:64});
       this.tweens.add({ targets: marker, scale: 1.8, alpha: .75, duration: 180 + i * 35, onComplete: () => {
         this.playEffect(2,px,py,100);
@@ -713,7 +748,8 @@ export class GameScene extends Phaser.Scene {
   createSummon(damage, options = {}) {
     const angle = Math.random() * TAU;
     const origin = options.origin || this.player;
-    const sprite = this.add.image(origin.x + Math.cos(angle) * 65, origin.y + Math.sin(angle) * 65, options.texture || 'summon').setDisplaySize(70,70).setDepth(14);
+    const sx=origin.x+Math.cos(angle)*65,sy=origin.y+Math.sin(angle)*65;
+    const sprite = this.add.image(sx,sy,options.texture||'summon').setDisplaySize(70,70).setDepth(effectDepth(sy,14));
     sprite.setData('byAlly', true);
     if (options.tint !== undefined) sprite.setTint(options.tint);
     this.playEffect(4,sprite.x,sprite.y,100);
@@ -754,6 +790,7 @@ export class GameScene extends Phaser.Scene {
       else enemy.setTint(crit ? 0xffe294 : 0xd5fff1);
       this.time.delayedCall(65, () => enemy?.active && (enemy.getData('burnUntil') > this.elapsed ? enemy.setTint(0xff8a36) : enemy.clearTint()));
       if (knockback && enemy.body) {
+        enemy.setData('knockbackUntil',this.elapsed+.25);
         const angle = Phaser.Math.Angle.Between(origin.x, origin.y, enemy.x, enemy.y);
         enemy.body.velocity.x += Math.cos(angle) * knockback;
         enemy.body.velocity.y += Math.sin(angle) * knockback;
@@ -841,6 +878,7 @@ export class GameScene extends Phaser.Scene {
     this.invulnerable = .58;
     const angle = Phaser.Math.Angle.Between(sourceX, sourceY, this.player.x, this.player.y);
     if(!(this.knockbackImmuneUntil>this.elapsed)){
+      this.player.setData('knockbackUntil',this.elapsed+.25);
       if(options.knockback!==undefined){const x=this.player.x+Math.cos(angle)*options.knockback,y=this.player.y+Math.sin(angle)*options.knockback;
         if(this.player.body.reset)this.player.body.reset(x,y);else this.player.setPosition(x,y);
       }else{this.player.body.velocity.x += Math.cos(angle) * 260;this.player.body.velocity.y += Math.sin(angle) * 260;}
@@ -891,13 +929,14 @@ export class GameScene extends Phaser.Scene {
     const artKey=this.textures?.exists(`enemy-${type}`)?`enemy-${type}`:`enemy-${ENEMY_ART_FALLBACK[type]||type}`;
     const enemy = this.enemies.get(x, y, artKey);
     if (!enemy) return;
-    enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setAlpha(1).setDepth(12).setScale(data.flier?.48:.56).setCollideWorldBounds(true);
+    enemy.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setAlpha(1).setScale(data.flier?.48:.56).setCollideWorldBounds(true);
+    setWorldDepth(enemy,objectBaseY(enemy));
     enemy.anims.stop();
     enemy.setTexture(artKey).clearTint();
     const radius=data.radius/(enemy.scaleX||(data.flier?.48:.56));
     enemy.body.setCircle(radius,64-radius,72-radius);
     enemy.setData({
-      type, artKey,animLock:0, serial: ++this.enemySerial, seed: Math.random() * 20,
+      type, artKey,animLock:0, serial: ++this.enemySerial, seed: Math.random() * 20, level:spawnOptions.summoner?.getData('level')||0, elevation:0, worldFootY:undefined, knockbackUntil:0,
       hp: data.hp, maxHp: data.hp, radius:data.radius,
       speed: data.speed, damage: data.damage, xp: data.xp,
       ranged: data.ranged || false, flier: data.flier || false, nextShot: 1 + Math.random(), isBoss: false,
@@ -927,7 +966,8 @@ export class GameScene extends Phaser.Scene {
     const artKey=data.artKey||`boss-${data.id}`;
     const boss = this.enemies.get(x, y, artKey);
     if (!boss) return;
-    boss.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(13).setScale(data.id==='ahpuch'?1.65:1.35).setCollideWorldBounds(true);
+    boss.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setScale(data.id==='ahpuch'?1.65:1.35).setCollideWorldBounds(true);
+    setWorldDepth(boss,objectBaseY(boss));
     boss.anims.stop();
     boss.setTexture(artKey).clearTint();
     boss.setAlpha(1);this.enemyVisuals?.remove(boss);
@@ -1010,11 +1050,12 @@ export class GameScene extends Phaser.Scene {
     const texture = kind === 'xp' ? 'xp-gem' : kind;
     const pickup = this.pickups.get(x, y, texture);
     if (!pickup) return;
-    pickup.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setDepth(10).setTexture(texture).setDisplaySize(kind === 'xp' ? 20 : 30,kind === 'xp' ? 20 : 30);
+    pickup.enableBody(true, x, y, true, true).setActive(true).setVisible(true).setTexture(texture).setDisplaySize(kind === 'xp' ? 20 : 30,kind === 'xp' ? 20 : 30);
+    setWorldDepth(pickup,objectBaseY(pickup));
     pickup.body.setCircle(42,6,6);
     pickup.setData({ kind, value });
     const size=kind==='xp'?34:48;
-    const bubble=this.add.image(x,y,'pickup-bubble').setDisplaySize(size,size).setDepth(9).setTint(kind==='potion'?0xffaca0:kind==='cacao'?0xffdc79:0x89ffdb);
+    const bubble=this.add.image(x,y,'pickup-bubble').setDisplaySize(size,size).setDepth(effectDepth(y,9)).setTint(kind==='potion'?0xffaca0:kind==='cacao'?0xffdc79:0x89ffdb);
     pickup.setData({bubble,bubbleSize:size,phase:Math.random()*TAU});
     pickup.once('destroy',()=>bubble.destroy());
   }
@@ -1265,7 +1306,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   floatText(x, y, text, color) {
-    const label = this.add.text(x, y, t(text), { ...gameTextStyle(t(text)), color, stroke: '#201019', strokeThickness: 4 }).setOrigin(.5).setDepth(50);
+    const label = this.add.text(x, y, t(text), { ...gameTextStyle(t(text)), color, stroke: '#201019', strokeThickness: 4 }).setOrigin(.5).setDepth(effectDepth(y,50));
     this.tweens.add({ targets: label, y: y - 34, alpha: 0, duration: 680, onComplete: () => label.destroy() });
   }
 
@@ -1288,7 +1329,7 @@ export class GameScene extends Phaser.Scene {
 
   playEffect(row,x,y,size=100,angle=0,tint) {
     if(this.effects.countActive()> (this.settings.particles==='low'?20:65)) return;
-    const effect=this.add.sprite(x,y,`fx-${row}`).setDepth(24).setDisplaySize(size,size).setRotation(angle);
+    const effect=this.add.sprite(x,y,`fx-${row}`).setDepth(effectDepth(y,24)).setDisplaySize(size,size).setRotation(angle);
     if(tint!==undefined&&tint!==null)effect.setTint(tint);
     this.effects.add(effect);
     effect.play(`effect-${row}`);
@@ -1387,6 +1428,7 @@ export class GameScene extends Phaser.Scene {
     this.enemySystem?.destroy();
     this.enemyVisuals?.destroy();
     this.bossVisuals?.destroy();
+    this.playerOcclusion?.destroy();
     this.mapWorld?.destroy();
     this.hud?.destroy();
   }

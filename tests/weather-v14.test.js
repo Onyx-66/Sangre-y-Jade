@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { WeatherDirector, WEATHER_QUALITY_CAPS, WEATHER_STILL_PATHS, weatherMapIds } from '../src/weather/WeatherDirector.js';
 import { RUN_AMBIENCE_KEYS, audioFileFor } from '../src/systems/AudioDirector.js';
+import { effectDepth } from '../src/render/layers.js';
 
 function makeImage(x, y, texture, counters) {
   const image = { x, y, texture, active: true, visible: true, alpha: 1, destroyed: false,
@@ -39,7 +40,7 @@ function makeScene(mapId, quality = 'medium', seed = 90123) {
   scene.audio = { ambience: (...args) => audioEvents.push(['ambience', ...args]), weatherLoop: (...args) => audioEvents.push(['loop', ...args]),
     weatherOneShot: (...args) => audioEvents.push(['oneShot', ...args]) };
   scene.telegraphs = { rows: [], play(options) { this.rows.push(options); return options; } };
-  scene.telegraphs.graphics = { depth: 5 };
+  scene.telegraphs.graphics = { depth: effectDepth(0,5) };
   scene.damageEvents = [];
   scene.damagePlayer = (...args) => scene.damageEvents.push(args);
   scene.audioEvents = audioEvents;

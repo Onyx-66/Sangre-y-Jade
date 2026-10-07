@@ -1,3 +1,5 @@
+import { backgroundDepth } from '../render/layers.js';
+
 export const ALLY_IDS = Object.freeze(['saintess', 'tank', 'assassin']);
 export const ALLY_EFFECT_IDS = Object.freeze(['saintess-heal-pulse', 'saintess-cast-glow', 'tank-bash-arc', 'tank-slam-ring',
   'assassin-slash-x', 'assassin-afterimage', 'assassin-blink-puff', 'ally-skill-pop']);
@@ -35,7 +37,7 @@ export class AllyVisuals {
     if (!a || s.ended) { this.destroy(); return; }
     if (s.pausedForChoice || s.scene?.isPaused?.()) return;
     if (this.enabled && s.add?.ellipse) {
-      this.shadow ||= s.add.ellipse(a.sprite.x, a.sprite.y + 33, 40, 12, 0x10151c, .35).setDepth(9);
+      this.shadow ||= s.add.ellipse(a.sprite.x, a.sprite.y + 33, 40, 12, 0x10151c, .35).setDepth(backgroundDepth(8999));
       this.shadow.setPosition(a.sprite.x, a.sprite.y + 33).setVisible(a.sprite.visible !== false);
     }
     const action = this.action;

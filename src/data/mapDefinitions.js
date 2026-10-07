@@ -2,8 +2,9 @@ import design from './maps-v06.json' with { type: 'json' };
 import overgrownKit from './mapKits/overgrown.json' with { type: 'json' };
 import bloodmoonKit from './mapKits/bloodmoon.json' with { type: 'json' };
 import cenoteKit from './mapKits/cenote.json' with { type: 'json' };
+import { normalizeKit } from '../world/objects.js';
 
-export const MAP_KITS = { overgrown: overgrownKit, bloodmoon: bloodmoonKit, cenote: cenoteKit };
+export const MAP_KITS = Object.fromEntries(Object.entries({ overgrown: overgrownKit, bloodmoon: bloodmoonKit, cenote: cenoteKit }).map(([id,kit])=>[id,normalizeKit(kit)]));
 export const MAP_DESIGN = Object.fromEntries(design.maps.map(map => [map.id, map]));
 
 function colorAt(palette, index, fallback) {

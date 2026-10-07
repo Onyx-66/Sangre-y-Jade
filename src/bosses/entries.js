@@ -1,11 +1,12 @@
 import {worldView} from '../systems/Viewport.js';
 import {at,cue,TAU} from './common.js';
+import { weatherDepth } from '../render/layers.js';
 
 // The cinematic's own clock drives entry art while gameplay tweens are paused.
 export function entrance(ctx,kind){
  const {boss,scene}=ctx,render=scene.bossVisuals?.render(boss)||boss,
   scaleX=render.scaleX||1,scaleY=render.scaleY||1,alpha=render.alpha??1;
- const g=scene.add?.graphics?.()?.setDepth(82);let closed=false;
+ const g=scene.add?.graphics?.()?.setDepth(weatherDepth(0,950));let closed=false;
  const art=scene.textures?.exists(`fx-still-boss-${ctx.definition.id}-entry-main`)?
   scene.fx?.play(`boss-${ctx.definition.id}-entry`,'cast',{x:boss.x,y:boss.y,arena:ctx.state.arena,sound:false}):null;
  cue(ctx,'entry');

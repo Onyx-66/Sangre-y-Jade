@@ -2,12 +2,16 @@ import { MAP_KITS } from '../data/mapDefinitions.js';
 import { SpatialHash } from './SpatialHash.js';
 import { generateMapLayout, packWorldCells, PLAYABLE_BOUNDS, WORLD_HALF } from './layout.js';
 import { createMapArt } from './MapArt.js';
+import { backgroundDepth, footprintBaseY, objectBaseY, overheadDepth, worldDepth } from '../render/layers.js';
+import { shapeBounds } from '../world/geometry.js';
+import { WorldCollision } from '../world/WorldCollision.js';
+import { Overhead } from '../world/Overhead.js';
 
 const nextFrame = () => new Promise(resolve => setTimeout(resolve, 0));
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 
 export function actorCanCollideWithMap(actor, prop) {
-  return Boolean(prop?.blocksGround && !actor?.flier);
+  return Boolean(prop?.blocksGround && !actor?.flier && (actor?.level??0)===(prop?.level??0));
 }
 
 export function stuckRecovery(seconds, moved) {
@@ -22,6 +26,7 @@ export function waterSpeedMultiplier(mapWorld, point) {
 }
 
 function rectFor(item) {
+  if(item.collider.type==='polygon')return shapeBounds(item);
   if (item.collider.type === 'circle') {
     const r = item.collider.radius * item.scale;
     const x = item.x + item.collider.offsetX * item.scale, y = item.y + item.collider.offsetY * item.scale;
@@ -62,6 +67,8 @@ export class MapWorld {
     this.maxObservedCells = 0;
     this.destroyed = false;
     for (const item of this.layout.colliders) this.spatialHash.insert(item.worldId, item, rectFor(item));
+    this.collision = new WorldCollision(this);
+    this.overheads = new Overhead(scene);
     scene.mapSeed = this.seed;
     scene.mapLayout = this.layout;
     scene.waterZones = this.waterZones;
@@ -86,7 +93,7 @@ export class MapWorld {
 
   drawBoundary() {
     const scene = this.scene;
-    this.wallGraphics = scene.add?.graphics?.().setDepth?.(this.art ? -9990 : 2);
+    this.wallGraphics = scene.add?.graphics?.().setDepth?.(backgroundDepth(10));
     if (!this.wallGraphics) return;
     const g = this.wallGraphics;
     const color = this.map.id === 'overgrown' ? 0x15271e : this.map.id === 'bloodmoon' ? 0x17121c : 0x0a1119;
@@ -107,7 +114,7 @@ export class MapWorld {
   drawWater() {
     if(this.art?.handlesWater)return;
     const scene = this.scene;
-    this.waterGraphics = scene.add?.graphics?.().setDepth?.(-90);
+    this.waterGraphics = scene.add?.graphics?.().setDepth?.(backgroundDepth(20));
     if (!this.waterGraphics) return;
     for (const zone of this.waterZones) {
       this.waterGraphics.fillStyle(0x258fa0, 0.27).fillCircle(zone.x, zone.y, zone.radius);
@@ -118,7 +125,7 @@ export class MapWorld {
 
   drawPathways() {
     if (this.art) return;
-    const graphics = this.scene.add?.graphics?.().setDepth?.(-95);
+    const graphics = this.scene.add?.graphics?.().setDepth?.(backgroundDepth(30));
     this.pathGraphics = graphics;
     if (!graphics) return;
     const color = this.map.id === 'overgrown' ? 0x806e49 : this.map.id === 'bloodmoon' ? 0x673640 : 0x9daea5;
@@ -189,11 +196,14 @@ export class MapWorld {
 
   obtain(item, collidable) {
     const scene = this.scene, pool = collidable ? this.colliderPool : this.visualPool;
+    const overheads=this.overheads.parts.size+this.overheads.pool.length;
+    const required=(pool.length?0:1)+(item.overhead&&!this.overheads.pool.length?1:0);
+    if(this.active.size+this.visualPool.length+this.colliderPool.length+overheads+required>this.maxActive)return null;
     let object = pool.pop();
     if (!object && this.active.size + this.visualPool.length + this.colliderPool.length >= this.maxActive) return null;
     if (object) {
       object.setTexture(this.texture(item)).setPosition(item.x, item.y).setOrigin(item.anchor.x, item.anchor.y)
-        .setDisplaySize(item.size.width, item.size.height).setDepth(item.y + item.depthOffset).setAlpha(1)
+        .setDisplaySize(item.size.width, item.size.height).setDepth(this.depthForItem(item)).setAlpha(1)
         .setActive(true).setVisible(true);
       if (object.body) {
         scene.physics.world.add(object.body);
@@ -202,19 +212,20 @@ export class MapWorld {
     } else if (collidable) {
       object = scene.props.create(item.x, item.y, this.texture(item));
       object.setOrigin(item.anchor.x, item.anchor.y).setDisplaySize(item.size.width, item.size.height)
-        .setDepth(item.y + item.depthOffset).setActive(true).setVisible(true);
+        .setDepth(this.depthForItem(item)).setActive(true).setVisible(true);
       object.setData('mapPool', true);
       this.configureBody(object, item);
     } else {
       object = scene.add.image(item.x, item.y, this.texture(item)).setOrigin(item.anchor.x, item.anchor.y)
-        .setDisplaySize(item.size.width, item.size.height).setDepth(item.y + item.depthOffset);
+        .setDisplaySize(item.size.width, item.size.height).setDepth(this.depthForItem(item));
       scene.decorGroup?.add?.(object);
     }
     object.setFlipX(item.flipX || false);
     object.setData({ mapPlacementId: item.worldId, mapItemId: item.id, mapCategory: item.category,
       breakable: item.breakable, lightSource: item.lightSource, blocksGround: item.collider.type !== 'none',
-      hp: item.breakable ? 24 : 0, kind: item.breakable ? item.id : item.category });
+      hp: item.breakable ? 24 : 0, kind: item.breakable ? item.id : item.category, level: item.level || 0 });
     if (item.lightSource && item.lightEnabled!==false) this.activeLightSources.add(object);
+    this.overheads.attach(item,object);
     return object;
   }
 
@@ -222,7 +233,9 @@ export class MapWorld {
     const body = object.body;
     if (!body) return;
     const displayW = object.displayWidth, displayH = object.displayHeight;
-    const shape = item.collider;
+    const bounds=item.collider.type==='polygon'?shapeBounds(item):null;
+    const shape = bounds?{type:'rect',width:bounds.width/item.scale,height:bounds.height/item.scale,
+      offsetX:(bounds.x+bounds.width/2-item.x)/item.scale,offsetY:(bounds.y+bounds.height/2-item.y)/item.scale}:item.collider;
     // Phaser's StaticBody refresh resets its dimensions to the full image.
     // Refresh FIRST, then set the measured footprint and offset (also on reuse).
     body.offset?.set?.(0,0);
@@ -238,6 +251,13 @@ export class MapWorld {
       const oy = displayH * item.anchor.y + shape.offsetY * item.scale - height / 2;
       body.setSize(width, height, false).setOffset(ox, oy);
     }
+  }
+
+  depthForItem(item) {
+    // Hard rule: unified tree/building sprites sort at their physical base. Only
+    // separately-authored overhead-only pieces belong in the overhead band.
+    const baseY = footprintBaseY(item);
+    return item.overheadOnly ? overheadDepth(baseY, item.depthOffset) : worldDepth(baseY, item.depthOffset);
   }
 
   activateCell(key) {
@@ -258,6 +278,7 @@ export class MapWorld {
     for (const [id, entry] of [...this.active]) {
       if (entry.cellKey !== key) continue;
       this.active.delete(id);
+      this.overheads.detach(entry.object);
       if (entry.item.lightSource) this.activeLightSources.delete(entry.object);
       if (entry.collidable && entry.object.body?.enable) this.scene.physics.world.disableBody(entry.object.body);
       entry.object.setActive(false).setVisible(false);
@@ -270,17 +291,29 @@ export class MapWorld {
     if (!id) return;
     this.destroyedItems.add(id);
     this.spatialHash.remove(id);
+    for(const key of this.spatialHash.entries.keys())if(key.startsWith(`${id}:part`))this.spatialHash.remove(key);
     const entry = this.active.get(id);
-    if (entry) { this.activeLightSources.delete(entry.object); this.active.delete(id); }
+    if (entry) { this.overheads.detach(entry.object); this.activeLightSources.delete(entry.object); this.active.delete(id); }
   }
 
   updateFades() {
-    const hero = this.scene.player;
-    if (!hero) return;
+    const actors = [this.scene.player, this.scene.companion?.sprite, this.scene.bossController?.activeBoss]
+      .filter(actor => actor && actor.active !== false && actor.visible !== false);
     for (const { item, object } of this.active.values()) {
-      const behind = item.fadeBehind && hero.y < item.y && Math.abs(hero.x - item.x) < item.size.width * 0.55;
-      object.setAlpha(behind ? 0.6 : 1);
+      const anchor = item.anchor || { x: 0.5, y: 0.5 };
+      const width = item.size.width, height = item.size.height || width;
+      const bounds = { x: item.x - width * anchor.x, y: item.y - height * anchor.y, width, height };
+      const itemBaseY = footprintBaseY(item);
+      const behind = item.fadeBehind && actors.some(actor => {
+        const width = actor.displayWidth || actor.width || 32, height = actor.displayHeight || actor.height || 48;
+        const ax = actor.x - width * (actor.originX ?? 0.5), ay = actor.y - height * (actor.originY ?? 0.5);
+        // With y-sorted unified art, only actors north of the footprint are
+        // behind its canopy/roof; actors south of the base render in front.
+        return objectBaseY(actor) < itemBaseY && ax < bounds.x + bounds.width && ax + width > bounds.x && ay < bounds.y + bounds.height && ay + height > bounds.y;
+      });
+      object.setAlpha(behind ? 0.55 : 1);
     }
+    this.overheads.update(actors);
   }
 
   isWaterAt(point, margin = 0) {
@@ -323,7 +356,9 @@ export class MapWorld {
       // A blocked Arcade body often reports near-zero velocity. Keep it in the
       // detector so stationary ground enemies can reach the 1s/2s recovery.
       if (!velocity) continue;
-      const nearby = this.blockersAround(enemy.x, enemy.y, actorRadius + 180);
+      const nearby = this.blockersAround(enemy.x, enemy.y, actorRadius + 180).filter(item=>(item.level||0)===(enemy.getData('level')||0));
+      const waypoint=this.collision?.steer(enemy,scene.player);
+      if(waypoint&&waypoint!==scene.player){const dx=waypoint.x-enemy.x,dy=waypoint.y-enemy.y,d=Math.hypot(dx,dy)||1,speed=Math.hypot(velocity.x,velocity.y)||48;velocity.x=dx/d*speed;velocity.y=dy/d*speed;}
       let avoidX = 0, avoidY = 0, nearest = null, nearestDistance = Infinity;
       for (const item of nearby) {
         const bounds = rectFor(item), cx = Math.max(bounds.x,Math.min(bounds.x+bounds.width,enemy.x));
@@ -343,13 +378,16 @@ export class MapWorld {
       }
       const key = enemy.getData('serial') ?? enemy;
       let state = this.stuck.get(key);
-      if (!state) state = { x: enemy.x, y: enemy.y, seconds: 0 };
+      if (!state) state = { x: enemy.x, y: enemy.y, seconds: 0, observation: 0 };
       const moved = Math.hypot(enemy.x - state.x, enemy.y - state.y);
-      state.seconds = moved < 2 ? state.seconds + dt : 0;
-      // Measure progress from the last meaningful position, not one frame.
-      // A 48px/s guardian moves only 0.8px at 60Hz and is not stuck.
-      if (moved >= 2) { state.x = enemy.x; state.y = enemy.y; }
-      const recovery=stuckRecovery(state.seconds,moved);
+      // Check net progress over a full second: collision jitter must not reset
+      // the stuck clock, and a 48px/s guardian is genuine progress at 60 Hz.
+      state.observation=(state.observation||0)+dt;
+      if(state.observation>=1-1e-9){
+        state.seconds=moved<12?state.seconds+state.observation:0;
+        state.observation=0;state.x=enemy.x;state.y=enemy.y;
+      }
+      const recovery=stuckRecovery(state.seconds,0);
       if (recovery === 'nudge') {
         const angle = nearest ? Math.atan2(enemy.y - nearest.cy, enemy.x - nearest.cx) + 0.9 : Math.atan2(velocity.y, velocity.x) + 0.7;
         velocity.x += Math.cos(angle) * 90 * dt; velocity.y += Math.sin(angle) * 90 * dt;
@@ -363,7 +401,10 @@ export class MapWorld {
           const bounds = rectFor(item); return point.x < bounds.x - actorRadius || point.x > bounds.x + bounds.width + actorRadius ||
             point.y < bounds.y - actorRadius || point.y > bounds.y + bounds.height + actorRadius;
         }));
-        if (options.length) { enemy.setPosition(options[0].x, options[0].y); enemy.body.reset(options[0].x, options[0].y); }
+        const navigation=this.collision?.actors.get(enemy);
+        const safe=options.find(point=>!navigation||this.collision.allowed(point,navigation));
+        if (safe) { enemy.setPosition(safe.x, safe.y); enemy.body.reset(safe.x, safe.y);
+          if(navigation){navigation.x=safe.x;navigation.y=safe.y;}}
         state.seconds = 0;
         state.x = enemy.x; state.y = enemy.y;
       }
@@ -376,6 +417,8 @@ export class MapWorld {
     if (this.destroyed) return;
     this.destroyed = true;
     this.art?.destroy();
+    this.collision?.destroy();
+    this.overheads?.destroy();
     this.wallGraphics?.destroy(); this.pathGraphics?.destroy(); this.waterGraphics?.destroy();
     for (const key of [...this.activeCells]) this.recycleCell(key);
     this.active.clear(); this.stuck.clear(); this.lightSources.clear(); this.activeLightSources.clear(); this.spatialHash.clear();

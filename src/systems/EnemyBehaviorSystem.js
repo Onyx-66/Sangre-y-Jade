@@ -2,6 +2,7 @@ import roster from '../data/enemies-v06.json' with { type:'json' };
 import { ENEMY_BEHAVIORS } from '../enemies/index.js';
 import { stepAction,restore,cue,distance } from '../enemies/common.js';
 import { worldView } from './Viewport.js';
+import { effectDepth } from '../render/layers.js';
 
 // Art and sound content is delivered by later prompts. These are deliberate
 // existing-actor fallbacks, not nonexistent texture requests or new image assets.
@@ -19,7 +20,7 @@ export function rosterDamageMult(enemy,origin,seconds,dot=false) {
 }
 export class EnemyBehaviorSystem {
   constructor(scene,{random=Math.random,graphics=scene.add?.graphics?.()}={}) {
-    this.scene=scene;this.random=random;this.graphics=graphics?.setDepth?.(10)||graphics;
+    this.scene=scene;this.random=random;this.graphics=graphics?.setDepth?.(effectDepth(0,10))||graphics;
     this.puddles=[];this.puddlePool=[];this.casts={};this.destroyed=false;
   }
   context(enemy,dt=0,target=this.scene.player) {

@@ -1,5 +1,6 @@
 const TAU=Math.PI*2;
 const clamp=value=>Math.max(0,Math.min(1,value));
+import { effectDepth } from '../render/layers.js';
 
 export function telegraphContains(warning,point) {
   const dx=point.x-warning.x,dy=point.y-warning.y,r=Math.hypot(dx,dy);
@@ -34,7 +35,7 @@ function dashed(g,points,unit) {
 // All warnings share one Graphics batch. Records, not GameObjects, are pooled.
 export class Telegraph {
   constructor(scene,{graphics=scene.add?.graphics?.(),sound=(warning)=>warning.sound!==false&&scene.audio?.sfx(warning.sound||'boss',.04),capacity=64}={}) {
-    this.scene=scene;this.graphics=graphics?.setDepth?.(5)||graphics;this.sound=sound;
+    this.scene=scene;this.graphics=graphics?.setDepth?.(effectDepth(0,5))||graphics;this.sound=sound;
     this.capacity=capacity;this.live=new Set();this.free=[];this.destroyed=false;this.serial=0;
   }
   play(options) {
