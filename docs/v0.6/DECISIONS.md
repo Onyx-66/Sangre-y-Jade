@@ -245,3 +245,9 @@
 - The new explicit APK request supersedes the previous source-only packaging restriction. Keep version name 0.6.0, package and public signing identity; increment Android version code to 9 for an in-place update. Preserve all old Desktop APKs and use a distinct build-9 filename.
 - Deliver the signature-verified debug APK, not the unsigned release output. Do not access production signing keys, install on the disconnected phone or infer permission to push.
 - Record the successful cold-launch and packaged-menu emulator checks separately from the inconclusive longer gameplay smoke. Do not claim build 9 has passed physical A56 or full-release acceptance testing. Preserve all unrelated dirty work outside the packaging commit.
+## V07 section 1 — Training mode label
+
+- `V07_SPEC.md` is not present in this checkout. Implement only the direct request in this prompt and do not infer later V07 sections.
+- Treat `quick` (600 s) and `full` (1200 s) as duration presets within the single implemented `training` mode. Keep their IDs, timing, pacing, and save-record keys unchanged for compatibility; expose no other mode until one is implemented.
+- Keep generic survival terminology where it describes the game's genre or historical lore, but remove obsolete player-facing run-mode labels and descriptions.
+- Use compact localized headings “Training · Heroes” and “Training · Maps” on the selection screens, keeping the full descriptive instructions in the subtitles to avoid banner wrapping and card/footer crowding at 568×320.

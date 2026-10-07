@@ -1,7 +1,8 @@
 import Phaser from 'phaser';
 import './style.css';
 import { heroList } from './data/heroes.js';
-import { MAPS, RUN_MODES, STORE_ITEMS } from './data/world.js';
+import { MAPS, STORE_ITEMS } from './data/world.js';
+import { DEFAULT_GAME_MODE_ID, getGameMode } from './modes.js';
 import { SaveSystem } from './systems/SaveSystem.js';
 import { nativeStartupOptions } from './systems/NativeStartup.js';
 import { AudioDirector } from './systems/AudioDirector.js';
@@ -50,7 +51,7 @@ class SangreYJadeApp {
     setLanguage(this.save.data.settings.language);
     this.audio = new AudioDirector(this.save);
     this.game = null;
-    this.lastSelection = { heroId: 'balam', mapId: 'overgrown', modeId: 'quick' };
+    this.lastSelection = { heroId: 'balam', mapId: 'overgrown', modeId: 'quick', gameModeId: DEFAULT_GAME_MODE_ID };
     this.boundUnlock = () => this.audio.unlock();
     document.addEventListener('pointerdown', this.boundUnlock, { once: true });
     document.addEventListener('keydown', this.boundUnlock, { once: true });
@@ -115,6 +116,7 @@ class SangreYJadeApp {
       if (!action) return;
       this.clickSound();
       if (action === 'play') {
+        this.lastSelection.gameModeId = getGameMode(event.target.closest('[data-game-mode]')?.dataset.gameMode || DEFAULT_GAME_MODE_ID).id;
         this.setupStep=0;
         this.showRunSetup();
       } else if (action === 'prologue') this.playPrologue(() => this.showTitle());
@@ -138,7 +140,8 @@ class SangreYJadeApp {
     this.clearGame();
     const hero = heroList().find((entry) => entry.id === this.lastSelection.heroId) || heroList()[0];
     const map = MAPS.find((entry) => entry.id === this.lastSelection.mapId) || MAPS[0];
-    const mode = RUN_MODES.find((entry) => entry.id === this.lastSelection.modeId) || RUN_MODES[0];
+    const gameMode = getGameMode(this.lastSelection.gameModeId);
+    const mode = gameMode.runModes.find((entry) => entry.id === this.lastSelection.modeId) || gameMode.runModes[0];
     const controller=new AbortController(),screen=new LoadingScreen({hero,map,reduceMotion:this.save.data.settings.reducedMotion,signal:controller.signal});
     let resolve;const ready=new Promise(done=>resolve=done);
     const seed=(Math.random()*0x100000000)>>>0;
@@ -157,7 +160,7 @@ class SangreYJadeApp {
     if(controller.signal.aborted)return false;
     this.uiRoot.replaceChildren();
     const scene = new GameScene({
-      hero, map, mode,
+      hero, map, mode, gameMode,
       meta: this.save.metaBonuses(),
       settings: { ...this.save.data.settings },
       audio: this.audio,
@@ -190,6 +193,7 @@ class SangreYJadeApp {
 
   showSummary(summary) {
     this.save.recordRun(summary);
+    const gameMode = getGameMode(this.lastSelection.gameModeId);
     const title = summary.victory ? 'Victory!' : summary.abandoned ? 'Run Ended' : 'Game Over';
     const minutes = Math.floor(summary.survived / 60);
     const seconds = Math.floor(summary.survived % 60);
@@ -197,7 +201,7 @@ class SangreYJadeApp {
       <div class="modal-backdrop">
         <section class="modal">
           <h2>${title}</h2>
-          <p class="panel-subtitle">${summary.victory ? t('{name} defeated the final boss!',{name:t(summary.heroName)}) : t('{name} earned {n} cacao.',{name:t(summary.heroName),n:summary.cacao})}</p>
+          <p class="panel-subtitle"><strong class="run-mode-label">${t(gameMode.name)}</strong> · ${summary.victory ? t('{name} defeated the final boss!',{name:t(summary.heroName)}) : t('{name} earned {n} cacao.',{name:t(summary.heroName),n:summary.cacao})}</p>
           <div class="summary-stats">
             <div class="summary-stat"><strong>${minutes}:${String(seconds).padStart(2, '0')}</strong>survived</div>
             <div class="summary-stat"><strong>${summary.kills}</strong>Enemies defeated</div>
@@ -260,7 +264,7 @@ class SangreYJadeApp {
     const entries = {
       world: ['The World','A fantasy adventure inspired by Maya cities, astronomy, trade, and mythology. The heroes and invasion are fictional.'],
       heroes: ['Heroes','Each hero has 16 active skills and 8 passives. Start with 3 active slots, 1 passive slot, and 2 innate traits. More slots unlock at levels 10 and 20.'],
-      ritual: ['Combat','Choose auto-attack or manual attack in Settings. Move to avoid enemies, collect XP, and pick upgrades. At level 5, a permanent AI ally joins you and tougher enemies enter the waves. Melee heroes face ground enemies and ground-based bosses.'],
+      ritual: ['Combat','Training: choose a 10- or 20-minute run, then choose auto-attack or manual attack in Settings. Move to avoid enemies, collect XP, and pick upgrades. At level 5, a permanent AI ally joins you and tougher enemies enter the waves. Melee heroes face ground enemies and ground-based bosses.'],
       economy: ['Currency & Upgrades','Cacao is earned during runs and kept after defeat. Spend it on permanent upgrades. Break pots and baskets to find extra supplies.'],
       equipment: ['Equipment','Mini-bosses drop equipment and offer skill upgrades. Equipment lasts for the current run; permanent upgrades are bought in the main menu.'],
       accessibility: ['Accessibility','Touch and keyboard controls are supported. Aim assist, manual attacks, reduced effects, a 30 FPS mode, and separate audio sliders are available in Settings.'],

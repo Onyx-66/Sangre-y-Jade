@@ -35,7 +35,7 @@ itch.io supports bonus files at higher minimum prices, which suits the Supporter
 
 > Beneath the ceiba, the road to Xibalba has opened.
 >
-> Choose Balam the Jaguar Warrior, Ixchel's Voice the Jade Shaman, or Kukul the Feathered Hunter. Build three abilities from a pool of twenty, crush escalating spirit hordes, loot rule-changing relics, and confront the lords of the underworld in a 10- or 20-minute survival rite.
+> Choose Balam the Jaguar Warrior, Ixchel's Voice the Jade Shaman, or Kukul the Feathered Hunter. Build three abilities from a pool of twenty, crush escalating spirit hordes, loot rule-changing relics, and confront the lords of the underworld in a 10- or 20-minute Training run.
 >
 > Version 0 includes three maps, touch and keyboard controls, persistent shrine progression, original music, and a cinematic prologue. No ads. No loot boxes. No paid power.
 

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+import os from 'node:os';
 import path from 'node:path';
 import sharp from 'sharp';
 import { createServer } from 'vite';
@@ -88,11 +89,15 @@ try {
       const result = await page.evaluate(audit); layouts.push({ locale, screen, ...size, ...result });
       check(result.failures.length === 0, `${file}: no overflow/overlap, 44dp targets, two-line descriptions: ${result.failures.join('; ')}`);
       if (screen === 'menu') {
+        const playLabel = await page.evaluate(async () => { const { t } = await import('/src/i18n/index.js'); return t('Play · Training'); });
+        check(await page.locator('[data-action=play]').count() === 1 && (await page.locator('[data-action=play]').innerText()).includes(playLabel), `${file}: only Training is playable and named`);
         check(await page.locator('.brand-lockup,h1,.tagline,.brand-logo,.eyebrow').count() === 0, `${file}: old title block absent`);
         check(await page.locator('.menu-title-logo').evaluate(img => new URL(img.src).pathname) === '/assets/branding/logo-title.png', `${file}: supplied wordmark used`);
         check(await page.locator('.menu-secondary-grid button').count() === 5, `${file}: five secondary actions, including text Settings`);
       }
       if (screen === 'hero') {
+        const trainingTitle = await page.evaluate(async () => { const { t } = await import('/src/i18n/index.js'); return t('Training · Heroes'); });
+        check((await page.locator('.selection-header').innerText()).includes(trainingTitle), `${file}: hero title names Training`);
         check(await page.locator('[data-hero]').count() === 3 && await page.locator('[data-hero][aria-pressed=true]').count() === 1, `${file}: three heroes, one selection`);
         check(await page.locator('[data-hero][aria-pressed=true] [data-hero-trait]').count() === 2, `${file}: selected hero shows two innate traits`);
         for (const id of ['ixchel','kukul','balam']) {
@@ -102,6 +107,8 @@ try {
         }
       }
       if (screen === 'map') {
+        const trainingTitle = await page.evaluate(async () => { const { t } = await import('/src/i18n/index.js'); return t('Training · Maps'); });
+        check((await page.locator('.selection-header').innerText()).includes(trainingTitle), `${file}: map title names Training`);
         check(await page.locator('[data-map]').count() === 3, `${file}: three map cards`);
         const files = await page.locator('.selection-map-art').evaluateAll(images => images.map(img => new URL(img.src).pathname));
         check(files.join(',') === '/assets/pixel/story-0.webp,/assets/pixel/story-3.webp,/assets/pixel/story-2.webp', `${file}: existing map images kept`);
@@ -152,19 +159,32 @@ try {
   // Preserve the existing four-step flow and real audio hooks through an actual run.
   await show('en','menu');
   await page.evaluate(() => { const app=window.__SANGRE_Y_JADE__,original=app.audio.sfx.bind(app.audio);window.menuSounds=[];app.audio.sfx=(...args)=>{window.menuSounds.push(args[0]);return original(...args);}; });
-  await page.locator('[data-action=play]').click(); await page.locator('[data-hero=kukul]').click();
+  await page.locator('[data-action=play]').click();
+  check(await page.evaluate(() => window.__SANGRE_Y_JADE__.lastSelection.gameModeId === 'training'), 'Play selects the registered Training mode');
+  await page.locator('[data-hero=kukul]').click();
   await page.locator('[data-next]').click(); await page.locator('[data-map=bloodmoon]').click();
   await page.locator('[data-next]').click(); await page.locator('[data-mode=quick]').click();
   await page.locator('[data-next]').click(); await page.selectOption('#run-attack','manual');
   await page.locator('[data-start]').click(); await page.locator('.hud').waitFor();
-  check(await page.evaluate(() => { const app=window.__SANGRE_Y_JADE__,s=app.game.scene.getScene('Ritual');return s.heroData.id==='kukul'&&app.lastSelection.mapId==='bloodmoon'&&app.save.data.settings.attackMode==='manual'&&app.screenCleanup===null; }), 'menu → hero → map → mode → controls → playable run; menu listeners disposed');
+  check(await page.evaluate(() => { const app=window.__SANGRE_Y_JADE__,s=app.game.scene.getScene('Ritual');return s.heroData.id==='kukul'&&app.lastSelection.mapId==='bloodmoon'&&app.lastSelection.gameModeId==='training'&&app.save.data.settings.attackMode==='manual'&&app.screenCleanup===null; }), 'menu → hero → map → Training duration → controls → playable run; menu listeners disposed');
   check(await page.evaluate(()=>window.menuSounds.filter(id=>id==='click').length>=8), 'existing click/confirm hooks still play audio');
+  for (const locale of ['en','fr','ar']) {
+    await page.evaluate(async locale => { const { setLanguage, t } = await import('/src/i18n/index.js'); setLanguage(locale); window.modeLabel=t('Training'); }, locale);
+    await page.locator('.pause-btn').click();
+    check((await page.locator('.pause-menu .panel-subtitle').innerText()).includes(await page.evaluate(() => window.modeLabel)), `${locale} pause identifies Training`);
+    await page.locator('[data-resume]').click();
+  }
+  for (const locale of ['en','fr','ar']) {
+    await page.evaluate(async locale => { const { setLanguage } = await import('/src/i18n/index.js'); setLanguage(locale); }, locale);
+    await page.evaluate(() => window.__SANGRE_Y_JADE__.showSummary({ heroName:'Kukul', victory:false, abandoned:false, survived:80, kills:12, level:6, cacao:25, gear:[] }));
+    check(await page.locator('.run-mode-label').innerText() === await page.evaluate(async () => { const { t } = await import('/src/i18n/index.js'); return t('Training'); }), `${locale} game-over identifies Training`);
+  }
   await page.keyboard.press('ArrowRight');
   check(await page.locator('.kit-screen').count()===0, 'menu navigation does not reappear during gameplay');
   check(errors.length === 0, `no console/page/HTTP errors: ${errors.join('; ')}`);
   console.log(`Menu V3: ${checks.length} checks passed, ${shots.length} screenshots.`);
 } finally {
-  await fs.writeFile(path.join(output,'report.json'),JSON.stringify({checks,errors,layouts,durationMs:performance.now()-started},null,2));
+  await fs.writeFile(path.join(os.tmpdir(),`v07-training-menu-report-${Date.now()}.json`),JSON.stringify({checks,errors,layouts,durationMs:performance.now()-started},null,2));
   // One labelled review sheet per locale/viewport; all requested screens remain full-resolution too.
   for (const size of [{width:568,height:320},{width:1280,height:720}]) for(const locale of ['en','fr','ar']) {
     const group=shots.filter(shot=>shot.width===size.width&&shot.file.startsWith(`${locale}-`));

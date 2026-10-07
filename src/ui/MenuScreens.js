@@ -1,8 +1,9 @@
 import { t, languageMarkup } from '../i18n/index.js';
 import { interfaceIcon } from '../art/interfaceIcons.js';
+import { GAME_MODES } from '../modes.js';
 import { assetUrl, escapeHtml, kitButton, kitCard, kitDecor, kitDivider, kitTitle, kitUrl, sliceStyle } from './Kit.js';
 
-export const STARTING_RULE = 'Start with 3 active skills and 1 passive. More slots unlock at levels 10 and 20.';
+export const STARTING_RULE = 'Training · Start with 3 active skills and 1 passive. More slots unlock at levels 10 and 20.';
 const descriptions = {
   balam: 'Armored melee fighter. Ground targets only.',
   ixchel: 'Ranged spells. Mana regenerates over time.',
@@ -14,7 +15,7 @@ export function mainMenuMarkup() {
   return `<div class="menu-layout">
     <img class="menu-title-logo" src="${assetUrl('assets/branding/logo-title.png')}" alt="Sangre y Jade" draggable="false">
     <nav class="menu-actions" aria-label="${text('Main Menu')}">
-      ${kitButton(t('Play'), { variant: 'primary', className: 'menu-play', attrs: { 'data-action': 'play' } })}
+      ${Object.values(GAME_MODES).map(mode=>kitButton(t(mode.playLabel), { variant: 'primary', className: 'menu-play', attrs: { 'data-action': 'play', 'data-game-mode': mode.id, title: t(mode.name) } })).join('')}
       <div class="menu-secondary-grid">
         ${kitButton(t('Upgrades'), { attrs: { 'data-action': 'shrine' } })}
         ${kitButton(t('How to Play'), { attrs: { 'data-action': 'codex' } })}
@@ -28,8 +29,8 @@ export function mainMenuMarkup() {
 }
 export function selectionMarkup(step, selection, heroes, maps) {
   const heroScreen = step === 0;
-  const title = heroScreen ? 'Choose Your Hero' : 'Choose a Map';
-  const subtitle = heroScreen ? STARTING_RULE : 'Choose where you will fight.';
+  const title = heroScreen ? 'Training · Heroes' : 'Training · Maps';
+  const subtitle = heroScreen ? STARTING_RULE : 'Training · Choose where you will fight.';
   const cards = heroScreen ? heroes.map(hero => {
     const selected = hero.id === selection.heroId;
     const details = selected ? `<div class="hero-starting" aria-label="${text('Starting skills')}">

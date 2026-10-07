@@ -37,8 +37,8 @@ const legacyMaps = [
 export const MAPS = legacyMaps.map(map => mapDefinition(map.id, map));
 
 export const RUN_MODES = [
-  { id: 'quick', name: 'Survival · 10 min', duration: 600, description: '10-minute survival. Bosses arrive every 2½ minutes.' },
-  { id: 'full', name: 'Survival · 20 min', duration: 1200, description: '20-minute survival. Bosses arrive every 5 minutes.' },
+  { id: 'quick', name: 'Training · 10 min', duration: 600, description: '10-minute Training run. Bosses arrive every 2½ minutes.' },
+  { id: 'full', name: 'Training · 20 min', duration: 1200, description: '20-minute Training run. Bosses arrive every 5 minutes.' },
 ];
 
 const enemyColors={shade:0x4d8c75,bat:0x7c638e,jaguar:0xc78b42,serpent:0x55b79a,priest:0x7aa8a1,

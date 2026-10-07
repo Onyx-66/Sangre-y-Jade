@@ -367,7 +367,7 @@ export class Hud {
     overlay.innerHTML = `
       <section class="modal" role="dialog" aria-modal="true">
         <h2>Paused</h2>
-        <p class="panel-subtitle">The game is paused.</p>
+        <p class="panel-subtitle">${t('Training · The game is paused.')}</p>
         <div class="pause-actions"><div class="pause-first-row"><button class="btn primary" data-resume>Resume</button><button class="btn ghost" data-settings>Settings</button></div>${onSkills?'<button class="btn ghost" data-skills>Skills</button>':''}<button class="btn ghost" data-help>How to Play</button><button class="btn danger" data-exit>Quit to Menu</button></div>
       </section>`;
     overlay.querySelector('[data-resume]').addEventListener('click', () => { overlay.remove(); onResume(); });

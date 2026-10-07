@@ -564,3 +564,10 @@ Open issues: this is not a full-release clearance. Existing unrelated review blo
 - Delivered `C:/Users/kossa/Desktop/Sangre-y-Jade-v0.6.0-build9-menu-update.apk` (**127,763,426 bytes**), SHA-256 `f13cc9868deff6533fb2f329aa294c52231a3bbdadc8606a7d6edfa8293ced8a`. Earlier APKs are untouched. Full details: `ANDROID_MENU_UPDATE_BUILD9.md`.
 
 Open issues: full emulator gameplay smoke is inconclusive after a harness/install race and subsequent emulator/tool-session loss during software-rendered loading; no physical phone is attached for build 9. Prior release-review blockers remain. No phone install, push, audio changes, downloads or production-key access; unrelated dirty work is preserved.
+
+## V07 section 1 — Training mode registry — 2026-10-07
+
+- Added the single implemented `training` mode registry and routed the existing Play action through it. Kept the `quick`/`full` 10/20-minute preset IDs, pacing, and save-record keys unchanged. Localized the menu, compact hero/map headings and subtitles, duration choices, how-to-play copy, pause and game-over labels in EN/FR/AR; removed obsolete mode strings. Updated README and store/balance copy.
+- Captured the pre-existing working-tree state before edits: 149 modified tracked files and 972 untracked files; the complete path/status list is [V07_BASELINE.md](V07_BASELINE.md). Those paths were preserved and excluded from the task commit.
+- Tests: `npm run check` passed (636 tests and production build); `node scripts/v06-menu-playtest.mjs` passed (120 browser checks, 18 screenshots), including Play-to-gameplay and pause/game-over labels in all three locales.
+- Open issues: `V07_SPEC.md` is absent in this checkout; only section 1 from the direct request was implemented. Pre-existing dirty work remains uncommitted and is intentionally not part of this change.

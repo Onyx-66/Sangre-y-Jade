@@ -9,7 +9,7 @@
 
 ## Run timing
 
-| Event | Quick Rite | Full Descent |
+| Event | Training (10 min) | Training (20 min) |
 |---|---:|---:|
 | Camazotz | 2:30 | 5:00 |
 | Zipacna | 5:00 | 10:00 |

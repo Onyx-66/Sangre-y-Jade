@@ -1,0 +1,1131 @@
+# V07 baseline snapshot
+
+Captured on 2026-10-07 before any V07 task edits on branch `release/0.6.0`. These paths were already modified or untracked and have been preserved; they were not staged or included in the V07 implementation commit.
+
+Counts: 1121 paths total (149 modified tracked paths; 972 untracked paths).
+
+Complete `git status --porcelain=v1 --untracked-files=all` snapshot:
+
+```text
+ M android/app/src/main/java/com/sangreyjade/game/MainActivity.java
+ M artifacts/combat-desktop.png
+ M artifacts/combat-mobile.png
+ M artifacts/playtest-failure.png
+ M artifacts/playtest-report.json
+ M artifacts/prologue-desktop.png
+ M artifacts/run-summary-mobile.png
+ M artifacts/title-desktop.png
+ M artifacts/v0.3/playtest.json
+ M artifacts/v0.4/playtest.json
+ M artifacts/v0.5/playtest.json
+ M docs/skills-redesign/previews/step10/kukul-568x320.png
+ M docs/skills-redesign/previews/step10/kukul-report.json
+ M docs/skills-redesign/previews/step14/balam-568x320.png
+ M docs/skills-redesign/verification/skills.json
+ M docs/v0.6/previews/prompt01/ar-reward-568x320.png
+ M docs/v0.6/previews/prompt01/report.json
+ M docs/v0.6/previews/prompt02/ar-1280x720-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-1280x720-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-1280x720-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-1280x720-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-320x568-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-320x568-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-320x568-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-320x568-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-568x320-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-568x320-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-568x320-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-568x320-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-800x360-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-800x360-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-800x360-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/ar-800x360-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/ar-cards-320x568.png
+ M docs/v0.6/previews/prompt02/en-1280x720-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-1280x720-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-1280x720-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-1280x720-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-320x568-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-320x568-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-320x568-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-320x568-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-568x320-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-568x320-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-568x320-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-568x320-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-800x360-ally-locked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-800x360-ally-locked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/en-800x360-ally-unlocked-slots-locked.png
+ M docs/v0.6/previews/prompt02/en-800x360-ally-unlocked-slots-unlocked.png
+ M docs/v0.6/previews/prompt02/report.json
+ M docs/v0.6/previews/prompt03/ar-settings-1280x720-off.png
+ M docs/v0.6/previews/prompt03/ar-settings-1280x720-on.png
+ M docs/v0.6/previews/prompt03/ar-settings-320x568-off.png
+ M docs/v0.6/previews/prompt03/ar-settings-320x568-on.png
+ M docs/v0.6/previews/prompt03/ar-settings-568x320-off.png
+ M docs/v0.6/previews/prompt03/ar-settings-568x320-on.png
+ M docs/v0.6/previews/prompt03/en-settings-1280x720-off.png
+ M docs/v0.6/previews/prompt03/en-settings-1280x720-on.png
+ M docs/v0.6/previews/prompt03/en-settings-320x568-off.png
+ M docs/v0.6/previews/prompt03/en-settings-320x568-on.png
+ M docs/v0.6/previews/prompt03/en-settings-568x320-off.png
+ M docs/v0.6/previews/prompt03/en-settings-568x320-on.png
+ M docs/v0.6/previews/prompt03/fr-settings-1280x720-off.png
+ M docs/v0.6/previews/prompt03/fr-settings-1280x720-on.png
+ M docs/v0.6/previews/prompt03/fr-settings-320x568-off.png
+ M docs/v0.6/previews/prompt03/fr-settings-320x568-on.png
+ M docs/v0.6/previews/prompt03/fr-settings-568x320-off.png
+ M docs/v0.6/previews/prompt03/fr-settings-568x320-on.png
+ M docs/v0.6/previews/prompt03/report.json
+ M docs/v0.6/previews/prompt04/ar-1024x768-cutout.png
+ M docs/v0.6/previews/prompt04/ar-2400x1080-cutout.png
+ M docs/v0.6/previews/prompt04/ar-3440x1440-cutout.png
+ M docs/v0.6/previews/prompt04/ar-568x320-cutout.png
+ M docs/v0.6/previews/prompt04/ar-640x360-cutout.png
+ M docs/v0.6/previews/prompt04/ar-800x360-cutout.png
+ M docs/v0.6/previews/prompt04/ar-960x540-cutout.png
+ M docs/v0.6/previews/prompt04/en-1024x768-cutout.png
+ M docs/v0.6/previews/prompt04/en-2400x1080-cutout.png
+ M docs/v0.6/previews/prompt04/en-3440x1440-cutout.png
+ M docs/v0.6/previews/prompt04/en-568x320-cutout.png
+ M docs/v0.6/previews/prompt04/en-640x360-cutout.png
+ M docs/v0.6/previews/prompt04/en-800x360-cutout.png
+ M docs/v0.6/previews/prompt04/en-960x540-cutout.png
+ M docs/v0.6/previews/prompt04/report.json
+ M docs/v0.6/previews/ui-kit/demo/assembly.png
+ M docs/v0.6/previews/ui-kit/demo/bg-map-select.png
+ M docs/v0.6/previews/ui-kit/demo/report.json
+ M docs/v0.6/previews/ui-kit/demo/review-5.png
+ M docs/v0.6/previews/v1/ar-hero-568x320.png
+ M docs/v0.6/previews/v1/ar-level-up-568x320.png
+ M docs/v0.6/previews/v1/ar-menu-568x320.png
+ M docs/v0.6/previews/v1/ar-settings-568x320.png
+ M docs/v0.6/previews/v1/en-hero-568x320.png
+ M docs/v0.6/previews/v1/en-level-up-568x320.png
+ M docs/v0.6/previews/v1/en-menu-568x320.png
+ M docs/v0.6/previews/v1/en-settings-568x320.png
+ M docs/v0.6/previews/v1/fr-hero-568x320.png
+ M docs/v0.6/previews/v1/fr-level-up-568x320.png
+ M docs/v0.6/previews/v1/fr-menu-568x320.png
+ M docs/v0.6/previews/v1/fr-settings-568x320.png
+ M docs/v0.6/previews/v1/report.json
+ M docs/v0.6/previews/v13/map-bot-report.json
+ M docs/v0.6/previews/v14/bloodmoon-weather-1280x720.png
+ M docs/v0.6/previews/v14/cenote-weather-1280x720.png
+ M docs/v0.6/previews/v14/overgrown-weather-1280x720.png
+ M docs/v0.6/previews/v14/weather-report.json
+ M docs/v0.6/previews/v15/boundary-1280x720.png
+ M docs/v0.6/previews/v15/centre-1280x720.png
+ M docs/v0.6/previews/v15/corner-1280x720.png
+ M docs/v0.6/previews/v15/landmark-1280x720.png
+ M docs/v0.6/previews/v15/map-art-report.json
+ M docs/v0.6/previews/v15c/boundary-1280x720.png
+ M docs/v0.6/previews/v15c/centre-1280x720.png
+ M docs/v0.6/previews/v15c/corner-1280x720.png
+ M docs/v0.6/previews/v15c/landmark-1280x720.png
+ M docs/v0.6/previews/v15c/map-art-report.json
+ M docs/v0.6/previews/v16/runtime/assassin-game.png
+ M docs/v0.6/previews/v16/runtime/report.json
+ M docs/v0.6/previews/v16/runtime/saintess-game.png
+ M docs/v0.6/previews/v16/runtime/states.png
+ M docs/v0.6/previews/v16/runtime/tank-game.png
+ M docs/v0.6/previews/v18/report.json
+ M docs/v0.6/previews/v6/en-loading-568x320.png
+ M docs/v0.6/previews/v6/report.json
+ M docs/v0.6/previews/v9/runtime/actor-preview.png
+ M docs/v0.6/previews/v9/runtime/ar-1280x720-actors.png
+ M docs/v0.6/previews/v9/runtime/ar-1280x720-fx.png
+ M docs/v0.6/previews/v9/runtime/ar-568x320-actors.png
+ M docs/v0.6/previews/v9/runtime/ar-568x320-fx.png
+ M docs/v0.6/previews/v9/runtime/contact.png
+ M docs/v0.6/previews/v9/runtime/en-1280x720-actors.png
+ M docs/v0.6/previews/v9/runtime/en-1280x720-fx.png
+ M docs/v0.6/previews/v9/runtime/en-568x320-actors.png
+ M docs/v0.6/previews/v9/runtime/en-568x320-fx.png
+ M docs/v0.6/previews/v9/runtime/report.json
+ M package.json
+ M scripts/build-android.mjs
+ M scripts/extended-playtest.mjs
+ M scripts/playtest.mjs
+ M scripts/skills-hud-playtest.mjs
+ M src/main.js
+ M src/scenes/GameScene.js
+ M src/systems/AudioDirector.js
+ M src/systems/Hud.js
+ M src/systems/SaveSystem.js
+ M src/ui/SettingsPanel.js
+ M src/ui/settings.css
+ M vite.config.js
+?? artifacts/android-startup/back-key-before-fix-report.json
+?? artifacts/android-startup/balam-en-gameplay.png
+?? artifacts/android-startup/emulator-stderr.log
+?? artifacts/android-startup/emulator-stdout.log
+?? artifacts/android-startup/ixchel-fr-gameplay.png
+?? artifacts/android-startup/kukul-ar-gameplay.png
+?? artifacts/android-startup/loader-timeout-report.json
+?? artifacts/android-startup/menu-update-build9-launch/ar-hero.png
+?? artifacts/android-startup/menu-update-build9-launch/ar-map.png
+?? artifacts/android-startup/menu-update-build9-launch/ar-menu.png
+?? artifacts/android-startup/menu-update-build9-launch/ar-upgrades.png
+?? artifacts/android-startup/menu-update-build9-launch/en-hero.png
+?? artifacts/android-startup/menu-update-build9-launch/en-map.png
+?? artifacts/android-startup/menu-update-build9-launch/en-menu.png
+?? artifacts/android-startup/menu-update-build9-launch/en-upgrades.png
+?? artifacts/android-startup/menu-update-build9-launch/fr-hero.png
+?? artifacts/android-startup/menu-update-build9-launch/fr-map.png
+?? artifacts/android-startup/menu-update-build9-launch/fr-menu.png
+?? artifacts/android-startup/menu-update-build9-launch/fr-upgrades.png
+?? artifacts/android-startup/native-renderer-error.png
+?? artifacts/android-startup/startup-report.json
+?? artifacts/android-startup/system-fullscreen-prompt.png
+?? artifacts/v20-hud/ar-1280x720-ally-locked-slots-locked.png
+?? artifacts/v20-hud/ar-1280x720-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/ar-1280x720-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/ar-1280x720-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/ar-320x568-ally-locked-slots-locked.png
+?? artifacts/v20-hud/ar-320x568-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/ar-320x568-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/ar-320x568-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/ar-568x320-ally-locked-slots-locked.png
+?? artifacts/v20-hud/ar-568x320-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/ar-568x320-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/ar-568x320-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/ar-800x360-ally-locked-slots-locked.png
+?? artifacts/v20-hud/ar-800x360-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/ar-800x360-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/ar-800x360-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/ar-cards-320x568.png
+?? artifacts/v20-hud/en-1280x720-ally-locked-slots-locked.png
+?? artifacts/v20-hud/en-1280x720-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/en-1280x720-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/en-1280x720-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/en-320x568-ally-locked-slots-locked.png
+?? artifacts/v20-hud/en-320x568-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/en-320x568-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/en-320x568-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/en-568x320-ally-locked-slots-locked.png
+?? artifacts/v20-hud/en-568x320-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/en-568x320-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/en-568x320-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/en-800x360-ally-locked-slots-locked.png
+?? artifacts/v20-hud/en-800x360-ally-locked-slots-unlocked.png
+?? artifacts/v20-hud/en-800x360-ally-unlocked-slots-locked.png
+?? artifacts/v20-hud/en-800x360-ally-unlocked-slots-unlocked.png
+?? artifacts/v20-hud/report.json
+?? artifacts/v20-loading/en-loading-1280x720.png
+?? artifacts/v20-loading/en-loading-568x320.png
+?? artifacts/v20-loading/fr-loading-568x320.png
+?? artifacts/v20-loading/report.json
+?? artifacts/v20-settings/ar-settings-1280x720-off.png
+?? artifacts/v20-settings/ar-settings-1280x720-on.png
+?? artifacts/v20-settings/ar-settings-320x568-off.png
+?? artifacts/v20-settings/ar-settings-320x568-on.png
+?? artifacts/v20-settings/ar-settings-568x320-off.png
+?? artifacts/v20-settings/ar-settings-568x320-on.png
+?? artifacts/v20-settings/en-settings-1280x720-off.png
+?? artifacts/v20-settings/en-settings-1280x720-on.png
+?? artifacts/v20-settings/en-settings-320x568-off.png
+?? artifacts/v20-settings/en-settings-320x568-on.png
+?? artifacts/v20-settings/en-settings-568x320-off.png
+?? artifacts/v20-settings/en-settings-568x320-on.png
+?? artifacts/v20-settings/fr-settings-1280x720-off.png
+?? artifacts/v20-settings/fr-settings-1280x720-on.png
+?? artifacts/v20-settings/fr-settings-320x568-off.png
+?? artifacts/v20-settings/fr-settings-320x568-on.png
+?? artifacts/v20-settings/fr-settings-568x320-off.png
+?? artifacts/v20-settings/fr-settings-568x320-on.png
+?? artifacts/v20-viewport/ar-1024x768-cutout.png
+?? artifacts/v20-viewport/ar-2400x1080-cutout.png
+?? artifacts/v20-viewport/ar-3440x1440-cutout.png
+?? artifacts/v20-viewport/ar-568x320-cutout.png
+?? artifacts/v20-viewport/ar-640x360-cutout.png
+?? artifacts/v20-viewport/ar-800x360-cutout.png
+?? artifacts/v20-viewport/ar-960x540-cutout.png
+?? artifacts/v20-viewport/en-1024x768-cutout.png
+?? artifacts/v20-viewport/en-2400x1080-cutout.png
+?? artifacts/v20-viewport/en-3440x1440-cutout.png
+?? artifacts/v20-viewport/en-568x320-cutout.png
+?? artifacts/v20-viewport/en-640x360-cutout.png
+?? artifacts/v20-viewport/en-800x360-cutout.png
+?? artifacts/v20-viewport/en-960x540-cutout.png
+?? artifacts/v20-viewport/report.json
+?? docs/skills-redesign/FX_PROMPTS_ALLIES.json
+?? docs/skills-redesign/fx-allies-sheet-1.json
+?? docs/skills-redesign/fx-allies-sheet-2.json
+?? docs/skills-redesign/fx-allies-sheet-3.json
+?? docs/skills-redesign/pacing/baseline.json
+?? docs/skills-redesign/previews/step17/contact-sheet-1.png
+?? docs/skills-redesign/previews/step17/contact-sheet-2.png
+?? docs/skills-redesign/previews/step17/contact-sheet-3.png
+?? docs/skills-redesign/previews/step17/sheet-1-2048.png
+?? docs/skills-redesign/previews/step17/sheet-1-rejected-spacing.png
+?? docs/skills-redesign/previews/step17/sheet-1.png
+?? docs/skills-redesign/previews/step17/sheet-2-2048.png
+?? docs/skills-redesign/previews/step17/sheet-2.png
+?? docs/skills-redesign/previews/step17/sheet-3-2048.png
+?? docs/skills-redesign/previews/step17/sheet-3.png
+?? docs/v0.6/HUD_FIX_PROMPTS.md
+?? docs/v0.6/START_HERE.md
+?? docs/v0.6/V06_PROMPTS.md
+?? docs/v0.6/V06_SPEC.md
+?? docs/v0.6/audio/ELEVENLABS_AUDIO_PROMPTS.md
+?? docs/v0.6/previews/menu-update/ar-hero-1280x720.png
+?? docs/v0.6/previews/menu-update/ar-hero-320x568.png
+?? docs/v0.6/previews/menu-update/ar-hero-568x320.png
+?? docs/v0.6/previews/menu-update/ar-hero-800x360.png
+?? docs/v0.6/previews/menu-update/ar-map-1280x720.png
+?? docs/v0.6/previews/menu-update/ar-map-320x568.png
+?? docs/v0.6/previews/menu-update/ar-map-568x320.png
+?? docs/v0.6/previews/menu-update/ar-map-800x360.png
+?? docs/v0.6/previews/menu-update/ar-menu-1280x720.png
+?? docs/v0.6/previews/menu-update/ar-menu-320x568.png
+?? docs/v0.6/previews/menu-update/ar-menu-800x360.png
+?? docs/v0.6/previews/menu-update/ar-mode-1280x720.png
+?? docs/v0.6/previews/menu-update/ar-mode-320x568.png
+?? docs/v0.6/previews/menu-update/ar-mode-568x320.png
+?? docs/v0.6/previews/menu-update/ar-mode-800x360.png
+?? docs/v0.6/previews/menu-update/ar-ready-1280x720.png
+?? docs/v0.6/previews/menu-update/ar-ready-320x568.png
+?? docs/v0.6/previews/menu-update/ar-ready-568x320.png
+?? docs/v0.6/previews/menu-update/ar-ready-800x360.png
+?? docs/v0.6/previews/menu-update/ar-upgrades-1280x720.png
+?? docs/v0.6/previews/menu-update/ar-upgrades-320x568.png
+?? docs/v0.6/previews/menu-update/ar-upgrades-800x360.png
+?? docs/v0.6/previews/menu-update/en-hero-320x568.png
+?? docs/v0.6/previews/menu-update/en-hero-568x320.png
+?? docs/v0.6/previews/menu-update/en-hero-800x360.png
+?? docs/v0.6/previews/menu-update/en-map-320x568.png
+?? docs/v0.6/previews/menu-update/en-map-568x320.png
+?? docs/v0.6/previews/menu-update/en-map-800x360.png
+?? docs/v0.6/previews/menu-update/en-menu-1280x720.png
+?? docs/v0.6/previews/menu-update/en-menu-320x568.png
+?? docs/v0.6/previews/menu-update/en-menu-800x360.png
+?? docs/v0.6/previews/menu-update/en-mode-1280x720.png
+?? docs/v0.6/previews/menu-update/en-mode-320x568.png
+?? docs/v0.6/previews/menu-update/en-mode-568x320.png
+?? docs/v0.6/previews/menu-update/en-mode-800x360.png
+?? docs/v0.6/previews/menu-update/en-ready-1280x720.png
+?? docs/v0.6/previews/menu-update/en-ready-320x568.png
+?? docs/v0.6/previews/menu-update/en-ready-568x320.png
+?? docs/v0.6/previews/menu-update/en-ready-800x360.png
+?? docs/v0.6/previews/menu-update/en-upgrades-320x568.png
+?? docs/v0.6/previews/menu-update/en-upgrades-568x320.png
+?? docs/v0.6/previews/menu-update/en-upgrades-800x360.png
+?? docs/v0.6/previews/menu-update/fr-hero-1280x720.png
+?? docs/v0.6/previews/menu-update/fr-hero-320x568.png
+?? docs/v0.6/previews/menu-update/fr-hero-568x320.png
+?? docs/v0.6/previews/menu-update/fr-hero-800x360.png
+?? docs/v0.6/previews/menu-update/fr-map-1280x720.png
+?? docs/v0.6/previews/menu-update/fr-map-320x568.png
+?? docs/v0.6/previews/menu-update/fr-map-568x320.png
+?? docs/v0.6/previews/menu-update/fr-map-800x360.png
+?? docs/v0.6/previews/menu-update/fr-menu-1280x720.png
+?? docs/v0.6/previews/menu-update/fr-menu-320x568.png
+?? docs/v0.6/previews/menu-update/fr-menu-568x320.png
+?? docs/v0.6/previews/menu-update/fr-menu-800x360.png
+?? docs/v0.6/previews/menu-update/fr-mode-1280x720.png
+?? docs/v0.6/previews/menu-update/fr-mode-320x568.png
+?? docs/v0.6/previews/menu-update/fr-mode-568x320.png
+?? docs/v0.6/previews/menu-update/fr-mode-800x360.png
+?? docs/v0.6/previews/menu-update/fr-ready-1280x720.png
+?? docs/v0.6/previews/menu-update/fr-ready-320x568.png
+?? docs/v0.6/previews/menu-update/fr-ready-568x320.png
+?? docs/v0.6/previews/menu-update/fr-ready-800x360.png
+?? docs/v0.6/previews/menu-update/fr-upgrades-1280x720.png
+?? docs/v0.6/previews/menu-update/fr-upgrades-320x568.png
+?? docs/v0.6/previews/menu-update/fr-upgrades-568x320.png
+?? docs/v0.6/previews/menu-update/fr-upgrades-800x360.png
+?? docs/v0.6/previews/v10/runtime/ar-1280x720-bar.png
+?? docs/v0.6/previews/v10/runtime/ar-1280x720-entrance.png
+?? docs/v0.6/previews/v10/runtime/ar-1280x720-warning.png
+?? docs/v0.6/previews/v10/runtime/ar-568x320-bar.png
+?? docs/v0.6/previews/v10/runtime/ar-568x320-entrance.png
+?? docs/v0.6/previews/v10/runtime/ar-568x320-warning.png
+?? docs/v0.6/previews/v10/runtime/boss-bar-contact.png
+?? docs/v0.6/previews/v10/runtime/boss-bars-contact.png
+?? docs/v0.6/previews/v10/runtime/boss-entrance-contact.png
+?? docs/v0.6/previews/v10/runtime/boss-warning-contact.png
+?? docs/v0.6/previews/v10/runtime/en-1280x720-bar.png
+?? docs/v0.6/previews/v10/runtime/en-1280x720-entrance.png
+?? docs/v0.6/previews/v10/runtime/en-1280x720-warning.png
+?? docs/v0.6/previews/v10/runtime/en-568x320-bar.png
+?? docs/v0.6/previews/v10/runtime/en-568x320-entrance.png
+?? docs/v0.6/previews/v10/runtime/en-568x320-warning.png
+?? docs/v0.6/previews/v10/runtime/fr-1280x720-bar.png
+?? docs/v0.6/previews/v10/runtime/fr-1280x720-entrance.png
+?? docs/v0.6/previews/v10/runtime/fr-1280x720-warning.png
+?? docs/v0.6/previews/v10/runtime/fr-568x320-bar.png
+?? docs/v0.6/previews/v10/runtime/fr-568x320-entrance.png
+?? docs/v0.6/previews/v10/runtime/fr-568x320-warning.png
+?? docs/v0.6/previews/v10/staged/hud/ar-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/ar-cards-320x568.png
+?? docs/v0.6/previews/v10/staged/hud/en-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/hud/en-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v10/staged/hud/en-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v10/staged/loading/ar-loading-1280x720.png
+?? docs/v0.6/previews/v10/staged/loading/ar-loading-568x320.png
+?? docs/v0.6/previews/v10/staged/loading/ar-optional-failure.png
+?? docs/v0.6/previews/v10/staged/loading/critical-failure.png
+?? docs/v0.6/previews/v10/staged/loading/en-loading-1280x720.png
+?? docs/v0.6/previews/v10/staged/loading/en-loading-568x320.png
+?? docs/v0.6/previews/v10/staged/loading/fr-loading-1280x720.png
+?? docs/v0.6/previews/v10/staged/loading/fr-loading-568x320.png
+?? docs/v0.6/previews/v10/staged/runtime/ar-1280x720-bar.png
+?? docs/v0.6/previews/v10/staged/runtime/ar-1280x720-entrance.png
+?? docs/v0.6/previews/v10/staged/runtime/ar-1280x720-warning.png
+?? docs/v0.6/previews/v10/staged/runtime/ar-568x320-bar.png
+?? docs/v0.6/previews/v10/staged/runtime/ar-568x320-entrance.png
+?? docs/v0.6/previews/v10/staged/runtime/ar-568x320-warning.png
+?? docs/v0.6/previews/v10/staged/runtime/en-1280x720-bar.png
+?? docs/v0.6/previews/v10/staged/runtime/en-1280x720-entrance.png
+?? docs/v0.6/previews/v10/staged/runtime/en-1280x720-warning.png
+?? docs/v0.6/previews/v10/staged/runtime/en-568x320-bar.png
+?? docs/v0.6/previews/v10/staged/runtime/en-568x320-entrance.png
+?? docs/v0.6/previews/v10/staged/runtime/en-568x320-warning.png
+?? docs/v0.6/previews/v10/staged/runtime/fr-1280x720-bar.png
+?? docs/v0.6/previews/v10/staged/runtime/fr-1280x720-entrance.png
+?? docs/v0.6/previews/v10/staged/runtime/fr-1280x720-warning.png
+?? docs/v0.6/previews/v10/staged/runtime/fr-568x320-bar.png
+?? docs/v0.6/previews/v10/staged/runtime/fr-568x320-entrance.png
+?? docs/v0.6/previews/v10/staged/runtime/fr-568x320-warning.png
+?? docs/v0.6/previews/v11/ahpuch-entry.png
+?? docs/v0.6/previews/v11/ar-eclipse-568x320.png
+?? docs/v0.6/previews/v11/ar-final-rite-568x320.png
+?? docs/v0.6/previews/v11/ar-solar-flare-rings-568x320.png
+?? docs/v0.6/previews/v11/ar-stone-armor-568x320.png
+?? docs/v0.6/previews/v11/bosses-contact.png
+?? docs/v0.6/previews/v11/camazotz-entry.png
+?? docs/v0.6/previews/v11/en-eclipse-568x320.png
+?? docs/v0.6/previews/v11/en-final-rite-568x320.png
+?? docs/v0.6/previews/v11/en-solar-flare-rings-568x320.png
+?? docs/v0.6/previews/v11/en-stone-armor-568x320.png
+?? docs/v0.6/previews/v11/framework/ar-1280x720-bar.png
+?? docs/v0.6/previews/v11/framework/ar-1280x720-entrance.png
+?? docs/v0.6/previews/v11/framework/ar-1280x720-warning.png
+?? docs/v0.6/previews/v11/framework/ar-568x320-bar.png
+?? docs/v0.6/previews/v11/framework/ar-568x320-entrance.png
+?? docs/v0.6/previews/v11/framework/ar-568x320-warning.png
+?? docs/v0.6/previews/v11/framework/boss-bar-contact.png
+?? docs/v0.6/previews/v11/framework/boss-entrance-contact.png
+?? docs/v0.6/previews/v11/framework/boss-warning-contact.png
+?? docs/v0.6/previews/v11/framework/en-1280x720-bar.png
+?? docs/v0.6/previews/v11/framework/en-1280x720-entrance.png
+?? docs/v0.6/previews/v11/framework/en-1280x720-warning.png
+?? docs/v0.6/previews/v11/framework/en-568x320-bar.png
+?? docs/v0.6/previews/v11/framework/en-568x320-entrance.png
+?? docs/v0.6/previews/v11/framework/en-568x320-warning.png
+?? docs/v0.6/previews/v11/framework/fr-1280x720-bar.png
+?? docs/v0.6/previews/v11/framework/fr-1280x720-entrance.png
+?? docs/v0.6/previews/v11/framework/fr-1280x720-warning.png
+?? docs/v0.6/previews/v11/framework/fr-568x320-bar.png
+?? docs/v0.6/previews/v11/framework/fr-568x320-entrance.png
+?? docs/v0.6/previews/v11/framework/fr-568x320-warning.png
+?? docs/v0.6/previews/v11/framework/report.json
+?? docs/v0.6/previews/v11/report.json
+?? docs/v0.6/previews/v11/staged/ahpuch-entry.png
+?? docs/v0.6/previews/v11/staged/ar-eclipse-568x320.png
+?? docs/v0.6/previews/v11/staged/ar-final-rite-568x320.png
+?? docs/v0.6/previews/v11/staged/ar-solar-flare-rings-568x320.png
+?? docs/v0.6/previews/v11/staged/ar-stone-armor-568x320.png
+?? docs/v0.6/previews/v11/staged/camazotz-entry.png
+?? docs/v0.6/previews/v11/staged/en-eclipse-568x320.png
+?? docs/v0.6/previews/v11/staged/en-final-rite-568x320.png
+?? docs/v0.6/previews/v11/staged/en-solar-flare-rings-568x320.png
+?? docs/v0.6/previews/v11/staged/en-stone-armor-568x320.png
+?? docs/v0.6/previews/v11/staged/framework/ar-1280x720-bar.png
+?? docs/v0.6/previews/v11/staged/framework/ar-1280x720-entrance.png
+?? docs/v0.6/previews/v11/staged/framework/ar-1280x720-warning.png
+?? docs/v0.6/previews/v11/staged/framework/ar-568x320-bar.png
+?? docs/v0.6/previews/v11/staged/framework/ar-568x320-entrance.png
+?? docs/v0.6/previews/v11/staged/framework/ar-568x320-warning.png
+?? docs/v0.6/previews/v11/staged/framework/en-1280x720-bar.png
+?? docs/v0.6/previews/v11/staged/framework/en-1280x720-entrance.png
+?? docs/v0.6/previews/v11/staged/framework/en-1280x720-warning.png
+?? docs/v0.6/previews/v11/staged/framework/en-568x320-bar.png
+?? docs/v0.6/previews/v11/staged/framework/en-568x320-entrance.png
+?? docs/v0.6/previews/v11/staged/framework/en-568x320-warning.png
+?? docs/v0.6/previews/v11/staged/framework/fr-1280x720-bar.png
+?? docs/v0.6/previews/v11/staged/framework/fr-1280x720-entrance.png
+?? docs/v0.6/previews/v11/staged/framework/fr-1280x720-warning.png
+?? docs/v0.6/previews/v11/staged/framework/fr-568x320-bar.png
+?? docs/v0.6/previews/v11/staged/framework/fr-568x320-entrance.png
+?? docs/v0.6/previews/v11/staged/framework/fr-568x320-warning.png
+?? docs/v0.6/previews/v11/staged/hud/ar-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/ar-cards-320x568.png
+?? docs/v0.6/previews/v11/staged/hud/en-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/hud/en-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v11/staged/hud/en-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v11/staged/loading/ar-loading-1280x720.png
+?? docs/v0.6/previews/v11/staged/loading/ar-loading-568x320.png
+?? docs/v0.6/previews/v11/staged/loading/ar-optional-failure.png
+?? docs/v0.6/previews/v11/staged/loading/critical-failure.png
+?? docs/v0.6/previews/v11/staged/loading/en-loading-1280x720.png
+?? docs/v0.6/previews/v11/staged/loading/en-loading-568x320.png
+?? docs/v0.6/previews/v11/staged/loading/fr-loading-1280x720.png
+?? docs/v0.6/previews/v11/staged/loading/fr-loading-568x320.png
+?? docs/v0.6/previews/v11/staged/vucub-entry.png
+?? docs/v0.6/previews/v11/staged/zipacna-entry.png
+?? docs/v0.6/previews/v11/vucub-entry.png
+?? docs/v0.6/previews/v11/zipacna-entry.png
+?? docs/v0.6/previews/v12/fights/ahpuch-entry.png
+?? docs/v0.6/previews/v12/fights/ar-eclipse-568x320.png
+?? docs/v0.6/previews/v12/fights/ar-final-rite-568x320.png
+?? docs/v0.6/previews/v12/fights/ar-solar-flare-rings-568x320.png
+?? docs/v0.6/previews/v12/fights/ar-stone-armor-568x320.png
+?? docs/v0.6/previews/v12/fights/bosses-contact.png
+?? docs/v0.6/previews/v12/fights/camazotz-entry.png
+?? docs/v0.6/previews/v12/fights/en-eclipse-568x320.png
+?? docs/v0.6/previews/v12/fights/en-final-rite-568x320.png
+?? docs/v0.6/previews/v12/fights/en-solar-flare-rings-568x320.png
+?? docs/v0.6/previews/v12/fights/en-stone-armor-568x320.png
+?? docs/v0.6/previews/v12/fights/report.json
+?? docs/v0.6/previews/v12/fights/vucub-entry.png
+?? docs/v0.6/previews/v12/fights/zipacna-entry.png
+?? docs/v0.6/previews/v12/gallery/boss-ahpuch-soul-drain.png
+?? docs/v0.6/previews/v12/gallery/boss-camazotz-sonic-screech.png
+?? docs/v0.6/previews/v12/gallery/boss-vucub-sunbeam-sweep.png
+?? docs/v0.6/previews/v12/gallery/boss-zipacna-rock-rain.png
+?? docs/v0.6/previews/v12/gallery/report.json
+?? docs/v0.6/previews/v12/gallery/states.png
+?? docs/v0.6/previews/v18/ar-1280x720-ally-panel-tooltip.png
+?? docs/v0.6/previews/v18/ar-1280x720-ally.png
+?? docs/v0.6/previews/v18/ar-1280x720-boss-bar.png
+?? docs/v0.6/previews/v18/ar-1280x720-boss-entry.png
+?? docs/v0.6/previews/v18/ar-1280x720-boss-reward.png
+?? docs/v0.6/previews/v18/ar-1280x720-defeat.png
+?? docs/v0.6/previews/v18/ar-1280x720-help-accessibility.png
+?? docs/v0.6/previews/v18/ar-1280x720-help-heroes.png
+?? docs/v0.6/previews/v18/ar-1280x720-help-ritual.png
+?? docs/v0.6/previews/v18/ar-1280x720-help.png
+?? docs/v0.6/previews/v18/ar-1280x720-hero.png
+?? docs/v0.6/previews/v18/ar-1280x720-hud-editor.png
+?? docs/v0.6/previews/v18/ar-1280x720-hud-export.png
+?? docs/v0.6/previews/v18/ar-1280x720-hud-import-error.png
+?? docs/v0.6/previews/v18/ar-1280x720-hud.png
+?? docs/v0.6/previews/v18/ar-1280x720-level-up.png
+?? docs/v0.6/previews/v18/ar-1280x720-loading-error.png
+?? docs/v0.6/previews/v18/ar-1280x720-loading.png
+?? docs/v0.6/previews/v18/ar-1280x720-map.png
+?? docs/v0.6/previews/v18/ar-1280x720-menu.png
+?? docs/v0.6/previews/v18/ar-1280x720-mode.png
+?? docs/v0.6/previews/v18/ar-1280x720-pause-help.png
+?? docs/v0.6/previews/v18/ar-1280x720-pause-settings.png
+?? docs/v0.6/previews/v18/ar-1280x720-pause.png
+?? docs/v0.6/previews/v18/ar-1280x720-ready.png
+?? docs/v0.6/previews/v18/ar-1280x720-replace-confirm.png
+?? docs/v0.6/previews/v18/ar-1280x720-replace-new.png
+?? docs/v0.6/previews/v18/ar-1280x720-replace-remove.png
+?? docs/v0.6/previews/v18/ar-1280x720-settings-audio.png
+?? docs/v0.6/previews/v18/ar-1280x720-settings-hud.png
+?? docs/v0.6/previews/v18/ar-1280x720-settings.png
+?? docs/v0.6/previews/v18/ar-1280x720-shop.png
+?? docs/v0.6/previews/v18/ar-1280x720-skills.png
+?? docs/v0.6/previews/v18/ar-1280x720-unlock-active.png
+?? docs/v0.6/previews/v18/ar-1280x720-unlock-passive.png
+?? docs/v0.6/previews/v18/ar-1280x720-upgrades.png
+?? docs/v0.6/previews/v18/ar-1280x720-victory.png
+?? docs/v0.6/previews/v18/ar-568x320-ally-panel-tooltip.png
+?? docs/v0.6/previews/v18/ar-568x320-ally.png
+?? docs/v0.6/previews/v18/ar-568x320-boss-bar.png
+?? docs/v0.6/previews/v18/ar-568x320-boss-entry.png
+?? docs/v0.6/previews/v18/ar-568x320-boss-reward.png
+?? docs/v0.6/previews/v18/ar-568x320-defeat.png
+?? docs/v0.6/previews/v18/ar-568x320-help-accessibility.png
+?? docs/v0.6/previews/v18/ar-568x320-help-heroes.png
+?? docs/v0.6/previews/v18/ar-568x320-help-ritual.png
+?? docs/v0.6/previews/v18/ar-568x320-help.png
+?? docs/v0.6/previews/v18/ar-568x320-hero.png
+?? docs/v0.6/previews/v18/ar-568x320-hud-editor.png
+?? docs/v0.6/previews/v18/ar-568x320-hud-export.png
+?? docs/v0.6/previews/v18/ar-568x320-hud-import-error.png
+?? docs/v0.6/previews/v18/ar-568x320-hud.png
+?? docs/v0.6/previews/v18/ar-568x320-level-up.png
+?? docs/v0.6/previews/v18/ar-568x320-loading-error.png
+?? docs/v0.6/previews/v18/ar-568x320-loading.png
+?? docs/v0.6/previews/v18/ar-568x320-map.png
+?? docs/v0.6/previews/v18/ar-568x320-menu.png
+?? docs/v0.6/previews/v18/ar-568x320-mode.png
+?? docs/v0.6/previews/v18/ar-568x320-pause-help.png
+?? docs/v0.6/previews/v18/ar-568x320-pause-settings.png
+?? docs/v0.6/previews/v18/ar-568x320-pause.png
+?? docs/v0.6/previews/v18/ar-568x320-ready.png
+?? docs/v0.6/previews/v18/ar-568x320-replace-confirm.png
+?? docs/v0.6/previews/v18/ar-568x320-replace-new.png
+?? docs/v0.6/previews/v18/ar-568x320-replace-remove.png
+?? docs/v0.6/previews/v18/ar-568x320-settings-audio.png
+?? docs/v0.6/previews/v18/ar-568x320-settings-hud.png
+?? docs/v0.6/previews/v18/ar-568x320-settings.png
+?? docs/v0.6/previews/v18/ar-568x320-shop.png
+?? docs/v0.6/previews/v18/ar-568x320-skills.png
+?? docs/v0.6/previews/v18/ar-568x320-unlock-active.png
+?? docs/v0.6/previews/v18/ar-568x320-unlock-passive.png
+?? docs/v0.6/previews/v18/ar-568x320-upgrades.png
+?? docs/v0.6/previews/v18/ar-568x320-victory.png
+?? docs/v0.6/previews/v18/en-1280x720-ally-panel-tooltip.png
+?? docs/v0.6/previews/v18/en-1280x720-ally.png
+?? docs/v0.6/previews/v18/en-1280x720-boss-bar.png
+?? docs/v0.6/previews/v18/en-1280x720-boss-entry.png
+?? docs/v0.6/previews/v18/en-1280x720-boss-reward.png
+?? docs/v0.6/previews/v18/en-1280x720-defeat.png
+?? docs/v0.6/previews/v18/en-1280x720-help-accessibility.png
+?? docs/v0.6/previews/v18/en-1280x720-help-heroes.png
+?? docs/v0.6/previews/v18/en-1280x720-help-ritual.png
+?? docs/v0.6/previews/v18/en-1280x720-help.png
+?? docs/v0.6/previews/v18/en-1280x720-hero.png
+?? docs/v0.6/previews/v18/en-1280x720-hud-editor.png
+?? docs/v0.6/previews/v18/en-1280x720-hud-export.png
+?? docs/v0.6/previews/v18/en-1280x720-hud-import-error.png
+?? docs/v0.6/previews/v18/en-1280x720-hud.png
+?? docs/v0.6/previews/v18/en-1280x720-level-up.png
+?? docs/v0.6/previews/v18/en-1280x720-loading-error.png
+?? docs/v0.6/previews/v18/en-1280x720-loading.png
+?? docs/v0.6/previews/v18/en-1280x720-map.png
+?? docs/v0.6/previews/v18/en-1280x720-menu.png
+?? docs/v0.6/previews/v18/en-1280x720-mode.png
+?? docs/v0.6/previews/v18/en-1280x720-pause-help.png
+?? docs/v0.6/previews/v18/en-1280x720-pause-settings.png
+?? docs/v0.6/previews/v18/en-1280x720-pause.png
+?? docs/v0.6/previews/v18/en-1280x720-ready.png
+?? docs/v0.6/previews/v18/en-1280x720-replace-confirm.png
+?? docs/v0.6/previews/v18/en-1280x720-replace-new.png
+?? docs/v0.6/previews/v18/en-1280x720-replace-remove.png
+?? docs/v0.6/previews/v18/en-1280x720-settings-audio.png
+?? docs/v0.6/previews/v18/en-1280x720-settings-hud.png
+?? docs/v0.6/previews/v18/en-1280x720-settings.png
+?? docs/v0.6/previews/v18/en-1280x720-shop.png
+?? docs/v0.6/previews/v18/en-1280x720-skills.png
+?? docs/v0.6/previews/v18/en-1280x720-unlock-active.png
+?? docs/v0.6/previews/v18/en-1280x720-unlock-passive.png
+?? docs/v0.6/previews/v18/en-1280x720-upgrades.png
+?? docs/v0.6/previews/v18/en-1280x720-victory.png
+?? docs/v0.6/previews/v18/en-568x320-ally-panel-tooltip.png
+?? docs/v0.6/previews/v18/en-568x320-ally.png
+?? docs/v0.6/previews/v18/en-568x320-boss-bar.png
+?? docs/v0.6/previews/v18/en-568x320-boss-entry.png
+?? docs/v0.6/previews/v18/en-568x320-boss-reward.png
+?? docs/v0.6/previews/v18/en-568x320-defeat.png
+?? docs/v0.6/previews/v18/en-568x320-help-accessibility.png
+?? docs/v0.6/previews/v18/en-568x320-help-heroes.png
+?? docs/v0.6/previews/v18/en-568x320-help-ritual.png
+?? docs/v0.6/previews/v18/en-568x320-help.png
+?? docs/v0.6/previews/v18/en-568x320-hero.png
+?? docs/v0.6/previews/v18/en-568x320-hud-editor.png
+?? docs/v0.6/previews/v18/en-568x320-hud-export.png
+?? docs/v0.6/previews/v18/en-568x320-hud-import-error.png
+?? docs/v0.6/previews/v18/en-568x320-hud.png
+?? docs/v0.6/previews/v18/en-568x320-level-up.png
+?? docs/v0.6/previews/v18/en-568x320-loading-error.png
+?? docs/v0.6/previews/v18/en-568x320-loading.png
+?? docs/v0.6/previews/v18/en-568x320-map.png
+?? docs/v0.6/previews/v18/en-568x320-menu.png
+?? docs/v0.6/previews/v18/en-568x320-mode.png
+?? docs/v0.6/previews/v18/en-568x320-pause-help.png
+?? docs/v0.6/previews/v18/en-568x320-pause-settings.png
+?? docs/v0.6/previews/v18/en-568x320-pause.png
+?? docs/v0.6/previews/v18/en-568x320-ready.png
+?? docs/v0.6/previews/v18/en-568x320-replace-confirm.png
+?? docs/v0.6/previews/v18/en-568x320-replace-new.png
+?? docs/v0.6/previews/v18/en-568x320-replace-remove.png
+?? docs/v0.6/previews/v18/en-568x320-settings-audio.png
+?? docs/v0.6/previews/v18/en-568x320-settings-hud.png
+?? docs/v0.6/previews/v18/en-568x320-settings.png
+?? docs/v0.6/previews/v18/en-568x320-shop.png
+?? docs/v0.6/previews/v18/en-568x320-skills.png
+?? docs/v0.6/previews/v18/en-568x320-unlock-active.png
+?? docs/v0.6/previews/v18/en-568x320-unlock-passive.png
+?? docs/v0.6/previews/v18/en-568x320-upgrades.png
+?? docs/v0.6/previews/v18/en-568x320-victory.png
+?? docs/v0.6/previews/v18/fr-1280x720-ally-panel-tooltip.png
+?? docs/v0.6/previews/v18/fr-1280x720-ally.png
+?? docs/v0.6/previews/v18/fr-1280x720-boss-bar.png
+?? docs/v0.6/previews/v18/fr-1280x720-boss-entry.png
+?? docs/v0.6/previews/v18/fr-1280x720-boss-reward.png
+?? docs/v0.6/previews/v18/fr-1280x720-defeat.png
+?? docs/v0.6/previews/v18/fr-1280x720-help-accessibility.png
+?? docs/v0.6/previews/v18/fr-1280x720-help-heroes.png
+?? docs/v0.6/previews/v18/fr-1280x720-help-ritual.png
+?? docs/v0.6/previews/v18/fr-1280x720-help.png
+?? docs/v0.6/previews/v18/fr-1280x720-hero.png
+?? docs/v0.6/previews/v18/fr-1280x720-hud-editor.png
+?? docs/v0.6/previews/v18/fr-1280x720-hud-export.png
+?? docs/v0.6/previews/v18/fr-1280x720-hud-import-error.png
+?? docs/v0.6/previews/v18/fr-1280x720-hud.png
+?? docs/v0.6/previews/v18/fr-1280x720-level-up.png
+?? docs/v0.6/previews/v18/fr-1280x720-loading-error.png
+?? docs/v0.6/previews/v18/fr-1280x720-loading.png
+?? docs/v0.6/previews/v18/fr-1280x720-map.png
+?? docs/v0.6/previews/v18/fr-1280x720-menu.png
+?? docs/v0.6/previews/v18/fr-1280x720-mode.png
+?? docs/v0.6/previews/v18/fr-1280x720-pause-help.png
+?? docs/v0.6/previews/v18/fr-1280x720-pause-settings.png
+?? docs/v0.6/previews/v18/fr-1280x720-pause.png
+?? docs/v0.6/previews/v18/fr-1280x720-ready.png
+?? docs/v0.6/previews/v18/fr-1280x720-replace-confirm.png
+?? docs/v0.6/previews/v18/fr-1280x720-replace-new.png
+?? docs/v0.6/previews/v18/fr-1280x720-replace-remove.png
+?? docs/v0.6/previews/v18/fr-1280x720-settings-audio.png
+?? docs/v0.6/previews/v18/fr-1280x720-settings-hud.png
+?? docs/v0.6/previews/v18/fr-1280x720-settings.png
+?? docs/v0.6/previews/v18/fr-1280x720-shop.png
+?? docs/v0.6/previews/v18/fr-1280x720-skills.png
+?? docs/v0.6/previews/v18/fr-1280x720-unlock-active.png
+?? docs/v0.6/previews/v18/fr-1280x720-unlock-passive.png
+?? docs/v0.6/previews/v18/fr-1280x720-upgrades.png
+?? docs/v0.6/previews/v18/fr-1280x720-victory.png
+?? docs/v0.6/previews/v18/fr-568x320-ally-panel-tooltip.png
+?? docs/v0.6/previews/v18/fr-568x320-ally.png
+?? docs/v0.6/previews/v18/fr-568x320-boss-bar.png
+?? docs/v0.6/previews/v18/fr-568x320-boss-entry.png
+?? docs/v0.6/previews/v18/fr-568x320-boss-reward.png
+?? docs/v0.6/previews/v18/fr-568x320-defeat.png
+?? docs/v0.6/previews/v18/fr-568x320-help-accessibility.png
+?? docs/v0.6/previews/v18/fr-568x320-help-heroes.png
+?? docs/v0.6/previews/v18/fr-568x320-help-ritual.png
+?? docs/v0.6/previews/v18/fr-568x320-help.png
+?? docs/v0.6/previews/v18/fr-568x320-hero.png
+?? docs/v0.6/previews/v18/fr-568x320-hud-editor.png
+?? docs/v0.6/previews/v18/fr-568x320-hud-export.png
+?? docs/v0.6/previews/v18/fr-568x320-hud-import-error.png
+?? docs/v0.6/previews/v18/fr-568x320-hud.png
+?? docs/v0.6/previews/v18/fr-568x320-level-up.png
+?? docs/v0.6/previews/v18/fr-568x320-loading-error.png
+?? docs/v0.6/previews/v18/fr-568x320-loading.png
+?? docs/v0.6/previews/v18/fr-568x320-map.png
+?? docs/v0.6/previews/v18/fr-568x320-menu.png
+?? docs/v0.6/previews/v18/fr-568x320-mode.png
+?? docs/v0.6/previews/v18/fr-568x320-pause-help.png
+?? docs/v0.6/previews/v18/fr-568x320-pause-settings.png
+?? docs/v0.6/previews/v18/fr-568x320-pause.png
+?? docs/v0.6/previews/v18/fr-568x320-ready.png
+?? docs/v0.6/previews/v18/fr-568x320-replace-confirm.png
+?? docs/v0.6/previews/v18/fr-568x320-replace-new.png
+?? docs/v0.6/previews/v18/fr-568x320-replace-remove.png
+?? docs/v0.6/previews/v18/fr-568x320-settings-audio.png
+?? docs/v0.6/previews/v18/fr-568x320-settings-hud.png
+?? docs/v0.6/previews/v18/fr-568x320-settings.png
+?? docs/v0.6/previews/v18/fr-568x320-shop.png
+?? docs/v0.6/previews/v18/fr-568x320-skills.png
+?? docs/v0.6/previews/v18/fr-568x320-unlock-active.png
+?? docs/v0.6/previews/v18/fr-568x320-unlock-passive.png
+?? docs/v0.6/previews/v18/fr-568x320-upgrades.png
+?? docs/v0.6/previews/v18/fr-568x320-victory.png
+?? docs/v0.6/previews/v18/review-en-1280-1.png
+?? docs/v0.6/previews/v18/review-en-1280-2.png
+?? docs/v0.6/previews/v18/review-en-1280-3.png
+?? docs/v0.6/previews/v18/review-en-1280-4.png
+?? docs/v0.6/previews/v18/review-en-1280-5.png
+?? docs/v0.6/previews/v18/review-en-568-1.png
+?? docs/v0.6/previews/v18/review-en-568-2.png
+?? docs/v0.6/previews/v18/review-en-568-3.png
+?? docs/v0.6/previews/v18/review-en-568-4.png
+?? docs/v0.6/previews/v18/review-en-568-5.png
+?? docs/v0.6/previews/v18/review-fr-1280-1.png
+?? docs/v0.6/previews/v18/review-fr-1280-2.png
+?? docs/v0.6/previews/v18/review-fr-1280-3.png
+?? docs/v0.6/previews/v18/review-fr-1280-4.png
+?? docs/v0.6/previews/v18/review-fr-1280-5.png
+?? docs/v0.6/previews/v18/review-fr-568-1.png
+?? docs/v0.6/previews/v18/review-fr-568-2.png
+?? docs/v0.6/previews/v18/review-fr-568-3.png
+?? docs/v0.6/previews/v18/review-fr-568-4.png
+?? docs/v0.6/previews/v18/review-fr-568-5.png
+?? docs/v0.6/previews/v19/ally-skills-playtest.mjs.log
+?? docs/v0.6/previews/v19/audio-check.log
+?? docs/v0.6/previews/v19/balam-playtest.mjs.log
+?? docs/v0.6/previews/v19/check.log
+?? docs/v0.6/previews/v19/extended-playtest.mjs.log
+?? docs/v0.6/previews/v19/final-skill-playtest.mjs.log
+?? docs/v0.6/previews/v19/gameplay.json
+?? docs/v0.6/previews/v19/hud-editor-playtest.mjs.log
+?? docs/v0.6/previews/v19/ixchel-fx-playtest.mjs.log
+?? docs/v0.6/previews/v19/kukul-fx-playtest.mjs.log
+?? docs/v0.6/previews/v19/kukul-playtest.mjs.log
+?? docs/v0.6/previews/v19/loading-playtest.mjs.log
+?? docs/v0.6/previews/v19/pacing-playtest.mjs.log
+?? docs/v0.6/previews/v19/playtest.mjs.log
+?? docs/v0.6/previews/v19/sfx-playtest.mjs.log
+?? docs/v0.6/previews/v19/skills-hud-playtest.mjs.log
+?? docs/v0.6/previews/v19/skills-validator.log
+?? docs/v0.6/previews/v19/suite.json
+?? docs/v0.6/previews/v19/ui-kit-playtest.mjs.log
+?? docs/v0.6/previews/v19/v03-playtest.mjs.log
+?? docs/v0.6/previews/v19/v04-playtest.mjs.log
+?? docs/v0.6/previews/v19/v05-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-ally-visuals-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-boss-framework-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-boss-visuals-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-bosses-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-enemies-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-enemy-visuals-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-menu-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-replacement-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-roster-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-settings-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-typography-playtest.mjs.log
+?? docs/v0.6/previews/v19/v06-viewport-playtest.mjs.log
+?? docs/v0.6/previews/v19/v13-map-playtest.mjs.log
+?? docs/v0.6/previews/v19/v14-weather-playtest.mjs.log
+?? docs/v0.6/previews/v19/v15-map-art-playtest.mjs.log
+?? docs/v0.6/previews/v19/v15c-map-art-playtest.mjs.log
+?? docs/v0.6/previews/v19/v18-i18n-playtest.mjs.log
+?? docs/v0.6/previews/v20-loading/en-loading-568x320.png
+?? docs/v0.6/previews/v20-loading/report.json
+?? docs/v0.6/previews/v3/ar-hero-1280x720.png
+?? docs/v0.6/previews/v3/ar-hero-568x320.png
+?? docs/v0.6/previews/v3/ar-map-1280x720.png
+?? docs/v0.6/previews/v3/ar-map-568x320.png
+?? docs/v0.6/previews/v3/ar-menu-1280x720.png
+?? docs/v0.6/previews/v3/ar-menu-568x320.png
+?? docs/v0.6/previews/v3/en-hero-1280x720.png
+?? docs/v0.6/previews/v3/en-hero-568x320.png
+?? docs/v0.6/previews/v3/en-map-1280x720.png
+?? docs/v0.6/previews/v3/en-map-568x320.png
+?? docs/v0.6/previews/v3/en-menu-1280x720.png
+?? docs/v0.6/previews/v3/en-menu-568x320.png
+?? docs/v0.6/previews/v3/fr-hero-1280x720.png
+?? docs/v0.6/previews/v3/fr-hero-568x320.png
+?? docs/v0.6/previews/v3/fr-map-1280x720.png
+?? docs/v0.6/previews/v3/fr-map-568x320.png
+?? docs/v0.6/previews/v3/fr-menu-1280x720.png
+?? docs/v0.6/previews/v3/fr-menu-568x320.png
+?? docs/v0.6/previews/v3/review-ar-1280x720.png
+?? docs/v0.6/previews/v3/review-ar-568x320.png
+?? docs/v0.6/previews/v3/review-en-1280x720.png
+?? docs/v0.6/previews/v3/review-en-568x320.png
+?? docs/v0.6/previews/v3/review-fr-1280x720.png
+?? docs/v0.6/previews/v3/review-fr-568x320.png
+?? docs/v0.6/previews/v5/ar-customize-1280x720.png
+?? docs/v0.6/previews/v5/ar-customize-568x320.png
+?? docs/v0.6/previews/v5/ar-default-1280x720.png
+?? docs/v0.6/previews/v5/ar-default-568x320.png
+?? docs/v0.6/previews/v5/ar-left-handed-1280x720.png
+?? docs/v0.6/previews/v5/ar-left-handed-568x320.png
+?? docs/v0.6/previews/v5/ar-preview-1280x720.png
+?? docs/v0.6/previews/v5/ar-preview-568x320.png
+?? docs/v0.6/previews/v5/en-customize-1280x720.png
+?? docs/v0.6/previews/v5/en-customize-568x320.png
+?? docs/v0.6/previews/v5/en-default-1280x720.png
+?? docs/v0.6/previews/v5/en-default-568x320.png
+?? docs/v0.6/previews/v5/en-left-handed-1280x720.png
+?? docs/v0.6/previews/v5/en-left-handed-568x320.png
+?? docs/v0.6/previews/v5/en-portrait-editor.png
+?? docs/v0.6/previews/v5/en-preview-1280x720.png
+?? docs/v0.6/previews/v5/en-preview-568x320.png
+?? docs/v0.6/previews/v5/hud-regression/ar-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/ar-cards-320x568.png
+?? docs/v0.6/previews/v5/hud-regression/en-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/en-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v5/hud-regression/en-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v5/hud-regression/report.json
+?? docs/v0.6/previews/v5/report.json
+?? docs/v0.6/previews/v5/viewport-regression/ar-1024x768-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/ar-2400x1080-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/ar-3440x1440-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/ar-568x320-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/ar-640x360-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/ar-800x360-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/ar-960x540-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-1024x768-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-2400x1080-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-3440x1440-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-568x320-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-640x360-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-800x360-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/en-960x540-cutout.png
+?? docs/v0.6/previews/v5/viewport-regression/report.json
+?? docs/v0.6/previews/v6/hud-regression/ar-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/ar-cards-320x568.png
+?? docs/v0.6/previews/v6/hud-regression/en-1280x720-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-1280x720-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-1280x720-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-1280x720-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-320x568-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-320x568-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-320x568-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-320x568-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-568x320-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-568x320-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-568x320-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-568x320-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-800x360-ally-locked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-800x360-ally-locked-slots-unlocked.png
+?? docs/v0.6/previews/v6/hud-regression/en-800x360-ally-unlocked-slots-locked.png
+?? docs/v0.6/previews/v6/hud-regression/en-800x360-ally-unlocked-slots-unlocked.png
+?? docs/v0.6/previews/v6/settings-regression/ar-pause-568x320.png
+?? docs/v0.6/previews/v6/settings-regression/ar-pause-settings-568x320.png
+?? docs/v0.6/previews/v6/settings-regression/ar-settings-1280x720-off.png
+?? docs/v0.6/previews/v6/settings-regression/ar-settings-1280x720-on.png
+?? docs/v0.6/previews/v6/settings-regression/ar-settings-320x568-off.png
+?? docs/v0.6/previews/v6/settings-regression/ar-settings-320x568-on.png
+?? docs/v0.6/previews/v6/settings-regression/ar-settings-568x320-off.png
+?? docs/v0.6/previews/v6/settings-regression/ar-settings-568x320-on.png
+?? docs/v0.6/previews/v6/settings-regression/en-pause-568x320.png
+?? docs/v0.6/previews/v6/settings-regression/en-pause-settings-568x320.png
+?? docs/v0.6/previews/v6/settings-regression/en-settings-1280x720-off.png
+?? docs/v0.6/previews/v6/settings-regression/en-settings-1280x720-on.png
+?? docs/v0.6/previews/v6/settings-regression/en-settings-320x568-off.png
+?? docs/v0.6/previews/v6/settings-regression/en-settings-320x568-on.png
+?? docs/v0.6/previews/v6/settings-regression/en-settings-568x320-off.png
+?? docs/v0.6/previews/v6/settings-regression/en-settings-568x320-on.png
+?? docs/v0.6/previews/v6/settings-regression/fr-pause-568x320.png
+?? docs/v0.6/previews/v6/settings-regression/fr-pause-settings-568x320.png
+?? docs/v0.6/previews/v6/settings-regression/fr-settings-1280x720-off.png
+?? docs/v0.6/previews/v6/settings-regression/fr-settings-1280x720-on.png
+?? docs/v0.6/previews/v6/settings-regression/fr-settings-320x568-off.png
+?? docs/v0.6/previews/v6/settings-regression/fr-settings-320x568-on.png
+?? docs/v0.6/previews/v6/settings-regression/fr-settings-568x320-off.png
+?? docs/v0.6/previews/v6/settings-regression/fr-settings-568x320-on.png
+?? docs/v0.6/previews/v6/staged/ar-loading-1280x720.png
+?? docs/v0.6/previews/v6/staged/ar-loading-568x320.png
+?? docs/v0.6/previews/v6/staged/ar-optional-failure.png
+?? docs/v0.6/previews/v6/staged/critical-failure.png
+?? docs/v0.6/previews/v6/staged/en-loading-1280x720.png
+?? docs/v0.6/previews/v6/staged/en-loading-568x320.png
+?? docs/v0.6/previews/v6/staged/fr-loading-1280x720.png
+?? docs/v0.6/previews/v6/staged/fr-loading-568x320.png
+?? docs/v0.6/previews/v6/staged/report.json
+?? docs/v0.6/previews/v7/pacing/before-more.json
+?? docs/v0.6/previews/v7/pacing/before.json
+?? docs/v0.6/previews/v7/pacing/pilot-1-mage-hunter.json
+?? docs/v0.6/previews/v7/pacing/pilot-1.json
+?? docs/v0.6/previews/v7/pacing/pilot-2-fixed.json
+?? docs/v0.6/previews/v7/pacing/pilot-2.json
+?? docs/v0.6/previews/v7/pacing/pilot-3.json
+?? docs/v0.6/previews/v7/pacing/pilot-4.json
+?? docs/v0.6/previews/v7/readability/ar-1280x720-always.png
+?? docs/v0.6/previews/v7/readability/ar-1280x720-damaged.png
+?? docs/v0.6/previews/v7/readability/ar-1280x720-off.png
+?? docs/v0.6/previews/v7/readability/ar-568x320-always.png
+?? docs/v0.6/previews/v7/readability/ar-568x320-damaged.png
+?? docs/v0.6/previews/v7/readability/ar-568x320-off.png
+?? docs/v0.6/previews/v7/readability/contact.png
+?? docs/v0.6/previews/v7/readability/en-1280x720-always.png
+?? docs/v0.6/previews/v7/readability/en-1280x720-damaged.png
+?? docs/v0.6/previews/v7/readability/en-1280x720-off.png
+?? docs/v0.6/previews/v7/readability/en-568x320-always.png
+?? docs/v0.6/previews/v7/readability/en-568x320-damaged.png
+?? docs/v0.6/previews/v7/readability/en-568x320-off.png
+?? docs/v0.6/previews/v7/readability/report.json
+?? docs/v0.6/previews/v8/readability/bloodmoon-ar-1280x720.png
+?? docs/v0.6/previews/v8/readability/bloodmoon-ar-568x320.png
+?? docs/v0.6/previews/v8/readability/bloodmoon-en-1280x720.png
+?? docs/v0.6/previews/v8/readability/bloodmoon-en-568x320.png
+?? docs/v0.6/previews/v8/readability/cenote-ar-1280x720.png
+?? docs/v0.6/previews/v8/readability/cenote-ar-568x320.png
+?? docs/v0.6/previews/v8/readability/cenote-en-1280x720.png
+?? docs/v0.6/previews/v8/readability/cenote-en-568x320.png
+?? docs/v0.6/previews/v8/readability/contact.png
+?? docs/v0.6/previews/v8/readability/overgrown-ar-1280x720.png
+?? docs/v0.6/previews/v8/readability/overgrown-ar-568x320.png
+?? docs/v0.6/previews/v8/readability/overgrown-en-1280x720.png
+?? docs/v0.6/previews/v8/readability/overgrown-en-568x320.png
+?? docs/v0.6/previews/v8/readability/report.json
+?? docs/v0.6/previews/v8/roster/baseline.json
+?? docs/v0.6/previews/v8/roster/full-roster.json
+?? docs/v0.6/previews/v8/roster/pilot.json
+?? docs/v0.6/previews/v8/roster/verified-roster.json
+?? docs/v0.6/previews/v8/staged/loading/ar-loading-1280x720.png
+?? docs/v0.6/previews/v8/staged/loading/ar-loading-568x320.png
+?? docs/v0.6/previews/v8/staged/loading/ar-optional-failure.png
+?? docs/v0.6/previews/v8/staged/loading/critical-failure.png
+?? docs/v0.6/previews/v8/staged/loading/en-loading-1280x720.png
+?? docs/v0.6/previews/v8/staged/loading/en-loading-568x320.png
+?? docs/v0.6/previews/v8/staged/loading/fr-loading-1280x720.png
+?? docs/v0.6/previews/v8/staged/loading/fr-loading-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/ar-pause-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/ar-pause-settings-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/ar-settings-1280x720-off.png
+?? docs/v0.6/previews/v8/staged/settings/ar-settings-1280x720-on.png
+?? docs/v0.6/previews/v8/staged/settings/ar-settings-320x568-off.png
+?? docs/v0.6/previews/v8/staged/settings/ar-settings-320x568-on.png
+?? docs/v0.6/previews/v8/staged/settings/ar-settings-568x320-off.png
+?? docs/v0.6/previews/v8/staged/settings/ar-settings-568x320-on.png
+?? docs/v0.6/previews/v8/staged/settings/en-pause-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/en-pause-settings-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/en-settings-1280x720-off.png
+?? docs/v0.6/previews/v8/staged/settings/en-settings-1280x720-on.png
+?? docs/v0.6/previews/v8/staged/settings/en-settings-320x568-off.png
+?? docs/v0.6/previews/v8/staged/settings/en-settings-320x568-on.png
+?? docs/v0.6/previews/v8/staged/settings/en-settings-568x320-off.png
+?? docs/v0.6/previews/v8/staged/settings/en-settings-568x320-on.png
+?? docs/v0.6/previews/v8/staged/settings/fr-pause-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/fr-pause-settings-568x320.png
+?? docs/v0.6/previews/v8/staged/settings/fr-settings-1280x720-off.png
+?? docs/v0.6/previews/v8/staged/settings/fr-settings-1280x720-on.png
+?? docs/v0.6/previews/v8/staged/settings/fr-settings-320x568-off.png
+?? docs/v0.6/previews/v8/staged/settings/fr-settings-320x568-on.png
+?? docs/v0.6/previews/v8/staged/settings/fr-settings-568x320-off.png
+?? docs/v0.6/previews/v8/staged/settings/fr-settings-568x320-on.png
+?? docs/v0.6/references/ref-bug-settings-arabic-toggles.jpeg
+?? docs/v0.6/references/ref-map-props-buildings-sheet.jpeg
+?? docs/v0.6/references/ref-map-trees-bushes-rocks-ground.jpeg
+?? docs/v0.6/references/ref-markup-hud.jpeg
+?? docs/v0.6/references/ref-markup-main-menu.jpeg
+?? docs/v0.6/references/ref-ui-gameover-current.jpeg
+?? docs/v0.6/references/ref-ui-hero-select-TARGET.jpeg
+?? docs/v0.6/references/ref-ui-map-select-TARGET.jpeg
+?? docs/v0.6/v06_design.json
+?? public/assets/branding/logo-new-original.jpeg
+?? public/assets/pixel/fx/ambush/accent.png
+?? public/assets/pixel/fx/ambush/main.png
+?? public/assets/pixel/fx/bodyguard/proc.png
+?? public/assets/pixel/fx/bounty-contract/proc.png
+?? public/assets/pixel/fx/bulwark-wall/accent.png
+?? public/assets/pixel/fx/bulwark-wall/main.png
+?? public/assets/pixel/fx/clay-bomb/accent.png
+?? public/assets/pixel/fx/clay-bomb/main.png
+?? public/assets/pixel/fx/cleansing-light/accent.png
+?? public/assets/pixel/fx/cleansing-light/main.png
+?? public/assets/pixel/fx/execute/accent.png
+?? public/assets/pixel/fx/execute/main.png
+?? public/assets/pixel/fx/ground-slam/accent.png
+?? public/assets/pixel/fx/ground-slam/main.png
+?? public/assets/pixel/fx/guardian-link/proc.png
+?? public/assets/pixel/fx/healing-circle/accent.png
+?? public/assets/pixel/fx/healing-circle/main.png
+?? public/assets/pixel/fx/jade-ward/accent.png
+?? public/assets/pixel/fx/jade-ward/main.png
+?? public/assets/pixel/fx/lifebond/accent.png
+?? public/assets/pixel/fx/lifebond/main.png
+?? public/assets/pixel/fx/radiant-beacon/accent.png
+?? public/assets/pixel/fx/radiant-beacon/main.png
+?? public/assets/pixel/fx/relentless-pursuit/proc.png
+?? public/assets/pixel/fx/sacred-fervor/proc.png
+?? public/assets/pixel/fx/sanctuary-dome/accent.png
+?? public/assets/pixel/fx/sanctuary-dome/main.png
+?? public/assets/pixel/fx/saving-grace/proc.png
+?? public/assets/pixel/fx/shield-bash/accent.png
+?? public/assets/pixel/fx/shield-bash/main.png
+?? public/assets/pixel/fx/shield-throw/accent.png
+?? public/assets/pixel/fx/shield-throw/main.png
+?? public/assets/pixel/fx/silencing-dart/accent.png
+?? public/assets/pixel/fx/silencing-dart/main.png
+?? public/assets/pixel/fx/smoke-bomb/accent.png
+?? public/assets/pixel/fx/smoke-bomb/main.png
+?? public/assets/pixel/fx/vanish/accent.png
+?? public/assets/pixel/fx/vanish/main.png
+?? public/assets/pixel/fx/venom-blade/accent.png
+?? public/assets/pixel/fx/venom-blade/main.png
+?? public/assets/pixel/fx/war-cry/accent.png
+?? public/assets/pixel/fx/war-cry/main.png
+?? public/assets/ui/menu/guide_en_button.jpeg
+?? public/assets/ui/menu/intro_en_button.jpeg
+?? public/assets/ui/menu/language_ar_button.jpeg
+?? public/assets/ui/menu/language_en_button.jpeg
+?? public/assets/ui/menu/language_fr_button.jpeg
+?? public/assets/ui/menu/play_en_button.jpeg
+?? public/assets/ui/menu/settings_en_button.jpeg
+?? public/assets/ui/menu/shop_en_button.jpeg
+?? public/assets/ui/menu/upgrade_en_button.jpeg
+?? scripts/generate-audio-elevenlabs.mjs
+?? scripts/hud-editor-playtest.mjs
+?? scripts/prepare-ally-fx-sheets.mjs
+?? scripts/v06-enemies-playtest.mjs
+?? scripts/v06-enemy-pacing.mjs
+?? scripts/v19-runtime-playtest.mjs
+?? scripts/v19-suite.mjs
+?? src/hud-layout.css
+?? src/systems/HudLayout.js
+?? src/systems/HudLayoutRuntime.js
+?? src/ui/HudEditor.js
+?? tests/hud-layout.test.js
+```

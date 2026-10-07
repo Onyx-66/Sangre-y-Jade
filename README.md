@@ -4,7 +4,7 @@ A Maya-inspired fantasy survivor roguelite built with Phaser 3.90 and Vite. Play
 
 ## This revision
 
-- Screen-fitting hero/map/mode/control setup, without step numbers or scrolling. Continue and Back remain visible at every tested viewport (320×568 portrait through desktop, including 568×320 landscape).
+- Screen-fitting Training setup: choose a hero and map, then a 10- or 20-minute duration and attack controls. Continue and Back remain visible at every tested viewport (320×568 portrait through desktop, including 568×320 landscape).
 - Four hero active skills (Q/E/R/T). When full, drafts offer two equipped upgrades and one new skill with a cancelable replacement picker. Max-rank upgrade positions become stat choices.
 - Choose one original Saintess, Tank, or Assassin at level 5. Each has ten distinct support skills, three equipped and automatic at once. Skill ranks track hero levels; later levels allow a support-skill replacement or keeping the loadout.
 - Contact-opening urns/baskets and close-range pickup collection; attacks are no longer required to collect loot.
@@ -12,7 +12,7 @@ A Maya-inspired fantasy survivor roguelite built with Phaser 3.90 and Vite. Play
 
 Retained from v0.4:
 
-- Sequential setup: hero → map → mode → attack settings and run summary.
+- Sequential Training setup: hero → map → Training duration → attack settings and run summary.
 - Mirrored Arabic menu artwork and SVG settings/language icons (the old Arabic font is superseded by the v0.6 typography below).
 - Six independently generated high-resolution prologue illustrations and an English synthetic male narrator. French/Arabic subtitles remain available. A first tap enables browser audio.
 - Standalone animation-frame files and repaired square skill icons; original atlases remain recoverable in `art-source/runtime-atlases/`.
