@@ -54,6 +54,8 @@ export class EnemyBehaviorSystem {
   // A finite-map generator can supply the query later. Until then explicit test
   // water zones and the Spirit's blue puddles are the only water on the map.
   isWaterAt(point,margin=0) {
+    if((point.getData?.('level')||point.level||0)!==0||(point.getData?.('elevation')||0)>0)return false;
+    if(this.scene.water&&this.scene.water.at(point).kind!=='dry')return true;
     if(this.scene.isWaterAt?.(point,margin))return true;
     return [...(this.scene.waterZones||[]),...this.puddles].some(zone=>(zone.until===undefined||zone.until>this.scene.elapsed)&&distance(point,zone)<=(zone.radius||0)+margin);
   }

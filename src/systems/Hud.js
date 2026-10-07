@@ -7,6 +7,8 @@ import { SLOT_RULES } from './SkillDraft.js';
 import { passiveStateMarkup, passiveStateText, levelPips, cardKind, escapeHtml, INNATE_HUD } from './PassiveState.js';
 import { renderSettingsPanel, controlsMarkup } from '../ui/SettingsPanel.js';
 import { BossBar } from '../ui/BossPresentation.js';
+import { HudLayoutRuntime } from './HudLayoutRuntime.js';
+import { HudEditor } from '../ui/HudEditor.js';
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
 export class Hud {
@@ -18,6 +20,7 @@ export class Hud {
     this.cooldowns = Array(SLOT_RULES.active.keys.length).fill(0);
     this.attackHeld=false;
     this.mount();
+    this.layoutRuntime = new HudLayoutRuntime(this,callbacks.hudLayouts);
   }
 
   mount() {
@@ -116,30 +119,47 @@ export class Hud {
       const scale = Math.min(1, radius / length);
       const x = dx * scale;
       const y = dy * scale;
-      this.move.x = clamp(dx / radius, -1, 1);
-      this.move.y = clamp(dy / radius, -1, 1);
+      const deadZone=this.layoutRuntime?.layout?.joystick.deadZone??.12;
+      this.move.x = Math.hypot(dx,dy)/radius<deadZone?0:clamp(dx / radius, -1, 1);
+      this.move.y = Math.hypot(dx,dy)/radius<deadZone?0:clamp(dy / radius, -1, 1);
       if (Math.hypot(this.move.x, this.move.y) > 1) {
         const norm = Math.hypot(this.move.x, this.move.y);
         this.move.x /= norm; this.move.y /= norm;
       }
-      this.knob.style.transform = `translate(${x}px, ${y}px)`;
+      const layoutScale=this.layoutRuntime?.layout?.elements.joystick.scale||1;
+      this.knob.style.transform = `translate(${this.move.x?x/layoutScale:0}px, ${this.move.y?y/layoutScale:0}px)`;
     };
     const release = (event) => {
       if (activeId !== event.pointerId) return;
       activeId = null;
       this.move.x = 0; this.move.y = 0;
       this.knob.style.transform = '';
+      this.layoutRuntime?.restoreJoystick();
       try { this.joy.releasePointerCapture(event.pointerId); } catch { /* already released */ }
     };
-    this.joy.addEventListener('pointerdown', (event) => {
+    const start = (event) => {
+      if(this.editingHud||activeId!==null)return;
       event.preventDefault();
       activeId = event.pointerId;
       this.joy.setPointerCapture(event.pointerId);
       move(event);
-    });
+    };
+    this.joy.addEventListener('pointerdown', start);
     this.joy.addEventListener('pointermove', move);
     this.joy.addEventListener('pointerup', release);
     this.joy.addEventListener('pointercancel', release);
+    this.joy.addEventListener('lostpointercapture',release);
+    this.releaseJoystick=()=>{const pointerId=activeId;if(pointerId!=null)release({pointerId});};
+    this.onJoystickBlur=()=>this.releaseJoystick();window.addEventListener('blur',this.onJoystickBlur);
+    this.onFloatingPointer=event=>{
+      const runtime=this.layoutRuntime;if(!runtime?.layout||runtime.layout.joystick.mode!=='floating'||this.editingHud||this.el.querySelector('.modal-backdrop'))return;
+      if(!event.target.matches('canvas')||activeId!==null)return;
+      const midpoint=runtime.safe.x+runtime.safe.width/2,base=runtime.wrappers.get('joystick').getBoundingClientRect();
+      // Floating input follows the saved side, including the Left-handed preset.
+      if((event.clientX<midpoint)!==(base.x+base.width/2<midpoint))return;
+      runtime.floatingAt(event.clientX,event.clientY);start(event);
+    };
+    document.addEventListener('pointerdown',this.onFloatingPointer);
   }
 
   setHero(hero) {
@@ -182,6 +202,7 @@ export class Hud {
     indicator.setAttribute('aria-label',indicator.dataset.tooltip);
     indicator.title=indicator.dataset.tooltip;
     this.el.querySelector('[data-attack]').hidden=!manual;
+    this.layoutRuntime?.syncVisibility('attack');
   }
 
   setPassives(slots, count = SLOT_RULES.passive.start) {
@@ -295,6 +316,7 @@ export class Hud {
 
   clearBoss() {
     this.boss.hidden = true;
+    this.layoutRuntime?.syncVisibility('boss-bar');
   }
 
   toast(message) {
@@ -359,7 +381,7 @@ export class Hud {
       {label:'Back',id:'skills-back',action:onBack},{className:'skills-readonly',readOnly:true});
   }
 
-  showPause(onResume, onExit, onSkills, onSettings, onHelp) {
+  showPause(onResume, onExit, onSkills, onSettings, onHelp, onHudEdit) {
     if (this.el.querySelector('.modal-backdrop')) return;
     const overlay = document.createElement('div');
     overlay.className = 'modal-backdrop pause-menu';
@@ -369,27 +391,34 @@ export class Hud {
         <h2>Paused</h2>
         <p class="panel-subtitle">${t('Training · The game is paused.')}</p>
         <div class="pause-actions"><div class="pause-first-row"><button class="btn primary" data-resume>Resume</button><button class="btn ghost" data-settings>Settings</button></div>${onSkills?'<button class="btn ghost" data-skills>Skills</button>':''}<button class="btn ghost" data-help>How to Play</button><button class="btn danger" data-exit>Quit to Menu</button></div>
+        ${onHudEdit?'<button type="button" class="btn ghost small" data-edit-hud>Edit HUD layout</button>':''}
       </section>`;
     overlay.querySelector('[data-resume]').addEventListener('click', () => { overlay.remove(); onResume(); });
     overlay.querySelector('[data-exit]').addEventListener('click', () => { overlay.remove(); onExit(); });
     overlay.querySelector('[data-skills]')?.addEventListener('click',()=>{overlay.remove();onSkills();});
     overlay.querySelector('[data-settings]').addEventListener('click',()=>{overlay.remove();onSettings?.();});
     overlay.querySelector('[data-help]').addEventListener('click',()=>{overlay.remove();onHelp?.();});
+    overlay.querySelector('[data-edit-hud]')?.addEventListener('click',()=>{overlay.remove();onHudEdit();});
     this.el.append(overlay);
     overlay.querySelector('[data-resume]').focus();
     translateDOM(overlay);
     return overlay;
   }
 
-  showSettings(onChange,onBack) {
+  showSettings(onChange,onBack,onHudEdit) {
     const overlay=document.createElement('div');overlay.className='modal-backdrop pause-settings';
     overlay.dir=getLanguage()==='ar'?'rtl':'ltr';
     overlay.innerHTML='<section class="modal settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title"></section>';
     renderSettingsPanel(overlay.querySelector('.settings-panel'),this.settings,{
-      onChange,onClose:()=>{overlay.remove();onBack();},closeLabel:'Back',onSound:id=>this.callbacks.settingsSound?.(id),
+      onChange,onClose:()=>{overlay.remove();onBack();},onHudEdit,closeLabel:'Back',onSound:id=>this.callbacks.settingsSound?.(id),
     });
     this.el.append(overlay);overlay.querySelector('[data-back]').focus();
     return overlay;
+  }
+
+  showHudEditor(onSave,onBack) {
+    this.callbacks.settingsSound?.();
+    return new HudEditor(this.layoutRuntime,{onSave,onClose:onBack}).el;
   }
 
   showHelp(onBack) {
@@ -402,6 +431,11 @@ export class Hud {
   }
 
   destroy() {
+    this.editor?.destroy();
+    this.releaseJoystick?.();
+    this.layoutRuntime?.destroy();
+    document.removeEventListener('pointerdown',this.onFloatingPointer);
+    window.removeEventListener('blur',this.onJoystickBlur);
     clearTimeout(this.tooltipTimer);
     this.unlockTimers?.forEach(clearTimeout);
     // Remove only this HUD. Phaser may finish scene shutdown one frame after the

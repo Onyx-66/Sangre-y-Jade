@@ -15,7 +15,7 @@ export function skillContext(scene, skill) {
   const baseOrbiters = skill.params?.orbiters;
   const baseCharges = skill.params?.charges;
   const hasCount = [baseProjectiles, baseChains, baseOrbiters, baseCharges].some((count) => count !== undefined);
-  const radiusScale=scene.stats.range*areaScale*(scene.hasGear('bone-bracers')?1.25:1);
+  const radiusScale=scene.stats.range*areaScale*(scene.hasGear('bone-bracers')?1.25:1)*(scene.water?.range??1);
   const range = (skill.range || 0) * radiusScale;
   const target = scene.closestEnemy(scene.player.x, scene.player.y, Math.max(range, 680));
   const aim = scene.getAimAngle(target);

@@ -1,0 +1,392 @@
+{
+  "checks": [
+    {
+      "label": "default preserves painted CSS boxes and keeps inactive bars hidden",
+      "passed": true
+    },
+    {
+      "label": "editor freezes the real game",
+      "passed": true
+    },
+    {
+      "label": "editor does not advance timer or movement",
+      "passed": true
+    },
+    {
+      "label": "Save and Cancel remain visible on a landscape phone without toolbar scrolling",
+      "passed": true
+    },
+    {
+      "label": "all 18 registered element handles including breath exist",
+      "passed": true
+    },
+    {
+      "label": "required joystick cannot be hidden",
+      "passed": true
+    },
+    {
+      "label": "nudge is precisely 1px with drag snapping enabled",
+      "passed": true
+    },
+    {
+      "label": "Undo restores position",
+      "passed": true
+    },
+    {
+      "label": "Redo restores nudge",
+      "passed": true
+    },
+    {
+      "label": "mouse drag moves the live joystick",
+      "passed": true
+    },
+    {
+      "label": "locked element disables nudges",
+      "passed": true
+    },
+    {
+      "label": "locked element ignores keyboard movement",
+      "passed": true
+    },
+    {
+      "label": "keyboard arrow nudge works",
+      "passed": true
+    },
+    {
+      "label": "boss exposes position and scale only",
+      "passed": true
+    },
+    {
+      "label": "group nudge moves all four slots together",
+      "passed": true
+    },
+    {
+      "label": "export has a versioned/checksummed code",
+      "passed": true
+    },
+    {
+      "label": "tampered import reports error without destroying draft",
+      "passed": true
+    },
+    {
+      "label": "valid import restores live draft geometry",
+      "passed": true
+    },
+    {
+      "label": "Save blocks hidden required controls with a message",
+      "passed": true
+    },
+    {
+      "label": "Save returns to pause without resuming",
+      "passed": true
+    },
+    {
+      "label": "Save writes landscape without populating portrait",
+      "passed": true
+    },
+    {
+      "label": "Cancel restores the saved HUD",
+      "passed": true
+    },
+    {
+      "label": "actual Android Back from editor returns to paused Settings",
+      "passed": true
+    },
+    {
+      "label": "Back from Settings returns to pause",
+      "passed": true
+    },
+    {
+      "label": "Resume restarts the same game",
+      "passed": true
+    },
+    {
+      "label": "orientation switch restores independent landscape draft",
+      "passed": true
+    },
+    {
+      "label": "portrait draft saves independently",
+      "passed": true
+    },
+    {
+      "label": "touch drag moves joystick and skill buttons substantially",
+      "passed": true
+    },
+    {
+      "label": "real moved joystick touch moves the Phaser player",
+      "passed": true
+    },
+    {
+      "label": "moved active button touch really casts the equipped skill",
+      "passed": true
+    },
+    {
+      "label": "sample touch respects the chosen dead zone",
+      "passed": true
+    },
+    {
+      "label": "floating joystick appears at touched arena location",
+      "passed": true
+    },
+    {
+      "label": "floating joystick returns to saved anchor on release",
+      "passed": true
+    },
+    {
+      "label": "left-handed floating joystick responds on the right side",
+      "passed": true
+    },
+    {
+      "label": "saved layout reloads from storage in a new real run",
+      "passed": true
+    },
+    {
+      "label": "en 568: editor panel fits without horizontal overflow",
+      "passed": true
+    },
+    {
+      "label": "optional visibility toggle updates the live HUD",
+      "passed": true
+    },
+    {
+      "label": "joystick can reach 10 percent opacity",
+      "passed": true
+    },
+    {
+      "label": "size can reach 200 percent within safe area",
+      "passed": true
+    },
+    {
+      "label": "Preview hides handles and controls covering the HUD",
+      "passed": true
+    },
+    {
+      "label": "en 568 Default: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en-default-568x320: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "en 568 Left-handed: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en-left-handed-568x320: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "en 568 Minimal: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en 568 Large: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en 568 Compact: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en 1280: editor panel fits without horizontal overflow",
+      "passed": true
+    },
+    {
+      "label": "optional visibility toggle updates the live HUD",
+      "passed": true
+    },
+    {
+      "label": "joystick can reach 10 percent opacity",
+      "passed": true
+    },
+    {
+      "label": "size can reach 200 percent within safe area",
+      "passed": true
+    },
+    {
+      "label": "Preview hides handles and controls covering the HUD",
+      "passed": true
+    },
+    {
+      "label": "en 1280 Default: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en-default-1280x720: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "en 1280 Left-handed: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en-left-handed-1280x720: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "en 1280 Minimal: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en 1280 Large: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "en 1280 Compact: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar 568: editor panel fits without horizontal overflow",
+      "passed": true
+    },
+    {
+      "label": "ar 568: panel mirrors to the left",
+      "passed": true
+    },
+    {
+      "label": "optional visibility toggle updates the live HUD",
+      "passed": true
+    },
+    {
+      "label": "joystick can reach 10 percent opacity",
+      "passed": true
+    },
+    {
+      "label": "size can reach 200 percent within safe area",
+      "passed": true
+    },
+    {
+      "label": "Preview hides handles and controls covering the HUD",
+      "passed": true
+    },
+    {
+      "label": "ar 568 Default: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar-default-568x320: physical HUD identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-default-568x320: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "ar 568 Left-handed: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar-left-handed-568x320: physical HUD identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-left-handed-568x320: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "ar 568 Minimal: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar 568 Large: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar 568 Compact: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar 1280: editor panel fits without horizontal overflow",
+      "passed": true
+    },
+    {
+      "label": "ar 1280: panel mirrors to the left",
+      "passed": true
+    },
+    {
+      "label": "optional visibility toggle updates the live HUD",
+      "passed": true
+    },
+    {
+      "label": "joystick can reach 10 percent opacity",
+      "passed": true
+    },
+    {
+      "label": "size can reach 200 percent within safe area",
+      "passed": true
+    },
+    {
+      "label": "Preview hides handles and controls covering the HUD",
+      "passed": true
+    },
+    {
+      "label": "ar 1280 Default: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar-default-1280x720: physical HUD identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-default-1280x720: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "ar 1280 Left-handed: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar-left-handed-1280x720: physical HUD identical to English",
+      "passed": true
+    },
+    {
+      "label": "ar-left-handed-1280x720: editor direction follows language",
+      "passed": true
+    },
+    {
+      "label": "ar 1280 Minimal: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar 1280 Large: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "ar 1280 Compact: constrained 44dp controls",
+      "passed": true
+    },
+    {
+      "label": "main-menu Settings opens the same editor with a HUD preview",
+      "passed": true
+    },
+    {
+      "label": "Android Back cancels main-menu editor and cleans up preview",
+      "passed": true
+    },
+    {
+      "label": "no browser or HTTP errors: ",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    "en-portrait-editor",
+    "en-customize-568x320",
+    "en-preview-568x320",
+    "en-default-568x320",
+    "en-left-handed-568x320",
+    "en-customize-1280x720",
+    "en-preview-1280x720",
+    "en-default-1280x720",
+    "en-left-handed-1280x720",
+    "ar-customize-568x320",
+    "ar-preview-568x320",
+    "ar-default-568x320",
+    "ar-left-handed-568x320",
+    "ar-customize-1280x720",
+    "ar-preview-1280x720",
+    "ar-default-1280x720",
+    "ar-left-handed-1280x720"
+  ]
+}

@@ -78,7 +78,7 @@ test('MapWorld recycles streamed sprites, respects the 350-object cap, and regis
   const firstIds = new Set(world.active.keys());
   assert.ok(world.active.size > 0 && world.active.size <= 350);
   assert.ok(world.lightSources.size > 0);
-  assert.equal(waterSpeedMultiplier(world, { x: -1780, y: 320 }), 0.8);
+  assert.equal(waterSpeedMultiplier(world, { x: -1780, y: 320 }), 0.82);
   assert.equal(waterSpeedMultiplier(world, { x: 0, y: 0 }), 1);
   scene.cameras.main.scrollX = 1360;
   scene.cameras.main.scrollY = 900;

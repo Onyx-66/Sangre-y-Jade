@@ -1,0 +1,4 @@
+/* Fixed internal LTR bubble geometry, independent of menu language. */
+.breath-bar{position:absolute;left:calc(50% - 52px);top:35%;width:104px;height:18px;display:flex;gap:3px;direction:ltr;pointer-events:none;align-items:center;padding:2px;background:#101d2bd9;border-radius:8px;box-sizing:border-box}
+.breath-bar[hidden]{display:none}.breath-bar i{width:9px;height:9px;flex:none;border:1px solid #cffaff;border-radius:50%;background:#55bbdd;box-sizing:border-box}
+.breath-bar.low-air i{background:#ffcf4a;border-color:#fff0ad}

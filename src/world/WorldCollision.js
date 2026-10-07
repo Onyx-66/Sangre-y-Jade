@@ -4,6 +4,7 @@ import { penetration, pushOut, sweepMove, firstWall } from './geometry.js';
 import { advanceStairs, stairCoordinates, stairWaypoint, LEVEL_HEIGHT } from './elevation.js';
 import { hudDepth } from '../render/layers.js';
 import { applyElevation } from './ElevationVisual.js';
+import { waterTraits } from './water.js';
 
 export class WorldCollision {
   constructor(map) {
@@ -18,6 +19,7 @@ export class WorldCollision {
     return state;
   }
   allowed(point,state) {
+    if(state.avoidWater&&!(state.heightLevel>0)&&this.map.scene.water?.waterAt(point.x,point.y,state.level).deep)return false;
     if(state.stairId)return true;
     // Stair rails are impassable from the sides on either connected floor.
     for(const stair of this.stairs){const c=stairCoordinates(point,stair);
@@ -29,6 +31,8 @@ export class WorldCollision {
     if(!actor?.active)return;
     const state=this.track(actor,options),from={x:state.x,y:state.y},wanted={x:actor.x,y:actor.y+state.footOffset};
     if(state.flier){Object.assign(state,wanted);return;}
+    const water=this.map.scene.water,traits=waterTraits(actor),isEnemy=actor!==this.map.scene.player&&actor!==this.map.scene.companion?.sprite;
+    state.avoidWater=!!(water&&isEnemy&&!traits.swimmer&&!traits.boss&&!water.forced(actor)&&!water.waterAt(from.x,from.y,state.level).deep);
     const forced=Boolean(actor.getData?.('knockbackUntil')>this.map.scene.elapsed||actor.getData?.('knockback'));
     const transition=advanceStairs(state,from,wanted,this.stairs,{radius:state.radius,knockback:forced});
     const position=sweepMove(from,transition.position,state.radius,this.query,state.level,p=>this.allowed(p,transition));

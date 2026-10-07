@@ -69,13 +69,13 @@ test('real Cenote textures load once with colored light metadata and preserved f
   assert.ok(kit.items.find(x=>x.id==='barrel-wet').breakable);
 });
 
-test('generator ground regions match both gameplay lake boundaries and preserve exactly 20 percent slow',()=>{
+test('generator ground regions match lake boundaries and B3 shallow movement is 82 percent',()=>{
   const layout=generateMapLayout('cenote',kit,12),world={waterZones:layout.waterZones,isWaterAt:MapWorld.prototype.isWaterAt};
   assert.equal(layout.groundRegions.length,6);
   for(const zone of layout.waterZones){
     const water=layout.groundRegions.find(x=>x.kind==='water'&&x.x===zone.x);
     assert.equal(water.radius,zone.radius);assert.equal(water.y,zone.y);assert.equal(water.tile,'shallow-water');
-    assert.equal(waterSpeedMultiplier(world,zone),.8);
+    assert.equal(waterSpeedMultiplier(world,zone),.82);
     assert.equal(waterSpeedMultiplier(world,{x:zone.x+zone.radius+1,y:zone.y}),1);
   }
 });

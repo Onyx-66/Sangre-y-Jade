@@ -331,6 +331,7 @@ export class WeatherDirector {
     sprite.weatherEmitter = emitter; sprite.weatherAge = 0; sprite.weatherLife = between(this.rng, emitter.life || [2, 4]);
     sprite.weatherVX = between(this.rng, emitter.vx || [-10, 10]); sprite.weatherVY = between(this.rng, emitter.vy || [-10, 10]);
     sprite.weatherAlpha = emitter.alpha ?? 0.5; emitter.live++; this.liveParticles.add(sprite);
+    if(id==='rain-splash')this.scene.water?.rainRipple(x,y);
     return true;
   }
 

@@ -9,6 +9,7 @@ export function resolveAudio(id, catalog, language = 'en') {
   if (catalog[id]) return id;
   const candidates = [id.replace(/^enemy-/, 'sfx/enemies/'), id.replace(/^boss-/, 'sfx/bosses/').replace(/-(entry|phase|death)-cast$/, '-$1'), `sfx/core/${id}`, `sfx/ui/${id}`, `sfx/ambience/${id}`, `voice/${language}/${id}`];
   if (/^ally-/.test(id)) candidates.unshift(/-cast$/.test(id) ? 'sfx/ui/ally-cast' : /saintess/.test(id) ? 'sfx/core/spell' : 'sfx/core/slash');
+  candidates.push(`sfx/water/${id}`,`sfx/steps/${id}`);
   return candidates.find(key => catalog[key]) || null;
 }
 

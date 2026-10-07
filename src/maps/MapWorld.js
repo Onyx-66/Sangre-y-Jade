@@ -22,7 +22,7 @@ export function stuckRecovery(seconds, moved) {
 }
 
 export function waterSpeedMultiplier(mapWorld, point) {
-  return mapWorld?.isWaterAt(point) ? 0.8 : 1;
+  return mapWorld?.isWaterAt(point) ? 0.82 : 1;
 }
 
 function rectFor(item) {
@@ -317,6 +317,8 @@ export class MapWorld {
   }
 
   isWaterAt(point, margin = 0) {
+    if((point.getData?.('level')||point.level||0)!==0)return false;
+    if(this.scene?.water&&!margin)return this.scene.water.at(point).kind!=='dry';
     return this.waterZones.some(zone => Math.hypot(point.x - zone.x, point.y - zone.y) <= zone.radius + margin);
   }
 

@@ -1,4 +1,6 @@
 export const hudEditorMessages = [
+ ['Breath','Souffle','النَّفَس'], // TODO native review
+ ['Reduce effects','Réduire les effets','تقليل المؤثرات'], // TODO native review
  ['HUD','Interface','الواجهة'], // TODO native review
  ['HUD layout','Disposition de l’interface','تخطيط الواجهة'], // TODO native review
  ['Customize','Personnaliser','تخصيص'], // TODO native review

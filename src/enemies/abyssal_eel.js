@@ -6,5 +6,6 @@ export default {id:'abyssal_eel',update(ctx){const p=attack(ctx,'Dash Zap');
       ctx.scene.damagePlayer((p.damage+extra)*(ctx.enemy.getData('disarmUntil')>ctx.scene.elapsed?.55:1),ctx.enemy.x,ctx.enemy.y,ctx.enemy,true);
     };
   }))return;
-  steer(ctx,ctx.angle,ctx.scene.enemySystem?.isWaterAt(ctx.enemy)?ctx.data.waterSpeed*(ctx.speed/ctx.data.speed):ctx.speed);
+  // B3 WaterSystem owns the +25% swimming multiplier; legacy embedders retain V06.
+  steer(ctx,ctx.angle,!ctx.scene.water&&ctx.scene.enemySystem?.isWaterAt(ctx.enemy)?ctx.data.waterSpeed*(ctx.speed/ctx.data.speed):ctx.speed);
 }};

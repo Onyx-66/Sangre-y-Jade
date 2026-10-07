@@ -44,6 +44,7 @@ import { MapWorld, waterSpeedMultiplier } from '../maps/MapWorld.js';
 import { WeatherDirector } from '../weather/WeatherDirector.js';
 import { depthBandName, effectDepth, objectBaseY, setWorldDepth, weatherBackdropDepth, backgroundDepth } from '../render/layers.js';
 import { PlayerOcclusion } from '../render/PlayerOcclusion.js';
+import { WaterSystem } from '../world/WaterSystem.js';
 
 const TAU = Math.PI * 2;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -181,9 +182,11 @@ export class GameScene extends Phaser.Scene {
       support:()=>this.showSupportLoadout(),
       uiSound:name=>this.skillAudio.ui(name),
       settingsSound:id=>{this.audio.unlock?.();if(this.audio.ui)this.audio.ui(id||'button-primary');else this.audio.sfx('click',.04);},
+      hudLayouts: this.options.hudLayouts,
       attack:()=>{if(this.settings.attackMode==='manual' && this.autoTimer<=0 && !this.pausedForChoice)this.autoAttack();},
     });
     this.hud.setHero(hero);
+    this.water = new WaterSystem(this);
     this.bossPresentation = new BossPresentation(this);
     this.bossController = new BossController(this);
     this.cutscenes = new CutsceneDirector(this);
@@ -282,8 +285,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   update(_time, deltaRaw) {
-    if(this.cutscenes?.active){this.cutscenes.update(Math.min(deltaRaw,50)/1000);return;}
-    if (this.ended || this.loadingRun || this.pausedForChoice || !this.player?.active) return;
+    if(this.cutscenes?.active){this.water?.audio.pause();this.cutscenes.update(Math.min(deltaRaw,50)/1000);return;}
+    if (this.ended || this.loadingRun || this.pausedForChoice || !this.player?.active) {this.water?.audio.pause();return;}
     const delta = Math.min(deltaRaw, 50);
     const dt = delta / 1000;
     this.elapsed += dt;
@@ -312,7 +315,9 @@ export class GameScene extends Phaser.Scene {
     updateSkillEffects(this, dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateCompanion(dt);
+    this.water?.heroCurrent(dt);
     this.mapWorld?.collision.update();
+    this.water?.update(dt);
     if(this.pausedForChoice||this.ended)return;
     this.updateVitals(dt);
     this.updateDirector(dt);
@@ -339,13 +344,14 @@ export class GameScene extends Phaser.Scene {
   }
 
   updateMovement(dt) {
+    this.water?.beforeMovement();
     if(this.player.getData('rootUntil')>this.elapsed||this.player.getData('knockupUntil')>this.elapsed){this.player.setVelocity(0,0);return;}
     if(this.eagleFocus&&wantsToMove(this))cancelFocus(this);
     if(this.skillMotion?.effect.active){this.player.setVelocity(0,0);return;}
     const slowUntil=this.player.getData('slowUntil')||0;
     const slowPct=this.player.getData('slowPct')??.5;
     const moveSlow=slowUntil>this.elapsed&&(this.stats.slowImmunityUntil||0)<=this.elapsed?1-clamp(slowPct,0,1):1;
-    const terrainSpeed=waterSpeedMultiplier(this.mapWorld,this.player);
+    const terrainSpeed=this.water?.speed??waterSpeedMultiplier(this.mapWorld,this.player);
     const keyboardX = (this.cursors.left.isDown || this.keys.left.isDown ? -1 : 0) + (this.cursors.right.isDown || this.keys.right.isDown ? 1 : 0);
     const keyboardY = (this.cursors.up.isDown || this.keys.up.isDown ? -1 : 0) + (this.cursors.down.isDown || this.keys.down.isDown ? 1 : 0);
     let x = keyboardX || this.hud.move.x;
@@ -411,6 +417,7 @@ export class GameScene extends Phaser.Scene {
       if(enemy.getData('bossObject')){this.bossController?.updateObject(enemy,dt);setWorldDepth(enemy,objectBaseY(enemy));return;}
       updateEnemyShield(enemy,this.elapsed);
       updateEnemy(this, enemy, dt);
+      this.water?.enemyMotion(enemy,dt);
       setWorldDepth(enemy,objectBaseY(enemy));
     });
   }
@@ -444,7 +451,7 @@ export class GameScene extends Phaser.Scene {
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
       projectile.setDepth(effectDepth(projectile.y,16));
-      if (life <= 0 || Phaser.Math.Distance.Between(projectile.x, projectile.y, this.player.x, this.player.y) > retentionRadius(this,700)) projectile.destroy();
+      if (life <= 0 || Phaser.Math.Distance.Between(projectile.x, projectile.y, this.player.x, this.player.y) > retentionRadius(this,700)) {this.water?.projectileHit(projectile);projectile.destroy();}
     });
     this.enemyProjectiles.children.each((projectile) => {
       if (!projectile?.active) return;
@@ -455,7 +462,7 @@ export class GameScene extends Phaser.Scene {
       projectile.setDepth(effectDepth(projectile.y,15));
       const life = (projectile.getData('life') || 0) - dt;
       projectile.setData('life', life);
-      if (life <= 0) projectile.destroy();
+      if (life <= 0) {this.water?.projectileHit(projectile);projectile.destroy();}
     });
   }
 
@@ -534,8 +541,9 @@ export class GameScene extends Phaser.Scene {
   autoAttack() {
     if(this.ended||this.pausedForChoice)return;
     const weapon = this.heroData.automatic;
+    const attackRange = weapon.range * this.stats.range * (this.water?.range??1);
     const cost = manaCost(this.stats, weapon.mana);
-    const target = this.closestEnemy(this.player.x, this.player.y, weapon.range * this.stats.range);
+    const target = this.closestEnemy(this.player.x, this.player.y, attackRange);
     if(target)target.setData('targetedUntil',this.elapsed+.3);
     if (!target && this.settings.attackMode!=='manual') { this.autoTimer = .12; return; }
     if (this.stats.mana < cost) { this.autoTimer = .18; return; }
@@ -544,13 +552,13 @@ export class GameScene extends Phaser.Scene {
     this.animateCharacter(this.player,this.playerArtKey(),'attack',.24);
     const angle = this.getAimAngle(target);
     if (weapon.type === 'melee') {
-      this.attackCone(angle, weapon.range * this.stats.range, damage, Math.PI * .72, 210);
+      this.attackCone(angle, attackRange, damage, Math.PI * .72, 210);
       this.playEffect(0,this.player.x+Math.cos(angle)*42,this.player.y+Math.sin(angle)*42,150,angle);
-      this.damagePropsInArea(this.player.x + Math.cos(angle) * 45, this.player.y + Math.sin(angle) * 45, weapon.range);
+      this.damagePropsInArea(this.player.x + Math.cos(angle) * 45, this.player.y + Math.sin(angle) * 45, attackRange);
       this.audio.sfx('slash', .08);
     } else {
       const count=fullQuiverCount(this,this.basicAttackCount+1);
-      for(let i=0;i<count;i++)configureProjectile(this,this.fireProjectile(this.player.x,this.player.y,angle+(i-(count-1)/2)*.13,damage,650,weapon.pierce||1,1.2,weapon.color),{basicAttack:true});
+      for(let i=0;i<count;i++)configureProjectile(this,this.fireProjectile(this.player.x,this.player.y,angle+(i-(count-1)/2)*.13,damage,650,weapon.pierce||1,1.2*(this.water?.range??1),weapon.color),{basicAttack:true});
       this.audio.sfx(this.heroData.id === 'kukul' ? 'dart' : 'spell', .07);
     }
     this.autoTimer = weapon.cooldown / (1 + this.stats.haste + this.support.modifiers().haste);
@@ -587,6 +595,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   tryDash() {
+    if(this.water?.at(this.player).deep)return;
     if (this.ended || this.pausedForChoice || this.dash.cooldown > 0) return;
     if(this.player.getData('rootUntil')>this.elapsed||this.player.getData('knockupUntil')>this.elapsed)return;
     let vector = this.lastMove.clone();
@@ -800,7 +809,7 @@ export class GameScene extends Phaser.Scene {
     if (enemy.getData('hp') <= 0) this.killEnemy(enemy, byAlly);
   }
 
-  killEnemy(enemy, byAlly = false) {
+  killEnemy(enemy, byAlly = false, {drowned=false} = {}) {
     if (!enemy.active) return;
     if(enemy.getData('bossObject')){this.bossController?.destroyObject(enemy);return;}
     const x = enemy.x; const y = enemy.y;
@@ -808,12 +817,12 @@ export class GameScene extends Phaser.Scene {
     const wasTopThreat=dangerousEnemy(this.enemies.getChildren(),this.player)===enemy;
     this.playEffect(2,x,y,isBoss?190:68);
     const bossId = enemy.getData('bossId');
-    const xp = enemy.getData('xp') || 5;
+    const xp = (enemy.getData('xp') || 5) * (drowned?.5:1);
     this.enemyVisuals?.die(enemy);
     if(!enemy.getData('isBoss'))this.audio.play?.(`enemy-${enemy.getData('type')}-death`,{x:enemy.x,y:enemy.y});
     this.enemySystem?.interrupt(enemy);this.enemySystem?.removeOwned(enemy);
     this.telegraphs?.cancelOwner(enemy);
-    if(enemy.getData('affix')==='explosive')this.telegraphs?.play({shape:'circle',x,y,radius:90,windup:.6,tag:'death-burst',
+    if(!drowned&&enemy.getData('affix')==='explosive')this.telegraphs?.play({shape:'circle',x,y,radius:90,windup:.6,tag:'death-burst',
       // Intentionally detached: this affix warns AFTER death, unlike live attacks.
       onResolve:()=>{if(Math.hypot(this.player.x-x,this.player.y-y)<=90)this.damagePlayer(18,x,y,{x,y});}});
     if(enemy.getData('markUntil')>this.elapsed&&enemy.getData('markSource')===this.player){
@@ -926,6 +935,8 @@ export class GameScene extends Phaser.Scene {
     if(forcedRadius){const angle=Math.random()*TAU;position=this.mapWorld?.clampInside({x:this.player.x+Math.cos(angle)*forcedRadius,y:this.player.y+Math.sin(angle)*forcedRadius},data.radius)||{x:this.player.x+Math.cos(angle)*forcedRadius,y:this.player.y+Math.sin(angle)*forcedRadius};}
     else if(this.mapWorld&&(!(position.x<view.x||position.x>view.right||position.y<view.y||position.y>view.bottom)||position.x < -2800||position.x>2800||position.y < -2000||position.y>2000))position=this.mapWorld.spawnOutsideView(view,Math.random,160);
     const {x,y}=position;
+    // Non-swimmers never spawn into a drowning trap; a later pack retries.
+    if(this.water&&!data.flier&&!['abyssal_eel','drowned_spirit'].includes(type)&&this.water.waterAt(x,y,spawnOptions.summoner?.getData('level')||0).deep)return null;
     const artKey=this.textures?.exists(`enemy-${type}`)?`enemy-${type}`:`enemy-${ENEMY_ART_FALLBACK[type]||type}`;
     const enemy = this.enemies.get(x, y, artKey);
     if (!enemy) return;
@@ -1374,10 +1385,12 @@ export class GameScene extends Phaser.Scene {
       if(!current())return;
       close();session.back=back;session.overlay=render();
     };
+    const showEditor=back=>navigate(()=>this.hud.showHudEditor(layouts=>{if(current())this.options.onHudLayoutChange?.(layouts);},back),back);
+    const showSettings=()=>navigate(()=>this.hud.showSettings((key,value)=>{if(current())this.options.onSettingsChange?.(key,value);},showPause,()=>showEditor(showSettings)),showPause);
     const showPause=()=>navigate(()=>this.hud.showPause(resume,()=>{if(current()){close();this.pauseSession=null;this.finishRun(false,true);}},
       ()=>navigate(()=>this.hud.showSkills(this.getSkillLoadout(),showPause),showPause),
-      ()=>navigate(()=>this.hud.showSettings((key,value)=>{if(current())this.options.onSettingsChange?.(key,value);},showPause),showPause),
-      ()=>navigate(()=>this.hud.showHelp(showPause),showPause)),resume);
+      showSettings,
+      ()=>navigate(()=>this.hud.showHelp(showPause),showPause),()=>showEditor(showPause)),resume);
     showPause();
   }
 
@@ -1429,6 +1442,7 @@ export class GameScene extends Phaser.Scene {
     this.enemyVisuals?.destroy();
     this.bossVisuals?.destroy();
     this.playerOcclusion?.destroy();
+    this.water?.destroy();
     this.mapWorld?.destroy();
     this.hud?.destroy();
   }

@@ -77,12 +77,12 @@ test('toggle click and Space activation each update the live value exactly once'
 });
 
 test('shared settings content has exactly the existing controls and no English fallback in FR/AR',()=>{
- assert.equal(SETTINGS_CONTROLS.length,16);
- assert.deepEqual(SETTINGS_CONTROLS.filter(c=>c.type==='toggle').map(c=>c.key),['voiceEnabled','screenShake','damageNumbers','reducedMotion','telegraphHighContrast']);
+ assert.equal(SETTINGS_CONTROLS.length,17);
+ assert.deepEqual(SETTINGS_CONTROLS.filter(c=>c.type==='toggle').map(c=>c.key),['voiceEnabled','screenShake','damageNumbers','reducedMotion','reduceEffects','telegraphHighContrast']);
  for(const locale of ['en','fr','ar']){
   setLanguage(locale);const markup=settingsPanelMarkup(DEFAULT_SAVE.settings);
-  assert.equal((markup.match(/data-setting-row=/g)||[]).length,16);
-  assert.equal((markup.match(/role="switch"/g)||[]).length,5);
+  assert.equal((markup.match(/data-setting-row=/g)||[]).length,17);
+  assert.equal((markup.match(/role="switch"/g)||[]).length,6);
   for(const key of [...SETTINGS_CONTROLS.map(c=>c.label),'On','Off',CONTROLS_TEXT]){
    assert.ok(hasTranslation(key,locale),`${locale}: ${key}`);
    if(locale!=='en')assert.notEqual(t(key),key);

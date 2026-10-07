@@ -33,6 +33,8 @@ import { upgradesMarkup } from './ui/UpgradeScreen.js';
 import { kitUrl } from './ui/Kit.js';
 import './ui/menu-update.css';
 import { bindKitNavigation } from './ui/KitNavigation.js';
+import './hud-layout.css';
+import { Hud } from './systems/Hud.js';
 import { waitForGameFonts } from './ui/Typography.js';
 import { renderSettingsPanel } from './ui/SettingsPanel.js';
 import { applySettingChange } from './systems/RuntimeSettings.js';
@@ -163,10 +165,12 @@ class SangreYJadeApp {
       hero, map, mode, gameMode,
       meta: this.save.metaBonuses(),
       settings: { ...this.save.data.settings },
+      hudLayouts: this.save.data.hudLayouts,
       audio: this.audio,
       loading: session,
       uiRoot: this.uiRoot,
       onSettingsChange: (key,value) => applySettingChange({save:this.save,audio:this.audio,scene},key,value),
+      onHudLayoutChange: layouts=>this.save.setHudLayouts(layouts),
       onEnd: (summary) => {
         if(summary.abandoned){this.save.recordRun(summary);this.showTitle();}
         else this.showSummary(summary);
@@ -238,7 +242,18 @@ class SangreYJadeApp {
     renderSettingsPanel($('.settings-panel',screen),this.save.data.settings,{
       onChange:(key,value)=>applySettingChange({save:this.save,audio:this.audio},key,value),
       onClose:()=>this.showTitle(),onSound:id=>this.audio.ui?this.audio.ui(id||'button-primary'):this.clickSound(),
+      onHudEdit:()=>this.openHudEditor(),
     });
+  }
+
+  openHudEditor() {
+    const root=document.createElement('div');root.className='hud-layout-preview';document.body.append(root);
+    const hud=new Hud(root,{...this.save.data.settings,attackMode:'manual'},{skill:()=>{},dash:()=>{},pause:()=>{},attack:()=>{},hudLayouts:this.save.data.hudLayouts});
+    hud.setHero(heroList()[1]);hud.setSkills(heroList()[1].skills.slice(0,4).map(skill=>({...skill,level:1,remaining:0})),4);
+    hud.setStats({hp:100,maxHp:100,mana:80,maxMana:100,xp:30,nextXp:50,level:20,elapsed:0,duration:600,cacao:123,kills:12});
+    const close=()=>{hud.destroy();root.remove();this.cancelHudEditor=null;this.showSettings();this.uiRoot.querySelector('[data-settings-tab=hud]')?.click();};
+    const editor=hud.showHudEditor(layouts=>this.save.setHudLayouts(layouts),close);
+    this.cancelHudEditor=()=>{editor.remove();close();};
   }
 
   showStore() {

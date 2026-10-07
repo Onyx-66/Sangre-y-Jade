@@ -1,0 +1,103 @@
+{
+  "errors": [],
+  "httpErrors": [],
+  "layouts": [
+    {
+      "language": "en",
+      "width": 568,
+      "height": 320,
+      "visible": true,
+      "x": 239.109375,
+      "y": 131.109375,
+      "right": 343.109375,
+      "bottom": 149.109375,
+      "direction": "ltr"
+    },
+    {
+      "language": "en",
+      "width": 1280,
+      "height": 720,
+      "visible": true,
+      "x": 604,
+      "y": 295,
+      "right": 708,
+      "bottom": 313,
+      "direction": "ltr"
+    },
+    {
+      "language": "fr",
+      "width": 568,
+      "height": 320,
+      "visible": true,
+      "x": 238.96875,
+      "y": 131.109375,
+      "right": 342.96875,
+      "bottom": 149.109375,
+      "direction": "ltr"
+    },
+    {
+      "language": "fr",
+      "width": 1280,
+      "height": 720,
+      "visible": true,
+      "x": 603.296875,
+      "y": 295,
+      "right": 707.296875,
+      "bottom": 313,
+      "direction": "ltr"
+    },
+    {
+      "language": "ar",
+      "width": 568,
+      "height": 320,
+      "visible": true,
+      "x": 239.203125,
+      "y": 131.109375,
+      "right": 343.203125,
+      "bottom": 149.109375,
+      "direction": "ltr"
+    },
+    {
+      "language": "ar",
+      "width": 1280,
+      "height": 720,
+      "visible": true,
+      "x": 603.03125,
+      "y": 295,
+      "right": 707.03125,
+      "bottom": 313,
+      "direction": "ltr"
+    }
+  ],
+  "contract": {
+    "dash": 0,
+    "deepShown": true,
+    "air": 7,
+    "pausedAir": 7,
+    "shallowHidden": true,
+    "refilled": 8,
+    "aboveHidden": true
+  },
+  "editor": {
+    "fields": [
+      "anchor",
+      "x",
+      "y",
+      "scale"
+    ],
+    "saved": true,
+    "moved": true,
+    "scale": 1.25,
+    "stored": 1.25
+  },
+  "run": {
+    "seconds": 600.000000000002,
+    "frames": 12083,
+    "deepFrames": 7246,
+    "shallowFrames": 4600,
+    "maxParticles": 18,
+    "meanMs": 3.837424480674836,
+    "p95Ms": 6,
+    "enemies": 404
+  }
+}

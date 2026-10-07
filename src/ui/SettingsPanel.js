@@ -20,6 +20,7 @@ export const SETTINGS_CONTROLS=[
  {key:'screenShake',label:'Screen shake',type:'toggle'},
  {key:'damageNumbers',label:'Damage numbers',type:'toggle'},
  {key:'reducedMotion',label:'Reduced motion',type:'toggle'},
+ {key:'reduceEffects',label:'Reduce effects',type:'toggle'},
  {key:'enemyHealthBars',id:'enemy-health-bars',label:'Enemy health bars',options:[['always','Always'],['damaged','When damaged'],['off','Off']]},
  {key:'telegraphHighContrast',label:'High-contrast telegraphs',type:'toggle'},
 ];
@@ -35,12 +36,12 @@ export function settingsPanelMarkup(settings,closeLabel='Done') {
    :`<select id="${id}">${options.map(([v,text])=>`<option value="${v}" ${String(v)===String(value)?'selected':''}>${escapeHtml(t(text))}</option>`).join('')}</select>`;
   return `<div class="settings-row" data-setting-row="${key}"><label for="${id}">${escapeHtml(audioLabel(label))}</label>${input}</div>`;
  }).join('');
- return `<h2 id="settings-title">${escapeHtml(t('Settings'))}</h2><p class="panel-subtitle">${escapeHtml(t('Optimized for both touch and keyboard. Changes save immediately.'))}</p><div class="settings-content"><div class="settings-grid">${rows}</div>${controlsMarkup()}</div><div class="panel-actions"><button type="button" class="btn primary" data-back>${escapeHtml(t(closeLabel))}</button></div>`;
+ return `<h2 id="settings-title">${escapeHtml(t('Settings'))}</h2><p class="panel-subtitle">${escapeHtml(t('Optimized for both touch and keyboard. Changes save immediately.'))}</p><div class="settings-content"><nav class="settings-hud-tabs" aria-label="${escapeHtml(t('Settings'))}"><button type="button" class="btn small" data-settings-tab="general" aria-pressed="true">${escapeHtml(t('Settings'))}</button><button type="button" class="btn ghost small" data-settings-tab="hud" aria-pressed="false">${escapeHtml(t('HUD'))}</button></nav><div data-settings-page="general"><div class="settings-grid">${rows}</div>${controlsMarkup()}</div><div data-settings-page="hud" hidden><button type="button" class="btn primary hud-settings-entry" data-edit-hud>${escapeHtml(t('Edit HUD layout'))}</button></div></div><div class="panel-actions"><button type="button" class="btn primary" data-back>${escapeHtml(t(closeLabel))}</button></div>`;
 }
 
 // Both entry points use this renderer and these bindings, including persistence
 // and live updates supplied by the same settings-change callback.
-export function renderSettingsPanel(panel,settings,{onChange,onClose,onSound=()=>{},closeLabel='Done'}) {
+export function renderSettingsPanel(panel,settings,{onChange,onClose,onSound=()=>{},onHudEdit,closeLabel='Done',tab='general'}) {
  panel.classList.add('settings-panel');
  panel.dir=getLanguage()==='ar'?'rtl':'ltr';
  panel.innerHTML=settingsPanelMarkup(settings,closeLabel);
@@ -50,6 +51,13 @@ export function renderSettingsPanel(panel,settings,{onChange,onClose,onSound=()=
  tabs.insertAdjacentHTML('beforeend',`<button type="button" class="btn ghost small" data-settings-tab="audio" aria-pressed="false">${escapeHtml(audioLabel('Audio'))}</button>`);
  const audioPage=document.createElement('div');audioPage.dataset.settingsPage='audio';audioPage.hidden=true;audioPage.className='settings-grid';content.append(audioPage);
  for(const key of ['master','music','sfx','ambience','voice','ui','voiceEnabled']){const row=panel.querySelector(`[data-setting-row="${key}"]`)||panel.querySelector(`[data-toggle="${key}"]`)?.closest('.settings-row');if(row)audioPage.append(row);}
+ const selectTab=value=>{
+  panel.querySelectorAll('[data-settings-page]').forEach(el=>el.hidden=el.dataset.settingsPage!==value);
+  panel.querySelectorAll('[data-settings-tab]').forEach(el=>{el.setAttribute('aria-pressed',String(el.dataset.settingsTab===value));el.classList.toggle('ghost',el.dataset.settingsTab!==value);});
+ };
+ panel.querySelectorAll('[data-settings-tab]').forEach(el=>el.onclick=()=>{onSound();selectTab(el.dataset.settingsTab);});
+ const editor=panel.querySelector('[data-edit-hud]');editor.disabled=!onHudEdit;editor.onclick=()=>{onSound();onHudEdit?.();};
+ selectTab(tab);
  for(const control of SETTINGS_CONTROLS){
   const {key,id,type}=control;
   if(type==='toggle'){

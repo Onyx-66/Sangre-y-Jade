@@ -1,3 +1,4 @@
+import { emptyHudLayouts, migrateHudLayouts } from './HudLayout.js';
 const SAVE_KEY = 'sangre-y-jade-v0.1';
 
 const DEFAULT_SAVE = {
@@ -10,6 +11,7 @@ const DEFAULT_SAVE = {
   unlockedMaps: ['overgrown', 'bloodmoon', 'cenote'],
   upgrades: { damage: 0, vitality: 0, speed: 0, fortune: 0 },
   records: {},
+  hudLayouts: emptyHudLayouts(),
   settings: {
     language: 'en',
     attackMode: 'auto',
@@ -27,6 +29,7 @@ const DEFAULT_SAVE = {
     autoAim: true,
     joystick: 'fixed',
     reducedMotion: false,
+    reduceEffects: false,
     enemyHealthBars: 'damaged',
     telegraphHighContrast: false,
   },
@@ -42,6 +45,7 @@ function mergeDefaults(stored) {
     ...stored,
     upgrades: { ...base.upgrades, ...(stored.upgrades || {}) },
     records: { ...base.records, ...(stored.records || {}) },
+    hudLayouts: migrateHudLayouts(stored.hudLayouts),
     settings: { ...base.settings, ...(stored.settings || {}) },
   };
 }
@@ -71,6 +75,12 @@ export class SaveSystem {
   setSetting(key, value) {
     this.data.settings[key] = value;
     this.commit();
+  }
+
+  setHudLayouts(layouts) {
+    this.data.hudLayouts = migrateHudLayouts(layouts);
+    this.commit();
+    return this.data.hudLayouts;
   }
 
   markIntroSeen() {
