@@ -3,7 +3,7 @@ export default {
  id:'cenote',biomes:['wet-cave','crystal-field','root-grove'],
  biomeProfiles:[{trees:.7,rocks:1},{trees:.5,rocks:1.4},{trees:1.4,rocks:.7}],
  sites:['landmark','island','settlement','crystal-field','root-grove'],
- houses:['dock-hut-a','dock-hut-b'],buildingRange:[3,5],
+ houses:['dock-hut-a','dock-hut-b'],buildingRange:[3,5],buildingScale:1.2,dockSpacing:416,dockY:896,
  landmark:{type:'pyramid',width:320,tiers:3,faces:['south'],top:'altar-water',edgeGate:'temple-gate-submerged'},
  setPieces:{island:['shrine-island'],'crystal-field':['crystal-cyan','crystal-violet','crystal-green'],'root-grove':['root-giant','root-hanging-a']},
  densities:{trees:.24,rocks:.65,plants:.2,debris:.14,props:.2},

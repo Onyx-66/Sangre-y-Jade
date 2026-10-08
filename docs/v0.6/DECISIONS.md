@@ -321,3 +321,12 @@
 - Kit colliders describe the visible trunk/wall bases, never the canopy or roof. Keep doors closed. Use 1.2 village scale and 1.05 ossuary scale for hero-relative door proportions; validate the larger footprints across all maps. Modular art and rail metadata do not replace authoritative assembler collision/level geometry.
 - Use the existing bounded terrain renderer, selected-map loader, overhead and weather light system. Blood Moon receives its own water effects and additive torch texture; preserve all other maps, audio files and combat numbers. Night tile sprites must not overlap because double alpha produces grid seams.
 - Some generated details are finer than legacy hero pixels; native-model fidelity, phone performance and a universal pixel-perfect 8px collision fit are not automatically certified by dimension/hash tests. Record visual and measured limits in B7_ART_REPORT.md rather than treating runtime tests as artistic approval. Preserve unrelated dirty files from V07_BASELINE.md.
+
+
+## B8 — Sunken Cenote real-object art (2026-10-08)
+
+- Follow B8 and existing B2/B4/B5 contracts where missing V07_SPEC.md/v07_design.json cannot be consulted. Preserve Cenote's single south stair face; test all four art directions on a separate four-face fixture.
+- Image model/variant routing is unexposed. Log requested Flare and the final almost-right building-sheet Sunburst edit as requested, never verified. Keep native1254px sheets plus normalized2048px sources, counted slicing and all corrections. No downloads or invented audio.
+- Explicit authored solidParts take precedence over generic arch piers. Root arches keep two feet and dock huts four stilts. Larger dock huts need wider spacing and the existing shallow-bank row for readable doors. A new solid lantern is deterministically shifted off approach routes; do not weaken validation.
+- Preserve transparent soft glow chroma with opt-in unmatting, and remove isolated dark magenta timber gaps only for the two opted-in bridge images. Other existing sheets keep default keying. Periodically condition tile edges and view 3×3 repeats.
+- Runtime layers, pool caps, physical elevation/bridge rules, combat numbers and audio stay unchanged. Report native-style/8px-calibration limits and desktop frame outliers honestly; do not claim phone verification. Preserve unrelated baseline dirty files.

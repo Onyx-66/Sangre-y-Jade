@@ -93,9 +93,16 @@ function resolveInside(base, relative, label) {
   return absolute;
 }
 
-function defringeCrop(crop, mode, { softMatte = false, keyFringe = 0 } = {}) {
+function defringeCrop(crop, mode, { softMatte = false, softMatteChroma = false, keyFringe = 0, keyChroma = false } = {}) {
   const { data, info } = crop;
   const rgba = Buffer.from(data);
+  // Single-colour glows must retain violet/blue chroma while unmatting. Infer
+  // their opaque core, then project coverage onto that colour's key vector.
+  let core=null,coreDistance=0;
+  if(softMatteChroma)for(let p=0;p<data.length;p+=4){
+    const v=[data[p]-255,data[p+1],data[p+2]-255],distance=v.reduce((n,c)=>n+c*c,0);
+    if(data[p+3]>20&&distance>coreDistance){core=v;coreDistance=distance;}
+  }
   const keyed=mode==='magenta'?Array.from({length:info.width*info.height},(_,pixel)=>isBackground(data,pixel*4,mode)):null;
   for (let i = 0; i < rgba.length; i += 4) {
     if (mode === 'transparent') {
@@ -104,6 +111,9 @@ function defringeCrop(crop, mode, { softMatte = false, keyFringe = 0 } = {}) {
     }
     if (mode === 'magenta') {
       const r = rgba[i], g = rgba[i + 1], b = rgba[i + 2];
+      // Opt-in for brown/blue timber: isolated dark key remnants between planks
+      // have no opaque magenta neighbour, but still contain the key's red+blue.
+      if(keyChroma && r>80 && b>80 && r>g+30 && b>g+30){rgba[i+3]=0;continue;}
       const pixel=i/4,x=pixel%info.width,y=Math.floor(pixel/info.width);
       if (keyFringe && r>g+8 && b>g+8) {
         let touchesKey=false;
@@ -119,7 +129,7 @@ function defringeCrop(crop, mode, { softMatte = false, keyFringe = 0 } = {}) {
       // core (which need not look magenta). Unmatte its entire coverage.
       if (softMatte || (r >= 180 && b >= 180 && g <= 150 && Math.abs(r - b) <= 100)||
           (matteEdge&&r>g+30&&b>g+30&&Math.abs(r-b)<60)) {
-        const alpha = Math.max(255 - r, g, 255 - b) / 255;
+        const alpha = core?Math.max(0,Math.min(1,((r-255)*core[0]+g*core[1]+(b-255)*core[2])/coreDistance)):Math.max(255 - r, g, 255 - b) / 255;
         if (alpha < 0.035) { rgba[i + 3] = 0; continue; }
         rgba[i] = Math.max(0, Math.min(255, Math.round((r - 255 * (1 - alpha)) / alpha)));
         rgba[i + 1] = Math.min(255, Math.round(g / alpha));
@@ -199,6 +209,11 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
     let bounds = found.cells.get(index);
     if (!bounds) throw new Error(`Sprite count mismatch: no sprite in reading-order cell ${index + 1}.`);
     const item = items[index];
+    // Preserve low-opacity glow tails that foreground cell detection discards.
+    // Single-colour glows never cross their reserved grid cell.
+    if(item.softMatteChroma){const col=index%columns,row=Math.floor(index/columns);
+      bounds={left:Math.floor(col*info.width/columns),top:Math.floor(row*info.height/rows),right:Math.floor((col+1)*info.width/columns)-1,bottom:Math.floor((row+1)*info.height/rows)-1};
+    }
     // Ground tiles use the interior square of their generated patch and fill the
     // final canvas. Ordinary sprites retain the existing trim/transparent margin.
     if (item.fullBleed) {
@@ -212,7 +227,7 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
     }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     // A subject may extend across its nominal cell border. Preserve its full
     // connected components, but never include fragments owned by another cell.
-    if(found.labels)for(let y=0;y<crop.info.height;y++)for(let x=0;x<crop.info.width;x++){
+    if(found.labels&&!item.softMatteChroma)for(let y=0;y<crop.info.height;y++)for(let x=0;x<crop.info.width;x++){
       const label=found.labels[(bounds.top+y)*info.width+bounds.left+x];
       if(label!==index){const p=(y*crop.info.width+x)*4;
         crop.data[p]=mode==='black'?0:255;crop.data[p+1]=0;crop.data[p+2]=mode==='black'?0:255;crop.data[p+3]=mode==='transparent'?0:255;
@@ -220,7 +235,7 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
     }
     // Full-bleed swatches were cropped inside the patch: their purple fog or
     // flower colours are artwork, not a magenta surround to punch holes into.
-    const cleaned = item.fullBleed ? crop : defringeCrop(crop, mode, {softMatte:Boolean(item.softMatte),keyFringe:Math.min(4,Math.max(0,Math.floor(item.keyFringe||0)))});
+    const cleaned = item.fullBleed ? crop : defringeCrop(crop, mode, {softMatte:Boolean(item.softMatte),softMatteChroma:Boolean(item.softMatteChroma),keyChroma:Boolean(item.keyChroma),keyFringe:Math.min(4,Math.max(0,Math.floor(item.keyFringe||0)))});
     const fitWidth=item.fullBleed?item.width:item.spriteScale?Math.max(1,Math.round(crop.info.width*item.spriteScale)):Math.max(1,Math.round(item.width*.94));
     const fitHeight=item.fullBleed?item.height:item.spriteScale?Math.max(1,Math.round(crop.info.height*item.spriteScale)):Math.max(1,Math.round(item.height*.94));
     if(fitWidth>item.width||fitHeight>item.height)throw new Error(`spriteScale exceeds final canvas for ${item.file}`);
@@ -247,6 +262,7 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
       // boundary; remove only unmistakable key colour after the final resize.
       const raw = await sharp(image).ensureAlpha().raw().toBuffer();
       for(let p=0;p<raw.length;p+=4)if(raw[p]>=210&&raw[p+2]>=210&&raw[p+1]<=45)raw[p+3]=0;
+      if(item.keyChroma)for(let p=0;p<raw.length;p+=4)if(raw[p]>raw[p+1]+20&&raw[p+2]>raw[p+1]+20)raw[p+3]=0;
       image=await sharp(raw,{raw:{width:item.width,height:item.height,channels:4}}).png({compressionLevel:9}).toBuffer();
     }
     await fs.writeFile(targetPath, image);

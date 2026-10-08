@@ -1,0 +1,171 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b8/assets",
+  "contactSheet": "docs/v0.6/previews/b8/sheet-2.png",
+  "items": [
+    {
+      "id": "reeds",
+      "category": "plants",
+      "width": 128,
+      "height": 160,
+      "description": "water reeds",
+      "file": "maps/cenote/plants/reeds.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "lily-pads",
+      "category": "plants",
+      "width": 160,
+      "height": 128,
+      "description": "lily pads on water",
+      "file": "maps/cenote/plants/lily-pads.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "mushrooms-small-blue",
+      "category": "plants",
+      "width": 128,
+      "height": 128,
+      "description": "small blue mushrooms",
+      "file": "maps/cenote/plants/mushrooms-small-blue.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "mushrooms-small-violet",
+      "category": "plants",
+      "width": 128,
+      "height": 128,
+      "description": "small violet mushrooms",
+      "file": "maps/cenote/plants/mushrooms-small-violet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "grass-cave",
+      "category": "plants",
+      "width": 128,
+      "height": 128,
+      "description": "pale grass tuft",
+      "file": "maps/cenote/plants/grass-cave.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "algae",
+      "category": "plants",
+      "width": 160,
+      "height": 96,
+      "description": "algae patch in water",
+      "file": "maps/cenote/plants/algae.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stalagmite-a",
+      "category": "rocks",
+      "width": 128,
+      "height": 256,
+      "description": "tall stalagmite",
+      "file": "maps/cenote/rocks/stalagmite-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stalagmite-b",
+      "category": "rocks",
+      "width": 192,
+      "height": 224,
+      "description": "cluster of stalagmites",
+      "file": "maps/cenote/rocks/stalagmite-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "crystal-cyan",
+      "category": "rocks",
+      "width": 160,
+      "height": 192,
+      "description": "cyan crystal cluster",
+      "file": "maps/cenote/rocks/crystal-cyan.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "crystal-violet",
+      "category": "rocks",
+      "width": 192,
+      "height": 160,
+      "description": "violet crystal cluster",
+      "file": "maps/cenote/rocks/crystal-violet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "crystal-green",
+      "category": "rocks",
+      "width": 160,
+      "height": 160,
+      "description": "green crystal cluster",
+      "file": "maps/cenote/rocks/crystal-green.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "boulder-wet",
+      "category": "rocks",
+      "width": 160,
+      "height": 128,
+      "description": "wet boulder",
+      "file": "maps/cenote/rocks/boulder-wet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "boulder-large",
+      "category": "rocks",
+      "width": 256,
+      "height": 224,
+      "description": "large boulder with crystals",
+      "file": "maps/cenote/rocks/boulder-large.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stone-slab-wet",
+      "category": "rocks",
+      "width": 192,
+      "height": 128,
+      "description": "wet flat stone slab",
+      "file": "maps/cenote/rocks/stone-slab-wet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "log-driftwood",
+      "category": "debris",
+      "width": 160,
+      "height": 96,
+      "description": "driftwood log",
+      "file": "maps/cenote/debris/log-driftwood.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bones-fish",
+      "category": "debris",
+      "width": 128,
+      "height": 80,
+      "description": "fish skeleton on the shore",
+      "file": "maps/cenote/debris/bones-fish.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

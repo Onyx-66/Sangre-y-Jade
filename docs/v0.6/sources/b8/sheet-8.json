@@ -1,0 +1,53 @@
+{
+  "expectedCount": 4,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b8/assets",
+  "contactSheet": "docs/v0.6/previews/b8/sheet-8.png",
+  "items": [
+    {
+      "id": "mushroom-giant-b",
+      "category": "trees",
+      "width": 288,
+      "height": 320,
+      "description": "giant glowing mushroom, violet",
+      "file": "maps/cenote/trees/mushroom-giant-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "mushrooms-small-violet",
+      "category": "plants",
+      "width": 128,
+      "height": 128,
+      "description": "small violet mushrooms",
+      "file": "maps/cenote/plants/mushrooms-small-violet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "crystal-violet",
+      "category": "rocks",
+      "width": 192,
+      "height": 160,
+      "description": "violet crystal cluster",
+      "file": "maps/cenote/rocks/crystal-violet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "glow-violet",
+      "category": "glow",
+      "width": 256,
+      "height": 256,
+      "description": "soft violet additive glow",
+      "file": "maps/cenote/glow-violet.png",
+      "anchor": "center",
+      "keyFringe": 0,
+      "softMatte": true,
+      "softMatteChroma": true
+    }
+  ]
+}

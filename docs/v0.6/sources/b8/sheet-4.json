@@ -1,0 +1,157 @@
+{
+  "expectedCount": 14,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b8/assets",
+  "contactSheet": "docs/v0.6/previews/b8/sheet-4.png",
+  "items": [
+    {
+      "id": "crystal-lamp",
+      "category": "props",
+      "width": 80,
+      "height": 160,
+      "description": "crystal lamp on a post (light source)",
+      "file": "maps/cenote/props/crystal-lamp.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "barrel-wet",
+      "category": "props",
+      "width": 96,
+      "height": 128,
+      "description": "wet barrel",
+      "file": "maps/cenote/props/barrel-wet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "net-hanging",
+      "category": "props",
+      "width": 160,
+      "height": 144,
+      "description": "fishing net on poles",
+      "file": "maps/cenote/props/net-hanging.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "pot-wet",
+      "category": "props",
+      "width": 96,
+      "height": 96,
+      "description": "clay pot half in water",
+      "file": "maps/cenote/props/pot-wet.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "totem-water",
+      "category": "props",
+      "width": 96,
+      "height": 144,
+      "description": "carved water totem",
+      "file": "maps/cenote/props/totem-water.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "sign-rune",
+      "category": "props",
+      "width": 96,
+      "height": 128,
+      "description": "rune marker stone",
+      "file": "maps/cenote/props/sign-rune.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "rack-fish",
+      "category": "props",
+      "width": 160,
+      "height": 144,
+      "description": "fish drying rack",
+      "file": "maps/cenote/props/rack-fish.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "chest-old",
+      "category": "props",
+      "width": 128,
+      "height": 96,
+      "description": "old closed chest",
+      "file": "maps/cenote/props/chest-old.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "statue-jaguar",
+      "category": "statues",
+      "width": 192,
+      "height": 192,
+      "description": "statue-jaguar",
+      "file": "maps/cenote/statues/statue-jaguar.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "statue-warrior",
+      "category": "statues",
+      "width": 192,
+      "height": 192,
+      "description": "statue-warrior",
+      "file": "maps/cenote/statues/statue-warrior.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "statue-serpent",
+      "category": "statues",
+      "width": 192,
+      "height": 192,
+      "description": "statue-serpent",
+      "file": "maps/cenote/statues/statue-serpent.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "glow-cyan",
+      "category": "glow",
+      "width": 256,
+      "height": 256,
+      "description": "soft cyan additive glow",
+      "file": "maps/cenote/glow-cyan.png",
+      "anchor": "center",
+      "keyFringe": 0,
+      "softMatte": true,
+      "softMatteChroma": true
+    },
+    {
+      "id": "glow-violet",
+      "category": "glow",
+      "width": 256,
+      "height": 256,
+      "description": "soft violet additive glow",
+      "file": "maps/cenote/glow-violet.png",
+      "anchor": "center",
+      "keyFringe": 0,
+      "softMatte": true,
+      "softMatteChroma": true
+    },
+    {
+      "id": "glow-green",
+      "category": "glow",
+      "width": 256,
+      "height": 256,
+      "description": "soft green additive glow",
+      "file": "maps/cenote/glow-green.png",
+      "anchor": "center",
+      "keyFringe": 0,
+      "softMatte": true,
+      "softMatteChroma": true
+    }
+  ]
+}

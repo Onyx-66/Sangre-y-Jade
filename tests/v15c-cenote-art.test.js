@@ -58,10 +58,12 @@ test('all six authored grounds have identical opposing edge pixels',async()=>{
 });
 
 test('real Cenote textures load once with colored light metadata and preserved footprints',()=>{
-  const manifest=mapArtManifest('cenote');assert.equal(manifest.length,59);assert.equal(new Set(manifest.map(x=>x.key)).size,59);
+  // B8 retains the original 59 files and adds 12 water, 15 structure and 3 statue assets.
+  const manifest=mapArtManifest('cenote');assert.equal(manifest.length,89);assert.equal(new Set(manifest.map(x=>x.key)).size,89);
   for(const item of kit.items){assert.ok(manifest.some(x=>x.file===item.image));assert.ok(item.textureKey.startsWith('map-cenote-'));
     if(item.category==='buildings')assert.equal(item.collider.type,'rect');
-    if(item.category==='rocks'||item.category==='trees')assert.equal(item.collider.type,'circle');
+    if(item.id==='root-giant'){assert.equal(item.solidParts.length,2);assert.ok(item.solidParts.every(p=>p.type==='circle'));}
+    else if(item.category==='rocks'||item.category==='trees')assert.equal(item.collider.type,'circle');
   }
   for(const color of ['cyan','violet','green'])assert.equal(kit.items.find(x=>x.id===`crystal-${color}`).lightColor,color);
   assert.ok(kit.items.find(x=>x.id==='lantern-hanging').lightSource);

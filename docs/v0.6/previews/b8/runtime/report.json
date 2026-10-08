@@ -1,0 +1,122 @@
+{
+  "errors": [],
+  "views": [
+    {
+      "kind": "centre",
+      "active": 35,
+      "pool": 0,
+      "overhead": 12,
+      "terrain": 117,
+      "hash": "79e845c3"
+    },
+    {
+      "kind": "corner",
+      "active": 13,
+      "pool": 22,
+      "overhead": 12,
+      "terrain": 117,
+      "hash": "79e845c3"
+    },
+    {
+      "kind": "settlement",
+      "active": 25,
+      "pool": 10,
+      "overhead": 13,
+      "terrain": 120,
+      "hash": "79e845c3"
+    },
+    {
+      "kind": "pyramid",
+      "active": 28,
+      "pool": 7,
+      "overhead": 14,
+      "terrain": 120,
+      "hash": "79e845c3"
+    }
+  ],
+  "galleries": [
+    "collision-trees-0.png",
+    "collision-trees-1.png",
+    "collision-plants-0.png",
+    "collision-plants-1.png",
+    "collision-rocks-0.png",
+    "collision-rocks-1.png",
+    "collision-debris-0.png",
+    "collision-debris-1.png",
+    "collision-buildings-0.png",
+    "collision-buildings-1.png",
+    "collision-buildings-2.png",
+    "collision-buildings-3.png",
+    "collision-buildings-4.png",
+    "collision-buildings-5.png",
+    "collision-buildings-6.png",
+    "collision-buildings-7.png",
+    "collision-buildings-8.png",
+    "collision-buildings-9.png",
+    "collision-props-0.png",
+    "collision-props-1.png",
+    "collision-props-2.png",
+    "collision-statues-0.png",
+    "collision-structures-0.png",
+    "collision-structures-1.png",
+    "collision-structures-2.png",
+    "collision-structures-3.png"
+  ],
+  "seed": "b8-art-0",
+  "lighting": {
+    "sources": 82,
+    "glows": [
+      {
+        "texture": "map-cenote-glow-cyan",
+        "blend": 1,
+        "alpha": 0.3
+      },
+      {
+        "texture": "map-cenote-glow-green",
+        "blend": 1,
+        "alpha": 0.3
+      }
+    ],
+    "colourChecks": [
+      {
+        "colour": "cyan",
+        "ok": true
+      },
+      {
+        "colour": "violet",
+        "ok": true
+      },
+      {
+        "colour": "green",
+        "ok": true
+      }
+    ]
+  },
+  "renderer": {
+    "type": 2,
+    "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "stairs": [
+      "south"
+    ]
+  },
+  "directionReview": "Four directional art modules also inspected separately in the collision gallery.",
+  "frameTime": {
+    "frames": 360,
+    "meanMs": 8.854166666666666,
+    "p95Ms": 20.899999999999636,
+    "maxMs": 62.29999999999927,
+    "note": "Desktop headless Chrome rAF, collision overlay off, unthrottled; not phone FPS"
+  },
+  "water": [
+    {
+      "depth": 1,
+      "shown": false,
+      "air": 8
+    },
+    {
+      "depth": 2,
+      "shown": true,
+      "air": 7.5
+    }
+  ]
+}

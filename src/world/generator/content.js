@@ -46,10 +46,10 @@ function settlement(w,kit,site,config,random){
 function dockVillage(w,kit,site,config){
  site.buildingCount=3;
  for(let n=0;n<3;n++){
-  const o=candidate(kit.items.find(i=>i.id===config.houses[n%2]),site.x+(n-1)*256,1024,.42);o.siteId=site.id;o.role='dock-house';o.kind='dock';
+  const o=candidate(kit.items.find(i=>i.id===config.houses[n%2]),site.x+(n-1)*(config.dockSpacing||256),config.dockY||1024,config.buildingScale||.42);o.siteId=site.id;o.role='dock-house';o.kind='dock';
   // Only four stilts block at water level; the roof/walls are not a solid box.
   const c=o.collider,half=c.width/2-10,near=c.offsetY+c.height/2-10,far=c.offsetY-c.height/2+10;
-  o.solidParts=[[-half,far],[half,far],[-half,near],[half,near]].map(([offsetX,offsetY])=>({type:'circle',radius:10,offsetX,offsetY}));
+  o.solidParts=o.solidParts||[[-half,far],[half,far],[-half,near],[half,near]].map(([offsetX,offsetY])=>({type:'circle',radius:10,offsetX,offsetY}));
   const target={x:o.x,y:site.y},approach=faceDoor(o,target);
   const points=[...samples(approach,target),...samples(target,site)];
   for(const p of points)for(const dx of [-24,24])for(const dy of [-24,24]){const i=indexAt(w,p.x+dx,p.y+dy);if(w.water.mask[i])w.bridgeMask[i]=1;w.roadMask[i]=1;}
@@ -98,7 +98,19 @@ function landmarkLights(w,kit){
  if(w.mapId!=='cenote')return;
  const item=kit.items.find(i=>i.id==='lantern-hanging');
  for(const site of w.sites.filter(s=>['landmark','island'].includes(s.kind))){
-  const o=candidate(item,site.x-(site.kind==='landmark'?320:128),site.y+(site.kind==='landmark'?-32:96),.65);
+  const x=site.x-(site.kind==='landmark'?320:128),y=site.y+(site.kind==='landmark'?-32:96);
+  // Authored lantern posts now have solid feet. Keep their light near the site
+  // while moving that footprint off the already validated approach route.
+  let o;
+  for(const dx of [0,-32,32,-64,64,-96,96]){
+   const next=candidate(item,x+dx,y,.65);
+   if(w.water.mask[indexAt(w,next.x,next.y)])continue;
+   const blocked=w.paths.some(path=>{const points=[{x:0,y:0},...path.points,path.to];return points.slice(1).some((b,i)=>{
+    const p=sweepMove(points[i],b,11,()=>[next],0);return Math.hypot(p.x-b.x,p.y-b.y)>.01;
+   });});
+   if(!blocked){o=next;break;}
+  }
+  if(!o)throw Error('Landmark light blocks route');
   o.role='landmark-light';o.siteId=site.id;o.lightSource=true;o.lightEnabled=true;w.objects.push(o);
  }
 }

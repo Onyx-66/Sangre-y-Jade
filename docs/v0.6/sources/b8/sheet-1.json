@@ -1,0 +1,177 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b8/assets",
+  "contactSheet": "docs/v0.6/previews/b8/sheet-1.png",
+  "items": [
+    {
+      "id": "wet-stone",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless wet dark stone",
+      "file": "maps/cenote/ground/wet-stone.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "shallow-water",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless shallow turquoise water with ripples",
+      "file": "maps/cenote/ground/shallow-water.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "sand-bank",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless pale sand",
+      "file": "maps/cenote/ground/sand-bank.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "glow-moss",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless stone with glowing moss",
+      "file": "maps/cenote/ground/glow-moss.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "cave-floor",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless rough cave floor with pebbles",
+      "file": "maps/cenote/ground/cave-floor.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "wet-planks",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless wet wooden planks",
+      "file": "maps/cenote/ground/wet-planks.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "root-hanging-a",
+      "category": "trees",
+      "width": 256,
+      "height": 320,
+      "description": "thick hanging cave root cluster",
+      "file": "maps/cenote/trees/root-hanging-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "root-giant",
+      "category": "trees",
+      "width": 512,
+      "height": 512,
+      "description": "giant cave tree root arch (landmark size)",
+      "file": "maps/cenote/trees/root-giant.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "root-ground",
+      "category": "trees",
+      "width": 256,
+      "height": 192,
+      "description": "roots crawling over the ground",
+      "file": "maps/cenote/trees/root-ground.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "mushroom-giant-a",
+      "category": "trees",
+      "width": 288,
+      "height": 320,
+      "description": "giant glowing mushroom, blue",
+      "file": "maps/cenote/trees/mushroom-giant-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "mushroom-giant-b",
+      "category": "trees",
+      "width": 288,
+      "height": 320,
+      "description": "giant glowing mushroom, violet",
+      "file": "maps/cenote/trees/mushroom-giant-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "fern-cave",
+      "category": "trees",
+      "width": 224,
+      "height": 192,
+      "description": "pale cave fern",
+      "file": "maps/cenote/trees/fern-cave.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-cave-small",
+      "category": "trees",
+      "width": 224,
+      "height": 288,
+      "description": "small pale cave tree",
+      "file": "maps/cenote/trees/tree-cave-small.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "vine-glow",
+      "category": "trees",
+      "width": 192,
+      "height": 256,
+      "description": "hanging glowing vines",
+      "file": "maps/cenote/trees/vine-glow.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "moss-clump",
+      "category": "plants",
+      "width": 128,
+      "height": 96,
+      "description": "glowing moss clump",
+      "file": "maps/cenote/plants/moss-clump.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "flowers-glow",
+      "category": "plants",
+      "width": 128,
+      "height": 128,
+      "description": "small glowing blue flowers",
+      "file": "maps/cenote/plants/flowers-glow.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

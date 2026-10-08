@@ -57,8 +57,8 @@ export function normalizeObject(item) {
   const width = item.size?.width || 128, height = item.size?.height || 128;
   const anchor = item.anchor || { x: .5, y: 1 };
   const tall = rules.overhead && item.fadeBehind !== false;
-  const parts=(kind==='arch'||kind==='bridge')&&footprint.type==='rect' ? [-1,1].map(side=>({type:'rect',
-    width:Math.max(8,footprint.width*.16),height:footprint.height,offsetX:footprint.offsetX+side*footprint.width*.42,offsetY:footprint.offsetY})) : item.solidParts;
+  const parts=item.solidParts || ((kind==='arch'||kind==='bridge')&&footprint.type==='rect' ? [-1,1].map(side=>({type:'rect',
+    width:Math.max(8,footprint.width*.16),height:footprint.height,offsetX:footprint.offsetX+side*footprint.width*.42,offsetY:footprint.offsetY})) : undefined);
   return { ...item, kind, anchor, level: item.level ?? 0, footprint, collider: footprint, solidParts:parts,
     occluder: item.occluder || (tall ? { x: -width * anchor.x, y: -height * anchor.y,
       width, height: height * .65 } : null),
