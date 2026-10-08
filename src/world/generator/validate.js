@@ -4,7 +4,7 @@ import {CELL,pointAt,indexAt,flood,inside,route} from './grid.js';
 import {boundsOf,rectOverlap} from './structures.js';
 export function navigation(w){
   const blocked=w.interior.map((v,i)=>!v||w.water.mask[i]===2&&!w.bridgeMask[i]?1:0);
-  for(const o of w.objects){if(o.collider.type==='none')continue;const b=boundsOf(o);
+  for(const o of w.objects){if(o.collider.type==='none'||o.kind==='dock'||o.level>0)continue;const b=boundsOf(o);
     for(let row=Math.max(0,Math.floor((b.y-24+w.size.height/2)/CELL));row<=Math.min(w.rows-1,Math.floor((b.y+b.height+24+w.size.height/2)/CELL));row++)
       for(let col=Math.max(0,Math.floor((b.x-24+w.size.width/2)/CELL));col<=Math.min(w.columns-1,Math.floor((b.x+b.width+24+w.size.width/2)/CELL));col++)blocked[row*w.columns+col]=1;
   }return blocked;

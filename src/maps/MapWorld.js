@@ -224,6 +224,7 @@ export class MapWorld {
       scene.decorGroup?.add?.(object);
     }
     object.setFlipX(item.flipX || false);
+    object.setTint?.(item.tint??0xffffff);
     object.setData({ mapPlacementId: item.worldId, mapItemId: item.id, mapCategory: item.category,
       breakable: item.breakable, lightSource: item.lightSource, blocksGround: item.collider.type !== 'none',
       hp: item.breakable ? 24 : 0, kind: item.breakable ? item.id : item.category, level: item.level || 0 });

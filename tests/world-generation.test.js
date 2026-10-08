@@ -29,7 +29,7 @@ test('300 seeds per map: real validation, dry clear arenas, all sites and tiers,
  for(const map of ['overgrown','bloodmoon','cenote'])for(let seed=0;seed<300;seed++){
    const start=performance.now(),w=generateWorld(map,String(seed));max=Math.max(max,performance.now()-start);retries+=w.attempt;const v=validateWorld(w);
    assert.equal(v.valid,true,`${map}/${seed}: ${v.errors}`);minConnectivity=Math.min(minConnectivity,v.connectivity);
-   assert.equal(w.sites.filter(s=>s.kind==='landmark').length,1);assert.equal(w.stairs.length,3);assert.equal(w.levelMap.length,3);
+   assert.equal(w.sites.filter(s=>s.kind==='landmark').length,1);assert.equal(w.stairs.length,3*w.sites[0].assembly.faces.length);assert.equal(w.levelMap.length,3);
    assert.deepEqual(w.size,{width:8192,height:6144});assert.equal(w.boundary.thickness,400);assert.ok(w.spawnPoints.length>20);assert.ok(w.attempt<8);
  }
  console.log(JSON.stringify({worlds:900,maxMs:max,minConnectivity,retries}));
@@ -42,9 +42,9 @@ test('collision bot reaches every site and ascends landmark stairs for 20 seeds 
    const w=generateWorld(map,`bot-${seed}`),layout=hydrateWorld(w),hash=new SpatialHash(256);
    for(const o of layout.colliders)hash.insert(o.worldId,o,shapeBounds(o));const query=(p,r)=>hash.query({x:p.x-r,y:p.y-r,width:r*2,height:r*2});
    for(const path of w.paths.filter(p=>!p.repair)){let p={x:0,y:0};for(const next of path.points){const q=sweepMove(p,next,11,query,0);assert.ok(Math.hypot(q.x-next.x,q.y-next.y)<.01,`${map}/${seed}: blocked path to ${JSON.stringify(path.to)} at ${JSON.stringify(next)}`);p=q;}reached++;}
-   const data={},a={active:true,x:w.stairs[0].from.x,y:w.stairs[0].from.y+20,getData:k=>data[k],setData(k,v){data[k]=v;},setPosition(x,y){this.x=x;this.y=y;}};
+   const entry=w.stairs.find(s=>s.id.endsWith('1-south')),data={},a={active:true,x:entry.from.x,y:entry.from.y+20,getData:k=>data[k],setData(k,v){data[k]=v;},setPosition(x,y){this.x=x;this.y=y;}};
    const collision=new WorldCollision({layout,scene:{player:a,elapsed:0},blockersAround:(x,y,r)=>query({x,y},r)});collision.track(a);
-   for(const stair of w.stairs){for(let y=a.y;y>=stair.to.y-1;y-=2){a.y=y;collision.resolve(a);}assert.equal(data.level,stair.toLevel,`${map}/${seed}: stairs`);}
+   for(const stair of w.stairs.filter(s=>s.id.endsWith('-south'))){for(let y=a.y;y>=stair.to.y-1;y-=2){a.y=y;collision.resolve(a);}assert.equal(data.level,stair.toLevel,`${map}/${seed}: stairs`);}
  }
  console.log(`B4 physical route bot reached ${reached} sites and 60 pyramid tops`);
 });

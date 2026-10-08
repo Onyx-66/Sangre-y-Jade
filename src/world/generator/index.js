@@ -5,7 +5,9 @@ import {WIDTH,HEIGHT,WALL,CELL,pointAt} from './grid.js';
 import {fields,water,biomes} from './terrain.js';
 import {sites,roads,structures,vegetation} from './structures.js';
 import {validateWorld} from './validate.js';
+import {validateStructures} from './validateContent.js';
 import {MAP_KITS,MAP_DESIGN} from '../../data/mapDefinitions.js';
+import {WORLD_CONFIGS} from '../configs/index.js';
 export function* worldPipeline(mapId,seed,kit=MAP_KITS[mapId]){
   const text=normalizeSeed(seed);let failures=[];
   for(let attempt=0;attempt<8;attempt++){
@@ -15,16 +17,20 @@ export function* worldPipeline(mapId,seed,kit=MAP_KITS[mapId]){
       fields(w);yield {phase:'fields',progress:.1};water(w);yield {phase:'water',progress:.2};biomes(w,MAP_DESIGN[mapId]);yield {phase:'biomes',progress:.3};
       sites(w);yield {phase:'sites',progress:.4};roads(w);yield {phase:'roads',progress:.5};structures(w,kit);yield {phase:'structures',progress:.6};
       const structuralCount=w.objects.length;vegetation(w,kit);yield {phase:'vegetation',progress:.75};
+      for(const o of w.objects){const tint=WORLD_CONFIGS[mapId].placeholderTints?.[o.category];if(tint)o.tint=tint;}
       w.boundary={thickness:WALL,style:kit.wallStyle};w.levelMap=w.surfaces.map(s=>({...s}));yield {phase:'boundary',progress:.8};
       let result=validateWorld(w);w.removedBlockers=0;
       // Remove only generated vegetation/debris when it seals land pockets.
       // Structures are retained; the repaired physical world is revalidated.
       while(result.connectivity<.95&&w.objects.length>structuralCount){const n=Math.min(8,w.objects.length-structuralCount);w.objects.splice(-n);w.removedBlockers+=n;result=validateWorld(w);}
       if(!result.valid)throw Error(result.errors.join(';'));
+      const structureErrors=validateStructures(w);if(structureErrors.length)throw Error(structureErrors.join(';'));
       // Unreachable land pockets cannot accept entities or streaming props.
       w.blocked=result.blocked;w.reachable=Array.from(result.seen);w.validation={connectivity:result.connectivity,waterCoverage:result.waterCoverage};
-      w.objects=w.objects.filter(o=>result.seen[Math.floor((o.y+HEIGHT/2)/CELL)*w.columns+Math.floor((o.x+WIDTH/2)/CELL)]||o.collider.type!=='none');
-      w.spawnPoints=[];for(let i=0;i<w.reachable.length;i++)if(w.reachable[i]&&!w.water.mask[i]&&!w.roadMask[i])w.spawnPoints.push(pointAt(w,i));
+      // Coarse navigation cells beside walls can be blocked even when an authored
+      // lantern is valid. Pocket cleanup may remove decorations, not site content.
+      w.objects=w.objects.filter(o=>o.siteId||result.seen[Math.floor((o.y+HEIGHT/2)/CELL)*w.columns+Math.floor((o.x+WIDTH/2)/CELL)]||o.collider.type!=='none');
+      w.spawnPoints=[];for(let i=0;i<w.reachable.length;i++)if(w.reachable[i]&&!w.water.mask[i]&&!w.roadMask[i]){const p=pointAt(w,i);if(!w.sites.some(s=>Math.hypot(s.x-p.x,s.y-p.y)<128)&&!w.doorPaths.some(d=>Math.hypot(d.approach.x-p.x,d.approach.y-p.y)<64))w.spawnPoints.push(p);}
       w.lightSources=w.objects.filter(o=>o.lightSource);w.hash=hashSeed(JSON.stringify(w)).toString(16).padStart(8,'0');yield {phase:'validated',progress:1};return JSON.parse(JSON.stringify(w));
     }catch(error){failures.push(`${attempt}: ${error.message}`);yield {phase:'retry',progress:0};}
   }throw Error(`World generation failed for ${mapId}/${text}: ${failures.join(' | ')}`);

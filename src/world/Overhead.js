@@ -20,6 +20,7 @@ export class Overhead {
     const image=this.pool.pop()||this.scene.add.image(item.x,item.y,base.texture.key);
     image.setTexture(base.texture.key).setPosition(item.x,item.y).setOrigin(item.anchor.x,item.anchor.y)
       .setDisplaySize(item.size.width,item.size.height).setFlipX(item.flipX||false).setActive(true).setVisible(true);
+    image.setTint?.(item.tint??0xffffff);
     base.setCrop(0,split,width,height-split);image.setCrop(0,0,width,split);
     image.setData('worldOverhead',true);
     this.parts.set(base,{item,image});

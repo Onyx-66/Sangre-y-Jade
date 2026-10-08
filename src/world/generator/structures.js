@@ -1,9 +1,10 @@
 // Seeded Poisson sites, catalog footprints and separated class streams. Reserved
 // roads, arena and structure pads prohibit later vegetation from closing routes.
 import {randomStream} from '../seed.js';
-import {assemblePyramid,assembleTemple} from '../assemblies.js';
 import {shapeBounds} from '../geometry.js';
 import {CELL,pointAt,indexAt,inside,route,neighbors,flood} from './grid.js';
+import {WORLD_CONFIGS} from '../configs/index.js';
+import {buildMapContent} from './content.js';
 export const rectOverlap=(a,b,pad=0)=>a.x<b.x+b.width+pad&&a.x+a.width+pad>b.x&&a.y<b.y+b.height+pad&&a.y+a.height+pad>b.y;
 const boundsCache=new WeakMap();
 export function boundsOf(item){if(!boundsCache.has(item))boundsCache.set(item,item.collider.type==='none'?{x:item.x-16,y:item.y-16,width:32,height:32}:shapeBounds(item));return boundsCache.get(item);}
@@ -14,13 +15,18 @@ export function canPlace(w,item,{site=false}={}){
   if(!inside(w,{x:b.x,y:b.y},24)||!inside(w,{x:b.x+b.width,y:b.y+b.height},24)||Math.hypot(c.x,c.y)<620+radius)return false;
   const cells=boxCells(w,{x:b.x-24,y:b.y-24,width:b.width+48,height:b.height+48});
   if(cells.some(i=>w.water.mask[i]||w.roadMask?.[i]))return false;
+  if(site&&w.paths.some(path=>path.points.some(p=>rectOverlap(b,{x:p.x-32,y:p.y-32,width:64,height:64}))))return false;
+  if(w.doorPaths?.some(path=>path.points.some(p=>rectOverlap(b,{x:p.x-28,y:p.y-28,width:56,height:56}))))return false;
   if(!site&&w.sites.some(s=>Math.hypot(item.x-s.x,item.y-s.y)<s.radius))return false;
+  if(w.sites.some(s=>s.assembly&&rectOverlap(b,{x:s.assembly.x-280,y:s.assembly.y-280,width:560,height:560})))return false;
   return !w.objects.some(other=>rectOverlap(b,boundsOf(other),24));
 }
 export function sites(w){
   const random=randomStream(w.derivedSeed,'sites');w.sites=[];
-  const kinds=['landmark','settlement','settlement','settlement','settlement','ruins','stela-field','camp'];
+  const kinds=WORLD_CONFIGS[w.mapId].sites;
+  if(w.lake){w.sites.push({id:'landmark-0',kind:'landmark',x:w.lake.x,y:-1856,radius:400},{id:'island-1',kind:'island',x:w.lake.x,y:w.lake.y,radius:256},{id:'settlement-2',kind:'settlement',x:w.lake.x,y:1728,radius:450,docks:true});}
   for(const kind of kinds){let placed=false;for(let n=0;n<1500;n++){
+    if(w.lake&&['landmark','island','settlement'].includes(kind)){placed=true;break;}
     const x=Math.round((random()-.5)*(w.size.width-1400)),y=Math.round((random()-.5)*(w.size.height-1400)),radius=kind==='settlement'?450:kind==='landmark'?400:200;
     if(Math.hypot(x,y)<700+radius||w.sites.some(s=>Math.hypot(x-s.x,y-s.y)<radius+s.radius+80))continue;
     const cells=boxCells(w,{x:x-radius,y:y-radius,width:radius*2,height:radius*2});if(cells.some(i=>w.water.mask[i]||!w.interior[i]))continue;
@@ -31,7 +37,7 @@ export function roads(w){
   w.paths=[];w.bridges=[];w.roadMask=Array(w.interior.length).fill(0);
   const start=indexAt(w,0,0);
   const landmark=w.sites.find(s=>s.kind==='landmark');
-  const cost=i=>{const p=pointAt(w,i);return !w.interior[i]||Math.abs(p.x-landmark.x)<240&&p.y<landmark.y-32&&p.y>landmark.y-420?Infinity:(w.water.mask[i]?30:1)+w.fields.elevation[i]/65535;};
+  const cost=i=>{const p=pointAt(w,i),gate=w.mapId==='cenote'&&p.x>landmark.x+180&&p.x<landmark.x+600&&p.y>landmark.y-180&&p.y<landmark.y+64;return !w.interior[i]||gate||Math.abs(p.x-landmark.x)<240&&p.y<landmark.y-32&&p.y>landmark.y-420?Infinity:(w.water.mask[i]?30:1)+w.fields.elevation[i]/65535;};
   for(const site of w.sites){const end=indexAt(w,site.x,site.y),cells=route(w,start,end,cost);if(!cells.length)throw Error('No road');
     let crossing=[];const finish=()=>{if(!crossing.length)return;if(crossing.length>6)throw Error('Water crossing too long');w.bridges.push({cells:[...crossing],width:CELL*3});crossing=[];};
     for(const i of cells){if(w.water.mask[i])crossing.push(i);else finish();for(const k of [i,...neighbors(w,i)])w.roadMask[k]=1;}finish();
@@ -51,34 +57,19 @@ export function roads(w){
   }
 }
 export function structures(w,kit){
-  const random=randomStream(w.derivedSeed,'buildings');w.objects=[];w.stairs=[];w.surfaces=[];w.assemblySolids=[];
-  const buildings=kit.items.filter(i=>i.category==='buildings'&&/hut|house|stall|ossuary|shrine/.test(i.id));
-  const small=kit.items.filter(i=>/stela|altar|totem|pot|crate|barrel|lamp|torch/.test(i.id));
-  for(const site of w.sites){
-    if(site.kind==='landmark'){
-      const options={id:site.id,x:site.x,y:site.y-220,width:320,tiers:3,faces:['south'],stairWidth:96};
-      const a=(w.mapId==='overgrown'?assembleTemple:assemblePyramid)(options);site.assembly=options;
-      w.stairs.push(...a.stairs);w.surfaces.push(...a.surfaces);w.assemblySolids.push(...a.solids);continue;
-    }
-    const count=site.kind==='settlement'?3+Math.floor(random()*5):3,items=site.kind==='settlement'?buildings:small;site.buildingCount=0;
-    for(let n=0;n<count;n++){
-      let placed=false;for(let attempt=0;attempt<120;attempt++){
-        const item=items[Math.floor(random()*items.length)],angle=random()*Math.PI*2,d=site.kind==='settlement'?260+random()*120:90+random()*100;
-        const c=candidate(item,site.x+Math.cos(angle)*d,site.y+Math.sin(angle)*d,site.kind==='settlement'?.55:.6);
-        if(!canPlace(w,c,{site:true}))continue;w.objects.push(c);site.buildingCount++;placed=true;break;
-      }if(!placed&&site.kind==='settlement'&&site.buildingCount<3)throw Error('Settlement too small');
-    }
-  }
+  buildMapContent(w,kit);
 }
 export function vegetation(w,kit){
   for(const category of ['trees','rocks','plants','debris','props']){
-    const random=randomStream(w.derivedSeed,category),items=kit.items.filter(i=>i.category===category),minimum={trees:180,rocks:130,plants:80,debris:70,props:100}[category];
-    const density=category==='trees'?w.profile.trees:category==='rocks'?w.profile.rocks:.25,target=Math.floor(170*density+18);
+    const config=WORLD_CONFIGS[w.mapId],random=randomStream(w.derivedSeed,category),items=kit.items.filter(i=>i.category===category&&(!config.vegetation[category]||config.vegetation[category].includes(i.id))),minimum={trees:180,rocks:130,plants:80,debris:70,props:100}[category];
+    const density=w.profile[category],target=Math.floor(170*density+18);
     for(let n=0,placed=0;n<2000&&placed<target;n++){
       const x=Math.round((random()-.5)*(w.size.width-1000)),y=Math.round((random()-.5)*(w.size.height-1000)),i=indexAt(w,x,y);
-      if(random()> .3+w.fields.fertility[i]/65535*.7)continue;
+      const weight=config.biomeProfiles[w.biomes[i]][category]??1;
+      if(random()>Math.min(1,(.3+w.fields.fertility[i]/65535*.7)*weight))continue;
       const item=items[Math.floor(random()*items.length)],c=candidate(item,x,y,.75+random()*.25);
       if(!canPlace(w,c)||w.objects.some(o=>o.category===category&&Math.hypot(o.x-x,o.y-y)<minimum))continue;
+      if(category==='trees'&&w.objects.some(o=>o.category==='buildings'&&rectOverlap({x:x-c.size.width/2,y:y-c.size.height,width:c.size.width,height:c.size.height},{x:o.x-o.size.width/2,y:o.y-o.size.height,width:o.size.width,height:o.size.height})))continue;
       w.objects.push(c);placed++;
     }
   }

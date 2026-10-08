@@ -1,0 +1,71 @@
+{
+  "errors": [],
+  "httpErrors": [],
+  "maps": [
+    {
+      "map": "overgrown",
+      "hash": "5515d35f",
+      "objects": 203,
+      "lights": 0,
+      "faces": [
+        "south",
+        "east"
+      ],
+      "landmark": {
+        "active": 27,
+        "pooled": 12,
+        "overheads": 34,
+        "glows": 0
+      },
+      "settlement": {
+        "active": 50,
+        "pooled": 0,
+        "overheads": 41,
+        "glows": 0
+      }
+    },
+    {
+      "map": "bloodmoon",
+      "hash": "4f587bad",
+      "objects": 275,
+      "lights": 31,
+      "faces": [
+        "south",
+        "north"
+      ],
+      "landmark": {
+        "active": 60,
+        "pooled": 0,
+        "overheads": 16,
+        "glows": 6
+      },
+      "settlement": {
+        "active": 91,
+        "pooled": 0,
+        "overheads": 19,
+        "glows": 11
+      }
+    },
+    {
+      "map": "cenote",
+      "hash": "df121123",
+      "objects": 145,
+      "lights": 58,
+      "faces": [
+        "south"
+      ],
+      "landmark": {
+        "active": 24,
+        "pooled": 0,
+        "overheads": 15,
+        "glows": 4
+      },
+      "island": {
+        "active": 30,
+        "pooled": 0,
+        "overheads": 15,
+        "glows": 1
+      }
+    }
+  ]
+}
