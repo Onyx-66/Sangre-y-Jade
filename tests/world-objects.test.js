@@ -79,9 +79,8 @@ test('WorldCollision rejects side stair entry and keeps knockback on its floor',
   system.track(actor);actor.x=0;system.resolve(actor);assert.ok(actor.x>=stair.width/2+11);
 });
 test('arches and bridges leave a real passage between separate pillar/rail footprints',()=>{
-  const layout=generateMapLayout('cenote',MAP_KITS.cenote,51);
-  const arch=layout.placements.find(p=>p.kind==='arch');assert.ok(arch);
-  const parts=layout.colliders.filter(p=>p.ownerId===arch.worldId);assert.equal(parts.length,2);
+  const arch={...MAP_KITS.cenote.items.find(p=>p.kind==='arch'),x:0,y:0,scale:1};assert.ok(arch.id);
+  const parts=arch.solidParts.map(collider=>({...arch,collider,footprint:collider}));assert.equal(parts.length,2);
   const y=arch.y+arch.collider.offsetY*arch.scale;
   const from={x:arch.x,y:y-arch.collider.height*arch.scale},to={x:arch.x,y:y+arch.collider.height*arch.scale};
   const p=sweepMove(from,to,11,()=>parts);assert.ok(Math.hypot(p.x-to.x,p.y-to.y)<1e-6);

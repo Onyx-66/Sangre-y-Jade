@@ -1,4 +1,5 @@
 import manifest from '../audio/sfx-manifest.json' with {type:'json'};
+import {normalizeSeed} from '../world/seed.js';
 import { audioFileFor } from './AudioDirector.js';
 
 export function runSkillIds(hero,{extraIds=[],allies=[]}={}){
@@ -15,6 +16,5 @@ export function runAudioManifest(ids,map,{base='/',audioKeys=[]}={}){
 
 export function prepareMapData(map,hero,seed=83492791){
   if(!map?.id||!map.colors||!Number.isFinite(map.colors.ground)||!hero?.id)throw new Error('Invalid map or hero data');
-  if(!Number.isSafeInteger(seed))throw new Error('Map seed must be a safe integer');
-  return {mapId:map.id,heroId:hero.id,seed:seed>>>0};
+  return {mapId:map.id,heroId:hero.id,seed:normalizeSeed(seed)};
 }

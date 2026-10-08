@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { MAP_KITS } from '../src/data/mapDefinitions.js';
 import { mapArtManifest } from '../src/maps/MapArt.js';
-import { createCenoteArt } from '../src/maps/CenoteArt.js';
+import { createCenoteArt,cenoteGroundRegions } from '../src/maps/CenoteArt.js';
 import { generateMapLayout } from '../src/maps/layout.js';
 import { MapWorld, waterSpeedMultiplier } from '../src/maps/MapWorld.js';
 import { WeatherDirector } from '../src/weather/WeatherDirector.js';
@@ -69,22 +69,21 @@ test('real Cenote textures load once with colored light metadata and preserved f
   assert.ok(kit.items.find(x=>x.id==='barrel-wet').breakable);
 });
 
-test('generator ground regions match lake boundaries and B3 shallow movement is 82 percent',()=>{
+test('B4 generated water rectangles match the physical grid and B3 shallow movement is 82 percent',()=>{
   const layout=generateMapLayout('cenote',kit,12),world={waterZones:layout.waterZones,isWaterAt:MapWorld.prototype.isWaterAt};
-  assert.equal(layout.groundRegions.length,6);
+  assert.ok(layout.waterZones.length>50);
   for(const zone of layout.waterZones){
-    const water=layout.groundRegions.find(x=>x.kind==='water'&&x.x===zone.x);
-    assert.equal(water.radius,zone.radius);assert.equal(water.y,zone.y);assert.equal(water.tile,'shallow-water');
+    assert.equal(zone.width,128);assert.equal(zone.height,128);assert.ok(['shallow','deep'].includes(zone.kind));
     assert.equal(waterSpeedMultiplier(world,zone),.82);
-    assert.equal(waterSpeedMultiplier(world,{x:zone.x+zone.radius+1,y:zone.y}),1);
   }
+  assert.equal(waterSpeedMultiplier(world,{x:0,y:0}),1);
 });
 
-test('Cenote shimmer reuses fixed masked sprites, respects reduced motion, and releases all objects',()=>{
+test('legacy Cenote art remains usable for authored layouts without replacing B4 grid rendering',()=>{
   const made=[];
   const object=()=>{const o={destroyCount:0,destroy(){this.destroyCount++;},setAlpha(v){this.alpha=v;return this;}};for(const method of ['setTexture','setDepth','setTint','setMask','setBlendMode','setRotation','fillStyle','fillCircle'])o[method]=()=>o;made.push(o);return o;};
   const scene={floor:object(),settings:{reducedMotion:false},add:{tileSprite:()=>object()},make:{graphics:()=>{const o=object();o.createGeometryMask=()=>object();return o;}},textures:{exists:()=>true}};
-  const art=createCenoteArt(scene,kit,generateMapLayout('cenote',kit,1)),count=made.length;
+  const art=createCenoteArt(scene,kit,{groundRegions:cenoteGroundRegions(kit.waterZones)}),count=made.length;
   for(let t=0;t<600000;t+=16)art.update(t);
   assert.equal(made.length,count);assert.ok(art.handlesWater);
   const shimmers=art.objects.filter(x=>x.tilePositionX!==undefined);assert.equal(shimmers.length,2);assert.ok(shimmers.some(x=>x.tilePositionX!==0));

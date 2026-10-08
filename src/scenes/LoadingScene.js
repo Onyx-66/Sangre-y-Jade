@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { generateWorldAsync } from '../world/generator/client.js';
 import { runAudioIds } from '../audio/runAudio.js';
 import { textureManifest } from '../art/textureManifest.js';
 import { FxDirector } from '../fx/FxDirector.js';
@@ -38,6 +39,7 @@ export class LoadingScene extends Phaser.Scene {
     await recover(fxManifest([...ids,...ENEMY_EFFECT_IDS,...BOSS_FX_IDS],FxDirector.recipes,base).map(file=>({...file,critical:ENEMY_EFFECT_IDS.some(id=>file.key===`fx-still-${id}-main`)||BOSS_FX_IDS.some(id=>file.key.startsWith(`fx-still-${id}-`))})),files=>loadTextureBatch(this,files,{signal,onProgress:value=>progress.set('skills',value)}));
     progress.set('skills',1);
     progress.set('world',0);
+    await recover([{key:'seeded-world',critical:true}],async files=>{try{o.worldData=await generateWorldAsync(map.id,o.seed,value=>progress.set('world',value*.7),signal);return [];}catch(error){if(error.name==='AbortError')throw error;return files;}});
     const scene=await new Promise((resolve,reject)=>{
       const abort=()=>reject(abortError());signal.addEventListener('abort',abort,{once:true});
       o.onSceneReady=scene=>{signal.removeEventListener('abort',abort);resolve(scene);};

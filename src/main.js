@@ -34,6 +34,8 @@ import { kitUrl } from './ui/Kit.js';
 import './ui/menu-update.css';
 import { bindKitNavigation } from './ui/KitNavigation.js';
 import './hud-layout.css';
+import './ui/world-seed.css';
+import { initialSeed,seedMarkup,bindSeed } from './ui/WorldSeed.js';
 import { Hud } from './systems/Hud.js';
 import { waitForGameFonts } from './ui/Typography.js';
 import { renderSettingsPanel } from './ui/SettingsPanel.js';
@@ -146,7 +148,7 @@ class SangreYJadeApp {
     const mode = gameMode.runModes.find((entry) => entry.id === this.lastSelection.modeId) || gameMode.runModes[0];
     const controller=new AbortController(),screen=new LoadingScreen({hero,map,reduceMotion:this.save.data.settings.reducedMotion,signal:controller.signal});
     let resolve;const ready=new Promise(done=>resolve=done);
-    const seed=(Math.random()*0x100000000)>>>0;
+    const seed=initialSeed(this.lastSelection);
     const session={controller,screen,resolve,started:performance.now(),hero,map,seed,audio:this.audio,audioKeys:map.audioKeys,skillAudio:new SkillAudio(this.audio),signal:controller.signal,
       prepareWorld:(scene,progress,signal)=>scene.prepareMapWorld(progress,signal)};
     session.progress=new RunLoadProgress(state=>screen.update(state));
@@ -154,7 +156,7 @@ class SangreYJadeApp {
       if(this.loadingSession!==session||controller.signal.aborted)return;
       this.loadingSession=null;this.cancelLoading=null;scene.loadingRun=false;scene.options.loading=null;
       if(!scene.pausedForChoice){scene.time.paused=false;scene.physics.resume();}
-      this.audio.music(map.music);screen.destroy();resolve(this.game);
+      this.audio.music(map.music);this.audio.ui?.('world-ready');screen.destroy();resolve(this.game);
     };
     session.failed=error=>{if(error.name!=='AbortError'&&this.loadingSession===session){this.clearGame();this.showFatal(error);}};
     this.loadingSession=session;this.cancelLoading=()=>{this.clearGame();this.showTitle();};
@@ -212,6 +214,7 @@ class SangreYJadeApp {
             <div class="summary-stat"><strong>${summary.level}</strong>level</div>
             <div class="summary-stat"><strong>● ${summary.cacao}</strong>cacao</div>
           </div>
+          ${summary.seed!==undefined?seedMarkup(String(summary.seed),true):''}
           ${summary.gear.length ? `<p class="panel-subtitle">${t('Equipment:')} ${summary.gear.map((item) => `${item.icon} ${t(item.name)}`).join(' · ')}</p>` : ''}
           <div class="panel-actions"><button class="btn ghost" data-menu>Main Menu</button><button class="btn ghost" data-shrine>Upgrades</button><button class="btn primary" data-retry>Try Again</button></div>
         </section>
@@ -220,6 +223,7 @@ class SangreYJadeApp {
     $('[data-shrine]', this.uiRoot).addEventListener('click', () => { this.clickSound(); this.clearGame(); this.showShrine(); });
     $('[data-retry]', this.uiRoot).addEventListener('click', () => { this.clickSound(); this.startRun(); });
     translateDOM(this.uiRoot);
+    bindSeed(this.uiRoot,{seed:String(summary.seed??'')},this.audio);
   }
 
   showShrine() {

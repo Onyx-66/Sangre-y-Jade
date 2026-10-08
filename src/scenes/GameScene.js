@@ -95,7 +95,6 @@ export class GameScene extends Phaser.Scene {
     this.dash = { cooldown: 0, remaining: 0, x: 1, y: 0 };
     this.hitCount = 0;
     this.enemySerial = 0;
-    this.chunks = new Set();
     this.gear = [];
     this.skillSlots = [];
     this.passiveSlots = [];
@@ -150,14 +149,14 @@ export class GameScene extends Phaser.Scene {
     this.fx=new FxDirector(this);
     this.skillAudio=this.options.loading?.skillAudio||new SkillAudio(audio);
     this.options.loading?.progress.set('world',.1);
-    const worldWidth=map.size?.width||6400,worldHeight=map.size?.height||4800,wall=map.kit?.world.wallThickness||400;
+    const worldWidth=map.size?.width||8192,worldHeight=map.size?.height||6144,wall=map.kit?.world.wallThickness||400;
     this.physics.world.setBounds(-worldWidth/2+wall,-worldHeight/2+wall,worldWidth-wall*2,worldHeight-wall*2);
     this.cameras.main.setBounds(-worldWidth/2,-worldHeight/2,worldWidth,worldHeight);
     this.cameras.main.setBackgroundColor(map.colors.ground);
     this.cameras.main.roundPixels = true;
     this.createWorld();
     this.createGroups();
-    this.mapWorld=new MapWorld(this,{map,seed:this.options.loading?.mapData?.seed||this.options.seed||83492791});
+    this.mapWorld=new MapWorld(this,{map,worldData:this.options.loading?.worldData,seed:this.options.loading?.seed??this.options.seed??83492791});
     this.telegraphs=new Telegraph(this);
     this.enemyBars=new EnemyHealthBars(this);
     this.spawnDirector=new SpawnDirector(this);
@@ -200,11 +199,6 @@ export class GameScene extends Phaser.Scene {
   }
 
   createWorld() {
-    const width=this.mapData.size?.width||6400,height=this.mapData.size?.height||4800;
-    this.floor = this.add.tileSprite(0, 0, width, height, 'ground')
-      .setOrigin(.5).setDepth(backgroundDepth());
-    if(this.mapData.id === 'bloodmoon') this.floor.setTint(0x956789);
-    if(this.mapData.id === 'cenote') this.floor.setTint(0x568eaf);
     // Keep the persistent map haze below the Telegraph layer (depth 5) so weather
     // and map tint can never wash out a fairness warning.
     this.fog = this.add.graphics().setScrollFactor(0).setDepth(weatherBackdropDepth(1));
@@ -221,7 +215,7 @@ export class GameScene extends Phaser.Scene {
       .fillRect(-view.width/2-GROUND_OVERSCAN,-view.height/2-GROUND_OVERSCAN,view.width+2*GROUND_OVERSCAN,view.height+2*GROUND_OVERSCAN);
     for(const {object}of this.fx?.live||[])if(object.active&&object.getData?.('viewportOverlay'))resizeScreenOverlay(this,object);
     this.decorTimer=0;
-    const worldWidth=this.mapData.size?.width||6400,worldHeight=this.mapData.size?.height||4800;
+    const worldWidth=this.mapData.size?.width||8192,worldHeight=this.mapData.size?.height||6144;
     camera.setBounds?.(-worldWidth/2,-worldHeight/2,worldWidth,worldHeight);
     if(this.player&&this.mapWorld)this.mapWorld.update(view);
     this.hud?.hideTooltip();
@@ -930,10 +924,11 @@ export class GameScene extends Phaser.Scene {
     if(!data||(!data.maps.includes('all')&&this.mapData.id&&!data.maps.includes(this.mapData.id)))return null;
     if(data.aliveLimit&&this.enemies.getChildren().filter(e=>e.active&&!e.getData('isBoss')&&e.getData('type')===type).length>=data.aliveLimit)return null;
     const view=worldView(this);
-    let position=spawnOptions.position||this.mapWorld?.spawnOutsideView(view,Math.random,160)||spawnOutsideView(view,Math.random,160);
+    let position=spawnOptions.position||(this.mapWorld?this.mapWorld.spawnOutsideView(view,Math.random,160):spawnOutsideView(view,Math.random,160));
     // Explicit radii are reserved for summons/boss abilities and automated QA.
     if(forcedRadius){const angle=Math.random()*TAU;position=this.mapWorld?.clampInside({x:this.player.x+Math.cos(angle)*forcedRadius,y:this.player.y+Math.sin(angle)*forcedRadius},data.radius)||{x:this.player.x+Math.cos(angle)*forcedRadius,y:this.player.y+Math.sin(angle)*forcedRadius};}
-    else if(this.mapWorld&&(!(position.x<view.x||position.x>view.right||position.y<view.y||position.y>view.bottom)||position.x < -2800||position.x>2800||position.y < -2000||position.y>2000))position=this.mapWorld.spawnOutsideView(view,Math.random,160);
+    else if(this.mapWorld&&position&&(!(position.x<view.x||position.x>view.right||position.y<view.y||position.y>view.bottom)||!this.mapWorld.isWalkable(position,data.radius)))position=this.mapWorld.spawnOutsideView(view,Math.random,160);
+    if(!position||this.mapWorld&&!this.mapWorld.isWalkable(position,data.radius))return null;
     const {x,y}=position;
     // Non-swimmers never spawn into a drowning trap; a later pack retries.
     if(this.water&&!data.flier&&!['abyssal_eel','drowned_spirit'].includes(type)&&this.water.waterAt(x,y,spawnOptions.summoner?.getData('level')||0).deep)return null;
@@ -1417,6 +1412,8 @@ export class GameScene extends Phaser.Scene {
       heroId: this.heroData.id,
       heroName: this.heroData.name,
       mapId: this.mapData.id,
+      seed: this.mapWorld.layout.seed,
+      worldHash: this.mapWorld.layout.hash,
       mapName: this.mapData.name,
       modeId: this.modeData.id,
       gear: this.gear,

@@ -1,7 +1,10 @@
 import { MAP_KITS } from '../data/mapDefinitions.js';
 import { SpatialHash } from './SpatialHash.js';
 import { generateMapLayout, packWorldCells, PLAYABLE_BOUNDS, WORLD_HALF } from './layout.js';
-import { createMapArt } from './MapArt.js';
+import { GroundRenderer } from '../world/generator/GroundRenderer.js';
+import { hydrateWorld } from '../world/generator/index.js';
+import { indexAt } from '../world/generator/grid.js';
+import { penetration } from '../world/geometry.js';
 import { backgroundDepth, footprintBaseY, objectBaseY, overheadDepth, worldDepth } from '../render/layers.js';
 import { shapeBounds } from '../world/geometry.js';
 import { WorldCollision } from '../world/WorldCollision.js';
@@ -43,12 +46,12 @@ function circlesOverlap(a, b, padding = 0) {
 }
 
 export class MapWorld {
-  constructor(scene, { map = scene.mapData, seed = 1, maxActive = 350, chunkBudget = 2 } = {}) {
+  constructor(scene, { map = scene.mapData, seed = 1, worldData, maxActive = 350, chunkBudget = 2 } = {}) {
     this.scene = scene;
     this.map = map;
     this.kit = map.kit || MAP_KITS[map.id];
-    this.layout = generateMapLayout(map.id, this.kit, seed);
-    this.seed = Number(seed) >>> 0;
+    this.layout = worldData ? hydrateWorld(worldData) : generateMapLayout(map.id, this.kit, seed);
+    this.seed = this.layout.seedHash;
     this.maxActive = maxActive;
     this.chunkBudget = chunkBudget;
     this.active = new Map();
@@ -73,7 +76,7 @@ export class MapWorld {
     scene.mapLayout = this.layout;
     scene.waterZones = this.waterZones;
     scene.lightSources = this.lightSources;
-    this.art = createMapArt(scene, this.kit, this.layout);
+    this.art = new GroundRenderer(scene,this.layout);
     this.drawBoundary();
     this.drawPathways();
     this.drawWater();
@@ -98,16 +101,16 @@ export class MapWorld {
     const g = this.wallGraphics;
     const color = this.map.id === 'overgrown' ? 0x15271e : this.map.id === 'bloodmoon' ? 0x17121c : 0x0a1119;
     g.fillStyle(color, 0.96);
-    g.fillRect(-WORLD_HALF.x, -WORLD_HALF.y, this.kit.world.width, 400);
-    g.fillRect(-WORLD_HALF.x, WORLD_HALF.y - 400, this.kit.world.width, 400);
-    g.fillRect(-WORLD_HALF.x, -WORLD_HALF.y + 400, 400, this.kit.world.height - 800);
-    g.fillRect(WORLD_HALF.x - 400, -WORLD_HALF.y + 400, 400, this.kit.world.height - 800);
+    g.fillRect(-WORLD_HALF.x, -WORLD_HALF.y, this.layout.world.width, 400);
+    g.fillRect(-WORLD_HALF.x, WORLD_HALF.y - 400, this.layout.world.width, 400);
+    g.fillRect(-WORLD_HALF.x, -WORLD_HALF.y + 400, 400, this.layout.world.height - 800);
+    g.fillRect(WORLD_HALF.x - 400, -WORLD_HALF.y + 400, 400, this.layout.world.height - 800);
     for (let i = 0; i < 8; i++) {
       const alpha = (8 - i) / 80;
       const inset = 400 + i * 12;
       g.lineStyle(12, color, alpha);
       g.strokeRect(-WORLD_HALF.x + inset, -WORLD_HALF.y + inset,
-        this.kit.world.width - inset * 2, this.kit.world.height - inset * 2);
+        this.layout.world.width - inset * 2, this.layout.world.height - inset * 2);
     }
   }
 
@@ -319,7 +322,7 @@ export class MapWorld {
   isWaterAt(point, margin = 0) {
     if((point.getData?.('level')||point.level||0)!==0)return false;
     if(this.scene?.water&&!margin)return this.scene.water.at(point).kind!=='dry';
-    return this.waterZones.some(zone => Math.hypot(point.x - zone.x, point.y - zone.y) <= zone.radius + margin);
+    return this.waterZones.some(zone => zone.radius!==undefined?Math.hypot(point.x-zone.x,point.y-zone.y)<=zone.radius+margin:Math.abs(point.x-zone.x)<=zone.width/2+margin&&Math.abs(point.y-zone.y)<=zone.height/2+margin);
   }
 
   clampInside(point, radius = 20) {
@@ -329,21 +332,15 @@ export class MapWorld {
   }
 
   spawnOutsideView(view, random = Math.random, padding = 100) {
-    const { left, right, top, bottom } = PLAYABLE_BOUNDS, choices = [];
-    const along = random(), side = Math.floor(random() * 4);
-    const { x, y, width, height } = view;
-    const candidate = which => which === 0 ? { x: x - padding, y: y + along * height }
-      : which === 1 ? { x: x + width + padding, y: y + along * height }
-        : which === 2 ? { x: x + along * width, y: y - padding }
-          : { x: x + along * width, y: y + height + padding };
-    for (let i = 0; i < 4; i++) {
-      const p = candidate((side + i) % 4);
-      if (p.x >= left && p.x <= right && p.y >= top && p.y <= bottom) choices.push(p);
-    }
-    if (choices.length) return choices[0];
-    const fallback = this.clampInside({ x: x + width / 2, y: y + height / 2 });
-    return { x: fallback.x < (left + right) / 2 ? right - padding : left + padding,
-      y: fallback.y < (top + bottom) / 2 ? bottom - padding : top + padding };
+    const candidates=this.layout.spawnPoints.filter(p=>(p.x<view.x-padding||p.x>view.right+padding||p.y<view.y-padding||p.y>view.bottom+padding)&&this.isWalkable(p,32));
+    candidates.sort((a,b)=>Math.hypot(a.x-(view.x+view.width/2),a.y-(view.y+view.height/2))-Math.hypot(b.x-(view.x+view.width/2),b.y-(view.y+view.height/2)));
+    return candidates[Math.floor(random()*Math.min(12,candidates.length))]||null;
+  }
+
+  isWalkable(p,radius=24){
+    const w=this.layout.worldData,i=indexAt(w,p.x,p.y);
+    // Ground spawns cannot appear underneath a raised platform between its walls.
+    return i>=0&&w.reachable[i]&&(!w.water.mask[i]||w.bridgeMask[i])&&!w.surfaces.some(s=>penetration(p,radius,s))&&this.blockersAround(p.x,p.y,radius+40).every(o=>!(o.levels||[o.level||0]).includes(0)||!penetration(p,radius,o));
   }
 
   blockersAround(x, y, radius) {

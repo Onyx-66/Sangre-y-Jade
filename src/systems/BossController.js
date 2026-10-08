@@ -182,7 +182,7 @@ export class BossController {
   if(s.audio?.v2&&s.elapsed>=due-60&&this.preloadedAudio!==definition.id){this.preloadedAudio=definition.id;s.audio.prepareManifest?.(bossAudioIds(s.audio.v2,definition.id));}
   if(s.activeBoss||this.state)return;
   if(!this.warning&&s.elapsed>=due-BOSS_FAIRNESS.warningLead){
-   const point=s.mapWorld?.spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35))||spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35));
+   const point=s.mapWorld?.layout?.bossArenas?.[0]||s.mapWorld?.spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35))||spawnOutsideView(worldView(s),this.random,120+96*(index===3?1.65:1.35));
    this.warning={definition,point,spawnAt:Math.max(due,s.elapsed+BOSS_FAIRNESS.warningLead)};
    s.audio?.voice?.(index===3?'announcer-final-boss':'announcer-boss-approaching',{owner:'run'});
    if(s.options?.bossHooks?.horn)s.options.bossHooks.horn(definition);else s.audio?.sfx?.('boss');

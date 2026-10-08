@@ -44,14 +44,14 @@ test('the real scene resize keeps finite terrain fixed and updates fog, map stre
  const object=()=>({active:true,setPosition(x,y){this.x=x;this.y=y;return this;},
   setSize(width,height){this.width=width;this.height=height;return this;},
   setDisplaySize(width,height){this.displayWidth=width;this.displayHeight=height;return this;},getData:()=>true});
- scene.floor=Object.assign(object(),{x:0,y:0,width:6400,height:4800});
+ scene.floor=Object.assign(object(),{x:0,y:0,width:8192,height:6144});
  scene.fog={...object(),clear(){rects.length=0;return this;},fillStyle(color,alpha){this.color=color;this.alpha=alpha;return this;},fillRect(...args){rects.push(args);return this;}};
  const shade=object();scene.fx={live:[{object:shade}]};scene.decorGroup={};let streamed=0;
  scene.mapWorld={update(view){streamed++;assert.deepEqual(view,worldView(scene));}};scene.hud.hideTooltip=()=>{};
  for(const [width,height]of sizes){scene.resizeViewport({width,height});const view=worldView(scene);
-  assert.equal(scene.floor.width,6400);assert.equal(scene.floor.height,4800);
+  assert.equal(scene.floor.width,8192);assert.equal(scene.floor.height,6144);
   assert.equal(scene.floor.x,0);assert.equal(scene.floor.y,0);
-  assert.deepEqual(camera.bounds,{x:-3200,y:-2400,width:6400,height:4800});
+  assert.deepEqual(camera.bounds,{x:-4096,y:-3072,width:8192,height:6144});
   assert.deepEqual(rects,[[-view.width/2-64,-view.height/2-64,view.width+128,view.height+128]]);assert.equal(scene.fog.alpha,.14);
   assert.equal(shade.x,width/2);assert.equal(shade.y,height/2);assert.equal(shade.displayWidth,view.width+128);assert.equal(shade.displayHeight,view.height+128);
   assert.equal(scene.pausedForChoice,true);assert.equal(scene.time.paused,true);

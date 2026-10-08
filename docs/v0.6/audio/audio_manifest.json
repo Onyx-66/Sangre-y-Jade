@@ -17,6 +17,9 @@
   "ahpuch": "A cold, whispering, hollow, layered voice with an echo, slow, ancient and terrifying."
  },
  "items": [
+{"type":"sfx","file":"sfx/ui/seed-dice.mp3","duration":0.2,"loop":false,"priority":"P1","group":"ui","note":"B4 optional developer audio."},
+{"type":"sfx","file":"sfx/ui/seed-copy.mp3","duration":0.2,"loop":false,"priority":"P1","group":"ui","note":"B4 optional developer audio."},
+{"type":"sfx","file":"sfx/ui/world-ready.mp3","duration":0.6,"loop":false,"priority":"P1","group":"ui","note":"B4 optional developer audio."},
 {"type":"sfx","file":"sfx/water/enter-shallow.mp3","duration":1,"loop":false,"priority":"P1","group":"water","note":"B3 optional developer-supplied audio; silent until provided."},
 {"type":"sfx","file":"sfx/water/exit-shallow.mp3","duration":1,"loop":false,"priority":"P1","group":"water","note":"B3 optional developer-supplied audio; silent until provided."},
 {"type":"sfx","file":"sfx/water/enter-deep.mp3","duration":1,"loop":false,"priority":"P1","group":"water","note":"B3 optional developer-supplied audio; silent until provided."},

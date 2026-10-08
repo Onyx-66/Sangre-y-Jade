@@ -21,7 +21,7 @@ export function mapDefinition(id, legacy = {}) {
     id: data.id,
     name: data.name,
     timeOfDay: data.time,
-    size: { width: kit.world.width, height: kit.world.height },
+    size: { width: 8192, height: 6144 },
     environment: data.environment,
     weather: data.weather,
     palette: data.palette,

@@ -4,6 +4,7 @@ import { getGameMode } from '../modes.js';
 import { portraitMarkup } from '../art/uiArt.js';
 import { t } from '../i18n/index.js';
 import { selectionMarkup, selectionBackground } from '../ui/MenuScreens.js';
+import { initialSeed,seedMarkup,bindSeed } from '../ui/WorldSeed.js';
 export function renderRunSetup(app){
  app.currentPage='showRunSetup';const step=Math.max(0,Math.min(3,app.setupStep||0));app.setupStep=step;
  const gameMode=getGameMode(app.lastSelection.gameModeId);
@@ -19,6 +20,7 @@ export function renderRunSetup(app){
   ? app.setScreen(selectionMarkup(step,app.lastSelection,heroList(),MAPS),'kit-screen selection-screen')
   : app.setScreen(`<section class="panel setup-panel wizard-panel" data-setup-step="${step}"><h2>${t(titles[step])}</h2><p class="panel-subtitle">${t(subtitles[step])}</p><div class="wizard-content">${content}</div><div class="panel-actions"><button class="btn ghost" data-back>${t('Back')}</button>${step<3?`<button class="btn primary" data-next>${t('Continue')} →</button>`:`<button class="btn primary" data-start>${t('Start Run')}</button>`}</div></section>`,'setup-screen');
  if(step<2)screen.style.setProperty('--kit-backdrop',`url('${selectionBackground(step)}')`);
+ if(step===1){screen.querySelector('.selection-actions').insertAdjacentHTML('beforebegin',seedMarkup(initialSeed(app.lastSelection)));bindSeed(screen,app.lastSelection,app.audio);}
  for(const [attribute,key]of [['hero','heroId'],['map','mapId'],['mode','modeId']])screen.querySelectorAll(`[data-${attribute}]`).forEach(button=>button.onclick=()=>{
   const fromFocus=document.activeElement===button,fromGamepad=screen.dataset.gamepadFocus;
   app.clickSound();app.lastSelection[key]=button.dataset[attribute];renderRunSetup(app);

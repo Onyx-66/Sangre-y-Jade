@@ -1,0 +1,43 @@
+{
+  "maps": [
+    {
+      "map": "overgrown",
+      "seeds": 300,
+      "meanMs": 74.00742333333339,
+      "p95Ms": 186.11579999999958,
+      "maxMs": 478.66849999999977,
+      "minimumConnectivity": 0.9500665778961385,
+      "retries": 11
+    },
+    {
+      "map": "bloodmoon",
+      "seeds": 300,
+      "meanMs": 93.84356699999998,
+      "p95Ms": 194.84619999999995,
+      "maxMs": 395.7968000000001,
+      "minimumConnectivity": 0.95,
+      "retries": 7
+    },
+    {
+      "map": "cenote",
+      "seeds": 300,
+      "meanMs": 60.63648766666675,
+      "p95Ms": 130.78949999999895,
+      "maxMs": 148.02160000000003,
+      "minimumConnectivity": 0.95,
+      "retries": 12
+    }
+  ],
+  "fixtures": {
+    "overgrown": "ed6995eb",
+    "bloodmoon": "92002207",
+    "cenote": "aba01e0b"
+  },
+  "heap": [
+    5175128,
+    7868016,
+    7863176,
+    6946848
+  ],
+  "heapGrowthBytes": -921168
+}

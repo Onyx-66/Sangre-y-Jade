@@ -109,7 +109,7 @@ test('skipped optional sounds fall back without repeated fetches; a successful r
  client.fetcher=async()=>({ok:true,arrayBuffer:async()=>new ArrayBuffer(1)});await client.prepareFile('skills/sfx-jaguar-roar-cast.wav');assert.equal(client.unavailable.size,0);client.destroy();
  const audio=new AudioDirector({data:{settings:{}}});audio.unavailable.add('music:day');audio.currentName='menu';audio.applySettings=()=>{};assert.doesNotThrow(()=>audio.music('day'));assert.equal(audio.currentName,'menu');
 });
-test('map preparation preserves the real terrain seed and validates required data',()=>{assert.equal(prepareMapData(map,hero).seed,83492791);assert.throws(()=>prepareMapData({},hero),/Invalid/);});
+test('map preparation preserves text terrain seeds and validates required data',()=>{assert.equal(prepareMapData(map,hero).seed,'83492791');assert.equal(prepareMapData(map,hero,'jade').seed,'jade');assert.throws(()=>prepareMapData({},hero),/Invalid/);});
 test('all loading copy has explicit EN/FR/AR text and static reduced-motion torch fallback',async()=>{
  for(const locale of ['en','fr','ar']){setLanguage(locale);for(const [key]of loadingMessages){assert.ok(hasTranslation(key,locale),`${locale}: ${key}`);assert.ok(t(key));}}setLanguage('en');
  const css=await fs.readFile(new URL('../src/ui/loading.css',import.meta.url),'utf8');assert.ok(css.includes('prefers-reduced-motion:reduce')&&css.includes('data-reduced-motion=true'));

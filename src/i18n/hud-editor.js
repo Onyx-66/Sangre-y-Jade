@@ -1,4 +1,10 @@
 export const hudEditorMessages = [
+ ['World seed','Graine du monde','بذرة العالم'], // TODO native review
+ ['Random seed','Aléatoire','بذرة عشوائية'], // TODO native review
+ ['Copy seed','Copier','نسخ البذرة'], // TODO native review
+ ['Seed copied','Graine copiée','تم نسخ البذرة'], // TODO native review
+ ['Select and copy the seed.','Sélectionnez et copiez la graine.','حدد البذرة وانسخها.'], // TODO native review
+ ['Seed: 1–64 letters, numbers, spaces, dots, hyphens or underscores.','Graine : 1–64 lettres, chiffres, espaces, points, tirets ou traits bas.','البذرة: من 1 إلى 64 حرفًا أو رقمًا أو مسافة أو نقطة أو شرطة.'], // TODO native review
  ['Breath','Souffle','النَّفَس'], // TODO native review
  ['Reduce effects','Réduire les effets','تقليل المؤثرات'], // TODO native review
  ['HUD','Interface','الواجهة'], // TODO native review

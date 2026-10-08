@@ -1,0 +1,68 @@
+{
+  "errors": [],
+  "httpErrors": [],
+  "screens": [
+    {
+      "lang": "en",
+      "width": 568,
+      "height": 320
+    },
+    {
+      "lang": "en",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "lang": "fr",
+      "width": 568,
+      "height": 320
+    },
+    {
+      "lang": "fr",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "lang": "ar",
+      "width": 568,
+      "height": 320
+    },
+    {
+      "lang": "ar",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "maps": [
+    {
+      "map": "overgrown",
+      "loadMs": 5545.799999999814,
+      "hash": "ed6995eb",
+      "width": 7392,
+      "height": 5344,
+      "peak": 98,
+      "pending": 0,
+      "sites": 8
+    },
+    {
+      "map": "bloodmoon",
+      "loadMs": 3252.100000000559,
+      "hash": "92002207",
+      "width": 7392,
+      "height": 5344,
+      "peak": 96,
+      "pending": 0,
+      "sites": 8
+    },
+    {
+      "map": "cenote",
+      "loadMs": 3798.2999999998137,
+      "hash": "aba01e0b",
+      "width": 7392,
+      "height": 5344,
+      "peak": 63,
+      "pending": 0,
+      "sites": 8
+    }
+  ]
+}

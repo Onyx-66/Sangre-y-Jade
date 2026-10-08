@@ -1,0 +1,15 @@
+/* Compact setup seed controls preserve 44px touch targets and RTL labels. */
+.world-seed{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:6px auto;max-width:100%;font-size:14px}
+.world-seed input{width:180px;max-width:35vw;min-width:90px;height:44px;font-size:14px;padding:5px;box-sizing:border-box}
+.world-seed .btn{min-height:44px;min-width:44px;margin:0;padding:4px 10px}
+.world-seed [data-seed-dice]{position:relative}
+.world-seed [data-seed-dice]::before{content:'⚄';position:absolute;left:2px;top:0;font-size:12px;line-height:1}
+.world-seed small{max-width:100%;font-size:12px}.world-seed small:empty{display:none}
+.selection-page:has(.world-seed){grid-template-rows:auto minmax(0,1fr) auto auto}
+@media(max-height:400px){
+ .world-seed{margin:0;gap:4px}
+ .screen.selection-screen:has(.world-seed) .selection-map-art{height:44px;min-height:44px}
+ .screen.selection-screen:has(.world-seed) .map-name{font-size:16px;line-height:1.15;margin:0;white-space:normal}
+ .screen.selection-screen:has(.world-seed) .map-difficulty{font-size:14px;line-height:1.2;margin:2px 0}
+ .screen.selection-screen:has(.world-seed) .kit-divider{display:none}
+}

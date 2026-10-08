@@ -115,6 +115,7 @@ export class SaveSystem {
   }
 
   recordRun(summary) {
+    if(summary.seed!==undefined)this.data.lastWorld={seed:String(summary.seed),hash:summary.worldHash||'',mapId:summary.mapId};
     this.data.totalRuns += 1;
     this.data.cacao += Math.max(0, Math.floor(summary.cacao || 0));
     if (summary.victory) this.data.victories += 1;
@@ -125,6 +126,8 @@ export class SaveSystem {
         survived: Math.floor(summary.survived),
         victory: Boolean(summary.victory || old?.victory),
         kills: Math.max(summary.kills || 0, old?.kills || 0),
+        seed: summary.seed===undefined?old?.seed:String(summary.seed),
+        worldHash: summary.worldHash||old?.worldHash,
       };
     }
     this.commit();
