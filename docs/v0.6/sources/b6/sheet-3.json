@@ -1,0 +1,171 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b6/assets",
+  "contactSheet": "docs/v0.6/previews/b6/sheet-3.png",
+  "items": [
+    {
+      "id": "log-fallen",
+      "category": "debris",
+      "width": 160,
+      "height": 96,
+      "description": "fallen log with moss",
+      "file": "maps/overgrown/debris/log-fallen.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "stump",
+      "category": "debris",
+      "width": 96,
+      "height": 96,
+      "description": "tree stump",
+      "file": "maps/overgrown/debris/stump.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "mushrooms-red",
+      "category": "debris",
+      "width": 80,
+      "height": 80,
+      "description": "red mushrooms",
+      "file": "maps/overgrown/debris/mushrooms-red.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "mushrooms-brown",
+      "category": "debris",
+      "width": 96,
+      "height": 80,
+      "description": "brown mushroom cluster",
+      "file": "maps/overgrown/debris/mushrooms-brown.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "twigs",
+      "category": "debris",
+      "width": 96,
+      "height": 80,
+      "description": "twigs and leaves pile",
+      "file": "maps/overgrown/debris/twigs.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "stones-small",
+      "category": "debris",
+      "width": 64,
+      "height": 64,
+      "description": "a few small stones",
+      "file": "maps/overgrown/debris/stones-small.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "temple-central",
+      "category": "buildings",
+      "width": 768,
+      "height": 768,
+      "description": "central stepped stone temple with a staircase, overgrown, top-down 3/4, 768 px (landmark)",
+      "file": "maps/overgrown/buildings/temple-central.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "temple-wall-a",
+      "category": "buildings",
+      "width": 384,
+      "height": 256,
+      "description": "ruined temple wall segment, straight",
+      "file": "maps/overgrown/buildings/temple-wall-a.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "temple-wall-corner",
+      "category": "buildings",
+      "width": 320,
+      "height": 320,
+      "description": "ruined temple wall corner",
+      "file": "maps/overgrown/buildings/temple-wall-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "hut-thatched-a",
+      "category": "buildings",
+      "width": 320,
+      "height": 320,
+      "description": "Maya thatched hut, round",
+      "file": "maps/overgrown/buildings/hut-thatched-a.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "hut-thatched-b",
+      "category": "buildings",
+      "width": 384,
+      "height": 320,
+      "description": "Maya thatched hut, rectangular with porch",
+      "file": "maps/overgrown/buildings/hut-thatched-b.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "hut-thatched-c",
+      "category": "buildings",
+      "width": 448,
+      "height": 384,
+      "description": "larger hut with storage shed",
+      "file": "maps/overgrown/buildings/hut-thatched-c.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "market-stall-a",
+      "category": "buildings",
+      "width": 320,
+      "height": 256,
+      "description": "ruined market stall with faded red cloth",
+      "file": "maps/overgrown/buildings/market-stall-a.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "market-stall-b",
+      "category": "buildings",
+      "width": 320,
+      "height": 288,
+      "description": "market stall with baskets",
+      "file": "maps/overgrown/buildings/market-stall-b.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "altar",
+      "category": "buildings",
+      "width": 256,
+      "height": 256,
+      "description": "carved stone altar",
+      "file": "maps/overgrown/buildings/altar.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "shrine-small",
+      "category": "buildings",
+      "width": 288,
+      "height": 320,
+      "description": "small stone shrine with a jade idol",
+      "file": "maps/overgrown/buildings/shrine-small.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    }
+  ]
+}

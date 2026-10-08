@@ -1,0 +1,171 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b6/assets",
+  "contactSheet": "docs/v0.6/previews/b6/sheet-2.png",
+  "items": [
+    {
+      "id": "bush-round",
+      "category": "plants",
+      "width": 144,
+      "height": 128,
+      "description": "round green bush",
+      "file": "maps/overgrown/plants/bush-round.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "bush-flowers-pink",
+      "category": "plants",
+      "width": 160,
+      "height": 128,
+      "description": "bush with pink flowers",
+      "file": "maps/overgrown/plants/bush-flowers-pink.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "bush-flowers-white",
+      "category": "plants",
+      "width": 144,
+      "height": 128,
+      "description": "bush with white flowers",
+      "file": "maps/overgrown/plants/bush-flowers-white.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "fern-a",
+      "category": "plants",
+      "width": 192,
+      "height": 160,
+      "description": "large fern",
+      "file": "maps/overgrown/plants/fern-a.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "fern-b",
+      "category": "plants",
+      "width": 128,
+      "height": 112,
+      "description": "small fern cluster",
+      "file": "maps/overgrown/plants/fern-b.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "tall-grass-a",
+      "category": "plants",
+      "width": 128,
+      "height": 144,
+      "description": "tall grass tuft",
+      "file": "maps/overgrown/plants/tall-grass-a.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "flowers-blue",
+      "category": "plants",
+      "width": 128,
+      "height": 112,
+      "description": "blue wildflowers",
+      "file": "maps/overgrown/plants/flowers-blue.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "flowers-yellow",
+      "category": "plants",
+      "width": 128,
+      "height": 112,
+      "description": "yellow wildflowers",
+      "file": "maps/overgrown/plants/flowers-yellow.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "lilies",
+      "category": "plants",
+      "width": 160,
+      "height": 144,
+      "description": "large jungle leaves",
+      "file": "maps/overgrown/plants/lilies.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "vines-hanging",
+      "category": "plants",
+      "width": 160,
+      "height": 192,
+      "description": "hanging vines for walls",
+      "file": "maps/overgrown/plants/vines-hanging.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "rock-mossy-large",
+      "category": "rocks",
+      "width": 256,
+      "height": 224,
+      "description": "large mossy boulder",
+      "file": "maps/overgrown/rocks/rock-mossy-large.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "rock-mossy-small",
+      "category": "rocks",
+      "width": 128,
+      "height": 112,
+      "description": "small mossy boulder",
+      "file": "maps/overgrown/rocks/rock-mossy-small.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "rock-slab",
+      "category": "rocks",
+      "width": 192,
+      "height": 128,
+      "description": "flat stone slab",
+      "file": "maps/overgrown/rocks/rock-slab.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "rubble-pile",
+      "category": "rocks",
+      "width": 224,
+      "height": 160,
+      "description": "pile of carved stone rubble",
+      "file": "maps/overgrown/rocks/rubble-pile.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "stela-fallen",
+      "category": "rocks",
+      "width": 256,
+      "height": 128,
+      "description": "fallen carved stela",
+      "file": "maps/overgrown/rocks/stela-fallen.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "stela-standing",
+      "category": "rocks",
+      "width": 160,
+      "height": 256,
+      "description": "standing carved stela (landmark prop)",
+      "file": "maps/overgrown/rocks/stela-standing.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "errors": [],
+  "views": [
+    {
+      "kind": "centre",
+      "active": 34,
+      "pool": 0,
+      "overhead": 27,
+      "terrain": 117,
+      "hash": "51f98781"
+    },
+    {
+      "kind": "corner",
+      "active": 19,
+      "pool": 15,
+      "overhead": 27,
+      "terrain": 117,
+      "hash": "51f98781"
+    },
+    {
+      "kind": "settlement",
+      "active": 43,
+      "pool": 0,
+      "overhead": 27,
+      "terrain": 140,
+      "hash": "51f98781"
+    },
+    {
+      "kind": "pyramid",
+      "active": 38,
+      "pool": 5,
+      "overhead": 32,
+      "terrain": 140,
+      "hash": "51f98781"
+    }
+  ],
+  "galleries": [
+    "collision-trees-0.png",
+    "collision-trees-1.png",
+    "collision-trees-2.png",
+    "collision-plants-0.png",
+    "collision-plants-1.png",
+    "collision-plants-2.png",
+    "collision-rocks-0.png",
+    "collision-rocks-1.png",
+    "collision-debris-0.png",
+    "collision-debris-1.png",
+    "collision-buildings-0.png",
+    "collision-buildings-1.png",
+    "collision-buildings-2.png",
+    "collision-buildings-3.png",
+    "collision-buildings-4.png",
+    "collision-buildings-5.png",
+    "collision-buildings-6.png",
+    "collision-buildings-7.png",
+    "collision-buildings-8.png",
+    "collision-buildings-9.png",
+    "collision-buildings-10.png",
+    "collision-props-0.png",
+    "collision-props-1.png",
+    "collision-props-2.png",
+    "collision-statues-0.png",
+    "collision-structures-0.png",
+    "collision-structures-1.png",
+    "collision-structures-2.png",
+    "collision-structures-3.png"
+  ],
+  "seed": "b6-art-4",
+  "renderer": {
+    "type": 2,
+    "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "stairs": [
+      "south",
+      "east",
+      "north",
+      "west"
+    ]
+  },
+  "directionReview": "South-ascending art rejected as ambiguous; existing procedural stair marks remain visible for this direction.",
+  "frameTime": {
+    "frames": 360,
+    "meanMs": 74.18833333333335,
+    "p95Ms": 83.40000000000146,
+    "maxMs": 97.19999999999709,
+    "note": "Desktop headless Chrome rAF, collision overlay off, unthrottled; not phone FPS"
+  }
+}

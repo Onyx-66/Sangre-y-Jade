@@ -36,11 +36,11 @@ test('all six ground textures and both fog textures have matching periodic edges
   }
 });
 
-test('selected-map preload references all 59 real kit textures and only its weather',()=>{
+test('selected-map preload references all current kit textures and only its weather',()=>{
   const manifest=textureManifest({map:{id:'overgrown',kit}}),keys=manifest.map(x=>x.key);
   assert.equal(new Set(keys).size,keys.length);
   for(const item of [...kit.items,...kit.ground])assert.ok(manifest.some(x=>x.key===item.textureKey&&x.url.endsWith(item.image)));
-  assert.equal(manifest.filter(x=>x.key.startsWith('map-overgrown-')).length,59);
+  assert.equal(manifest.filter(x=>x.key.startsWith('map-overgrown-')).length,89);
   assert.deepEqual(manifest.filter(x=>x.key.startsWith('weather-')).map(x=>x.key).sort(),weatherStillIds('overgrown').map(x=>`weather-${x}`).sort());
   for(const [id,file] of Object.entries(WEATHER_STILL_PATHS))assert.equal(file,`weather/${id}.png`);
   assert.ok(!textureManifest({map:{id:'cenote'}}).some(x=>x.key.startsWith('map-overgrown-')));

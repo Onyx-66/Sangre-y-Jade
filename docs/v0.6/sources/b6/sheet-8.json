@@ -1,0 +1,21 @@
+{
+  "expectedCount": 1,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b6/assets",
+  "contactSheet": "docs/v0.6/previews/b6/sheet-8.png",
+  "items": [
+    {
+      "id": "stairs-stone-s",
+      "category": "structures",
+      "width": 256,
+      "height": 192,
+      "description": "stairs-stone-s",
+      "file": "maps/overgrown/structures/stairs-stone-s.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { backgroundDepth } from '../render/layers.js';
 export function mapArtManifest(map) {
   const kit = map?.kit || MAP_KITS[typeof map === 'string' ? map : map?.id];
   if (!kit?.artVersion) return [];
-  return [...(kit.ground || []), ...(kit.glows || []), ...kit.items].filter(item => item.image)
+  return [...(kit.ground || []), ...(kit.glows || []), ...(kit.waterArt || []), ...(kit.structureArt || []), ...kit.items].filter(item => item.image)
     .map(item => ({ key: item.textureKey, file: item.image }));
 }
 

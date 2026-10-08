@@ -1,0 +1,121 @@
+{
+  "expectedCount": 11,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b6/assets",
+  "contactSheet": "docs/v0.6/previews/b6/sheet-6.png",
+  "items": [
+    {
+      "id": "platform-edge-straight",
+      "category": "structures",
+      "width": 256,
+      "height": 256,
+      "description": "platform-edge-straight",
+      "file": "maps/overgrown/structures/platform-edge-straight.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "platform-edge-corner",
+      "category": "structures",
+      "width": 256,
+      "height": 256,
+      "description": "platform-edge-corner",
+      "file": "maps/overgrown/structures/platform-edge-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "wall-stone-straight",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-straight",
+      "file": "maps/overgrown/structures/wall-stone-straight.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "wall-stone-corner",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-corner",
+      "file": "maps/overgrown/structures/wall-stone-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "wall-stone-gap",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-gap",
+      "file": "maps/overgrown/structures/wall-stone-gap.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "bridge-h",
+      "category": "structures",
+      "width": 512,
+      "height": 192,
+      "description": "bridge-h",
+      "file": "maps/overgrown/structures/bridge-h.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "bridge-v",
+      "category": "structures",
+      "width": 192,
+      "height": 512,
+      "description": "bridge-v",
+      "file": "maps/overgrown/structures/bridge-v.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "pyramid-tier-a",
+      "category": "structures",
+      "width": 768,
+      "height": 768,
+      "description": "pyramid-tier-a",
+      "file": "maps/overgrown/structures/pyramid-tier-a.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "pyramid-tier-b",
+      "category": "structures",
+      "width": 512,
+      "height": 512,
+      "description": "pyramid-tier-b",
+      "file": "maps/overgrown/structures/pyramid-tier-b.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "pyramid-tier-c",
+      "category": "structures",
+      "width": 320,
+      "height": 320,
+      "description": "pyramid-tier-c",
+      "file": "maps/overgrown/structures/pyramid-tier-c.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    },
+    {
+      "id": "pyramid-top-shrine",
+      "category": "structures",
+      "width": 192,
+      "height": 192,
+      "description": "pyramid-top-shrine",
+      "file": "maps/overgrown/structures/pyramid-top-shrine.png",
+      "anchor": "bottom",
+      "keyFringe": 3
+    }
+  ]
+}

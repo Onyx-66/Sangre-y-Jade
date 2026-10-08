@@ -1,0 +1,41 @@
+{
+  "expectedCount": 3,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b6/assets",
+  "contactSheet": "docs/v0.6/previews/b6/sheet-9.png",
+  "items": [
+    {
+      "id": "temple-central",
+      "category": "buildings",
+      "width": 768,
+      "height": 768,
+      "description": "central stepped stone temple with a staircase, overgrown, top-down 3/4, 768 px (landmark)",
+      "file": "maps/overgrown/buildings/temple-central.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stairs-stone-s",
+      "category": "structures",
+      "width": 256,
+      "height": 192,
+      "description": "stairs-stone-s",
+      "file": "maps/overgrown/structures/stairs-stone-s.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "wall-stone-gap",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-gap",
+      "file": "maps/overgrown/structures/wall-stone-gap.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "expectedCount": 14,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b6/assets",
+  "contactSheet": "docs/v0.6/previews/b6/sheet-7.png",
+  "items": [
+    {
+      "id": "leaf-a",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "small green leaf, falling",
+      "file": "weather/leaf-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "leaf-b",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "small yellow leaf, falling",
+      "file": "weather/leaf-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "rain-streak",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "thin diagonal rain streak, bluish white",
+      "file": "weather/rain-streak.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "rain-splash",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "tiny rain splash ring",
+      "file": "weather/rain-splash.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "mist-wisp",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "soft white-green mist wisp, seamless soft edges",
+      "file": "weather/mist-wisp.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "god-ray",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "soft diagonal golden light shaft",
+      "file": "weather/god-ray.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "ash-flake",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "grey ash flake",
+      "file": "weather/ash-flake.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "ember",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "tiny glowing orange ember",
+      "file": "weather/ember.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "red-fog",
+      "category": "weather",
+      "width": 512,
+      "height": 512,
+      "description": "seamless soft red-purple fog texture 512",
+      "file": "weather/red-fog.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "lightning-flash",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "jagged white-blue lightning bolt, tall",
+      "file": "weather/lightning-flash.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "spore",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "glowing cyan spore dot",
+      "file": "weather/spore.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "drip",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "falling water drop with tiny trail",
+      "file": "weather/drip.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "softMatte": true
+    },
+    {
+      "id": "cave-fog",
+      "category": "weather",
+      "width": 512,
+      "height": 512,
+      "description": "seamless cool blue-violet fog texture 512",
+      "file": "weather/cave-fog.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "rock-small",
+      "category": "weather",
+      "width": 128,
+      "height": 128,
+      "description": "small falling rock with motion blur",
+      "file": "weather/rock-small.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

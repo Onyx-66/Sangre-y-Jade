@@ -13,7 +13,12 @@ test('100 seeds per map have reachable doors, useful platforms, unique content a
   assert.equal(w.sites.filter(s=>s.kind==='settlement').length,map==='overgrown'?2:1);
   assert.deepEqual(w.content.water,config.water);assert.ok(w.objects.some(o=>o.role==='platform-focus'));
   assert.ok(w.sites.filter(s=>s.kind==='settlement').every(s=>s.buildingCount>=3&&s.buildingCount<=7));
-  for(const o of w.objects.filter(o=>o.door)){const s=w.sites.find(s=>s.id===o.siteId),v={north:[0,-1],south:[0,1],east:[1,0],west:[-1,0]}[o.door.facing];assert.ok((s.x-o.x)*v[0]+(s.y-o.y)*v[1]>0,'door faces its plaza');}
+  for(const o of w.objects.filter(o=>o.door)){
+   const p=w.doorPaths.find(p=>p.owner===o.worldId),v={north:[0,-1],south:[0,1],east:[1,0],west:[-1,0]}[o.door.facing];
+   const door={x:o.x+o.door.x*o.scale,y:o.y+o.door.y*o.scale};
+   assert.ok((p.approach.x-door.x)*v[0]+(p.approach.y-door.y)*v[1]>0,'door faces its reachable path approach');
+   assert.ok(walkRoute(p.points,contentQuery(w)),'door path reaches plaza without passing through walls');
+  }
   for(let i=0;i<w.bridgeMask.length;i++)if(w.bridgeMask[i])assert.ok(w.water.mask[i],'no bridges on land');
   if(map==='overgrown'){assert.ok(w.objects.filter(o=>o.role==='wall-run').length>=3);assert.ok(w.sites[0].assembly.faces.length>=1&&w.sites[0].assembly.faces.length<=4);}
   if(map==='bloodmoon'){assert.equal(w.sites[0].assembly.faces.length,2);assert.ok(w.objects.some(o=>o.id==='ossuary'));assert.ok(w.objects.filter(o=>o.role==='avenue-light'&&o.lightSource).length>2);}

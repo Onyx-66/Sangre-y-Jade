@@ -1,8 +1,8 @@
 {
   "id": "overgrown",
   "world": {
-    "width": 6400,
-    "height": 4800,
+    "width": 8192,
+    "height": 6144,
     "wallThickness": 400,
     "cellSize": 640
   },
@@ -27,15 +27,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 24
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -46,22 +46,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 24
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
       "occluder": {
         "x": -144,
-        "y": -270.71999999999997,
+        "y": -288,
         "width": 288,
-        "height": 187.20000000000002
+        "height": 190
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-broadleaf-b",
@@ -75,15 +79,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 24
+        "radius": 23,
+        "offsetX": 0,
+        "offsetY": -26
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -94,22 +98,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 24
+        "radius": 23,
+        "offsetX": 0,
+        "offsetY": -26
       },
       "occluder": {
         "x": -144,
-        "y": -270.71999999999997,
+        "y": -288,
         "width": 288,
-        "height": 187.20000000000002
+        "height": 190
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-palm-a",
@@ -123,15 +131,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 22
+        "radius": 19,
+        "offsetX": 0,
+        "offsetY": -22
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -142,22 +150,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 22
+        "radius": 19,
+        "offsetX": 0,
+        "offsetY": -22
       },
       "occluder": {
         "x": -128,
-        "y": -270.71999999999997,
+        "y": -288,
         "width": 256,
-        "height": 187.20000000000002
+        "height": 190
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-palm-b",
@@ -171,15 +183,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 19
+        "radius": 29,
+        "offsetX": 0,
+        "offsetY": -32
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -190,22 +202,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 19
+        "radius": 29,
+        "offsetX": 0,
+        "offsetY": -32
       },
       "occluder": {
         "x": -112,
-        "y": -240.64,
+        "y": -256,
         "width": 224,
-        "height": 166.4
+        "height": 169
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-ceiba",
@@ -219,15 +235,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 67
+        "radius": 68,
+        "offsetX": 0,
+        "offsetY": -71
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -238,22 +254,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 67
+        "radius": 68,
+        "offsetX": 0,
+        "offsetY": -71
       },
       "occluder": {
         "x": -256,
-        "y": -481.28,
+        "y": -512,
         "width": 512,
-        "height": 332.8
+        "height": 338
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-fig",
@@ -267,15 +287,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 27
+        "radius": 46,
+        "offsetX": 0,
+        "offsetY": -49
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -286,22 +306,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 27
+        "radius": 46,
+        "offsetX": 0,
+        "offsetY": -49
       },
       "occluder": {
         "x": -160,
-        "y": -360.96,
+        "y": -384,
         "width": 320,
-        "height": 249.60000000000002
+        "height": 253
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-flowering-pink",
@@ -315,15 +339,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 24
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -334,22 +358,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 24
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
       "occluder": {
         "x": -144,
-        "y": -300.79999999999995,
+        "y": -320,
         "width": 288,
-        "height": 208
+        "height": 211
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-fruit-orange",
@@ -363,15 +391,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 22
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": -28
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -382,22 +410,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 22
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": -28
       },
       "occluder": {
         "x": -128,
-        "y": -270.71999999999997,
+        "y": -288,
         "width": 256,
-        "height": 187.20000000000002
+        "height": 190
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-willow",
@@ -411,15 +443,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 27
+        "radius": 29,
+        "offsetX": 0,
+        "offsetY": -32
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -430,22 +462,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 27
+        "radius": 29,
+        "offsetX": 0,
+        "offsetY": -32
       },
       "occluder": {
         "x": -160,
-        "y": -360.96,
+        "y": -384,
         "width": 320,
-        "height": 249.60000000000002
+        "height": 253
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-sapling",
@@ -459,15 +495,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.94
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 16
+        "radius": 13,
+        "offsetX": 0,
+        "offsetY": -16
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -478,22 +514,26 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "circle",
-        "radius": 16
+        "radius": 13,
+        "offsetX": 0,
+        "offsetY": -16
       },
       "occluder": {
         "x": -96,
-        "y": -210.56,
+        "y": -224,
         "width": 192,
-        "height": 145.6
+        "height": 148
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bush-round",
@@ -507,17 +547,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -528,17 +565,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bush-flowers-pink",
@@ -552,17 +590,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -573,17 +608,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bush-flowers-white",
@@ -597,17 +633,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -618,17 +651,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "fern-a",
@@ -642,17 +676,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -663,17 +694,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "fern-b",
@@ -687,17 +719,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -708,17 +737,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tall-grass-a",
@@ -732,17 +762,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -753,17 +780,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "flowers-blue",
@@ -777,17 +805,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -798,17 +823,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "flowers-yellow",
@@ -822,17 +848,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -843,17 +866,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "lilies",
@@ -867,17 +891,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -888,17 +909,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "vines-hanging",
@@ -912,17 +934,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -933,17 +952,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "rock-mossy-large",
@@ -957,15 +977,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -45,
         "type": "circle",
-        "radius": 63
+        "radius": 75,
+        "offsetX": 0,
+        "offsetY": -78
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -976,15 +996,19 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -45,
         "type": "circle",
-        "radius": 63
+        "radius": 75,
+        "offsetX": 0,
+        "offsetY": -78
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "rock-mossy-small",
@@ -998,15 +1022,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -22,
         "type": "circle",
-        "radius": 31
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": -39
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1017,15 +1041,19 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -22,
         "type": "circle",
-        "radius": 31
+        "radius": 36,
+        "offsetX": 0,
+        "offsetY": -39
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "rock-slab",
@@ -1039,15 +1067,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -26,
         "type": "circle",
-        "radius": 36
+        "radius": 44,
+        "offsetX": 0,
+        "offsetY": -47
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1058,15 +1086,19 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -26,
         "type": "circle",
-        "radius": 36
+        "radius": 44,
+        "offsetX": 0,
+        "offsetY": -47
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "rubble-pile",
@@ -1080,15 +1112,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -32,
         "type": "circle",
-        "radius": 45
+        "radius": 55,
+        "offsetX": 0,
+        "offsetY": -58
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1099,15 +1131,19 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -32,
         "type": "circle",
-        "radius": 45
+        "radius": 55,
+        "offsetX": 0,
+        "offsetY": -58
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "stela-fallen",
@@ -1121,15 +1157,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 168,
+        "height": 45,
         "offsetX": 0,
-        "offsetY": -26,
-        "type": "circle",
-        "radius": 36
+        "offsetY": -27
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1140,15 +1177,20 @@
       "kind": "statue",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 168,
+        "height": 45,
         "offsetX": 0,
-        "offsetY": -26,
-        "type": "circle",
-        "radius": 36
+        "offsetY": -27
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "stela-standing",
@@ -1162,15 +1204,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 133,
+        "height": 53,
         "offsetX": 0,
-        "offsetY": -51,
-        "type": "circle",
-        "radius": 45
+        "offsetY": -30
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1181,15 +1224,20 @@
       "kind": "statue",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 133,
+        "height": 53,
         "offsetX": 0,
-        "offsetY": -51,
-        "type": "circle",
-        "radius": 45
+        "offsetY": -30
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "log-fallen",
@@ -1203,17 +1251,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 132,
+        "height": 28,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -19
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1221,20 +1268,23 @@
       "image": "maps/overgrown/debris/log-fallen.png",
       "textureKey": "map-overgrown-log-fallen",
       "lightEnabled": false,
-      "kind": "decoration",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 132,
+        "height": 28,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -19
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "stump",
@@ -1248,17 +1298,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 30,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -33
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1266,20 +1314,22 @@
       "image": "maps/overgrown/debris/stump.png",
       "textureKey": "map-overgrown-stump",
       "lightEnabled": false,
-      "kind": "decoration",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 30,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -33
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "mushrooms-red",
@@ -1293,17 +1343,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1314,17 +1361,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "mushrooms-brown",
@@ -1338,17 +1386,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1359,17 +1404,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "twigs",
@@ -1383,17 +1429,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1404,17 +1447,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "stones-small",
@@ -1428,17 +1472,14 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -1449,17 +1490,18 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 0,
         "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetX": 0,
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "temple-central",
@@ -1473,16 +1515,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -246,
         "type": "rect",
-        "width": 553,
-        "height": 461
+        "width": 620,
+        "height": 185,
+        "offsetX": 0,
+        "offsetY": -98
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1493,30 +1535,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -246,
         "type": "rect",
-        "width": 553,
-        "height": 461
+        "width": 620,
+        "height": 185,
+        "offsetX": 0,
+        "offsetY": -98
       },
       "occluder": {
         "x": -384,
-        "y": -691.2,
+        "y": -768,
         "width": 768,
-        "height": 499.20000000000005
+        "height": 369
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -15.5,
+        "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 177,
+        "height": 307,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "temple-wall-a",
@@ -1530,17 +1577,17 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -41,
         "type": "rect",
-        "width": 276,
-        "height": 72
+        "width": 325,
+        "height": 55,
+        "offsetX": 0,
+        "offsetY": -32
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-temple",
@@ -1550,16 +1597,20 @@
       "kind": "wall",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -41,
         "type": "rect",
-        "width": 276,
-        "height": 72
+        "width": 325,
+        "height": 55,
+        "offsetX": 0,
+        "offsetY": -32
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "temple-wall-corner",
@@ -1573,17 +1624,17 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 230,
-        "height": 90
+        "width": 258,
+        "height": 83,
+        "offsetX": 0,
+        "offsetY": -47
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-temple",
@@ -1593,16 +1644,20 @@
       "kind": "wall",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 230,
-        "height": 90
+        "width": 258,
+        "height": 83,
+        "offsetX": 0,
+        "offsetY": -47
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "hut-thatched-a",
@@ -1616,16 +1671,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 230,
-        "height": 90
+        "width": 253,
+        "height": 60,
+        "offsetX": 0,
+        "offsetY": -35
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1636,30 +1691,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 230,
-        "height": 90
+        "width": 253,
+        "height": 60,
+        "offsetX": 0,
+        "offsetY": -35
       },
       "occluder": {
         "x": -160,
-        "y": -288,
+        "y": -320,
         "width": 320,
-        "height": 208
+        "height": 154
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -6,
+        "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 74,
+        "height": 128,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "hut-thatched-b",
@@ -1673,16 +1733,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 276,
-        "height": 90
+        "width": 284,
+        "height": 64,
+        "offsetX": 0,
+        "offsetY": -36
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1693,30 +1753,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 276,
-        "height": 90
+        "width": 284,
+        "height": 64,
+        "offsetX": 0,
+        "offsetY": -36
       },
       "occluder": {
         "x": -192,
-        "y": -288,
+        "y": -320,
         "width": 384,
-        "height": 208
+        "height": 154
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -6,
+        "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 88,
+        "height": 128,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "hut-thatched-c",
@@ -1730,16 +1795,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -61,
         "type": "rect",
-        "width": 323,
-        "height": 108
+        "width": 365,
+        "height": 69,
+        "offsetX": 0,
+        "offsetY": -40
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1750,30 +1815,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -61,
         "type": "rect",
-        "width": 323,
-        "height": 108
+        "width": 365,
+        "height": 69,
+        "offsetX": 0,
+        "offsetY": -40
       },
       "occluder": {
         "x": -224,
-        "y": -345.6,
+        "y": -384,
         "width": 448,
-        "height": 249.60000000000002
+        "height": 184
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -7,
+        "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 103,
+        "height": 154,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "market-stall-a",
@@ -1787,16 +1857,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -41,
         "type": "rect",
-        "width": 230,
-        "height": 72
+        "width": 260,
+        "height": 52,
+        "offsetX": 0,
+        "offsetY": -30
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1807,30 +1877,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -41,
         "type": "rect",
-        "width": 230,
-        "height": 72
+        "width": 260,
+        "height": 52,
+        "offsetX": 0,
+        "offsetY": -30
       },
       "occluder": {
         "x": -160,
-        "y": -230.4,
+        "y": -256,
         "width": 320,
-        "height": 166.4
+        "height": 123
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
         "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 74,
+        "height": 102,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "market-stall-b",
@@ -1844,16 +1919,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -46,
         "type": "rect",
-        "width": 230,
-        "height": 81
+        "width": 275,
+        "height": 58,
+        "offsetX": 0,
+        "offsetY": -34
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1864,30 +1939,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -46,
         "type": "rect",
-        "width": 230,
-        "height": 81
+        "width": 275,
+        "height": 58,
+        "offsetX": 0,
+        "offsetY": -34
       },
       "occluder": {
         "x": -160,
-        "y": -259.2,
+        "y": -288,
         "width": 320,
-        "height": 187.20000000000002
+        "height": 138
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -5.5,
+        "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 74,
+        "height": 115,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "altar",
@@ -1901,17 +1981,17 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -41,
         "type": "rect",
-        "width": 184,
-        "height": 72
+        "width": 217,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": -25
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-stela",
@@ -1921,23 +2001,20 @@
       "kind": "statue",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -41,
         "type": "rect",
-        "width": 184,
-        "height": 72
+        "width": 217,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": -25
       },
-      "occluder": {
-        "x": -128,
-        "y": -230.4,
-        "width": 256,
-        "height": 166.4
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "shrine-small",
@@ -1951,16 +2028,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 207,
-        "height": 90
+        "width": 216,
+        "height": 60,
+        "offsetX": 0,
+        "offsetY": -35
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1971,30 +2048,35 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -51,
         "type": "rect",
-        "width": 207,
-        "height": 90
+        "width": 216,
+        "height": 60,
+        "offsetX": 0,
+        "offsetY": -35
       },
       "occluder": {
         "x": -144,
-        "y": -288,
+        "y": -320,
         "width": 288,
-        "height": 208
+        "height": 154
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -6,
+        "y": -5,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 66,
+        "height": 128,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "fountain-dry",
@@ -2008,17 +2090,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 62,
         "offsetX": 0,
-        "offsetY": -46,
-        "type": "rect",
-        "width": 230,
-        "height": 81
+        "offsetY": -66
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
@@ -2028,23 +2109,19 @@
       "kind": "statue",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 62,
         "offsetX": 0,
-        "offsetY": -46,
-        "type": "rect",
-        "width": 230,
-        "height": 81
+        "offsetY": -66
       },
-      "occluder": {
-        "x": -160,
-        "y": -259.2,
-        "width": 320,
-        "height": 187.20000000000002
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "pot-clay-a",
@@ -2058,15 +2135,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -14,
         "type": "circle",
-        "radius": 19
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -2077,15 +2154,19 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -14,
         "type": "circle",
-        "radius": 19
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "pot-clay-b",
@@ -2099,15 +2180,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -22,
         "type": "circle",
-        "radius": 23
+        "radius": 27,
+        "offsetX": 0,
+        "offsetY": -30
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -2118,15 +2199,19 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -22,
         "type": "circle",
-        "radius": 23
+        "radius": 27,
+        "offsetX": 0,
+        "offsetY": -30
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "basket-woven",
@@ -2140,17 +2225,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 32,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -35
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -2158,20 +2241,22 @@
       "image": "maps/overgrown/props/basket-woven.png",
       "textureKey": "map-overgrown-basket-woven",
       "lightEnabled": false,
-      "kind": "decoration",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 32,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -35
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "barrel-wood",
@@ -2185,15 +2270,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19,
         "type": "circle",
-        "radius": 23
+        "radius": 34,
+        "offsetX": 0,
+        "offsetY": -37
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -2204,15 +2289,19 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19,
         "type": "circle",
-        "radius": 23
+        "radius": 34,
+        "offsetX": 0,
+        "offsetY": -37
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "crate-wood",
@@ -2226,15 +2315,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 84,
+        "height": 34,
         "offsetX": 0,
-        "offsetY": -17,
-        "type": "circle",
-        "radius": 27
+        "offsetY": -22
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -2245,15 +2335,20 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 84,
+        "height": 34,
         "offsetX": 0,
-        "offsetY": -17,
-        "type": "circle",
-        "radius": 27
+        "offsetY": -22
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "well-stone",
@@ -2267,15 +2362,15 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -24,
         "type": "circle",
-        "radius": 38
+        "radius": 48,
+        "offsetX": 0,
+        "offsetY": -51
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -2283,18 +2378,22 @@
       "image": "maps/overgrown/props/well-stone.png",
       "textureKey": "map-overgrown-well-stone",
       "lightEnabled": false,
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -24,
         "type": "circle",
-        "radius": 38
+        "radius": 48,
+        "offsetX": 0,
+        "offsetY": -51
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "torch-post",
@@ -2308,38 +2407,38 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 12,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -15
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
-      "lightSource": true,
+      "lightSource": false,
       "placeholderTexture": "top-stela",
       "image": "maps/overgrown/props/torch-post.png",
       "textureKey": "map-overgrown-torch-post",
       "lightEnabled": false,
-      "kind": "decoration",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 12,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -15
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": true
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "fence-wood",
@@ -2353,17 +2452,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 145,
+        "height": 14,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -10
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -2371,20 +2469,23 @@
       "image": "maps/overgrown/props/fence-wood.png",
       "textureKey": "map-overgrown-fence-wood",
       "lightEnabled": false,
-      "kind": "decoration",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 145,
+        "height": 14,
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none",
-        "radius": 0,
-        "width": 0,
-        "height": 0
+        "offsetY": -10
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "cart-wooden",
@@ -2398,15 +2499,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 124,
+        "height": 40,
         "offsetX": 0,
-        "offsetY": -19,
-        "type": "circle",
-        "radius": 38
+        "offsetY": -25
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -2414,18 +2516,23 @@
       "image": "maps/overgrown/props/cart-wooden.png",
       "textureKey": "map-overgrown-cart-wooden",
       "lightEnabled": false,
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 124,
+        "height": 40,
         "offsetX": 0,
-        "offsetY": -19,
-        "type": "circle",
-        "radius": 38
+        "offsetY": -25
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "sign-carved",
@@ -2439,15 +2546,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.9
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 66,
+        "height": 29,
         "offsetX": 0,
-        "offsetY": -19,
-        "type": "circle",
-        "radius": 23
+        "offsetY": -18
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -2455,75 +2563,215 @@
       "image": "maps/overgrown/props/sign-carved.png",
       "textureKey": "map-overgrown-sign-carved",
       "lightEnabled": false,
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 66,
+        "height": 29,
         "offsetX": 0,
-        "offsetY": -19,
-        "type": "circle",
-        "radius": 23
+        "offsetY": -18
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
+    },
+    {
+      "id": "statue-jaguar",
+      "category": "statues",
+      "description": "statue-jaguar",
+      "image": "maps/overgrown/statues/statue-jaguar.png",
+      "textureKey": "map-overgrown-statue-jaguar",
+      "size": {
+        "width": 192,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "depthOffset": 0,
+      "collider": {
+        "type": "rect",
+        "width": 158,
+        "height": 46,
+        "offsetX": 0,
+        "offsetY": -27
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 158,
+        "height": 46,
+        "offsetX": 0,
+        "offsetY": -27
+      },
+      "kind": "statue",
+      "fadeBehind": false,
+      "occluder": null,
+      "overhead": null,
+      "lightSource": false,
+      "light": false,
+      "lightEnabled": false,
+      "door": null,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
+    },
+    {
+      "id": "statue-warrior",
+      "category": "statues",
+      "description": "statue-warrior",
+      "image": "maps/overgrown/statues/statue-warrior.png",
+      "textureKey": "map-overgrown-statue-warrior",
+      "size": {
+        "width": 192,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "depthOffset": 0,
+      "collider": {
+        "type": "rect",
+        "width": 120,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": -25
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 120,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": -25
+      },
+      "kind": "statue",
+      "fadeBehind": false,
+      "occluder": null,
+      "overhead": null,
+      "lightSource": false,
+      "light": false,
+      "lightEnabled": false,
+      "door": null,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
+    },
+    {
+      "id": "statue-serpent",
+      "category": "statues",
+      "description": "statue-serpent",
+      "image": "maps/overgrown/statues/statue-serpent.png",
+      "textureKey": "map-overgrown-statue-serpent",
+      "size": {
+        "width": 192,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "depthOffset": 0,
+      "collider": {
+        "type": "rect",
+        "width": 129,
+        "height": 40,
+        "offsetX": 0,
+        "offsetY": -24
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 129,
+        "height": 40,
+        "offsetX": 0,
+        "offsetY": -24
+      },
+      "kind": "statue",
+      "fadeBehind": false,
+      "occluder": null,
+      "overhead": null,
+      "lightSource": false,
+      "light": false,
+      "lightEnabled": false,
+      "door": null,
+      "baseReview": {
+        "source": "B6 inspected base measurements",
+        "tolerancePx": 8
+      }
     }
   ],
-  "artVersion": "v15",
+  "artVersion": "b6",
   "ground": [
     {
       "id": "moss-grass",
       "image": "maps/overgrown/ground/moss-grass.png",
+      "textureKey": "map-overgrown-moss-grass",
       "size": {
         "width": 256,
         "height": 256
-      },
-      "textureKey": "map-overgrown-moss-grass"
+      }
     },
     {
       "id": "dry-grass",
       "image": "maps/overgrown/ground/dry-grass.png",
+      "textureKey": "map-overgrown-dry-grass",
       "size": {
         "width": 256,
         "height": 256
-      },
-      "textureKey": "map-overgrown-dry-grass"
+      }
     },
     {
       "id": "dirt-path",
       "image": "maps/overgrown/ground/dirt-path.png",
+      "textureKey": "map-overgrown-dirt-path",
       "size": {
         "width": 256,
         "height": 256
-      },
-      "textureKey": "map-overgrown-dirt-path"
+      }
     },
     {
       "id": "cobble-plaza",
       "image": "maps/overgrown/ground/cobble-plaza.png",
+      "textureKey": "map-overgrown-cobble-plaza",
       "size": {
         "width": 256,
         "height": 256
-      },
-      "textureKey": "map-overgrown-cobble-plaza"
+      }
     },
     {
       "id": "mud",
       "image": "maps/overgrown/ground/mud.png",
+      "textureKey": "map-overgrown-mud",
       "size": {
         "width": 256,
         "height": 256
-      },
-      "textureKey": "map-overgrown-mud"
+      }
     },
     {
       "id": "jungle-floor",
       "image": "maps/overgrown/ground/jungle-floor.png",
+      "textureKey": "map-overgrown-jungle-floor",
       "size": {
         "width": 256,
         "height": 256
-      },
-      "textureKey": "map-overgrown-jungle-floor"
+      }
     }
   ],
   "boundaryTreeIds": [
@@ -2531,5 +2779,467 @@
     "tree-broadleaf-b",
     "tree-fig"
   ],
-  "objectSchemaVersion": 1
+  "objectSchemaVersion": 1,
+  "waterArt": [
+    {
+      "id": "water-deep-0",
+      "image": "maps/overgrown/water/water-deep-0.png",
+      "textureKey": "map-overgrown-water-deep-0",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-deep-1",
+      "image": "maps/overgrown/water/water-deep-1.png",
+      "textureKey": "map-overgrown-water-deep-1",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-deep-2",
+      "image": "maps/overgrown/water/water-deep-2.png",
+      "textureKey": "map-overgrown-water-deep-2",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-deep-3",
+      "image": "maps/overgrown/water/water-deep-3.png",
+      "textureKey": "map-overgrown-water-deep-3",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-0",
+      "image": "maps/overgrown/water/water-shallow-0.png",
+      "textureKey": "map-overgrown-water-shallow-0",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-1",
+      "image": "maps/overgrown/water/water-shallow-1.png",
+      "textureKey": "map-overgrown-water-shallow-1",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-2",
+      "image": "maps/overgrown/water/water-shallow-2.png",
+      "textureKey": "map-overgrown-water-shallow-2",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-3",
+      "image": "maps/overgrown/water/water-shallow-3.png",
+      "textureKey": "map-overgrown-water-shallow-3",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "foam-edge",
+      "image": "maps/overgrown/water/foam-edge.png",
+      "textureKey": "map-overgrown-foam-edge",
+      "size": {
+        "width": 256,
+        "height": 64
+      }
+    },
+    {
+      "id": "ripple-ring",
+      "image": "maps/overgrown/water/ripple-ring.png",
+      "textureKey": "map-overgrown-ripple-ring",
+      "size": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "splash-burst",
+      "image": "maps/overgrown/water/splash-burst.png",
+      "textureKey": "map-overgrown-splash-burst",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "bubbles",
+      "image": "maps/overgrown/water/bubbles.png",
+      "textureKey": "map-overgrown-bubbles",
+      "size": {
+        "width": 128,
+        "height": 128
+      }
+    }
+  ],
+  "structureArt": [
+    {
+      "id": "stairs-stone-n",
+      "image": "maps/overgrown/structures/stairs-stone-n.png",
+      "textureKey": "map-overgrown-stairs-stone-n",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "y",
+      "ascending": "n",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 48,
+        "y": 9,
+        "width": 159,
+        "height": 180
+      }
+    },
+    {
+      "id": "stairs-stone-s",
+      "image": "maps/overgrown/structures/stairs-stone-s.png",
+      "textureKey": "map-overgrown-stairs-stone-s",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "y",
+      "ascending": "s",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": false,
+      "artBounds": {
+        "x": 41,
+        "y": 10,
+        "width": 173,
+        "height": 179
+      }
+    },
+    {
+      "id": "stairs-stone-e",
+      "image": "maps/overgrown/structures/stairs-stone-e.png",
+      "textureKey": "map-overgrown-stairs-stone-e",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "x",
+      "ascending": "e",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 34,
+        "y": 9,
+        "width": 188,
+        "height": 179
+      }
+    },
+    {
+      "id": "stairs-stone-w",
+      "image": "maps/overgrown/structures/stairs-stone-w.png",
+      "textureKey": "map-overgrown-stairs-stone-w",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "x",
+      "ascending": "w",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 34,
+        "y": 9,
+        "width": 188,
+        "height": 180
+      }
+    },
+    {
+      "id": "platform-edge-straight",
+      "image": "maps/overgrown/structures/platform-edge-straight.png",
+      "textureKey": "map-overgrown-platform-edge-straight",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 8,
+        "y": 102,
+        "width": 239,
+        "height": 150
+      }
+    },
+    {
+      "id": "platform-edge-corner",
+      "image": "maps/overgrown/structures/platform-edge-corner.png",
+      "textureKey": "map-overgrown-platform-edge-corner",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 7,
+        "y": 30,
+        "width": 241,
+        "height": 222
+      }
+    },
+    {
+      "id": "wall-stone-straight",
+      "image": "maps/overgrown/structures/wall-stone-straight.png",
+      "textureKey": "map-overgrown-wall-stone-straight",
+      "size": {
+        "width": 256,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "wall",
+      "rails": false,
+      "artBounds": {
+        "x": 8,
+        "y": 33,
+        "width": 239,
+        "height": 92
+      }
+    },
+    {
+      "id": "wall-stone-corner",
+      "image": "maps/overgrown/structures/wall-stone-corner.png",
+      "textureKey": "map-overgrown-wall-stone-corner",
+      "size": {
+        "width": 256,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "wall",
+      "rails": false,
+      "artBounds": {
+        "x": 48,
+        "y": 6,
+        "width": 160,
+        "height": 118
+      }
+    },
+    {
+      "id": "wall-stone-gap",
+      "image": "maps/overgrown/structures/wall-stone-gap.png",
+      "textureKey": "map-overgrown-wall-stone-gap",
+      "size": {
+        "width": 256,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "wall",
+      "rails": false,
+      "artBounds": {
+        "x": 12,
+        "y": 5,
+        "width": 232,
+        "height": 119
+      }
+    },
+    {
+      "id": "bridge-h",
+      "image": "maps/overgrown/structures/bridge-h.png",
+      "textureKey": "map-overgrown-bridge-h",
+      "size": {
+        "width": 512,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "bridge",
+      "rails": true,
+      "artBounds": {
+        "x": 53,
+        "y": 9,
+        "width": 407,
+        "height": 179
+      }
+    },
+    {
+      "id": "bridge-v",
+      "image": "maps/overgrown/structures/bridge-v.png",
+      "textureKey": "map-overgrown-bridge-v",
+      "size": {
+        "width": 192,
+        "height": 512
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "bridge",
+      "rails": true,
+      "artBounds": {
+        "x": 7,
+        "y": 127,
+        "width": 179,
+        "height": 382
+      }
+    },
+    {
+      "id": "pyramid-tier-a",
+      "image": "maps/overgrown/structures/pyramid-tier-a.png",
+      "textureKey": "map-overgrown-pyramid-tier-a",
+      "size": {
+        "width": 768,
+        "height": 768
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 26,
+        "y": 129,
+        "width": 718,
+        "height": 634
+      }
+    },
+    {
+      "id": "pyramid-tier-b",
+      "image": "maps/overgrown/structures/pyramid-tier-b.png",
+      "textureKey": "map-overgrown-pyramid-tier-b",
+      "size": {
+        "width": 512,
+        "height": 512
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 18,
+        "y": 56,
+        "width": 476,
+        "height": 451
+      }
+    },
+    {
+      "id": "pyramid-tier-c",
+      "image": "maps/overgrown/structures/pyramid-tier-c.png",
+      "textureKey": "map-overgrown-pyramid-tier-c",
+      "size": {
+        "width": 320,
+        "height": 320
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 11,
+        "y": 44,
+        "width": 298,
+        "height": 272
+      }
+    },
+    {
+      "id": "pyramid-top-shrine",
+      "image": "maps/overgrown/structures/pyramid-top-shrine.png",
+      "textureKey": "map-overgrown-pyramid-top-shrine",
+      "size": {
+        "width": 192,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 9,
+        "y": 9,
+        "width": 174,
+        "height": 180
+      }
+    }
+  ]
 }

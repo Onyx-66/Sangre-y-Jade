@@ -11,6 +11,7 @@ const samples=(a,b)=>{const steps=Math.max(1,Math.ceil(Math.hypot(a.x-b.x,a.y-b.
 const solids=w=>w.objects.flatMap(o=>o.solidParts?.map(collider=>({...o,collider}))||[o]).filter(o=>o.collider.type!=='none');
 function clearSegment(w,a,b,extra=[]){const out=sweepMove(a,b,11,()=>[...solids(w),...extra],0);return Math.hypot(out.x-b.x,out.y-b.y)<.01;}
 function faceDoor(o,target){
+ if(o.door?.authored)return {x:o.x+o.door.x*o.scale,y:o.y+(o.door.y+28)*o.scale};
  const b=boundsOf(o),cx=b.x+b.width/2,cy=b.y+b.height/2,dx=target.x-cx,dy=target.y-cy;
  const facing=Math.abs(dx)>Math.abs(dy)?dx>0?'east':'west':dy>0?'south':'north',[vx,vy]=directions[facing];
  const at={x:cx+vx*b.width/2,y:cy+vy*b.height/2};
@@ -18,9 +19,14 @@ function faceDoor(o,target){
  return {x:at.x+vx*28,y:at.y+vy*28};
 }
 function addDoor(w,o,site){
- if(!o.door)return true;const approach=faceDoor(o,site),points=samples(approach,site);
- if(points.some(p=>w.water.mask[indexAt(w,p.x,p.y)]&&!w.bridgeMask[indexAt(w,p.x,p.y)])||!clearSegment(w,approach,site,[o]))return false;
- w.doorPaths.push({owner:o.worldId,site:site.id,points,approach,target:{x:site.x,y:site.y}});o.doorApproach=approach;return true;
+ if(!o.door)return true;const approach=faceDoor(o,site),routes=[[approach,site]];
+ // Painted south doors cannot be rotated to another wall. A side spur brings
+ // the path to the actual door when the plaza lies behind the building.
+ if(o.door.authored){const b=boundsOf(o);for(const x of [b.x-40,b.x+b.width+40])routes.push([approach,{x,y:approach.y},{x,y:site.y},site]);}
+ for(const route of routes){const points=route.slice(1).flatMap((p,i)=>samples(route[i],p));
+  if(points.some(p=>w.water.mask[indexAt(w,p.x,p.y)]&&!w.bridgeMask[indexAt(w,p.x,p.y)])||route.slice(1).some((p,i)=>!clearSegment(w,route[i],p,[o])))continue;
+  w.doorPaths.push({owner:o.worldId,site:site.id,points,approach,target:{x:site.x,y:site.y}});o.doorApproach=approach;return true;
+ }return false;
 }
 function landmark(w,kit,site,config,random){
  const rule=config.landmark,faces=rule.randomFaces?rule.faces.slice(0,1+Math.floor(random()*rule.faces.length)):rule.faces;
@@ -33,7 +39,7 @@ function settlement(w,kit,site,config,random){
  const count=config.buildingRange[0]+Math.floor(random()*(config.buildingRange[1]-config.buildingRange[0]+1));site.buildingCount=0;
  for(let n=0;n<count;n++)for(let attempt=0;attempt<160;attempt++){
   const angle=(n/count+attempt*.137)*Math.PI*2,d=300+random()*80,item=kit.items.find(i=>i.id===config.houses[n%config.houses.length]);
-  const o=candidate(item,site.x+Math.cos(angle)*d,site.y+Math.sin(angle)*d,.55);o.siteId=site.id;o.role='village-house';
+  const o=candidate(item,site.x+Math.cos(angle)*d,site.y+Math.sin(angle)*d,config.buildingScale||.55);o.siteId=site.id;o.role='village-house';
   if(!canPlace(w,o,{site:true})||!addDoor(w,o,site))continue;w.objects.push(o);site.buildingCount++;break;
  }if(site.buildingCount<3)throw Error('Settlement needs three reachable houses');
 }

@@ -3,6 +3,7 @@
 // their stair strips with procedural catalog-piece placeholders.
 import {backgroundDepth} from '../../render/layers.js';
 import {CELL,pointAt} from './grid.js';
+import {WorldArt} from './WorldArt.js';
 export class GroundRenderer{
   constructor(scene,layout){
     this.handlesWater=true;this.objects=[];const g=scene.add?.graphics?.().setDepth(backgroundDepth());if(!g)return;this.objects.push(g);
@@ -30,7 +31,8 @@ export class GroundRenderer{
       for(const surface of w.surfaces)g.lineStyle(4,0xb29b64,1).strokeRect(surface.x-surface.size.width/2,surface.y-surface.size.height/2,surface.size.width,surface.size.height);
       for(const stair of w.stairs)for(let n=0;n<5;n++){const x=stair.from.x+(stair.to.x-stair.from.x)*n/5,y=stair.from.y+(stair.to.y-stair.from.y)*n/5,horizontal=stair.from.x!==stair.to.x;g.lineStyle(3,0xd0b980,1).lineBetween(x-(horizontal?0:stair.width/2),y-(horizontal?stair.width/2:0),x+(horizontal?0:stair.width/2),y+(horizontal?stair.width/2:0));}
     }
+    if(w.mapId==='overgrown'&&scene.textures?.exists?.('map-overgrown-water-deep-0'))this.authored=new WorldArt(scene,w);
   }
-  update(){}
-  destroy(){for(const o of this.objects)o.destroy();this.objects=[];}
+  update(now){this.authored?.update(now);}
+  destroy(){this.authored?.destroy();for(const o of this.objects)o.destroy();this.objects=[];}
 }

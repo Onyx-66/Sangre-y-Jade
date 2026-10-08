@@ -126,8 +126,10 @@ test('tree/building/rock collider filtering blocks ground actors but never flier
 test('kit categories map to circle/rectangle footprints and Phaser bodies receive matching geometry', () => {
   const overgrown = MAP_KITS.overgrown.items;
   assert.ok(overgrown.filter(item => item.category === 'trees').every(item => item.collider.type === 'circle'));
-  assert.ok(overgrown.filter(item => item.category === 'rocks').every(item => item.collider.type === 'circle'));
-  assert.ok(overgrown.filter(item => item.category === 'buildings').every(item => item.collider.type === 'rect'));
+  assert.ok(overgrown.filter(item => item.category === 'rocks' && !item.id.startsWith('stela')).every(item => item.collider.type === 'circle'));
+  assert.ok(overgrown.filter(item => item.id.startsWith('stela')).every(item => item.collider.type === 'rect'));
+  assert.ok(overgrown.filter(item => item.category === 'buildings' && item.id !== 'fountain-dry').every(item => item.collider.type === 'rect'));
+  assert.equal(overgrown.find(item => item.id === 'fountain-dry').collider.type, 'circle');
   const scene = makeScene('overgrown'), world = new MapWorld(scene, { map: scene.mapData, seed: 5 });
   const calls = [], body = {
     setCircle(...args) { calls.push(['circle', ...args]); return this; },
@@ -216,6 +218,7 @@ function makeScene(mapId) {
       setVisible(value) { this.visible = value; return this; }, setFlipX() { return this; },
       setData(key, value) { if (typeof key === 'object') Object.assign(data, key); else data[key] = value; return this; },
       getData(key) { return data[key]; },
+      destroy() { this.active = false; this.visible = false; },
     };
     return object;
   };

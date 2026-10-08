@@ -218,7 +218,9 @@ export async function sliceSheet(inputPath, manifestPath, backgroundOverride, { 
         crop.data[p]=mode==='black'?0:255;crop.data[p+1]=0;crop.data[p+2]=mode==='black'?0:255;crop.data[p+3]=mode==='transparent'?0:255;
       }
     }
-    const cleaned = defringeCrop(crop, mode, {softMatte:Boolean(item.softMatte),keyFringe:Math.min(4,Math.max(0,Math.floor(item.keyFringe||0)))});
+    // Full-bleed swatches were cropped inside the patch: their purple fog or
+    // flower colours are artwork, not a magenta surround to punch holes into.
+    const cleaned = item.fullBleed ? crop : defringeCrop(crop, mode, {softMatte:Boolean(item.softMatte),keyFringe:Math.min(4,Math.max(0,Math.floor(item.keyFringe||0)))});
     const fitWidth=item.fullBleed?item.width:item.spriteScale?Math.max(1,Math.round(crop.info.width*item.spriteScale)):Math.max(1,Math.round(item.width*.94));
     const fitHeight=item.fullBleed?item.height:item.spriteScale?Math.max(1,Math.round(crop.info.height*item.spriteScale)):Math.max(1,Math.round(item.height*.94));
     if(fitWidth>item.width||fitHeight>item.height)throw new Error(`spriteScale exceeds final canvas for ${item.file}`);

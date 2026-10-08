@@ -5,7 +5,7 @@ export class Overhead {
   constructor(scene){this.scene=scene;this.parts=new Map();this.pool=[];this.doors=new Map();this.doorPool=[];}
   attach(item,base){
     this.detach(base);base.setCrop?.();
-    if(item.door?.closed&&this.scene.add.graphics){
+    if(item.door?.closed&&!item.door.authored&&this.scene.add.graphics){
       const door=this.doorPool.pop()||this.scene.add.graphics(),s=item.scale||1;
       const w=(item.door.width||34)*s,h=(item.door.height||62)*s;
       // 62px door / 48px visible hero ~= 1.3; walls remain authored art.
