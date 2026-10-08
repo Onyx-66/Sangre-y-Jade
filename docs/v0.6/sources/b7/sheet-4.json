@@ -1,0 +1,112 @@
+{
+  "expectedCount": 10,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-4.png",
+  "items": [
+    {
+      "id": "cage-wood",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "broken wooden cage",
+      "file": "maps/bloodmoon/props/cage-wood.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "pot-cracked",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "cracked urn",
+      "file": "maps/bloodmoon/props/pot-cracked.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "crate-broken",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "broken crate",
+      "file": "maps/bloodmoon/props/crate-broken.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "cart-burned",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "burned cart",
+      "file": "maps/bloodmoon/props/cart-burned.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stake-fence",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "sharpened stake fence",
+      "file": "maps/bloodmoon/props/stake-fence.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "totem-bone",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "bone totem",
+      "file": "maps/bloodmoon/props/totem-bone.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "statue-jaguar",
+      "category": "statues",
+      "width": 192,
+      "height": 192,
+      "description": "statue-jaguar",
+      "file": "maps/bloodmoon/statues/statue-jaguar.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "statue-warrior",
+      "category": "statues",
+      "width": 192,
+      "height": 192,
+      "description": "statue-warrior",
+      "file": "maps/bloodmoon/statues/statue-warrior.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "statue-serpent",
+      "category": "statues",
+      "width": 192,
+      "height": 192,
+      "description": "statue-serpent",
+      "file": "maps/bloodmoon/statues/statue-serpent.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "glow-torch",
+      "category": "glow",
+      "width": 256,
+      "height": 256,
+      "description": "soft orange torch additive glow",
+      "file": "maps/bloodmoon/glow-torch.png",
+      "anchor": "center",
+      "keyFringe": 0,
+      "softMatte": true
+    }
+  ]
+}

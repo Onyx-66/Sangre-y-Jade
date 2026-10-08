@@ -1,0 +1,61 @@
+{
+  "expectedCount": 5,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-7.png",
+  "items": [
+    {
+      "id": "stairs-stone-s",
+      "category": "structures",
+      "width": 256,
+      "height": 192,
+      "description": "stairs-stone-s",
+      "file": "maps/bloodmoon/structures/stairs-stone-s.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stairs-stone-e",
+      "category": "structures",
+      "width": 256,
+      "height": 192,
+      "description": "stairs-stone-e",
+      "file": "maps/bloodmoon/structures/stairs-stone-e.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stairs-stone-w",
+      "category": "structures",
+      "width": 256,
+      "height": 192,
+      "description": "stairs-stone-w",
+      "file": "maps/bloodmoon/structures/stairs-stone-w.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "platform-edge-corner",
+      "category": "structures",
+      "width": 256,
+      "height": 256,
+      "description": "platform-edge-corner",
+      "file": "maps/bloodmoon/structures/platform-edge-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "wall-stone-corner",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-corner",
+      "file": "maps/bloodmoon/structures/wall-stone-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

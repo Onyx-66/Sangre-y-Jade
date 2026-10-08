@@ -35,6 +35,8 @@
     "test:map-content:browser": "node scripts/map-content-playtest.mjs",
     "test:b6-art": "node --test tests/b6-art.test.js",
     "test:b6-art:browser": "node scripts/b6-art-playtest.mjs",
+    "test:b7-art": "node --test tests/b7-art.test.js",
+    "test:b7-art:browser": "node scripts/b7-art-playtest.mjs",
     "test:typography": "node scripts/v06-typography-playtest.mjs",
     "test:ui-kit": "node scripts/ui-kit-playtest.mjs",
     "test:menus": "node scripts/v06-menu-playtest.mjs",

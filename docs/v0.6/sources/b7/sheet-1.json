@@ -1,0 +1,177 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-1.png",
+  "items": [
+    {
+      "id": "ash-ground",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless grey ash ground with ember specks",
+      "file": "maps/bloodmoon/ground/ash-ground.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "cracked-stone",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless cracked dark stone with faint red veins",
+      "file": "maps/bloodmoon/ground/cracked-stone.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "dark-dirt",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless dark packed dirt",
+      "file": "maps/bloodmoon/ground/dark-dirt.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "blood-stained",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless dark ground with dried blood patches",
+      "file": "maps/bloodmoon/ground/blood-stained.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "ritual-floor",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless carved ritual stone floor with glyphs",
+      "file": "maps/bloodmoon/ground/ritual-floor.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "charred-wood",
+      "category": "ground",
+      "width": 256,
+      "height": 256,
+      "description": "seamless charred wooden planks",
+      "file": "maps/bloodmoon/ground/charred-wood.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "tree-dead-a",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "dead gnarled tree, no leaves",
+      "file": "maps/bloodmoon/trees/tree-dead-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-dead-b",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "dead tree with hanging vines",
+      "file": "maps/bloodmoon/trees/tree-dead-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-twisted",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "twisted dark tree with a few red leaves",
+      "file": "maps/bloodmoon/trees/tree-twisted.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-burned",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "burned tree trunk, charred",
+      "file": "maps/bloodmoon/trees/tree-burned.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-thorn",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "thorny black tree",
+      "file": "maps/bloodmoon/trees/tree-thorn.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-stump-large",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "huge burned stump",
+      "file": "maps/bloodmoon/trees/tree-stump-large.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-weeping-dark",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "weeping tree with dark drooping branches",
+      "file": "maps/bloodmoon/trees/tree-weeping-dark.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "tree-red-leaf",
+      "category": "trees",
+      "width": 250,
+      "height": 250,
+      "description": "tree with red leaves under moonlight",
+      "file": "maps/bloodmoon/trees/tree-red-leaf.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bush-thorn",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "thorn bush",
+      "file": "maps/bloodmoon/plants/bush-thorn.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bush-dead",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "dead dry bush",
+      "file": "maps/bloodmoon/plants/bush-dead.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

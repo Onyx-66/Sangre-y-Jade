@@ -1,0 +1,171 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-3.png",
+  "items": [
+    {
+      "id": "rib-cage",
+      "category": "debris",
+      "width": 140,
+      "height": 140,
+      "description": "giant rib cage",
+      "file": "maps/bloodmoon/debris/rib-cage.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "spears-crossed",
+      "category": "debris",
+      "width": 140,
+      "height": 140,
+      "description": "crossed spears in the ground",
+      "file": "maps/bloodmoon/debris/spears-crossed.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "hut-burned-a",
+      "category": "buildings",
+      "width": 320,
+      "height": 250,
+      "description": "burned Maya hut, roof collapsed",
+      "file": "maps/bloodmoon/buildings/hut-burned-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "hut-burned-b",
+      "category": "buildings",
+      "width": 320,
+      "height": 250,
+      "description": "burned hut with standing walls",
+      "file": "maps/bloodmoon/buildings/hut-burned-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "hut-burned-c",
+      "category": "buildings",
+      "width": 320,
+      "height": 250,
+      "description": "burned longhouse",
+      "file": "maps/bloodmoon/buildings/hut-burned-c.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "ritual-platform",
+      "category": "buildings",
+      "width": 768,
+      "height": 599,
+      "description": "large stone ritual platform with braziers and a staircase, top-down 3/4, 768 px (landmark)",
+      "file": "maps/bloodmoon/buildings/ritual-platform.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "ossuary",
+      "category": "buildings",
+      "width": 360,
+      "height": 281,
+      "description": "stone ossuary building with skull racks",
+      "file": "maps/bloodmoon/buildings/ossuary.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "temple-wing-collapsed",
+      "category": "buildings",
+      "width": 360,
+      "height": 281,
+      "description": "collapsed temple wing",
+      "file": "maps/bloodmoon/buildings/temple-wing-collapsed.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "altar-sacrificial",
+      "category": "buildings",
+      "width": 360,
+      "height": 281,
+      "description": "sacrificial altar with dark stains",
+      "file": "maps/bloodmoon/buildings/altar-sacrificial.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "skull-rack",
+      "category": "buildings",
+      "width": 360,
+      "height": 281,
+      "description": "wooden skull rack",
+      "file": "maps/bloodmoon/buildings/skull-rack.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "brazier-stone",
+      "category": "buildings",
+      "width": 360,
+      "height": 281,
+      "description": "stone brazier with fire (light source)",
+      "file": "maps/bloodmoon/buildings/brazier-stone.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "gate-ruined",
+      "category": "buildings",
+      "width": 360,
+      "height": 281,
+      "description": "ruined stone gateway",
+      "file": "maps/bloodmoon/buildings/gate-ruined.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "torch-post-lit",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "lit torch post (light source)",
+      "file": "maps/bloodmoon/props/torch-post-lit.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "torch-ground",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "torch stuck in the ground (light source)",
+      "file": "maps/bloodmoon/props/torch-ground.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "banner-torn",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "torn red banner on a pole",
+      "file": "maps/bloodmoon/props/banner-torn.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "chains",
+      "category": "props",
+      "width": 112,
+      "height": 112,
+      "description": "hanging chains",
+      "file": "maps/bloodmoon/props/chains.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

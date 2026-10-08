@@ -13,8 +13,8 @@ export class WaterEffects {
     const g=this.g;if(!g)return;g.clear();for(const p of this.pool.splice(this.cap))p.image?.destroy();
     for(const p of this.pool){if(p.life<=0){p.image?.setVisible(false);continue;}p.life-=dt;const t=1-p.life/p.total;
       const r=p.kind==='large'?8+26*t:p.kind==='bubble'?2+2*t:3+15*t;
-      const id=p.kind==='bubble'?'bubbles':p.kind==='large'?'splash-burst':p.kind==='foam'?'foam-edge':'ripple-ring',key=`map-overgrown-${id}`;
-      if(this.scene.mapData?.id==='overgrown'&&this.scene.textures?.exists?.(key)){
+      const id=p.kind==='bubble'?'bubbles':p.kind==='large'?'splash-burst':p.kind==='foam'?'foam-edge':'ripple-ring',map=this.scene.mapData?.id,key=`map-${map}-${id}`;
+      if(['overgrown','bloodmoon'].includes(map)&&this.scene.textures?.exists?.(key)){
         p.image ||= this.scene.add.image(p.x,p.y,key).setDepth(backgroundDepth(40));
         p.image.setTexture(key).setPosition(p.x,p.y-(p.kind==='bubble'?t*30:0)).setDisplaySize(r*3,r*2).setAlpha(Math.max(0,1-t)*.65).setVisible(true);continue;
       }

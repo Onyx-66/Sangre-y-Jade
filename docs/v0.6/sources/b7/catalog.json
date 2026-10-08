@@ -1,0 +1,867 @@
+[
+  {
+    "id": "ash-ground",
+    "category": "ground",
+    "width": 256,
+    "height": 256,
+    "description": "seamless grey ash ground with ember specks",
+    "file": "maps/bloodmoon/ground/ash-ground.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "cracked-stone",
+    "category": "ground",
+    "width": 256,
+    "height": 256,
+    "description": "seamless cracked dark stone with faint red veins",
+    "file": "maps/bloodmoon/ground/cracked-stone.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "dark-dirt",
+    "category": "ground",
+    "width": 256,
+    "height": 256,
+    "description": "seamless dark packed dirt",
+    "file": "maps/bloodmoon/ground/dark-dirt.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "blood-stained",
+    "category": "ground",
+    "width": 256,
+    "height": 256,
+    "description": "seamless dark ground with dried blood patches",
+    "file": "maps/bloodmoon/ground/blood-stained.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "ritual-floor",
+    "category": "ground",
+    "width": 256,
+    "height": 256,
+    "description": "seamless carved ritual stone floor with glyphs",
+    "file": "maps/bloodmoon/ground/ritual-floor.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "charred-wood",
+    "category": "ground",
+    "width": 256,
+    "height": 256,
+    "description": "seamless charred wooden planks",
+    "file": "maps/bloodmoon/ground/charred-wood.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "tree-dead-a",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "dead gnarled tree, no leaves",
+    "file": "maps/bloodmoon/trees/tree-dead-a.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-dead-b",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "dead tree with hanging vines",
+    "file": "maps/bloodmoon/trees/tree-dead-b.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-twisted",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "twisted dark tree with a few red leaves",
+    "file": "maps/bloodmoon/trees/tree-twisted.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-burned",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "burned tree trunk, charred",
+    "file": "maps/bloodmoon/trees/tree-burned.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-thorn",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "thorny black tree",
+    "file": "maps/bloodmoon/trees/tree-thorn.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-stump-large",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "huge burned stump",
+    "file": "maps/bloodmoon/trees/tree-stump-large.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-weeping-dark",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "weeping tree with dark drooping branches",
+    "file": "maps/bloodmoon/trees/tree-weeping-dark.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "tree-red-leaf",
+    "category": "trees",
+    "width": 250,
+    "height": 250,
+    "description": "tree with red leaves under moonlight",
+    "file": "maps/bloodmoon/trees/tree-red-leaf.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "bush-thorn",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "thorn bush",
+    "file": "maps/bloodmoon/plants/bush-thorn.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "bush-dead",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "dead dry bush",
+    "file": "maps/bloodmoon/plants/bush-dead.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "grass-dry",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "dry brown grass tuft",
+    "file": "maps/bloodmoon/plants/grass-dry.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "vines-dark",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "dark hanging vines",
+    "file": "maps/bloodmoon/plants/vines-dark.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "flowers-red",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "red night flowers",
+    "file": "maps/bloodmoon/plants/flowers-red.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "mushrooms-glow-red",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "faintly glowing red mushrooms",
+    "file": "maps/bloodmoon/plants/mushrooms-glow-red.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "bones-grass",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "grass with bones",
+    "file": "maps/bloodmoon/plants/bones-grass.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "moss-dark",
+    "category": "plants",
+    "width": 96,
+    "height": 96,
+    "description": "dark moss patch",
+    "file": "maps/bloodmoon/plants/moss-dark.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "obsidian-shard-a",
+    "category": "rocks",
+    "width": 220,
+    "height": 220,
+    "description": "jagged obsidian shard cluster",
+    "file": "maps/bloodmoon/rocks/obsidian-shard-a.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "obsidian-shard-b",
+    "category": "rocks",
+    "width": 130,
+    "height": 130,
+    "description": "single tall obsidian shard",
+    "file": "maps/bloodmoon/rocks/obsidian-shard-b.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "rock-cracked",
+    "category": "rocks",
+    "width": 130,
+    "height": 130,
+    "description": "cracked grey boulder",
+    "file": "maps/bloodmoon/rocks/rock-cracked.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "altar-stone",
+    "category": "rocks",
+    "width": 130,
+    "height": 130,
+    "description": "broken altar stone",
+    "file": "maps/bloodmoon/rocks/altar-stone.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "skull-pile",
+    "category": "rocks",
+    "width": 220,
+    "height": 220,
+    "description": "pile of skulls",
+    "file": "maps/bloodmoon/rocks/skull-pile.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "bone-pile",
+    "category": "rocks",
+    "width": 220,
+    "height": 220,
+    "description": "pile of bones",
+    "file": "maps/bloodmoon/rocks/bone-pile.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "log-burned",
+    "category": "debris",
+    "width": 140,
+    "height": 140,
+    "description": "burned log",
+    "file": "maps/bloodmoon/debris/log-burned.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "stump-burned",
+    "category": "debris",
+    "width": 140,
+    "height": 140,
+    "description": "burned stump",
+    "file": "maps/bloodmoon/debris/stump-burned.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "ash-pile",
+    "category": "debris",
+    "width": 140,
+    "height": 140,
+    "description": "ash and ember pile",
+    "file": "maps/bloodmoon/debris/ash-pile.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "broken-pot",
+    "category": "debris",
+    "width": 140,
+    "height": 140,
+    "description": "broken clay pot",
+    "file": "maps/bloodmoon/debris/broken-pot.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "rib-cage",
+    "category": "debris",
+    "width": 140,
+    "height": 140,
+    "description": "giant rib cage",
+    "file": "maps/bloodmoon/debris/rib-cage.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "spears-crossed",
+    "category": "debris",
+    "width": 140,
+    "height": 140,
+    "description": "crossed spears in the ground",
+    "file": "maps/bloodmoon/debris/spears-crossed.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "hut-burned-a",
+    "category": "buildings",
+    "width": 320,
+    "height": 250,
+    "description": "burned Maya hut, roof collapsed",
+    "file": "maps/bloodmoon/buildings/hut-burned-a.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "hut-burned-b",
+    "category": "buildings",
+    "width": 320,
+    "height": 250,
+    "description": "burned hut with standing walls",
+    "file": "maps/bloodmoon/buildings/hut-burned-b.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "hut-burned-c",
+    "category": "buildings",
+    "width": 320,
+    "height": 250,
+    "description": "burned longhouse",
+    "file": "maps/bloodmoon/buildings/hut-burned-c.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "ritual-platform",
+    "category": "buildings",
+    "width": 768,
+    "height": 599,
+    "description": "large stone ritual platform with braziers and a staircase, top-down 3/4, 768 px (landmark)",
+    "file": "maps/bloodmoon/buildings/ritual-platform.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "ossuary",
+    "category": "buildings",
+    "width": 360,
+    "height": 281,
+    "description": "stone ossuary building with skull racks",
+    "file": "maps/bloodmoon/buildings/ossuary.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "temple-wing-collapsed",
+    "category": "buildings",
+    "width": 360,
+    "height": 281,
+    "description": "collapsed temple wing",
+    "file": "maps/bloodmoon/buildings/temple-wing-collapsed.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "altar-sacrificial",
+    "category": "buildings",
+    "width": 360,
+    "height": 281,
+    "description": "sacrificial altar with dark stains",
+    "file": "maps/bloodmoon/buildings/altar-sacrificial.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "skull-rack",
+    "category": "buildings",
+    "width": 360,
+    "height": 281,
+    "description": "wooden skull rack",
+    "file": "maps/bloodmoon/buildings/skull-rack.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "brazier-stone",
+    "category": "buildings",
+    "width": 360,
+    "height": 281,
+    "description": "stone brazier with fire (light source)",
+    "file": "maps/bloodmoon/buildings/brazier-stone.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "gate-ruined",
+    "category": "buildings",
+    "width": 360,
+    "height": 281,
+    "description": "ruined stone gateway",
+    "file": "maps/bloodmoon/buildings/gate-ruined.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "torch-post-lit",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "lit torch post (light source)",
+    "file": "maps/bloodmoon/props/torch-post-lit.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "torch-ground",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "torch stuck in the ground (light source)",
+    "file": "maps/bloodmoon/props/torch-ground.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "banner-torn",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "torn red banner on a pole",
+    "file": "maps/bloodmoon/props/banner-torn.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "chains",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "hanging chains",
+    "file": "maps/bloodmoon/props/chains.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "cage-wood",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "broken wooden cage",
+    "file": "maps/bloodmoon/props/cage-wood.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "pot-cracked",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "cracked urn",
+    "file": "maps/bloodmoon/props/pot-cracked.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "crate-broken",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "broken crate",
+    "file": "maps/bloodmoon/props/crate-broken.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "cart-burned",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "burned cart",
+    "file": "maps/bloodmoon/props/cart-burned.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "stake-fence",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "sharpened stake fence",
+    "file": "maps/bloodmoon/props/stake-fence.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "totem-bone",
+    "category": "props",
+    "width": 112,
+    "height": 112,
+    "description": "bone totem",
+    "file": "maps/bloodmoon/props/totem-bone.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "water-deep-0",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-deep-0",
+    "file": "maps/bloodmoon/water/water-deep-0.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-deep-1",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-deep-1",
+    "file": "maps/bloodmoon/water/water-deep-1.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-deep-2",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-deep-2",
+    "file": "maps/bloodmoon/water/water-deep-2.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-deep-3",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-deep-3",
+    "file": "maps/bloodmoon/water/water-deep-3.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-shallow-0",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-shallow-0",
+    "file": "maps/bloodmoon/water/water-shallow-0.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-shallow-1",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-shallow-1",
+    "file": "maps/bloodmoon/water/water-shallow-1.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-shallow-2",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-shallow-2",
+    "file": "maps/bloodmoon/water/water-shallow-2.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "water-shallow-3",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "water-shallow-3",
+    "file": "maps/bloodmoon/water/water-shallow-3.png",
+    "anchor": "bottom",
+    "keyFringe": 4,
+    "fullBleed": true
+  },
+  {
+    "id": "foam-edge",
+    "category": "water",
+    "width": 256,
+    "height": 64,
+    "description": "foam-edge",
+    "file": "maps/bloodmoon/water/foam-edge.png",
+    "anchor": "center",
+    "keyFringe": 4
+  },
+  {
+    "id": "ripple-ring",
+    "category": "water",
+    "width": 128,
+    "height": 128,
+    "description": "ripple-ring",
+    "file": "maps/bloodmoon/water/ripple-ring.png",
+    "anchor": "center",
+    "keyFringe": 4
+  },
+  {
+    "id": "splash-burst",
+    "category": "water",
+    "width": 256,
+    "height": 256,
+    "description": "splash-burst",
+    "file": "maps/bloodmoon/water/splash-burst.png",
+    "anchor": "center",
+    "keyFringe": 4
+  },
+  {
+    "id": "bubbles",
+    "category": "water",
+    "width": 128,
+    "height": 128,
+    "description": "bubbles",
+    "file": "maps/bloodmoon/water/bubbles.png",
+    "anchor": "center",
+    "keyFringe": 4
+  },
+  {
+    "id": "stairs-stone-n",
+    "category": "structures",
+    "width": 256,
+    "height": 192,
+    "description": "stairs-stone-n",
+    "file": "maps/bloodmoon/structures/stairs-stone-n.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "stairs-stone-s",
+    "category": "structures",
+    "width": 256,
+    "height": 192,
+    "description": "stairs-stone-s",
+    "file": "maps/bloodmoon/structures/stairs-stone-s.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "stairs-stone-e",
+    "category": "structures",
+    "width": 256,
+    "height": 192,
+    "description": "stairs-stone-e",
+    "file": "maps/bloodmoon/structures/stairs-stone-e.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "stairs-stone-w",
+    "category": "structures",
+    "width": 256,
+    "height": 192,
+    "description": "stairs-stone-w",
+    "file": "maps/bloodmoon/structures/stairs-stone-w.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "platform-edge-straight",
+    "category": "structures",
+    "width": 256,
+    "height": 256,
+    "description": "platform-edge-straight",
+    "file": "maps/bloodmoon/structures/platform-edge-straight.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "platform-edge-corner",
+    "category": "structures",
+    "width": 256,
+    "height": 256,
+    "description": "platform-edge-corner",
+    "file": "maps/bloodmoon/structures/platform-edge-corner.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "wall-stone-straight",
+    "category": "structures",
+    "width": 256,
+    "height": 128,
+    "description": "wall-stone-straight",
+    "file": "maps/bloodmoon/structures/wall-stone-straight.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "wall-stone-corner",
+    "category": "structures",
+    "width": 256,
+    "height": 128,
+    "description": "wall-stone-corner",
+    "file": "maps/bloodmoon/structures/wall-stone-corner.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "wall-stone-gap",
+    "category": "structures",
+    "width": 256,
+    "height": 128,
+    "description": "wall-stone-gap",
+    "file": "maps/bloodmoon/structures/wall-stone-gap.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "bridge-h",
+    "category": "structures",
+    "width": 512,
+    "height": 192,
+    "description": "bridge-h",
+    "file": "maps/bloodmoon/structures/bridge-h.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "bridge-v",
+    "category": "structures",
+    "width": 192,
+    "height": 512,
+    "description": "bridge-v",
+    "file": "maps/bloodmoon/structures/bridge-v.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "pyramid-tier-a",
+    "category": "structures",
+    "width": 768,
+    "height": 768,
+    "description": "pyramid-tier-a",
+    "file": "maps/bloodmoon/structures/pyramid-tier-a.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "pyramid-tier-b",
+    "category": "structures",
+    "width": 512,
+    "height": 512,
+    "description": "pyramid-tier-b",
+    "file": "maps/bloodmoon/structures/pyramid-tier-b.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "pyramid-tier-c",
+    "category": "structures",
+    "width": 320,
+    "height": 320,
+    "description": "pyramid-tier-c",
+    "file": "maps/bloodmoon/structures/pyramid-tier-c.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "pyramid-top-shrine",
+    "category": "structures",
+    "width": 192,
+    "height": 192,
+    "description": "pyramid-top-shrine",
+    "file": "maps/bloodmoon/structures/pyramid-top-shrine.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "statue-jaguar",
+    "category": "statues",
+    "width": 192,
+    "height": 192,
+    "description": "statue-jaguar",
+    "file": "maps/bloodmoon/statues/statue-jaguar.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "statue-warrior",
+    "category": "statues",
+    "width": 192,
+    "height": 192,
+    "description": "statue-warrior",
+    "file": "maps/bloodmoon/statues/statue-warrior.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "statue-serpent",
+    "category": "statues",
+    "width": 192,
+    "height": 192,
+    "description": "statue-serpent",
+    "file": "maps/bloodmoon/statues/statue-serpent.png",
+    "anchor": "bottom",
+    "keyFringe": 4
+  },
+  {
+    "id": "glow-torch",
+    "category": "glow",
+    "width": 256,
+    "height": 256,
+    "description": "soft orange torch additive glow",
+    "file": "maps/bloodmoon/glow-torch.png",
+    "anchor": "center",
+    "keyFringe": 0,
+    "softMatte": true
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "errors": [],
+  "views": [
+    {
+      "kind": "centre",
+      "active": 65,
+      "pool": 0,
+      "overhead": 17,
+      "terrain": 113,
+      "hash": "bcb1c92f"
+    },
+    {
+      "kind": "corner",
+      "active": 20,
+      "pool": 45,
+      "overhead": 17,
+      "terrain": 113,
+      "hash": "bcb1c92f"
+    },
+    {
+      "kind": "settlement",
+      "active": 44,
+      "pool": 21,
+      "overhead": 17,
+      "terrain": 113,
+      "hash": "bcb1c92f"
+    },
+    {
+      "kind": "pyramid",
+      "active": 51,
+      "pool": 14,
+      "overhead": 17,
+      "terrain": 113,
+      "hash": "bcb1c92f"
+    }
+  ],
+  "galleries": [
+    "collision-trees-0.png",
+    "collision-trees-1.png",
+    "collision-plants-0.png",
+    "collision-plants-1.png",
+    "collision-rocks-0.png",
+    "collision-rocks-1.png",
+    "collision-debris-0.png",
+    "collision-debris-1.png",
+    "collision-buildings-0.png",
+    "collision-buildings-1.png",
+    "collision-buildings-2.png",
+    "collision-buildings-3.png",
+    "collision-buildings-4.png",
+    "collision-buildings-5.png",
+    "collision-buildings-6.png",
+    "collision-buildings-7.png",
+    "collision-buildings-8.png",
+    "collision-buildings-9.png",
+    "collision-props-0.png",
+    "collision-props-1.png",
+    "collision-props-2.png",
+    "collision-statues-0.png",
+    "collision-structures-0.png",
+    "collision-structures-1.png",
+    "collision-structures-2.png",
+    "collision-structures-3.png"
+  ],
+  "seed": "b7-art-0",
+  "lighting": {
+    "sources": 44,
+    "glows": [
+      {
+        "texture": "map-bloodmoon-glow-torch",
+        "blend": 1,
+        "alpha": 0.3
+      },
+      {
+        "texture": "map-bloodmoon-glow-torch",
+        "blend": 1,
+        "alpha": 0.3
+      }
+    ]
+  },
+  "renderer": {
+    "type": 2,
+    "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "stairs": [
+      "south",
+      "north"
+    ]
+  },
+  "directionReview": "Four directional art modules also inspected separately in the collision gallery.",
+  "frameTime": {
+    "frames": 360,
+    "meanMs": 35.18472222222222,
+    "p95Ms": 41.79999999999927,
+    "maxMs": 49.29999999999927,
+    "note": "Desktop headless Chrome rAF, collision overlay off, unthrottled; not phone FPS"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "expectedCount": 11,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-6.png",
+  "items": [
+    {
+      "id": "platform-edge-straight",
+      "category": "structures",
+      "width": 256,
+      "height": 256,
+      "description": "platform-edge-straight",
+      "file": "maps/bloodmoon/structures/platform-edge-straight.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "platform-edge-corner",
+      "category": "structures",
+      "width": 256,
+      "height": 256,
+      "description": "platform-edge-corner",
+      "file": "maps/bloodmoon/structures/platform-edge-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "wall-stone-straight",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-straight",
+      "file": "maps/bloodmoon/structures/wall-stone-straight.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "wall-stone-corner",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-corner",
+      "file": "maps/bloodmoon/structures/wall-stone-corner.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "wall-stone-gap",
+      "category": "structures",
+      "width": 256,
+      "height": 128,
+      "description": "wall-stone-gap",
+      "file": "maps/bloodmoon/structures/wall-stone-gap.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bridge-h",
+      "category": "structures",
+      "width": 512,
+      "height": 192,
+      "description": "bridge-h",
+      "file": "maps/bloodmoon/structures/bridge-h.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bridge-v",
+      "category": "structures",
+      "width": 192,
+      "height": 512,
+      "description": "bridge-v",
+      "file": "maps/bloodmoon/structures/bridge-v.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "pyramid-tier-a",
+      "category": "structures",
+      "width": 768,
+      "height": 768,
+      "description": "pyramid-tier-a",
+      "file": "maps/bloodmoon/structures/pyramid-tier-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "pyramid-tier-b",
+      "category": "structures",
+      "width": 512,
+      "height": 512,
+      "description": "pyramid-tier-b",
+      "file": "maps/bloodmoon/structures/pyramid-tier-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "pyramid-tier-c",
+      "category": "structures",
+      "width": 320,
+      "height": 320,
+      "description": "pyramid-tier-c",
+      "file": "maps/bloodmoon/structures/pyramid-tier-c.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "pyramid-top-shrine",
+      "category": "structures",
+      "width": 192,
+      "height": 192,
+      "description": "pyramid-top-shrine",
+      "file": "maps/bloodmoon/structures/pyramid-top-shrine.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}

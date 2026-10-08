@@ -31,7 +31,7 @@ export class GroundRenderer{
       for(const surface of w.surfaces)g.lineStyle(4,0xb29b64,1).strokeRect(surface.x-surface.size.width/2,surface.y-surface.size.height/2,surface.size.width,surface.size.height);
       for(const stair of w.stairs)for(let n=0;n<5;n++){const x=stair.from.x+(stair.to.x-stair.from.x)*n/5,y=stair.from.y+(stair.to.y-stair.from.y)*n/5,horizontal=stair.from.x!==stair.to.x;g.lineStyle(3,0xd0b980,1).lineBetween(x-(horizontal?0:stair.width/2),y-(horizontal?stair.width/2:0),x+(horizontal?0:stair.width/2),y+(horizontal?stair.width/2:0));}
     }
-    if(w.mapId==='overgrown'&&scene.textures?.exists?.('map-overgrown-water-deep-0'))this.authored=new WorldArt(scene,w);
+    if(['overgrown','bloodmoon'].includes(w.mapId)&&scene.textures?.exists?.(`map-${w.mapId}-water-deep-0`))this.authored=new WorldArt(scene,w);
   }
   update(now){this.authored?.update(now);}
   destroy(){this.authored?.destroy();for(const o of this.objects)o.destroy();this.objects=[];}

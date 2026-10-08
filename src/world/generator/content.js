@@ -74,7 +74,7 @@ function setPiece(w,kit,site,config){
  for(let n=0;n<ids.length;n++){
   const item=kit.items.find(i=>i.id===ids[n]);if(!item)throw Error(`Missing catalog item ${ids[n]}`);
   for(let attempt=0;attempt<32;attempt++){
-   const angle=attempt*Math.PI/8,o=candidate(item,site.x+Math.cos(angle)*320,site.y+Math.sin(angle)*320,.45);o.siteId=site.id;o.role=site.kind;
+   const angle=attempt*Math.PI/8,o=candidate(item,site.x+Math.cos(angle)*320,site.y+Math.sin(angle)*320,config.structureScales?.[item.id]||.45);o.siteId=site.id;o.role=site.kind;
    if(!canPlace(w,o,{site:true})||!addDoor(w,o,site))continue;w.objects.push(o);site.buildingCount++;break;
   }
  }if(site.buildingCount<ids.length)throw Error(`Incomplete ${site.kind}`);

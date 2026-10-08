@@ -1,8 +1,8 @@
 {
   "id": "bloodmoon",
   "world": {
-    "width": 6400,
-    "height": 4800,
+    "width": 8192,
+    "height": 6144,
     "wallThickness": 400,
     "cellSize": 640
   },
@@ -22,20 +22,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -43,22 +43,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-dead-a.png",
+      "textureKey": "map-bloodmoon-tree-dead-a",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-dead-b",
@@ -67,20 +76,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -88,22 +97,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 24,
+        "offsetX": 0,
+        "offsetY": -27
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-dead-b.png",
+      "textureKey": "map-bloodmoon-tree-dead-b",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-twisted",
@@ -112,20 +130,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 23,
+        "offsetX": 0,
+        "offsetY": -26
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -133,22 +151,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 23,
+        "offsetX": 0,
+        "offsetY": -26
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-twisted.png",
+      "textureKey": "map-bloodmoon-tree-twisted",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-burned",
@@ -157,20 +184,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": -34
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -178,22 +205,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 31,
+        "offsetX": 0,
+        "offsetY": -34
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-burned.png",
+      "textureKey": "map-bloodmoon-tree-burned",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-thorn",
@@ -202,20 +238,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 22,
+        "offsetX": 0,
+        "offsetY": -25
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -223,22 +259,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 22,
+        "offsetX": 0,
+        "offsetY": -25
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-thorn.png",
+      "textureKey": "map-bloodmoon-tree-thorn",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-stump-large",
@@ -247,20 +292,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 43,
+        "offsetX": 0,
+        "offsetY": -43
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -268,22 +313,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 43,
+        "offsetX": 0,
+        "offsetY": -43
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-stump-large.png",
+      "textureKey": "map-bloodmoon-tree-stump-large",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-weeping-dark",
@@ -292,20 +346,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 27,
+        "offsetX": 0,
+        "offsetY": -30
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -313,22 +367,31 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 27,
+        "offsetX": 0,
+        "offsetY": -30
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-weeping-dark.png",
+      "textureKey": "map-bloodmoon-tree-weeping-dark",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "tree-red-leaf",
@@ -337,20 +400,20 @@
       "size": {
         "width": 250,
         "height": 250,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": -28
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -358,43 +421,52 @@
       "kind": "tree",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -31.197916666666664,
         "type": "circle",
-        "radius": 19.53125
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": -28
       },
       "occluder": {
         "x": -125,
-        "y": -220,
+        "y": -250,
         "width": 250,
-        "height": 162.5
+        "height": 165
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.66
       },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/trees/tree-red-leaf.png",
+      "textureKey": "map-bloodmoon-tree-red-leaf",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bush-thorn",
       "category": "plants",
       "description": "thorn bush",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -402,35 +474,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/bush-thorn.png",
+      "textureKey": "map-bloodmoon-bush-thorn",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bush-dead",
       "category": "plants",
       "description": "dead dry bush",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -438,35 +519,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/bush-dead.png",
+      "textureKey": "map-bloodmoon-bush-dead",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "grass-dry",
       "category": "plants",
       "description": "dry brown grass tuft",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -474,35 +564,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/grass-dry.png",
+      "textureKey": "map-bloodmoon-grass-dry",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "vines-dark",
       "category": "plants",
       "description": "dark hanging vines",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -510,35 +609,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/vines-dark.png",
+      "textureKey": "map-bloodmoon-vines-dark",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "flowers-red",
       "category": "plants",
       "description": "red night flowers",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -546,35 +654,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/flowers-red.png",
+      "textureKey": "map-bloodmoon-flowers-red",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "mushrooms-glow-red",
       "category": "plants",
       "description": "faintly glowing red mushrooms",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -582,35 +699,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/mushrooms-glow-red.png",
+      "textureKey": "map-bloodmoon-mushrooms-glow-red",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bones-grass",
       "category": "plants",
       "description": "grass with bones",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -618,35 +744,44 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/bones-grass.png",
+      "textureKey": "map-bloodmoon-bones-grass",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "moss-dark",
       "category": "plants",
       "description": "dark moss patch",
       "size": {
-        "width": 90,
-        "height": 90,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 96,
+        "height": 96,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -654,14 +789,23 @@
       "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": 0,
-        "type": "none"
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/plants/moss-dark.png",
+      "textureKey": "map-bloodmoon-moss-dark",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "obsidian-shard-a",
@@ -670,20 +814,20 @@
       "size": {
         "width": 220,
         "height": 220,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -32.35833333333332,
         "type": "circle",
-        "radius": 65.3125
+        "radius": 43,
+        "offsetX": 0,
+        "offsetY": -43
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -691,15 +835,24 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -32.35833333333332,
         "type": "circle",
-        "radius": 65.3125
+        "radius": 43,
+        "offsetX": 0,
+        "offsetY": -43
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/rocks/obsidian-shard-a.png",
+      "textureKey": "map-bloodmoon-obsidian-shard-a",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "obsidian-shard-b",
@@ -708,20 +861,20 @@
       "size": {
         "width": 130,
         "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.12083333333333,
         "type": "circle",
-        "radius": 38.59375
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": -26
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -729,15 +882,24 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.12083333333333,
         "type": "circle",
-        "radius": 38.59375
+        "radius": 25,
+        "offsetX": 0,
+        "offsetY": -26
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/rocks/obsidian-shard-b.png",
+      "textureKey": "map-bloodmoon-obsidian-shard-b",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "rock-cracked",
@@ -746,20 +908,20 @@
       "size": {
         "width": 130,
         "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.12083333333333,
         "type": "circle",
-        "radius": 38.59375
+        "radius": 37,
+        "offsetX": 0,
+        "offsetY": -38
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -767,15 +929,24 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.12083333333333,
         "type": "circle",
-        "radius": 38.59375
+        "radius": 37,
+        "offsetX": 0,
+        "offsetY": -38
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/rocks/rock-cracked.png",
+      "textureKey": "map-bloodmoon-rock-cracked",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "altar-stone",
@@ -784,20 +955,20 @@
       "size": {
         "width": 130,
         "height": 130,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.12083333333333,
         "type": "circle",
-        "radius": 38.59375
+        "radius": 33,
+        "offsetX": 0,
+        "offsetY": -34
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -805,15 +976,24 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.12083333333333,
         "type": "circle",
-        "radius": 38.59375
+        "radius": 33,
+        "offsetX": 0,
+        "offsetY": -34
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/rocks/altar-stone.png",
+      "textureKey": "map-bloodmoon-altar-stone",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "skull-pile",
@@ -822,20 +1002,20 @@
       "size": {
         "width": 220,
         "height": 220,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -32.35833333333332,
         "type": "circle",
-        "radius": 65.3125
+        "radius": 53,
+        "offsetX": 0,
+        "offsetY": -54
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -843,15 +1023,24 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -32.35833333333332,
         "type": "circle",
-        "radius": 65.3125
+        "radius": 53,
+        "offsetX": 0,
+        "offsetY": -54
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/rocks/skull-pile.png",
+      "textureKey": "map-bloodmoon-skull-pile",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "bone-pile",
@@ -860,20 +1049,20 @@
       "size": {
         "width": 220,
         "height": 220,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -32.35833333333332,
         "type": "circle",
-        "radius": 65.3125
+        "radius": 49,
+        "offsetX": 0,
+        "offsetY": -50
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
@@ -881,15 +1070,24 @@
       "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -32.35833333333332,
         "type": "circle",
-        "radius": 65.3125
+        "radius": 49,
+        "offsetX": 0,
+        "offsetY": -50
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/rocks/bone-pile.png",
+      "textureKey": "map-bloodmoon-bone-pile",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "log-burned",
@@ -898,36 +1096,47 @@
       "size": {
         "width": 140,
         "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 7.291666666666666,
-        "offsetY": -35.175,
-        "type": "circle",
-        "radius": 18.229166666666664
+        "type": "rect",
+        "width": 112,
+        "height": 35,
+        "offsetX": 0,
+        "offsetY": -23
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-roots",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 7.291666666666666,
-        "offsetY": -35.175,
-        "type": "circle",
-        "radius": 18.229166666666664
+        "type": "rect",
+        "width": 112,
+        "height": 35,
+        "offsetX": 0,
+        "offsetY": -23
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/debris/log-burned.png",
+      "textureKey": "map-bloodmoon-log-burned",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "stump-burned",
@@ -936,36 +1145,45 @@
       "size": {
         "width": 140,
         "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -20.59166666666666,
         "type": "circle",
-        "radius": 41.5625
+        "radius": 29,
+        "offsetX": 0,
+        "offsetY": -32
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-rocks",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -20.59166666666666,
         "type": "circle",
-        "radius": 41.5625
+        "radius": 29,
+        "offsetX": 0,
+        "offsetY": -32
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/debris/stump-burned.png",
+      "textureKey": "map-bloodmoon-stump-burned",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "ash-pile",
@@ -974,36 +1192,43 @@
       "size": {
         "width": 140,
         "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": -20.59166666666666,
-        "type": "circle",
-        "radius": 41.5625
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-rocks",
-      "kind": "statue",
+      "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": -20.59166666666666,
-        "type": "circle",
-        "radius": 41.5625
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/debris/ash-pile.png",
+      "textureKey": "map-bloodmoon-ash-pile",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "broken-pot",
@@ -1012,36 +1237,43 @@
       "size": {
         "width": 140,
         "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": -20.59166666666666,
-        "type": "circle",
-        "radius": 41.5625
+        "offsetY": 0
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-rocks",
-      "kind": "statue",
+      "kind": "decoration",
       "level": 0,
       "footprint": {
+        "type": "none",
         "offsetX": 0,
-        "offsetY": -20.59166666666666,
-        "type": "circle",
-        "radius": 41.5625
+        "offsetY": 0
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/debris/broken-pot.png",
+      "textureKey": "map-bloodmoon-broken-pot",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "rib-cage",
@@ -1050,36 +1282,45 @@
       "size": {
         "width": 140,
         "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -20.59166666666666,
         "type": "circle",
-        "radius": 41.5625
+        "radius": 33,
+        "offsetX": 0,
+        "offsetY": -34
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-rocks",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -20.59166666666666,
         "type": "circle",
-        "radius": 41.5625
+        "radius": 33,
+        "offsetX": 0,
+        "offsetY": -34
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/debris/rib-cage.png",
+      "textureKey": "map-bloodmoon-rib-cage",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "spears-crossed",
@@ -1088,59 +1329,68 @@
       "size": {
         "width": 140,
         "height": 140,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -20.59166666666666,
         "type": "circle",
-        "radius": 41.5625
+        "radius": 15,
+        "offsetX": 0,
+        "offsetY": -19
       },
-      "depthOffset": 1,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-rocks",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -20.59166666666666,
         "type": "circle",
-        "radius": 41.5625
+        "radius": 15,
+        "offsetX": 0,
+        "offsetY": -19
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/debris/spears-crossed.png",
+      "textureKey": "map-bloodmoon-spears-crossed",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "hut-burned-a",
       "category": "buildings",
       "description": "burned Maya hut, roof collapsed",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 250,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -73.75666666666667,
         "type": "rect",
-        "width": 183.75,
-        "height": 120.35416666666667
+        "width": 231,
+        "height": 54,
+        "offsetX": 0,
+        "offsetY": -33
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1148,53 +1398,63 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -73.75666666666667,
         "type": "rect",
-        "width": 183.75,
-        "height": 120.35416666666667
+        "width": 231,
+        "height": 54,
+        "offsetX": 0,
+        "offsetY": -33
       },
       "occluder": {
-        "x": -140,
-        "y": -191.84,
-        "width": 280,
-        "height": 141.70000000000002
+        "x": -160,
+        "y": -250,
+        "width": 320,
+        "height": 120
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -13.57958333333334,
+        "y": -8,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 74,
+        "height": 75,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/hut-burned-a.png",
+      "textureKey": "map-bloodmoon-hut-burned-a",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "hut-burned-b",
       "category": "buildings",
       "description": "burned hut with standing walls",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 250,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -73.75666666666667,
         "type": "rect",
-        "width": 183.75,
-        "height": 120.35416666666667
+        "width": 261,
+        "height": 48,
+        "offsetX": 0,
+        "offsetY": -30
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1202,53 +1462,63 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -73.75666666666667,
         "type": "rect",
-        "width": 183.75,
-        "height": 120.35416666666667
+        "width": 261,
+        "height": 48,
+        "offsetX": 0,
+        "offsetY": -30
       },
       "occluder": {
-        "x": -140,
-        "y": -191.84,
-        "width": 280,
-        "height": 141.70000000000002
+        "x": -160,
+        "y": -250,
+        "width": 320,
+        "height": 120
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -13.57958333333334,
+        "y": -8,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 74,
+        "height": 75,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/hut-burned-b.png",
+      "textureKey": "map-bloodmoon-hut-burned-b",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "hut-burned-c",
       "category": "buildings",
       "description": "burned longhouse",
       "size": {
-        "width": 280,
-        "height": 218,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "width": 320,
+        "height": 250,
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -73.75666666666667,
         "type": "rect",
-        "width": 183.75,
-        "height": 120.35416666666667
+        "width": 286,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": -28
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1256,30 +1526,40 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -73.75666666666667,
         "type": "rect",
-        "width": 183.75,
-        "height": 120.35416666666667
+        "width": 286,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": -28
       },
       "occluder": {
-        "x": -140,
-        "y": -191.84,
-        "width": 280,
-        "height": 141.70000000000002
+        "x": -160,
+        "y": -250,
+        "width": 320,
+        "height": 120
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -13.57958333333334,
+        "y": -8,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 74,
+        "height": 75,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/hut-burned-c.png",
+      "textureKey": "map-bloodmoon-hut-burned-c",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "ritual-platform",
@@ -1288,45 +1568,47 @@
       "size": {
         "width": 768,
         "height": 599,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -202.66166666666663,
         "type": "rect",
-        "width": 504,
-        "height": 330.69791666666663
+        "width": 636,
+        "height": 144,
+        "offsetX": 0,
+        "offsetY": -80
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": true,
       "placeholderTexture": "top-ruin",
       "kind": "statue",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -202.66166666666663,
         "type": "rect",
-        "width": 504,
-        "height": 330.69791666666663
+        "width": 636,
+        "height": 144,
+        "offsetX": 0,
+        "offsetY": -80
       },
-      "occluder": {
-        "x": -384,
-        "y": -527.12,
-        "width": 768,
-        "height": 389.35
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": true
+      "light": true,
+      "image": "maps/bloodmoon/buildings/ritual-platform.png",
+      "textureKey": "map-bloodmoon-ritual-platform",
+      "lightEnabled": true,
+      "lightColor": "torch",
+      "lightOffsetY": -419,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "ossuary",
@@ -1335,21 +1617,21 @@
       "size": {
         "width": 360,
         "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -95.07166666666669,
         "type": "rect",
-        "width": 236.25,
-        "height": 155.13541666666669
+        "width": 289,
+        "height": 57,
+        "offsetX": 0,
+        "offsetY": -36
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1357,30 +1639,40 @@
       "kind": "house",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -95.07166666666669,
         "type": "rect",
-        "width": 236.25,
-        "height": 155.13541666666669
+        "width": 289,
+        "height": 57,
+        "offsetX": 0,
+        "offsetY": -36
       },
       "occluder": {
         "x": -180,
-        "y": -247.28,
+        "y": -281,
         "width": 360,
-        "height": 182.65
+        "height": 135
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.48
       },
       "door": {
         "x": 0,
-        "y": -17.503958333333344,
+        "y": -8,
         "facing": "south",
         "closed": true,
-        "width": 34,
-        "height": 62
+        "width": 83,
+        "height": 84,
+        "authored": true
       },
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/ossuary.png",
+      "textureKey": "map-bloodmoon-ossuary",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "temple-wing-collapsed",
@@ -1389,45 +1681,47 @@
       "size": {
         "width": 360,
         "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -83.36333333333334,
         "type": "rect",
-        "width": 210,
-        "height": 146.35416666666669
+        "width": 280,
+        "height": 82,
+        "offsetX": 0,
+        "offsetY": -49
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-temple",
       "kind": "statue",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -83.36333333333334,
         "type": "rect",
-        "width": 210,
-        "height": 146.35416666666669
+        "width": 280,
+        "height": 82,
+        "offsetX": 0,
+        "offsetY": -49
       },
-      "occluder": {
-        "x": -180,
-        "y": -247.28,
-        "width": 360,
-        "height": 182.65
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/temple-wing-collapsed.png",
+      "textureKey": "map-bloodmoon-temple-wing-collapsed",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "altar-sacrificial",
@@ -1436,45 +1730,47 @@
       "size": {
         "width": 360,
         "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -100.92583333333334,
         "type": "rect",
-        "width": 236.25,
-        "height": 87.8125
+        "width": 267,
+        "height": 65,
+        "offsetX": 0,
+        "offsetY": -41
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-stela",
       "kind": "statue",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -100.92583333333334,
         "type": "rect",
-        "width": 236.25,
-        "height": 87.8125
+        "width": 267,
+        "height": 65,
+        "offsetX": 0,
+        "offsetY": -41
       },
-      "occluder": {
-        "x": -180,
-        "y": -247.28,
-        "width": 360,
-        "height": 182.65
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/altar-sacrificial.png",
+      "textureKey": "map-bloodmoon-altar-sacrificial",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "skull-rack",
@@ -1483,45 +1779,47 @@
       "size": {
         "width": 360,
         "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -95.07166666666669,
         "type": "rect",
-        "width": 236.25,
-        "height": 155.13541666666669
+        "width": 251,
+        "height": 31,
+        "offsetX": 0,
+        "offsetY": -22
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
       "kind": "statue",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -95.07166666666669,
         "type": "rect",
-        "width": 236.25,
-        "height": 155.13541666666669
+        "width": 251,
+        "height": 31,
+        "offsetX": 0,
+        "offsetY": -22
       },
-      "occluder": {
-        "x": -180,
-        "y": -247.28,
-        "width": 360,
-        "height": 182.65
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/buildings/skull-rack.png",
+      "textureKey": "map-bloodmoon-skull-rack",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "brazier-stone",
@@ -1530,45 +1828,47 @@
       "size": {
         "width": 360,
         "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -95.07166666666669,
         "type": "rect",
-        "width": 236.25,
-        "height": 155.13541666666669
+        "width": 170,
+        "height": 45,
+        "offsetX": 0,
+        "offsetY": -29
       },
-      "depthOffset": 2,
-      "fadeBehind": true,
+      "depthOffset": 0,
+      "fadeBehind": false,
       "breakable": false,
       "lightSource": true,
       "placeholderTexture": "top-ruin",
       "kind": "statue",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -95.07166666666669,
         "type": "rect",
-        "width": 236.25,
-        "height": 155.13541666666669
+        "width": 170,
+        "height": 45,
+        "offsetX": 0,
+        "offsetY": -29
       },
-      "occluder": {
-        "x": -180,
-        "y": -247.28,
-        "width": 360,
-        "height": 182.65
-      },
-      "overhead": {
-        "cropRatio": 0.65
-      },
+      "occluder": null,
+      "overhead": null,
       "door": null,
-      "light": true
+      "light": true,
+      "image": "maps/bloodmoon/buildings/brazier-stone.png",
+      "textureKey": "map-bloodmoon-brazier-stone",
+      "lightEnabled": true,
+      "lightColor": "torch",
+      "lightOffsetY": -197,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "gate-ruined",
@@ -1577,21 +1877,21 @@
       "size": {
         "width": 360,
         "height": 281,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.88
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -83.36333333333334,
         "type": "rect",
-        "width": 210,
-        "height": 146.35416666666669
+        "width": 267,
+        "height": 53,
+        "offsetX": 0,
+        "offsetY": -34
       },
-      "depthOffset": 2,
+      "depthOffset": 0,
       "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
@@ -1599,20 +1899,20 @@
       "kind": "arch",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -83.36333333333334,
         "type": "rect",
-        "width": 210,
-        "height": 146.35416666666669
+        "width": 267,
+        "height": 53,
+        "offsetX": 0,
+        "offsetY": -34
       },
       "occluder": {
         "x": -180,
-        "y": -247.28,
+        "y": -281,
         "width": 360,
-        "height": 182.65
+        "height": 112
       },
       "overhead": {
-        "cropRatio": 0.65
+        "cropRatio": 0.4
       },
       "door": null,
       "light": false,
@@ -1631,7 +1931,16 @@
           "offsetX": 88.2,
           "offsetY": -83.36333333333334
         }
-      ]
+      ],
+      "image": "maps/bloodmoon/buildings/gate-ruined.png",
+      "textureKey": "map-bloodmoon-gate-ruined",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "torch-post-lit",
@@ -1640,38 +1949,45 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 9,
         "offsetX": 0,
-        "offsetY": -22.30666666666667,
-        "type": "rect",
-        "width": 73.5,
-        "height": 35
+        "offsetY": -14
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": true,
       "placeholderTexture": "top-stela",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 9,
         "offsetX": 0,
-        "offsetY": -22.30666666666667,
-        "type": "rect",
-        "width": 73.5,
-        "height": 35
+        "offsetY": -14
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": true
+      "light": true,
+      "image": "maps/bloodmoon/props/torch-post-lit.png",
+      "textureKey": "map-bloodmoon-torch-post-lit",
+      "lightEnabled": true,
+      "lightColor": "torch",
+      "lightOffsetY": -78,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "torch-ground",
@@ -1680,38 +1996,45 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 7,
         "offsetX": 0,
-        "offsetY": -22.30666666666667,
-        "type": "rect",
-        "width": 73.5,
-        "height": 35
+        "offsetY": -12
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": true,
       "placeholderTexture": "top-stela",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 7,
         "offsetX": 0,
-        "offsetY": -22.30666666666667,
-        "type": "rect",
-        "width": 73.5,
-        "height": 35
+        "offsetY": -12
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": true
+      "light": true,
+      "image": "maps/bloodmoon/props/torch-ground.png",
+      "textureKey": "map-bloodmoon-torch-ground",
+      "lightEnabled": true,
+      "lightColor": "torch",
+      "lightOffsetY": -78,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "banner-torn",
@@ -1720,38 +2043,45 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "circle",
+        "radius": 12,
         "offsetX": 0,
-        "offsetY": -19.973333333333333,
-        "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "offsetY": -15
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
+        "type": "circle",
+        "radius": 12,
         "offsetX": 0,
-        "offsetY": -19.973333333333333,
-        "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "offsetY": -15
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/banner-torn.png",
+      "textureKey": "map-bloodmoon-banner-torn",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "chains",
@@ -1760,38 +2090,54 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 79,
+        "height": 15,
+        "offsetX": 0,
+        "offsetY": -12
       },
-      "depthOffset": 5,
-      "fadeBehind": false,
+      "depthOffset": 0,
+      "fadeBehind": true,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
-      "kind": "statue",
+      "kind": "arch",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 79,
+        "height": 15,
+        "offsetX": 0,
+        "offsetY": -12
       },
-      "occluder": null,
-      "overhead": null,
+      "occluder": {
+        "x": -56,
+        "y": -112,
+        "width": 112,
+        "height": 45
+      },
+      "overhead": {
+        "cropRatio": 0.4
+      },
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/chains.png",
+      "textureKey": "map-bloodmoon-chains",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "cage-wood",
@@ -1800,38 +2146,47 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 76,
+        "height": 31,
+        "offsetX": 0,
+        "offsetY": -23
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 76,
+        "height": 31,
+        "offsetX": 0,
+        "offsetY": -23
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/cage-wood.png",
+      "textureKey": "map-bloodmoon-cage-wood",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "pot-cracked",
@@ -1840,20 +2195,20 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": 6.860000000000003,
         "type": "circle",
-        "radius": 21.875
+        "radius": 26,
+        "offsetX": 0,
+        "offsetY": -27
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -1861,15 +2216,24 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": 6.860000000000003,
         "type": "circle",
-        "radius": 21.875
+        "radius": 26,
+        "offsetX": 0,
+        "offsetY": -27
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/pot-cracked.png",
+      "textureKey": "map-bloodmoon-pot-cracked",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "crate-broken",
@@ -1878,20 +2242,21 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 67,
+        "height": 33,
         "offsetX": 0,
-        "offsetY": 6.860000000000003,
-        "type": "circle",
-        "radius": 21.875
+        "offsetY": -25
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -1899,15 +2264,25 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 67,
+        "height": 33,
         "offsetX": 0,
-        "offsetY": 6.860000000000003,
-        "type": "circle",
-        "radius": 21.875
+        "offsetY": -25
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/crate-broken.png",
+      "textureKey": "map-bloodmoon-crate-broken",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "cart-burned",
@@ -1916,20 +2291,21 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
+        "type": "rect",
+        "width": 83,
+        "height": 29,
         "offsetX": 0,
-        "offsetY": 6.860000000000003,
-        "type": "circle",
-        "radius": 21.875
+        "offsetY": -22
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": true,
       "lightSource": false,
@@ -1937,15 +2313,25 @@
       "kind": "breakable",
       "level": 0,
       "footprint": {
+        "type": "rect",
+        "width": 83,
+        "height": 29,
         "offsetX": 0,
-        "offsetY": 6.860000000000003,
-        "type": "circle",
-        "radius": 21.875
+        "offsetY": -22
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/cart-burned.png",
+      "textureKey": "map-bloodmoon-cart-burned",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "stake-fence",
@@ -1954,38 +2340,47 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 96,
+        "height": 14,
+        "offsetX": 0,
+        "offsetY": -12
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 96,
+        "height": 14,
+        "offsetX": 0,
+        "offsetY": -12
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/stake-fence.png",
+      "textureKey": "map-bloodmoon-stake-fence",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     },
     {
       "id": "totem-bone",
@@ -1994,39 +2389,920 @@
       "size": {
         "width": 112,
         "height": 112,
-        "minScale": 0.82,
-        "maxScale": 1.18
+        "minScale": 0.85,
+        "maxScale": 1.12
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.72
+        "y": 1
       },
       "collider": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 59,
+        "height": 23,
+        "offsetX": 0,
+        "offsetY": -18
       },
-      "depthOffset": 5,
+      "depthOffset": 0,
       "fadeBehind": false,
       "breakable": false,
       "lightSource": false,
       "placeholderTexture": "top-ruin",
-      "kind": "statue",
+      "kind": "rock",
       "level": 0,
       "footprint": {
-        "offsetX": 0,
-        "offsetY": -19.973333333333333,
         "type": "rect",
-        "width": 73.5,
-        "height": 61.833333333333336
+        "width": 59,
+        "height": 23,
+        "offsetX": 0,
+        "offsetY": -18
       },
       "occluder": null,
       "overhead": null,
       "door": null,
-      "light": false
+      "light": false,
+      "image": "maps/bloodmoon/props/totem-bone.png",
+      "textureKey": "map-bloodmoon-totem-bone",
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
+    },
+    {
+      "id": "statue-jaguar",
+      "category": "statues",
+      "description": "statue-jaguar",
+      "image": "maps/bloodmoon/statues/statue-jaguar.png",
+      "textureKey": "map-bloodmoon-statue-jaguar",
+      "size": {
+        "width": 192,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "depthOffset": 0,
+      "collider": {
+        "type": "rect",
+        "width": 136,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": -22
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 136,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": -22
+      },
+      "kind": "statue",
+      "fadeBehind": false,
+      "occluder": null,
+      "overhead": null,
+      "lightSource": false,
+      "light": false,
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "door": null,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
+    },
+    {
+      "id": "statue-warrior",
+      "category": "statues",
+      "description": "statue-warrior",
+      "image": "maps/bloodmoon/statues/statue-warrior.png",
+      "textureKey": "map-bloodmoon-statue-warrior",
+      "size": {
+        "width": 192,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "depthOffset": 0,
+      "collider": {
+        "type": "rect",
+        "width": 116,
+        "height": 30,
+        "offsetX": 0,
+        "offsetY": -22
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 116,
+        "height": 30,
+        "offsetX": 0,
+        "offsetY": -22
+      },
+      "kind": "statue",
+      "fadeBehind": false,
+      "occluder": null,
+      "overhead": null,
+      "lightSource": false,
+      "light": false,
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "door": null,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
+    },
+    {
+      "id": "statue-serpent",
+      "category": "statues",
+      "description": "statue-serpent",
+      "image": "maps/bloodmoon/statues/statue-serpent.png",
+      "textureKey": "map-bloodmoon-statue-serpent",
+      "size": {
+        "width": 192,
+        "height": 192,
+        "minScale": 0.85,
+        "maxScale": 1.12
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "depthOffset": 0,
+      "collider": {
+        "type": "rect",
+        "width": 156,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": -22
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 156,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": -22
+      },
+      "kind": "statue",
+      "fadeBehind": false,
+      "occluder": null,
+      "overhead": null,
+      "lightSource": false,
+      "light": false,
+      "lightEnabled": false,
+      "lightColor": "torch",
+      "lightOffsetY": 0,
+      "door": null,
+      "baseReview": {
+        "source": "B7 inspected base measurements",
+        "tolerancePx": 8
+      }
     }
   ],
-  "objectSchemaVersion": 1
+  "objectSchemaVersion": 1,
+  "artVersion": "b7",
+  "ground": [
+    {
+      "id": "ash-ground",
+      "image": "maps/bloodmoon/ground/ash-ground.png",
+      "textureKey": "map-bloodmoon-ash-ground",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "cracked-stone",
+      "image": "maps/bloodmoon/ground/cracked-stone.png",
+      "textureKey": "map-bloodmoon-cracked-stone",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "dark-dirt",
+      "image": "maps/bloodmoon/ground/dark-dirt.png",
+      "textureKey": "map-bloodmoon-dark-dirt",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "blood-stained",
+      "image": "maps/bloodmoon/ground/blood-stained.png",
+      "textureKey": "map-bloodmoon-blood-stained",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "ritual-floor",
+      "image": "maps/bloodmoon/ground/ritual-floor.png",
+      "textureKey": "map-bloodmoon-ritual-floor",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "charred-wood",
+      "image": "maps/bloodmoon/ground/charred-wood.png",
+      "textureKey": "map-bloodmoon-charred-wood",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    }
+  ],
+  "glows": [
+    {
+      "id": "glow-torch",
+      "image": "maps/bloodmoon/glow-torch.png",
+      "textureKey": "map-bloodmoon-glow-torch",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    }
+  ],
+  "waterArt": [
+    {
+      "id": "water-deep-0",
+      "image": "maps/bloodmoon/water/water-deep-0.png",
+      "textureKey": "map-bloodmoon-water-deep-0",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-deep-1",
+      "image": "maps/bloodmoon/water/water-deep-1.png",
+      "textureKey": "map-bloodmoon-water-deep-1",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-deep-2",
+      "image": "maps/bloodmoon/water/water-deep-2.png",
+      "textureKey": "map-bloodmoon-water-deep-2",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-deep-3",
+      "image": "maps/bloodmoon/water/water-deep-3.png",
+      "textureKey": "map-bloodmoon-water-deep-3",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-0",
+      "image": "maps/bloodmoon/water/water-shallow-0.png",
+      "textureKey": "map-bloodmoon-water-shallow-0",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-1",
+      "image": "maps/bloodmoon/water/water-shallow-1.png",
+      "textureKey": "map-bloodmoon-water-shallow-1",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-2",
+      "image": "maps/bloodmoon/water/water-shallow-2.png",
+      "textureKey": "map-bloodmoon-water-shallow-2",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "water-shallow-3",
+      "image": "maps/bloodmoon/water/water-shallow-3.png",
+      "textureKey": "map-bloodmoon-water-shallow-3",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "foam-edge",
+      "image": "maps/bloodmoon/water/foam-edge.png",
+      "textureKey": "map-bloodmoon-foam-edge",
+      "size": {
+        "width": 256,
+        "height": 64
+      }
+    },
+    {
+      "id": "ripple-ring",
+      "image": "maps/bloodmoon/water/ripple-ring.png",
+      "textureKey": "map-bloodmoon-ripple-ring",
+      "size": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "splash-burst",
+      "image": "maps/bloodmoon/water/splash-burst.png",
+      "textureKey": "map-bloodmoon-splash-burst",
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "bubbles",
+      "image": "maps/bloodmoon/water/bubbles.png",
+      "textureKey": "map-bloodmoon-bubbles",
+      "size": {
+        "width": 128,
+        "height": 128
+      }
+    }
+  ],
+  "structureArt": [
+    {
+      "id": "stairs-stone-n",
+      "image": "maps/bloodmoon/structures/stairs-stone-n.png",
+      "textureKey": "map-bloodmoon-stairs-stone-n",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "y",
+      "ascending": "n",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 45,
+        "y": 10,
+        "width": 165,
+        "height": 179
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 165,
+        "height": 179,
+        "offsetX": -1,
+        "offsetY": -93
+      },
+      "railFootprints": [
+        {
+          "type": "rect",
+          "width": 12,
+          "height": 179,
+          "offsetX": -77.5,
+          "offsetY": -93
+        },
+        {
+          "type": "rect",
+          "width": 12,
+          "height": 179,
+          "offsetX": 75.5,
+          "offsetY": -93
+        }
+      ]
+    },
+    {
+      "id": "stairs-stone-s",
+      "image": "maps/bloodmoon/structures/stairs-stone-s.png",
+      "textureKey": "map-bloodmoon-stairs-stone-s",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "y",
+      "ascending": "s",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 55,
+        "y": 9,
+        "width": 146,
+        "height": 180
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 146,
+        "height": 180,
+        "offsetX": -0.5,
+        "offsetY": -93.5
+      },
+      "railFootprints": [
+        {
+          "type": "rect",
+          "width": 12,
+          "height": 180,
+          "offsetX": -67.5,
+          "offsetY": -93.5
+        },
+        {
+          "type": "rect",
+          "width": 12,
+          "height": 180,
+          "offsetX": 66.5,
+          "offsetY": -93.5
+        }
+      ]
+    },
+    {
+      "id": "stairs-stone-e",
+      "image": "maps/bloodmoon/structures/stairs-stone-e.png",
+      "textureKey": "map-bloodmoon-stairs-stone-e",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "x",
+      "ascending": "e",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 11,
+        "y": 9,
+        "width": 234,
+        "height": 180
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 234,
+        "height": 180,
+        "offsetX": -0.5,
+        "offsetY": -93.5
+      },
+      "railFootprints": [
+        {
+          "type": "rect",
+          "width": 234,
+          "height": 12,
+          "offsetX": -0.5,
+          "offsetY": -177.5
+        },
+        {
+          "type": "rect",
+          "width": 234,
+          "height": 12,
+          "offsetX": -0.5,
+          "offsetY": -9.5
+        }
+      ]
+    },
+    {
+      "id": "stairs-stone-w",
+      "image": "maps/bloodmoon/structures/stairs-stone-w.png",
+      "textureKey": "map-bloodmoon-stairs-stone-w",
+      "size": {
+        "width": 256,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "stairs",
+      "axis": "x",
+      "ascending": "w",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "rails": true,
+      "approved": true,
+      "artBounds": {
+        "x": 11,
+        "y": 9,
+        "width": 234,
+        "height": 180
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 234,
+        "height": 180,
+        "offsetX": -0.5,
+        "offsetY": -93.5
+      },
+      "railFootprints": [
+        {
+          "type": "rect",
+          "width": 234,
+          "height": 12,
+          "offsetX": -0.5,
+          "offsetY": -177.5
+        },
+        {
+          "type": "rect",
+          "width": 234,
+          "height": 12,
+          "offsetX": -0.5,
+          "offsetY": -9.5
+        }
+      ]
+    },
+    {
+      "id": "platform-edge-straight",
+      "image": "maps/bloodmoon/structures/platform-edge-straight.png",
+      "textureKey": "map-bloodmoon-platform-edge-straight",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 8,
+        "y": 72,
+        "width": 240,
+        "height": 180
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 240,
+        "height": 180,
+        "offsetX": -0.5,
+        "offsetY": -94.5
+      }
+    },
+    {
+      "id": "platform-edge-corner",
+      "image": "maps/bloodmoon/structures/platform-edge-corner.png",
+      "textureKey": "map-bloodmoon-platform-edge-corner",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 14,
+        "y": 12,
+        "width": 227,
+        "height": 241
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 227,
+        "height": 241,
+        "offsetX": -1,
+        "offsetY": -124
+      }
+    },
+    {
+      "id": "wall-stone-straight",
+      "image": "maps/bloodmoon/structures/wall-stone-straight.png",
+      "textureKey": "map-bloodmoon-wall-stone-straight",
+      "size": {
+        "width": 256,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "wall",
+      "rails": false,
+      "artBounds": {
+        "x": 9,
+        "y": 17,
+        "width": 239,
+        "height": 108
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 239,
+        "height": 108,
+        "offsetX": 0,
+        "offsetY": -57.5
+      }
+    },
+    {
+      "id": "wall-stone-corner",
+      "image": "maps/bloodmoon/structures/wall-stone-corner.png",
+      "textureKey": "map-bloodmoon-wall-stone-corner",
+      "size": {
+        "width": 256,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "wall",
+      "rails": false,
+      "artBounds": {
+        "x": 49,
+        "y": 5,
+        "width": 158,
+        "height": 120
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 158,
+        "height": 120,
+        "offsetX": -0.5,
+        "offsetY": -63.5
+      }
+    },
+    {
+      "id": "wall-stone-gap",
+      "image": "maps/bloodmoon/structures/wall-stone-gap.png",
+      "textureKey": "map-bloodmoon-wall-stone-gap",
+      "size": {
+        "width": 256,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "wall",
+      "rails": false,
+      "artBounds": {
+        "x": 8,
+        "y": 13,
+        "width": 240,
+        "height": 112
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 240,
+        "height": 112,
+        "offsetX": -0.5,
+        "offsetY": -59.5
+      }
+    },
+    {
+      "id": "bridge-h",
+      "image": "maps/bloodmoon/structures/bridge-h.png",
+      "textureKey": "map-bloodmoon-bridge-h",
+      "size": {
+        "width": 512,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "bridge",
+      "rails": true,
+      "artBounds": {
+        "x": 89,
+        "y": 10,
+        "width": 334,
+        "height": 179
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 334,
+        "height": 179,
+        "offsetX": -0.5,
+        "offsetY": -93
+      },
+      "railFootprints": [
+        {
+          "type": "rect",
+          "width": 334,
+          "height": 12,
+          "offsetX": -0.5,
+          "offsetY": -176.5
+        },
+        {
+          "type": "rect",
+          "width": 334,
+          "height": 12,
+          "offsetX": -0.5,
+          "offsetY": -9.5
+        }
+      ]
+    },
+    {
+      "id": "bridge-v",
+      "image": "maps/bloodmoon/structures/bridge-v.png",
+      "textureKey": "map-bloodmoon-bridge-v",
+      "size": {
+        "width": 192,
+        "height": 512
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "bridge",
+      "rails": true,
+      "artBounds": {
+        "x": 8,
+        "y": 103,
+        "width": 178,
+        "height": 405
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 178,
+        "height": 405,
+        "offsetX": 0.5,
+        "offsetY": -207
+      },
+      "railFootprints": [
+        {
+          "type": "rect",
+          "width": 12,
+          "height": 405,
+          "offsetX": -82.5,
+          "offsetY": -207
+        },
+        {
+          "type": "rect",
+          "width": 12,
+          "height": 405,
+          "offsetX": 83.5,
+          "offsetY": -207
+        }
+      ]
+    },
+    {
+      "id": "pyramid-tier-a",
+      "image": "maps/bloodmoon/structures/pyramid-tier-a.png",
+      "textureKey": "map-bloodmoon-pyramid-tier-a",
+      "size": {
+        "width": 768,
+        "height": 768
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 25,
+        "y": 70,
+        "width": 719,
+        "height": 693
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 719,
+        "height": 693,
+        "offsetX": 0,
+        "offsetY": -352
+      }
+    },
+    {
+      "id": "pyramid-tier-b",
+      "image": "maps/bloodmoon/structures/pyramid-tier-b.png",
+      "textureKey": "map-bloodmoon-pyramid-tier-b",
+      "size": {
+        "width": 512,
+        "height": 512
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 16,
+        "y": 36,
+        "width": 478,
+        "height": 472
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 478,
+        "height": 472,
+        "offsetX": -1.5,
+        "offsetY": -240.5
+      }
+    },
+    {
+      "id": "pyramid-tier-c",
+      "image": "maps/bloodmoon/structures/pyramid-tier-c.png",
+      "textureKey": "map-bloodmoon-pyramid-tier-c",
+      "size": {
+        "width": 320,
+        "height": 320
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 15,
+        "y": 18,
+        "width": 291,
+        "height": 298
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 291,
+        "height": 298,
+        "offsetX": 0,
+        "offsetY": -153.5
+      }
+    },
+    {
+      "id": "pyramid-top-shrine",
+      "image": "maps/bloodmoon/structures/pyramid-top-shrine.png",
+      "textureKey": "map-bloodmoon-pyramid-top-shrine",
+      "size": {
+        "width": 192,
+        "height": 192
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "level": 0,
+      "kind": "platform",
+      "rails": false,
+      "artBounds": {
+        "x": 7,
+        "y": 55,
+        "width": 179,
+        "height": 133
+      },
+      "footprint": {
+        "type": "rect",
+        "width": 179,
+        "height": 133,
+        "offsetX": 0,
+        "offsetY": -71
+      }
+    }
+  ]
 }

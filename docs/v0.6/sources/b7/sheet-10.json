@@ -1,0 +1,99 @@
+{
+  "expectedCount": 8,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-10.png",
+  "items": [
+    {
+      "id": "water-deep-0",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-deep-0",
+      "file": "maps/bloodmoon/water/water-deep-0.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-deep-1",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-deep-1",
+      "file": "maps/bloodmoon/water/water-deep-1.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-deep-2",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-deep-2",
+      "file": "maps/bloodmoon/water/water-deep-2.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-deep-3",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-deep-3",
+      "file": "maps/bloodmoon/water/water-deep-3.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-shallow-0",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-shallow-0",
+      "file": "maps/bloodmoon/water/water-shallow-0.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-shallow-1",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-shallow-1",
+      "file": "maps/bloodmoon/water/water-shallow-1.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-shallow-2",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-shallow-2",
+      "file": "maps/bloodmoon/water/water-shallow-2.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    },
+    {
+      "id": "water-shallow-3",
+      "category": "water",
+      "width": 256,
+      "height": 256,
+      "description": "water-shallow-3",
+      "file": "maps/bloodmoon/water/water-shallow-3.png",
+      "anchor": "bottom",
+      "keyFringe": 4,
+      "fullBleed": true
+    }
+  ]
+}

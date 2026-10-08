@@ -1,15 +1,17 @@
-// B6 finite-world art: camera-local terrain sprites, four-frame water, and
+// B6/B7 finite-world art: camera-local terrain sprites, four-frame water, and
 // assembler-aligned pieces. All surfaces stay below feet and combat warnings.
 import {backgroundDepth} from '../../render/layers.js';
 import {CELL,pointAt,indexAt} from './grid.js';
-import kit from '../../data/mapKits/overgrown.json' with {type:'json'};
+import overgrown from '../../data/mapKits/overgrown.json' with {type:'json'};
+import bloodmoon from '../../data/mapKits/bloodmoon.json' with {type:'json'};
 export const TERRAIN_SPRITE_CAP=320;
 export function groundArtId(w,i,frame=0){
- if(w.bridgeMask[i])return 'wet-planks';
+ const night=w.mapId==='bloodmoon';
+ if(w.bridgeMask[i])return night?'charred-wood':'wet-planks';
  if(w.water.mask[i])return `water-${w.water.mask[i]===2?'deep':'shallow'}-${frame}`;
- if(w.sites.some(s=>s.kind==='settlement'&&Math.hypot(pointAt(w,i).x-s.x,pointAt(w,i).y-s.y)<160))return 'cobble-plaza';
- if(w.roadMask[i])return 'dirt-path';
- return ['moss-grass','dry-grass','jungle-floor'][w.biomes[i]];
+ if(w.sites.some(s=>s.kind==='settlement'&&Math.hypot(pointAt(w,i).x-s.x,pointAt(w,i).y-s.y)<160))return night?'ritual-floor':'cobble-plaza';
+ if(w.roadMask[i])return night?'dark-dirt':'dirt-path';
+ return (night?['ash-ground','blood-stained','cracked-stone']:['moss-grass','dry-grass','jungle-floor'])[w.biomes[i]];
 }
 export function stairArtId(stair){const dx=stair.to.x-stair.from.x,dy=stair.to.y-stair.from.y;return `stairs-stone-${Math.abs(dx)>Math.abs(dy)?dx>0?'e':'w':dy>0?'s':'n'}`;}
 // A continuous staircase spans the assembler's consecutive tier strips.
@@ -18,13 +20,13 @@ export function stairRuns(stairs){
  return [...runs.values()];
 }
 export class WorldArt{
- constructor(scene,w){this.scene=scene;this.w=w;this.pool=[];this.objects=[];this.last='';this.drawStructures();}
- key(id){return `map-overgrown-${id}`;}
+ constructor(scene,w){this.scene=scene;this.w=w;this.kit=w.mapId==='bloodmoon'?bloodmoon:overgrown;this.pool=[];this.objects=[];this.last='';this.drawStructures();}
+ key(id){return `map-${this.w.mapId||'overgrown'}-${id}`;}
  image(id,x,y,width,height,order=3){
   // Never ship a known ambiguous direction over authoritative stair geometry.
-  if(kit.structureArt.find(item=>item.id===id)?.approved===false)return null;
+  if(this.kit.structureArt?.find(item=>item.id===id)?.approved===false)return null;
   const key=this.key(id);if(!this.scene.textures.exists(key))return null;
-  const bounds=kit.structureArt.find(item=>item.id===id)?.artBounds,texture=this.scene.textures.get?.(key);
+  const bounds=this.kit.structureArt?.find(item=>item.id===id)?.artBounds,texture=this.scene.textures.get?.(key);
   if(bounds&&texture&&!texture.has('base-bounds'))texture.add('base-bounds',0,bounds.x,bounds.y,bounds.width,bounds.height);
   const image=this.scene.add.image(x,y,key,bounds&&texture?'base-bounds':undefined).setDisplaySize(width,height).setDepth(backgroundDepth(order));this.objects.push(image);return image;
  }
@@ -59,7 +61,10 @@ export class WorldArt{
    const i=y*this.w.columns+x;if(!this.w.interior[i]||this.w.bridgeMask[i]||n>=TERRAIN_SPRITE_CAP)continue;
    const key=this.key(groundArtId(this.w,i,frame));if(!this.scene.textures.exists(key))continue;
    const p=pointAt(this.w,i),image=this.pool[n]||(this.pool[n]=this.scene.add.image(p.x,p.y,key).setDepth(backgroundDepth(1)));
-   image.setTexture(key).setPosition(p.x,p.y).setDisplaySize(CELL+.5,CELL+.5).setAlpha(.72).setTint(this.w.water.mask[i]?0xc0d4b0:0x889977).setVisible(true);n++;
+   const tint=this.w.mapId==='bloodmoon'?(this.w.water.mask[i]?0x887b8b:0x847680):(this.w.water.mask[i]?0xc0d4b0:0x889977);
+   // Transparent night tiles must not overlap: double alpha makes grid seams.
+   const extent=this.w.mapId==='bloodmoon'?CELL:CELL+.5;
+   image.setTexture(key).setPosition(p.x,p.y).setDisplaySize(extent,extent).setAlpha(.72).setTint(tint).setVisible(true);n++;
   }
   for(let i=n;i<this.pool.length;i++)this.pool[i].setVisible(false);
  }

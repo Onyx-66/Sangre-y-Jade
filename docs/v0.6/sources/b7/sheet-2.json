@@ -1,0 +1,171 @@
+{
+  "expectedCount": 16,
+  "columns": 4,
+  "rows": 4,
+  "background": "magenta",
+  "isolateCells": true,
+  "outputDir": ".tools/b7/assets",
+  "contactSheet": "docs/v0.6/previews/b7/sheet-2.png",
+  "items": [
+    {
+      "id": "grass-dry",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "dry brown grass tuft",
+      "file": "maps/bloodmoon/plants/grass-dry.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "vines-dark",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "dark hanging vines",
+      "file": "maps/bloodmoon/plants/vines-dark.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "flowers-red",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "red night flowers",
+      "file": "maps/bloodmoon/plants/flowers-red.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "mushrooms-glow-red",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "faintly glowing red mushrooms",
+      "file": "maps/bloodmoon/plants/mushrooms-glow-red.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bones-grass",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "grass with bones",
+      "file": "maps/bloodmoon/plants/bones-grass.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "moss-dark",
+      "category": "plants",
+      "width": 96,
+      "height": 96,
+      "description": "dark moss patch",
+      "file": "maps/bloodmoon/plants/moss-dark.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "obsidian-shard-a",
+      "category": "rocks",
+      "width": 220,
+      "height": 220,
+      "description": "jagged obsidian shard cluster",
+      "file": "maps/bloodmoon/rocks/obsidian-shard-a.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "obsidian-shard-b",
+      "category": "rocks",
+      "width": 130,
+      "height": 130,
+      "description": "single tall obsidian shard",
+      "file": "maps/bloodmoon/rocks/obsidian-shard-b.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "rock-cracked",
+      "category": "rocks",
+      "width": 130,
+      "height": 130,
+      "description": "cracked grey boulder",
+      "file": "maps/bloodmoon/rocks/rock-cracked.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "altar-stone",
+      "category": "rocks",
+      "width": 130,
+      "height": 130,
+      "description": "broken altar stone",
+      "file": "maps/bloodmoon/rocks/altar-stone.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "skull-pile",
+      "category": "rocks",
+      "width": 220,
+      "height": 220,
+      "description": "pile of skulls",
+      "file": "maps/bloodmoon/rocks/skull-pile.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "bone-pile",
+      "category": "rocks",
+      "width": 220,
+      "height": 220,
+      "description": "pile of bones",
+      "file": "maps/bloodmoon/rocks/bone-pile.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "log-burned",
+      "category": "debris",
+      "width": 140,
+      "height": 140,
+      "description": "burned log",
+      "file": "maps/bloodmoon/debris/log-burned.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "stump-burned",
+      "category": "debris",
+      "width": 140,
+      "height": 140,
+      "description": "burned stump",
+      "file": "maps/bloodmoon/debris/stump-burned.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "ash-pile",
+      "category": "debris",
+      "width": 140,
+      "height": 140,
+      "description": "ash and ember pile",
+      "file": "maps/bloodmoon/debris/ash-pile.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    },
+    {
+      "id": "broken-pot",
+      "category": "debris",
+      "width": 140,
+      "height": 140,
+      "description": "broken clay pot",
+      "file": "maps/bloodmoon/debris/broken-pot.png",
+      "anchor": "bottom",
+      "keyFringe": 4
+    }
+  ]
+}
